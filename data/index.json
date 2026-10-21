@@ -1,5 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": null,
-  "editions": []
+  "updated_at": "2026-10-21T21:42:03+08:00",
+  "editions": [
+    {
+      "id": "2026-10-21-1800",
+      "published_at": "2026-10-21T18:00:00+08:00",
+      "path": "data/2026/10/2026-10-21-1800.json",
+      "counts": {
+        "x_daily": 5,
+        "zh_topics": 1,
+        "en_topics": 1
+      },
+      "headline": "NVIDIA GTC 柏林发布集装箱式 AI 工厂与 Agent 安全参考架构"
+    }
+  ]
 }
