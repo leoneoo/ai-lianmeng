@@ -1,0 +1,246 @@
+{
+  "id": "2026-10-22-0600",
+  "published_at": "2026-10-22T06:00:00+08:00",
+  "headline": "AI 参与挖出 PHP 两个免登录 RCE 漏洞，OpenAI 牵头全球协调修补",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "GPT-5.6 Sol 参与挖出 PHP 两个免登录远程代码执行漏洞，OpenAI 牵头两个月协调修补",
+        "summary": "PHP 官方 10 月 21 日发布 8.5.12、8.4.27、8.3.36、8.2.35，修补可让未登录攻击者远程执行代码的两个严重漏洞 CVE-2026-109618 和 CVE-2026-109619（社区称 php2shell），所有处理网页请求的 PHP 部署都受影响，mod_php 风险最高。OpenAI 说，安全公司 Calif 在其 Patch the Planet 计划中用 GPT-5.6 Sol 找到了关键漏洞，Wiz 也独立发现；OpenAI 过去两个月牵头维护者、安全厂商和美国 CISA 等政府部门协调修复，Cloudflare 在披露前已上线防护。OpenAI 称这是近年影响最大的安全问题之一，并预告手上还有多个重大漏洞在修，未来几个月这类发现会急剧增加。",
+        "source_url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+        "time": "2026-10-21T22:04:00+08:00",
+        "handle": "@OpenAI",
+        "impact": "前沿 AI 首次被公开确认先于攻击者找到互联网级漏洞，补丁速度成为新的安全门槛。",
+        "points": [
+          "PHP 8.5.12 / 8.4.27 / 8.3.36 / 8.2.35 修复两个未授权 RCE",
+          "OpenAI 提出五阶段的 AI 时代漏洞响应框架并征求意见",
+          "10 亿美元补贴关键服务防守方使用 Daybreak",
+          "发布 Codex Skill 帮站长检查 PHP 版本"
+        ]
+      },
+      {
+        "title": "Anthropic 推出主动式个人 Agent「Claude Duet」研究预览",
+        "summary": "Anthropic 开放 Claude Duet 研究预览，这是一个由 Opus 5.5 驱动的独立 App（iOS、Android 和 claude.ai），有自己的云端虚拟机和浏览器，用户离开后也能继续干活。它每天早上根据邮箱和日历发简报，每隔几小时检查已连接的账号，有事才主动联系；发消息、付款、签文件、删除之前必须先展示并等用户批准，炒股和账户间转账一律不做。目前只对美国 Pro、Max 用户开放候补名单，不另收费，与 Claude 共用额度。",
+        "source_url": "https://claude.com/resources/articles/claude-duet",
+        "time": "2026-10-22T03:09:00+08:00",
+        "handle": "@claudeai",
+        "impact": "个人 Agent 已成为头部实验室标配赛道，竞争转向人群定位、成本和安全设计。",
+        "points": [
+          "继 Grok Bot、Muse、Dots 之后第四款同类云端个人 Agent",
+          "可用 6000 多个连接器和插件，面向专业人士和小老板",
+          "后台检查计入额度，每几小时查一次",
+          "据报道已接入 Stripe Link 和 Shop Pay 代购"
+        ]
+      },
+      {
+        "title": "Recursive 开源首个模型 Flint：AI 自动研究系统设计的本地编程 MoE",
+        "summary": "Recursive 发布首个模型 Flint，总参数 40B、每 token 只激活 2.5B 的混合专家模型，专为本地编程 Agent 设计，Apache 2.0 权重已上 Hugging Face。官方称它由自家自动化研究系统 Eureka Machine 设计、不到 4 个月从零训练，在 MacBook Pro 上 125+ tokens/s、RTX Spark 上 150+；Cline 实测 Terminal-Bench 2.1 得分 54.9%，约 24GB 内存可跑，vLLM、SGLang、OpenHands 提供 Day-0 支持。Thomas Wolf 点评称，AI 研究员把通常要保持高精度的输出层量化到 4 bit 只掉 0.7 分，令人印象深刻。",
+        "source_url": "https://x.com/RichardSocher/status/2112944385415426249",
+        "time": "2026-10-22T00:29:00+08:00",
+        "handle": "@RichardSocher",
+        "impact": "「AI 设计模型」与强力本地编程模型汇合，本地 Agent 的可用性明显上台阶。",
+        "points": [
+          "40B 总参 / 2.5B 激活，Apache 2.0 开放权重",
+          "Eureka Machine 自动研究系统设计，4 个月内从零训练",
+          "Terminal-Bench 2.1 54.9%（Cline 实测）",
+          "vLLM 单张 GB200 NVFP4 达 500 TPS"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Google 开源 TorchTPU，SGLang、vLLM 同日推出 TPU 插件，Meta 已用于生产推理",
+        "summary": "Google 在 PyTorch 大会上宣布 TorchTPU 正式开源，开发者可以直接用 PyTorch 以及 vLLM、SGLang、llm-d、TorchTitan、Hugging Face、Ray 在 TPU 上训练和推理。SGLang 同日推出与 Google、Meta PyTorch 团队合作的 SGLang-TorchTPU，称已在 Meta 生产推理中使用，支持 Muse Spark Open、GLM-5.3 Flash、Kimi K3 等，自研 MegaKernel 让 Muse Spark Open 单请求解码达 770 tok/s。vLLM 也发布了 vLLM-TorchTPU，支持前缀缓存、投机解码和预填充/解码分离。",
+        "source_url": "https://x.com/googlecloud/status/2112952051386679720",
+        "time": "2026-10-22T01:00:00+08:00",
+        "handle": "@googlecloud",
+        "impact": "主流开源推理栈几乎不改代码即可迁到 TPU，Google 正面争夺 CUDA 之外的推理算力。",
+        "points": [
+          "TorchTPU 开源，TPU 不再只绑 JAX",
+          "SGLang-TorchTPU 已在 Meta 生产使用",
+          "vLLM-TorchTPU 同日上线"
+        ]
+      },
+      {
+        "title": "Perplexity 与 NVIDIA 发布后训练方法 JOLT：MATH 上用 1/6.5 训练 token 追平 GRPO",
+        "summary": "JOLT 是自蒸馏加强化学习的方法：同一模型同时当老师和学生，老师拿到额外信息给反馈，同时老师自身也被训练，偏离学生能力太远时会受罚。JOLT+ 再给学生加上结果奖励。Perplexity 称 JOLT 在 MATH 上以 6.5 倍更少的训练 token 达到 GRPO 精度，Aravind Srinivas 表示 JOLT+ 在数学、编程、终端任务和工具调用基准上都明显超过 GRPO。",
+        "source_url": "https://www.perplexity.ai/hub/blog/a-good-teacher-meets-the-student-where-they-are",
+        "time": "2026-10-22T02:44:00+08:00",
+        "handle": "@perplexity_ai",
+        "impact": "后训练的效率竞争从算法细节转向「老师怎么教」，可能降低 RL 后训练成本。"
+      },
+      {
+        "title": "Claude Security 改为持续扫描代码仓库，Claude Enterprise 公测",
+        "summary": "Anthropic 宣布 Claude Security 可以一次连接代码仓库后先做深度扫描，之后随代码变更自动复扫，让安全发现始终对应代码当前状态。该功能已在 Claude Enterprise 公测，与 PHP 漏洞披露同一天上线。",
+        "source_url": "https://x.com/claudeai/status/2112962248218148878",
+        "time": "2026-10-22T01:40:00+08:00",
+        "handle": "@claudeai",
+        "impact": "AI 安全审计正从一次性体检变成常驻流程。"
+      },
+      {
+        "title": "NVIDIA 联合六家供应链伙伴扩充全球产能",
+        "summary": "NVIDIA 称算力需求「非同寻常」，正与 Amkor、揖斐电（IBIDEN）、京元电（KYEC）、三星电机、矽品（SPIL）、欣兴（Unimicron）合作，从基础元件到先进封装和测试全面扩产，让更多企业和开发者拿到 NVIDIA 基础设施。",
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
+        "time": "2026-10-21T22:54:00+08:00",
+        "handle": "@nvidia",
+        "impact": "先进封装和测试仍是 AI 芯片出货瓶颈，扩产直接影响明年算力供给。"
+      },
+      {
+        "title": "ElevenLabs 开放实时通话翻译 Eleven Realtime Translation 有限内测",
+        "summary": "ElevenLabs 推出 Eleven Realtime Translation 有限内测：通话双方各说自己的语言，并实时听到对方用自然声音说出自己的语言。支持 90 多种语言并自动识别说话人语言，内测期间只对企业客户开放，是本周 Eleven Realtime 语音 Agent 之后的第二款实时产品。",
+        "source_url": "https://x.com/ElevenLabs/status/2112922442691928256",
+        "time": "2026-10-21T23:02:00+08:00",
+        "handle": "@ElevenLabs",
+        "impact": "实时语音翻译从演示走向企业通话产品。"
+      },
+      {
+        "title": "Cohere 发布 Rerank 5",
+        "summary": "Cohere 发布新一代检索重排序模型 Rerank 5，分 Pro 和 Fast 两档，即日起可用，官方称在 AI 检索精度上推进了前沿。",
+        "source_url": "https://x.com/cohere/status/2112923503100125326",
+        "time": "2026-10-21T23:06:00+08:00",
+        "handle": "@cohere"
+      },
+      {
+        "title": "Base Labs 开源决策模型 mammoth-1 与 elephant-1",
+        "summary": "Base Labs 发布 27B 的 mammoth-1 和 9B 的 elephant-1 两个开放权重「决策模型」：输入一条记录和问题，一次性输出每个答案的校准概率，适合工单路由、分类等 Agent 快决策。官方称 mammoth-1 在 Jev Decision Index 排第一，elephant-1 在 Artificial Analysis 决策指数并列第一，Baseten 免费开放到 10 月 27 日。",
+        "source_url": "https://x.com/baseten/status/2112955524207825053",
+        "time": "2026-10-22T01:13:00+08:00",
+        "handle": "@baseten",
+        "tag": "自报"
+      },
+      {
+        "title": "可灵 Kling 4.0 开放 API",
+        "summary": "可灵 AI 宣布 Kling 4.0 API 正式开放，模型支持原生单次生成 30 秒视频、最多 10 个关键帧和 15 张参考图，并已上线 fal、OpenArt、Higgsfield 等平台。",
+        "source_url": "https://x.com/Kling_ai/status/2112946255257084260",
+        "time": "2026-10-22T00:36:00+08:00",
+        "handle": "@Kling_ai"
+      },
+      {
+        "title": "Scale AI 与 Skydance 后训练 Nemotron 3.5 Super VL，成本约为前沿模型 1/40",
+        "summary": "Scale AI 称与 Skydance 合作后训练 NVIDIA Nemotron 3.5 Super VL，在真实生产工单上与前沿模型准确率持平，推理成本约 1/40、速度 5 倍，黄仁勋在 GTC 柏林点名了这项工作。",
+        "source_url": "https://x.com/scale_AI/status/2112939524657684851",
+        "time": "2026-10-22T00:10:00+08:00",
+        "handle": "@scale_AI",
+        "tag": "自报"
+      },
+      {
+        "title": "Anthropic 发布年度公共利益报告，Christopher Stubbs 加入长期利益信托",
+        "summary": "Anthropic 发布年度公共利益（Public Benefit）报告，回顾其五大支柱的进展；同日宣布实验物理学家、前哈佛理学院院长、曾为美国政府提供国家安全和军控建议的 Christopher Stubbs 加入长期利益信托。IPO 前夕，Anthropic 在治理侧连续动作。",
+        "source_url": "https://x.com/AnthropicAI/status/2112966949273801086",
+        "time": "2026-10-22T01:59:00+08:00",
+        "handle": "@AnthropicAI"
+      },
+      {
+        "title": "Agent 沙箱云 Daytona 完成 6000 万美元 B 轮，估值 10 亿美元",
+        "summary": "为 AI Agent 提供隔离代码执行沙箱的 Daytona 完成 6000 万美元 B 轮融资，估值 10 亿美元，FirstMark 领投，Qualcomm Ventures、Samsung Next、Okta Ventures 等参投，资金主要用于扩充销售和 Agent Cloud 工程团队。",
+        "source_url": "https://www.daytona.io/dotfiles/daytona-raises-60m-series-b-to-build-the-agent-cloud",
+        "time": "2026-10-21T22:29:00+08:00"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "四家「云端个人 Agent」怎么选",
+        "summary": "宝玉对比 Grok Bot、Meta Muse、OpenAI Dots 和 Claude Duet：它们都有自己的云电脑和浏览器、会主动汇报、敏感操作前先问用户。区别在人群：Duet 面向专业人士和小老板，Muse 偏生活且大部分免费，Dots 集成在 ChatGPT、Slack、Teams，Grok Bot 适合建多个 Bot 分工协作。",
+        "source_url": "https://x.com/dotey/status/2113014531853365681",
+        "time": "2026-10-22T05:08:00+08:00",
+        "handle": "@dotey"
+      },
+      {
+        "title": "用 DeepSeek 自动操控闲置手机做漫画版视频",
+        "summary": "郭宇在 Codex 额度快用完时改用 DeepSeek，通过 MCP 操作手机池里的一台手机，找到 TikTok 热门视频，再交给 Windows PC 上的媒体工作流做成漫画版。全程自动，约 30 分钟完成。",
+        "source_url": "https://x.com/turingou/status/2112926299698442360",
+        "time": "2026-10-21T23:17:00+08:00",
+        "handle": "@turingou"
+      },
+      {
+        "title": "在 Mac 上开发原生 Windows 软件的踩坑实录",
+        "summary": "开源清理工具 Mole 的作者 Tw93 分享 Windows 版开发经验：Mac 版用原生 Swift，Windows 版如何在 Mac 上搭建编译和测试环境，以及一个月里踩过的坑。这是他多端技术选型系列的第二篇。",
+        "source_url": "https://x.com/HiTw93/status/2112915889523941780",
+        "time": "2026-10-21T22:36:00+08:00",
+        "handle": "@HiTw93"
+      },
+      {
+        "title": "乔木 AI RSS 插件新增 5 个海外顶流 AI 播客文字稿",
+        "summary": "向阳乔木的 Obsidian 插件把海内外 AI 播客转成文字稿推送，这次新增 5 个海外头部 AI 播客，可以像读 Newsletter 一样追踪最新 AI 讨论。",
+        "source_url": "https://x.com/vista8/status/2112915102366380276",
+        "time": "2026-10-21T22:33:00+08:00",
+        "handle": "@vista8"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent 成为黄仁勋 GTC 柏林主题演讲压轴演示",
+        "summary": "黄仁勋用一句提示装好定制版 Hermes Agent，再让它在 RTX Spark 上调度 Nemotron 规划障碍赛道、让 GPT-6 Astra 用 FreeCAD、Omniverse、Isaac Lab 等搭建仿真环境，训练数千只虚拟 Microduck 机器人后把策略部署到实体机器人。同日发布的 v0.22.4 是补丁版本，插件目录新增 mcp-serve（把 Hermes 当 MCP 服务器）和可导入 Cursor 配置的 agent-importers。",
+        "source_url": "https://x.com/NousResearch/status/2113010017645244623",
+        "time": "2026-10-22T04:50:00+08:00",
+        "handle": "@NousResearch"
+      },
+      {
+        "title": "cloudflare/security-audit-skill：今日 +1,997 星",
+        "summary": "让编程 Agent 变成安全审计员的 Skill，分侦察、按覆盖率分派猎手、独立验证者反驳候选漏洞、结构化输出、再验证和生成报告六个阶段。它是 Cloudflare 内部漏洞挖掘系统的起点，PHP 漏洞披露当天冲上 GitHub Trending 首位。",
+        "source_url": "https://github.com/cloudflare/security-audit-skill",
+        "time": "2026-10-22T06:10:00+08:00"
+      },
+      {
+        "title": "DietrichGebert/ponytail：今日 +2,051 星",
+        "summary": "让 AI Agent 像「最懒的资深工程师」一样只写必要代码的 Skill/插件。作者在 Claude Code（Opus 5.5）上用 39 个任务实测 Ponytail 5：代码减少 53%、用时减少 41%、成本减少 26%、token 减少 45%，带测试的高风险逻辑比例从 68% 升到 98%（自报）。",
+        "source_url": "https://github.com/DietrichGebert/ponytail",
+        "time": "2026-10-22T06:10:00+08:00",
+        "tag": "自报"
+      },
+      {
+        "title": "stablyai/orca：今日 +1,543 星",
+        "summary": "多 Agent 编排桌面应用：把 Codex、Claude Code、OpenCode、Pi 等编程 Agent 放在各自的 git worktree 里并行跑同一个提示，比较结果后合并，还提供手机端随时查看和追加指令。",
+        "source_url": "https://github.com/stablyai/orca",
+        "time": "2026-10-22T06:10:00+08:00"
+      },
+      {
+        "title": "Graphify-Labs/graphify：今日 +1,434 星",
+        "summary": "在编程助手里输入 /graphify，就能把整个项目的代码、文档、PDF、SQL 结构等构建成可查询的知识图谱，用图遍历代替 grep。代码部分用 tree-sitter 在本地解析，不经过大模型。",
+        "source_url": "https://github.com/Graphify-Labs/graphify",
+        "time": "2026-10-22T06:10:00+08:00"
+      },
+      {
+        "title": "OpenCode 接入 Meta Muse Wonder，今日 +1,269 星",
+        "summary": "开源编程 Agent OpenCode 宣布可直接调用 Meta 的 Muse Wonder 模型，它同时也是 Recursive Flint 的首发试用平台之一，当天在 GitHub TypeScript 趋势榜新增 1,269 星。",
+        "source_url": "https://x.com/opencode/status/2112948459745763530",
+        "time": "2026-10-22T00:45:00+08:00",
+        "handle": "@opencode"
+      }
+    ],
+    "tech": [
+      {
+        "title": "Cloudflare WAF 新增完整事务检测和响应规则",
+        "summary": "Cloudflare 的 Web 应用防火墙不再只看请求，而是把请求和源站响应放在一起判断攻击是否得手，并可在响应返回前拦截。Cloudflare 直言前沿模型正在挖出深层漏洞，AI 扫描器会根据反馈不断调整攻击载荷。",
+        "source_url": "https://blog.cloudflare.com/full-transaction-waf/",
+        "time": "2026-10-21T22:10:00+08:00"
+      },
+      {
+        "title": "iOS 27.2 进入 RC，Apple Music 新品牌随版本推送",
+        "summary": "iOS 27.2 RC 中，HomePod 新增随音乐律动的 Sound Glow 灯效和顶部防误触，TV App 支持多用户档案，信息 App 加入建议操作。Apple Music 改用黑白「声音塑形」新视觉，将随 iOS 27.2、macOS 27.2 推出，预计下周发布。",
+        "source_url": "https://9to5mac.com/2026/10/21/ios-decoded-ios-27-2-rc-hands-on-w-homepod-sound-glow-tv-profiles-apple-tv-home-theater-assets-more-video/",
+        "time": "2026-10-22T01:00:00+08:00"
+      },
+      {
+        "title": "CarPlay 上的 Google 地图接入 Gemini",
+        "summary": "在 CarPlay 用 Google 地图导航时可以点 Gemini 图标连续追问和下指令，比如挑不拥挤、天气好的时间出发并避开收费路，也能语音上报路况。这是 Google 地图首次在 CarPlay 提供语音助手，美国已上线，全球推送中。",
+        "source_url": "https://9to5google.com/2026/10/21/google-maps-carplay-gemini/",
+        "time": "2026-10-21T23:01:00+08:00"
+      }
+    ],
+    "iot": [
+      {
+        "title": "ESPHome 2026.10 发布：设备可直接调用 Home Assistant 动作",
+        "summary": "ESPHome 2026.10 让设备可以直接调用 Home Assistant 动作，Sendspin 配对更简单，OTA 更新改为压缩传输。ESP8266 默认改用原生构建，并新增约 20 个组件，包括 Wi-Fi CSI 动作检测。",
+        "source_url": "https://x.com/esphome_/status/2112947435332862153",
+        "time": "2026-10-22T00:41:00+08:00",
+        "handle": "@esphome_"
+      },
+      {
+        "title": "FreshRSS 连发 1.30.3、1.30.4 安全版修补 PHP 漏洞",
+        "summary": "自建 RSS 阅读器 FreshRSS 连发两个安全版本，默认 Debian 镜像和 Alpine 镜像都已换上修复 CVE-2026-109618/109619 的 PHP。在 NAS 或家庭服务器上自建 FreshRSS 等 PHP 服务的用户应尽快更新镜像。",
+        "source_url": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.30.4",
+        "time": "2026-10-22T04:45:00+08:00"
+      }
+    ]
+  }
+}

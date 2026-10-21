@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21T22:09:11+08:00",
+  "updated_at": "2026-10-22T06:12:33+08:00",
   "editions": [
+    {
+      "id": "2026-10-22-0600",
+      "published_at": "2026-10-22T06:00:00+08:00",
+      "path": "data/2026/10/2026-10-22-0600.json",
+      "counts": {
+        "x_daily": 14,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 6,
+        "tech": 3,
+        "iot": 2
+      },
+      "headline": "AI 参与挖出 PHP 两个免登录 RCE 漏洞，OpenAI 牵头全球协调修补"
+    },
     {
       "id": "2026-10-21-2200",
       "published_at": "2026-10-21T22:00:00+08:00",
