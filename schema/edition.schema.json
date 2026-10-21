@@ -91,6 +91,28 @@
           "type": "string",
           "pattern": "^@[A-Za-z0-9_]{1,15}$",
           "description": "可选。X 账号，例如 @AnthropicAI。不需要时省略。"
+        },
+        "impact": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400,
+          "description": "可选。「影响」一句话。不需要时省略，不要传空字符串。"
+        },
+        "points": {
+          "type": "array",
+          "maxItems": 8,
+          "description": "可选。短要点。不需要时省略整个键。",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          }
+        },
+        "tag": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16,
+          "description": "可选。短标签，例如「传闻」或「自报」。不需要时省略。"
         }
       }
     },

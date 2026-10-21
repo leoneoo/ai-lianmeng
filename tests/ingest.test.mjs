@@ -12,7 +12,9 @@ import {
   editionRelPath,
   groupEditions,
   nowInPlus08,
+  itemFragment,
   parseEditionId,
+  parseItemFragment,
   weekday,
 } from "../js/format.js";
 import { applyEdition, parseIssueBody, validateEdition } from "../scripts/edition.mjs";
@@ -66,7 +68,19 @@ test("sample edition validates and is labelled as a sample", () => {
   const result = validateEdition(sample);
   assert.equal(result.ok, true, (result.errors || []).join("\n"));
   assert.match(result.edition.headline, /示例/);
+  assert.equal(result.edition.sections.x_daily[0].tag, "自报");
+  assert.match(result.edition.sections.x_daily[0].impact, /影响/);
+  assert.deepEqual(result.edition.sections.x_daily[0].points, [
+    "摄取脚本会保留影响、要点和标签",
+    "没有这些字段的旧条目仍然有效",
+  ]);
+  assert.equal(Object.hasOwn(result.edition.sections.zh_topics[0], "impact"), false);
+  assert.equal(Object.hasOwn(result.edition.sections.zh_topics[0], "points"), false);
+  assert.equal(Object.hasOwn(result.edition.sections.zh_topics[0], "tag"), false);
   assert.equal(result.edition.sections.en_topics[0].handle, undefined);
+  assert.equal(itemFragment("x_daily", 0), "item-x_daily-0");
+  assert.deepEqual(parseItemFragment("item-en_topics-0"), { key: "en_topics", index: 0 });
+  assert.equal(parseItemFragment("item-notes-0"), null);
   assert.equal(result.edition.sections.oss_agent[0].handle, "@example_oss");
   assert.equal(result.edition.sections.tech.length, 1);
   assert.equal(result.edition.sections.iot.length, 1);
@@ -82,6 +96,13 @@ test("published editions validate without the optional sections", () => {
     assert.equal(Object.hasOwn(doc.sections, "iot"), false);
     assert.equal(Object.hasOwn(doc.sections, "en_topics"), true);
     assert.equal(result.edition.sections.en_topics.length > 0, true);
+    for (const list of Object.values(doc.sections)) {
+      for (const item of list) {
+        assert.equal(Object.hasOwn(item, "impact"), false);
+        assert.equal(Object.hasOwn(item, "points"), false);
+        assert.equal(Object.hasOwn(item, "tag"), false);
+      }
+    }
   }
 });
 
@@ -143,6 +164,22 @@ test("rejects malformed editions", () => {
   const handle = structuredClone(sample);
   handle.sections.x_daily[0].handle = "AnthropicAI";
   assert.equal(validateEdition(handle).ok, false);
+
+  const badPoints = structuredClone(sample);
+  badPoints.sections.x_daily[0].points = "不是数组";
+  assert.equal(validateEdition(badPoints).ok, false);
+
+  const emptyTag = structuredClone(sample);
+  emptyTag.sections.zh_topics[0].tag = "";
+  assert.equal(validateEdition(emptyTag).ok, false);
+
+  const bare = structuredClone(sample);
+  delete bare.sections.x_daily[0].impact;
+  delete bare.sections.x_daily[0].points;
+  delete bare.sections.x_daily[0].tag;
+  const bareResult = validateEdition(bare);
+  assert.equal(bareResult.ok, true, (bareResult.errors || []).join("\n"));
+  assert.equal(Object.hasOwn(bareResult.edition.sections.x_daily[0], "impact"), false);
 
   const extra = { ...sample, note: "nope" };
   assert.equal(validateEdition(extra).ok, false);
@@ -315,6 +352,13 @@ test("README example matches the schema", () => {
     assert.equal(schema.properties.sections.required.includes(key), false);
   }
   assert.equal(schema.properties.sections.properties.en_topics.deprecated, true);
+  const itemSchema = schema.$defs.item;
+  assert.equal(itemSchema.required.includes("impact"), false);
+  assert.equal(itemSchema.required.includes("points"), false);
+  assert.equal(itemSchema.required.includes("tag"), false);
+  assert.equal(itemSchema.properties.impact.type, "string");
+  assert.equal(itemSchema.properties.points.type, "array");
+  assert.equal(itemSchema.properties.tag.maxLength, 16);
   const indexSchema = JSON.parse(readFileSync(path.join(repoRoot, "schema/index.schema.json"), "utf8"));
   const counts = indexSchema.properties.editions.items.properties.counts;
   assert.deepEqual(counts.required, ["x_daily", "zh_topics"]);

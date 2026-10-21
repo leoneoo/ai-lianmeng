@@ -4,7 +4,9 @@ import {
   formatZhTime,
   groupEditions,
   isSafeDataPath,
+  itemFragment,
   parseEditionId,
+  parseItemFragment,
   totalCount,
 } from "./format.js";
 
@@ -113,10 +115,47 @@ function sectionItems(edition, key) {
   return list.filter((item) => item && typeof item === "object");
 }
 
+function displayEntries(edition, key) {
+  const own = sectionItems(edition, key).map((item, index) => ({ item, key, index }));
+  if (key !== "x_daily") return own;
+  return own.concat(sectionItems(edition, "en_topics").map((item, index) => ({ item, key: "en_topics", index })));
+}
+
 function displayItems(edition, key) {
-  const items = sectionItems(edition, key);
-  if (key !== "x_daily") return items;
-  return items.concat(sectionItems(edition, "en_topics"));
+  return displayEntries(edition, key).map((entry) => entry.item);
+}
+
+function itemRef(edition, item) {
+  for (const section of SECTIONS) {
+    const index = sectionItems(edition, section.key).indexOf(item);
+    if (index >= 0) return { key: section.key, index };
+  }
+  return null;
+}
+
+function itemHref(editionId, key, index) {
+  const fragment = itemFragment(key, index);
+  if (!editionId || !fragment) return null;
+  return `edition.html?id=${encodeURIComponent(editionId)}#${fragment}`;
+}
+
+function currentItemRef() {
+  const params = new URLSearchParams(location.search);
+  const query = params.get("item") || "";
+  if (query) {
+    const parsed = parseItemFragment(query.startsWith("item-") ? query : `item-${query}`);
+    if (parsed) return parsed;
+  }
+  return parseItemFragment(decodeURIComponent(location.hash.replace(/^#/, "")));
+}
+
+function resolveItem(edition, ref) {
+  if (!ref) return null;
+  const list = sectionItems(edition, ref.key);
+  const item = list[ref.index];
+  if (!item) return null;
+  const displayKey = ref.key === "en_topics" ? "x_daily" : ref.key;
+  return { item, section: sectionByKey(displayKey), ref };
 }
 
 function sectionByKey(key) {
@@ -147,29 +186,23 @@ function heroModel(edition) {
     }
   }
   const headline = asString(edition?.headline);
-  if (headline) {
-    return {
-      title: headline,
-      summary: asString(source?.item.summary),
-      source_url: source?.item.source_url,
-      time: source?.item.time || edition.published_at,
-      handle: asString(source?.item.handle),
-      section: source?.section || sectionByKey("x_daily"),
-      skipItem: source?.item || null,
-      skipKey: source?.section?.key || "",
-    };
-  }
-  if (!source) return null;
-  return {
-    title: asString(source.item.title) || "未命名",
-    summary: asString(source.item.summary),
-    source_url: source.item.source_url,
-    time: source.item.time,
-    handle: asString(source.item.handle),
-    section: source.section,
-    skipItem: source.item,
-    skipKey: source.section.key,
+  const ref = source ? itemRef(edition, source.item) : null;
+  const shared = {
+    summary: asString(source?.item.summary),
+    source_url: source?.item.source_url,
+    time: source?.item.time || edition?.published_at,
+    handle: asString(source?.item.handle),
+    tag: asString(source?.item.tag),
+    impact: asString(source?.item.impact),
+    points: Array.isArray(source?.item.points) ? source.item.points : [],
+    section: source?.section || sectionByKey("x_daily"),
+    ref,
+    skipItem: source?.item || null,
+    skipKey: source?.section?.key || "",
   };
+  if (headline) return { ...shared, title: headline };
+  if (!source) return null;
+  return { ...shared, title: asString(source.item.title) || "未命名" };
 }
 
 function leadParts(edition) {
@@ -194,7 +227,9 @@ function leadParts(edition) {
 function flatten(edition) {
   const rows = [];
   for (const section of DISPLAY) {
-    for (const item of displayItems(edition, section.key)) rows.push({ item, section });
+    for (const entry of displayEntries(edition, section.key)) {
+      rows.push({ item: entry.item, section, ref: { key: entry.key, index: entry.index } });
+    }
   }
   return rows;
 }
@@ -204,7 +239,8 @@ function tokensOf(query) {
 }
 
 function matches(item, tokens) {
-  const hay = `${asString(item.title)}\n${asString(item.summary)}\n${asString(item.handle)}`.toLowerCase();
+  const points = Array.isArray(item.points) ? item.points.join("\n") : "";
+  const hay = `${asString(item.title)}\n${asString(item.summary)}\n${asString(item.handle)}\n${asString(item.impact)}\n${asString(item.tag)}\n${points}`.toLowerCase();
   return tokens.every((token) => hay.includes(token));
 }
 
@@ -252,9 +288,16 @@ function handleNode(handle, tokens) {
   return h("span", { class: "handle" }, [content]);
 }
 
-function metaRow(section, time, extra) {
+function tagNode(tag) {
+  const value = asString(tag);
+  if (!value) return null;
+  return h("span", { class: "item-tag" }, [text(value)]);
+}
+
+function metaRow(section, time, extra, tag) {
   return h("div", { class: "card-meta" }, [
     h("span", { class: `badge badge-${section.key}` }, [text(section.nav || section.label)]),
+    tagNode(tag),
     time ? h("time", { datetime: time }, [text(formatZhTime(time))]) : null,
     extra ? h("span", {}, [text(extra)]) : null,
   ]);
@@ -271,38 +314,82 @@ function foot(item, tokens) {
 
 function titleBlock(tag, className, title, href, tokens) {
   const content = rich(title, tokens);
-  const inner = isHttpsUrl(href) ? externalAnchor(href, "title-link", content) : content;
+  const inner = href ? h("a", { class: "title-link", href }, [content]) : content;
   return h(tag, { class: className }, [inner]);
 }
 
-function renderCard(item, section, tokens, heading = "h3", extra = "") {
+function summaryNodes(summary, tokens) {
+  const parts = asString(summary).split(/\n+/).map((part) => part.trim()).filter(Boolean);
+  return parts.map((part) => h("p", { class: "summary" }, [rich(part, tokens)]));
+}
+
+function pointsList(points, tokens) {
+  if (!Array.isArray(points) || !points.length) return null;
+  return h("ul", { class: "points" }, points.map((point) => h("li", {}, [rich(asString(point), tokens)])));
+}
+
+function impactCallout(impact, tokens) {
+  const value = asString(impact);
+  if (!value) return null;
+  return h("p", { class: "impact" }, [
+    h("span", { class: "impact-label" }, [text("影响：")]),
+    rich(value, tokens),
+  ]);
+}
+
+function proseBlocks(item, tokens) {
+  return [
+    ...summaryNodes(item.summary, tokens),
+    pointsList(item.points, tokens),
+    impactCallout(item.impact, tokens),
+  ];
+}
+
+function renderCard(item, section, tokens, heading = "h3", extra = "", link = null) {
   const title = asString(item.title) || "未命名";
-  const summary = asString(item.summary);
-  return h("article", { class: "card rise", "data-section": section.key }, [
-    metaRow(section, item.time, extra),
-    titleBlock(heading, "card-title", title, item.source_url, tokens),
-    summary ? h("p", { class: "summary clamp" }, [rich(summary, tokens)]) : null,
+  const href = link ? itemHref(link.editionId, link.key, link.index) : null;
+  return h("article", {
+    class: "card rise",
+    id: link ? itemFragment(link.key, link.index) : null,
+    "data-section": section.key,
+  }, [
+    metaRow(section, item.time, extra, item.tag),
+    titleBlock(heading, "card-title", title, href, tokens),
+    ...proseBlocks(item, tokens),
     foot(item, tokens),
   ]);
 }
 
-function renderHero(hero) {
+function renderHero(hero, editionId) {
+  const href = hero.ref && editionId ? itemHref(editionId, hero.ref.key, hero.ref.index) : null;
   return h("article", { class: "card hero rise" }, [
-    metaRow(hero.section, hero.time),
-    titleBlock("h1", "hero-title", hero.title, hero.source_url, null),
-    hero.summary ? h("p", { class: "summary clamp" }, [text(hero.summary)]) : null,
+    metaRow(hero.section, hero.time, "", hero.tag),
+    titleBlock("h1", "hero-title", hero.title, href, null),
+    ...summaryNodes(hero.summary, null),
+    pointsList(hero.points, null),
+    impactCallout(hero.impact, null),
     foot(hero, null),
   ]);
 }
 
-function moreList(rows) {
+function previewText(summary) {
+  const value = asString(summary).replace(/\s+/g, " ");
+  if (value.length <= 48) return value;
+  return `${value.slice(0, 48)}…`;
+}
+
+function moreList(rows, edition) {
   return h("section", { class: "more rise" }, [
     h("h2", { class: "more-title" }, [text("本期还有")]),
     h("ul", { class: "more-list" }, rows.map((row) => {
       const title = asString(row.item.title) || "未命名";
-      const label = isHttpsUrl(row.item.source_url)
-        ? externalAnchor(row.item.source_url, "more-link", title)
-        : h("span", { class: "more-link" }, [text(title)]);
+      const ref = itemRef(edition, row.item);
+      const href = ref ? itemHref(edition.id, ref.key, ref.index) : null;
+      const copy = h("span", { class: "more-copy" }, [
+        h("span", { class: "more-item-title" }, [text(title)]),
+        asString(row.item.summary) ? h("span", { class: "more-preview" }, [text(previewText(row.item.summary))]) : null,
+      ]);
+      const label = href ? h("a", { class: "more-link", href }, [copy]) : h("span", { class: "more-link" }, [copy]);
       return h("li", {}, [label]);
     })),
   ]);
@@ -357,8 +444,9 @@ function sidebar(editions, latest) {
       rows.length
         ? h("div", { class: "side-list" }, rows.map((row) => {
           const label = h("span", { class: "side-label" }, [text(asString(row.item.title) || "未命名")]);
-          if (!isHttpsUrl(row.item.source_url)) return h("div", { class: "side-link" }, [label]);
-          return externalAnchor(row.item.source_url, "side-link", label);
+          const href = row.ref ? itemHref(latest.id, row.ref.key, row.ref.index) : null;
+          if (!href) return h("div", { class: "side-link" }, [label]);
+          return h("a", { class: "side-link", href }, [label]);
         }))
         : h("p", {}, [text("本期暂无")]),
     ]);
@@ -368,14 +456,21 @@ function sidebar(editions, latest) {
 
 function latestBand(edition) {
   const blocks = DISPLAY.flatMap((section) => {
-    const items = displayItems(edition, section.key);
-    if (!items.length) return [];
+    const entries = displayEntries(edition, section.key);
+    if (!entries.length) return [];
     return [h("section", { class: "band-section" }, [
       h("h3", { class: "band-sub" }, [
         text(section.label),
-        h("span", { class: "count" }, [text(`${items.length} 条`)]),
+        h("span", { class: "count" }, [text(`${entries.length} 条`)]),
       ]),
-      h("div", { class: "card-grid" }, items.map((item) => renderCard(item, section))),
+      h("div", { class: "card-grid digest" }, entries.map((entry) => renderCard(
+        entry.item,
+        section,
+        null,
+        "h3",
+        "",
+        { editionId: edition.id, key: entry.key, index: entry.index },
+      ))),
     ])];
   });
   if (!blocks.length) return null;
@@ -489,13 +584,16 @@ async function renderFront(gen, editions) {
   const lead = h("div", { class: "lead" }, [
     h("p", { class: "kicker rise" }, [text("今日头条")]),
     hero
-      ? renderHero(hero)
+      ? renderHero(hero, latest.id)
       : h("article", { class: "card hero rise" }, [
         h("h1", { class: "hero-title" }, [text(parsed?.label || "本期")]),
         h("p", { class: "summary" }, [text("本期暂无")]),
       ]),
-    pair.length ? h("div", { class: "pair" }, pair.map((row) => renderCard(row.item, row.section, null, "h2"))) : null,
-    rest.length ? moreList(rest) : null,
+    pair.length ? h("div", { class: "pair" }, pair.map((row) => {
+      const ref = itemRef(latest, row.item);
+      return renderCard(row.item, row.section, null, "h2", "", ref ? { editionId: latest.id, key: ref.key, index: ref.index } : null);
+    })) : null,
+    rest.length ? moreList(rest, latest) : null,
   ]);
   paint(gen, h("div", { class: "shell page" }, [
     h("div", { class: "layout" }, [lead, sidebar(editions, latest)]),
@@ -520,8 +618,12 @@ async function renderSection(gen, key, editions) {
     const edition = loaded[index];
     if (!edition) return;
     const parsed = parseEditionId(entry.id);
-    for (const item of displayItems(edition, key)) {
-      cards.push(renderCard(item, section, null, "h3", parsed?.timeLabel || ""));
+    for (const entry of displayEntries(edition, key)) {
+      cards.push(renderCard(entry.item, section, null, "h3", parsed?.timeLabel || "", {
+        editionId: edition.id,
+        key: entry.key,
+        index: entry.index,
+      }));
     }
   });
   const lead = h("div", { class: "lead" }, [
@@ -529,7 +631,7 @@ async function renderSection(gen, key, editions) {
     h("h1", { class: "page-title rise" }, [text(section.label)]),
     h("p", { class: "lede" }, [text(`最近 ${subset.length} 期里的${section.label}。`)]),
     cards.length
-      ? h("div", { class: "card-grid" }, cards)
+      ? h("div", { class: "card-grid digest" }, cards)
       : h("p", { class: "summary" }, [text("这一栏还没有条目。")]),
   ]);
   paint(gen, layoutShell(lead, sidebar(editions, loaded[0])));
@@ -546,7 +648,7 @@ async function renderSearch(gen, query, editions) {
   }
   if (gen !== viewGen) return;
   const heading = h("h1", { class: "page-title rise", "aria-live": "polite" }, [text("正在查找…")]);
-  const list = h("div", { class: "card-grid results" });
+  const list = h("div", { class: "card-grid digest results" });
   const lead = h("div", { class: "lead" }, [
     h("p", { class: "kicker rise" }, [text("搜索")]),
     heading,
@@ -569,10 +671,14 @@ async function renderSearch(gen, query, editions) {
     if (gen !== viewGen || !list.isConnected) return;
     const parsed = parseEditionId(entry.id);
     for (const section of DISPLAY) {
-      for (const item of displayItems(edition, section.key)) {
-        if (!matches(item, tokens)) continue;
+      for (const entry of displayEntries(edition, section.key)) {
+        if (!matches(entry.item, tokens)) continue;
         count += 1;
-        const card = renderCard(item, section, tokens, "h3", parsed?.timeLabel || "");
+        const card = renderCard(entry.item, section, tokens, "h3", parsed?.timeLabel || "", {
+          editionId: edition.id,
+          key: entry.key,
+          index: entry.index,
+        });
         card.style.animationDelay = `${Math.min(count, 10) * 35}ms`;
         list.append(card);
       }
@@ -643,6 +749,25 @@ async function renderArchive(gen) {
   paint(gen, page);
 }
 
+function renderItemDetail(gen, edition, view, editions) {
+  const { item, section, ref } = view;
+  const title = asString(item.title) || "未命名";
+  const fragment = itemFragment(ref.key, ref.index);
+  document.title = `${title} · AI联盟`;
+  setCanonical(`${SITE_ORIGIN}edition.html?id=${encodeURIComponent(edition.id)}#${fragment}`);
+  const lead = h("article", { class: "detail rise", id: fragment }, [
+    h("p", { class: "detail-back" }, [
+      h("a", { class: "text-link", href: `edition.html?id=${encodeURIComponent(edition.id)}` }, [text("返回这一期")]),
+    ]),
+    metaRow(section, item.time, "", item.tag),
+    h("h1", { class: "page-title" }, [text(title)]),
+    ...proseBlocks(item, null),
+    foot(item, null),
+  ]);
+  paint(gen, layoutShell(lead, sidebar(editions, edition)));
+  requestAnimationFrame(() => window.scrollTo(0, 0));
+}
+
 async function renderEditionPage(gen) {
   syncTabs(null);
   const id = new URLSearchParams(location.search).get("id") || "";
@@ -659,6 +784,20 @@ async function renderEditionPage(gen) {
   }
   const edition = await loadEdition(entry);
   if (gen !== viewGen) return;
+  const itemView = resolveItem(edition, currentItemRef());
+  if (currentItemRef() && !itemView) {
+    document.title = "没有找到这一条 · AI联盟";
+    paint(gen, layoutShell(h("div", { class: "lead" }, [
+      h("h1", { class: "page-title" }, [text("没有找到这一条")]),
+      h("p", { class: "summary" }, [text("链接里的条目不在这一期。")]),
+      h("p", {}, [h("a", { class: "text-link", href: `edition.html?id=${encodeURIComponent(id)}` }, [text("返回这一期")])]),
+    ]), sidebar(index.editions, edition)));
+    return;
+  }
+  if (itemView) {
+    renderItemDetail(gen, edition, itemView, index.editions);
+    return;
+  }
   const parsed = parseEditionId(edition.id) || parseEditionId(id);
   const headline = asString(edition.headline) || parsed?.label || id;
   document.title = `${headline} · AI联盟`;
@@ -684,14 +823,21 @@ async function renderEditionPage(gen) {
       h("div", { class: "edition-tools" }, tools),
     ]),
     ...DISPLAY.flatMap((section) => {
-      const items = displayItems(edition, section.key);
-      if (!items.length) return [];
+      const entries = displayEntries(edition, section.key);
+      if (!entries.length) return [];
       return [h("section", { class: "band-section" }, [
         h("h2", { class: "band-sub" }, [
           text(section.label),
-          h("span", { class: "count" }, [text(`${items.length} 条`)]),
+          h("span", { class: "count" }, [text(`${entries.length} 条`)]),
         ]),
-        h("div", { class: "card-grid" }, items.map((item) => renderCard(item, section))),
+        h("div", { class: "card-grid digest" }, entries.map((row) => renderCard(
+          row.item,
+          section,
+          null,
+          "h3",
+          "",
+          { editionId: edition.id, key: row.key, index: row.index },
+        ))),
       ])];
     }),
   ]);
@@ -853,6 +999,9 @@ function wireChrome() {
   window.addEventListener("popstate", () => {
     syncQueryInput();
     if (document.body.dataset.page === "home" || document.body.dataset.page === "edition") render();
+  });
+  window.addEventListener("hashchange", () => {
+    if (document.body.dataset.page === "edition") render();
   });
 }
 

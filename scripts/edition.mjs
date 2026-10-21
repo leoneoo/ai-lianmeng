@@ -11,7 +11,7 @@ import {
 
 const SECTION_KEYS = SECTIONS.map((section) => section.key);
 const EDITION_KEYS = new Set(["id", "published_at", "headline", "sections"]);
-const ITEM_KEYS = new Set(["title", "summary", "source_url", "time", "handle"]);
+const ITEM_KEYS = new Set(["title", "summary", "source_url", "time", "handle", "impact", "points", "tag"]);
 const MAX_ERRORS = 50;
 
 function isObject(value) {
@@ -96,9 +96,34 @@ function normalizeItem(item, label, errors) {
       handle = item.handle.trim();
     }
   }
+  let impact;
+  if (Object.prototype.hasOwnProperty.call(item, "impact")) {
+    impact = readLine(item.impact, `${label}.impact`, errors, 400);
+  }
+  let tag;
+  if (Object.prototype.hasOwnProperty.call(item, "tag")) {
+    tag = readLine(item.tag, `${label}.tag`, errors, 16);
+  }
+  let points;
+  if (Object.prototype.hasOwnProperty.call(item, "points")) {
+    if (!Array.isArray(item.points)) {
+      pushError(errors, `${label}.points 必须是字符串数组`);
+    } else if (item.points.length > 8) {
+      pushError(errors, `${label}.points 最多 8 条`);
+    } else {
+      points = [];
+      for (let index = 0; index < item.points.length; index += 1) {
+        const line = readLine(item.points[index], `${label}.points[${index}]`, errors, 120);
+        if (line) points.push(line);
+      }
+    }
+  }
   if (!title || !summary || !sourceUrl || !time) return null;
   const normalized = { title, summary, source_url: sourceUrl, time };
   if (handle) normalized.handle = handle;
+  if (impact) normalized.impact = impact;
+  if (points) normalized.points = points;
+  if (tag) normalized.tag = tag;
   return normalized;
 }
 
