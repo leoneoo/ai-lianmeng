@@ -10,48 +10,76 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:url" content="https://leoneoo.github.io/ai-lianmeng/">
-  <meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
-  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0c0e12">
+  <meta name="color-scheme" content="dark light">
   <meta name="apple-mobile-web-app-title" content="AI联盟">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
   <link rel="canonical" href="https://leoneoo.github.io/ai-lianmeng/">
-  <link rel="stylesheet" href="css/site.css">
   <script>
     (function () {
+      var theme = "dark";
       try {
-        var theme = localStorage.getItem("ai-lianmeng-theme");
-        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+        if (localStorage.getItem("ai-lianmeng-theme") === "light") theme = "light";
       } catch (error) {}
+      document.documentElement.dataset.theme = theme;
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = theme === "light" ? "#f4f6f8" : "#0c0e12";
     })();
   </script>
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body data-page="home">
   <a class="skip" href="#main">跳到内容</a>
-  <header class="mast">
-    <div class="wrap mast-row">
+  <header class="topbar" data-topbar>
+    <div class="shell topbar-row">
       <a class="brand" href="index.html">
-        <span class="seal" aria-hidden="true">盟</span>
-        <span>
+        <span class="mark" aria-hidden="true">盟</span>
+        <span class="brand-text">
           <span class="brand-name">AI联盟</span>
           <span class="tagline">免费中文 AI 新闻站 · 内容整理自 X</span>
         </span>
       </a>
-      <nav class="nav" aria-label="站点">
-        <a href="index.html" aria-current="page">最新</a>
-        <a href="archive.html">往期</a>
-        <button type="button" class="theme" data-theme-toggle aria-pressed="false">深色</button>
+      <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="切换到浅色" title="切换到浅色">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
+          <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5 5l1.6 1.6M17.4 17.4 19 19M19 5l-1.6 1.6M6.6 17.4 5 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path d="M15.5 3.5a8 8 0 1 0 5 12.5 7 7 0 0 1-5-12.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+        </svg>
+        <span class="sr-only">浅色</span>
+      </button>
+      <form class="search" action="index.html" method="get" role="search">
+        <label class="sr-only" for="q">搜索标题、摘要或账号</label>
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
+          <path d="M16 16l4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+        <input id="q" name="q" type="search" placeholder="搜索标题、摘要或账号" autocomplete="off" enterkeyhint="search">
+      </form>
+      <nav class="top-links" aria-label="站点">
+        <a class="top-link" href="index.html" aria-current="page">首页</a>
+        <a class="top-link" href="archive.html">往期归档</a>
+      </nav>
+    </div>
+    <div class="shell tab-row">
+      <nav class="tabs" role="tablist" aria-label="栏目">
+        <a href="index.html" data-tab="home" role="tab" aria-selected="true">首页</a>
+        <a href="index.html?section=zh_topics" data-tab="zh_topics" role="tab" aria-selected="false">中文选题</a>
+        <a href="index.html?section=en_topics" data-tab="en_topics" role="tab" aria-selected="false">英文选题</a>
+        <a href="index.html?section=x_daily" data-tab="x_daily" role="tab" aria-selected="false">X AI 日报</a>
+        <span class="tab-indicator" aria-hidden="true"></span>
       </nav>
     </div>
   </header>
   <main id="main">
-    <p id="status" class="status wrap" role="status">正在加载…</p>
+    <p id="status" class="status shell" role="status">正在加载…</p>
     <div id="app"></div>
-    <noscript><p class="noscript wrap">请开启 JavaScript 后阅读期刊。数据在 data/index.json。</p></noscript>
+    <noscript><p class="noscript shell">请开启 JavaScript 后阅读期刊。数据在 data/index.json。</p></noscript>
   </main>
   <footer class="footer">
-    <div class="wrap">
+    <div class="shell">
       <p>AI联盟 · 免费中文 AI 新闻站，内容整理自 X 上的公开帖子。</p>
       <p>每天 06:00、12:00、18:00、22:00（新加坡时间）。</p>
     </div>
