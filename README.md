@@ -47,6 +47,9 @@ js/ css/ *.html                         站点本身
 | `source_url` | 是 | 原始帖子或文章，仅 `https` |
 | `time` | 是 | 来源时间，ISO 8601 且带 `+08:00` |
 | `handle` | 否 | X 账号，例如 `@AnthropicAI`。不要带空字符串 |
+| `impact` | 否 | 「影响」一句话，1 到 400 字。不需要就删掉这个字段 |
+| `points` | 否 | 短要点数组，最多 8 条，每条 1 到 120 字 |
+| `tag` | 否 | 短标签，1 到 16 字，例如「传闻」或「自报」 |
 
 `x_daily`、`zh_topics` 两个键都必须出现。`en_topics`、`oss_agent`、`tech`、`iot` 可以整段省略；旧期刊没有可选栏目也能通过校验。不要增加别的字段。文件会写到 `data/年/月/id.json`，例如 `data/2026/10/2026-10-21-2200.json`。索引里的 `counts` 会带上这些栏目的条数；旧索引如果少了可选栏目的计数，按 0 条理解。`counts.en_topics` 仍会写入，页面不单独展示这一栏。
 
@@ -66,7 +69,10 @@ js/ css/ *.html                         站点本身
         "summary": "这是一条示例摘要，用来确认摄取脚本能写入期刊文件。请勿把本文件当作新闻发布。",
         "source_url": "https://example.com/ai-lianmeng/sample-x",
         "time": "2026-10-21T21:12:00+08:00",
-        "handle": "@example"
+        "handle": "@example",
+        "impact": "示例影响：说明这条消息会怎样改变读者的下一步。",
+        "points": ["摄取脚本会保留影响、要点和标签", "没有这些字段的旧条目仍然有效"],
+        "tag": "自报"
       }
     ],
     "zh_topics": [
@@ -186,7 +192,7 @@ js/ css/ *.html                         站点本身
 
 ## 页面
 
-纯静态。首页读 `data/index.json`，再取最新一期：头条、栏目卡片和侧栏。顶栏是「首页 / AI 日报 / 中文博主 / 开源与 Agent / 科技数码 / 万物互联 / 往期」。栏目页地址是 `index.html?section=`，键名是 `x_daily`、`zh_topics`、`oss_agent`、`tech`、`iot`。`?section=en_topics` 会打开 AI 日报。没有条目的栏目不会在首页铺一块空区域。宽屏内容区最多约 1440px。顶栏可以搜索标题、摘要和账号，结果地址是 `index.html?q=`。往期页按日期浏览。默认深色，可以切到浅色。
+纯静态。首页读 `data/index.json`，再取最新一期：头条、栏目卡片和侧栏。顶栏是「首页 / AI 日报 / 中文博主 / 开源与 Agent / 科技数码 / 万物互联 / 往期」。栏目页地址是 `index.html?section=`，键名是 `x_daily`、`zh_topics`、`oss_agent`、`tech`、`iot`。`?section=en_topics` 会打开 AI 日报。没有条目的栏目不会在首页铺一块空区域。摘要、要点和影响在栏目页、期刊页和搜索结果里全文显示。单条永久链接是 `edition.html?id=期号#item-栏目-序号`，例如 `edition.html?id=2026-10-21-2200#item-x_daily-0`。宽屏内容区最多约 1440px。顶栏可以搜索标题、摘要、影响、要点、标签和账号，结果地址是 `index.html?q=`。往期页按日期浏览。默认深色，可以切到浅色。
 
 项目页的根路径是 `/ai-lianmeng/`。页面里的样式、脚本和数据都用相对地址，这样本地和 GitHub Pages 都能打开。
 

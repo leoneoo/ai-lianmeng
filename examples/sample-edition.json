@@ -9,7 +9,10 @@
         "summary": "这是一条示例摘要，用来确认摄取脚本能写入期刊文件。请勿把本文件当作新闻发布。",
         "source_url": "https://example.com/ai-lianmeng/sample-x",
         "time": "2026-10-21T21:12:00+08:00",
-        "handle": "@example"
+        "handle": "@example",
+        "impact": "示例影响：说明这条消息会怎样改变读者的下一步。",
+        "points": ["摄取脚本会保留影响、要点和标签", "没有这些字段的旧条目仍然有效"],
+        "tag": "自报"
       }
     ],
     "zh_topics": [

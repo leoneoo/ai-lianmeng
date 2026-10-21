@@ -13,6 +13,22 @@ const WEEKDAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "�
 const ID_RE = /^(\d{4})-(\d{2})-(\d{2})-(0600|1200|1800|2200)$/;
 const TIME_RE = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})\+08:00$/;
 
+export function itemFragment(sectionKey, index) {
+  if (!SECTIONS.some((section) => section.key === sectionKey)) return null;
+  if (!Number.isInteger(index) || index < 0 || index > 39) return null;
+  return `item-${sectionKey}-${index}`;
+}
+
+export function parseItemFragment(value) {
+  if (typeof value !== "string") return null;
+  const match = /^item-([a-z_]+)-(\d+)$/.exec(value.trim());
+  if (!match) return null;
+  const index = Number(match[2]);
+  const fragment = itemFragment(match[1], index);
+  if (fragment !== `item-${match[1]}-${index}`) return null;
+  return { key: match[1], index };
+}
+
 export function isRealDate(year, month, day) {
   if (month < 1 || month > 12 || day < 1 || day > 31) return false;
   const date = new Date(Date.UTC(year, month - 1, day));
