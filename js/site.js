@@ -9,7 +9,7 @@ import {
 } from "./format.js";
 
 const INDEX_URL = new URL("data/index.json", document.baseURI);
-const DISPLAY = ["zh_topics", "en_topics", "x_daily"].map((key) => SECTIONS.find((section) => section.key === key));
+const DISPLAY = SECTIONS;
 
 let indexPromise = null;
 const editionCache = new Map();
@@ -174,6 +174,7 @@ function leadParts(edition) {
     const first = sectionItems(edition, section.key)[0];
     if (first) pair.push({ item: first, section });
   }
+  pair.splice(2);
   const rest = [];
   if (hero?.skipKey) {
     for (const item of sectionItems(edition, hero.skipKey)) {
@@ -247,7 +248,7 @@ function handleNode(handle, tokens) {
 
 function metaRow(section, time, extra) {
   return h("div", { class: "card-meta" }, [
-    h("span", { class: `badge badge-${section.key}` }, [text(section.label)]),
+    h("span", { class: `badge badge-${section.key}` }, [text(section.nav || section.label)]),
     time ? h("time", { datetime: time }, [text(formatZhTime(time))]) : null,
     extra ? h("span", {}, [text(extra)]) : null,
   ]);
@@ -309,17 +310,22 @@ function sectionStamp(edition, key) {
 function sidebar(editions, latest) {
   const intro = h("section", { class: "side-card rise" }, [
     h("h2", { class: "side-title" }, [text("AI联盟")]),
-    h("p", {}, [text("免费中文 AI 新闻站。每期整理 X 上的公开动态，连同中文选题和英文选题，并为每条保留原文链接。")]),
+    h("p", {}, [text("免费中文 AI 新闻站。每期整理 X 上的公开动态，连同中文、英文和更多选题，并为每条保留原文链接。")]),
   ]);
+  const listed = latest
+    ? DISPLAY.filter((section) => sectionItems(latest, section.key).length)
+    : DISPLAY;
   const sections = h("section", { class: "side-card rise" }, [
     h("h2", { class: "side-title" }, [text("栏目")]),
-    h("div", { class: "side-list" }, DISPLAY.map((section) => h("a", {
-      class: "side-link",
-      href: `index.html?section=${section.key}`,
-    }, [
-      h("span", { class: `badge badge-${section.key}` }, [text(section.label)]),
-      h("span", { class: "side-date" }, [text(latest ? sectionStamp(latest, section.key) : "")]),
-    ]))),
+    listed.length
+      ? h("div", { class: "side-list" }, listed.map((section) => h("a", {
+        class: "side-link",
+        href: `index.html?section=${section.key}`,
+      }, [
+        h("span", { class: `badge badge-${section.key}` }, [text(section.nav || section.label)]),
+        h("span", { class: "side-date" }, [text(latest ? sectionStamp(latest, section.key) : "")]),
+      ])))
+      : h("p", {}, [text("这一期的栏目还是空的。")]),
   ]);
   const recentLinks = editions.slice(0, 6).map((entry) => {
     const parsed = parseEditionId(entry.id);
@@ -355,20 +361,21 @@ function sidebar(editions, latest) {
 }
 
 function latestBand(edition) {
+  const blocks = DISPLAY.flatMap((section) => {
+    const items = sectionItems(edition, section.key);
+    if (!items.length) return [];
+    return [h("section", { class: "band-section" }, [
+      h("h3", { class: "band-sub" }, [
+        text(section.label),
+        h("span", { class: "count" }, [text(`${items.length} 条`)]),
+      ]),
+      h("div", { class: "card-grid" }, items.map((item) => renderCard(item, section))),
+    ])];
+  });
+  if (!blocks.length) return null;
   return h("section", { class: "band" }, [
     h("h2", { class: "band-title rise" }, [text("最新报道")]),
-    ...DISPLAY.map((section) => {
-      const items = sectionItems(edition, section.key);
-      return h("section", { class: "band-section" }, [
-        h("h3", { class: "band-sub" }, [
-          text(section.label),
-          h("span", { class: "count" }, [text(`${items.length} 条`)]),
-        ]),
-        items.length
-          ? h("div", { class: "card-grid" }, items.map((item) => renderCard(item, section)))
-          : h("p", { class: "empty-section" }, [text("本期暂无")]),
-      ]);
-    }),
+    ...blocks,
   ]);
 }
 
@@ -584,7 +591,7 @@ async function renderHome(gen) {
 async function renderArchive(gen) {
   document.title = "往期归档 · AI联盟";
   setCanonical(`${SITE_ORIGIN}archive.html`);
-  syncTabs(null);
+  syncTabs("archive");
   const index = await loadIndex();
   if (gen !== viewGen) return;
   if (!index.editions.length) {
@@ -652,7 +659,10 @@ async function renderEditionPage(gen) {
     tools.push(h("a", { class: "text-link", href: `edition.html?id=${encodeURIComponent(siblings.older.id)}` }, [text("更早一期")]));
   }
   tools.push(h("a", { class: "text-link", href: "archive.html" }, [text("全部往期")]));
-  const counts = DISPLAY.map((section) => `${section.label} ${sectionItems(edition, section.key).length}`).join(" · ");
+  const counts = DISPLAY
+    .filter((section) => sectionItems(edition, section.key).length)
+    .map((section) => `${section.nav || section.label} ${sectionItems(edition, section.key).length}`)
+    .join(" · ");
   const lead = h("div", { class: "lead" }, [
     h("article", { class: "card hero rise" }, [
       h("p", { class: "kicker" }, [text(asString(edition.headline) ? (parsed?.label || "本期") : "本期")]),
@@ -660,17 +670,16 @@ async function renderEditionPage(gen) {
       h("p", { class: "summary" }, [text(counts)]),
       h("div", { class: "edition-tools" }, tools),
     ]),
-    ...DISPLAY.map((section) => {
+    ...DISPLAY.flatMap((section) => {
       const items = sectionItems(edition, section.key);
-      return h("section", { class: "band-section" }, [
+      if (!items.length) return [];
+      return [h("section", { class: "band-section" }, [
         h("h2", { class: "band-sub" }, [
           text(section.label),
           h("span", { class: "count" }, [text(`${items.length} 条`)]),
         ]),
-        items.length
-          ? h("div", { class: "card-grid" }, items.map((item) => renderCard(item, section)))
-          : h("p", { class: "empty-section" }, [text("本期暂无")]),
-      ]);
+        h("div", { class: "card-grid" }, items.map((item) => renderCard(item, section))),
+      ])];
     }),
   ]);
   paint(gen, layoutShell(lead, sidebar(index.editions, edition)));

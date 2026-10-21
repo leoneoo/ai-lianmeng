@@ -2,7 +2,7 @@
 
 免费中文 AI 新闻站，内容整理自 X 上的公开帖子。线上地址：[https://leoneoo.github.io/ai-lianmeng/](https://leoneoo.github.io/ai-lianmeng/)。
 
-每天四期，时间是新加坡（`Asia/Singapore`，全年 UTC+8）：**06:00、12:00、18:00、22:00**。一期有三个栏目：「X AI 日报」「中文选题」「英文选题」。站点在没有期刊时只显示空状态，不会放示例新闻。
+每天四期，时间是新加坡（`Asia/Singapore`，全年 UTC+8）：**06:00、12:00、18:00、22:00**。一期必填三个栏目：「X AI 日报」「中文选题」「英文选题」。还可以带三个可选栏目：「开源与 Agent 技术」「科技与数码」「万物互联」。站点在没有期刊时只显示空状态，不会放示例新闻。
 
 ## 仓库结构
 
@@ -34,6 +34,9 @@ js/ css/ *.html                         站点本身
 | `sections.x_daily` | 是 | 「X AI 日报」，数组，可以是 `[]`，最多 40 条 |
 | `sections.zh_topics` | 是 | 「中文选题」 |
 | `sections.en_topics` | 是 | 「英文选题」 |
+| `sections.oss_agent` | 否 | 「开源与 Agent 技术」。不需要时省略整个键 |
+| `sections.tech` | 否 | 「科技与数码」 |
+| `sections.iot` | 否 | 「万物互联」 |
 
 每条记录：
 
@@ -45,7 +48,7 @@ js/ css/ *.html                         站点本身
 | `time` | 是 | 来源时间，ISO 8601 且带 `+08:00` |
 | `handle` | 否 | X 账号，例如 `@AnthropicAI`。不要带空字符串 |
 
-三个栏目键都必须出现。不要增加别的字段。文件会写到 `data/年/月/id.json`，例如 `data/2026/10/2026-10-21-2200.json`。
+`x_daily`、`zh_topics`、`en_topics` 三个键都必须出现。`oss_agent`、`tech`、`iot` 可以整段省略；旧期刊没有这三栏也能通过校验。不要增加别的字段。文件会写到 `data/年/月/id.json`，例如 `data/2026/10/2026-10-21-2200.json`。索引里的 `counts` 会带上这六个栏目的条数；旧索引如果少了可选栏目的计数，按 0 条理解。
 
 索引 [`data/index.json`](data/index.json) 的结构见 [`schema/index.schema.json`](schema/index.schema.json)。`editions` 按 `published_at` 从新到旧。这个文件由脚本维护。
 
@@ -82,6 +85,32 @@ js/ css/ *.html                         站点本身
         "source_url": "https://example.com/ai-lianmeng/sample-en",
         "time": "2026-10-21T16:40:00+08:00"
       }
+    ],
+    "oss_agent": [
+      {
+        "title": "【示例】开源与 Agent 技术",
+        "summary": "示例摘要，说明这一栏会展示开源项目和 Agent 技术。",
+        "source_url": "https://example.com/ai-lianmeng/sample-oss",
+        "time": "2026-10-21T15:20:00+08:00",
+        "handle": "@example_oss"
+      }
+    ],
+    "tech": [
+      {
+        "title": "【示例】科技与数码",
+        "summary": "示例摘要，说明这一栏会展示科技与数码选题。",
+        "source_url": "https://example.com/ai-lianmeng/sample-tech",
+        "time": "2026-10-21T14:05:00+08:00"
+      }
+    ],
+    "iot": [
+      {
+        "title": "【示例】万物互联",
+        "summary": "示例摘要，说明这一栏会展示万物互联选题。",
+        "source_url": "https://example.com/ai-lianmeng/sample-iot",
+        "time": "2026-10-21T13:40:00+08:00",
+        "handle": "@example_iot"
+      }
     ]
   }
 }
@@ -107,7 +136,7 @@ js/ css/ *.html                         站点本身
 请收录这一期。
 
 ```json
-{ "id": "2026-10-21-2200", "published_at": "2026-10-21T22:00:00+08:00", "sections": { "x_daily": [], "zh_topics": [], "en_topics": [] } }
+{ "id": "2026-10-21-2200", "published_at": "2026-10-21T22:00:00+08:00", "sections": { "x_daily": [], "zh_topics": [], "en_topics": [], "oss_agent": [], "tech": [], "iot": [] } }
 ```
 ````
 
@@ -157,7 +186,7 @@ js/ css/ *.html                         站点本身
 
 ## 页面
 
-纯静态。首页读 `data/index.json`，再取最新一期：头条、栏目卡片和侧栏。宽屏内容区最多约 1440px。顶栏可以搜索标题、摘要和账号，结果地址是 `index.html?q=`。往期页按日期浏览。默认深色，可以切到浅色。
+纯静态。首页读 `data/index.json`，再取最新一期：头条、栏目卡片和侧栏。栏目页地址是 `index.html?section=`，键名是 `x_daily`、`zh_topics`、`en_topics`、`oss_agent`、`tech`、`iot`。没有条目的栏目不会在首页铺一块空区域。宽屏内容区最多约 1440px。顶栏可以搜索标题、摘要和账号，结果地址是 `index.html?q=`。往期页按日期浏览。默认深色，可以切到浅色。
 
 项目页的根路径是 `/ai-lianmeng/`。页面里的样式、脚本和数据都用相对地址，这样本地和 GitHub Pages 都能打开。
 

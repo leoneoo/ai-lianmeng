@@ -1,9 +1,12 @@
 export const SITE_ORIGIN = "https://leoneoo.github.io/ai-lianmeng/";
 
 export const SECTIONS = [
-  { key: "x_daily", label: "X AI 日报" },
-  { key: "zh_topics", label: "中文选题" },
-  { key: "en_topics", label: "英文选题" },
+  { key: "x_daily", label: "X AI 日报", nav: "X AI 日报", required: true },
+  { key: "zh_topics", label: "中文选题", nav: "中文选题", required: true },
+  { key: "en_topics", label: "英文选题", nav: "英文选题", required: true },
+  { key: "oss_agent", label: "开源与 Agent 技术", nav: "开源与 Agent", required: false },
+  { key: "tech", label: "科技与数码", nav: "科技数码", required: false },
+  { key: "iot", label: "万物互联", nav: "万物互联", required: false },
 ];
 
 const WEEKDAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];

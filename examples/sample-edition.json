@@ -28,6 +28,32 @@
         "source_url": "https://example.com/ai-lianmeng/sample-en",
         "time": "2026-10-21T16:40:00+08:00"
       }
+    ],
+    "oss_agent": [
+      {
+        "title": "【示例】开源与 Agent 技术",
+        "summary": "示例摘要，说明这一栏会展示开源项目和 Agent 技术。",
+        "source_url": "https://example.com/ai-lianmeng/sample-oss",
+        "time": "2026-10-21T15:20:00+08:00",
+        "handle": "@example_oss"
+      }
+    ],
+    "tech": [
+      {
+        "title": "【示例】科技与数码",
+        "summary": "示例摘要，说明这一栏会展示科技与数码选题。",
+        "source_url": "https://example.com/ai-lianmeng/sample-tech",
+        "time": "2026-10-21T14:05:00+08:00"
+      }
+    ],
+    "iot": [
+      {
+        "title": "【示例】万物互联",
+        "summary": "示例摘要，说明这一栏会展示万物互联选题。",
+        "source_url": "https://example.com/ai-lianmeng/sample-iot",
+        "time": "2026-10-21T13:40:00+08:00",
+        "handle": "@example_iot"
+      }
     ]
   }
 }

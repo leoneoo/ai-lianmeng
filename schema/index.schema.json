@@ -43,10 +43,14 @@
             "type": "object",
             "additionalProperties": false,
             "required": ["x_daily", "zh_topics", "en_topics"],
+            "description": "各栏目条数。必填栏目总会写入。oss_agent、tech、iot 由脚本写入，旧索引里可以省略，省略时按 0 条理解。",
             "properties": {
               "x_daily": { "type": "integer", "minimum": 0 },
               "zh_topics": { "type": "integer", "minimum": 0 },
-              "en_topics": { "type": "integer", "minimum": 0 }
+              "en_topics": { "type": "integer", "minimum": 0 },
+              "oss_agent": { "type": "integer", "minimum": 0 },
+              "tech": { "type": "integer", "minimum": 0 },
+              "iot": { "type": "integer", "minimum": 0 }
             }
           }
         }

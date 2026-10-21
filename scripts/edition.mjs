@@ -133,11 +133,15 @@ export function validateEdition(input) {
     for (const key of Object.keys(input.sections)) {
       if (!SECTION_KEYS.includes(key)) pushError(errors, `sections 不允许的字段 ${key}`);
     }
-    for (const key of SECTION_KEYS) {
+    for (const section of SECTIONS) {
+      const key = section.key;
       const label = `sections.${key}`;
-      if (!Object.prototype.hasOwnProperty.call(input.sections, key)) {
-        pushError(errors, `缺少 ${label}`);
-        sections[key] = [];
+      const present = Object.prototype.hasOwnProperty.call(input.sections, key);
+      if (!present) {
+        if (section.required) {
+          pushError(errors, `缺少 ${label}`);
+          sections[key] = [];
+        }
         continue;
       }
       const list = input.sections[key];
@@ -207,11 +211,11 @@ export function readIndex(root) {
 }
 
 function countsFor(edition) {
-  return {
-    x_daily: edition.sections.x_daily.length,
-    zh_topics: edition.sections.zh_topics.length,
-    en_topics: edition.sections.en_topics.length,
-  };
+  const counts = {};
+  for (const section of SECTIONS) {
+    counts[section.key] = edition.sections[section.key]?.length || 0;
+  }
+  return counts;
 }
 
 function indexEntry(edition, rel) {

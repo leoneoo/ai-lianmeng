@@ -272,9 +272,10 @@ button, input { font: inherit; color: inherit; }
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
-  padding: 0 0.95rem;
+  padding: 0 0.7rem;
   color: var(--muted);
   text-decoration: none;
+  font-size: 0.92rem;
   font-weight: 600;
   white-space: nowrap;
   transition: color 200ms ease;
@@ -411,6 +412,9 @@ button, input { font: inherit; color: inherit; }
 .badge-x_daily { --badge: #5aa2ff; }
 .badge-zh_topics { --badge: #3dbe8b; }
 .badge-en_topics { --badge: #ff8a3d; }
+.badge-oss_agent { --badge: #c084fc; }
+.badge-tech { --badge: #2ec5d6; }
+.badge-iot { --badge: #f472b6; }
 
 .card-title {
   width: fit-content;

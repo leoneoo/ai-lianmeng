@@ -27,7 +27,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["x_daily", "zh_topics", "en_topics"],
-      "description": "三个固定栏目，顺序不限，但三个键都必须出现，值可以是空数组。",
+      "description": "三个必填栏目必须出现，值可以是空数组。oss_agent、tech、iot 可选，不需要时整段省略，不要传 null。",
       "properties": {
         "x_daily": {
           "$ref": "#/$defs/itemList",
@@ -40,6 +40,18 @@
         "en_topics": {
           "$ref": "#/$defs/itemList",
           "description": "英文选题"
+        },
+        "oss_agent": {
+          "$ref": "#/$defs/itemList",
+          "description": "开源与 Agent 技术。可选。"
+        },
+        "tech": {
+          "$ref": "#/$defs/itemList",
+          "description": "科技与数码。可选。"
+        },
+        "iot": {
+          "$ref": "#/$defs/itemList",
+          "description": "万物互联。可选。"
         }
       }
     }

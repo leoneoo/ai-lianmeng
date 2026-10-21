@@ -31,7 +31,22 @@ function runNode(args, options = {}) {
 }
 
 test("section names and edition id rules", () => {
-  assert.deepEqual(SECTIONS.map((section) => section.label), ["X AI 日报", "中文选题", "英文选题"]);
+  assert.deepEqual(SECTIONS.map((section) => section.key), [
+    "x_daily",
+    "zh_topics",
+    "en_topics",
+    "oss_agent",
+    "tech",
+    "iot",
+  ]);
+  assert.deepEqual(SECTIONS.map((section) => section.label), [
+    "X AI 日报",
+    "中文选题",
+    "英文选题",
+    "开源与 Agent 技术",
+    "科技与数码",
+    "万物互联",
+  ]);
   assert.equal(parseEditionId("2026-10-21-2200").published_at, "2026-10-21T22:00:00+08:00");
   assert.equal(weekday("2026-10-21"), "周三");
   assert.equal(commitMessage("2026-10-21-0600"), "edition: 2026-10-21 06:00");
@@ -47,6 +62,41 @@ test("sample edition validates and is labelled as a sample", () => {
   assert.equal(result.ok, true, (result.errors || []).join("\n"));
   assert.match(result.edition.headline, /示例/);
   assert.equal(result.edition.sections.en_topics[0].handle, undefined);
+  assert.equal(result.edition.sections.oss_agent[0].handle, "@example_oss");
+  assert.equal(result.edition.sections.tech.length, 1);
+  assert.equal(result.edition.sections.iot.length, 1);
+});
+
+test("editions without the optional sections still validate", () => {
+  const legacy = structuredClone(sample);
+  delete legacy.sections.oss_agent;
+  delete legacy.sections.tech;
+  delete legacy.sections.iot;
+  const result = validateEdition(legacy);
+  assert.equal(result.ok, true, (result.errors || []).join("\n"));
+  assert.equal(Object.hasOwn(result.edition.sections, "oss_agent"), false);
+  assert.equal(Object.hasOwn(result.edition.sections, "tech"), false);
+  assert.equal(Object.hasOwn(result.edition.sections, "iot"), false);
+  assert.equal(result.edition.sections.x_daily.length, 1);
+
+  const root = mkdtempSync(path.join(tmpdir(), "ailm-legacy-"));
+  try {
+    const applied = applyEdition(root, legacy, new Date("2026-10-21T14:00:00Z"));
+    assert.equal(applied.counts.x_daily, 1);
+    assert.equal(applied.counts.oss_agent, 0);
+    assert.equal(applied.counts.tech, 0);
+    assert.equal(applied.counts.iot, 0);
+    const written = JSON.parse(readFileSync(path.join(root, applied.path), "utf8"));
+    assert.equal(Object.hasOwn(written.sections, "oss_agent"), false);
+    const index = JSON.parse(readFileSync(path.join(root, "data/index.json"), "utf8"));
+    assert.equal(index.editions[0].counts.tech, 0);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+
+  const extra = structuredClone(sample);
+  extra.sections.notes = [];
+  assert.equal(validateEdition(extra).ok, false);
 });
 
 test("rejects malformed editions", () => {
@@ -105,6 +155,9 @@ test("applyEdition writes archive order and treats identical input as unchanged"
     assert.deepEqual(index.editions.map((entry) => entry.id), ["2026-10-21-2200", "2026-10-21-1800"]);
     assert.equal(index.editions[0].counts.x_daily, 1);
     assert.equal(index.editions[0].counts.en_topics, 1);
+    assert.equal(index.editions[0].counts.oss_agent, 1);
+    assert.equal(index.editions[0].counts.tech, 1);
+    assert.equal(index.editions[0].counts.iot, 1);
     assert.equal(index.updated_at, "2026-10-21T22:05:00+08:00");
     const again = applyEdition(root, sample, new Date("2026-10-21T16:00:00Z"));
     assert.equal(again.status, "unchanged");
@@ -224,4 +277,14 @@ test("README example matches the schema", () => {
   assert.match(result.edition.headline, /示例/);
   const schema = JSON.parse(readFileSync(path.join(repoRoot, "schema/edition.schema.json"), "utf8"));
   assert.deepEqual(schema.properties.sections.required, ["x_daily", "zh_topics", "en_topics"]);
+  for (const key of ["oss_agent", "tech", "iot"]) {
+    assert.equal(schema.properties.sections.properties[key].$ref, "#/$defs/itemList");
+    assert.equal(schema.properties.sections.required.includes(key), false);
+  }
+  const indexSchema = JSON.parse(readFileSync(path.join(repoRoot, "schema/index.schema.json"), "utf8"));
+  const counts = indexSchema.properties.editions.items.properties.counts;
+  assert.deepEqual(counts.required, ["x_daily", "zh_topics", "en_topics"]);
+  for (const key of ["oss_agent", "tech", "iot"]) {
+    assert.equal(counts.properties[key].type, "integer");
+  }
 });
