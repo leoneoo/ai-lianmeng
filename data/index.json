@@ -1,7 +1,18 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21T21:42:03+08:00",
+  "updated_at": "2026-10-21T22:09:11+08:00",
   "editions": [
+    {
+      "id": "2026-10-21-2200",
+      "published_at": "2026-10-21T22:00:00+08:00",
+      "path": "data/2026/10/2026-10-21-2200.json",
+      "counts": {
+        "x_daily": 5,
+        "zh_topics": 0,
+        "en_topics": 1
+      },
+      "headline": "OpenAI 模型和 Codex 上架 Google Cloud，三大美国云首次都能买到 OpenAI 前沿模型"
+    },
     {
       "id": "2026-10-21-1800",
       "published_at": "2026-10-21T18:00:00+08:00",
