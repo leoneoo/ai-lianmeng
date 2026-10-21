@@ -23,7 +23,9 @@ labels: ["edition"]
       }
     ],
     "zh_topics": [],
-    "en_topics": []
+    "oss_agent": [],
+    "tech": [],
+    "iot": []
   }
 }
 ```

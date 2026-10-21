@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import { appendFileSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { commitMessage, parseEditionId } from "../js/format.js";
+import { SECTIONS, commitMessage, parseEditionId } from "../js/format.js";
 import { applyEdition, parseIssueBody, validateEdition } from "./edition.mjs";
 
 const MAX_PER_RUN = 20;
@@ -168,7 +168,10 @@ function slotLabel(id) {
 }
 
 function successComment(result) {
-  const countLine = `X AI 日报 ${result.counts.x_daily} · 中文选题 ${result.counts.zh_topics} · 英文选题 ${result.counts.en_topics}`;
+  const parts = SECTIONS.filter((section) => section.nav).map((section) => `${section.label} ${result.counts?.[section.key] || 0}`);
+  const folded = result.counts?.en_topics || 0;
+  if (folded) parts.push(`英文选题已并入 AI 日报 ${folded}`);
+  const countLine = parts.join(" · ");
   if (result.status === "unchanged") {
     return [
       "本期与已归档内容相同，没有新的提交。本 Issue 已关闭。",
