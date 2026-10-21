@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leoneoo.github.io/ai-lianmeng/schema/index.schema.json",
+  "title": "AI联盟期刊索引",
+  "description": "data/index.json。editions 按 published_at 从新到旧排列。由摄取脚本维护，不要手改后打乱顺序。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "updated_at", "editions"],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "updated_at": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\+08:00$",
+      "description": "索引最近一次写回的时间，+08:00。尚无期刊时为 null。"
+    },
+    "editions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "published_at", "path", "counts"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}-(0600|1200|1800|2200)$"
+          },
+          "published_at": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(06|12|18|22):00:00\\+08:00$"
+          },
+          "headline": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^data/\\d{4}/\\d{2}/\\d{4}-\\d{2}-\\d{2}-(0600|1200|1800|2200)\\.json$"
+          },
+          "counts": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["x_daily", "zh_topics", "en_topics"],
+            "properties": {
+              "x_daily": { "type": "integer", "minimum": 0 },
+              "zh_topics": { "type": "integer", "minimum": 0 },
+              "en_topics": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

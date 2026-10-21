@@ -1,0 +1,19 @@
+{
+  "name": "AI联盟",
+  "short_name": "AI联盟",
+  "description": "免费中文 AI 新闻站 · 内容整理自 X",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3efe6",
+  "theme_color": "#f3efe6",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
