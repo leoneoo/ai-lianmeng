@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leoneoo.github.io/ai-lianmeng/schema/edition.schema.json",
+  "title": "AI联盟期刊",
+  "description": "一期「AI联盟」。时段固定为新加坡时间 06:00、12:00、18:00、22:00。摄取脚本 scripts/edition.mjs 按本结构校验，并额外拒绝带账号密码的链接、不真实的日期，以及控制字符。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "published_at", "sections"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}-(0600|1200|1800|2200)$",
+      "description": "期号，例如 2026-10-21-2200。日期必须真实存在。"
+    },
+    "published_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T(06|12|18|22):00:00\\+08:00$",
+      "description": "与 id 对应的发布时间，时区固定为 +08:00（亚洲/新加坡，无夏令时）。"
+    },
+    "headline": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "description": "可选。首页大标题。不需要时省略该字段，不要传空字符串。"
+    },
+    "sections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x_daily", "zh_topics", "en_topics"],
+      "description": "三个固定栏目，顺序不限，但三个键都必须出现，值可以是空数组。",
+      "properties": {
+        "x_daily": {
+          "$ref": "#/$defs/itemList",
+          "description": "X AI 日报"
+        },
+        "zh_topics": {
+          "$ref": "#/$defs/itemList",
+          "description": "中文选题"
+        },
+        "en_topics": {
+          "$ref": "#/$defs/itemList",
+          "description": "英文选题"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "summary", "source_url", "time"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "条目标题，单行。"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "description": "中文摘要。"
+        },
+        "source_url": {
+          "type": "string",
+          "minLength": 12,
+          "maxLength": 2000,
+          "pattern": "^https://\\S+$",
+          "description": "原始帖子或文章的 https 链接。"
+        },
+        "time": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\+08:00$",
+          "description": "来源时间，ISO 8601，必须带 +08:00。"
+        },
+        "handle": {
+          "type": "string",
+          "pattern": "^@[A-Za-z0-9_]{1,15}$",
+          "description": "可选。X 账号，例如 @AnthropicAI。不需要时省略。"
+        }
+      }
+    },
+    "itemList": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "$ref": "#/$defs/item"
+      }
+    }
+  }
+}

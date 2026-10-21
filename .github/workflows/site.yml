@@ -1,0 +1,124 @@
+name: Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  issues:
+    types: [opened, edited, reopened]
+  schedule:
+    # UTC 22:00 / 04:00 / 10:00 / 14:00 = 新加坡 06:00 / 12:00 / 18:00 / 22:00
+    - cron: "0 22,4,10,14 * * *"
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: "没有新期刊时也部署网站"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  verify:
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Test
+        run: npm test
+      - name: Build
+        run: npm run build
+
+  ingest:
+    if: >-
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' && (
+        startsWith(github.event.issue.title, '[edition]') ||
+        startsWith(github.event.issue.title, '[Edition]') ||
+        contains(github.event.issue.labels.*.name, 'edition')
+      ))
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      issues: write
+    outputs:
+      changed: ${{ steps.ingest.outputs.changed }}
+      sha: ${{ steps.ingest.outputs.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Ingest edition issues
+        id: ingest
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node scripts/ingest.mjs --from-github --commit --push
+
+  deploy:
+    needs: [verify, ingest]
+    if: >-
+      github.event_name != 'pull_request' &&
+      always() &&
+      (needs.verify.result == 'success' || needs.verify.result == 'skipped') &&
+      (needs.ingest.result == 'success' || needs.ingest.result == 'skipped') &&
+      (
+        github.event_name == 'push' ||
+        needs.ingest.outputs.changed == 'true' ||
+        (github.event_name == 'workflow_dispatch' && github.event.inputs.deploy == 'true')
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout published revision
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.ingest.outputs.sha || github.sha }}
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Build
+        run: npm run build
+      - name: Show revision
+        run: git log -1 --oneline
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,33 @@
+{
+  "id": "2026-10-21-2200",
+  "published_at": "2026-10-21T22:00:00+08:00",
+  "headline": "【示例】仅供校验，不是已发布新闻",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "【示例】实验室动态",
+        "summary": "这是一条示例摘要，用来确认摄取脚本能写入期刊文件。请勿把本文件当作新闻发布。",
+        "source_url": "https://example.com/ai-lianmeng/sample-x",
+        "time": "2026-10-21T21:12:00+08:00",
+        "handle": "@example"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "【示例】中文选题",
+        "summary": "示例中文摘要，说明这一栏会展示中文选题。",
+        "source_url": "https://example.com/ai-lianmeng/sample-zh",
+        "time": "2026-10-21T18:05:00+08:00",
+        "handle": "@example_zh"
+      }
+    ],
+    "en_topics": [
+      {
+        "title": "【示例】英文选题",
+        "summary": "示例摘要使用中文，对应一条英文来源链接。",
+        "source_url": "https://example.com/ai-lianmeng/sample-en",
+        "time": "2026-10-21T16:40:00+08:00"
+      }
+    ]
+  }
+}
