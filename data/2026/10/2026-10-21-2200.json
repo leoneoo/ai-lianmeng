@@ -1,0 +1,54 @@
+{
+  "id": "2026-10-21-2200",
+  "published_at": "2026-10-21T22:00:00+08:00",
+  "headline": "OpenAI 模型和 Codex 上架 Google Cloud，三大美国云首次都能买到 OpenAI 前沿模型",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 模型和 Codex 上架 Google Cloud，三大美国云首次都能买到 OpenAI 前沿模型",
+        "summary": "OpenAI 与 Google Cloud 宣布合作：GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna 以私有预览形式进入 Google Cloud Model Garden，通过 Marketplace 交易并可抵扣已有云消费承诺；Codex CLI 和桌面端可直接用 Gemini 平台推理，之后还将进入 Antigravity 和 Gemini Agent，全面可用计划在未来几周。据路透社，OpenAI 与微软的独家分发安排 4 月到期后，OpenAI 先后上了 AWS 和 Google Cloud；OpenAI 强调微软仍是其主要云合作伙伴。",
+        "source_url": "https://openai.com/index/openai-models-google-cloud/",
+        "time": "2026-10-21T21:19:54+08:00",
+        "handle": "@googlecloud"
+      },
+      {
+        "title": "GPT-Rosalind 用数千个 Agent 并行 32 分钟，提出神经退行性疾病新药研发线索",
+        "summary": "OpenAI 与 Perturb AI、斯克里普斯研究所合作，让数千个 GPT-Rosalind Agent 并行，把数百万个小鼠脑细胞的基因表达数据与文献关联起来，针对佩里综合征相关基因 DCTN1 提出假设：胆固醇可能没能运到神经元需要的地方，恢复胆固醇转运或许能保护神经元。这是待实验验证的线索，OpenAI 正扩大合作寻找新靶点。",
+        "source_url": "https://x.com/OpenAI/status/2112899854569762936",
+        "time": "2026-10-21T21:32:00+08:00",
+        "handle": "@OpenAI"
+      },
+      {
+        "title": "NVIDIA 与华盛顿大学 Baker 实验室开源蛋白设计模型 RFD4-Proteina",
+        "summary": "NVIDIA 在 GTC 柏林宣布与华盛顿大学蛋白质设计研究所联合推出开放模型 RFD4-Proteina，用于设计蛋白质，并在湿实验前优化候选分子，面向新药与诊断。",
+        "source_url": "https://x.com/nvidianewsroom/status/2112851150361842058",
+        "time": "2026-10-21T18:19:00+08:00",
+        "handle": "@nvidianewsroom"
+      },
+      {
+        "title": "Mistral 与 NVIDIA 合作把 AI 用到工业工程",
+        "summary": "Mistral 宣布与 NVIDIA 深化合作：加速仿真，发布物理 AI 开放基准与数据集，并为 CAE、EDA 中的 Agent 建立评测。CEO Arthur Mensch 称工业工程 AI 是 Mistral 的核心研究支柱之一。",
+        "source_url": "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering",
+        "time": "2026-10-21T19:35:00+08:00",
+        "handle": "@MistralAI"
+      },
+      {
+        "title": "KRAFTON 开源从零训练的 Raon-1 mini 预览版",
+        "summary": "PUBG 开发商 KRAFTON 发布 Raon-1 mini 预览版：从零训练的 30B MoE（激活约 4B），Apache 2.0 开放权重，附带 DFlash 草稿模型。官方称编程与 Agent 任务上与 Muse Glimmer 相当（自报，暂无独立评测）。",
+        "source_url": "https://x.com/Krafton_AI/status/2112772568776339709",
+        "time": "2026-10-21T13:06:48+08:00",
+        "handle": "@Krafton_AI"
+      }
+    ],
+    "zh_topics": [],
+    "en_topics": [
+      {
+        "title": "Shopify：后训练开源小模型做「任务专家」，GraphQL 子 Agent 略超前沿模型、成本降约 90%",
+        "summary": "Shopify 的 Sidekick 由前沿模型负责对话与规划，读多写少的子任务交给自己后训练的开源模型。GraphQL 子 Agent 选用 Nemotron 3.5 Lightning（30B MoE，激活 3B），经过 6 轮「自愈」飞轮、6.1 万条修复样本后评审分从 37.7 升到 74.5，略高于前沿模型的 73；中位响应 0.87 秒对 6.50 秒，服务成本低约 90%（Shopify 自测）。",
+        "source_url": "https://shopify.engineering/open-model-task-experts",
+        "time": "2026-10-21T18:07:48+08:00",
+        "handle": "@Drewch"
+      }
+    ]
+  }
+}

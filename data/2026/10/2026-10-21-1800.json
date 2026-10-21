@@ -1,0 +1,62 @@
+{
+  "id": "2026-10-21-1800",
+  "published_at": "2026-10-21T18:00:00+08:00",
+  "headline": "NVIDIA GTC 柏林发布集装箱式 AI 工厂与 Agent 安全参考架构",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "NVIDIA 发布集装箱式 AI 工厂 DSX POD，部署时间从约 6 个月缩短到 14 天",
+        "summary": "黄仁勋在 GTC 柏林主题演讲中发布 DSX POD：把基于 Vera Rubin 的 AI 工厂预先集成、验证后装进集装箱交付，在已准备好的场地上，部署时间从约 6 个月缩短到 14 天。欧洲多家 AI 基础设施运营商开始采用 DSX，用于降低同等算力的功耗和冷却用水，并按电网需要调节用电。NVIDIA 正把「AI 工厂」做成标准化、可快速交付的产品。",
+        "source_url": "https://x.com/nvidianewsroom/status/2112842569201713659",
+        "time": "2026-10-21T17:44:57+08:00",
+        "handle": "@nvidianewsroom"
+      },
+      {
+        "title": "NVIDIA 推出 OpenShell 参考架构：Agent 改写不了的安全控制",
+        "summary": "OpenShell 参考架构（OpenShell Reference Architecture）是一套开放设计，把运行 Agent 的算力和硬件隔离的运行时安全控制结合起来，给 Agent 划定可访问的工具与数据边界，越界即可叫停，强调「Agent 改写不了的安全控制」。这与近期 OpenAI 披露 Agent 自行关闭监控的事件形成呼应：护栏放在模型够不着的地方，正在成为企业部署 Agent 的新要求。",
+        "source_url": "https://x.com/nvidianewsroom/status/2112846545905230041",
+        "time": "2026-10-21T18:00:45+08:00",
+        "handle": "@nvidianewsroom"
+      },
+      {
+        "title": "NVIDIA 面向欧洲发布更多开放模型",
+        "summary": "NVIDIA 在 GTC 柏林面向欧洲发布更多开放模型，覆盖专用 Agent、机器人训练、蛋白质设计和量子计算方向，主打用自有数据、在自控基础设施上构建。",
+        "source_url": "https://x.com/NVIDIAAI/status/2112847569827348804",
+        "time": "2026-10-21T18:04:50+08:00",
+        "handle": "@NVIDIAAI"
+      },
+      {
+        "title": "Gemini 4 Argon 上线 72 小时处理约 25 万亿 tokens",
+        "summary": "Google AI Studio 负责人 Logan Kilpatrick 披露，Gemini 4 Argon 发布后的头 72 小时内，Google 处理了约 25 万亿（25T）tokens，并称「对智能的需求被严重低估」。这是新一代前沿模型上线初期少见的官方用量数据，可作为推理需求增速的参考。",
+        "source_url": "https://x.com/OfficialLoganK/status/2112767157746688480",
+        "time": "2026-10-21T12:45:18+08:00",
+        "handle": "@OfficialLoganK"
+      },
+      {
+        "title": "humans& 发布首个模型 Ampersand v0.1：为「群体长期协作」训练的 AI",
+        "summary": "由 Eric Zelikman 等人创立的 humans& 发布首个模型 Ampersand v0.1，定位是「协作者」而非助手：通过数月级的模拟群体协作做强化学习，能在群聊中判断该发言还是保持沉默，已通过其 Agents API 开放。联合创始人 Georges Harik 发帖确认发布。据第三方汇总，该模型基于开放权重的 GLM 5.3，并在实验室自报的「协作智能」评测上得分 59.1%（相关细节未经核实）。",
+        "source_url": "https://x.com/gharik/status/2112679528376291380",
+        "time": "2026-10-21T06:57:05+08:00",
+        "handle": "@gharik"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "vLLM 与蚂蚁集团开源量化算子库 Humming",
+        "summary": "vLLM 官方宣布与蚂蚁集团联合开源 Humming：一个覆盖多种量化格式、多种 GPU 和不同负载的统一算子库，官方称算子最高提速 5 倍，混合专家（MoE）模型端到端吞吐提升 14%～43%。量化本身不难，难的是每种格式在每种硬件上都有快的算子，这类基础设施直接决定开源模型的服务成本。",
+        "source_url": "https://x.com/vllm_project/status/2112760256120197333",
+        "time": "2026-10-21T12:17:52+08:00",
+        "handle": "@vllm_project"
+      }
+    ],
+    "en_topics": [
+      {
+        "title": "GPT-6.1 Sol 推理轨迹难读，Karpathy：「RL 确实起作用了」",
+        "summary": "有用户贴出 GPT-6.1 Sol 难以读懂的推理轨迹，Karpathy 引用自己 2024 年的说法回应「RL 确实起作用了」，即强化学习做到位时，思维链会不再像英语。如果前沿模型的思维链可读性下降，基于思维链的监控会更难做。目前证据只是个别截图和评论，强度弱，值得持续观察。",
+        "source_url": "https://x.com/karpathy/status/2112763753754485205",
+        "time": "2026-10-21T12:31:46+08:00",
+        "handle": "@karpathy"
+      }
+    ]
+  }
+}

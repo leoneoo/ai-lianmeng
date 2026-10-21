@@ -67,6 +67,17 @@ test("sample edition validates and is labelled as a sample", () => {
   assert.equal(result.edition.sections.iot.length, 1);
 });
 
+test("published editions validate without the optional sections", () => {
+  for (const name of ["2026-10-21-1800.json", "2026-10-21-2200.json"]) {
+    const doc = JSON.parse(readFileSync(path.join(repoRoot, "data/2026/10", name), "utf8"));
+    const result = validateEdition(doc);
+    assert.equal(result.ok, true, (result.errors || []).join("\n"));
+    assert.equal(Object.hasOwn(doc.sections, "oss_agent"), false);
+    assert.equal(Object.hasOwn(doc.sections, "tech"), false);
+    assert.equal(Object.hasOwn(doc.sections, "iot"), false);
+  }
+});
+
 test("editions without the optional sections still validate", () => {
   const legacy = structuredClone(sample);
   delete legacy.sections.oss_agent;
@@ -174,6 +185,7 @@ test("ingestion script writes the sample outside the repo", () => {
   const root = mkdtempSync(path.join(tmpdir(), "ailm-cli-"));
   const bodyFile = path.join(root, "issue.md");
   writeFileSync(bodyFile, ["请收录这期示例。", "", "```json", readFileSync(samplePath, "utf8").trim(), "```", ""].join("\n"));
+  const before = readFileSync(path.join(repoRoot, "data/index.json"), "utf8");
   try {
     const result = runNode(["scripts/ingest.mjs", "--body-file", bodyFile, "--root", root]);
     assert.equal(result.status, 0, result.stderr || result.stdout);
@@ -181,8 +193,8 @@ test("ingestion script writes the sample outside the repo", () => {
     assert.match(written.headline, /示例/);
     const index = JSON.parse(readFileSync(path.join(root, "data/index.json"), "utf8"));
     assert.equal(index.editions.length, 1);
-    const published = JSON.parse(readFileSync(path.join(repoRoot, "data/index.json"), "utf8"));
-    assert.deepEqual(published.editions, []);
+    const published = readFileSync(path.join(repoRoot, "data/index.json"), "utf8");
+    assert.equal(published, before);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
@@ -238,9 +250,9 @@ test("build publishes the site without the sample", () => {
     assert.equal(existsSync(path.join(out, "css/site.css")), true);
     assert.equal(existsSync(path.join(out, "js/site.js")), true);
     assert.equal(existsSync(path.join(out, "examples")), false);
-    assert.equal(existsSync(path.join(out, "data/2026")), false);
+    assert.equal(existsSync(path.join(out, "data/2026/10/2026-10-21-2200.json")), true);
     const index = JSON.parse(readFileSync(path.join(out, "data/index.json"), "utf8"));
-    assert.deepEqual(index.editions, []);
+    assert.deepEqual(index.editions.map((entry) => entry.id), ["2026-10-21-2200", "2026-10-21-1800"]);
     const html = readFileSync(path.join(out, "index.html"), "utf8");
     assert.match(html, /AI联盟/);
     assert.match(html, /免费中文 AI 新闻站/);
