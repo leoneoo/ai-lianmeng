@@ -39,14 +39,19 @@ test("section names and edition id rules", () => {
     "tech",
     "iot",
   ]);
-  assert.deepEqual(SECTIONS.map((section) => section.label), [
-    "X AI 日报",
-    "中文选题",
-    "英文选题",
-    "开源与 Agent 技术",
-    "科技与数码",
+  assert.deepEqual(SECTIONS.filter((section) => section.nav).map((section) => section.nav), [
+    "AI 日报",
+    "中文博主",
+    "开源与 Agent",
+    "科技数码",
     "万物互联",
   ]);
+  const retired = SECTIONS.find((section) => section.key === "en_topics");
+  assert.equal(retired.required, false);
+  assert.equal(retired.deprecated, true);
+  assert.equal(retired.nav, null);
+  assert.equal(SECTIONS.find((section) => section.key === "zh_topics").label, "中文博主");
+  assert.equal(SECTIONS.find((section) => section.key === "x_daily").label, "AI 日报");
   assert.equal(parseEditionId("2026-10-21-2200").published_at, "2026-10-21T22:00:00+08:00");
   assert.equal(weekday("2026-10-21"), "周三");
   assert.equal(commitMessage("2026-10-21-0600"), "edition: 2026-10-21 06:00");
@@ -75,6 +80,8 @@ test("published editions validate without the optional sections", () => {
     assert.equal(Object.hasOwn(doc.sections, "oss_agent"), false);
     assert.equal(Object.hasOwn(doc.sections, "tech"), false);
     assert.equal(Object.hasOwn(doc.sections, "iot"), false);
+    assert.equal(Object.hasOwn(doc.sections, "en_topics"), true);
+    assert.equal(result.edition.sections.en_topics.length > 0, true);
   }
 });
 
@@ -108,6 +115,20 @@ test("editions without the optional sections still validate", () => {
   const extra = structuredClone(sample);
   extra.sections.notes = [];
   assert.equal(validateEdition(extra).ok, false);
+
+  const withoutEnglish = structuredClone(sample);
+  delete withoutEnglish.sections.en_topics;
+  const dropped = validateEdition(withoutEnglish);
+  assert.equal(dropped.ok, true, (dropped.errors || []).join("\n"));
+  assert.equal(Object.hasOwn(dropped.edition.sections, "en_topics"), false);
+  const droppedRoot = mkdtempSync(path.join(tmpdir(), "ailm-no-en-"));
+  try {
+    const applied = applyEdition(droppedRoot, withoutEnglish, new Date("2026-10-21T14:00:00Z"));
+    assert.equal(applied.counts.en_topics, 0);
+    assert.equal(applied.counts.x_daily, 1);
+  } finally {
+    rmSync(droppedRoot, { recursive: true, force: true });
+  }
 });
 
 test("rejects malformed editions", () => {
@@ -288,15 +309,18 @@ test("README example matches the schema", () => {
   assert.equal(result.ok, true, (result.errors || []).join("\n"));
   assert.match(result.edition.headline, /示例/);
   const schema = JSON.parse(readFileSync(path.join(repoRoot, "schema/edition.schema.json"), "utf8"));
-  assert.deepEqual(schema.properties.sections.required, ["x_daily", "zh_topics", "en_topics"]);
-  for (const key of ["oss_agent", "tech", "iot"]) {
+  assert.deepEqual(schema.properties.sections.required, ["x_daily", "zh_topics"]);
+  for (const key of ["oss_agent", "tech", "iot", "en_topics"]) {
     assert.equal(schema.properties.sections.properties[key].$ref, "#/$defs/itemList");
     assert.equal(schema.properties.sections.required.includes(key), false);
   }
+  assert.equal(schema.properties.sections.properties.en_topics.deprecated, true);
   const indexSchema = JSON.parse(readFileSync(path.join(repoRoot, "schema/index.schema.json"), "utf8"));
   const counts = indexSchema.properties.editions.items.properties.counts;
-  assert.deepEqual(counts.required, ["x_daily", "zh_topics", "en_topics"]);
-  for (const key of ["oss_agent", "tech", "iot"]) {
+  assert.deepEqual(counts.required, ["x_daily", "zh_topics"]);
+  for (const key of ["oss_agent", "tech", "iot", "en_topics"]) {
     assert.equal(counts.properties[key].type, "integer");
+    assert.equal(counts.required.includes(key), false);
   }
+  assert.equal(counts.properties.en_topics.deprecated, true);
 });

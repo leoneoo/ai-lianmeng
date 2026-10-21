@@ -26,20 +26,21 @@
     "sections": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["x_daily", "zh_topics", "en_topics"],
-      "description": "三个必填栏目必须出现，值可以是空数组。oss_agent、tech、iot 可选，不需要时整段省略，不要传 null。",
+      "required": ["x_daily", "zh_topics"],
+      "description": "x_daily 与 zh_topics 必须出现，值可以是空数组。en_topics 已停用，可以整段省略。oss_agent、tech、iot 可选。不需要时整段省略，不要传 null。",
       "properties": {
         "x_daily": {
           "$ref": "#/$defs/itemList",
-          "description": "X AI 日报"
+          "description": "AI 日报"
         },
         "zh_topics": {
           "$ref": "#/$defs/itemList",
-          "description": "中文选题"
+          "description": "中文博主"
         },
         "en_topics": {
           "$ref": "#/$defs/itemList",
-          "description": "英文选题"
+          "deprecated": true,
+          "description": "已停用的英文选题。可以整段省略。旧期刊里的条目仍然有效，页面会把它们显示在 AI 日报（x_daily）里，不再单独开栏目。"
         },
         "oss_agent": {
           "$ref": "#/$defs/itemList",

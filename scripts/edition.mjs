@@ -128,7 +128,7 @@ export function validateEdition(input) {
 
   const sections = {};
   if (!isObject(input.sections)) {
-    pushError(errors, "缺少 sections，且必须包含 x_daily、zh_topics、en_topics");
+    pushError(errors, "缺少 sections，且必须包含 x_daily、zh_topics");
   } else {
     for (const key of Object.keys(input.sections)) {
       if (!SECTION_KEYS.includes(key)) pushError(errors, `sections 不允许的字段 ${key}`);

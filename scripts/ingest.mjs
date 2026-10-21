@@ -168,7 +168,10 @@ function slotLabel(id) {
 }
 
 function successComment(result) {
-  const countLine = SECTIONS.map((section) => `${section.label} ${result.counts?.[section.key] || 0}`).join(" · ");
+  const parts = SECTIONS.filter((section) => section.nav).map((section) => `${section.label} ${result.counts?.[section.key] || 0}`);
+  const folded = result.counts?.en_topics || 0;
+  if (folded) parts.push(`英文选题已并入 AI 日报 ${folded}`);
+  const countLine = parts.join(" · ");
   if (result.status === "unchanged") {
     return [
       "本期与已归档内容相同，没有新的提交。本 Issue 已关闭。",

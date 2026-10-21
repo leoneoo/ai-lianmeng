@@ -14,8 +14,8 @@
     ],
     "zh_topics": [
       {
-        "title": "【示例】中文选题",
-        "summary": "示例中文摘要，说明这一栏会展示中文选题。",
+        "title": "【示例】中文博主",
+        "summary": "示例中文摘要，说明这一栏会展示中文博主。",
         "source_url": "https://example.com/ai-lianmeng/sample-zh",
         "time": "2026-10-21T18:05:00+08:00",
         "handle": "@example_zh"
@@ -23,8 +23,8 @@
     ],
     "en_topics": [
       {
-        "title": "【示例】英文选题",
-        "summary": "示例摘要使用中文，对应一条英文来源链接。",
+        "title": "【示例】并入 AI 日报的旧英文条目",
+        "summary": "sections.en_topics 已停用。这条仍能通过校验，并会显示在 AI 日报里。",
         "source_url": "https://example.com/ai-lianmeng/sample-en",
         "time": "2026-10-21T16:40:00+08:00"
       }

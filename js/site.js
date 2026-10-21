@@ -9,7 +9,7 @@ import {
 } from "./format.js";
 
 const INDEX_URL = new URL("data/index.json", document.baseURI);
-const DISPLAY = SECTIONS;
+const DISPLAY = SECTIONS.filter((section) => section.nav);
 
 let indexPromise = null;
 const editionCache = new Map();
@@ -113,6 +113,12 @@ function sectionItems(edition, key) {
   return list.filter((item) => item && typeof item === "object");
 }
 
+function displayItems(edition, key) {
+  const items = sectionItems(edition, key);
+  if (key !== "x_daily") return items;
+  return items.concat(sectionItems(edition, "en_topics"));
+}
+
 function sectionByKey(key) {
   return SECTIONS.find((section) => section.key === key) || DISPLAY[0];
 }
@@ -129,11 +135,11 @@ function asString(value) {
 
 function heroModel(edition) {
   let source = null;
-  const daily = sectionItems(edition, "x_daily");
+  const daily = displayItems(edition, "x_daily");
   if (daily[0]) source = { item: daily[0], section: sectionByKey("x_daily") };
   else {
     for (const section of DISPLAY) {
-      const first = sectionItems(edition, section.key)[0];
+      const first = displayItems(edition, section.key)[0];
       if (first) {
         source = { item: first, section };
         break;
@@ -171,13 +177,13 @@ function leadParts(edition) {
   const pair = [];
   for (const section of DISPLAY) {
     if (hero && section.key === hero.skipKey) continue;
-    const first = sectionItems(edition, section.key)[0];
+    const first = displayItems(edition, section.key)[0];
     if (first) pair.push({ item: first, section });
   }
   pair.splice(2);
   const rest = [];
   if (hero?.skipKey) {
-    for (const item of sectionItems(edition, hero.skipKey)) {
+    for (const item of displayItems(edition, hero.skipKey)) {
       if (item === hero.skipItem) continue;
       rest.push({ item, section: hero.section });
     }
@@ -188,7 +194,7 @@ function leadParts(edition) {
 function flatten(edition) {
   const rows = [];
   for (const section of DISPLAY) {
-    for (const item of sectionItems(edition, section.key)) rows.push({ item, section });
+    for (const item of displayItems(edition, section.key)) rows.push({ item, section });
   }
   return rows;
 }
@@ -303,17 +309,17 @@ function moreList(rows) {
 }
 
 function sectionStamp(edition, key) {
-  const item = sectionItems(edition, key)[0];
+  const item = displayItems(edition, key)[0];
   return shortDate(item?.time || edition?.published_at);
 }
 
 function sidebar(editions, latest) {
   const intro = h("section", { class: "side-card rise" }, [
     h("h2", { class: "side-title" }, [text("AI联盟")]),
-    h("p", {}, [text("免费中文 AI 新闻站。每期整理 X 上的公开动态，连同中文、英文和更多选题，并为每条保留原文链接。")]),
+    h("p", {}, [text("免费中文 AI 新闻站。每期整理 X 上的公开动态，连同中文博主、开源与 Agent、科技数码和万物互联，并为每条保留原文链接。")]),
   ]);
   const listed = latest
-    ? DISPLAY.filter((section) => sectionItems(latest, section.key).length)
+    ? DISPLAY.filter((section) => displayItems(latest, section.key).length)
     : DISPLAY;
   const sections = h("section", { class: "side-card rise" }, [
     h("h2", { class: "side-title" }, [text("栏目")]),
@@ -362,7 +368,7 @@ function sidebar(editions, latest) {
 
 function latestBand(edition) {
   const blocks = DISPLAY.flatMap((section) => {
-    const items = sectionItems(edition, section.key);
+    const items = displayItems(edition, section.key);
     if (!items.length) return [];
     return [h("section", { class: "band-section" }, [
       h("h3", { class: "band-sub" }, [
@@ -454,6 +460,7 @@ function homeTabKey() {
   const params = new URLSearchParams(location.search);
   if ((params.get("q") || "").trim()) return null;
   const section = params.get("section");
+  if (section === "en_topics") return "x_daily";
   if (DISPLAY.some((item) => item.key === section)) return section;
   return section ? null : "home";
 }
@@ -513,7 +520,7 @@ async function renderSection(gen, key, editions) {
     const edition = loaded[index];
     if (!edition) return;
     const parsed = parseEditionId(entry.id);
-    for (const item of sectionItems(edition, key)) {
+    for (const item of displayItems(edition, key)) {
       cards.push(renderCard(item, section, null, "h3", parsed?.timeLabel || ""));
     }
   });
@@ -562,7 +569,7 @@ async function renderSearch(gen, query, editions) {
     if (gen !== viewGen || !list.isConnected) return;
     const parsed = parseEditionId(entry.id);
     for (const section of DISPLAY) {
-      for (const item of sectionItems(edition, section.key)) {
+      for (const item of displayItems(edition, section.key)) {
         if (!matches(item, tokens)) continue;
         count += 1;
         const card = renderCard(item, section, tokens, "h3", parsed?.timeLabel || "");
@@ -584,7 +591,13 @@ async function renderHome(gen) {
   const index = await loadIndex();
   if (gen !== viewGen) return;
   if (query) return renderSearch(gen, query, index.editions);
-  if (DISPLAY.some((item) => item.key === section)) return renderSection(gen, section, index.editions);
+  const sectionKey = section === "en_topics" ? "x_daily" : section;
+  if (section === "en_topics") {
+    const url = new URL(location.href);
+    url.searchParams.set("section", "x_daily");
+    history.replaceState({}, "", `${url.pathname}${url.search}`);
+  }
+  if (DISPLAY.some((item) => item.key === sectionKey)) return renderSection(gen, sectionKey, index.editions);
   return renderFront(gen, index.editions);
 }
 
@@ -660,8 +673,8 @@ async function renderEditionPage(gen) {
   }
   tools.push(h("a", { class: "text-link", href: "archive.html" }, [text("全部往期")]));
   const counts = DISPLAY
-    .filter((section) => sectionItems(edition, section.key).length)
-    .map((section) => `${section.nav || section.label} ${sectionItems(edition, section.key).length}`)
+    .filter((section) => displayItems(edition, section.key).length)
+    .map((section) => `${section.nav || section.label} ${displayItems(edition, section.key).length}`)
     .join(" · ");
   const lead = h("div", { class: "lead" }, [
     h("article", { class: "card hero rise" }, [
@@ -671,7 +684,7 @@ async function renderEditionPage(gen) {
       h("div", { class: "edition-tools" }, tools),
     ]),
     ...DISPLAY.flatMap((section) => {
-      const items = sectionItems(edition, section.key);
+      const items = displayItems(edition, section.key);
       if (!items.length) return [];
       return [h("section", { class: "band-section" }, [
         h("h2", { class: "band-sub" }, [
