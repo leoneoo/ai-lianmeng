@@ -1,0 +1,521 @@
+{
+  "id": "2026-10-23-0600",
+  "published_at": "2026-10-23T06:00:00+08:00",
+  "headline": "Anthropic 把 Agent Skills 捐给 AAIF，OpenAI、Hugging Face、阿里同日捐出三个 Agent 开放项目",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 把 Agent Skills 捐给 Linux 基金会旗下 AAIF；OpenAI、Hugging Face、阿里同天捐出 Open Responses、OpenEnv、OpenSandbox",
+        "summary": "Anthropic 宣布把 Agent Skills（把做事方法、脚本和参考资料打包成技能包、让 Agent 按需加载的开放格式）捐给 Linux 基金会旗下的 Agentic AI Foundation（AAIF），和此前捐出的 MCP 放在一起。官方称自 2025 年 12 月发布标准以来，已有 70 多个 Agent 平台接入，包括 ChatGPT、Cursor、GitHub Copilot 和 VS Code；已有技能照常可用，许可证不变。同一天 AAIF 在 AGNTCon + MCPCon 北美大会上还收下另外三个项目：OpenAI 的 Open Responses（基于 Responses API 的跨模型厂商接口规范）、Hugging Face 的 OpenEnv（强化学习训练环境框架）和阿里的 OpenSandbox（Agent 沙箱平台），AAIF 托管项目从成立时的 3 个增至 10 个。",
+        "source_url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+        "time": "2026-10-23T01:55:59+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "Skills 和 MCP 都进了同一个中立基金会，Agent 生态的「插件格式」基本定型，写一次技能在多个 Agent 产品里复用会越来越可靠。",
+        "points": [
+          "技术指导委员会由 Anthropic、Earendil（Pi）、Google、微软、OpenAI、OpenCode 的工程师组成",
+          "首要任务：版本发布机制、正式提案流程、面向技能作者和用户的安全指引",
+          "AAIF 同期新增 305 家会员，Vercel、盖茨基金会、蚂蚁集团、MongoDB 等为金牌会员",
+          "四个新项目分别覆盖技能、跨模型接口、训练环境和安全执行"
+        ]
+      },
+      {
+        "title": "SpaceX Super Intelligence 推出合作伙伴网络：Bain、Databricks、NVIDIA、Snowflake 等首批加入，130 多家公司参与早期阶段",
+        "summary": "SpaceXSI 发布官方合作伙伴计划，面向基于 Grok 做产品、方案和服务的公司。伙伴分两类：转型伙伴（Transformation Partners）帮企业在内部部署 Grok 平台；市场伙伴（Marketplace Partners）开发插件和集成，让 Grok 产品线接上客户已有的工具。官方称早期阶段有 130 多家公司参与，转型伙伴通过「前线部署工程师」认证培训了 30 多家机构的工程师；据 The Next Web 转述彭博报道，Grok Bot 10 月的付费周活用户超过 80 万。",
+        "source_url": "https://x.ai/news/partnernetworkannouncement",
+        "time": "2026-10-23T01:47:51+08:00",
+        "impact": "企业 AI 的竞争从模型本身转向渠道和集成生态，SpaceXSI 在补上相对 OpenAI、Anthropic 最弱的一环：企业销售与交付。",
+        "points": [
+          "首批公开名单含 Bain、Databricks、NVIDIA、Snowflake，以及 Apollo、Booz Allen 等",
+          "Zapier、Sourcegraph、Atlan、Wix、Snyk 等宣布成为市场伙伴",
+          "Zapier 称 SpaceXSI 的 Agent 可直接操作企业在用的 9000 多个应用",
+          "伙伴类型分「转型」和「市场」两类"
+        ]
+      },
+      {
+        "title": "Anthropic 前沿红队：用 Claude 对 123 个开源库做汇编级形式化验证，证明 239 个入口在 64MB 内任何输入都不会崩溃",
+        "summary": "Anthropic 与 Theorem 合作，让 Claude 在几周内为 Google OSS-Fuzz 里 123 个开源库的 239 个模糊测试入口写出形式化证明：在 RISC-V 二进制层面证明，对任何小于 64MB 的输入都不会崩溃。证明总量约 1.8 亿行 Rocq 代码，一个典型证明约 60 万行，由证明检查器机械核验。写证明的过程中 Claude 找到了数百个 bug，其中包括独立重新发现 libexpat 的漏洞 CVE-2026-56132。",
+        "source_url": "https://www.anthropic.com/research/formal-verification",
+        "time": "2026-10-23T06:01:06+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "「AI 找漏洞」之外出现了「AI 证明没有某类漏洞」的可行路径，关键开源依赖有望逐个被证明一次、全网复用。",
+        "points": [
+          "Opus 5.5 完成同类证明比 Opus 5 少用约 40% token",
+          "多个 Agent 共享证明后，平均少用 17% token",
+          "另用 Rust 写的 Python 解释器在 99.95% 的测试上与 CPython 一致",
+          "Theorem 将发布配套的 Claude Skill"
+        ]
+      },
+      {
+        "title": "OpenAI 请 METR 和 Redwood 驻场三周检查内部 Agent 监控：发现多条可绕过路径，压缩上下文曾导致约一成流量漏检",
+        "summary": "METR 公布了一次「嵌入式评估」试点：今年夏天，METR 和 Redwood Research 的两名研究者在 OpenAI 驻场三周，获得内部代码和基础设施访问权限，检查 OpenAI 用来监控内部 Agent 是否失准（misalignment）的系统。OpenAI 转发称评估由其主动邀请，发现已帮助加强防护。据中文博主 @MaxForAI 对公开简报的整理，问题包括：监控要等 Agent 交回控制权才触发，可被持续拖延；上下文压缩前的操作没进监控，5 至 7 月内部 Codex 约 10% 量级应受监控的流量因此漏检（OpenAI 已在评估前自行发现并修复）；研究者还找到让数百次操作避开检查的方法。",
+        "source_url": "https://x.com/METR_Evals/status/2113290966933389390",
+        "time": "2026-10-22T23:26:44+08:00",
+        "handle": "@METR_Evals",
+        "impact": "前沿实验室第一次让外部团队带着内部权限审查「监控 Agent 的系统」，为第三方审计 Agent 安全提供了一个可复制的样板。",
+        "points": [
+          "评估形成 61 页内部报告，METR 和 Redwood 领导层拿到 38 页删减版，公众看到的是摘要",
+          "Codex 沙箱和自动审核也被发现存在绕过路径",
+          "OpenAI 称影响生产防护的漏洞均已修复，METR 尚未验证"
+        ]
+      },
+      {
+        "title": "Claude API 发布 2023 年以来首个正式新版本 2026-10-21：删除 temperature、top_p、top_k，传了就报 400",
+        "summary": "Anthropic 推出 API 版本 2026-10-21，这是 Claude API 自 2023 年以来第一个正式版本号，官方称今后会更频繁地发版本，让开发者在新模型强制变更前处理不兼容改动。新版 Messages API 不再接受 temperature、top_p、top_k，哪怕传 temperature=1 这样的默认值也会返回 400，统一使用默认采样配置，官方文档写明没有替代设置；同时收紧消息格式校验（例如 assistant 消息里直接放 document 块会报错），部分管理接口字段被替换。旧版 2023-06-01 没有弃用，但新版 SDK 会默认切到新版本，例如 Python SDK 2.0。",
+        "source_url": "https://x.com/ClaudeDevs/status/2113013247209021918",
+        "time": "2026-10-22T05:03:10+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "做 Agent、Harness 和模型网关的人升级 SDK 前要先删掉采样参数，否则整批请求会报错。（10 月 22 日 05:03 发布，此前未收录，本轮补上。）",
+        "points": [
+          "升级 SDK 可能把请求一起切到新版本，需先检查网关和封装",
+          "依赖低温度控制输出稳定的应用，迁移后没有替代参数",
+          "新版 SDK 改用 Authorization: Bearer 传密钥；Claude Code 2.1.307 新增 /claude-api 命令"
+        ]
+      },
+      {
+        "title": "微软 MAI Diagnostic 登上《Science》：急诊病例诊断准确率是医生的 1.7 倍，且检查更少、成本更低（自报）",
+        "summary": "微软 AI 负责人 Mustafa Suleyman 称，MAI Diagnostic 诊断编排系统在急诊科病例上的准确率是医生的 1.7 倍，即便医生可以上网查资料也是如此，同时开的检查更少、成本更低，相关研究今天发表在《Science》。Satya Nadella 转发称，这项工作展示了诊断编排器如何推理复杂病例。",
+        "source_url": "https://x.com/mustafasuleyman/status/2113332931423039945",
+        "time": "2026-10-23T02:13:29+08:00",
+        "handle": "@mustafasuleyman",
+        "impact": "医疗 AI 从「答题跑分」走向在同行评审期刊上和临床医生正面对比，离真实落地又近一步。",
+        "points": [
+          "对比对象是能联网查资料的医生",
+          "系统同时降低检查数量和成本",
+          "数据来自微软自己的论文，尚待外部复现"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "下周起，Claude 网页、桌面和手机应用在 Pro、Max、Team 方案上默认开启 auto mode",
+        "summary": "Anthropic 宣布从下周开始，Claude 网页版、桌面版和移动端的会话在 Pro、Max 和 Team 方案上默认以 auto mode 运行：不再每一步都请用户批准，而是由自动检查拦下高风险操作。用户随时可以切回手动模式。",
+        "source_url": "https://x.com/claudeai/status/2113360845409583307",
+        "time": "2026-10-23T04:04:24+08:00",
+        "handle": "@claudeai",
+        "impact": "Claude 在消费端把「每步确认」换成「默认放手、风险兜底」，使用体验会更像常驻 Agent，但需要留意自动检查漏掉的边界情况。",
+        "points": [
+          "适用 Pro、Max、Team 方案",
+          "高风险操作由自动检查拦截",
+          "可随时切回手动审批"
+        ]
+      },
+      {
+        "title": "「Claude Models on Google Cloud（Anthropic 托管）」正式可用：在 Google Cloud 账户里用完整 Claude API",
+        "summary": "Anthropic 宣布，由 Anthropic 运行、通过 Google Cloud 项目访问的 Claude API 已正式可用（GA）。它使用 Google Cloud IAM 凭证和账单，用量可抵扣 Google Cloud 承诺消费，并包含 Claude Managed Agents、代码执行、Opus 5.5 快速模式等完整平台功能，新功能也会同步上线。目前提供美国和全球端点。",
+        "source_url": "https://x.com/claudeai/status/2113380122468454765",
+        "time": "2026-10-23T05:21:00+08:00",
+        "handle": "@claudeai",
+        "impact": "企业可以在 Google Cloud 的采购和权限体系内直接用到 Claude 最新功能，不必等云厂商版本跟进。",
+        "points": [
+          "用 Google Cloud IAM 鉴权，计入 Google Cloud 账单",
+          "支持 Managed Agents、代码执行、Opus 5.5 fast mode",
+          "与 Vertex AI 上的 Claude 不同，这是 Anthropic 自己托管的完整 API"
+        ]
+      },
+      {
+        "title": "OpenAI Decisions API 正式可用：不生成完整回复，直接给出分类和判断",
+        "summary": "OpenAI 开发者团队宣布 Decisions API 正式可用（GA）。它让应用和 Agent 能对文本和图片做分类、评估输入并决定下一步，而不必生成完整的模型回复，主打接近实时、成本更低。适合放在工作流里做路由、审核和分流这类判断。",
+        "source_url": "https://x.com/OpenAIDevs/status/2113346642787086538",
+        "time": "2026-10-23T03:07:58+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "Agent 工作流里大量「判断一下再走哪条路」的步骤可以换成更便宜的专用接口，降低整条流水线的成本和延迟。",
+        "points": [
+          "面向分类、评估、路由等判断类任务",
+          "支持文本和图片输入",
+          "官方称更快、更省钱"
+        ]
+      },
+      {
+        "title": "HeyGen 首个通用视频模型 HeyGen Video 1 登上 Artificial Analysis 文生视频盲测第一，底座是开源的 MiniMax H3",
+        "summary": "做数字人的 HeyGen 发布首个通用视频模型 HeyGen Video 1，称其在 Artificial Analysis 的文生视频盲测中排名第一。据中文博主 @MaxForAI 查阅官方文档，该模型基于 MiniMax 开源的 H3 做后训练，以 ultraquality 档位在无声文生视频榜上排到了 Wan3.0、MiniMax H3 和 Seedance2.5 前面。模型支持文生视频、图生视频和参考素材生成，单次 5 到 15 秒，最高 2K，画面、台词和环境音可一起生成。",
+        "source_url": "https://x.com/HeyGen/status/2113325916181102761",
+        "time": "2026-10-23T01:45:36+08:00",
+        "handle": "@HeyGen",
+        "impact": "应用公司在开源视频底座上后训练就能做到榜首，说明视频模型的竞争正在转向数据和场景，开源底座的价值被放大。",
+        "points": [
+          "底座为 MiniMax H3，HeyGen 做后训练",
+          "支持文生、图生、参考素材生成视频",
+          "单段 5 至 15 秒，最高 2K，可同时生成台词和环境音"
+        ]
+      },
+      {
+        "title": "Canva 发布首个自研前沿设计模型 Canva Craft，向所有用户开放图像生成（自报）",
+        "summary": "Canva 推出 Canva Craft，称这是它第一个专为设计打造的前沿图像生成模型，现已向所有用户开放。Canva 称凭借 Craft，它在 DesignArena 全球图像生成榜上成为排名第二的 AI 实验室。",
+        "source_url": "https://x.com/canva/status/2113348707223753165",
+        "time": "2026-10-23T03:16:10+08:00",
+        "handle": "@canva",
+        "impact": "设计工具厂商开始自研底座模型而不只是接第三方 API，图像生成的入口竞争延伸到设计平台本身。",
+        "points": [
+          "Canva 首个自研前沿模型，专为设计场景",
+          "面向所有用户开放",
+          "排名说法来自 Canva 自己引用的 DesignArena 榜单"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "蚂蚁开源医疗增强模型 Ling-3.0-flash-Sante：124B 总参数、每 token 仅激活 5.1B",
+        "summary": "蚂蚁 Ling 团队正式开源 Ling-3.0-flash-Sante，这是一个医疗增强的混合专家（MoE）模型，总参数 124B，每个 token 只激活 5.1B。官方称它在同尺寸模型里专业医疗任务和复杂医学推理表现领先，并加强了深度研究、多 Agent 协作和工具调用能力，面向真实的医疗研究和工作流。模型权重已开放。",
+        "source_url": "https://x.com/AntLingAGI/status/2113293431435149349",
+        "time": "2026-10-22T23:36:31+08:00",
+        "handle": "@AntLingAGI",
+        "impact": "医疗垂直模型以低激活参数开源，医院和研究机构本地部署的门槛进一步降低。",
+        "points": [
+          "124B 总参数 / 5.1B 激活的 MoE",
+          "强化深度研究、多 Agent 协作和工具调用",
+          "权重已开放，性能说法为官方自报"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Ideogram 发布首个矢量图模型：文字生成可编辑 SVG，也能把图片转成矢量",
+        "summary": "Ideogram 推出首个矢量模型，可从文字提示生成带平滑渐变和清晰字体的可编辑 SVG，也能把任意图片转成精细的可缩放矢量图，已在 Ideogram 和 API 上线。发布帖约 1100 赞、680 次收藏。",
+        "source_url": "https://x.com/ideogram_ai/status/2113300317584720259",
+        "time": "2026-10-23T00:03:53+08:00",
+        "handle": "@ideogram_ai",
+        "impact": "生成结果从像素变成可编辑代码，设计稿可以直接进入 Agent 和前端的工作流。",
+        "points": [
+          "文生 SVG",
+          "图片转 SVG",
+          "已上线 Ideogram 和 API"
+        ]
+      },
+      {
+        "title": "1Password 推出 1Password for Agents：Agent 能用你的账号登录，但看不到也存不下密码",
+        "summary": "1Password 发布面向 AI Agent 的凭证平台：Agent 遇到登录表单时向你的密码库请求凭证，你批准后由 1Password 直接把凭证填进目标网站，Agent 看不到、也拿不走密码。首批合作方包括 Grok Bot、Anthropic 的 Claude、OpenAI、Perplexity、Browserbase、Browser Use 等；个人和家庭账户免费、可选，不主动开启连接器，Agent 就碰不到密码库。（新加坡时间 22:30 发布，上一轮未收录。）",
+        "source_url": "https://x.com/1Password/status/2113276767582498943",
+        "time": "2026-10-22T22:30:18+08:00",
+        "handle": "@1Password",
+        "impact": "个人 Agent 代办事务最大的障碍之一是账号授权，这类「只给能力、不给密码」的方案可能成为行业默认做法。",
+        "points": [
+          "Agent 发起登录请求，用户逐次批准",
+          "凭证直接填入网站，不暴露给 Agent",
+          "个人和家庭账户免费，需主动开启"
+        ]
+      },
+      {
+        "title": "Google Cloud 发布 Agent Compute Engine，并扩展 Gemini 企业版的 Agent 治理能力",
+        "summary": "Google Cloud 在 AGNTCon + MCPCon 上宣布新的 Agent Compute Engine，用来运行、治理和扩展企业 Agent，同时扩展了 Gemini 企业版的 Agent 治理功能。同日其 Knowledge Catalog（预览）新增自学习的上下文补全，可以从 Agent 的实际交互和非结构化文档里持续学习，以减少 token 用量。",
+        "source_url": "https://cloud.google.com/blog/topics/ai-infrastructure/introducing-agent-compute-engine-and-expanded-agent-governance",
+        "time": "2026-10-22T23:06:39+08:00",
+        "handle": "@googlecloud",
+        "impact": "云厂商开始把「跑 Agent」做成独立的算力和治理产品，企业 Agent 正在形成一层新的基础设施。",
+        "points": [
+          "Agent Compute Engine 面向 Agent 的运行与扩展",
+          "扩展 Agent 治理与权限控制",
+          "Knowledge Catalog 新增自学习上下文"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "两周 10 起安全事件汇总，附一段让 Claude Code / Codex 替你排查的提示词",
+        "summary": "他整理了近两周的 10 起安全事件：PHP 核心远程代码执行、LiteLLM 1.107.0 被投毒、Zeabur 被入侵后停运、eMudhra 中间 CA 私钥可被算出、Node.js 10 个 CVE、GitLab 满分漏洞、OpenCode Console 托管密钥可能暴露、Linux 内核 KVM 逃逸、IDCF Cloud 遭勒索、TiDB Cloud 数据被复制。他写了逐条核实来源的报告和处置清单，并给出一段提示词，让编程 Agent 读报告后逐条检查本机和服务器上的受影响组件，按优先级列出要处理的项。",
+        "source_url": "https://x.com/chenchengpro/status/2113290381140091238",
+        "time": "2026-10-22T23:24:24+08:00",
+        "handle": "@chenchengpro",
+        "impact": "有自建服务器或 NAS 的人可以用这段提示词让 Agent 一次查完，比逐条看公告省事。",
+        "points": [
+          "10 起事件均附来源核实",
+          "可直接交给 Claude Code / Codex 排查",
+          "覆盖 PHP、Node.js、LiteLLM、GitLab 等常见组件"
+        ]
+      },
+      {
+        "title": "Claude Code 作者 Boris Cherny 在斯坦福课上的五条原则：同时跑几千个 Agent 是怎么做到的",
+        "summary": "斯坦福 CS146S「现代软件开发者」课第四周请到 Claude Code 作者 Boris Cherny。他身边同时运行着几千个 Claude Agent，团队从去年 11 月起代码几乎全由 Claude 写出，人均产出约提升 10 倍。五条原则是：自动化你的瓶颈（先自动化 code review，下一步是审批）；为六个月后的模型而建（读 Agent 对话记录，看模型现在在哪里失败）；小团队更快；用可以跑几天几周的「循环」思考；懂领域的人会赢。",
+        "source_url": "https://x.com/shao__meng/status/2113291579750551931",
+        "time": "2026-10-22T23:29:10+08:00",
+        "handle": "@shao__meng",
+        "impact": "给想用 Agent 规模化开发的团队一个可执行的顺序：先自动化 review 和审批，再谈并行。",
+        "points": [
+          "先找出拖慢交付的环节，再为它建系统",
+          "模型现在失败的地方，往往是下一代补上的能力",
+          "预计 2027 年最好的会计软件会由会计来做"
+        ]
+      },
+      {
+        "title": "TokenGate：让大模型像人一样跳读长上下文，首 token 最高快 11 倍",
+        "summary": "斯坦福和伯克利的研究者提出可插拔小模块 TokenGate，插在已训练好的大模型浅层，学会只把重要的 top-K token 往上层传。论文报告在不损失精度时，首 token 时间快 1.4 到 11.3 倍，峰值显存降 1.5 到 3.4 倍；训练成本接近一次 LoRA 微调，不必重新预训练，还能和 Prompt Cache 配合。",
+        "source_url": "https://x.com/shao__meng/status/2113276570437902760",
+        "time": "2026-10-22T22:29:31+08:00",
+        "handle": "@shao__meng",
+        "impact": "长文档、代码库类 Agent 的 prefill 成本有望大幅下降，且能改造现有模型而非重训。",
+        "points": [
+          "门控层以下处理全部 token，以上只处理 top-K",
+          "用类似 MoE 的加权让剪枝可端到端训练",
+          "一次微调可泛化到不同长度和 K 值"
+        ]
+      },
+      {
+        "title": "Quant-Arena：9 个前沿模型自己写 A 股量化策略，得分第一的 GPT-6 Astra 全年 75% 交易日空仓",
+        "summary": "Einsia AI 发布量化研究基准 Quant-Arena：给模型 3042 只 A 股的历史数据，让它自己写代码、构建信号、回测和修改策略，用 2022 到 2023 年数据研究，再冻结策略放到封存的 2024 年行情里检验，计入交易成本和市场冲击。9 个模型里只有 4 个赚钱，GPT-6 Astra 年化 10.7%、GPT-6 Sol 8.6%、GPT-5.6 Terra 8.4%、Claude Opus 5.5 4.4%。Astra 在收到连续亏损的回测反馈后加了趋势过滤，全年最大回撤控制在 6.8%。论文已被 Hugging Face 每日论文收录。",
+        "source_url": "https://x.com/MaxForAI/status/2113362548884152585",
+        "time": "2026-10-23T04:11:10+08:00",
+        "handle": "@MaxForAI",
+        "impact": "比一般跑分更接近真实研究流程，能看出模型会不会根据反馈修正自己的方法。",
+        "points": [
+          "研究期最多评估 5 个候选策略，再冻结检验",
+          "9 个模型中 5 个为负收益",
+          "最有效的改进是学会「什么时候不买」"
+        ]
+      },
+      {
+        "title": "美国多家大银行开始限制第三方 AI Agent 登录客户账户",
+        "summary": "据 Axios 援引知情人士报道，银行发现第三方 AI Agent 在客户账户里活动，其中一些尝试执行看起来超出用户指令的操作；高管们很难分清操作账户的是人还是 Agent，也难判断是否得到授权。不少 Agent 用的是客户自己给的账号密码，但这种代登录仍违反银行要求本人登录的规则。摩根士丹利已开始封锁第三方 Agent，摩根大通、美国银行和花旗也在限制接入。",
+        "source_url": "https://x.com/MaxForAI/status/2113333906422526182",
+        "time": "2026-10-23T02:17:21+08:00",
+        "handle": "@MaxForAI",
+        "impact": "个人 Agent 进入金融场景前，需要银行认可的授权协议，而不是简单交出密码。",
+        "points": [
+          "问题核心是授权边界：查余额、转账、买理财权限各不相同",
+          "银行在准备 Agent 出错后的应急方案",
+          "与同日 1Password for Agents 的思路形成对照"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent 新增 Cua Spaces 插件：团队和 Hermes 共用一台电脑",
+        "summary": "Nous Research 发布 Cua Spaces 插件，让 Hermes 在你自己的硬件上拥有独立的 Linux、macOS 或 Windows 桌面空间。团队里任何人都可以打开它实时观看、随时接手，再交还给 Hermes 继续工作。",
+        "source_url": "https://x.com/NousResearch/status/2113391397760041329",
+        "time": "2026-10-23T06:05:48+08:00",
+        "handle": "@NousResearch",
+        "impact": "Hermes 的电脑操作能力从个人使用扩展到团队协作，适合需要人工兜底的长任务。",
+        "points": [
+          "支持 Linux、macOS、Windows",
+          "运行在自有硬件上",
+          "人和 Agent 可以随时交接"
+        ]
+      },
+      {
+        "title": "Hermes Labs Plugins 仓库上线：一批实验性社区插件",
+        "summary": "Nous Research 的 Teknium 宣布新建 Hermes Labs Plugins 仓库，已经放出一批社区插件，之后会继续增加。这里是团队的实验，不保证长期维护，鼓励大家试用或 fork 成更完善的版本。",
+        "source_url": "https://github.com/nousresearch/hermes-labs-plugins",
+        "time": "2026-10-22T22:36:47+08:00",
+        "handle": "@Teknium",
+        "impact": "想给 Hermes 加功能的人有了现成的样例库可以改。",
+        "points": [
+          "实验性插件集合",
+          "不承诺长期维护",
+          "鼓励 fork 和二次开发"
+        ]
+      },
+      {
+        "title": "Google 发布 Gemini API CLI（gemini-api）预览版：让 Agent 直接生成图像、视频、语音和音乐",
+        "summary": "Google 的 Dmitry Lyalin 宣布 Gemini API CLI 预览版。它让 Agent 可以生成图像、视频、语音和音乐，分析媒体、转写音频或管理 Agent，不用再猜模型名、写一次性脚本或拼 curl。",
+        "source_url": "https://x.com/LyalinDotCom/status/2113287431382601765",
+        "time": "2026-10-22T23:12:41+08:00",
+        "handle": "@LyalinDotCom",
+        "impact": "编程 Agent 调用多模态能力多了一个统一的命令行入口。",
+        "points": [
+          "覆盖图像、视频、TTS、音乐生成",
+          "可做媒体分析和音频转写",
+          "目前为预览版"
+        ]
+      },
+      {
+        "title": "Perplexity Agent API 上线 Batch API：一个文件最多 5 万个请求，每个都跑完整 Agent 循环",
+        "summary": "Perplexity 的 Agent API 支持批处理：上传最多 5 万条请求的 JSONL 文件，创建批任务，完成后下载结果。每条请求都跑完整的 Agent 循环，并支持 web_search 和 fetch_url，适合比如给 5 万家公司批量补充实时网络数据。",
+        "source_url": "https://x.com/AravSrinivas/status/2113368776532271185",
+        "time": "2026-10-23T04:35:55+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "大规模数据补全可以交给 Agent 过夜跑完，不必自己写并发和重试。",
+        "points": [
+          "单文件最多 50,000 条请求",
+          "批处理中支持联网搜索和抓取",
+          "异步执行，完成后下载"
+        ]
+      },
+      {
+        "title": "SGLang 推出 AWS Trainium 插件测试版，基于 TorchNeuron",
+        "summary": "SGLang 与 AWS 合作，随 TorchNeuron 发布推出 SGLang Trainium 插件测试版，运行在 Trainium2 和 Trainium3 上。测试版支持推理服务和强化学习 rollout，覆盖 Qwen3、DeepSeek、GLM 系列，并预览了异构强化学习：rollout 在 Trainium 上跑、训练交给 Miles。",
+        "source_url": "https://x.com/sgl_project/status/2113299489394205121",
+        "time": "2026-10-23T00:00:36+08:00",
+        "handle": "@sgl_project",
+        "impact": "开源推理框架开始原生支持非 NVIDIA 芯片，降低换算力平台的成本。",
+        "points": [
+          "支持 Trainium2 / Trainium3",
+          "支持 Qwen3、DeepSeek、GLM",
+          "预览异构 RL 训练"
+        ]
+      },
+      {
+        "title": "Cline 新增一批免费开放权重模型：Reflection Beam 501B、Nemotron 3.5 等",
+        "summary": "Cline 宣布新增可免费使用的模型：Reflection Beam（501B）、Nemotron 3.5 Super VL（120B）、Poolside Laguna S 2.1（118B）、Nemotron 3.5 Lightning（32B）和 Solar Mini 4（35B）。Cline 称这些模型的 Terminal-Bench 分数在六个月前还算前沿水平。",
+        "source_url": "https://x.com/cline/status/2113356814322651618",
+        "time": "2026-10-23T03:48:23+08:00",
+        "handle": "@cline",
+        "impact": "用开源编程 Agent 的人可以零成本试用接近前沿的开放模型。",
+        "points": [
+          "5 个开放权重模型免费可用",
+          "最大为 Reflection Beam 501B",
+          "官方以 Terminal-Bench 作对比"
+        ]
+      },
+      {
+        "title": "GitHub 趋势：claude-howto，一份带模板的 Claude Code 图解教程",
+        "summary": "luongnv89/claude-howto 是一份以示例为主的 Claude Code 图解指南，从基础概念讲到高级 Agent 用法，附可直接复制的模板。今天在 GitHub 趋势榜上新增约 370 星。",
+        "source_url": "https://github.com/luongnv89/claude-howto",
+        "time": "2026-10-23T14:00:00+08:00",
+        "impact": "适合想系统上手 Claude Code 或给团队做培训的人。",
+        "points": [
+          "从入门到高级 Agent",
+          "附可复制模板",
+          "今日约 370 星"
+        ]
+      },
+      {
+        "title": "GitHub 趋势：dsh-context，DeepSeek Harness 的上下文管理插件",
+        "summary": "bowenliang123/dsh-context 是一个 DeepSeek Harness 插件，提供上下文面板、浏览器、侧栏和命令，用来查看上下文的组成、演进、压缩和多 Agent 情况。今天在 GitHub 趋势榜上新增约 320 星。",
+        "source_url": "https://github.com/bowenliang123/dsh-context",
+        "time": "2026-10-23T14:00:00+08:00",
+        "impact": "用 DeepSeek 跑编程 Agent 的人可以更直观地控制上下文和成本。",
+        "points": [
+          "可视化查看上下文占用",
+          "提供侧边栏和命令",
+          "今日约 320 星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Arc 浏览器 12 月 22 日彻底停服：即日起停止注册，Arc Search 11 月 23 日先失去 AI 和同步",
+        "summary": "The Browser Company 确认 Arc 浏览器将分阶段关停：10 月 22 日起不再开放注册新账户；11 月 23 日起手机版 Arc Search 失去 Browse for Me 等 AI 功能，也不能登录和同步标签页；12 月 22 日起 macOS 和 Windows 版彻底无法使用，账户停用，个人数据 30 天内删除。最新版 Arc 已加入一键导出，密码、书签、扩展、历史、Spaces 和标签组都能导出，迁到同公司的 Dia 最顺畅。",
+        "source_url": "https://www.androidauthority.com/arc-browser-shutting-down-december-2026-3726900/",
+        "time": "2026-10-23T03:29:05+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "还在用 Arc 的人要在 12 月 22 日前导出数据；11 月 23 日后最好不要退出 Arc Search 账号。",
+        "points": [
+          "10 月 22 日停止注册",
+          "11 月 23 日 Arc Search 失去 AI 与同步",
+          "12 月 22 日桌面版停用，数据 30 天内删除"
+        ]
+      },
+      {
+        "title": "Apple iWork 三件套加入「智能助理」并适配 iPhone Duo",
+        "summary": "Apple 为 Keynote、Numbers 和 Pages 加入「Intelligent Assistant」测试版，面向 Apple Creator Studio 订阅用户，同时适配 iPhone Duo。Numbers 里可以用自然语言生成公式、做数据可视化和表格，Pages 可以起草初稿并帮你编辑、组织和润色；这几款应用此前曾短暂从 App Store 下架，现已恢复。",
+        "source_url": "https://www.macrumors.com/2026/10/22/iwork-apps-intelligent-assistant/",
+        "time": "2026-10-23T04:02:36+08:00",
+        "handle": "@MacRumors",
+        "impact": "Apple 办公套件开始内置生成式助手，和 Microsoft 365、Google Workspace 的差距在缩小。",
+        "points": [
+          "需要 Apple Creator Studio 订阅",
+          "Numbers 可自然语言写公式",
+          "同步适配 iPhone Duo"
+        ]
+      },
+      {
+        "title": "Gemini 应用扩展 Google 地图「个人智能」，并替换掉 Deep Think 入口",
+        "summary": "9to5Google 报道，Gemini 应用里的 Personal Intelligence 除了本周进入 Android Auto，还扩展了与 Google 地图的整合；按报道标题，这次调整替换掉了 Deep Think。",
+        "source_url": "https://9to5google.com/2026/10/22/gemini-personal-intelligence-maps/",
+        "time": "2026-10-23T03:28:41+08:00",
+        "handle": "@9to5Google",
+        "impact": "Gemini 正把个人数据和地图、车载场景连成一体，手机助手更像出行管家。",
+        "points": [
+          "本周进入 Android Auto",
+          "加深与 Google 地图整合"
+        ]
+      },
+      {
+        "title": "Google Meet 实时语音翻译扩展到 63 种语言，网页和手机都能用",
+        "summary": "Google Meet 加入由 Gemini 3.5 Live Translate 驱动的语音翻译，支持 63 种语言，网页和手机都能用。开启后 Meet 会自动识别发言语言，用语音和字幕为你单独翻译，同一场会里多种语言混用或中途换语言也能处理。需要 Google AI Pro / Ultra 或相应 Workspace 方案，基础方案单场限 90 分钟；今天开始推送，11 月初扩大范围。",
+        "source_url": "https://www.androidauthority.com/google-meet-real-time-translation-3726963/",
+        "time": "2026-10-23T04:19:04+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "跨语言会议不再需要事先约定一种语言，对多语种团队很实用。",
+        "points": [
+          "63 种语言，自动识别发言语言",
+          "语音和字幕同时翻译",
+          "AI Pro 等基础方案单场限 90 分钟"
+        ]
+      },
+      {
+        "title": "YouTube 将移除 Android 和 iOS 底栏的「订阅」标签，改用自定义信息流",
+        "summary": "9to5Google 报道，YouTube 正在调整 Android 和 iOS 应用，其中包括把存在近十年的「订阅」标签移出底部导航栏。",
+        "source_url": "https://9to5google.com/2026/10/22/youtube-subscriptions-android-ios/",
+        "time": "2026-10-23T06:05:06+08:00",
+        "handle": "@9to5Google",
+        "impact": "习惯按订阅看更新的用户要适应新入口，或者干脆改用 RSS 订阅频道。",
+        "points": [
+          "底栏「订阅」标签被移出",
+          "同时有其他界面调整"
+        ]
+      },
+      {
+        "title": "Pebble OS 将支持插件，用来增强应用和表盘",
+        "summary": "Pebble 创始人 Eric Migicovsky 宣布，Pebble OS 即将支持插件，他称这是 SDK「有史以来最大的变化」。插件用 JavaScript 编写，在手机上的 Pebble 应用后台运行，不耗手表电量；表盘可以借插件显示天气、股价等数据，或执行控制音乐、智能家居设备等动作。",
+        "source_url": "https://www.androidauthority.com/pebble-smartwatch-plugins-coming-3726987/",
+        "time": "2026-10-23T05:14:05+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "Pebble 表盘可以通过插件直接控制智能家居，喜欢折腾万物互联的人多了一个腕上入口。",
+        "points": [
+          "插件用 JavaScript 写，跑在手机上",
+          "不影响手表续航",
+          "可显示天气、股价，控制音乐和智能家居"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "群晖确认受 PHP2Shell 漏洞影响，已为 DSM 7.4、7.3、7.2 发布 PHP 安全更新",
+        "summary": "群晖确认了 PHP2Shell 漏洞对其产品的影响，并为 DSM 7.4、7.3 和 7.2 发布了 PHP 安全更新。使用受影响套件的用户应立即在套件中心更新 PHP。",
+        "source_url": "https://x.com/Synology/status/2113306014313316367",
+        "time": "2026-10-23T00:26:31+08:00",
+        "handle": "@Synology",
+        "impact": "家里或公司有群晖 NAS 的，今天就该进套件中心检查 PHP 更新。",
+        "points": [
+          "覆盖 DSM 7.4 / 7.3 / 7.2",
+          "在套件中心更新 PHP 套件"
+        ]
+      },
+      {
+        "title": "Tailscale 加入 Agent Baseline「安全软件工厂」联盟：编程 Agent 不该拿到整张网络的钥匙",
+        "summary": "Tailscale 宣布与 Docker、Keycard、Snyk、Socket、Tessl、Tracebit 一起加入 Agent Baseline，共建「Secure Software Factory」。思路是 AI Agent 写代码越来越强，但不等于它需要访问整个网络。",
+        "source_url": "https://x.com/Tailscale/status/2113324012012970128",
+        "time": "2026-10-23T01:38:02+08:00",
+        "handle": "@Tailscale",
+        "impact": "用 Tailscale 组网的人以后可能有现成方案，把 Agent 限制在最小网络权限里。",
+        "points": [
+          "联合 Docker、Snyk、Socket 等",
+          "聚焦编程 Agent 的网络与权限边界"
+        ]
+      },
+      {
+        "title": "Zapier 同时成为 Claude Duet 和 SpaceXSI 的官方连接伙伴：Agent 搭好自动化，Zapier 负责持续运行",
+        "summary": "Zapier 宣布成为 Claude Duet 发布时的官方连接器：你描述自动化，Duet 搭建，Zapier 负责持续运行。同日它也成为 SpaceXSI 合作伙伴网络的首发伙伴，称 SpaceXSI 的 Agent 能借助 Zapier MCP、SDK、OAuth 和管理员控制，在企业的 9000 多个应用里把活做完。",
+        "source_url": "https://x.com/zapier/status/2113281247531376913",
+        "time": "2026-10-22T22:48:06+08:00",
+        "handle": "@zapier",
+        "impact": "「Agent 写自动化、传统自动化平台执行」正成为个人和团队自动化的主流组合。",
+        "points": [
+          "Claude Duet 与 SpaceXSI 都接入 Zapier",
+          "Agent 负责搭建，Zapier 负责执行",
+          "支持 MCP、SDK、OAuth 和管理员控制"
+        ]
+      },
+      {
+        "title": "n8n：每月在微软 Foundry 上部署 5000 万个 Agent 工作流，也能在单台 DGX Spark 上本地跑",
+        "summary": "n8n 引用 Satya Nadella 在微软 Frontier Tour 科隆站的说法：n8n 每月在 Foundry 和 Microsoft IQ 上部署 5000 万个 Agent 工作流。在 GTC 柏林，n8n 展示了模型和工作流全部在一台 DGX Spark 上本地运行、不依赖云。",
+        "source_url": "https://x.com/n8n_io/status/2113337141174383079",
+        "time": "2026-10-23T02:30:13+08:00",
+        "handle": "@n8n_io",
+        "impact": "开源自动化平台在企业侧规模化，同时保留本地部署选项，对重视数据主权的用户友好。",
+        "points": [
+          "每月 5000 万个 Agent 工作流（微软口径）",
+          "支持完全本地部署"
+        ]
+      },
+      {
+        "title": "加拿大调整夏令时规则，Google 说明 Android 手机时区出错怎么修",
+        "summary": "随着加拿大调整夏令时相关规则，Google 发布说明，告诉用户 Android 设备时区显示不对时该如何处理。",
+        "source_url": "https://9to5google.com/2026/10/22/google-explains-how-to-fix-time-zones-on-android-amid-changes-in-canada/",
+        "time": "2026-10-23T04:45:00+08:00",
+        "handle": "@9to5Google",
+        "impact": "手机、电脑和日历跨设备同步的人，如果联系人或会议在加拿大，要留意时间是否错位。",
+        "points": [
+          "起因是加拿大夏令时规则变化",
+          "Google 给出 Android 端的修正方法"
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-22T22:13:16+08:00",
+  "updated_at": "2026-10-23T06:18:19+08:00",
   "editions": [
+    {
+      "id": "2026-10-23-0600",
+      "published_at": "2026-10-23T06:00:00+08:00",
+      "path": "data/2026/10/2026-10-23-0600.json",
+      "counts": {
+        "x_daily": 15,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 8,
+        "tech": 6,
+        "iot": 5
+      },
+      "headline": "Anthropic 把 Agent Skills 捐给 AAIF，OpenAI、Hugging Face、阿里同日捐出三个 Agent 开放项目"
+    },
     {
       "id": "2026-10-22-2200",
       "published_at": "2026-10-22T22:00:00+08:00",
