@@ -1,0 +1,286 @@
+{
+  "id": "2026-10-22-1200",
+  "published_at": "2026-10-22T12:00:00+08:00",
+  "headline": "Meta 单季 AI 资本开支 349 亿美元，上市以来首次自由现金流为负",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Meta 三季报：单季资本开支 349 亿美元，上市以来首次自由现金流为负；Muse 用户破千万",
+        "summary": "Meta 三季度营收 646 亿美元、同比增长 26%，但受 98.9 亿美元青少年心理健康和解费用拖累，经营利润降 37% 至 130 亿美元（不计这笔费用为 228.8 亿美元）。单季资本开支 349.1 亿美元，超过 327.9 亿美元的经营现金流，自由现金流为 -21.2 亿美元，是 2012 年上市以来首次为负；全年资本开支指引收窄为 1350～1450 亿美元，总支出指引上调至 1750～1790 亿美元，员工同比减少 15%。扎克伯格称本季推出了 Muse 和第一个前沿模型 Muse Wonder，电话会上表示 Muse 在美国和加拿大已超 1000 万用户，下一步是扩容、变现和压低算力成本。",
+        "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+        "time": "2026-10-22T04:00:00+08:00",
+        "handle": "@MetaNewsroom",
+        "impact": "头部公司的 AI 投入已经超过主业现金流，开始依赖资本市场补位，AI 资本开支周期仍在加速。",
+        "points": [
+          "单季资本开支 349.1 亿美元，自由现金流 -21.2 亿美元",
+          "2026 全年资本开支指引 1350～1450 亿美元，2027 年仍将「激进投资」",
+          "设立无投票权 C 类股（2027 年 1 月生效），外界解读为不稀释控制权的 AI 融资工具",
+          "Muse 用户超 1000 万（电话会口径，经媒体转述）"
+        ]
+      },
+      {
+        "title": "云托管平台 Railway 存密钥系统被入侵，官方称攻击意在盗取 AI 推理服务密钥",
+        "summary": "Railway 10 月 21 日披露，存放客户环境变量的系统被未授权访问，部分变量可能已被解密成明文，建议所有用户立刻轮换存在 Railway 上的全部 API 密钥、数据库和私有镜像仓库凭证，部署已全部暂停。Railway 认为这是近期一系列针对平台公司、以攻破 AI 推理服务商为目标的攻击之一，已通知上游服务商主动作废相关密钥。一周前 AI 编程工具 OpenCode 也出过用户 AI 密钥外泄、被刷费的事件。",
+        "source_url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+        "time": "2026-10-22T06:37:30+08:00",
+        "impact": "替开发者保管 API 密钥的托管平台正成为高价值攻击面，用 Railway 等平台存 AI 密钥的团队应立即轮换并检查账单。",
+        "points": [
+          "存放客户环境变量的系统被访问，部分已被解密",
+          "官方建议所有用户轮换全部密钥，部署暂停",
+          "Railway 称属于一系列以 AI 推理服务密钥为目标的平台攻击"
+        ]
+      },
+      {
+        "title": "Walmart 为购物 Agent 立规矩：独立 Agent 档案加 MCP 购物网关",
+        "summary": "Walmart 宣布未来一个月内上线 Agent Profiles：每个 AI Agent 在用户账户里有独立档案和订单记录，可以设成每单审批，或在用户设的限额（官方示例 50、100、200 美元）内自动下单。同时推出 Walmart Agent Gateway，让获准的 Agent 通过 MCP 服务器直接搜索和下单，先对企业和开发者测试。Agent 看不到支付卡信息，违规 Agent 会被封禁，而亚马逊近期则开始阻止 Agent 代购。",
+        "source_url": "https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers",
+        "time": "2026-10-22T08:47:02+08:00",
+        "impact": "零售巨头开始按自己的条件接纳 Agent 购物，商品数据、价格和库存的结构化程度将直接影响被 Agent 选中的机会。",
+        "points": [
+          "Agent Profiles：每个 Agent 独立身份、单独订单记录",
+          "可设每单审批或限额内自动下单",
+          "Agent Gateway 是面向获准 Agent 的 MCP 服务器",
+          "Agent 拿不到支付卡信息，违规即封禁"
+        ]
+      },
+      {
+        "title": "微软研究院 WildAWM：用纯开源模型合成电脑操作 Agent 训练环境",
+        "summary": "微软研究院发布 WildAWM，每个环境是一台按人设生成、跨多天使用的个人电脑，网页、MCP 服务和本地文件共享同一状态，Agent 可以混用图形界面、MCP 和命令行。团队公开 341 组环境和任务，部分需要 100 步以上，GPT-6 Astra 只能解约 60%。只在这些合成环境里训练，Qwen3.6-35B-A3B 和 Qwen3.5-4B 在 8 个分布外基准上平均分别提升 10.58 和 8.21 分，论文登上当天 Hugging Face 每日论文票数第一。",
+        "source_url": "https://huggingface.co/papers/2610.26828",
+        "time": "2026-10-22T08:00:00+08:00",
+        "impact": "合成环境正在成为训练电脑操作 Agent 的主要数据来源，开源团队也能低成本造出高难度训练场。",
+        "points": [
+          "整条管线只用开源模型，不依赖闭源前沿模型",
+          "公开 341 组可执行环境与任务",
+          "小模型在 8 个分布外基准上平均提升约 8～11 分"
+        ]
+      },
+      {
+        "title": "Reflection AI 与 Hugging Face 悬赏 2 万美元，鼓励用开源模型 Beam 做项目",
+        "summary": "Reflection AI 联合 Hugging Face 拿出 2 万美元现金或额度，奖励用 Beam 做演示、数据集、基准或强化学习环境的开发者，11 月 2 日截止。合作方 Mercor 称 Beam 在长程多步任务基准 APEX-Agents 上 Pass@1 为 48.8%，是美国开源模型第一，但仍略低于 GLM-5.3-Flash 的 52.8%。以上成绩为合作方自报。",
+        "source_url": "https://x.com/reflection_ai/status/2113038595854623029",
+        "time": "2026-10-22T06:43:54+08:00",
+        "handle": "@reflection_ai",
+        "impact": "美国开源模型阵营在用社区激励追赶中国开源模型的生态热度。",
+        "points": [
+          "2 万美元悬赏，11 月 2 日截止",
+          "Beam 在 APEX-Agents 上 48.8%，美国开源模型第一（自报）",
+          "仍落后于 GLM-5.3-Flash 的 52.8%"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Perplexity Computer 技能市场上架 /graphify，月底前免费试用",
+        "summary": "Perplexity 的 Agent 产品 Computer 把开源项目 Graphify 做成技能上架，可把代码库变成可交互的文件、函数和依赖地图。CEO Aravind Srinivas 宣布 10 月 31 日前每位用户最多可免费使用 5000 积分。",
+        "source_url": "https://x.com/AravSrinivas/status/2113029257886847264",
+        "time": "2026-10-22T06:06:47+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "Agent 产品正在用技能市场快速吸纳开源社区的热门工具，技能生态成为新的竞争点。",
+        "points": [
+          "Graphify 以技能形式进入 Computer 技能市场",
+          "10 月 31 日前每人最多 5000 积分免费"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Node.js 三条维护线同时修高危漏洞，并内置拉黑 eMudhra 问题证书",
+        "summary": "宝玉整理了 Node.js 10 月 21 日的安全更新：22.x、24.x、26.x 分别升到 v22.23.4、v24.22.1、v26.12.1。最严重的是内置 Brotli 解压组件的越界写入，官方称可能导致远程代码执行；另有三处 HTTPS 证书核对可被全角或不规范的 IP 写法绕过，dns.resolve 也会被空字符截断域名。新版本还内置了黑名单，首批就是 eMudhra 那 8 枚私钥强度过弱的中间证书；20.x、25.x 已停止维护，不会有补丁。",
+        "source_url": "https://x.com/dotey/status/2113067412979433847",
+        "time": "2026-10-22T08:38:24+08:00",
+        "handle": "@dotey",
+        "impact": "用 Node.js 跑服务或工具的开发者本周需要升级，停更版本的用户只能迁移到维护中的版本线。",
+        "points": [
+          "Brotli 解压越界写入，可能远程执行代码",
+          "三处 HTTPS 证书核对可被不规范 IP 绕过",
+          "新增内置证书黑名单，拉黑 eMudhra 8 枚中间证书",
+          "20.x、25.x 已停止维护，需升级到 22/24/26"
+        ]
+      },
+      {
+        "title": "Cloudflare 内部 AI 代码审查单次成本从 2.43 美元降到 0.77 美元",
+        "summary": "meng shao 解读 Cloudflare 工程博客：内部 AI 代码审查单次成本降 68%，耗时中位数从 4 分 9 秒缩到 1 分 32 秒，真实问题发现数基本不变。约四成降幅来自工程改动，最大一项是把各仓库相同的工具定义和系统提示词拆成可共享的缓存前缀；约六成来自换模型和调低推理强度，例如 Sonnet 5.5 与 Sonnet 5 单价相同，但单次成本低 47%～62%。",
+        "source_url": "https://x.com/shao__meng/status/2113098764324159608",
+        "time": "2026-10-22T10:42:59+08:00",
+        "handle": "@shao__meng",
+        "impact": "给 Agent 降本的关键在上下文和缓存工程，而不只是等模型降价。",
+        "points": [
+          "优化前缓存写入占费用 43%、缓存读取占 34%",
+          "跨仓库共享缓存前缀是单项收益最大的改动",
+          "中等推理强度对审查结论几乎无损，高强度更贵却没多发现问题"
+        ]
+      },
+      {
+        "title": "Nathan Lambert 哈佛讲座：开源落后闭源约 3～5 个月，中国开源全面领先，美国优势在算力",
+        "summary": "meng shao 整理了 Nathan Lambert 在哈佛 CS 2881R 的讲座：开源模型落后闭源前沿约 3～5 个月且差距在缩小，在性能、下载量和论文引用三方面中国开源都领先，美国开源又比中国落后 3～4 个月。他认为把「蒸馏」当核心问题是高估了，美国真正持久的优势是算力，前五家实验室总算力平均是中国前五家的 16 倍。他还认为禁止开源挡不住坏人，只会伤害经济活动。",
+        "source_url": "https://x.com/shao__meng/status/2113092271503818988",
+        "time": "2026-10-22T10:17:11+08:00",
+        "handle": "@shao__meng",
+        "impact": "中美开源竞争的胜负手正从模型能力转向算力和生态采用。",
+        "points": [
+          "开源落后闭源前沿约 3～5 个月",
+          "中国开源在性能、下载、引用三方面领先",
+          "美国前五实验室算力平均为中国前五的 16 倍",
+          "蒸馏被高估，禁止开源弊大于利"
+        ]
+      },
+      {
+        "title": "imozuru：顺藤摸瓜查资料的 Claude Code 技能",
+        "summary": "GitHubDaily 推荐开源技能 imozuru：它先摸清一个陌生领域的行话、核心人物和常去的地方，再派 2 个思路不同的搜索助手顺着引用和链接挖到原文。找到的原文不做总结、原样存到本地，最后的摘录页每句都标出出自哪个文件第几行，并逐字核对。论文少的领域也会去翻博客和视频，并标明资料是论文、本人实操还是二手汇总。",
+        "source_url": "https://x.com/GitHub_Daily/status/2113057757398192232",
+        "time": "2026-10-22T08:00:02+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "把「AI 总结」改成「AI 找原文、人来判断」，适合需要可追溯资料的研究场景。",
+        "points": [
+          "开工前先列 3～6 个需要找到出处的观点",
+          "2 个搜索助手分头挖原文",
+          "摘录逐句标注文件与行号并逐字核对"
+        ]
+      },
+      {
+        "title": "雪踏乌云分享个人 Agent 分工：4 个 Bot 替代刷推",
+        "summary": "雪踏乌云用 4 个 Bot 分工：出海站点运营 Bot 监控新词、流量并汇报收入，自媒体 Bot 监控热点和关注博主，每周 AI 大事总结 Bot 从 X 汇总要闻，计划清单 Bot 对没完成的事项反复定时提醒。他说自己现在基本不刷推特，只看 Bot 推送的筛选结果，感兴趣再点进去。",
+        "source_url": "https://x.com/Pluvio9yte/status/2113065297284599924",
+        "time": "2026-10-22T08:30:00+08:00",
+        "handle": "@Pluvio9yte",
+        "impact": "个人 Agent 的实用价值正在从聊天转向长期运行的监控和提醒。",
+        "points": [
+          "按任务拆成多个专职 Bot",
+          "计划清单 Bot 会对未完成事项重复提醒",
+          "信息获取从刷时间线转为看 Bot 筛选推送"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Pi v1.4.0：分类模型支持图片输入，长推理摘要不再失败",
+        "summary": "Mario Zechner 的开源编程 Agent Pi 发布 v1.4.0：codemode 的分类模型（TypeSafe 的 Jev、Cloudflare 的 Clef）支持图片输入；压缩和分支摘要改用模型自身的输出上限，长推理不再导致摘要失败；并行脚本和进程内子 Agent 在没有空闲 worker 时改为排队而不是报错。默认 NVIDIA 模型换成 Nemotron 3.5 Super VL，并新增 MiniMax-M3.1-Flash 和 Rex 终端支持。",
+        "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.4.0",
+        "time": "2026-10-22T06:49:48+08:00",
+        "impact": "Pi 持续把「小而专的分类模型」接入编程 Agent 工作流，适合需要快速判断的自动化场景。",
+        "points": [
+          "Jev、Clef 分类模型支持图片输入",
+          "摘要使用模型输出上限，修复长推理失败",
+          "并行任务排队，可用 PI_CODEMODE_MAX_WORKERS 调上限",
+          "新增 MiniMax-M3.1-Flash"
+        ]
+      },
+      {
+        "title": "Hermes Agent 上线官方 Meshy 插件，一句话生成 3D 模型",
+        "summary": "Nous Research 为 Hermes Agent 推出官方 Meshy 插件，通过 Meshy 的 MCP 服务器生成 3D 模型，例如给 Godot 做 70m 面数的宝箱，或把马克杯照片变成可打印模型。在 Hermes Desktop 里生成的模型可以直接在聊天中渲染。",
+        "source_url": "https://x.com/NousResearch/status/2113077994315034967",
+        "time": "2026-10-22T09:20:27+08:00",
+        "handle": "@NousResearch",
+        "impact": "Hermes 的插件生态正从编程扩展到 3D 内容创作。",
+        "points": [
+          "官方 Meshy 插件基于 MCP 服务器",
+          "支持游戏资产和照片转 3D 打印模型",
+          "Hermes Desktop 内直接渲染"
+        ]
+      },
+      {
+        "title": "SGLang v0.5.22：950 个 PR，权重加载最快提速 10 倍",
+        "summary": "开源推理引擎 SGLang 发布 v0.5.22，汇集 245 位贡献者的 950 个 PR。InstantTensor 让权重加载最快提速 10 倍，DeepSeek-V4.1-Flash 在 Hopper 上输出吞吐最高 2.3 倍，GLM-5.3 解码最快 2.1 倍，预填充/解码分离在 Agent 任务上吞吐提升 27%、p95 首 token 延迟减半；Apple Silicon Mac 也能用标准 PyTorch/MPS 后端。",
+        "source_url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.22",
+        "time": "2026-10-22T08:12:06+08:00",
+        "handle": "@sgl_project",
+        "impact": "开源推理栈针对 Agent 负载的优化在加速，自部署开源模型的成本继续下降。",
+        "points": [
+          "权重加载最快 10 倍",
+          "DeepSeek-V4.1-Flash 吞吐最高 2.3 倍",
+          "PD 分离在 Agent 任务上 p95 首 token 延迟减半",
+          "支持 Mac 的 PyTorch/MPS 后端"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "shiyu-coder/Kronos：今日 GitHub +575 星",
+        "summary": "Kronos 是一个面向金融市场「语言」的基础模型，把 K 线等行情序列当作语言来建模。今天登上 GitHub Trending，当日新增约 575 星。",
+        "source_url": "https://github.com/shiyu-coder/Kronos",
+        "time": "2026-10-22T12:10:00+08:00",
+        "impact": "时序基础模型正在向金融等垂直领域扩展。",
+        "points": [
+          "面向金融行情序列的基础模型",
+          "GitHub Trending 当日 +575 星"
+        ]
+      },
+      {
+        "title": "headroomlabs-ai/headroom：今日 GitHub +474 星",
+        "summary": "Headroom 在工具输出、日志、文件和 RAG 片段送进大模型之前先做压缩。项目称可让编程 Agent 少用约 20% token，JSON 数据少用 60%～95%，准确率不变（自报）。",
+        "source_url": "https://github.com/headroomlabs-ai/headroom",
+        "time": "2026-10-22T12:10:00+08:00",
+        "impact": "上下文压缩正在成为 Agent 降本的标准组件。",
+        "points": [
+          "在上下文进入模型前压缩",
+          "编程 Agent 约省 20% token，JSON 省 60%～95%（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Panniantong/Agent-Reach：今日 GitHub +426 星",
+        "summary": "Agent-Reach 是一个命令行工具，让 AI Agent 可以读取和搜索 Twitter、Reddit、YouTube、GitHub、B 站和小红书，主打不花 API 费用。",
+        "source_url": "https://github.com/Panniantong/Agent-Reach",
+        "time": "2026-10-22T12:10:00+08:00",
+        "impact": "给 Agent 接入多平台信息源的门槛进一步降低。",
+        "points": [
+          "一个 CLI 覆盖中外多个内容平台",
+          "主打零 API 费用"
+        ]
+      },
+      {
+        "title": "usestrix/strix：今日 GitHub +394 星",
+        "summary": "Strix 是开源的 AI 渗透测试工具，用 Agent 找出并修复应用里的漏洞。在 PHP、Node.js 高危漏洞集中爆发的这周，它登上 GitHub Trending，当日新增约 394 星。",
+        "source_url": "https://github.com/usestrix/strix",
+        "time": "2026-10-22T12:10:00+08:00",
+        "impact": "AI 安全审计工具正在从大厂内部走向开源社区。",
+        "points": [
+          "开源 AI 渗透测试 Agent",
+          "可发现并修复应用漏洞"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "澳大利亚法院判令苹果 2027 年 3 月起开放第三方应用商店",
+        "summary": "在 Epic 诉苹果案中，澳大利亚联邦法官在 235 页判决中要求苹果从 2027 年 3 月 1 日起允许澳大利亚账户从第三方应用商店和网站安装应用，并取消强制内购、禁止外链支付等限制。苹果可在 2 月 15 日前申请延期到 2027 年 5 月 3 日，并已表示将上诉。",
+        "source_url": "https://9to5mac.com/2026/10/21/apple-must-open-iphone-to-alternative-app-stores-in-australia-after-epic-games-ruling/",
+        "time": "2026-10-22T11:57:58+08:00",
+        "handle": "@9to5mac",
+        "impact": "继欧盟、日本之后，又一个主要市场强制打开 iOS 分发，苹果的应用商店模式继续松动。",
+        "points": [
+          "2027 年 3 月 1 日起允许侧载和第三方商店",
+          "取消强制内购和外链支付限制",
+          "苹果将上诉，可申请延期至 5 月 3 日"
+        ]
+      },
+      {
+        "title": "iPhone Duo 首批评测：Touch ID 解锁慢半拍，发热意见不一",
+        "summary": "iPhone Duo 首批评测解禁。MKBHD 发现苹果给每次 Touch ID 解锁都加了停顿，先停在锁屏让你看通知，苹果解释是为了与 Mac、iPad 体验一致；Joanna Stern 视频通话时因机身过热中断了测试，The Verge 也说长时间用相机会明显发热。iOS 27.2 起 iPhone Duo 支持 USB-C 版 Apple Pencil，本周五正式发售。",
+        "source_url": "https://www.macrumors.com/2026/10/21/iphone-duo-touch-id-complaints/",
+        "time": "2026-10-22T07:27:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "折叠形态的 iPhone 在生物识别和散热上做了取舍，首批用户体验可能两极分化。",
+        "points": [
+          "Touch ID 解锁有刻意停顿，评测普遍怀念 Face ID",
+          "视频通话和长时间拍照发热明显",
+          "iOS 27.2 起支持 USB-C 版 Apple Pencil",
+          "本周五发售"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Tailscale v1.104.2 跟进拉黑 eMudhra 问题证书",
+        "summary": "Tailscale v1.104.2 全平台升级到 Go 1.27.3，明确不再信任私钥泄露的 TLS 中间证书（安全公告 TS-2026-013）。Windows 端还修复了大型 tailnet 上反复断线，以及在关闭 MagicDNS 时误把 100.100.100.100 设为系统主 DNS 的问题。",
+        "source_url": "https://tailscale.com/changelog/#2026-10-21-client",
+        "time": "2026-10-21T08:00:00+08:00",
+        "impact": "用 Tailscale 组网的 NAS 和家庭服务器建议尽快更新客户端。",
+        "points": [
+          "升级 Go 1.27.3，拉黑问题中间证书",
+          "修复 Windows 大型 tailnet 反复断线",
+          "修复 Windows 误接管系统主 DNS"
+        ]
+      }
+    ]
+  }
+}
