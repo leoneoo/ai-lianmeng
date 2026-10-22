@@ -1,0 +1,306 @@
+{
+  "id": "2026-10-22-1800",
+  "published_at": "2026-10-22T18:00:00+08:00",
+  "headline": "彭博：DeepSeek 新一轮融资约 1000 亿元，腾讯、宁德时代出资最多",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "彭博：DeepSeek 新一轮融资约 1000 亿元（约 150 亿美元），腾讯、宁德时代出资最多",
+        "summary": "彭博社援引知情人士报道，DeepSeek 最新一轮融资约 1000 亿元人民币（约 150 亿美元），是中国规模最大的私募融资之一，目标从最初的 500 亿元先后上调到 800 亿元和约 1000 亿元，腾讯和宁德时代出资最多。DeepSeek、腾讯和宁德时代都还没有公开确认。这是 DeepSeek 半年内第二次对外融资：6 月首轮约 510 亿元，其中创始人梁文锋个人出资约 200 亿元；据《财经》报道，公司已请中信证券筹备科创板上市，目标 2027 年挂牌。",
+        "source_url": "https://x.com/dotey/status/2113124395321360646",
+        "time": "2026-10-22T12:24:00+08:00",
+        "handle": "@dotey",
+        "impact": "DeepSeek 从只靠幻方自有资金转向大规模引入外部资本，主要用于补算力和数据中心缺口，中美头部实验室的资本差距在缩小。",
+        "points": [
+          "融资额约 1000 亿元，目标两次上调（500→800→1000 亿元）",
+          "腾讯、宁德时代为最大出资方，三方均未官方确认",
+          "半年内第二轮：6 月首轮约 510 亿元",
+          "据《财经》筹备科创板上市，目标 2027 年"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Hugging Face 发布开源 DNA 对话模型 Carbon-X：14B 参数，可在笔记本本地运行",
+        "summary": "Hugging Face 联合中关村学院和那不勒斯费德里科二世大学发布 Carbon-X，在现有语言模型基础上扩充词表、按 6 个碱基一组读 DNA，再用 3000 亿 token 的 DNA 序列、英文文本和「DNA—生物学描述」配对数据继续训练，用户可以用自然语言询问 DNA 变异对基因活性和健康的影响。一次最多输入约 5 万个碱基对，训练数据刻意排除了病毒序列。团队特意做成 14B 小模型，方便研究者在本地处理敏感数据；开发者也提醒，模型尚未经过湿实验验证，准确度未知。",
+        "source_url": "https://huggingface.co/HuggingFaceBio/Carbon-X",
+        "time": "2026-10-22T18:02:00+08:00",
+        "impact": "把基因组分析从数值预测工具变成可对话的本地模型，降低了非计算背景研究者解读变异的门槛，但临床使用前仍需验证。",
+        "points": [
+          "14B 参数，可在本地硬件运行，数据不出本机",
+          "DNA 按 6 碱基分词，3000 亿 token 混合训练",
+          "单次输入约 5 万碱基对，排除病毒数据防滥用",
+          "尚未经湿实验验证"
+        ]
+      },
+      {
+        "title": "Mirendil：一名研究员借助 AI Agent，3.5 个月、不到 1000 万美元从零预训练千亿级编程基座",
+        "summary": "Mirendil CEO Behnam Neyshabur 称，公司首个预训练模型 Mirendil-Base（1000 亿～5000 亿参数区间）由一名研究员在 3.5 个月内完成，总算力花费不到 1000 万美元，包含全部研究、小规模实验和最终训练；据多方转述，代码 99% 以上由 Agent 编写、只用公开数据。同一配方已扩展到 Mirendil-Base-Large（5000 亿～2 万亿）和 -XL（2 万亿～10 万亿）。独立评测、后训练结果和 API 将「很快」公布，目前权重不开放。",
+        "source_url": "https://x.com/bneyshabur/status/2112941025862008949",
+        "time": "2026-10-22T00:16:00+08:00",
+        "handle": "@bneyshabur",
+        "impact": "如果独立评测站得住，前沿模型预训练的门槛将从「整支团队」降到「少数人 + Agent」，模型研发的瓶颈转向判断力和数据。",
+        "points": [
+          "1 名研究员、3.5 个月、算力不到 1000 万美元",
+          "Base 1000 亿～5000 亿参数，另有 Large、XL 更大版本",
+          "据转述 Agent 写了 99% 以上代码",
+          "尚无独立评测，权重未开放"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "上海 AI 实验室开源 Sage-A1.5：35B MoE、3B 激活，主打并行子 Agent 与自我纠错",
+        "summary": "上海 AI 实验室发布 Sage-A1.5，35B MoE、每次只激活 3B 参数，能并行派出子 Agent 并在执行中自我纠错，训练用科研发现流程和数万个合成环境做「递归自我改进」数据飞轮。官方称 SWE-Bench Pro 61.2%，在 FS-Olympiad、PinchBench 等基准上超过更大的前沿模型（自报）。模型以 Apache 2.0 协议开放，Q4 量化约 20GB 可本地运行，vLLM 首日支持。",
+        "source_url": "https://x.com/sageai_official/status/2113192901073309849",
+        "time": "2026-10-22T16:57:00+08:00",
+        "handle": "@sageai_official",
+        "impact": "又一个可在单机跑的中国开源 Agent 模型，小激活 MoE 正成为本地编程与 Agent 的主流规格。",
+        "points": [
+          "35B MoE、3B 激活，Apache 2.0",
+          "SWE-Bench Pro 61.2%（自报）",
+          "Q4 量化约 20GB，支持 vLLM、SGLang、llama.cpp",
+          "合成环境 + 科研流程数据飞轮"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "NVIDIA 在 GTC Berlin 扩充开源模型家族：Kumo、Nemotron 3.5 检索、Cosmos 3.5 等",
+        "summary": "NVIDIA 10 月 21 日在 GTC Berlin 宣布扩充开源模型家族：新增面向表格和业务数据的 Kumo（预测、欺诈评分、异常检测），Databricks、Coinbase、Revolut 等已在试用；5 个 Nemotron 3.5 检索模型中，Embed 8B 在 ViDoRe v3.1 上 nDCG@10 为 61.17（自报第一）。另有 Cosmos 3.5 世界模型、Alpamayo 2 Edge 自动驾驶模型、BioNeMo 蛋白设计模型和用于量子计算校准纠错的 Ising。此前各轮未收录，本轮补上。",
+        "source_url": "https://blogs.nvidia.com/blog/open-models-europe-industry/",
+        "time": "2026-10-21T18:34:00+08:00",
+        "impact": "NVIDIA 把开源模型从语言扩展到表格、机器人、生物和量子，进一步用开放模型绑定自家算力生态。",
+        "points": [
+          "Kumo：结构化业务数据的开源基础模型",
+          "Nemotron 3.5 Embed 8B 在 ViDoRe v3.1 自报第一",
+          "Cosmos 3.5、Alpamayo 2 Edge、BioNeMo、Ising",
+          "主打欧洲本地数据、自有基础设施部署"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "清华 NICS 论文「Agent 的缓存工程」：让 Agent 直接管理自己的 KV 缓存",
+        "summary": "论文指出，长任务 Agent 靠删减或总结历史来控制上下文，会让后续 KV 缓存失效、触发昂贵的重新预填充。作者提出让 Agent 直接丢弃或重排自己的 KV 缓存，并配套 AKV 推理引擎处理有状态的缓存复用。相比常规的超阈值总结，平均得分 +1.7、成本 -27.7%，输出吞吐最高 1.2 倍、P95 延迟快 1.5 倍。该论文当天在 Hugging Face 每日论文票数第一。",
+        "source_url": "https://huggingface.co/papers/2610.28577",
+        "time": "2026-10-22T08:00:00+08:00",
+        "impact": "Agent 长上下文的成本优化正从「上下文工程」下沉到推理引擎层，可能成为编程 Agent 降本的新方向。",
+        "points": [
+          "用 drop、repos 操作直接控制 KV 缓存",
+          "配套 AKV 推理引擎，兼容现有 API",
+          "得分 +1.7、成本 -27.7%",
+          "代码开源：thu-nics/AKV"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Arena 匿名模型 Kibitz、Kalmia 疑似 Kimi K3.1 和 Qwen4，本周内可能发布",
+        "summary": "社区通过分词器测试发现，LMArena 上的匿名模型 Kibitz 特征指向月之暗面、Kalmia 疑似来自阿里通义。博主 Max For AI 称两家都已进入上线前的匿名测试阶段，「本周内」就可能发布。社区测试中 Kibitz 花 0.38 美元生成了 13700 个方块的「我的世界」风格自画像。两家均未官方确认。",
+        "source_url": "https://x.com/MaxForAI/status/2113205199112196377",
+        "time": "2026-10-22T17:45:00+08:00",
+        "handle": "@MaxForAI",
+        "impact": "若属实，两家中国头部模型可能在同一周更新，国产开源模型竞争将再提速。",
+        "points": [
+          "Kibitz 疑似 Kimi K3.1，Kalmia 疑似 Qwen4",
+          "依据为分词器特征测试",
+          "博主称本周内发布，未获官方确认"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "开源攻击工具已能串成「侦察—逆向—突破—编排—评测」全链条",
+        "summary": "WquGuru 列出一组开源安全项目：ScopeSentry 做资产测绘，rea 把 Ghidra、Hopper 接进 Codex 和 Cursor 做逆向，Strix 和 PentAGI 用多 Agent 做渗透和 PoC 验证，CyberStrikeAI 用 MCP 工具编排攻击链，garak 和 promptfoo 做大模型红队。他认为这些工具串起来后，攻击周期从数月降到数天，单人就能完成过去一支专业团队的工作。",
+        "source_url": "https://x.com/wquguru/status/2113181135522214168",
+        "time": "2026-10-22T16:10:00+08:00",
+        "handle": "@wquguru",
+        "impact": "AI Agent 让攻击成本大幅下降，个人和小团队的安全防护需要按「组织级攻击」的标准来做。",
+        "points": [
+          "侦察：ScopeSentry；逆向：rea",
+          "突破：Strix、PentAGI；编排：CyberStrikeAI",
+          "评测：garak、promptfoo"
+        ]
+      },
+      {
+        "title": "earshot：给编程 Agent 装上「耳朵」",
+        "summary": "earshot 把音频翻译成 AI 能读懂的描述和数据，能判断一段声音像什么、是真实录音还是代码合成，还能逐秒检查宣传片的音效与画面切换是否对齐，并对照 7 部专业宣传片打分、给出带时间点的修改建议。仓库自带 201 个纯代码生成的音效，作者盲测中 15 次只猜对 8 次真假。全程在本地 CPU 运行，可接入 Claude Code 等 Agent 工具。",
+        "source_url": "https://x.com/GitHub_Daily/status/2113208782511837413",
+        "time": "2026-10-22T18:00:00+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "补上了 Agent 做视频和多媒体内容时「听不见」的短板。",
+        "points": [
+          "让 Agent 理解并检查音频",
+          "201 个代码生成音效，盲测难辨真假",
+          "本地 CPU 运行，可接 Claude Code"
+        ]
+      },
+      {
+        "title": "GPTVoice：把 ChatGPT 听写功能变成 Mac 全局语音输入法",
+        "summary": "开源项目 GPTVoice 把 ChatGPT App 输入框里的听写功能做成 Mac 菜单栏语音输入法，按快捷键即可在任何应用里听写。它用的是 ChatGPT 自带的听写能力，不额外付 API 费用。博主 LinearUncle 实测识别速度快，开源免费。",
+        "source_url": "https://x.com/LinearUncle/status/2113190770706628819",
+        "time": "2026-10-22T16:48:00+08:00",
+        "handle": "@LinearUncle",
+        "impact": "付费语音输入法多了一个零成本替代，但依赖 ChatGPT 的非公开接口，稳定性有待观察。",
+        "points": [
+          "菜单栏图标 + 快捷键，全局可用",
+          "复用 ChatGPT 听写，不另付费",
+          "开源：entropyconquers/gpt-voice"
+        ]
+      },
+      {
+        "title": "前 Manus 研发：Agent 应用很难再靠转卖 token 赚钱",
+        "summary": "yan5xu 认为做 Agent 应用已经不能靠集采 token 折扣赚钱：Opus、Astra 等顶级模型有官方订阅，用户一用 API 跑 Agent 就嫌贵并开始算投入产出；Flash 级模型又便宜到一个人 10 美元都用不完。他观察到现在不少个人 Agent 产品实际上是「卖 VPS 顺带送 Flash token」，并感叹应用层很难找到第三条路。",
+        "source_url": "https://x.com/yan5xu/status/2113204888956195256",
+        "time": "2026-10-22T17:44:00+08:00",
+        "handle": "@yan5xu",
+        "impact": "说明 Agent 应用层的利润正被模型厂商的订阅和低价模型两头挤压，商业模式需要转向服务和结果收费。",
+        "points": [
+          "顶级模型 API 太贵，用户对比订阅后算 ROI",
+          "Flash 模型太便宜，token 差价没有空间",
+          "个人 Agent 多是卖 VPS 送 token"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "NVIDIA Earth-2 新增欧洲短临预报模型 StormScope EU",
+        "summary": "StormScope EU 用 EUMETSAT 气象卫星数据训练，按 10 分钟一帧预测 16 个 Meteosat 通道的云图演变。底层是扩散 Transformer，欧洲网格版 3.06 亿参数，OpenMDW 1.1 协议可商用，通过 Earth2Studio 推理。GTC Berlin 上 NVIDIA 与 Earthmover 做了每 10 分钟随新卫星数据更新的实时演示，官方没有给出准确率数据。",
+        "source_url": "https://blogs.nvidia.com/blog/europe-earth-2-open-models-weather-climate-prediction/",
+        "time": "2026-10-22T16:13:00+08:00",
+        "impact": "AI 气象模型从全球中期预报延伸到区域分钟级短临，能源、保险和交通可以在自有 GPU 上做本地化预报。",
+        "points": [
+          "10 分钟间隔、16 个卫星通道的短临预报",
+          "DiT 架构，欧洲网格 3.06 亿参数",
+          "OpenMDW 1.1，可商用",
+          "未公布准确率指标"
+        ]
+      },
+      {
+        "title": "Pi 被社区移植到 Rust：内存不到 90MB",
+        "summary": "开发者 lassejv 用 Claude 把 Mario Zechner 的编程 Agent Pi 整体移植成纯 Rust 版本，内存占用不到 90MB，启动更快。他称原有的自定义扩展和已安装扩展都能正常使用。项目仍在开发中，属于社区移植，不是 Pi 官方版本。",
+        "source_url": "https://x.com/lassejv/status/2113209018395066586",
+        "time": "2026-10-22T18:01:00+08:00",
+        "handle": "@lassejv",
+        "impact": "Pi 的扩展生态开始出现第三方实现，轻量化 Agent 客户端的需求在上升。",
+        "points": [
+          "纯 Rust 重写，内存 <90MB",
+          "兼容现有扩展",
+          "社区项目，仍在开发"
+        ]
+      },
+      {
+        "title": "freellmapi：把 34 家免费大模型服务聚合成一个接口（今日 +675 星）",
+        "summary": "tashfeenahmed/freellmapi 把 34 家免费大模型服务商、635 个免费模型端点聚合到一个 OpenAI 兼容的 /v1 接口后面，号称每月合计约 74 亿 token 免费额度。它也支持接入任何自定义的 OpenAI 兼容端点。今日在 GitHub Trending 新增约 675 星。",
+        "source_url": "https://github.com/tashfeenahmed/freellmapi",
+        "time": "2026-10-22T18:00:00+08:00",
+        "impact": "低成本跑 Agent 的需求旺盛，免费额度聚合工具走红，但稳定性和条款合规需要自行评估。",
+        "points": [
+          "34 家服务商、635 个免费端点",
+          "统一 OpenAI 兼容 /v1 接口",
+          "号称每月 74 亿 token（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "ruflo：多 Agent 协作群框架（今日 +612 星）",
+        "summary": "ruvnet/ruflo 自称「最初的 Agent 框架（harness）」，用于部署多 Agent 协作群、编排自主工作流和构建对话式 AI 系统。项目用 TypeScript 编写。今日在 GitHub Trending 新增约 612 星。",
+        "source_url": "https://github.com/ruvnet/ruflo",
+        "time": "2026-10-22T18:00:00+08:00",
+        "impact": "多 Agent 编排框架持续受关注，开发者在寻找比单 Agent 更可控的任务分工方式。",
+        "points": [
+          "多 Agent 协作群部署",
+          "自主工作流编排",
+          "TypeScript 实现"
+        ]
+      },
+      {
+        "title": "Anthropic 开源知识工作插件库（今日 +389 星）",
+        "summary": "anthropics/knowledge-work-plugins 是 Anthropic 官方开源的插件库，面向知识工作者，主要供 Claude Cowork 使用。今日在 GitHub Trending（Python）新增约 389 星。",
+        "source_url": "https://github.com/anthropics/knowledge-work-plugins",
+        "time": "2026-10-22T18:00:00+08:00",
+        "impact": "Agent 厂商在用开源插件扩展办公场景，插件和 Skills 正成为生态竞争点。",
+        "points": [
+          "Anthropic 官方仓库",
+          "面向知识工作者",
+          "主要用于 Claude Cowork"
+        ]
+      },
+      {
+        "title": "ai-memory：给编程 Agent 加长期记忆、跨厂商交接（今日 +286 星）",
+        "summary": "akitaonrails/ai-memory 为 Claude Code、Codex 等编程 Agent 命令行工具提供长期记忆，并方便在不同厂商的 Agent 之间交接上下文。今日在 GitHub Trending 新增约 286 星。",
+        "source_url": "https://github.com/akitaonrails/ai-memory",
+        "time": "2026-10-22T18:00:00+08:00",
+        "impact": "开发者同时使用多家 Agent 已成常态，跨工具的记忆层开始独立成品类。",
+        "points": [
+          "编程 Agent CLI 的长期记忆",
+          "支持跨厂商 Agent 交接",
+          "今日 +286 星"
+        ]
+      },
+      {
+        "title": "Agnes Harness：把大模型接到真实硬件上的开源 Agent 框架",
+        "summary": "Agnes Harness 让大模型做「大脑」、决策模型 Jev 做「小脑」，框架负责记任务进度和调用工具，再通过开放协议 MHS 接入机械狗、机械臂等真实硬件。在南京物理 AI 与世界模型大会上，它演示了一句话让机械狗去找瓦力打招呼，以及 AI 打王者荣耀时每局复盘、自动调整策略和执行代码。",
+        "source_url": "https://github.com/AgnesAI-Labs/agnes-harness",
+        "time": "2026-10-22T13:03:00+08:00",
+        "impact": "Agent 框架正从屏幕走向机器人等物理设备，开放硬件协议是关键一环。",
+        "points": [
+          "大模型 + 决策模型分工",
+          "MHS 开放协议接入硬件",
+          "支持系统与模型双向自我进化"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "DigiTimes：苹果把 iPhone Duo 订单上调约 44% 至 1400 万台",
+        "summary": "据 DigiTimes 供应链消息，苹果已通知富士康和零部件厂把 iPhone Duo 订单从 970 万台上调到 1400 万台，目标覆盖未来 12 个月。10 月 16 日预购开启 30 分钟内，美国发货时间就排到了 1 月 25 日。iPhone Duo 10 月 23 日发售，美国起售价 1999 美元，此前有组装、屏幕和铰链良率问题的报道。",
+        "source_url": "https://www.macrumors.com/2026/10/22/apple-boosts-iphone-duo-orders/",
+        "time": "2026-10-22T14:23:00+08:00",
+        "impact": "首款折叠 iPhone 需求超预期，但良率可能限制供货，也会拉动整个折叠屏市场。",
+        "points": [
+          "订单 970 万→1400 万台，约 +44%",
+          "预购 30 分钟美国发货排到 1 月",
+          "10 月 23 日发售，1999 美元起"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Gurman：iPhone Duo 2 原型机已换回屏下 Face ID",
+        "summary": "Mark Gurman 在 Power On 播客中称，苹果内部测试的 iPhone Duo 2 原型机配备 Face ID，传感器集成在外屏屏下。一代 iPhone Duo 用的是 Touch ID，首批评测中不少人吐槽解锁「慢半拍」。二代预计明年秋季推出。",
+        "source_url": "https://9to5mac.com/2026/10/22/gurman-iphone-duo-2-face-id/",
+        "time": "2026-10-22T17:56:00+08:00",
+        "impact": "想要 Face ID 的用户可能会观望第二代。",
+        "points": [
+          "二代原型配屏下 Face ID",
+          "一代 Touch ID 解锁被评测吐槽",
+          "预计明年秋季发布"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "iot": [
+      {
+        "title": "苹果高管谈 HomeView：主打 Siri AI 自然语言控制智能家居",
+        "summary": "苹果家居产品营销副总裁 Kaiann Drance 对 The Verge 表示，HomeView 家庭中枢选在现在推出，是因为 Siri AI 有了个人语境理解能力。AI 产品营销副总裁 Lilian Rincon 说，用户可以用很自然的话调节恒温器，长辈和大学生都能直接上手。她强调 Siri AI 会尽量直接执行请求，而不是反复追问。",
+        "source_url": "https://www.macrumors.com/2026/10/22/simplicity-and-siri-ai-homeview-killer-features/",
+        "time": "2026-10-22T12:28:00+08:00",
+        "impact": "苹果把大模型语音助手作为智能家居中枢的核心卖点，HomeKit 生态的易用性门槛有望降低。",
+        "points": [
+          "HomeView 依托 Siri AI 的个人语境能力",
+          "自然语言控制恒温器等配件",
+          "设计目标是少追问、直接执行"
+        ]
+      },
+      {
+        "title": "Kaku 上线远程模式：用任意浏览器操作家里的 Mac",
+        "summary": "Tw93 的 Kaku 新增远程功能：在 Mac 上运行 kaku remote 会生成一个链接，换台电脑或 iPad 用任何浏览器打开，就能流畅操作家里那台 Mac 上的 Kaku。作者推荐浏览器全屏使用，适合家里有一台性能好的 Mac、出门在外远程使用的场景。",
+        "source_url": "https://x.com/HiTw93/status/2113162522597724258",
+        "time": "2026-10-22T14:56:00+08:00",
+        "handle": "@HiTw93",
+        "impact": "家里的 Mac 更容易变成随身可用的远程工作站。",
+        "points": [
+          "kaku remote 生成访问链接",
+          "任意浏览器、跨设备可用",
+          "适合远程使用家中 Mac"
+        ]
+      }
+    ]
+  }
+}
