@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-22T18:17:54+08:00",
+  "updated_at": "2026-10-22T22:13:16+08:00",
   "editions": [
+    {
+      "id": "2026-10-22-2200",
+      "published_at": "2026-10-22T22:00:00+08:00",
+      "path": "data/2026/10/2026-10-22-2200.json",
+      "counts": {
+        "x_daily": 5,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 7,
+        "tech": 3,
+        "iot": 2
+      },
+      "headline": "讯飞星火 X2.6 发布：自称全程国产算力训练，293B MoE 对标 DeepSeek，4B 端侧版开源"
+    },
     {
       "id": "2026-10-22-1800",
       "published_at": "2026-10-22T18:00:00+08:00",

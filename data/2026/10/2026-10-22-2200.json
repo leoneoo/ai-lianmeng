@@ -1,0 +1,275 @@
+{
+  "id": "2026-10-22-2200",
+  "published_at": "2026-10-22T22:00:00+08:00",
+  "headline": "讯飞星火 X2.6 发布：自称全程国产算力训练，293B MoE 对标 DeepSeek，4B 端侧版开源",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "科大讯飞发布星火 X2.6：自称全程国产算力训练，293B MoE、1M 上下文，同步开源 4B 端侧版",
+        "summary": "讯飞在 1024 开发者节发布星火 X2.6 端云一体大模型。云端旗舰为 293B-A30B MoE、1M 上下文，主打代码和 Agent，讯飞称全程只用国产算力训练。训练端用长程任务动态并行把效率提升约 4 倍，推理端用四层 KV 缓存把效率提升约 4.5 倍。端侧 Spark-X2.6-4B 以 Apache 2.0 开源，支持三档思考预算，首日适配 vLLM、Ollama、llama.cpp。",
+        "source_url": "https://www.ithome.com/1/016/403.htm",
+        "time": "2026-10-22T19:15:34+08:00",
+        "impact": "国产芯片训练路线第一次拿出与头部开源模型同档的公开对标，但跑分均为讯飞自报，尚无第三方复测；超低价 API 和开源端侧模型是在抢开发者入口。",
+        "points": [
+          "官方跑分：SWE Multilingual 95.0 对 DeepSeek-V4.1-Flash 的 94.3，Terminal Bench 2.1 83.2 对 82.0，τ³-bench 45.1 对 36.6",
+          "API 限时价：输入 0.9 元、缓存命中 0.08 元、输出 3.6 元 / 百万 tokens，另送 10 亿 tokens",
+          "任务分工设想：约 60% 端侧、30% 端云协同、10% 上云",
+          "4B 端侧版 GGUF 已上 Hugging Face（XHToken/Spark-X2.6-4B-GGUF）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "蚂蚁 Ling-3.1-flash-1019：Artificial Analysis 智能指数从 41 升到 44，权重即将开放",
+        "summary": "Ant Ling 官方称新检查点 Ling-3.1-flash-1019 在 Artificial Analysis 综合智能指数上从 41 分升到 44 分，提升集中在 Agent 类任务。API 和开放权重「很快」上线，暂无具体日期。上一版 Ling-3.1-flash 约 560B 参数（MoE，激活约 25B），MIT 协议，10 月 14 日开放权重。",
+        "source_url": "https://x.com/AntLingAGI/status/2113226531522891851",
+        "time": "2026-10-22T19:10:41+08:00",
+        "handle": "@AntLingAGI",
+        "impact": "一次检查点更新就涨 3 个指数点，说明国产开源模型的迭代节奏已经缩短到周级别；权重放出后可检验成绩能否独立复现。",
+        "points": [
+          "AA-Briefcase 约 1400 → 1524 Elo",
+          "AutomationBench-AA 62% → 68%",
+          "API 与开放权重即将上线"
+        ]
+      },
+      {
+        "title": "Flapping Airplanes 完成 10 亿美元 A 轮，估值约 60 亿美元，押注数据效率和自研 GPU 底层",
+        "summary": "成立约一年的 AI 研究公司 Flapping Airplanes 宣布完成 10 亿美元 A 轮，Index 和 Lux 联合领投；据彭博，Sequoia、GV、Kleiner Perkins 跟投，估值约 60 亿美元，约为 1 月种子轮的 4 倍，公司尚无商业产品。据头雁（@alacheng）的中文整理，他们不用 PyTorch、NCCL 和常规 CUDA 运行时，自建 megakernel 框架，单个 B200 的一个内核里可同时跑训练、推理甚至 Doom。",
+        "source_url": "https://x.com/flappyairplanes/status/2112955212612919318",
+        "time": "2026-10-22T01:12:34+08:00",
+        "handle": "@flappyairplanes",
+        "impact": "资本开始为「效率路线」而非单纯扩大规模下重注；若数据效率突破成立，将改变 AI 的成本结构。（06:00 漏收，本期补上）",
+        "points": [
+          "Index、Lux 联合领投，Sequoia、GV、Kleiner Perkins 跟投（据彭博）",
+          "认为人类学习的数据效率比现有模型高 10 万～100 万倍",
+          "机器人、DNA、交易等数据稀缺领域被视为最先受益"
+        ]
+      },
+      {
+        "title": "Cloudflare 为 Commerce.com 近 10 万个店铺域名一键开启 WebMCP",
+        "summary": "WebMCP 是 Google 提出的实验性浏览器标准，让网页直接给 AI Agent 提供 search_products 这类结构化工具，Agent 不用再靠识别按钮操作网页。Cloudflare 在边缘为 Commerce.com 旗下近 10 万个店铺域名统一开启，商家可以选择退出。",
+        "source_url": "https://blog.cloudflare.com/webmcp-commerce/",
+        "time": "2026-10-21T21:00:00+08:00",
+        "impact": "Agent 购物从「模拟点击」转向「调用店铺工具」，和 Walmart 的 Agent 身份、MCP 购物网关一起，Agent 电商的基础设施正在成形。",
+        "points": [
+          "覆盖近 10 万个店铺域名",
+          "边缘统一开启，商家无需改代码，可选择退出",
+          "WebMCP 仍是实验性标准"
+        ]
+      },
+      {
+        "title": "北大等发布 SpatialScout 基准：考 VLM Agent 能否主动探索并画出 3D 地图",
+        "summary": "SpatialScout 包含 80 个室内场景、3140 个目标物体，考的是 VLM Agent 能否主动探索场景并建出 3D 地图。表现最好的 Claude Opus 5.5 平均重叠得分只有 41.71%。该论文是今日 Hugging Face 每日论文票数第一。",
+        "source_url": "https://huggingface.co/papers/2610.26659",
+        "time": "2026-10-22T08:00:00+08:00",
+        "impact": "主动 3D 空间理解仍是前沿模型的明显短板，这直接关系到机器人和具身 Agent 能否可靠落地。",
+        "points": [
+          "最佳模型 Claude Opus 5.5 平均重叠 41.71%",
+          "IoU 超过 0.5 的目标 47.23%，超过 0.9 的仅 3.25%",
+          "代码开源：github.com/JesseZZZZZ/SpatialScout"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "读 pstack 的笔记：Agent 工程先做「验证」，再谈并行",
+        "summary": "陈成读 poteto 的 pstack 的核心收获：先做验证 Skill 和功能地图（feature map），让 Agent 能自己跑起并验证应用；应用最好先做成输出 JSON、带 --dry-run 的命令行工具。他反对对抽象计划做对抗式评审，主张先做两三个可切换的原型再比较。",
+        "source_url": "https://x.com/chenchengpro/status/2113243170788278767",
+        "time": "2026-10-22T20:16:48+08:00",
+        "handle": "@chenchengpro",
+        "impact": "给在用 Claude Code、Codex 做工程的人一套可直接照搬的顺序：先让 Agent 能验证自己，再追求并行和自动化。",
+        "points": [
+          "先建验证 Skill 和功能地图",
+          "应用先做成 JSON 输出、带 --dry-run 的 CLI",
+          "用原型对比代替对抽象计划的对抗式评审",
+          "修正反复出现的问题：架构根除 > lint/测试 > Skill 规则 > 人工 review"
+        ]
+      },
+      {
+        "title": "Lemo-Opuscar 更新：Claude Code 视频风格库扩到 59 种，还能定制自己的风格",
+        "summary": "这个约 5200 星的开源项目风格从 39 种增加到 59 种，其中新增「剪辑与纪实」类 8 种。新增「定制自己的风格」流程，Lemo Studio 的 MCP 应用也即将推出。",
+        "source_url": "https://x.com/LinearUncle/status/2113222028178141540",
+        "time": "2026-10-22T18:52:47+08:00",
+        "handle": "@LinearUncle",
+        "impact": "用编程 Agent 做视频的门槛进一步降低，风格库从「拿来用」变成「自己搭」。",
+        "points": [
+          "风格库 39 → 59 种",
+          "新增剪辑与纪实类 8 种",
+          "新增定制风格流程，MCP 应用即将推出"
+        ]
+      },
+      {
+        "title": "郭宇：Claude Code 和 Codex 远程控制电脑时的授权差异",
+        "summary": "郭宇用 Claude Code 测试版的云电脑远程控制自己的 Mac Studio，几乎每一步都要口头授权。而 Codex 开启 bypass 模式后，几乎不再要求授权。",
+        "source_url": "https://x.com/turingou/status/2113248241726923210",
+        "time": "2026-10-22T20:36:57+08:00",
+        "handle": "@turingou",
+        "impact": "两家在「Agent 远程操作个人电脑」上的安全默认值差别很大，选工具时要按自己的风险偏好权衡便利和安全。",
+        "points": [
+          "Claude Code 远程操作几乎事事需授权",
+          "Codex bypass 模式几乎不再询问"
+        ]
+      },
+      {
+        "title": "ExifCleaner：一键清掉照片里的位置、时间和机型信息",
+        "summary": "桌面工具，把照片或整个文件夹拖进去就能批量清除 EXIF 隐私信息，处理完可以对比删掉了哪些字段。",
+        "source_url": "https://x.com/GitHub_Daily/status/2113269159153053978",
+        "time": "2026-10-22T22:00:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "发图前的隐私清理变成一步操作，适合常在网上分享照片的人。",
+        "points": [
+          "支持整个文件夹拖入批量处理",
+          "清除位置、拍摄时间、手机型号等信息",
+          "处理前后可对比"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Pi 作者 Mario Zechner：所有设备都成了 Agent 的运行环境，Agent 本体跑在手机上",
+        "summary": "Mario Zechner 把自己的各台设备都接成环境，任何（子）Agent 都能在其中操作。Agent 和提供 Web UI / TUI 的服务端都跑在手机上，随身携带。他还开玩笑说下一步要做「持久化插件系统」。",
+        "source_url": "https://x.com/badlogicgames/status/2113236214891610241",
+        "time": "2026-10-22T19:49:10+08:00",
+        "handle": "@badlogicgames",
+        "impact": "个人 Agent 正从「云端一台电脑」走向「调度你所有设备」，和万物互联的思路直接相通。",
+        "points": [
+          "所有设备都可作为子 Agent 的运行环境",
+          "Agent 与 Web UI / TUI 服务端运行在手机上"
+        ]
+      },
+      {
+        "title": "OpenClaw v2026.10.6：强制使用打过补丁的 Node，重启后消息不丢",
+        "summary": "要求 Node 24.22.1+ 或 26.12.1+，以拒绝已泄露的证书链。更新流程更安全，迁移优先保住数据，消息投递在重启后也能继续，并修复了 GPT-5.6 工具调用和 OpenRouter 上 DeepSeek 的兼容问题。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.6",
+        "time": "2026-10-22T20:53:10+08:00",
+        "impact": "自托管 Agent 的用户应尽快升级 Node 和 OpenClaw，避开这轮证书泄露风险。",
+        "points": [
+          "最低 Node 24.22.1+ / 26.12.1+",
+          "迁移优先保住数据，投递可跨重启",
+          "修复 GPT-5.6 与 OpenRouter DeepSeek 工具调用"
+        ]
+      },
+      {
+        "title": "Hugging Face 教程：一小时训练降尺度器，把 AIFS 集合预报从约 28km 细化到 5.5km",
+        "summary": "在 ECMWF AIFS-ENS 的 2 米气温预报之上训练一个小型降尺度器，学习地形、海岸线等局地细节，覆盖法国，训练约 1 小时。用法国气象局站点检验，误差明显下降。",
+        "source_url": "https://huggingface.co/blog/EmmaScharfmann/downscaling-a-weather-forecasting-model",
+        "time": "2026-10-20T08:00:00+08:00",
+        "impact": "开源气象大模型加低成本降尺度器，就能得到更贴近本地的预报，对做区域天气的人很实用。",
+        "points": [
+          "前两天 RMSE 降 14%、CRPS 降 21%",
+          "十天平均 RMSE 降 9%、CRPS 降 14%",
+          "分辨率约 28km → 5.5km"
+        ]
+      },
+      {
+        "title": "luongnv89/claude-howto：今日 +428 星",
+        "summary": "图文和示例驱动的 Claude Code 教程，从基础概念讲到高级 Agent，附可直接复制的模板，总星约 4.27 万。",
+        "source_url": "https://github.com/luongnv89/claude-howto",
+        "time": "2026-10-22T22:06:00+08:00",
+        "impact": "适合系统补齐 Claude Code 用法的入门和进阶读者。",
+        "points": [
+          "今日 +428 星，总星约 4.27 万",
+          "附可复制模板"
+        ]
+      },
+      {
+        "title": "genspark-ai/genoffice：今日 +191 星",
+        "summary": "Genspark 开源的 AI 办公套件，包含文档、表格、幻灯片、PDF 等编辑器，内置 AI Agent，并提供 genoffice 命令行和 Agent Skills。",
+        "source_url": "https://github.com/genspark-ai/genoffice",
+        "time": "2026-10-22T22:06:00+08:00",
+        "impact": "开源办公套件开始原生面向 Agent 设计，可作为自托管替代方案关注。",
+        "points": [
+          "文档、表格、幻灯片、PDF 一体",
+          "内置 Agent，提供 CLI 和 Agent Skills",
+          "总星约 1.05 万"
+        ]
+      },
+      {
+        "title": "twentyhq/twenty：今日 +713 星",
+        "summary": "定位「为 AI 设计的开源 Salesforce 替代品」的 CRM，总星约 5.95 万。",
+        "source_url": "https://github.com/twentyhq/twenty",
+        "time": "2026-10-22T22:06:00+08:00",
+        "impact": "企业软件正在按「Agent 可操作」重新设计，开源 CRM 是先行者。",
+        "points": [
+          "今日 +713 星",
+          "总星约 5.95 万"
+        ]
+      },
+      {
+        "title": "麦当劳中国 MCP 带火一批社区 Skill",
+        "summary": "近两天 GitHub 上冒出一批围绕麦当劳中国 MCP 的社区项目，比如「省钱体检」式的差价审计、订单管理等，均为非官方项目。",
+        "source_url": "https://github.com/lklbar666/mcd-saver-checkup",
+        "time": "2026-10-22T22:06:00+08:00",
+        "impact": "消费品牌开放 MCP 后，社区会迅速长出二次开发生态，Agent 消费场景开始落地。",
+        "points": [
+          "mcd-saver-checkup：差价审计",
+          "maimen-order-manager：订单管理",
+          "均为非官方社区项目"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果在系统层拦截 eMudhra 泄露证书",
+        "summary": "据 MacRumors，Mozilla 工程师 Dennis Jackson 指出，这批 eMudhra 证书的私钥都是小于 256 的数字，几乎可以瞬间还原，攻击者可借此冒充网站。苹果已于 10 月 19 日在系统层面拦截。",
+        "source_url": "https://www.macrumors.com/2026/10/22/apple-blocks-certificates-that-could-help-attackers/",
+        "time": "2026-10-22T19:43:10+08:00",
+        "impact": "苹果设备用户已受保护，自托管服务和命令行工具仍需留意证书链更新。",
+        "points": [
+          "私钥均为小于 256 的数字",
+          "苹果 10 月 19 日起拦截"
+        ]
+      },
+      {
+        "title": "iPhone Duo 明天发售，苹果公布 50 多款已适配 App",
+        "summary": "苹果展示了 50 多款为 iPhone Duo 优化的 App，Word 和 Outlook 将在未来几周推出「桌面级」体验。首批预购订单已显示「已发货」。",
+        "source_url": "https://www.macrumors.com/2026/10/22/apple-highlights-iphone-duo-apps/",
+        "time": "2026-10-22T21:04:37+08:00",
+        "impact": "折叠屏的生产力 App 生态是 iPhone Duo 成败关键，微软的支持是重要信号。",
+        "points": [
+          "50 多款 App 已适配",
+          "Word、Outlook 将推桌面级体验",
+          "首批预购已发货"
+        ]
+      },
+      {
+        "title": "Gurman：触屏 Mac 下周发布",
+        "summary": "Mark Gurman 新一期 Power On 播客预告了下周的触屏 Mac 发布，苹果尚未官宣。",
+        "source_url": "https://x.com/markgurman/status/2113264860419256427",
+        "time": "2026-10-22T21:42:59+08:00",
+        "handle": "@markgurman",
+        "impact": "若属实，Mac 交互方式将迎来多年来最大变化。⚠️ 未证实",
+        "points": [
+          "消息来自 Gurman 播客预告",
+          "苹果尚未官宣"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "iot": [
+      {
+        "title": "Tailscale 推出 MagicRoute 测试版：自动挑最合适的子网路由器",
+        "summary": "同一网段由多台子网路由器或 App 连接器提供时，MagicRoute 按位置等信号选择最佳后端并保持稳定，解决此前按 DERP 区域分配导致的路由来回切换问题。目前面向 Premium 和 Enterprise 用户。",
+        "source_url": "https://tailscale.com/blog/magicroute-beta",
+        "time": "2026-10-19T22:00:00+08:00",
+        "impact": "多地部署子网路由的家庭实验室和团队，连接会更稳定。（10 月 19 日发布，此前未收录）",
+        "points": [
+          "自动选择最佳子网路由器或 App 连接器",
+          "避免路由来回切换",
+          "面向 Premium、Enterprise"
+        ]
+      },
+      {
+        "title": "Sill：把 Mac 窗口或整个桌面搬到 iPhone / iPad 上操作",
+        "summary": "可用手指、触控板、键盘或 Apple Pencil 直接操作 Mac 窗口；支持同一 Wi-Fi、USB 线，或在没有共同网络时点对点连接。",
+        "source_url": "https://x.com/GitHub_Daily/status/2113238994935042390",
+        "time": "2026-10-22T20:00:13+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "让 iPad 用上只有 Mac 版的软件，苹果设备间的协同又多一种选择。",
+        "points": [
+          "任意窗口或整个桌面",
+          "Wi-Fi、USB、点对点三种连接"
+        ]
+      }
+    ]
+  }
+}
