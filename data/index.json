@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T12:24:01+08:00",
+  "updated_at": "2026-10-23T18:13:55+08:00",
   "editions": [
+    {
+      "id": "2026-10-23-1800",
+      "published_at": "2026-10-23T18:00:00+08:00",
+      "path": "data/2026/10/2026-10-23-1800.json",
+      "counts": {
+        "x_daily": 7,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 4,
+        "tech": 3,
+        "iot": 1
+      },
+      "headline": "编程 Agent 指数 v2.0 改按「能否合并」打分，Opus 5.5 领先"
+    },
     {
       "id": "2026-10-23-1200",
       "published_at": "2026-10-23T12:00:00+08:00",

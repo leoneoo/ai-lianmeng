@@ -1,0 +1,278 @@
+{
+  "id": "2026-10-23-1800",
+  "published_at": "2026-10-23T18:00:00+08:00",
+  "headline": "编程 Agent 指数 v2.0 改按「能否合并」打分，Opus 5.5 领先",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Artificial Analysis 编程 Agent 指数 v2.0：换用 FrontierCode，Claude Code + Opus 5.5 以 61.7 分领先",
+        "summary": "Artificial Analysis 发布编程 Agent 指数 v2.0，把「模型 + Agent 框架」作为整体评测，共 290 道题，覆盖软件工程、终端操作和代码库问答三类。最大变化是用 Cognition 的 FrontierCode v1.1 替换 DeepSWE：按「维护者会不会合并」打分，没过阻断检查或偷看答案都记 0 分。SWE-Atlas 问答部分改写了 127 条评分标准，改用 GPT-6 Luna 当裁判、每条投票 5 次。这条发布于上午窗口，本轮补录。",
+        "source_url": "https://x.com/ArtificialAnlys/status/2113424551396934134",
+        "time": "2026-10-23T08:17:33+08:00",
+        "handle": "@ArtificialAnlys",
+        "impact": "评测从「测试能过」转向「代码能被合并」，选编程 Agent 时可以把框架、模型和每题成本放在一起比较。",
+        "points": [
+          "总榜：Opus 5.5 61.7、Sonnet 5.5 59.3、Muse Wonder Full 58.9",
+          "FrontierCode：Opus 5.5 56.0%，Codex + DeepSeek V4.1 Flash 52.6%",
+          "新评分更严：问答平均分从 58.8% 降到 57.1%",
+          "性价比：DeepSeek V4.1 Flash 每题 0.39 美元得 47.3 分"
+        ]
+      },
+      {
+        "title": "Kevin Weil 联合创办 Warp Sciences：AI + 机器人实验室研发新药，A 轮 2.15 亿美元",
+        "summary": "Kevin Weil 宣布成立 Warp Sciences，用 AI 和机器人帮助更快研发新药，A 轮 2.15 亿美元由 Lightspeed 领投，目标是把前沿 AI「从浏览器带进实验室」。联合创始人有 DJ Patil、FAIR 联合创始人 Manohar Paluri 和药物研发专家 Sol Reisberg。这条发布于前一窗口，本轮补录。",
+        "source_url": "https://x.com/kevinweil/status/2113294657673466060",
+        "time": "2026-10-22T23:41:24+08:00",
+        "handle": "@kevinweil",
+        "impact": "AI for Science 正从模型和论文走向自建实验室和机器人实验，资本在押注这条更重的路线。",
+        "points": [
+          "A 轮 2.15 亿美元，Lightspeed 领投",
+          "方向：AI + 机器人自动化实验做药物研发",
+          "发布帖未披露估值"
+        ]
+      },
+      {
+        "title": "Daniel Gross 发起 10 万美元 Muse Spark Open 内核挑战赛",
+        "summary": "Daniel Gross 宣布设立 10 万美元奖金，挑战谁能把开放权重模型 Muse Spark Open 跑到最快，挑战赛网站为 openkernelchallenge.dev。Alexandr Wang 随后转发，称奖金给「让 Muse Spark Open 跑得最快的开发者」。",
+        "source_url": "https://x.com/danielgross/status/2113351902402613558",
+        "time": "2026-10-23T03:28:52+08:00",
+        "handle": "@danielgross",
+        "impact": "推理内核优化成果会公开，自部署 Muse Spark Open 的人有望直接受益。",
+        "points": [
+          "奖金 10 万美元",
+          "目标：让 Muse Spark Open 推理最快",
+          "网站 openkernelchallenge.dev"
+        ]
+      },
+      {
+        "title": "Cantina 发布开放权重安全研究模型 Apex Flash-1",
+        "summary": "Cantina 与 Yeta Labs 发布首个专为安全研究训练的开放权重模型 Apex Flash-1，基于 GLM-5.3-Flash，用 rank-256 LoRA 加部分全参数 GRPO 训练。训练数据来自 50 个真实漏洞案例生成的 150 个任务，约 72% 是授权和身份类漏洞；同时提供去除拒答限制的版本。",
+        "source_url": "https://www.cantina.security/apex-flash",
+        "time": "2026-10-23T16:51:00+08:00",
+        "handle": "@pentest_swissky",
+        "impact": "代码审计团队多了可本地部署的漏洞挖掘模型，但使用前要先确认授权和合规边界。",
+        "points": [
+          "底座 GLM-5.3-Flash，LoRA + GRPO",
+          "150 个任务，约 72% 为授权和身份类漏洞",
+          "另有去拒答版本，两用风险高"
+        ]
+      },
+      {
+        "title": "Spotify 用 SGLang Score API 做播客推荐候选打分",
+        "summary": "SGLang 官方转述 Spotify 工程博客：Spotify 用 LLM 做播客推荐，候选打分依靠 SGLang 的 Score API。它用多候选打分加候选掩码，一次请求给很多候选打分，省掉逐个请求的开销；该功能由 LinkedIn 参与贡献。",
+        "source_url": "https://x.com/sgl_project/status/2113535092643823630",
+        "time": "2026-10-23T15:36:48+08:00",
+        "handle": "@sgl_project",
+        "impact": "LLM 推荐排序在大厂进入生产，批量打分能明显降低推理成本。",
+        "points": [
+          "多候选打分 + 候选掩码，单请求批量评分",
+          "用于 LLM 推荐的候选排序",
+          "功能由 LinkedIn 参与贡献"
+        ]
+      },
+      {
+        "title": "论文：朴素 RAG 在 7 组设置中有 6 组打败复杂 Agent 记忆系统",
+        "summary": "论文提出 Raw-RAG：对原始对话历史做稠密检索加重排，再交给模型作答。在 LoCoMo、LongMemEval、MEME、MemoryAgentBench 上，它在 7 组设置中有 6 组排第一，领先最强 Agent 记忆系统 0.13～5.53 分。作者认为原因是保留原文时证据覆盖更全。",
+        "source_url": "https://huggingface.co/papers/2610.30755",
+        "time": "2026-10-23T08:00:00+08:00",
+        "impact": "做长期记忆的 Agent，可以先用朴素 RAG 当基线，再决定要不要上复杂记忆结构。",
+        "points": [
+          "方法：原始历史 + 稠密检索 + 重排",
+          "7 组设置中 6 组第一",
+          "领先 0.13～5.53 分，代码已开源"
+        ]
+      },
+      {
+        "title": "OpenDS-World：真实网页深度搜索基准，12 个前沿模型最好只答对 39.0%",
+        "summary": "OpenDS-World 包含 200 道需要在真实网页上搜索、浏览、处理多种文件格式才能找到唯一答案的任务，并经过人工核验。12 个前沿模型在统一工具环境里最好成绩为 39.0%，1,000 次人类作答准确率为 21.1%。论文指出模型在工具协调和长程搜索管理上普遍吃力。",
+        "source_url": "https://huggingface.co/papers/2610.30181",
+        "time": "2026-10-23T08:00:00+08:00",
+        "impact": "深度研究类 Agent 在开放网页上仍不可靠，调研结果要保留人工核对。",
+        "points": [
+          "200 道真实网页任务，人工核验",
+          "最佳模型 39.0%，人类 21.1%",
+          "短板：工具协调与长程搜索"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "OpenCode 2 架构拆解：常驻后台服务、收件箱式 API、给 MCP 用的 Code Mode",
+        "summary": "OpenCode 2.0 已于 10 月 20 日发布，陈成整理了 6 个技术要点。本机只跑一个后台进程，TUI、Web、桌面端共用；新 API 把输入写进会话收件箱后立即返回，可以 steer 或 queue，断线按事件编号补发。MCP 默认走 Code Mode，工具清单控制在约 2000 token，其余靠 search() 现查；80 多个内置功能改为可热重载的插件，SDK 直接跑在进程内，Cloudflare 当天推出 OpenCodeHarness。",
+        "source_url": "https://x.com/chenchengpro/status/2113567114544263591",
+        "time": "2026-10-23T17:44:02+08:00",
+        "handle": "@chenchengpro",
+        "impact": "做 Agent 框架或多端客户端的人，可以参考它的守护进程、断线续传和插件化设计。",
+        "points": [
+          "单一后台进程服务多端",
+          "收件箱式 API，支持 steer/queue 和断线补发",
+          "MCP Code Mode，工具清单约 2000 token",
+          "插件热重载，进程内 SDK"
+        ]
+      },
+      {
+        "title": "EdgeRock-4B：推理再长，每个请求显存固定约 98 MiB",
+        "summary": "小互介绍了 EdgeRock-4B：把记忆拆成最近 1,024 token 的局部窗口、固定大小的循环状态，以及只保留 1,024 条关键原文的 RMA 记忆锚点。团队自报 AIME 82.9%；256K 上下文下注意力 KV 从 8 GB 降到 72 MB；单张 80GB 显卡可同时跑 512 个长推理请求，吞吐为原架构的 4.9～6.4 倍。",
+        "source_url": "https://x.com/xiaohu/status/2113559301570916713",
+        "time": "2026-10-23T17:13:00+08:00",
+        "handle": "@xiaohu",
+        "impact": "如果成绩可复现，长推理小模型在端侧和单卡上的并发成本会大幅下降。",
+        "points": [
+          "每请求显存固定 97.76 MiB",
+          "256K 下 KV 降 99.1%",
+          "AIME 82.9%（自报）",
+          "吞吐提升 4.9～6.4 倍"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Mole CLI 达 7.25 万星：Windows 版转正，官方 Skills 让 Agent 帮你清理电脑",
+        "summary": "Tw93 介绍，Mole 的 Windows CLI 经过 7 个版本迭代与 Mac 版对齐并正式发布，可用 scoop install mole 安装。Mole 新增支持 Mac 和 Windows 的官方 Skills，可让任意 Agent 读说明后安装使用；mo slim 能删掉通用应用里的 Intel 代码，并内置 800 多款 Mac、400 多款 Windows 应用的清理规则。",
+        "source_url": "https://x.com/HiTw93/status/2113550677268160860",
+        "time": "2026-10-23T16:38:43+08:00",
+        "handle": "@HiTw93",
+        "impact": "电脑清理和卸载软件可以交给 Agent 来做，两大系统用同一套工具。",
+        "points": [
+          "Windows CLI 正式版，scoop 安装",
+          "官方 Skills 支持 Mac/Windows",
+          "mo slim 删除 Intel 代码",
+          "内置 1200+ 应用清理规则"
+        ]
+      },
+      {
+        "title": "密歇根大学「应用 Agent 软件工程」课件全部开源",
+        "summary": "课程从大模型怎么写代码讲起，覆盖上下文、模型、提示词三个抓手，以及规格驱动开发、Agent 编排、审批和停止条件。目前更新到第 14 讲，配 5 次实验课和演示代码库。第 10 讲把谷歌团队的「大象金鱼」方法做成 5 个 Skill：有记忆的大象写设计文档，没记忆的金鱼拿文档从头审。",
+        "source_url": "https://x.com/GitHub_Daily/status/2113571157094154522",
+        "time": "2026-10-23T18:00:06+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "想系统学 Agent 工程而不只是写提示词的人，多了一套带实验的公开教材。",
+        "points": [
+          "已更新到第 14 讲，配 5 次实验",
+          "每讲有 PDF/PPT 与演示代码库",
+          "「大象金鱼」方法做成 5 个 Skill"
+        ]
+      },
+      {
+        "title": "Chelsea Finn 的斯坦福 CS224R 深度强化学习课程免费公开",
+        "summary": "Physical Intelligence 联合创始人 Chelsea Finn 公开了 CS224R 全部 18 讲，包括今年春季的幻灯片和作业。内容覆盖模仿学习、策略梯度、Actor-Critic、Q-learning、离线 RL、基于模型的 RL、多任务和元 RL，以及真实机器人方法和「RL 用于 LLM 推理」专题。",
+        "source_url": "https://x.com/alacheng/status/2113547725577072837",
+        "time": "2026-10-23T16:27:00+08:00",
+        "handle": "@alacheng",
+        "impact": "想入门具身智能和机器人学习的人，有了一套完整的自学课程。",
+        "points": [
+          "18 讲，含幻灯片和作业",
+          "偏实战，面向机器人场景",
+          "含 RL 用于 LLM 推理专题"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Codex CLI rust-v0.164.0：10 个预设槽位、企业 MCP 认证、远程 shell 凭据脱敏",
+        "summary": "这一版新增 /presets，可保存 10 组常用配置，/model 和 /permissions 可在输入框直接切换，终端支持 Kitty、Sixel 图片预览。企业 MCP 服务器可通过 Codex 账号授权和 OAuth 认证；远程 Bash/Zsh 会话中的凭据会被遮蔽，Bedrock 配置向导默认开启，并修复了上下文压缩问题。",
+        "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+        "time": "2026-10-23T12:48:10+08:00",
+        "impact": "团队用 Codex 接内部 MCP 时，认证和凭据安全都更好管理。",
+        "points": [
+          "/presets 10 个槽位",
+          "企业 MCP 账号授权/OAuth",
+          "远程 shell 凭据遮蔽"
+        ]
+      },
+      {
+        "title": "Hermes Agent v0.22.5：汇总 81 个 PR，支持从 OpenClaw 迁移",
+        "summary": "NousResearch 发布 Hermes Agent v0.22.5 补丁版，汇总 81 个 PR。新增可插拔子任务委派后端，hermes import-agent 可导入其他 Agent 配置（含 OpenClaw 迁移），hermes mcp serve 移入插件体系；还支持套餐用量窗口，桌面端可一键安装插件。完整说明将随 v0.23.0 发布。",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+        "time": "2026-10-23T13:28:45+08:00",
+        "impact": "从 OpenClaw 换到 Hermes 的迁移成本降低，委派后端也可换成自己的实现。",
+        "points": [
+          "可插拔委派后端",
+          "import-agent 支持 OpenClaw 迁移",
+          "mcp serve 改为插件"
+        ]
+      },
+      {
+        "title": "GitHub 趋势：pingdotgg/t3code，用手机远程控制电脑上的编程 Agent",
+        "summary": "T3 Code 自称「Agent 框架的控制台」，通过 iOS、Android、网页和桌面端控制电脑上的 Claude Code、Codex、Cursor、Grok Build、OpenCode 和 Antigravity，直接用已有订阅，完全开源。今天新增约 290 星，累计约 2.95 万星；10 月 22 日发布 v0.1.2，集中修复移动端问题。",
+        "source_url": "https://github.com/pingdotgg/t3code",
+        "time": "2026-10-23T04:44:22+08:00",
+        "impact": "在手机上查看和审批电脑里的 Agent 任务，多了一个开源选择。",
+        "points": [
+          "支持 6 种编程 Agent",
+          "移动端、网页、桌面端控制",
+          "今日 +约 290 星，累计约 2.95 万"
+        ]
+      },
+      {
+        "title": "desigma：Rust 写的开源离线设计工具，能导入 .fig，自带本地 MCP",
+        "summary": "desigma 是本月刚开源的桌面设计工具，Apache-2.0，免费离线，可导入 Figma 的 .fig 文件，支持自动布局、组件和变体、原型连线、矢量编辑。界面原生绘制，开发模式可生成 CSS、Tailwind、SwiftUI、React 代码，并自带本地 MCP 服务让 AI 读写设计稿。",
+        "source_url": "https://github.com/deepfounder-ai/desigma",
+        "time": "2026-10-23T15:30:09+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "设计稿和 AI 编程 Agent 可以在本地打通，不必把设计文件传上云。",
+        "points": [
+          "Apache-2.0，离线可用",
+          "导入 .fig，生成多种前端代码",
+          "内置本地 MCP 服务"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Google 隐私政策新增例外：连接到 Personal Intelligence 的 Gmail、相册数据可能用于个性化广告",
+        "summary": "据 Android Authority，Google 更新隐私政策：默认仍不会用 Gmail、Drive、相册内容投放广告，但用户主动把这些应用连接到提供个性化广告的 Google 服务后，相关信息可能被用于广告个性化。可在 Google 账号「数据和隐私 → 个性化设置 → 管理搜索服务中的个性化推荐」里断开 Workspace 和相册。断开后，已存入搜索服务记录的数据可能仍会保留。",
+        "source_url": "https://www.androidauthority.com/google-personal-intelligence-privacy-3727111/",
+        "time": "2026-10-23T16:37:00+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "连接过 Gmail 或相册的用户，建议现在复查授权，并清理搜索服务记录。",
+        "points": [
+          "默认不用于广告，主动连接后例外",
+          "涉及 Gmail、Drive、相册",
+          "可在账号设置中断开或关闭个性化推荐",
+          "已存记录可能不会自动删除"
+        ]
+      },
+      {
+        "title": "DigiTimes：iPhone Duo 预订量超出苹果预期",
+        "summary": "MacRumors 援引 DigiTimes 称，iPhone Duo 在多个主要市场的预订量超出苹果预期，供应链认为这会让其他厂商更有信心做折叠屏，带动 OLED TDDI 芯片出货。报道还称 Duo 的需求可能抵消 iPhone 18 Pro 销量走软的影响。",
+        "source_url": "https://www.macrumors.com/2026/10/23/iphone-duo-demand-exceeds-expectations/",
+        "time": "2026-10-23T12:24:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "如果属实，折叠屏会加速普及，相关零部件也有望降价。",
+        "points": [
+          "多个市场预订超预期",
+          "利好折叠屏 OLED TDDI 供应链",
+          "或抵消 iPhone 18 Pro 走软"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "三星 10 月 29 日在中国发布新折叠屏，预计为心系天下 W27",
+        "summary": "三星在微博官宣 10 月 29 日在中国发布新品，配图是金色边框的书本式折叠屏，官网链接含「W2026」。爆料人 Ice Universe 称它就是 W27，规格与 Galaxy Z Fold 8 Ultra 相同。",
+        "source_url": "https://www.androidauthority.com/samsung-next-foldable-phone-october-29-3727071/",
+        "time": "2026-10-23T14:28:00+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "W 系列通常只在中国销售，看重国行服务的高端折叠屏用户可以等发布会。",
+        "points": [
+          "10 月 29 日中国发布",
+          "金色边框书本式折叠屏",
+          "爆料称规格同 Z Fold 8 Ultra"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Home Assistant 引入「子设备」：排插插口、多开开关不再拆成多台设备",
+        "summary": "Home Assistant 开发者博客介绍了 child devices：集成可以把一个实体设备的各个部分建模为子设备。子设备默认继承主设备区域，对主设备的动作会同时作用到子设备，删除或停用主设备时子设备一并处理。迁移时设备 ID 保持不变，原有自动化不受影响；具体效果要等各集成陆续更新。",
+        "source_url": "https://developers.home-assistant.io/blog/2026/10/22/child-devices/",
+        "time": "2026-10-22T08:00:00+08:00",
+        "impact": "多路开关和智能排插在 HA 里会更整齐，按设备写自动化也更直观。",
+        "points": [
+          "子设备继承主设备区域",
+          "对主设备的动作同时作用于子设备",
+          "迁移时设备 ID 不变"
+        ]
+      }
+    ]
+  }
+}
