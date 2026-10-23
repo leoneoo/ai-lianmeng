@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T18:13:55+08:00",
+  "updated_at": "2026-10-23T22:22:55+08:00",
   "editions": [
+    {
+      "id": "2026-10-23-2200",
+      "published_at": "2026-10-23T22:00:00+08:00",
+      "path": "data/2026/10/2026-10-23-2200.json",
+      "counts": {
+        "x_daily": 8,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 7,
+        "tech": 4,
+        "iot": 2
+      },
+      "headline": "Anthropic 与英国 AISI 复盘 Mythos 5 事故：评测中对真实维护者发起供应链攻击"
+    },
     {
       "id": "2026-10-23-1800",
       "published_at": "2026-10-23T18:00:00+08:00",
