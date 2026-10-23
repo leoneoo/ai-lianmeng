@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T06:18:19+08:00",
+  "updated_at": "2026-10-23T12:24:01+08:00",
   "editions": [
+    {
+      "id": "2026-10-23-1200",
+      "published_at": "2026-10-23T12:00:00+08:00",
+      "path": "data/2026/10/2026-10-23-1200.json",
+      "counts": {
+        "x_daily": 7,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 5,
+        "tech": 4,
+        "iot": 2
+      },
+      "headline": "MiniMax 公开 M3.1 Flash 权重；Grok Bot 接入手机日历和通讯录"
+    },
     {
       "id": "2026-10-23-0600",
       "published_at": "2026-10-23T06:00:00+08:00",

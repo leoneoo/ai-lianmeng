@@ -1,0 +1,296 @@
+{
+  "id": "2026-10-23-1200",
+  "published_at": "2026-10-23T12:00:00+08:00",
+  "headline": "MiniMax 公开 M3.1 Flash 权重；Grok Bot 接入手机日历和通讯录",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "MiniMax 公开 M3.1 Flash 权重：428B 总参数、23B 激活、1M 上下文原生多模态",
+        "summary": "MiniMax 按 10 月 19 日的承诺公开了 M3.1 Flash 权重，已上架 Hugging Face 和 ModelScope。这是一个原生多模态 MoE 模型，总参数约 428B、每 token 激活约 23B，支持文本、图像、视频输入和最长 100 万 token 上下文，全模型使用稀疏注意力并内置 DSpark 推测解码。vLLM、SGLang、Together 首日支持，推理平台 Inferact 同日宣布与 MiniMax 战略合作。",
+        "source_url": "https://x.com/MiniMax_AI/status/2113436864904610008",
+        "time": "2026-10-23T09:06:00+08:00",
+        "handle": "@MiniMax_AI",
+        "impact": "低激活参数加长上下文的开放权重模型逼近闭源前沿，自建 Agent 后端的性价比门槛又降了一档。",
+        "points": [
+          "自报成绩：BankerToolBench 76.2、DeepSWE v1.1 73.7%、OSWorld V2 61.7、CyberGym 82.2",
+          "Terminal Bench 4.0 为 38.1，低于 Opus 5 的 51.8",
+          "API 统一价：每百万输入 0.15 美元、输出 0.60 美元",
+          "许可证为 MiniMax Community License"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Grok Bot 可以使用手机上的日历、提醒事项、通讯录等应用",
+        "summary": "Grok Bot 官方宣布，Grok Bot 现在可以使用手机上的日历、提醒事项、通讯录等应用，iOS 和 Android 正在推送。中文博主 @op7418 实测发现，入口在设置里的连接应用，可连接的项目还包括位置和苹果「家庭」。",
+        "source_url": "https://x.com/bot/status/2113393684209176718",
+        "time": "2026-10-23T06:14:00+08:00",
+        "handle": "@bot",
+        "impact": "个人 Agent 开始直接读写手机上的日程、联系人和家居数据，代办更顺手，授权范围也更需要留意。",
+        "points": [
+          "覆盖日历、提醒事项、通讯录等系统应用",
+          "iOS 和 Android 同时推送",
+          "据 @op7418 截图，可连接位置和苹果「家庭」"
+        ]
+      },
+      {
+        "title": "SemiAnalysis 称 Anthropic 在部分账号上 A/B 测试 Claude 订阅额度",
+        "summary": "SemiAnalysis 称检测到 Anthropic 正在部分账号上做 A/B 测试：测试组 5 小时额度提高约 20%，每月总用量折合 API 价值减少约 20%。按其数据，两个 Max 20x 账号每周额度约为 65.8 亿对 52.7 亿 token，折合每月约 11,726 美元对 9,385 美元。Anthropic 没有发正式公告，数据为第三方测量。",
+        "source_url": "https://x.com/SemiAnalysis_/status/2113383965784502444",
+        "time": "2026-10-23T05:36:00+08:00",
+        "handle": "@SemiAnalysis_",
+        "impact": "每周都跑满额度的重度用户可能感到总量变少，集中在 5 小时窗口使用的人反而可能受益。",
+        "points": [
+          "只影响部分账号",
+          "短时额度更宽松、长期总量更少",
+          "新加坡时间 05:36 发布，上一轮未收录"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "Sakana AI 发布企业 AI Agent 平台 Sakana Aquarium",
+        "summary": "Sakana AI 发布面向组织决策支持和执行的 AI Agent 平台 Aquarium，由 Ontology、Managed Agents、Governance 三个模块组成。数据就地接入并用本体定义含义和关系，「收集信息 → AI 判断 → 人工审批 → 执行」可以写成工作流直接部署为 Agent。Sakana 称，平台是把它与三菱 UFJ、SMBC、大和证券等金融客户合作中反复重做的工作沉淀而成。",
+        "source_url": "https://sakana.ai/aquarium-release",
+        "time": "2026-10-23T08:59:00+08:00",
+        "handle": "@SakanaAILabs",
+        "impact": "日本头部 AI 公司也走上「FDE + 平台化」路线，企业 Agent 正从定制项目变成可复用的产品。",
+        "points": [
+          "三大模块：Ontology、Managed Agents、Governance",
+          "接入的数据和本体可以被多个 Agent 复用",
+          "由 FDE 和客户一起搭建、验证"
+        ]
+      },
+      {
+        "title": "Meta 的 AI 应用 Muse 在日本上线",
+        "summary": "Meta 首席 AI 官 Alexandr Wang 宣布，Muse 今天在日本上线，用户可以在各大应用商店下载。发布帖约 1400 赞、8 万次浏览。",
+        "source_url": "https://x.com/alexandr_wang/status/2113430642440736859",
+        "time": "2026-10-23T08:41:00+08:00",
+        "handle": "@alexandr_wang",
+        "impact": "Muse 进入付费意愿较高的日本市场，将和 ChatGPT、Gemini 正面竞争。",
+        "points": [
+          "日本市场正式上线",
+          "iOS 和 Android 应用商店均可下载"
+        ]
+      },
+      {
+        "title": "SemiAnalysis：Rubin NVL72 跑 GLM-5.3 Agent 负载达到每用户 862 tok/s",
+        "summary": "SemiAnalysis 称，Rubin NVL72 在 GLM-5.3（744B）Agent 负载上达到每用户 862 tok/s。NVIDIA 用低延迟专用内核，在不到 8 天里把 Rubin 的交互速度提升了接近 2 倍。",
+        "source_url": "https://x.com/SemiAnalysis_/status/2113445377655373980",
+        "time": "2026-10-23T09:40:00+08:00",
+        "handle": "@SemiAnalysis_",
+        "impact": "新一代机柜的单用户速度提升很快，长链路 Agent 任务的等待时间有望明显缩短。",
+        "points": [
+          "模型为 GLM-5.3 744B",
+          "不到 8 天交互速度提升接近 2 倍"
+        ]
+      },
+      {
+        "title": "Perplexity 推出 Decider for Mac：4B 决策模型在本机运行，无需 API Key",
+        "summary": "Perplexity 推出菜单栏应用 Decider for Mac，在本地运行 4B 决策模型 pplx-decider-flash-v1.2。用户就文本或图片提问后会得到一个概率，应用还在 127.0.0.1 提供 Decisions API，不需要 API Key。",
+        "source_url": "https://x.com/perplexitydevs/status/2113400672238616800",
+        "time": "2026-10-23T06:42:00+08:00",
+        "handle": "@perplexitydevs",
+        "impact": "分类、过滤这类判断步骤可以放在本地，不花 token，数据也不出本机。",
+        "points": [
+          "4B 模型完全在本机运行",
+          "本地 Decisions API，无需 API Key"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "斯坦福 CS146S 2026 秋季版砍掉 85% 内容：第一周用 200 行代码手搓编程 Agent",
+        "summary": "@wquguru 逐周对比了两版课纲：第一周从教 prompt 变成用 200 行代码手写编程 Agent，核心是 read、write、edit、bash 四个工具加一个循环。期末项目占分从 80% 降到 50%，新增 30% 分数要求给真实开源项目提 PR。AI IDE 等内容被拿掉，换成了 Agent Skills、AGENTS.md、后台并行 Agent、MCP portal 和软件工厂。",
+        "source_url": "https://x.com/wquguru/status/2113439955234255291",
+        "time": "2026-10-23T09:18:00+08:00",
+        "handle": "@wquguru",
+        "impact": "想系统补 Agent 工程的人可以把它当作 2026 年版的学习路线。",
+        "points": [
+          "期末项目占分 80% → 50%",
+          "给开源项目提 PR 占 30%",
+          "课程材料公开"
+        ]
+      },
+      {
+        "title": "SkyRL 把 GLM-5.3-Flash 训练上下文拉到 100 万 token，是 Megatron 基线的 64 倍",
+        "summary": "@shao__meng 解读了 SkyRL 与 Lila Sciences 的技术博客：在 B200 上单序列训练做到 100 万 token，峰值显存约 144.5 GiB。关键优化包括让 DSA 跑在真正的稀疏内核上并把 indexer 分块分片、整层重算加 CPU offload、为 KDA 新增上下文并行，以及去掉多余的 fp32。",
+        "source_url": "https://x.com/shao__meng/status/2113456593681756491",
+        "time": "2026-10-23T10:24:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "开源模型做百万级上下文微调有了可复现的工程路径。",
+        "points": [
+          "indexer 按 TP 分片后，256k 单步约 218 秒降到约 102 秒",
+          "用随机 token 测显存会低估，真实文本可能 OOM"
+        ]
+      },
+      {
+        "title": "Matt Pocock 的 Skills 仓库新增 software-factory 设计 Skill",
+        "summary": "@shao__meng 介绍，Matt Pocock 在 30 万星的 Skills 仓库里新增了 software-factory Skill。它是一份需要用户主动调用的术语表和设计方法，用来设计远程、无状态的 Agent 软件工厂。核心原则是慢慢起步：先配好自动检查、自动 review、人工 review 三种刹车，再逐个加自动触发。",
+        "source_url": "https://x.com/shao__meng/status/2113458972686713289",
+        "time": "2026-10-23T10:34:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "想把编程 Agent 接进工单和 CI 的人可以直接借用这套词汇和检查清单。",
+        "points": [
+          "核心词汇：Task、Trigger、Run、Runner",
+          "服务槽位：工单、Git 托管、编排器、可观测性"
+        ]
+      },
+      {
+        "title": "OpenAI 如何定义 FDE：先把结果做进生产，再把定制方案收进统一的 Codex",
+        "summary": "@shao__meng 解读 OpenAI 官方文章：FDE 要填的是模型能力和客户真实落地之间的「部署差距」。定制应用改写成基于 Codex 的 plugins 和 skills 后，每个项目约 90% 的定制代码被删掉，部署到第二支团队只用约 1 天（自报）。如果模型能力不够，就用评测把缺口交给 Research。",
+        "source_url": "https://x.com/shao__meng/status/2113447029695475805",
+        "time": "2026-10-23T09:46:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "企业落地 Agent 的思路正在转向 Skills / Plugins 化后复用。",
+        "points": [
+          "定制代码减少约 90%（自报）",
+          "电信语音客服关键评测约六个月从 60% 提升到 90% 以上"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Antigravity 11 月 2 日起，免费版、Plus 和试用用户不能再用 Claude",
+        "summary": "@cheery9998 引述官方文档：Claude Opus 4.6 和 Sonnet 4.6 将在 11 月 2 日下架，新的 Opus 5.5 和 Sonnet 5.5 只开放给正式付费的 Google AI Pro 和 Ultra。免费优惠和学生优惠都算试用，不能使用，这条规则与地区无关。",
+        "source_url": "https://x.com/cheery9998/status/2113465077538128060",
+        "time": "2026-10-23T10:58:00+08:00",
+        "handle": "@cheery9998",
+        "impact": "靠 Antigravity 免费用 Claude 的人还有约 10 天，到期前要换工具或订阅。",
+        "points": [
+          "11 月 2 日起生效",
+          "试用、学生优惠都不能用"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Claude Code v2.1.309：集中修复沙箱和权限绕过问题",
+        "summary": "这一版修复了沙箱 Bash 每次执行前在沙箱外运行 shell 启动文件、沙箱命令能改写 MCP 配置、符号链接导致 denyWrite 失效等十多处安全问题。另外，claude ultrareview 现在要求先信任工作区，sed -i 改走标准 Bash 确认。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+        "time": "2026-10-23T06:18:00+08:00",
+        "impact": "用沙箱或自动接受模式跑 Claude Code 的人建议尽快升级。",
+        "points": [
+          "修复沙箱外执行 shell 启动文件",
+          "ultrareview 需要先信任工作区"
+        ]
+      },
+      {
+        "title": "OpenHands v1.32.0：MCP 安装可选库，依赖强制 7 天发布期",
+        "summary": "OpenHands 1.32.0 把置顶的自动化任务存进 agent-server 设置，MCP 安装对话框可以选择可安装的库，自动化选择器会列出所有已连接平台的仓库。项目同时开始强制执行「第三方依赖发布满 7 天才引入」的策略。",
+        "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.32.0",
+        "time": "2026-10-23T11:03:00+08:00",
+        "impact": "依赖冷却期是防供应链投毒的简单办法，自建 Agent 平台的团队可以照搬。",
+        "points": [
+          "MCP 安装对话框可选库",
+          "第三方依赖需发布满 7 天"
+        ]
+      },
+      {
+        "title": "OpenClaw 接入 DeepSeek V4.1 Flash，并参加 GitHub Open Source Friday 直播",
+        "summary": "OpenClaw 宣布已经可以在其中使用 DeepSeek V4.1 Flash。OpenClaw 团队还将在 10 月 23 日美东时间 13:00（新加坡时间 10 月 24 日 01:00）参加 GitHub 的 Open Source Friday 直播，现场演示并答疑。",
+        "source_url": "https://x.com/openclaw/status/2113414141327380480",
+        "time": "2026-10-23T07:36:00+08:00",
+        "handle": "@openclaw",
+        "impact": "OpenClaw 用户可以用更便宜的 DeepSeek Flash 跑日常 Agent 任务。",
+        "points": [
+          "新增 DeepSeek V4.1 Flash",
+          "直播：新加坡时间 10 月 24 日 01:00"
+        ]
+      },
+      {
+        "title": "GitHub 趋势：CopilotKit/OpenBot，每个 AI 同事都有自己的电脑",
+        "summary": "CopilotKit 开源的 OpenBot 让每个 AI 同事拥有独立的浏览器、文件和工具，每个动作执行前要先经过决定，执行后会被记录，可以接入任何 AG-UI Agent。今天在 TypeScript 趋势榜上新增约 75 星，累计约 7000 星。",
+        "source_url": "https://github.com/CopilotKit/OpenBot",
+        "time": "2026-10-23T12:00:00+08:00",
+        "impact": "想给团队部署可审计 Agent 同事的人，多了一个可以自托管的开源起点。",
+        "points": [
+          "动作事前决定、事后留痕",
+          "可接入任何 AG-UI Agent"
+        ]
+      },
+      {
+        "title": "GitHub 趋势：genspark-ai/genoffice，开源 AI 办公套件",
+        "summary": "Genspark 开源的 genoffice 内置文档、表格、幻灯片、PDF、Markdown 和 HTML 编辑器，自带 AI Agent，并提供 genoffice 命令行工具和 Agent Skills。今天在 TypeScript 趋势榜上新增约 190 星，累计约 1 万星。",
+        "source_url": "https://github.com/genspark-ai/genoffice",
+        "time": "2026-10-23T12:00:00+08:00",
+        "impact": "编程 Agent 可以借它的 CLI 直接生成和修改办公文档。",
+        "points": [
+          "多种编辑器加内置 Agent",
+          "提供 CLI 和 Agent Skills"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "iPhone Duo 首批订单送达，Joswiak 谈门店现货和需求",
+        "summary": "10 月 23 日澳大利亚和新西兰最先进入发售日，预订 iPhone Duo 的用户开始陆续收到手机，社交平台上已经出现首批上手照片。发售前，Apple 高管 Greg Joswiak 接受 9to5Mac 采访，谈到门店现货和需求情况。",
+        "source_url": "https://www.macrumors.com/2026/10/22/iphone-duo-australia-launch/",
+        "time": "2026-10-23T06:14:00+08:00",
+        "impact": "想当天去门店购买的人，可以先看各地首批到货和现货反馈。",
+        "points": [
+          "澳大利亚、新西兰首批送达",
+          "Joswiak 谈门店现货"
+        ]
+      },
+      {
+        "title": "WhatsApp 开始在 iPhone 上测试定时发送消息",
+        "summary": "9to5Mac 报道，WhatsApp 正在向部分 iPhone 测试版用户开放定时发送消息，这是用户呼声多年的功能。",
+        "source_url": "https://9to5mac.com/2026/10/22/whatsapp-starts-testing-long-awaited-scheduled-messages-on-iphone/",
+        "time": "2026-10-23T09:22:00+08:00",
+        "impact": "跨时区沟通可以提前写好、按对方的时间发出。",
+        "points": [
+          "部分 iPhone 测试版用户可用",
+          "用户呼声多年的功能"
+        ]
+      },
+      {
+        "title": "MacBook Neo 帮 Apple 在第三季度 PC 市场下滑中逆势",
+        "summary": "据 9to5Mac 引述的市场报告，第三季度 Apple 的出货量表现好于整体 PC 市场，入门款 MacBook Neo 缓冲了需求下滑的影响。",
+        "source_url": "https://9to5mac.com/2026/10/22/macbook-neo-helps-apple-soften-the-blow-of-global-pc-market-downturn-per-report/",
+        "time": "2026-10-23T06:35:00+08:00",
+        "impact": "低价 Mac 正在抢 Windows 入门本的份额。",
+        "points": [
+          "Apple 第三季度出货好于大盘",
+          "MacBook Neo 是主要推力"
+        ]
+      },
+      {
+        "title": "Arc 停服倒计时：陈成整理 7 个替代浏览器",
+        "summary": "Arc 将在 12 月 22 日停服。@chenchengpro 翻了 X 和 Reddit 的讨论，整理出 Zen、Ardia、Phi、Helium、Crest、Dia 和 Lumno 几款替代品，并逐个点出内核、开源情况和与 Arc 最接近的特性。",
+        "source_url": "https://x.com/chenchengpro/status/2113422300725051540",
+        "time": "2026-10-23T08:08:00+08:00",
+        "handle": "@chenchengpro",
+        "impact": "还在用 Arc 的人可以按「是否开源、要不要 AI、要不要跨设备」来挑。",
+        "points": [
+          "Zen 的 Space 手感最像 Arc，提名最多",
+          "Ardia 可导入 Arc 的 Spaces"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Obsidian 1.15.0 抢先版：Mermaid 渲染最快 500 倍，iOS 锁屏语音速记",
+        "summary": "Obsidian 向 Catalyst 会员推送 1.15.0 抢先版：Mermaid 改用新渲染引擎 Pele，速度最高快 500 倍；iOS 快速记录可以边说边转写语音笔记，锁屏也能用。另外新增按标题追加或前插内容的 URI 和 CLI 命令，手机端支持导出 PDF。",
+        "source_url": "https://x.com/obsdmd/status/2113392224155374018",
+        "time": "2026-10-23T06:09:00+08:00",
+        "handle": "@obsdmd",
+        "impact": "脚本、快捷指令和 Agent 往笔记库指定位置写内容更方便。",
+        "points": [
+          "Mermaid 渲染最快 500 倍",
+          "新增按标题追加内容的 URI 和 CLI 命令",
+          "手机端支持导出 PDF"
+        ]
+      },
+      {
+        "title": "Notion 推出 AI 会议记录桌面小组件",
+        "summary": "Notion 新增 AI Meeting Notes 主屏小组件，点两下就能开始转写会议，iOS 和 Android 都能用。",
+        "source_url": "https://x.com/NotionHQ/status/2113395883966615556",
+        "time": "2026-10-23T06:23:00+08:00",
+        "handle": "@NotionHQ",
+        "impact": "线下会议也能随手开始转写，纪要直接进 Notion 知识库。",
+        "points": [
+          "点两下开始转写",
+          "支持 iOS 和 Android"
+        ]
+      }
+    ]
+  }
+}
