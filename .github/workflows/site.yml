@@ -7,8 +7,8 @@ on:
   issues:
     types: [opened, edited, reopened]
   schedule:
-    # UTC 22:00 / 04:00 / 10:00 / 14:00 = 新加坡 06:00 / 12:00 / 18:00 / 22:00
-    - cron: "0 22,4,10,14 * * *"
+    # UTC 22:00 / 10:00 = 北京时间 06:00 / 18:00
+    - cron: "0 22,10 * * *"
   workflow_dispatch:
     inputs:
       deploy:
