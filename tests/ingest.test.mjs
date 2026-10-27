@@ -310,7 +310,15 @@ test("build publishes the site without the sample", () => {
     assert.equal(existsSync(path.join(out, "examples")), false);
     assert.equal(existsSync(path.join(out, "data/2026/10/2026-10-21-2200.json")), true);
     const index = JSON.parse(readFileSync(path.join(out, "data/index.json"), "utf8"));
-    assert.deepEqual(index.editions.map((entry) => entry.id), ["2026-10-21-2200", "2026-10-21-1800"]);
+    const sourceIndex = JSON.parse(readFileSync(path.join(repoRoot, "data/index.json"), "utf8"));
+    const ids = index.editions.map((entry) => entry.id);
+    assert.deepEqual(ids, sourceIndex.editions.map((entry) => entry.id));
+    assert.deepEqual(ids, [...ids].sort().reverse());
+    assert.deepEqual(ids.slice(-2), ["2026-10-21-2200", "2026-10-21-1800"]);
+    assert.equal(index.editions.some((entry) => /示例/.test(entry.headline || "")), false);
+    for (const entry of index.editions) {
+      assert.equal(existsSync(path.join(out, entry.path)), true, entry.path);
+    }
     const html = readFileSync(path.join(out, "index.html"), "utf8");
     assert.match(html, /AI联盟/);
     assert.match(html, /免费中文 AI 新闻站/);
@@ -322,9 +330,10 @@ test("build publishes the site without the sample", () => {
   }
 });
 
-test("workflow deploys with the four Singapore slots", () => {
+test("workflow deploys with the two Beijing slots", () => {
   const workflow = readFileSync(path.join(repoRoot, ".github/workflows/site.yml"), "utf8");
-  assert.match(workflow, /0 22,4,10,14 \* \* \*/);
+  const crons = [...workflow.matchAll(/- cron: "([^"]+)"/g)].map((match) => match[1]);
+  assert.deepEqual(crons, ["0 22,10 * * *"]);
   assert.match(workflow, /types: \[opened, edited, reopened\]/);
   assert.match(workflow, /workflow_dispatch/);
   assert.match(workflow, /contents: write/);
