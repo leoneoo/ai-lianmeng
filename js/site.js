@@ -490,7 +490,7 @@ function emptyLead(kicker) {
   return h("div", { class: "lead" }, [
     h("p", { class: "kicker rise" }, [text(kicker)]),
     h("h1", { class: "page-title rise" }, [text("还没有期刊")]),
-    h("p", { class: "summary" }, [text("每天 06:00、12:00、18:00、22:00（新加坡时间）收录一期。内容整理自 X 上的公开帖子，第一期发布后会出现在这里。")]),
+    h("p", { class: "summary" }, [text("每天 06:00、18:00 收录一期。内容整理自 X 上的公开帖子，第一期发布后会出现在这里。")]),
   ]);
 }
 
@@ -720,7 +720,7 @@ async function renderArchive(gen) {
   const page = h("div", { class: "shell page" }, [
     h("p", { class: "kicker rise" }, [text("归档")]),
     h("h1", { class: "page-title rise" }, [text("往期归档")]),
-    h("p", { class: "lede" }, [text("按日期回看已收录的期刊。时间都是新加坡时间。")]),
+    h("p", { class: "lede" }, [text("按日期回看已收录的期刊。时间都是北京时间。")]),
   ]);
   for (const month of groupEditions(index.editions)) {
     const grid = h("div", { class: "card-grid" });
