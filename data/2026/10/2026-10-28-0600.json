@@ -1,0 +1,422 @@
+{
+  "id": "2026-10-28-0600",
+  "published_at": "2026-10-28T06:00:00+08:00",
+  "headline": "DeepMind 发布 Genie 4，Anthropic 公布 Claude 新药研发进展",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "DeepMind 发布 Genie 4 世界模型",
+        "summary": "10 月 28 日凌晨，Google DeepMind 发布实时交互世界模型 Genie 4。用户用键盘移动和转视角，还能随时打字改场景，比如换天气、移镜头、加人或物体，环境音、音乐和人物对话会同步生成。官方说 Gemini Omni 让画面贴近真实外观和行为，其他 Gemini 模型负责保持场景连贯；TechCrunch 报道一个场景能连续保持约两分钟，是 Genie 3 的两倍。目前只对受信任的测试者开放。",
+        "source_url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+        "time": "2026-10-28T00:10:55+08:00",
+        "handle": "@GoogleDeepMind",
+        "impact": "做机器人和 Agent 训练环境的团队多了一个可调用的模拟器，实际可用程度还要看 API 开放后的价格和时长限制。",
+        "points": [
+          "之后先给 Google AI Ultra 订阅用户（Project Genie）和 Gemini API 早期合作方",
+          "Logan Kilpatrick 说这是 Genie 第一次进 API，价格未公布",
+          "官方承认长时间运行后细节会漂移，文字和音频准确度仍在改进"
+        ]
+      },
+      {
+        "title": "Anthropic 公布 Claude 制药进展",
+        "summary": "10 月 28 日凌晨，Anthropic 介绍了过去几个月与 6 家机构的新药研发合作。Generate Biomedicines 用 Claude Code 把 CAR-T 疗法的一段基因指令缩短约 70%，免疫细胞表面受体多了约 10 倍；Divergence Labs 让 Claude 约一个月生成约 3.5 万个抗体设计，有 3 个效果超过现有药；Enveda 用 Claude 审 1061 页生产文件，人工发现的 11 处问题全部找到，还多找出 7 处，审查时间从 25 小时以上降到不到 3 小时。Anthropic 还收购了一人药物公司 Mithril Medicine。",
+        "source_url": "https://www.anthropic.com/research/early-progress-drug-development",
+        "time": "2026-10-28T04:27:48+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "药企可以参考这些案例把 Claude 用到设计、实验和申报文书上，疗效还要看后续临床试验。",
+        "points": [
+          "BigHat 约 10 周测试约 1010 个变体，最好的结合力提高 10 倍以上",
+          "Mithril 用 Claude 协调 11 家实验室，不到 18 个月在小鼠上见效",
+          "最快的项目最早 2028 年底才可能开始人体试验",
+          "结果来自合作方和 Anthropic 自己的报告，Mithril 报告未经同行评审"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Axiom 用 Agent 形式化单群分类定理",
+        "summary": "Axiom 10 月 26 日公布，工程师和数学家指挥几十个 AI Agent，用 24 天把有限单群分类定理完整写成 Lean 证明。原证明约 1.5 万页、分散在 500 多篇论文里，Lean 代码约 4310 万行，其中约 120 万行来自清华大学求真书院团队的开源项目。过程中查出 34 处需要专门处理的偏差，最重要的是 John Walter 1986 年不平衡群定理证明中的一个论断有反例，AxiomProver 借用 Solomon 1976 年的思路写出了新证法。",
+        "source_url": "https://axiommath.ai/research/the-enormous-theorem-formalized/",
+        "time": "2026-10-27T22:47:46+08:00",
+        "handle": "@kevinweil",
+        "impact": "依赖这条定理的代数和数论研究有了机器可查的底座，最终还要靠群论学家审读定理陈述。",
+        "points": [
+          "定理结论本身没有被推翻",
+          "新证法附带一个新定理，已整理成配套论文",
+          "群论学家 Lyons、Solomon 参与咨询，勘误清单将公开",
+          "本轮经 @kevinweil、@dotey 转发扩散，前几期未收录"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Liquid AI 发布 LFM3 小模型家族",
+        "summary": "10 月 28 日凌晨，Liquid AI 发布 LFM3，首批 6 个约 2B 参数的开放权重模型，覆盖文本、视觉、音频、全模态和两个决策模型，视觉模型首次支持视频输入。LFM3-1.7B 采用卷积、滑动窗口注意力和全局注意力的三混合结构，上下文 256K，4 位量化后约 1GB 内存。官方称它参数少 35% 仍超过上代 LFM2.5-2.6B，并专门针对 Hermes Agent、Pi、OpenClaw 等 Agent 框架做了后训练。",
+        "source_url": "https://www.liquid.ai/blog/lfm3",
+        "time": "2026-10-28T01:07:45+08:00",
+        "handle": "@liquidai",
+        "impact": "想在手机或笔记本上跑常驻 Agent 的人多了一个约 1GB 的选择，实际效果还要看社区复测。",
+        "points": [
+          "SGLang、llama.cpp、MLX、vLLM 首日支持",
+          "单张 GPU 即可微调",
+          "预训练 22T token，测试覆盖 14 种设备和后端组合"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "微软 MAI-Image-2.6 正式商用",
+        "summary": "微软 AI 宣布 MAI-Image-2.6 和 MAI-Image-2.6-Flash 在 Microsoft Foundry 正式商用。同一天，MAI Image 2.7 预览版在 Arena 图像编辑榜升到第 3，比 2.6 高 45 分，排在 GPT-Image-2 前面。",
+        "source_url": "https://x.com/MicrosoftAI/status/2115106982730342888",
+        "time": "2026-10-27T23:42:56+08:00",
+        "handle": "@MicrosoftAI",
+        "impact": "用 Azure 做图像生成的企业多了一个自家模型可选，2.7 何时正式商用还没说。",
+        "points": [
+          "2.6 和 2.6-Flash 两个版本同时商用",
+          "2.7 预览版图像编辑榜第 3，按实验室算第 2"
+        ]
+      },
+      {
+        "title": "微软 MAI Cyber 安全模型采用率翻倍",
+        "summary": "Mustafa Suleyman 称，MAI Cyber 模型在微软的安全工具链里，30 天内用户采用率翻倍到 50%。他还说模型在质量不变的情况下省了 20% 的 token。",
+        "source_url": "https://x.com/mustafasuleyman/status/2115129110930628859",
+        "time": "2026-10-28T01:10:51+08:00",
+        "handle": "@mustafasuleyman",
+        "impact": "微软安全产品的用户会更多用到自研模型，具体效果还缺少第三方数据。",
+        "points": [
+          "30 天采用率从约 25% 到 50%",
+          "token 效率提高 20%"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Replit 推出 Cloud Agents",
+        "summary": "Replit CEO Amjad Masad 宣布 Cloud Agents：可以导入任意代码仓库运行，并直接在 Replit 里生成 PR。他说 Replit 自己的代码现在也用 Replit 开发。",
+        "source_url": "https://x.com/amasad/status/2115129060267262190",
+        "time": "2026-10-28T01:10:39+08:00",
+        "handle": "@amasad",
+        "impact": "已有仓库的团队可以直接把 Replit 当云端编程 Agent 用，和 Codex、Cursor 正面竞争。",
+        "points": [
+          "不再局限于在 Replit 上新建的项目",
+          "交互方式和原来的 Replit Agent 一致"
+        ]
+      },
+      {
+        "title": "Cursor 设计模式新增 Annotate",
+        "summary": "Cursor 在设计模式里加入 Annotate：可以直接在页面上修改元素、画标注，并按不同屏幕尺寸检查设计，再把这些视觉提示交给 Agent 去改。",
+        "source_url": "https://x.com/cursor_ai/status/2115159585548021814",
+        "time": "2026-10-28T03:11:57+08:00",
+        "handle": "@cursor_ai",
+        "impact": "做前端的人可以少写文字描述，直接圈出要改的地方交给 Agent。",
+        "points": [
+          "支持在页面上直接画和改",
+          "可按不同屏幕尺寸审设计"
+        ]
+      },
+      {
+        "title": "Reflection 公布 Beam 强化学习规模",
+        "summary": "Reflection AI 称，Beam 最大一轮强化学习共运行约 13 亿个沙箱，峰值用了 883,006 个 vCPU，占可分配资源的 83%，分布在 Google Cloud 和 AWS 的 23 个集群。之后的训练将改用 OpenEnv，该项目已并入 Agentic AI Foundation。",
+        "source_url": "https://x.com/reflection_ai/status/2115135061293203537",
+        "time": "2026-10-28T01:34:30+08:00",
+        "handle": "@reflection_ai",
+        "impact": "做 Agent 强化学习的团队可以参考这个沙箱规模估算成本，OpenEnv 的开放程度还要看后续。",
+        "points": [
+          "约 13 亿个沙箱，覆盖训练、评测和消融实验",
+          "跨两家云、23 个集群"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Khazix 把电脑操作默认模型换成 Terra",
+        "summary": "@Khazix0918 说，他平时让 Claude 调用 Codex 去操控浏览器和电脑。GPT-6.1 Terra 发布后他实测，觉得快、稳、省，直接把默认模型从 GPT-6.1 Sol high 换成了 Terra xhigh。",
+        "source_url": "https://x.com/Khazix0918/status/2115093669657371061",
+        "time": "2026-10-27T22:50:02+08:00",
+        "handle": "@Khazix0918",
+        "impact": "做电脑操作类 Agent 的人可以先拿 Terra 试常规任务，复杂任务还要自己对比。",
+        "points": [
+          "用法：Claude 负责调度，Codex 负责执行",
+          "适合日常的浏览器和电脑操作任务"
+        ],
+        "tag": "个人体验"
+      },
+      {
+        "title": "为什么 AI 写的东西读着累",
+        "summary": "@xiaohu 介绍纽约大学和得州大学奥斯汀分校语言学研究者的工作：他们对比 14 个主流大模型和人类文本，发现模型系统性地过度使用 6 类消耗工作记忆的结构。包括生僻搭配、主谓距离过长、省略 that、名词堆叠、名词当动词用，以及抽象事物拟人化。",
+        "source_url": "https://x.com/xiaohu/status/2115056354771763247",
+        "time": "2026-10-27T20:21:45+08:00",
+        "handle": "@xiaohu",
+        "impact": "用 AI 写稿的人可以按这 6 类结构自查，把句子改得更好读。",
+        "points": [
+          "研究对比了 14 个大模型和人类真实文本",
+          "内容正确也可能因句子结构而难读"
+        ]
+      },
+      {
+        "title": "Matt Pocock：规格驱动开发让代码变差",
+        "summary": "@shao__meng 整理了 Matt Pocock 44 分钟访谈的要点。Pocock 试了几个月规格驱动开发，规格越写越细，代码质量反而一路下滑，他的结论是可维护的代码本身就是 Agent 的工作环境。他日常用 Claude Code，推理强度开 medium，认为多数人开得太高。",
+        "source_url": "https://x.com/shao__meng/status/2115036397799428313",
+        "time": "2026-10-27T19:02:27+08:00",
+        "handle": "@shao__meng",
+        "impact": "用编程 Agent 的团队可以先补测试和代码质量，再考虑换模型。",
+        "points": [
+          "测试和代码质量决定 Agent 能不能靠得住",
+          "常用的 grill me Skill 让 Agent 不停追问需求",
+          "运行框架比模型牌子更值得关注"
+        ]
+      },
+      {
+        "title": "宝玉：每个人都要从执行者转成管理者",
+        "summary": "@dotey 认为多 Agent 并行会成为趋势。他日常交给 Agent 的任务平均半小时左右，干等很浪费，所以要同时开几个任务，前期对齐计划，中途设里程碑，最后验收。他认为 Agent 犯错成本低，重做不是大问题。",
+        "source_url": "https://x.com/dotey/status/2115162837844889943",
+        "time": "2026-10-28T03:24:53+08:00",
+        "handle": "@dotey",
+        "impact": "习惯单线程用 Agent 的人可以试着同时开两三个任务，并给每个任务定好验收标准。",
+        "points": [
+          "Agent 已能借助工具自己验证和修正",
+          "代价是使用者要频繁介入、耗费注意力"
+        ]
+      },
+      {
+        "title": "前沿 Neo Lab Top 100+ 名单",
+        "summary": "@alacheng 分享了一份前沿新兴 AI 实验室名单，收录 100 多家机构在做什么、融资规模、创始人和他们的 X 账号。",
+        "source_url": "https://debarghyadas.com/neolabs/",
+        "time": "2026-10-27T18:45:00+08:00",
+        "handle": "@alacheng",
+        "impact": "想跟踪新兴 AI 实验室和创始人动向的人，可以直接用它做关注清单。",
+        "points": [
+          "包含融资规模和创始人信息",
+          "附各实验室的 X 账号"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent 改版订阅",
+        "summary": "Nous Research 改版 Hermes Agent 订阅：每个新套餐都自带一个云端 Agent，用量改成每日和每周额度，不再是每月一整块积分。老订阅用户可以随时切换到新套餐。",
+        "source_url": "https://x.com/NousResearch/status/2115120531611787323",
+        "time": "2026-10-28T00:36:46+08:00",
+        "handle": "@NousResearch",
+        "impact": "用 Hermes 的人不用自己找服务器也能跑云端 Agent，额度是否够用还要看实际套餐。",
+        "points": [
+          "新套餐自带云端 Agent",
+          "额度改为按日、按周计算"
+        ]
+      },
+      {
+        "title": "Codex CLI 0.165.0 发布",
+        "summary": "OpenAI 发布 Codex CLI rust-v0.165.0。它内置 Google Cloud Vertex AI 服务商，模型列表加入 GPT-6.1 Terra，对话中途改推理强度默认开启，新配置默认使用 memory v2，并能导入其他 Agent 的记忆。",
+        "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
+        "time": "2026-10-28T04:09:38+08:00",
+        "impact": "在 Google Cloud 上用模型的团队可以直接接 Codex，用插件市场的人应尽快升级。",
+        "points": [
+          "配置 model_provider = \"gcp\" 即可走 Vertex AI",
+          "修复插件市场 URL 校验漏洞，此前 Git 可能连到另一台主机",
+          "中断或切换到 Plan 模式后，排队消息不再重启任务"
+        ]
+      },
+      {
+        "title": "Claude Code 2.1.312 发布",
+        "summary": "Anthropic 发布 Claude Code v2.1.312。Claude 应用网关新增 oidc.user_id_claim，可用 Entra ID 的 oid 等字段识别用户。它还修复了 Claude 只读开头就覆盖超大 CLAUDE.md 或规则文件的问题，现在会要求先读完或原地编辑。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
+        "time": "2026-10-28T04:24:20+08:00",
+        "impact": "用大型 CLAUDE.md 或规则文件的项目升级后，不容易再被误覆盖。",
+        "points": [
+          "提示和 Agent 钩子每个会话最多并发 24 个",
+          "用量提示把 5 小时窗口改称「5-hour limit」"
+        ]
+      },
+      {
+        "title": "OpenHands 1.34.0 发布",
+        "summary": "OpenHands 发布 v1.34.0，每个对话可以有独立的 Docker 运行环境，设置里新增 Runtime 页面。安全方面，它不再让不可信的 Markdown 设置 rel=\"opener\"，会话 API 密钥改走环境变量而不是命令行参数。",
+        "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.34.0",
+        "time": "2026-10-27T22:35:23+08:00",
+        "impact": "自托管 OpenHands 的团队可以按对话隔离运行环境，降低互相干扰。",
+        "points": [
+          "自动化任务可按标签筛选和编辑",
+          "自定义脚本自动化可以自选模型"
+        ]
+      },
+      {
+        "title": "AXA 用 Earth-2 模拟上千个气旋季",
+        "summary": "NVIDIA 介绍，保险公司 AXA 的研究人员用 Earth-2 里开放的全球天气模型 FourCastNet 3，生成了 1000 多个模拟气旋季。这些模拟用来研究气旋路径、发生频率，以及同一季节里多个地区受灾的情况。",
+        "source_url": "https://x.com/NVIDIAAI/status/2115168584351805628",
+        "time": "2026-10-28T03:47:43+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "AI 天气模型开始进入保险风险评估，台风多发地区的定价方法可能随之变化。",
+        "points": [
+          "弥补几十年历史数据样本不足的问题",
+          "结果用于风险评估和防灾建议"
+        ]
+      },
+      {
+        "title": "impeccable 前端设计 Skill",
+        "summary": "pbakaus/impeccable 是给编程 Agent 用的前端设计指导，包含 1 个 Skill、24 条命令和 62 条不依赖大模型的检测规则。它专门检查 AI 生成页面的常见毛病，比如满屏 Inter 字体、紫蓝渐变、卡片套卡片。今日 GitHub 总榜新增 1,458 星。",
+        "source_url": "https://github.com/pbakaus/impeccable",
+        "time": "2026-10-28T06:15:00+08:00",
+        "impact": "用 Agent 做前端的人可以拿它减少千篇一律的 AI 页面风格。",
+        "points": [
+          "/impeccable init 先记录产品信息到 PRODUCT.md",
+          "检测规则可在 CLI 和浏览器扩展里离线运行"
+        ]
+      },
+      {
+        "title": "hyperframes：HTML 转视频",
+        "summary": "heygen-com/hyperframes 是把 HTML、CSS、媒体和动画渲染成确定性 MP4 的开源框架，Apache-2.0 许可。给 Claude Code、Codex、Cursor 装上它的 Skill 后，可以直接让 Agent 做视频。今日 GitHub 总榜新增 965 星。",
+        "source_url": "https://github.com/heygen-com/hyperframes",
+        "time": "2026-10-28T06:15:00+08:00",
+        "impact": "需要批量做数据图表或讲解视频的人，可以让 Agent 写网页再导出视频。",
+        "points": [
+          "支持本地 CLI 和 Agent Skill 两种用法",
+          "提供 Mac 和 Linux 原生应用"
+        ]
+      },
+      {
+        "title": "treg：给 Agent 工具用的统一入口",
+        "summary": "superdesigndev/treg 自称「给 Agent 工具用的 OpenRouter」：一个地址和令牌就能调用几千个按次计费的第三方接口，不用分别注册。团队也能登记自己的密钥、Skill 和 CLI，密钥只留在服务器上，可以自托管。今日 Python 榜新增 261 星。",
+        "source_url": "https://github.com/superdesigndev/treg",
+        "time": "2026-10-28T06:15:00+08:00",
+        "impact": "团队的 Agent 可以共用工具而不分发密钥，但接入第三方中转前要评估数据外流风险。",
+        "points": [
+          "按次计费，最低约一美分",
+          "自己的密钥优先，且不计费"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果发布 M6 iMac 和 MBP",
+        "summary": "10 月 27 日晚，苹果发布 M6 iMac 和 M6 入门款 14 英寸 MacBook Pro，起售价与上代相同：iMac 1,499 美元，MacBook Pro 1,999 美元。两者都换上 Wi-Fi 7 和蓝牙 6，iMac 电源适配器可选 2.5G 网口。10 月 28 日开始预订，11 月 6 日发售。",
+        "source_url": "https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+        "time": "2026-10-27T21:03:12+08:00",
+        "handle": "@markgurman",
+        "impact": "想换 Mac 的人价格不变能拿到新芯片，等触屏款的人可以再观望几天。",
+        "points": [
+          "iMac 仍是原来的七种颜色",
+          "MacBook Pro 续航最长 24 小时（官方数据）",
+          "12 核 iMac 起价 1,699 美元"
+        ]
+      },
+      {
+        "title": "传闻触屏 MacBook Pro 贵 400 美元",
+        "summary": "Bloomberg 记者 Mark Gurman 称，苹果讨论过让触屏 OLED MacBook Pro 比现款贵 400 美元，14 英寸起价 2,899 美元，16 英寸至少 3,399 美元。他预计新机配 M5 Pro 和 M5 Max，为触屏重新设计转轴，换新散热，更薄更轻。",
+        "source_url": "https://x.com/markgurman/status/2115204306043593004",
+        "time": "2026-10-28T06:09:39+08:00",
+        "handle": "@markgurman",
+        "impact": "想买高端 MacBook Pro 的人要多准备预算，最终价格还要看苹果正式发布。",
+        "points": [
+          "现有非触屏款预计不会因此下架",
+          "苹果 10 月 28 日（美国时间）在洛杉矶举办活动"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "安卓注册应用商店计划开放报名",
+        "summary": "Google 开放「注册应用商店」计划报名。第三方应用商店报名后，从 12 月 1 日起可以一键安装应用、后台自动更新，不再弹二次确认。该计划先在美国以外、Android 17 QPR2 及以上设备推行，商店需交年费。",
+        "source_url": "https://www.androidauthority.com/android-opens-enrollment-program-for-app-stores-3728653/",
+        "time": "2026-10-28T03:39:19+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "用第三方应用商店的安卓用户安装会更省事，但商店是否报名要看年费和审核门槛。",
+        "points": [
+          "计划源于 Google 与 Epic 的和解方案",
+          "恶意软件超过阈值的商店要额外付审核费"
+        ]
+      },
+      {
+        "title": "iPhone 18 Pro 首发三周美国销量下降",
+        "summary": "Counterpoint 报告称，iPhone 18 Pro 系列首发三周，美国销量同比降 4%，全球增长 3.1%。中国涨 29%，日本跌 27%，Pro Max 占 Pro 系列销量的 56%，比去年的 57% 略低。",
+        "source_url": "https://9to5mac.com/2026/10/27/report-iphone-18-pro-sales-down-4-in-the-us-but-china-drives-3-1-global-growth/",
+        "time": "2026-10-28T03:44:07+08:00",
+        "handle": "@9to5mac",
+        "impact": "苹果在美日市场的涨价开始影响销量，iPhone Duo 能否带来新增需求还要看后续数据。",
+        "points": [
+          "美国和日本下滑主要因为涨价",
+          "不含中国，全球增长会弱得多"
+        ]
+      },
+      {
+        "title": "Gemini 可检测 Google AI 内容",
+        "summary": "Google Gemini 应用支持用 SynthID 检测图片、视频和音频。直接问 Gemini「这是 AI 生成的吗」，就能检查文件是否由 Google 的 AI 生成。",
+        "source_url": "https://x.com/GeminiApp/status/2115171788812669225",
+        "time": "2026-10-28T04:00:27+08:00",
+        "handle": "@GeminiApp",
+        "impact": "看到可疑图片或音频时多了一个核查工具，但查不出其他公司模型生成的内容。",
+        "points": [
+          "覆盖图片、视频和音频",
+          "只能识别带 SynthID 水印的 Google 模型产出"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "ChatGPT 可接入 iCloud 邮件和日历",
+        "summary": "OpenAI 为 ChatGPT 加入 iCloud 邮件和日历插件。它能读取、创建和修改 iCloud 日历事件，能搜索和读取 iCloud 邮件、管理草稿、发送邮件、查联系人。使用时需要单独生成 App 专用密码，所有套餐的网页、桌面和 iOS 版都能用。",
+        "source_url": "https://www.macrumors.com/2026/10/27/chatgpt-icloud-mail-calendar-plugin/",
+        "time": "2026-10-28T03:51:26+08:00",
+        "handle": "@MacRumors",
+        "impact": "用 iCloud 的人可以让 ChatGPT 管日程，但授权前要想清楚它能代你发邮件。",
+        "points": [
+          "只能看 iCloud 邮箱，看不到同一 App 里的 Gmail 等账户",
+          "OpenAI 的主动式 Agent Dots 也能用这项权限"
+        ]
+      },
+      {
+        "title": "Home Assistant OS 18.4 发布",
+        "summary": "Home Assistant OS 18.4 是修复和安全版本，修好了 18.3 内核导致的 Realtek 网卡 VLAN 和 RTL8761B 蓝牙失效问题，内核升到 6.18.58，Docker 和 containerd 带安全修复。新证书包不再信任签发过被盗中间证书的 eMudhra 根证书，发布文件附 SHA256SUMS 和 Sigstore 签名。",
+        "source_url": "https://github.com/home-assistant/operating-system/releases/tag/18.4",
+        "time": "2026-10-27T20:42:15+08:00",
+        "impact": "用 Realtek 网卡或蓝牙的 Home Assistant 主机应尽快升级，官方建议所有用户更新。",
+        "points": [
+          "可用 Cosign 校验镜像是否来自官方",
+          "修复多处启动和 USB 存储问题"
+        ]
+      },
+      {
+        "title": "毫米波人体传感器加入 Works with HA",
+        "summary": "Everything Smart Home 的 Everything Presence 传感器加入 Works with Home Assistant 认证。Lite、One、Pro 三款都跑 ESPHome，本地运行不依赖云，能感知呼吸级别的微动，还兼作蓝牙代理。Pro 款支持 PoE 供电。",
+        "source_url": "https://www.home-assistant.io/blog/2026/10/27/everything-smart-home-joins-works-with-home-assistant/",
+        "time": "2026-10-28T01:01:15+08:00",
+        "handle": "@home_assistant",
+        "impact": "想做「人在灯亮」自动化的人多了一组经过认证、完全本地的传感器。",
+        "points": [
+          "One 和 Pro 同时带 PIR，进门即时响应",
+          "Lite 可跟踪最多 3 人、4 个区域"
+        ]
+      },
+      {
+        "title": "Vory：在苹果设备上连自托管 Hermes",
+        "summary": "Vory 是一个连接自托管 Hermes Agent 的客户端，支持 iPhone、iPad 和 Mac。它不托管 Agent，只通过局域网、Tailscale 或 Cloudflare Tunnel 连接你自己运行的 Hermes 网关。应用开源，在 TestFlight 上免费。",
+        "source_url": "https://x.com/_mattwagner_/status/2115160324508627251",
+        "time": "2026-10-28T03:14:53+08:00",
+        "handle": "@_mattwagner_",
+        "impact": "自托管 Hermes 的人可以在手机上用自己的 Agent，但网关暴露方式要自己把好关。",
+        "points": [
+          "数据走自己的网络",
+          "开源，TestFlight 免费测试"
+        ]
+      },
+      {
+        "title": "妙言上架 iPhone 和 iPad",
+        "summary": "Tw93 开发的原生 Markdown 编辑器妙言，六年后推出 iPhone 和 iPad 版。一次 App Store 购买覆盖 Mac、iPhone 和 iPad，三端共用同一个 iCloud Drive 文件夹，Mac 版继续免费开源。",
+        "source_url": "https://x.com/HiTw93/status/2115075830955348064",
+        "time": "2026-10-27T21:39:08+08:00",
+        "handle": "@HiTw93",
+        "impact": "用 Markdown 记笔记的苹果用户可以在三端同步同一份文件，不用另找同步服务。",
+        "points": [
+          "Swift 原生开发",
+          "笔记直接存在 iCloud Drive 文件夹里"
+        ]
+      },
+      {
+        "title": "BookOrbit：自托管书库同步阅读进度",
+        "summary": "BookOrbit 是一个可以自己部署的书库，电子书、PDF、漫画和有声书都能放进去，网页、iPhone、Apple Watch 和 Kobo 上都能读。阅读进度、划线和笔记在网页、Kobo 和 KOReader 之间双向同步，划线可导出 Markdown 或自动同步到 Readwise。",
+        "source_url": "https://github.com/bookorbit/bookorbit",
+        "time": "2026-10-27T21:00:10+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "在手机、电纸书之间来回切换的读者，可以自建一个不依赖商业平台的同步书库。",
+        "points": [
+          "Docker 部署，支持多人各管各的书架",
+          "书名和封面从 14 个来源自动补全"
+        ]
+      }
+    ]
+  }
+}
