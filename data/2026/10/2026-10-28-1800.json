@@ -1,0 +1,298 @@
+{
+  "id": "2026-10-28-1800",
+  "published_at": "2026-10-28T18:00:00+08:00",
+  "headline": "AA 智能指数 v5 发布，甲骨文云明年上 Google TPU",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "AA 智能指数 v5 发布",
+        "summary": "Artificial Analysis 发布智能指数 v5 和新的进步指数 v1。v5 分知识工作、编程、科学、通用四类，各占 25%，共 9 项评测，大量使用自建私有题库。Claude Opus 5.5（max）以 58 分居首，GPT-6.1 Sol（max）只差约 4 分，单任务成本约 1.27 美元，约为 Opus 5.5 的八分之一。没有任何模型在 9 项里全部领先。",
+        "source_url": "https://x.com/ArtificialAnlys/status/2115265164891275745",
+        "time": "2026-10-28T10:11:29+08:00",
+        "handle": "@ArtificialAnlys",
+        "impact": "选模型时可以直接参考单任务成本，同分段模型价格最多差约 8 倍。",
+        "points": [
+          "开放权重第一的 Kimi K3.1 Pro 为 46 分，落后榜首 12 分，v4.3 时只差 3 分",
+          "DeepSeek V4.1 Flash 1017 和 GLM-5.3 都是 32 分，低于 Claude Haiku 5.5",
+          "评测构成变了，分数不能和旧版直接比",
+          "进步指数借鉴 Epoch 的 ECI 方法"
+        ]
+      },
+      {
+        "title": "甲骨文云明年起提供 Google TPU",
+        "summary": "甲骨文在 AI World 大会上宣布，从 2027 年起在甲骨文云（OCI）提供 Google TPU，并计划逐步扩到吉瓦级。OCI 还会提供 OpenAI 与博通合作设计的加速芯片，以及 Cerebras、SambaNova 的推理芯片，NVIDIA Vera Rubin NVL72 已正式上线。另一份公告说，ChatGPT 和 Codex 会接入甲骨文的企业应用和开发工具。另据 The Information 报道，OpenAI 计划直接购买 Google TPU，此事未获官方确认。",
+        "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/",
+        "time": "2026-10-28T00:23:09+08:00",
+        "handle": "@Oracle",
+        "impact": "企业上云选芯片的余地变大，NVIDIA 之外的 TPU 和推理芯片更容易租到。",
+        "points": [
+          "甲骨文称是 Google 之外第一家提供 TPU 的大型云厂商",
+          "甲骨文与 OpenAI 计划认证 100 万名专业人员",
+          "OpenAI 购买 TPU 一事条款未披露，OpenAI 未置评",
+          "大会在美国时间 10 月 27 日，前几期未收录"
+        ],
+        "tag": "部分传闻"
+      },
+      {
+        "title": "Anthropic：专家常顺着 Agent 拍板",
+        "summary": "Anthropic 对齐团队发布研究：50 名专家用 Claude Code（Opus 4.8）完成一项需要拍板的任务，研究者暗中随机给 Agent 设定了偏向。参与者有 86% 的选择与 Agent 的偏向一致，随机应为 50%。本来有自己倾向的人，Agent 唱反调时有 60% 改了主意，Agent 同意时只有 6%。",
+        "source_url": "https://www.anthropic.com/research/agents-judgment-calls",
+        "time": "2026-10-28T06:31:26+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "让 Agent 参与决策的团队，最好先让人独立写下判断，再看 Agent 的意见。",
+        "points": [
+          "77% 的人在报告里用了 Agent 的论据，只有 15% 注明出处",
+          "只测了一种任务，偏向是研究者有意加强的",
+          "论文 PDF 已公开"
+        ]
+      },
+      {
+        "title": "ChatGPT Pro 老套餐 30 日额度减半",
+        "summary": "OpenAI 帮助中心显示，ChatGPT Pro 老套餐 10 月 30 日起调整额度，月费 200 美元不变。Work 和 Codex 的额度从 Plus 的 20 倍降到 10 倍，GPT-6 Pro 每周 200 条降到 100 条。此事 9 月 29 日已公布，这里是生效前提醒。",
+        "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+        "time": "2026-10-28T18:11:00+08:00",
+        "impact": "订了 Pro 老套餐的人可以趁生效前评估是否换档，避免多付钱。",
+        "points": [
+          "价格不变，额度减半",
+          "10 月 30 日生效"
+        ]
+      },
+      {
+        "title": "Anthropic 给美国政府打六折",
+        "summary": "Anthropic 与美国总务管理局（GSA）签署新的 OneGov 协议。联邦、州、地方、部落和领地政府使用 Claude，可享六折。",
+        "source_url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+        "time": "2026-10-28T06:20:23+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "美国各级政府采购 Claude 的门槛降低，政府市场的价格竞争更激烈。",
+        "points": [
+          "覆盖联邦到地方各级政府",
+          "是此前合作的扩展"
+        ]
+      },
+      {
+        "title": "Meta 个人 Agent Muse 登陆新加坡",
+        "summary": "Meta 的个人 Agent Muse 在新加坡上线，Alexandr Wang 发帖宣布。据 X 新闻汇总，它可以接入 Grab、Shopee、新加坡航空、Agoda 等本地服务，购物等敏感操作需要用户确认，日常使用免费但有每周额度。",
+        "source_url": "https://x.com/alexandr_wang/status/2115252079593967826",
+        "time": "2026-10-28T09:19:29+08:00",
+        "handle": "@alexandr_wang",
+        "impact": "在新加坡的用户可以试用，授权支付和账户前要看清每项权限。",
+        "points": [
+          "此前已在美国、加拿大、日本上线",
+          "接入本地服务的细节来自新闻汇总，尚待官方页面确认"
+        ]
+      },
+      {
+        "title": "General Compute 融资 1 亿美元",
+        "summary": "推理云公司 General Compute 完成 1 亿美元 A 轮融资。它用 GPU 做提示词预填充，再用 Cerebras、SambaNova 等专用芯片逐词生成，主打低延迟推理，首批大规模算力计划 2027 年上线。据报道由 Blackbird 和 Abstract Ventures 领投。",
+        "source_url": "https://x.com/alacheng/status/2115354129375641668",
+        "time": "2026-10-28T16:05:00+08:00",
+        "handle": "@alacheng",
+        "impact": "需要快速推理的 Agent 产品多了一家非 NVIDIA 路线的供应商。",
+        "points": [
+          "通过 OpenAI 兼容接口提供开放权重模型",
+          "瞄准 Agent、代码代理、实时语音等对速度敏感的场景"
+        ]
+      },
+      {
+        "title": "Together GPU 集群可自动修复",
+        "summary": "Together AI 宣布，GPU 集群出现故障时，平台可以自动把节点修回健康状态。健康检查先定位故障，平台选最轻的修复方式，用户可以按单个 XID 错误码决定哪些修复无需人工确认。",
+        "source_url": "https://www.together.ai/blog/auto-repair-for-together-gpu-clusters",
+        "time": "2026-10-28T06:26:01+08:00",
+        "handle": "@togethercompute",
+        "impact": "租 GPU 集群训练的团队可以少一些半夜手动处理故障的情况。",
+        "points": [
+          "修复范围可按错误码细调",
+          "官方博客有完整流程"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Anthropic 经理不再考编程题",
+        "summary": "@dotey 编译了 Anthropic 工程经理 Felix Rieseberg 的文章。他说这个月起面试不再考传统编程题，因为 Claude 已比人更会做，团队里最出成果的人和刷题成绩关系不大。文章标题是「冲劲胜过资历」，说的是他自己的面试，不代表 Anthropic 全公司。",
+        "source_url": "https://x.com/dotey/status/2115218749888634988",
+        "time": "2026-10-28T07:07:03+08:00",
+        "handle": "@dotey",
+        "impact": "招工程师的团队可以重新想想面试考什么，少考 AI 能代劳的题。",
+        "points": [
+          "他认为新人不知道公司的「规矩」，反而敢问",
+          "有 AI 后，个人产出不再那么依赖资历"
+        ]
+      },
+      {
+        "title": "多 Agent 时代的四个工程难题",
+        "summary": "@dotey 编译了 Anthropic 平台工程负责人 Katelyn Lesse 的文章。她认为上千个 Agent 协作时，调度、身份与授权、一个被骗波及全队的安全问题都缺好方案，程序员接下来一两年有大量新问题可做。",
+        "source_url": "https://x.com/dotey/status/2115229306490126432",
+        "time": "2026-10-28T07:49:00+08:00",
+        "handle": "@dotey",
+        "impact": "搭多 Agent 系统的团队应先想清楚每个 Agent 能做什么、凭什么信任别的 Agent。",
+        "points": [
+          "Agent 不是一模一样的副本，传统容器调度不完全适用",
+          "身份可以用短期凭证，授权基本还是空白"
+        ]
+      },
+      {
+        "title": "让 Claude 指挥 Codex 操作浏览器",
+        "summary": "@Khazix0918 分享了写在 CLAUDE.md 里的规则：网页上要点、要填的事交给 Codex 在 Chrome 里做，小事用内置浏览器，多步骤或要登录的后台交给本地 Codex。他关掉了 Chrome 插件，只有本人身份确认才请用户动手。",
+        "source_url": "https://x.com/Khazix0918/status/2115349867329708277",
+        "time": "2026-10-28T15:48:04+08:00",
+        "handle": "@Khazix0918",
+        "impact": "想让 Agent 代操作浏览器的人可以照这个思路分工，但要登录的账户仍要自己把关。",
+        "points": [
+          "每次要写清网址、步骤和要带回的结果",
+          "长任务放后台运行"
+        ],
+        "tag": "个人体验"
+      },
+      {
+        "title": "豆包 Agent 上线录制技能",
+        "summary": "@cheery9998 介绍豆包 Agent 新功能「录制技能」：把自己的操作流程录下来，边做边口头说明规则，结束后自动生成技能存进技能库。单次最长可录 30 分钟，操作出错可以直接说「刚才那步不算」。",
+        "source_url": "https://x.com/cheery9998/status/2115358035082358795",
+        "time": "2026-10-28T16:20:31+08:00",
+        "handle": "@cheery9998",
+        "impact": "不擅长写提示词的人可以用演示代替描述，但要先核对它记下的步骤和规则。",
+        "points": [
+          "首次使用要开启录屏和辅助功能权限",
+          "建议换一份新素材让它独立跑一次再放手"
+        ]
+      },
+      {
+        "title": "Tw93 的 AI 编程规则",
+        "summary": "@HiTw93 把自己的 AI 编程经验整理成可复用的规则：多讲背景和目标，少替 Agent 想技术细节；每次只做最小可用功能；必须遵守的规则用脚本拦，而不是只靠提示词。",
+        "source_url": "https://x.com/HiTw93/status/2115366100221501540",
+        "time": "2026-10-28T16:52:34+08:00",
+        "handle": "@HiTw93",
+        "impact": "用编程 Agent 的人可以挑几条写进自己的 AGENTS.md。",
+        "points": [
+          "提交、发布、删除前都让 Agent 先确认",
+          "密钥贴给 Agent 就当已泄露，立刻更换"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent 上线音效插件",
+        "summary": "Nous Research 为 Hermes Agent 推出 ElevenLabs 音效插件，可以在 Hermes 里直接生成音效。桌面版带音效库、循环播放和一键出变体，需要接入自己的 ElevenLabs API。",
+        "source_url": "https://hermes-agent.nousresearch.com/docs/plugins/elevenlabs-sound-effects",
+        "time": "2026-10-28T07:10:48+08:00",
+        "handle": "@Teknium",
+        "impact": "用 Hermes 做游戏或多媒体的人可以少切一个工具，费用按自己的 ElevenLabs 账户计。",
+        "points": [
+          "可从插件目录直接安装",
+          "属于 Nous 在做的游戏开发工具组"
+        ]
+      },
+      {
+        "title": "LangChain 开源设计 Agent",
+        "summary": "LangChain 开源了内部用了四个月的 Slack 设计助手 design-agent。团队把设计师的判断写成 Skill、知识库和代码检查，可以 fork 后换成自家品牌。官方称 8 月以来出了 3000 多件素材，单次请求模型花费中位数从约 8 美元降到约 0.5 美元。",
+        "source_url": "https://github.com/langchain-ai/design-agent",
+        "time": "2026-10-28T15:29:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "有品牌规范的团队可以拿它搭自己的设计助手，效果取决于规范写得多细。",
+        "points": [
+          "基于 Deep Agents，Apache-2.0",
+          "可做海报、PPT、图表和动效"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "设计 Skill 合集走红",
+        "summary": "elayadesign/ai-design-skills 是给 Claude Code、Cursor、Codex 用的设计 Skill 合集。目前主打从零做落地页，包含提问、页面结构、转化文案和完整视觉规范。MIT 协议，今日 GitHub 总榜新增约 1,400 星。",
+        "source_url": "https://github.com/elayadesign/ai-design-skills",
+        "time": "2026-10-28T18:11:00+08:00",
+        "impact": "用 Agent 做落地页的人可以直接装来试，减少千篇一律的页面。",
+        "points": [
+          "每个 Skill 是独立文件夹，按需安装",
+          "更多 Skill 在陆续加入"
+        ]
+      },
+      {
+        "title": "让 Agent 自己清理 worktree",
+        "summary": "@dotey 分享一条 AGENTS.md 规则：任务结束时 Agent 必须删掉 worktree 和分支，要么合并进主分支，要么先提交并打存档标签。确需保留的，要在最终回复里写明路径和原因。",
+        "source_url": "https://github.com/JimLiu/baocut/blob/main/AGENTS.md",
+        "time": "2026-10-28T13:28:39+08:00",
+        "handle": "@dotey",
+        "impact": "多 Agent 并行开发的仓库可以照抄这条，避免磁盘和分支越积越多。",
+        "points": [
+          "编排子 Agent 的会话负责收尾",
+          "专用构建目录一并删除"
+        ]
+      },
+      {
+        "title": "MiniMax 开源 mcode-stack",
+        "summary": "MiniMax 开源 mcode-stack，收录 MiniMax Code 团队日常用的工作流和 Skill，可以直接安装使用。仓库 10 月 28 日新建，MIT 协议，规模还很小。",
+        "source_url": "https://github.com/MiniMax-AI/mcode-stack",
+        "time": "2026-10-28T10:17:41+08:00",
+        "impact": "想参考国内团队 Agent 工作流的人可以关注，内容还在早期。",
+        "points": [
+          "来自 MiniMax Code 团队",
+          "本轮气象 AI 没有新的模型或论文"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "美国银行：别把密码交给 AI",
+        "summary": "美国银行给客户发邮件，提醒不要把网银用户名和密码交给 AI 助手或 Agent。邮件说，如果主动把凭据交给 Agent，由此产生的操作由客户负责，但联邦对未授权转账的保护仍然适用。据 Axios，多家美国大银行已发现未经批准的第三方 Agent 登录客户账户。",
+        "source_url": "https://www.androidauthority.com/bank-of-america-ai-agent-password-warning-3728947/",
+        "time": "2026-10-28T18:07:27+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "用 Agent 处理财务的人不要交出网银密码，出了问题可能要自己担责。",
+        "points": [
+          "美国银行发言人已向 TechCrunch 确认邮件属实",
+          "摩根士丹利等银行已开始拦截这类 Agent"
+        ]
+      },
+      {
+        "title": "Discord 公开消息将进 Google",
+        "summary": "Discord 计划从 12 月中旬起，让符合条件的公开服务器消息出现在 Google 等搜索引擎里。只涉及成员 1000 人以上、加入服务器发现目录的公开频道，私信和私有服务器不受影响，公开页面不显示用户名和头像。",
+        "source_url": "https://www.androidauthority.com/discord-messages-google-search-opt-out-3728857/",
+        "time": "2026-10-28T16:05:43+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "在大型公开 Discord 群发言的人，最好在 12 月前关掉这个开关。",
+        "points": [
+          "个人可在桌面或网页版「用户设置 > 数据与隐私」关闭",
+          "关闭前发的消息可能仍会被收录"
+        ]
+      },
+      {
+        "title": "Gemini 团队开源 Mac 语音输入 Jot",
+        "summary": "Google Gemini 团队在 GitHub 公开了 macOS 语音输入工具 Jot，使用 Gemini 3.5 Transcribe 模型。按住 fn 说话，松开后文字出现在光标处，自动加标点、去口头禅；断网时先排队，联网后补传。",
+        "source_url": "https://github.com/google-gemini/jot-gemini-transcribe-macOS",
+        "time": "2026-10-28T10:30:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "Mac 用户多了一个免费的语音输入选择，但录音会上传到 Google。",
+        "points": [
+          "需要自填 Gemini API Key，音频直接发给 Google",
+          "人名、产品名可加进词典"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Tailscale 新版修复 4 个漏洞",
+        "summary": "Tailscale 发布 v1.104.4，修复安全公告 TS-2026-014 至 017。问题涉及 Tailscale SSH 的 Unix 套接字转发可以碰到 root 专属套接字、SSH 会话内存耗尽，以及 Tailscale Serve 的 Unix 后端可触达本地 API、HTTP/2 下权限头串用。官方建议受影响节点升级到 1.104.4 或更新版本。",
+        "source_url": "https://tailscale.com/security-bulletins",
+        "time": "2026-10-28T09:05:26+08:00",
+        "impact": "用 Tailscale SSH 或 Serve 的设备应尽快升级，没用这两项的风险较低。",
+        "points": [
+          "前两项只影响开了 Tailscale SSH 的节点",
+          "后两项只影响使用 Tailscale Serve 的节点",
+          "最严重的情况可导致节点被完全接管"
+        ]
+      },
+      {
+        "title": "TwinDesk：多台电脑和安卓共用一张桌",
+        "summary": "TwinDesk 是开源的跨设备工具，让 Mac、Windows、Linux 和安卓手机共用键鼠、屏幕、剪贴板和文件。鼠标推出屏幕边缘就到另一台电脑，Windows 程序可以单独开窗到 Mac 上，手机能在电脑上接电话、回短信。",
+        "source_url": "https://github.com/InukaAsith/TwinDesk",
+        "time": "2026-10-28T13:30:07+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "多设备混用的人可以用它代替 KVM 和传文件工具，权限较大，装前看清开了哪些功能。",
+        "points": [
+          "不用账号、不走云端，设备间直连加密",
+          "所有功能默认关闭，GPL-3.0"
+        ]
+      }
+    ]
+  }
+}

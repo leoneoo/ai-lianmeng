@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28T06:27:44+08:00",
+  "updated_at": "2026-10-28T18:21:12+08:00",
   "editions": [
+    {
+      "id": "2026-10-28-1800",
+      "published_at": "2026-10-28T18:00:00+08:00",
+      "path": "data/2026/10/2026-10-28-1800.json",
+      "counts": {
+        "x_daily": 8,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 5,
+        "tech": 3,
+        "iot": 2
+      },
+      "headline": "AA 智能指数 v5 发布，甲骨文云明年上 Google TPU"
+    },
     {
       "id": "2026-10-28-0600",
       "published_at": "2026-10-28T06:00:00+08:00",
