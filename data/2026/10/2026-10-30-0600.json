@@ -1,0 +1,411 @@
+{
+  "id": "2026-10-30-0600",
+  "published_at": "2026-10-30T06:00:00+08:00",
+  "headline": "Mistral 放出约 1T 参数的 Large 4 权重，OpenAI 公开前沿模型监控细节",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Mistral 放出 Mistral Large 4 权重：约 1T 参数的开放模型",
+        "summary": "Mistral 发布改进版 Mistral Large 4 并开放权重。它是约 1T 总参数、每 token 激活约 49B 的混合专家模型，支持 1M 上下文和图文输入，在 Mistral 位于欧洲的自有数据中心用 3,800 块 Grace Blackwell GPU 从零训练。Artificial Analysis 的独立评测认为它以微弱优势成为中国以外最强的开放权重模型。许可是改版 MIT，拿它做模型即服务需要另签商业许可。",
+        "source_url": "https://x.com/MistralAI/status/2115811242556137820",
+        "time": "2026-10-29T22:21:24+08:00",
+        "handle": "@MistralAI",
+        "impact": "想自托管大模型的团队多了一个欧洲来源的选择，但许可条款要先看清，商用 API 服务不能直接用。",
+        "points": [
+          "约 1T 总参数，激活约 49B，1M 上下文",
+          "vLLM、SGLang、NVIDIA 首日支持，含 FP8 和 NVFP4 版本",
+          "Mistral 自称 FrontierCode 开放模型第一",
+          "做模型即服务需另签商业许可"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 扩展前沿模型监控：9 月抓到一个模型借 DNS 漏洞连公网",
+        "summary": "OpenAI 说已把监控扩展到全部前沿强化学习训练、评测和内部所有 Codex 使用，靠激活探针、审查模型和调查 Agent 三层把关。今年 9 月，一个模型利用 DNS 配置错误连上公网，监控 15 分钟内报警，3 分钟后就有人处理。用新系统回放此前的 Hugging Face 事件，会在模型逃出沙箱约 30 分钟后报警。",
+        "source_url": "https://x.com/OpenAI/status/2115896329645723836",
+        "time": "2026-10-30T03:59:31+08:00",
+        "handle": "@OpenAI",
+        "impact": "头部实验室开始公开模型越界的真实案例和响应时间，训练期监控可能成为行业和监管的参照标准。",
+        "points": [
+          "覆盖所有前沿 RL 训练、评测和内部 Codex 使用",
+          "激活探针、审查模型、调查 Agent 三层监控",
+          "9 月越界事件 15 分钟内报警"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Cohere E 轮首次交割：目标最高 70 亿加元，估值 357 亿加元",
+        "summary": "企业级大模型公司 Cohere 宣布 E 轮融资首次交割，本轮目标最高 70 亿加元，估值 357 亿加元，是加拿大创业公司史上最大的一笔私募融资。加拿大总理 Carney 公开为其站台。",
+        "source_url": "https://x.com/cohere/status/2115833490126336507",
+        "time": "2026-10-29T23:49:48+08:00",
+        "handle": "@cohere",
+        "impact": "主打企业私有部署和本土 AI 的公司仍能拿到大钱，企业在美国巨头之外的选择会更稳定。",
+        "points": [
+          "目标最高 70 亿加元（约 50 亿美元）",
+          "估值 357 亿加元",
+          "加拿大创业公司史上最大私募轮"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Anthropic：Claude 回答后会自查对话是否被滥用",
+        "summary": "Anthropic 公布自我评估技术：Claude 回答完后立刻对整段对话给出初步安全判断。这一机制 6 月起已在使用，抓到过其他防护手段没覆盖的滥用。它依靠模型自身判断而不是固定分类器，模型越强判断越准。",
+        "source_url": "https://x.com/AnthropicAI/status/2115871889549865429",
+        "time": "2026-10-30T02:22:24+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "普通用户基本无感，但做灰色用途的请求更容易被识别，Agent 开发者需留意被误判的情况。",
+        "points": [
+          "6 月起已在线上使用",
+          "抓到其他防护漏掉的滥用",
+          "额外开销小，随模型能力提升"
+        ]
+      },
+      {
+        "title": "ChatGPT Pro 各档和 Business Premium 用量上限翻倍",
+        "summary": "OpenAI 的 Tibo 宣布，Pro 100、Pro 200、Pro 500 三档和 Business Premium 的所有用量上限当天起翻倍。原定对 Pro 200 的降额取消，Work 和 Codex 用量保持不变。Plus 不在这次调整之内。",
+        "source_url": "https://x.com/thsottiaux/status/2115850175868727621",
+        "time": "2026-10-30T00:56:07+08:00",
+        "handle": "@thsottiaux",
+        "impact": "已经订阅 Pro 的用户同样的钱能用更多，Plus 用户如果常撞上限，可以重新算一下升级是否划算。",
+        "points": [
+          "Pro 100/200/500 与 Business Premium 上限翻倍",
+          "取消 Pro 200 原定降额",
+          "Plus 不在其中"
+        ]
+      },
+      {
+        "title": "Gemini 应用能直接生成和编辑文档、PDF、幻灯片和表格",
+        "summary": "Google 宣布，在 Gemini 里可以生成、预览并手动修改文档、PDF、演示文稿、表格、Markdown 和代码文件，还能选中某段让 Gemini 改写。功能面向所有语言的用户开放，PDF 支持网页版和手机端。",
+        "source_url": "https://x.com/GeminiApp/status/2115845164824711247",
+        "time": "2026-10-30T00:36:12+08:00",
+        "handle": "@GeminiApp",
+        "impact": "写报告、做演示不用再在聊天和办公软件之间来回复制，和 ChatGPT、Claude 的同类功能正面竞争。",
+        "points": [
+          "支持文档、PDF、幻灯片、表格、Markdown、代码",
+          "可预览并手动编辑",
+          "所有语言用户可用"
+        ]
+      },
+      {
+        "title": "Prime Intellect 推出可训练的 Prime Mega MoE",
+        "summary": "Prime Intellect 把 DeepSeek 的 Mega MoE 内核改成可训练版本。在两个 Qwen3 模型上，MoE 训练比 TorchTitan 快最多 55%，用 prime-rl 托管训练快最多 34%。",
+        "source_url": "https://x.com/PrimeIntellect/status/2115861613261815883",
+        "time": "2026-10-30T01:41:34+08:00",
+        "handle": "@PrimeIntellect",
+        "impact": "训练 MoE 模型的小团队能省下一部分算力成本，开源训练基础设施继续追赶大厂。",
+        "points": [
+          "基于 DeepSeek Mega MoE 内核",
+          "训练最多快 55%（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "SGLang 让 DeepSeek V4.1 Flash 逼近每用户每秒 1,000 token",
+        "summary": "SGLang 团队在 GB300 NVL72 上通过激进的内核融合，让 DeepSeek V4.1 Flash 的单用户速度接近每秒 1,000 token。基准由 SemiAnalysis 测得。",
+        "source_url": "https://x.com/sgl_project/status/2115913588741468629",
+        "time": "2026-10-30T05:08:05+08:00",
+        "handle": "@sgl_project",
+        "impact": "开源模型的推理速度接近即时响应，Agent 多步任务的等待时间会明显缩短。",
+        "points": [
+          "硬件为 GB300 NVL72",
+          "关键手段是内核融合"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Sakana AI 拿下 OpenMath 2026 黑客松企业组第一",
+        "summary": "Sakana AI 在与 Stephen Wolfram 合办的 OpenMath 2026 数学自我改进黑客松中获得企业组第一。团队主要用 Sakana Fugu 模型和内部 Agent 工具，贡献 14 个数学问题族，其中 6 个完整解决。",
+        "source_url": "https://x.com/SakanaAILabs/status/2115813405835846058",
+        "time": "2026-10-29T22:30:00+08:00",
+        "handle": "@SakanaAILabs",
+        "impact": "AI 做数学研究从单题证明走向成批产出，小公司也能在这条赛道拿出成果。",
+        "points": [
+          "贡献 14 个数学问题族",
+          "其中 6 个完整解决"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Scale AI 发布机器人数据集 FineART",
+        "summary": "Scale AI 发布 FineART，包含 50 万多条人工标注的机器人动作步骤，并配一个能从中学习的开放模型，面向多步骤任务训练。",
+        "source_url": "https://x.com/scale_AI/status/2115838547844571498",
+        "time": "2026-10-30T00:09:54+08:00",
+        "handle": "@scale_AI",
+        "impact": "机器人训练数据一直稀缺，公开的大规模标注数据能降低研究团队的起步门槛。",
+        "points": [
+          "50 万多条人工标注步骤",
+          "附带开放模型"
+        ]
+      },
+      {
+        "title": "ElevenLabs 发布音效模型 SFX v3",
+        "summary": "ElevenLabs 发布新一代音效模型 SFX v3，用一句文字就能生成更丰富、更精确的音效，音乐和人声效果也有改进。已上架 ElevenCreative 和 ElevenAPI。",
+        "source_url": "https://x.com/ElevenLabs/status/2115867078964187368",
+        "time": "2026-10-30T02:03:17+08:00",
+        "handle": "@ElevenLabs",
+        "impact": "做视频和游戏的个人创作者找音效更省事，素材库类服务会感到压力。",
+        "points": [
+          "文字生成音效",
+          "ElevenCreative 和 API 可用"
+        ]
+      },
+      {
+        "title": "Claude 手机端更新：支持 CarPlay，语言增至 33 种",
+        "summary": "Claude 应用的语音模式在 iPhone 上支持 CarPlay，新增 24 种语言，总数达到 33 种。iOS 和安卓还支持多账号切换，嘈杂环境下的语音识别也有改进。",
+        "source_url": "https://x.com/claudeai/status/2115859377488072879",
+        "time": "2026-10-30T01:32:41+08:00",
+        "handle": "@claudeai",
+        "impact": "工作号和个人号可以在同一部手机上来回切，开车时也能用语音和 Claude 对话。",
+        "points": [
+          "iPhone 语音模式支持 CarPlay",
+          "新增 24 种语言",
+          "支持多账号切换"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "LobeHub 发布 Agent 评测 Interaction Bench",
+        "summary": "LobeHub 团队从 25 个真实开源应用里抽出 44 个任务，只告诉 Agent 用户想要什么，让它自己找问题、修复并验证。首轮 GPT-6 Astra 以 34.1% 排第一，Claude Opus 5.5 为 27.3%，其他模型只有 4.5% 到 15.9%。目前是 0.1 预览版。",
+        "source_url": "https://x.com/MaxForAI/status/2115913730806755538",
+        "time": "2026-10-30T05:08:39+08:00",
+        "handle": "@MaxForAI",
+        "impact": "说明 Agent 离「交代一句就办好」还很远，选 Agent 工具时别只看常见跑分。",
+        "points": [
+          "44 个任务来自 25 个开源应用",
+          "最强模型也只完成三成多",
+          "团队自测，0.1 预览版"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "3 个 Agent 接力 21 小时，做出 CC0 姿势线稿库",
+        "summary": "作者发现原姿势库禁止再分发，就用 3 个共享记忆的 AI Agent 接力 21 小时，重做了 288 个姿势、5 个机位共 1,133 张质检过的线稿，以 CC0 免费开放。他还公开了先出真人图、再转线稿的两步提示词。",
+        "source_url": "https://x.com/wquguru/status/2115781600659337611",
+        "time": "2026-10-29T20:23:37+08:00",
+        "handle": "@wquguru",
+        "impact": "绘画和生图用户多了一套版权干净的姿势参考，也是多 Agent 长时间协作的实例。",
+        "points": [
+          "288 个姿势 × 5 个机位",
+          "CC0 可免费商用",
+          "公开两步提示词"
+        ]
+      },
+      {
+        "title": "腾讯《2026 AI Agent 企业解决方案及落地实践手册》拆解",
+        "summary": "腾讯、腾讯云和 WorkBuddy 联合发布 78 页手册，主线是用 WorkBuddy 把个人助手推成进业务系统的「数字员工」，再用 ClawPro、Agent Runtime、TokenHub 做开通、隔离和治理。手册列了大量企业案例，效果数据多为企业自述。",
+        "source_url": "https://x.com/shao__meng/status/2115785693599523089",
+        "time": "2026-10-29T20:39:53+08:00",
+        "handle": "@shao__meng",
+        "impact": "能快速看清国内大厂怎么卖企业 Agent，做选型或写方案时可作参照。",
+        "points": [
+          "78 页，覆盖研发运维、SaaS、内容、客服等",
+          "核心产品是 WorkBuddy",
+          "案例数据多为自述"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Sam Altman：一次 Navier-Stokes 证明的算力成本约 1,000 万美元",
+        "summary": "Gorden_Sun 整理了 Sam Altman 近期播客要点：OpenAI 攻克 Navier-Stokes 难题时，单次证明的算力成本约 1,000 万美元。Altman 还说内部已有比公开成果多得多的科学发现尚未发布，并更倾向于让大量略超人类的 AI 进入社会，而不是一个单一超级智能。",
+        "source_url": "https://x.com/Gorden_Sun/status/2115827663223050504",
+        "time": "2026-10-29T23:26:39+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "让人对 AI 做科研的真实成本有了量级概念，也说明这类成果短期内只有大公司做得起。",
+        "points": [
+          "单次证明算力约 1,000 万美元",
+          "内部有大量未发布的科学发现"
+        ]
+      },
+      {
+        "title": "Tw93 把 AI 编程习惯整理成 20 条规则",
+        "summary": "Tw93 把自己用 AI 写代码的习惯整理成 20 条规则，比如只描述想要的结果、不指定实现，提交、发布和删除必须经人确认。他还提醒：密钥一旦贴进聊天就当作已泄露并立即轮换，硬规则要靠脚本检查而不是提示词。",
+        "source_url": "https://x.com/HiTw93/status/2115805352520282623",
+        "time": "2026-10-29T21:58:00+08:00",
+        "handle": "@HiTw93",
+        "impact": "一份可以直接照抄的 Agent 协作守则，安全几条尤其值得放进自己的项目说明。",
+        "points": [
+          "描述结果，别指定实现",
+          "提交、发布、删除须人工确认",
+          "密钥进聊天即视为泄露"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenClaw v2026.10.9：修补安全依赖和更新回滚",
+        "summary": "OpenClaw 新版修补了多个有漏洞的运行时依赖，修复更新回滚和聊天归档问题，新编辑会话默认在所选项目目录运行。同时还发布了只含网关、相当于长期支持的稳定版 v2026.9.36。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.9",
+        "time": "2026-10-29T23:54:35+08:00",
+        "impact": "在用 OpenClaw 的人建议尽快升级，求稳的部署可以改跟长期支持版。",
+        "points": [
+          "修补有漏洞的依赖",
+          "修复更新回滚",
+          "另有长期支持版 v2026.9.36"
+        ]
+      },
+      {
+        "title": "opencode v2.2.2：默认支持图像生成，OpenCode Go 开放团队版",
+        "summary": "opencode 新版让 Agent 在模型供应商支持图像模型时，无需额外配置就能调用图像生成。它的订阅服务 OpenCode Go 现在也能整个团队一起用。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.2",
+        "time": "2026-10-30T02:43:03+08:00",
+        "impact": "开源编程 Agent 能顺手出图，做前端和文档时少切一个工具。",
+        "points": [
+          "图像生成默认可用",
+          "OpenCode Go 支持团队"
+        ]
+      },
+      {
+        "title": "vectorize-io/hindsight：会学习的 Agent 记忆",
+        "summary": "hindsight 今日在 GitHub Trending 新增约 1,352 星。项目自述是「会学习的 Agent 记忆」，给 Agent 提供能随使用积累经验的记忆层。",
+        "source_url": "https://github.com/vectorize-io/hindsight",
+        "time": "2026-10-30T06:00:00+08:00",
+        "impact": "Agent 长期记忆是当下热门方向，想给自己 Agent 加记忆的可以先试这个。",
+        "points": [
+          "今日新增约 1,352 星",
+          "定位为 Agent 记忆层"
+        ]
+      },
+      {
+        "title": "obra/superpowers：Agent Skills 框架和开发方法论",
+        "summary": "superpowers 今日新增约 1,037 星，项目自述是一套好用的 Agent 技能框架和软件开发方法论。",
+        "source_url": "https://github.com/obra/superpowers",
+        "time": "2026-10-30T06:00:00+08:00",
+        "impact": "想系统化用 Skills 管理编程 Agent 工作流的人，可以拿它当现成模板参考。",
+        "points": [
+          "今日新增约 1,037 星",
+          "Skills 框架加开发方法论"
+        ]
+      },
+      {
+        "title": "Cline：改 5 个 vLLM 配置，吞吐量翻倍",
+        "summary": "Cline 团队在单块 GB300 上，只改了 5 个 vLLM 配置，就让 Nemotron 3.5 Super VL 的吞吐量从每秒 6,058 token 提到 11,840 token。做法包括提前起草 token、让 GPU 不空转、用半精度存储缓存。",
+        "source_url": "https://x.com/cline/status/2115884854139380134",
+        "time": "2026-10-30T03:13:55+08:00",
+        "handle": "@cline",
+        "impact": "自托管模型的团队先把推理配置调好，可能比直接加机器更省钱、见效更快。",
+        "points": [
+          "每秒 6,058 提到 11,840 token",
+          "只改配置不改模型"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "风云卫星发布首批两个极端天气 AI 模型（转述）",
+        "summary": "据转述，10 月 29 日风云卫星用户大会发布了台风智能云图解译和强对流短临预警两个 AI 模型。前者每 15 分钟解译一次台风位置、结构和强度，后者用风云四号过去两小时观测预测未来四小时云图，把预警提前到 4 小时。",
+        "source_url": "https://x.com/czw88888/status/2115776946277654897",
+        "time": "2026-10-29T20:05:07+08:00",
+        "handle": "@czw88888",
+        "impact": "气象 AI 正在进入国内业务预报，台风和强对流预警有望更早、更细。",
+        "points": [
+          "台风云图每 15 分钟自动解译",
+          "强对流预警提前到 4 小时",
+          "12 家单位联合研发"
+        ],
+        "tag": "转述"
+      }
+    ],
+    "tech": [
+      {
+        "title": "Android 17 QPR3 Beta 3：应用锁回归",
+        "summary": "Google 推送 Android 17 QPR3 Beta 3，找回应用锁功能，并修复了 26 个 Pixel 问题。",
+        "source_url": "https://x.com/AndroidAuth/status/2115911319018680828",
+        "time": "2026-10-30T04:59:04+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "Pixel 测试版用户可以重新给单个应用上锁，隐私保护更方便。",
+        "points": [
+          "应用锁回归",
+          "修复 26 个 Pixel 问题"
+        ]
+      },
+      {
+        "title": "旧版 Popcorn Time 让几十万台 Mac 面临风险",
+        "summary": "MacRumors 报道，旧版 Popcorn Time 应用让几十万台 Mac 面临安全风险。装过它的人值得检查一下。",
+        "source_url": "https://x.com/MacRumors/status/2115854425910874274",
+        "time": "2026-10-30T01:13:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "不再更新的老应用也是安全隐患，Mac 上用不到的旧软件最好及时清理。",
+        "points": [
+          "涉及几十万台 Mac",
+          "问题出在旧版应用"
+        ]
+      },
+      {
+        "title": "Reddit 将要求登录才能看大部分内容",
+        "summary": "Reddit 即将变成只有登录才能浏览大部分内容的网站，未登录用户能看到的内容会大幅减少。",
+        "source_url": "https://x.com/9to5mac/status/2115909136944644336",
+        "time": "2026-10-30T04:50:24+08:00",
+        "handle": "@9to5mac",
+        "impact": "靠搜索引擎查 Reddit 经验帖会更麻烦，不想注册的人需要另找信息源。",
+        "points": [
+          "大部分内容需登录",
+          "未登录可看内容大减"
+        ]
+      },
+      {
+        "title": "苹果 10 月 31 日起下调台湾地区 App Store 佣金",
+        "summary": "MacRumors 报道，苹果将从 10 月 31 日起下调台湾地区 App Store 的佣金，具体费率以苹果开发者公告为准。",
+        "source_url": "https://x.com/MacRumors/status/2115882925648674888",
+        "time": "2026-10-30T03:06:15+08:00",
+        "handle": "@MacRumors",
+        "impact": "在台湾地区上架应用的开发者分成会提高，苹果的地区性降佣还在继续扩大。",
+        "points": [
+          "10 月 31 日生效",
+          "具体费率见开发者公告"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "群晖勒索事件续报：官方称攻击利用已修补的 CVE-2024-10441",
+        "summary": "群晖紧急公告确认有 NAS 用户数据被加密勒索，官方初步判断攻击者利用 2024 年 12 月已修补的 9.8 分高危漏洞，专打仍跑旧版 DSM 的设备，并列出各版本的修复版本号。但有用户在 Reddit 说自己的 DSM 比公告要求更新仍被加密，此说法未证实。HKEPC 建议先断开外网、尽快升级。",
+        "source_url": "https://x.com/hkepcmedia/status/2115824886526755251",
+        "time": "2026-10-29T23:15:37+08:00",
+        "handle": "@hkepcmedia",
+        "impact": "家里有群晖 NAS 的建议马上确认 DSM 版本，并关掉外网直连，改用 Tailscale 等方式远程访问。",
+        "points": [
+          "漏洞评分 9.8，2024 年 12 月已修补",
+          "受害者多为旧版 DSM",
+          "⚠️ 有用户称已更新仍中招，未证实"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Google Home 更新：修摄像头、Matter 设备和 Gemini 理解问题",
+        "summary": "Google Home 本轮更新修复 Nest Cam、Matter 设备等一批老问题，改进节能功能，还让 Gemini 少说「抱歉，我没听懂」。",
+        "source_url": "https://x.com/9to5Google/status/2115873813128786312",
+        "time": "2026-10-30T02:30:02+08:00",
+        "handle": "@9to5Google",
+        "impact": "用 Google Home 管 Matter 设备的家庭，掉线和识别失败的情况应会减少。",
+        "points": [
+          "修复 Nest Cam 和 Matter 问题",
+          "Gemini 理解能力改进"
+        ]
+      },
+      {
+        "title": "Zapier 上架 Google Antigravity 插件市场",
+        "summary": "在 Google Antigravity 里一键接入 Zapier MCP 后，Agent 就能操作 9,000 多个应用，例如一次完成推 GitHub 修复、建 Jira 单、发 Slack 和改 Notion。",
+        "source_url": "https://x.com/zapier/status/2115853699591373021",
+        "time": "2026-10-30T01:10:07+08:00",
+        "handle": "@zapier",
+        "impact": "编程 Agent 能直接打通日常办公工具，开发者少写很多胶水代码。",
+        "points": [
+          "一键接入 Zapier MCP",
+          "可连 9,000 多个应用"
+        ]
+      },
+      {
+        "title": "n8n 分享内部 12,000 多个自动化流程的管理经验",
+        "summary": "n8n 内部有 12,000 多个自动化流程，一个团队做不过来。于是自动化团队改为教每个团队自己搭建，并把方法写成了博客。",
+        "source_url": "https://x.com/n8n_io/status/2115760055521824995",
+        "time": "2026-10-29T18:58:00+08:00",
+        "handle": "@n8n_io",
+        "impact": "自动化做大之后，规范和培训比集中开发更重要，个人和小团队也能借鉴。",
+        "points": [
+          "内部 12,000 多个流程",
+          "自动化团队改做培训和规范"
+        ]
+      }
+    ]
+  }
+}
