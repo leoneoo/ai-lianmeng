@@ -1,0 +1,413 @@
+{
+  "id": "2026-10-29-0600",
+  "published_at": "2026-10-29T06:00:00+08:00",
+  "headline": "Gemini 4 Carbon 登上智能指数第一，本周只给安全防御方；苹果发布首款触屏 MacBook Pro",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Google 发布 Gemini 4 Carbon，登上 AA 智能指数 v5 第一，本周只给安全防御方用",
+        "summary": "Google 发布 Gemini 4 Carbon，距 Gemini 4 Argon 只隔两周，在 Artificial Analysis 智能指数 v5 上以 59 分排第一。官方称它在找漏洞、利用漏洞和打补丁三类安全评测上领先，写出安全代码的成功率是 Argon 的两倍多。本周只开放给一部分网络安全防御方，之后通过 Fairwind 计划逐步扩大，开发者和普通用户的开放日期没有公布。",
+        "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "time": "2026-10-29T01:02:00+08:00",
+        "handle": "@OfficialLoganK",
+        "impact": "榜首模型先只给安全防御方，普通开发者暂时用不上，要等 Google 公布开放时间。",
+        "points": [
+          "AA 智能指数 v5 得 59 分，9 项评测拿下 4 项第一",
+          "编程 Agent 指数 59 分，排在 Claude Code + Opus 5.5（62 分）之后",
+          "SEC-bench Pro 88.2%、ExploitGym 54.8%、CWE-bench 71.0%",
+          "API 引入价每百万 token 输入 2 美元、输出 10 美元，之后涨到 4 和 20 美元"
+        ]
+      },
+      {
+        "title": "GitHub 发布 Copilot Fusion：自动在多家模型间分派任务，AA 测得成本约为 Claude Code 的一半",
+        "summary": "GitHub 在 Universe 大会上发布 Copilot Fusion，按任务难度在 Anthropic 和 OpenAI 的多个模型之间挑选和组合。Artificial Analysis 测得 Fusion Max 的编程 Agent 指数只比 Claude Code + Opus 5.5 低 2 分，单任务成本 5.59 美元，对方是 11.42 美元。同场还发布了进入 Microsoft Foundry 的统一 Copilot 运行框架，以及跨仓库编排多个 Agent 的 Copilot Projects。",
+        "source_url": "https://x.com/satyanadella/status/2115490856685990244",
+        "time": "2026-10-29T01:08:00+08:00",
+        "handle": "@satyanadella",
+        "impact": "多模型调度开始成为编程工具的卖点，同等水平下成本可以压到一半左右。",
+        "points": [
+          "官方称速度快 40%、成本最多低 77%",
+          "所有套餐有基础档，High 和 Max 档要 39 美元/月的 Pro+ 或更高",
+          "按实际调用的模型扣点数，付费用户 11 月 30 日前打七折",
+          "Terminal-Bench 4.0 得 71 分，排第一"
+        ]
+      },
+      {
+        "title": "ChatGPT Pro 和 Business 订阅每月可领最多 500 美元 API 额度，Plus 没有",
+        "summary": "OpenAI 宣布，符合条件的 ChatGPT Pro 和 Business 订阅用户每月可以领 API 额度，用来做自己的 App 和 Agent，最多 500 美元。Pro 按档位每月 100、200 或 500 美元；Business 按席位计算，整个工作区上限 500 美元。Plus、Go、免费版和 Enterprise 都没有。",
+        "source_url": "https://x.com/OpenAIDevs/status/2115583698074755078",
+        "time": "2026-10-29T07:17:00+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "已订 Pro 或 Business 的用户每月多一笔可用的 API 预算，不领就作废。",
+        "points": [
+          "要在 ChatGPT「设置 → 账单」里手动领取",
+          "需绑定与 ChatGPT 同一邮箱、自己名下的 API 组织",
+          "Business 标准席位每个 20 美元、高级席位每个 100 美元",
+          "据转述的帮助页，额度当月有效，周期结束清零"
+        ]
+      },
+      {
+        "title": "NVIDIA 开放 Nemotron 3.5 Transcribe：一个 30B MoE 模型做转写、分说话人和翻译",
+        "summary": "NVIDIA 发布开放权重的语音模型 Nemotron 3.5 Transcribe，总参数 30B、每次激活约 4B，支持 40 种语言转写、标注说话人、翻译和音频问答。vLLM 首日支持，单段录音最长一小时。Artificial Analysis 测得词错率 2.8%，在开放权重语音转文字模型里并列第一。",
+        "source_url": "https://x.com/NVIDIAAI/status/2115462300241141882",
+        "time": "2026-10-28T23:14:00+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "开源语音转写的质量追上第一梯队，自己部署会议转写的门槛更低了。",
+        "points": [
+          "权重已上 Hugging Face，提供 BF16、FP8、NVFP4 三种",
+          "可以用提示词调整转写结果",
+          "非流式模型，适合整段录音，不适合实时字幕"
+        ]
+      },
+      {
+        "title": "Mistral 推出 Responses API 公测版，面向 Agent 开发",
+        "summary": "Mistral 发布 Responses API 公测版，每次响应把模型的回答、推理过程和工具调用拆成独立条目返回。官方说这样比 Chat Completions 更方便应用逐步处理 Agent 的每一步。所有 Mistral 托管的对话模型都能用，包括 Large 4。",
+        "source_url": "https://x.com/MistralAI/status/2115443720371814478",
+        "time": "2026-10-28T22:01:00+08:00",
+        "handle": "@MistralAI",
+        "impact": "Responses 风格的接口正在成为各家 Agent API 的通用写法。",
+        "points": [
+          "回答、推理、工具调用分开返回",
+          "支持全部 Mistral 托管对话模型，含 Large 4"
+        ]
+      },
+      {
+        "title": "Alphabet 和微软财报：Google Cloud 收入增长 103%，微软云突破 630 亿美元",
+        "summary": "Sundar Pichai 说 Alphabet 第三季度营收增长 25%，年化营收达到 5000 亿美元，Google Cloud 收入增长 103%。自家模型 API 每分钟处理近 320 亿 token，环比增长 40%。Satya Nadella 说微软云单季收入超过 630 亿美元，同比增长加快到 30%。",
+        "source_url": "https://x.com/sundarpichai/status/2115535455156642066",
+        "time": "2026-10-29T04:05:00+08:00",
+        "handle": "@sundarpichai",
+        "impact": "两家都把增长归到 AI 基础设施需求，云厂商的 AI 投入还在加码。",
+        "points": [
+          "Google 搜索查询量同比增速是五年来最高",
+          "Google 模型 API 每分钟近 320 亿 token",
+          "微软云同比增长 30%"
+        ]
+      },
+      {
+        "title": "xAI 的 Grok API 新增 guidelines 参数，可自定义内容审核规则",
+        "summary": "xAI 给 Grok 文本 API 加了 guidelines 参数，开发者可以在请求里写规则，控制模型如何处理特定类别的内容。模型会在生成回答时照这些规则执行。所有 API 客户都能用。",
+        "source_url": "https://x.com/grok/status/2115584612122718296",
+        "time": "2026-10-29T07:20:00+08:00",
+        "handle": "@grok",
+        "impact": "做面向用户产品的开发者多了一个按场景调审核尺度的办法。",
+        "points": [
+          "在请求里直接写审核规则",
+          "所有 API 客户可用"
+        ]
+      },
+      {
+        "title": "ElevenLabs 公开强制对齐模型 Cue，一小时音频约 0.5 秒对齐完",
+        "summary": "ElevenLabs 介绍了新的强制对齐模型 Cue，把转写稿里每个字符对到音频时间轴上，用于字幕和配音对口型。官方称在 29 种语言上比测过的开源对齐工具都准，一块 GPU 约 0.5 秒能对齐一小时音频。Cue 已用于 ElevenLabs 全部语音转文字，也可以单独通过 API 调用。",
+        "source_url": "https://x.com/ElevenLabs/status/2115527286065914248",
+        "time": "2026-10-29T03:33:00+08:00",
+        "handle": "@ElevenLabs",
+        "impact": "做字幕、配音的工具多了一个高精度的时间轴对齐选项。",
+        "points": [
+          "一个模型处理任意长度的录音",
+          "可通过 Forced Alignment API 单独使用"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Claude for Legal 上线现成工具库：查引文、审合同、追新法规",
+        "summary": "Anthropic 给 Claude for Legal 加了一个现成 Artifacts 工具库，包括查引文、合同偏差检查、批量摘录合同条款等。每个工具先给示例，再换成自己的文件，结论附原文出处。普华永道、Harvey 等也往库里放了工具。",
+        "source_url": "https://x.com/claudeai/status/2115467192276025500",
+        "time": "2026-10-28T23:34:00+08:00",
+        "handle": "@claudeai",
+        "impact": "法律场景的 AI 用法从对话转向可复用、可核对的工具。",
+        "points": [
+          "Anthropic 自己做了 6 个工具",
+          "工具可以分享给公司里的其他人"
+        ]
+      },
+      {
+        "title": "Google 预览 Connected Apps Platform，为搜索和 Gemini App 做应用",
+        "summary": "Google 推出 Connected Apps Platform 预览，开发者可以在一个地方为搜索和 Gemini App 开发和管理应用。首批合作方的应用来自 Adobe、Calm、Peloton 等。",
+        "source_url": "https://x.com/Google/status/2115562774231155045",
+        "time": "2026-10-29T05:54:00+08:00",
+        "handle": "@Google",
+        "impact": "Gemini 的第三方应用生态开始有统一的开发入口。",
+        "points": [
+          "一个平台同时覆盖搜索和 Gemini App",
+          "首批合作方包括 Adobe、Calm、Peloton"
+        ]
+      },
+      {
+        "title": "Perplexity 为 Pro 和 Max 用户推出新语音模式",
+        "summary": "Perplexity 在网页版和 Mac 应用上推出新语音模式，面向 Pro 和 Max 用户。Aravind Srinivas 说可以用语音同时派出多项并行任务。",
+        "source_url": "https://x.com/AravSrinivas/status/2115476775505658135",
+        "time": "2026-10-29T00:12:00+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "语音开始成为给 Agent 派活的入口之一。",
+        "points": [
+          "网页版和 Mac 应用可用",
+          "面向 Pro 和 Max 用户"
+        ]
+      },
+      {
+        "title": "Sakana AI 推出 API Platform，开放企业早期试用",
+        "summary": "Sakana AI 发布 Sakana API Platform，企业可以通过 API 使用 Sakana 的模型，并带有组织级管理功能。目前开放企业早期试用。",
+        "source_url": "https://sakana.ai/api-platform-earlyaccess/",
+        "time": "2026-10-29T09:07:00+08:00",
+        "handle": "@SakanaAILabs",
+        "impact": "日本的模型公司开始直接向企业卖 API。",
+        "points": [
+          "面向企业客户",
+          "带组织管理功能"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "@dotey：Claude Code 自动压缩阈值调到 300K 能省额度",
+        "summary": "1M 上下文模型默认要到约 967K 才自动压缩，之后每次请求都带着整段历史，就算走缓存也照样计入额度。运行 /autocompact 300k 可以提前压缩，长对话能省不少 token。原推建议 400K，他自己用 300K 就够。",
+        "source_url": "https://x.com/dotey/status/2115505947187585302",
+        "time": "2026-10-29T02:08:00+08:00",
+        "handle": "@dotey",
+        "impact": "重度使用 Claude Code 的人可以直接照做，减少额度消耗。",
+        "points": [
+          "命令：/autocompact 300k",
+          "默认阈值约 967K"
+        ]
+      },
+      {
+        "title": "@dotey：网友晒 OpenAI 软件工程师面试全流程",
+        "summary": "Reddit 上一位匿名网友讲了自己面 OpenAI 软件工程师的流程：招聘官电话、两轮技术初筛、48 小时带回家项目、逐行追问项目的面试，再加四轮现场面。部分候选人还要用 AI 编码工具做一道靠手写做不完的题。这是个人经历，不同团队可能不一样。",
+        "source_url": "https://x.com/dotey/status/2115556902876991894",
+        "time": "2026-10-29T05:30:00+08:00",
+        "handle": "@dotey",
+        "impact": "大厂面试开始直接考怎么用 AI 编码工具。",
+        "points": [
+          "带回家项目会被逐行追问",
+          "部分人加考用 AI 写代码"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "@shao__meng：Entire 为「人和 Agent 一起写代码」重做 Git 托管",
+        "summary": "前 GitHub CEO 创办的 Entire 用 Trail 代替以 diff 为主的 PR 时间线，每次推送由评审 Agent 在云沙箱里打分，问题关掉再合并。会话和决策会写回仓库，下一轮 Agent 不用从头摸索。",
+        "source_url": "https://x.com/shao__meng/status/2115439137407009193",
+        "time": "2026-10-28T21:42:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "代码托管开始按 Agent 高频提交和评审来重新设计。",
+        "points": [
+          "评估项包括安全、废话代码、需要人工审",
+          "一条 Trail 可以跨多个仓库"
+        ]
+      },
+      {
+        "title": "@yetone：Alma iOS 内置 Herdr 手机客户端，可远程用 Claude Code",
+        "summary": "yetone 嫌远程桌面在手机上难用，做了原生的 Herdr 客户端，目前只适配 Claude Code，集成在 Alma iOS 里。它通过 Alma 自带的端到端加密中转服务器连回家里的电脑，同一局域网时自动走内网。他打算以后开源这个中转服务器。",
+        "source_url": "https://x.com/yetone/status/2115516478254624914",
+        "time": "2026-10-29T02:50:00+08:00",
+        "handle": "@yetone",
+        "impact": "在手机上远程指挥家里电脑上的编程 Agent 更顺手了。",
+        "points": [
+          "中转服务器端到端加密",
+          "同一局域网自动切内网"
+        ]
+      },
+      {
+        "title": "⚠️ 未证实｜@MaxForAI：Claude Code 无界面模式扣额度更快",
+        "summary": "MaxForAI 转述 anthropics/claude-code 的 Issue #97074：开发者做对照实验，发现无界面的 claude -p 在同样工作量下，每个 token 消耗的 5 小时额度约为交互模式的 1.8 倍。Issue 9 月 25 日提出，目前仍开着，Anthropic 尚未说明原因。",
+        "source_url": "https://github.com/anthropics/claude-code/issues/97074",
+        "time": "2026-10-28T20:19:00+08:00",
+        "handle": "@MaxForAI",
+        "impact": "用 claude -p 跑自动化脚本的人需要留意额度消耗。",
+        "points": [
+          "对比的是 claude -p 和交互模式",
+          "Issue 仍处于打开状态"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "HKUDS/DeepTutor 登上 GitHub 总榜：围绕自己资料的长期学习助手",
+        "summary": "DeepTutor 是港大数据智能实验室的个性化学习助手，主打围绕用户自己的资料长期记住学习进度。今日 GitHub 总榜和 Python 榜新增约 2,371 星，总星数约 4.8 万，Apache-2.0 协议。",
+        "source_url": "https://github.com/HKUDS/DeepTutor",
+        "time": "2026-10-29T09:42:00+08:00",
+        "impact": "用 AI 学习的开源方案开始强调长期记忆。",
+        "points": [
+          "今日新增约 2,371 星",
+          "Apache-2.0 协议"
+        ]
+      },
+      {
+        "title": "Zed 的 Delta 让 Claude Code 多人实时协作",
+        "summary": "在 Claude Code 里运行 /delta share，同事就能加入同一个会话，看到完整上下文和未提交的改动。Delta CLI 跨机器同步工作区，每人仍用自己的 Claude 会话，但都能读到之前试过和排除的方案。",
+        "source_url": "https://x.com/xiaohu/status/2115398911947088189",
+        "time": "2026-10-28T19:02:00+08:00",
+        "handle": "@xiaohu",
+        "impact": "多人围着同一个编程 Agent 协作有了现成工具。",
+        "points": [
+          "一条命令共享会话",
+          "共享上下文和未提交改动"
+        ]
+      },
+      {
+        "title": "Tw93 的终端 Kaku 新增远程访问，浏览器里接着跑 Claude Code",
+        "summary": "Kaku 10 月出了 9 个版本，主要是远程访问。运行 kaku remote 后，Mac 上的终端（包括正在跑的 Claude Code 会话）可以在另一台设备的浏览器里打开，网页和远程桌面都支持触控。",
+        "source_url": "https://github.com/tw93/Kaku",
+        "time": "2026-10-28T22:19:00+08:00",
+        "handle": "@HiTw93",
+        "impact": "离开电脑也能继续看管终端里的 Agent 会话。",
+        "points": [
+          "命令：kaku remote",
+          "支持触控操作"
+        ]
+      },
+      {
+        "title": "Runway Dev 上架 Codex 插件，让 Codex 自己写 Runway API 集成",
+        "summary": "Runway 推出 Codex 插件，装上后 Codex 就有接入 Runway API 所需的资料。描述想让应用生成什么，由 Codex 自己写集成代码。",
+        "source_url": "https://x.com/runwayml/status/2115510886144282927",
+        "time": "2026-10-29T02:27:00+08:00",
+        "handle": "@runwayml",
+        "impact": "API 厂商开始直接给编程 Agent 提供接入插件。",
+        "points": [
+          "一次安装即可使用",
+          "Codex 自主完成集成"
+        ]
+      },
+      {
+        "title": "NVIDIA 开源 simready-assets 仿真 3D 模型库，2600 多个模型",
+        "summary": "NVIDIA 在 Hugging Face 上开放 simready-assets 数据集，包含 2600 多个仿真 3D 模型，总大小约 476GB。可用于机器人和仿真训练。",
+        "source_url": "https://huggingface.co/datasets/nvidia/simready-assets",
+        "time": "2026-10-29T00:01:00+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "做机器人仿真的团队多了一个现成的大型素材库。",
+        "points": [
+          "2600 多个模型",
+          "总大小约 476GB"
+        ]
+      },
+      {
+        "title": "FilmCraft：用 Rust 从零写的开源专业剪辑软件",
+        "summary": "FilmCraft 的面板、工作区和快捷键都照专业剪辑软件的习惯设计，剪辑、调色、音频、字幕都有，自带 90 多种特效。仓库约 1.67 万星。本轮没有新的气象 AI 模型或论文。",
+        "source_url": "https://github.com/storytold/filmcraft",
+        "time": "2026-10-28T22:30:00+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "开源剪辑软件多了一个贴近专业软件操作习惯的选择。",
+        "points": [
+          "Rust 编写",
+          "约 1.67 万星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果发布首款触屏 MacBook Pro，换 PROLED XDR 屏，14 英寸 2,899 美元起",
+        "summary": "苹果发布 14 英寸和 16 英寸触屏 MacBook Pro，使用串联 OLED 的 PROLED XDR 屏，峰值亮度 2000 尼特，触控传感器做在面板里。刘海换成小号灵动岛，背面发光苹果标志回归，芯片仍是 M5 Pro 和 M5 Max。14 英寸 2,899 美元起，16 英寸 3,399 美元起，11 月 6 日发售。",
+        "source_url": "https://www.macrumors.com/2026/10/28/apple-new-macbook-pro/",
+        "time": "2026-10-29T01:11:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "Mac 第一次支持触屏，应用开发者需要开始适配触控操作。",
+        "points": [
+          "内存最高 128GB，存储最高 16TB",
+          "满配约 14,549 美元",
+          "现有非触屏款继续卖",
+          "苹果放出触屏 Mac 开发者视频，11 月有直播课程"
+        ]
+      },
+      {
+        "title": "M5 Ultra Mac Studio 新增 512GB 内存选项",
+        "summary": "MacRumors 报道，M5 Ultra Mac Studio 现在可以选 512GB 统一内存，这一配置售价 22,299 美元。",
+        "source_url": "https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/",
+        "time": "2026-10-29T01:26:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "想在本地跑大模型的人多了一个大内存选项。",
+        "points": [
+          "512GB 统一内存",
+          "配置价 22,299 美元"
+        ]
+      },
+      {
+        "title": "Apple Creator Studio 加入 AI 功能，iWork 支持 MCP",
+        "summary": "Pixelmator Pro 新增生成式填充，Final Cut Pro 内置 MotionVFX。Keynote、Pages、Numbers 支持 MCP，Keynote 还推出给外部工具和 Agent 读写的 .keyx 格式。生成功能多为测试版，需要支持 Apple Intelligence 的机型，目前只支持美式英语。",
+        "source_url": "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/",
+        "time": "2026-10-28T21:32:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "外部 Agent 可以直接读写苹果的办公文档。",
+        "points": [
+          "iWork 三件套支持 MCP",
+          "Keynote 新增 .keyx 格式"
+        ]
+      },
+      {
+        "title": "ChatGPT dot 可以通过 iMessage 和 RCS 发短信联系",
+        "summary": "OpenAI 让 ChatGPT dot 支持 iMessage 和 RCS，在 dot 的资料页选「Texting」开启。可以用文字、照片或语音消息交代任务，它也会主动发短信报进展。OpenAI 说这不会让 dot 读到你的其他短信。",
+        "source_url": "https://9to5mac.com/2026/10/28/openai-expanding-chatgpt-dot-access-to-imessage-and-rcs/",
+        "time": "2026-10-29T02:42:00+08:00",
+        "handle": "@9to5mac",
+        "impact": "不打开 ChatGPT 应用也能给 Agent 派活。",
+        "points": [
+          "在 dot 资料页开启 Texting",
+          "支持文字、照片和语音消息"
+        ]
+      },
+      {
+        "title": "Chrome 自动填充开始从 Gmail 里取订单号和航班信息",
+        "summary": "Google 在美国推送 Gemini 驱动的增强自动填充，开启了 Personal Intelligence 的用户填表时，Chrome 会建议 Gmail 里的订单号、快递单号、航班预订码等。桌面、安卓、iOS 都在推送。Google 说数据加密、可以在设置里关闭，但具体权限控制还没公开。",
+        "source_url": "https://www.androidauthority.com/chrome-gemini-autofill-gmail-privacy-3728808/",
+        "time": "2026-10-29T01:05:00+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "方便的同时，浏览器能读到的邮件信息变多了，开启前要想清楚。",
+        "points": [
+          "目前仅限美国",
+          "需开启 Gemini 和 Personal Intelligence"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Home Assistant 2026.11 测试版：HACS 变成内置 Marketplace，支持 Matter 摄像头",
+        "summary": "社区集成、卡片和主题可以直接在「设置 > Marketplace」里安装，不再需要 GitHub 账号，旧的 HACS 会自动迁移。新版支持 Matter 1.5 摄像头，备份可以存到内置或 USB 硬盘，还加了 LoRaWAN 支持。正式版计划 11 月 4 日发布。",
+        "source_url": "https://github.com/home-assistant/core/releases/tag/2026.11.0b0",
+        "time": "2026-10-29T00:06:00+08:00",
+        "impact": "HACS 用户升级正式版时会自动迁移，自定义集成要留意兼容性。",
+        "points": [
+          "实体命名规则改动，仪表盘名称可能变化，实体 ID 不变",
+          "官方另外预告了 11 月 11 日的活动"
+        ]
+      },
+      {
+        "title": "IFTTT 改名 IFTTT.ai，所有套餐都能用全部核心功能",
+        "summary": "IFTTT 改名为 IFTTT.ai，所有套餐都能使用全部核心功能和所有服务。Applet 数量不限，另外加了新的 AI 工具。",
+        "source_url": "https://x.com/IFTTT/status/2115480483467501970",
+        "time": "2026-10-29T00:27:00+08:00",
+        "handle": "@IFTTT",
+        "impact": "免费用户做自动化的限制少了很多。",
+        "points": [
+          "Applet 数量不限",
+          "所有服务对所有套餐开放"
+        ]
+      },
+      {
+        "title": "Readwise 推出 Readwise Books 测试版",
+        "summary": "Readwise 推出第三款产品 Readwise Books，在一个地方买书、读书、记录阅读。目前是邀请制测试版，Readwise 订阅用户已经可以使用。",
+        "source_url": "https://readwise.io/books",
+        "time": "2026-10-29T01:10:00+08:00",
+        "handle": "@readwise",
+        "impact": "Readwise 从划线管理扩展到完整的读书流程。",
+        "points": [
+          "邀请制测试版",
+          "Readwise 订阅用户可直接用"
+        ]
+      },
+      {
+        "title": "ruvnet/RuView：用 Wi-Fi 信号感知人的存在和呼吸心率",
+        "summary": "项目称用 ESP32 采集 Wi-Fi 信号变化，不用摄像头也能检测有没有人、测呼吸和心率。它可以接进 Home Assistant，也能当 Matter 桥接。今日 GitHub 总榜新增 557 星，MIT 协议，效果为项目自报。",
+        "source_url": "https://github.com/ruvnet/RuView",
+        "time": "2026-10-29T04:52:00+08:00",
+        "impact": "智能家居的人体感知多了一个不用摄像头的开源方案。",
+        "points": [
+          "不用摄像头",
+          "可接 Home Assistant 和 Matter"
+        ],
+        "tag": "自报"
+      }
+    ]
+  }
+}

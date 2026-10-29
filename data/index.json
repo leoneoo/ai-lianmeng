@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28T18:21:12+08:00",
+  "updated_at": "2026-10-29T09:49:59+08:00",
   "editions": [
+    {
+      "id": "2026-10-29-0600",
+      "published_at": "2026-10-29T06:00:00+08:00",
+      "path": "data/2026/10/2026-10-29-0600.json",
+      "counts": {
+        "x_daily": 12,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 6,
+        "tech": 5,
+        "iot": 4
+      },
+      "headline": "Gemini 4 Carbon 登上智能指数第一，本周只给安全防御方；苹果发布首款触屏 MacBook Pro"
+    },
     {
       "id": "2026-10-28-1800",
       "published_at": "2026-10-28T18:00:00+08:00",
