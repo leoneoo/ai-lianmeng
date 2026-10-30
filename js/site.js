@@ -10,7 +10,7 @@ import {
   parseItemFragment,
   sectionStampIso,
   totalCount,
-} from "./format.js";
+} from "./format.js?v=push-foot";
 
 const INDEX_URL = new URL("data/index.json", document.baseURI);
 const DISPLAY = SECTIONS.filter((section) => section.nav);
@@ -309,6 +309,10 @@ function metaRow(section, time, extra, tag) {
 
 function foot(item, tokens) {
   const children = [];
+  const posted = asString(item.time);
+  if (posted) {
+    children.push(h("time", { class: "posted-at", datetime: posted }, [text(`发布 ${formatZhTime(posted)}`)]));
+  }
   const handle = handleNode(item.handle, tokens);
   if (handle) children.push(handle);
   if (isHttpsUrl(item.source_url)) children.push(externalAnchor(item.source_url, "source", "原文"));
@@ -349,7 +353,7 @@ function proseBlocks(item, tokens) {
   ];
 }
 
-function renderCard(item, section, tokens, heading = "h3", extra = "", link = null) {
+function renderCard(item, section, tokens, heading = "h3", link = null, outTime = "") {
   const title = asString(item.title) || "未命名";
   const href = link ? itemHref(link.editionId, link.key, link.index) : null;
   return h("article", {
@@ -357,7 +361,7 @@ function renderCard(item, section, tokens, heading = "h3", extra = "", link = nu
     id: link ? itemFragment(link.key, link.index) : null,
     "data-section": section.key,
   }, [
-    metaRow(section, item.time, extra, item.tag),
+    metaRow(section, outTime, "", item.tag),
     titleBlock(heading, "card-title", title, href, tokens),
     ...proseBlocks(item, tokens),
     foot(item, tokens),
@@ -366,14 +370,13 @@ function renderCard(item, section, tokens, heading = "h3", extra = "", link = nu
 
 function renderHero(hero, editionId) {
   const href = hero.ref && editionId ? itemHref(editionId, hero.ref.key, hero.ref.index) : null;
-  const postedExtra = hero.itemTime ? `发布 ${formatZhTime(hero.itemTime)}` : "";
   return h("article", { class: "card hero rise" }, [
-    metaRow(hero.section, hero.time, postedExtra, hero.tag),
+    metaRow(hero.section, hero.time, "", hero.tag),
     titleBlock("h1", "hero-title", hero.title, href, null),
     ...summaryNodes(hero.summary, null),
     pointsList(hero.points, null),
     impactCallout(hero.impact, null),
-    foot(hero, null),
+    foot({ handle: hero.handle, source_url: hero.source_url, time: hero.itemTime }, null),
   ]);
 }
 
@@ -402,7 +405,7 @@ function moreList(rows, edition) {
 
 function sectionStamp(edition, key) {
   void key;
-  return shortDate(sectionStampIso(edition));
+  return formatZhTime(sectionStampIso(edition));
 }
 
 function sidebar(editions, latest) {
@@ -432,7 +435,7 @@ function sidebar(editions, latest) {
       href: `edition.html?id=${encodeURIComponent(entry.id)}`,
     }, [
       h("span", { class: "side-label" }, [text(asString(entry.headline) || parsed?.label || entry.id)]),
-      h("span", { class: "side-date" }, [text(parsed?.timeLabel || "")]),
+      h("span", { class: "side-date" }, [text(parsed?.published_at ? formatZhTime(parsed.published_at) : "")]),
     ]);
   });
   const recent = h("section", { class: "side-card rise" }, [
@@ -473,8 +476,8 @@ function latestBand(edition) {
         section,
         null,
         "h3",
-        "",
         { editionId: edition.id, key: entry.key, index: entry.index },
+        edition.published_at || "",
       ))),
     ])];
   });
@@ -596,7 +599,7 @@ async function renderFront(gen, editions) {
       ]),
     pair.length ? h("div", { class: "pair" }, pair.map((row) => {
       const ref = itemRef(latest, row.item);
-      return renderCard(row.item, row.section, null, "h2", "", ref ? { editionId: latest.id, key: ref.key, index: ref.index } : null);
+      return renderCard(row.item, row.section, null, "h2", ref ? { editionId: latest.id, key: ref.key, index: ref.index } : null, latest.published_at || "");
     })) : null,
     rest.length ? moreList(rest, latest) : null,
   ]);
@@ -624,11 +627,11 @@ async function renderSection(gen, key, editions) {
     if (!edition) return;
     const parsed = parseEditionId(entry.id);
     for (const entry of displayEntries(edition, key)) {
-      cards.push(renderCard(entry.item, section, null, "h3", parsed?.timeLabel || "", {
+      cards.push(renderCard(entry.item, section, null, "h3", {
         editionId: edition.id,
         key: entry.key,
         index: entry.index,
-      }));
+      }, edition.published_at || parsed?.published_at || ""));
     }
   });
   const lead = h("div", { class: "lead" }, [
@@ -679,11 +682,11 @@ async function renderSearch(gen, query, editions) {
       for (const entry of displayEntries(edition, section.key)) {
         if (!matches(entry.item, tokens)) continue;
         count += 1;
-        const card = renderCard(entry.item, section, tokens, "h3", parsed?.timeLabel || "", {
+        const card = renderCard(entry.item, section, tokens, "h3", {
           editionId: edition.id,
           key: entry.key,
           index: entry.index,
-        });
+        }, edition.published_at || parsed?.published_at || "");
         card.style.animationDelay = `${Math.min(count, 10) * 35}ms`;
         list.append(card);
       }
@@ -764,7 +767,7 @@ function renderItemDetail(gen, edition, view, editions) {
     h("p", { class: "detail-back" }, [
       h("a", { class: "text-link", href: `edition.html?id=${encodeURIComponent(edition.id)}` }, [text("返回这一期")]),
     ]),
-    metaRow(section, item.time, "", item.tag),
+    metaRow(section, edition.published_at || "", "", item.tag),
     h("h1", { class: "page-title" }, [text(title)]),
     ...proseBlocks(item, null),
     foot(item, null),
@@ -840,8 +843,8 @@ async function renderEditionPage(gen) {
           section,
           null,
           "h3",
-          "",
           { editionId: edition.id, key: row.key, index: row.index },
+          edition.published_at || "",
         ))),
       ])];
     }),
