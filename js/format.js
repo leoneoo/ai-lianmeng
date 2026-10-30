@@ -88,14 +88,14 @@ export function isSafeDataPath(value) {
 }
 
 
-/** Homepage hero: primary = edition out-time; secondary = item post time. */
+/** Card/hero header uses edition out-time; item.time is the source post time. */
 export function heroMetaTimes(edition, item) {
   const out = typeof edition?.published_at === "string" ? edition.published_at : "";
   const posted = typeof item?.time === "string" ? item.time : "";
   return { out, posted };
 }
 
-/** Sidebar section stamp: always the edition out-time. */
+/** Edition push/out time ISO for headers and stamps. */
 export function sectionStampIso(edition) {
   return typeof edition?.published_at === "string" ? edition.published_at : "";
 }
