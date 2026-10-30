@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-30T18:29:22+08:00",
+  "updated_at": "2026-10-31T06:26:53+08:00",
   "editions": [
+    {
+      "id": "2026-10-31-0600",
+      "published_at": "2026-10-31T06:00:00+08:00",
+      "path": "data/2026/10/2026-10-31-0600.json",
+      "counts": {
+        "x_daily": 10,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 4,
+        "tech": 3,
+        "iot": 3
+      },
+      "headline": "Anthropic 改名 Max / Ultra 并取消 Ultra 5 小时限额；Google 轨道 TPU 跑通首条推理"
+    },
     {
       "id": "2026-10-30-1800",
       "published_at": "2026-10-30T18:00:00+08:00",

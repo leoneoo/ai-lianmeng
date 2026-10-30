@@ -1,0 +1,343 @@
+{
+  "id": "2026-10-31-0600",
+  "published_at": "2026-10-31T06:00:00+08:00",
+  "headline": "Anthropic 改名 Max / Ultra 并取消 Ultra 5 小时限额；Google 轨道 TPU 跑通首条推理",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 把 Max 套餐改名为 Max / Ultra，Ultra 取消 5 小时限额",
+        "summary": "Anthropic 宣布把 Max 5x 改名为 Max（仍是每月 100 美元），Max 20x 改名为 Ultra（仍是每月 200 美元），现有订阅者无需操作。同时，已验证的 Ultra 账号从今天起取消 5 小时用量限制，多数老用户先生效；新账号在验证前保留临时限制，用于防欺诈和滥用，解除时会收到邮件。周限额不变。",
+        "source_url": "https://x.com/claudeai/status/2116220869479428500",
+        "time": "2026-10-31T01:29:07+08:00",
+        "handle": "@claudeai",
+        "impact": "订阅 Claude 的人价格不变，但用量节奏从「5 小时一轮」变成只看周额度，重度用户要重新规划。",
+        "points": [
+          "Max 5x 改名 Max，100 美元/月",
+          "Max 20x 改名 Ultra，200 美元/月",
+          "已验证 Ultra 取消 5 小时限额，周限额不变",
+          "⚠️ 未证实：博主 Gorden_Sun 称 20× 的周额度实际约 10×"
+        ]
+      },
+      {
+        "title": "Google Project Suncatcher：轨道卫星上的 TPU 跑通第一条推理",
+        "summary": "Google CEO Sundar Pichai 称，Project Suncatcher 的原型卫星发射几周后，团队已向轨道发送指令、启动星上 TPU、运行提示词，并在地面收到第一条完整回复（一首俳句）。他称这是该项目的「hello world」里程碑。",
+        "source_url": "https://x.com/sundarpichai/status/2116214866444943853",
+        "time": "2026-10-31T01:05:16+08:00",
+        "handle": "@sundarpichai",
+        "impact": "太空算力从论文走到在轨实测的第一步，离规模化还远，但验证了链路可行。",
+        "points": [
+          "原型卫星已在轨",
+          "星上 TPU 完成一次完整推理并回传",
+          "官方定位为 hello world 级验证"
+        ]
+      },
+      {
+        "title": "OpenAI 推出 Private Intelligence，给企业更强的数据控制",
+        "summary": "OpenAI 发布 Private Intelligence（私有智能），让企业在使用其最强模型时对自家数据有更强的控制。OpenAI 称这套保护措施是和部分最大客户紧密合作打造的，目标是让企业能把前沿 AI 用到最敏感的工作上。",
+        "source_url": "https://x.com/OpenAI/status/2116186509384815084",
+        "time": "2026-10-30T23:12:35+08:00",
+        "handle": "@OpenAI",
+        "impact": "隐私开始成为企业 AI 的卖点；具体控制项需看官方页面细则。",
+        "points": [
+          "面向企业",
+          "更强的数据控制",
+          "与大客户共建"
+        ]
+      },
+      {
+        "title": "Pika H3 Flex 开放权重：6 步去噪，快于实时",
+        "summary": "Pika 发帖拆解新模型 H3 Flex：开放权重、生成速度快于实时，价格从每秒 0.01 美元起。官方称通过后训练把去噪步数从 50 步压到 6 步，再针对质量和创作控制做了优化。",
+        "source_url": "https://x.com/pika_labs/status/2116288173378810003",
+        "time": "2026-10-31T05:56:33+08:00",
+        "handle": "@pika_labs",
+        "impact": "开放权重的快速视频模型多了一个选择，本地和低成本生成更可行。",
+        "points": [
+          "开放权重",
+          "6 步去噪（原 50 步）",
+          "快于实时，0.01 美元/秒起"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Runway Agent 新增能力：能开文件、跑代码、做品牌发布素材",
+        "summary": "Runway 宣布 Runway Agent 不再只负责生成：它可以打开文件、运行代码，搭建品牌发布素材包，并制作产品图、广告变体和基于参考的动态图形。",
+        "source_url": "https://x.com/runwayml/status/2116227954518978729",
+        "time": "2026-10-31T01:57:16+08:00",
+        "handle": "@runwayml",
+        "impact": "创意工具也在变成能执行任务的 Agent，设计团队的工作流会被重排。",
+        "points": [
+          "可打开文件、运行代码",
+          "品牌发布素材包",
+          "产品图、广告变体、动态图形"
+        ]
+      },
+      {
+        "title": "Cohere 计划在加拿大投入逾 40 亿加元，2031 年前新增 1,500 多个岗位",
+        "summary": "Cohere 宣布扩大在加拿大的投入，计划到 2031 年在研发和 AI 基础设施上投资超过 40 亿加元，并创造 1,500 多个工作岗位。",
+        "source_url": "https://x.com/cohere/status/2116186531366949192",
+        "time": "2026-10-30T23:12:40+08:00",
+        "handle": "@cohere",
+        "impact": "Cohere 继续押注本土算力和人才，主权 AI 叙事再加一笔。",
+        "points": [
+          "逾 40 亿加元",
+          "研发 + AI 基础设施",
+          "2031 年前 1,500+ 岗位"
+        ]
+      },
+      {
+        "title": "Perplexity：Gemini 4 Carbon 早期评测拿下 WANDR 新纪录",
+        "summary": "Perplexity CEO Aravind Srinivas 分享 Gemini 4 Carbon 早期评测，称它是他们见过长篇研究和回答质量最强的模型，在 Wide-And-Deep-Research（WANDR）基准上创下新纪录。等算力充足后，会在 Computer 里向所有 Pro 和 Max 用户开放。",
+        "source_url": "https://x.com/AravSrinivas/status/2116263856628703247",
+        "time": "2026-10-31T04:19:56+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "Gemini 4 Carbon 开始进入第三方产品，深度研究类工具会先受益。",
+        "points": [
+          "长篇研究与回答质量最强（自报）",
+          "WANDR 新 SoTA",
+          "将进 Perplexity Computer"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Together 后训练平台支持智能体强化学习（Agentic RL）",
+        "summary": "Together AI 称其后训练服务现在支持智能体强化学习，即在多轮、带工具的长交互上训练。平台支持工具调用、异步生成和用户自己的环境：用户定义环境和奖励，Together 负责训练和生成。",
+        "source_url": "https://x.com/togethercompute/status/2116214655106326879",
+        "time": "2026-10-31T01:04:25+08:00",
+        "handle": "@togethercompute",
+        "impact": "想自己训 Agent 的团队少了一层基础设施搭建。",
+        "points": [
+          "支持多轮工具交互训练",
+          "可接自有环境",
+          "用户定义奖励"
+        ]
+      },
+      {
+        "title": "NVIDIA 开源 Nemotron RE-USE：960 万参数的多语种语音增强",
+        "summary": "NVIDIA 发布开源多语种语音增强模型 RE-USE，可去除背景噪声、回声等失真，让语音更清晰，参数量仅 960 万。模型和演示已放到 Hugging Face。",
+        "source_url": "https://x.com/NVIDIAAI/status/2116262634349818190",
+        "time": "2026-10-31T04:15:04+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "小到能在端侧跑的语音降噪，会议和语音助手可直接受益。",
+        "points": [
+          "开源、多语种",
+          "去噪、去回声",
+          "9.6M 参数"
+        ]
+      },
+      {
+        "title": "Android Authority：OpenAI 迫于反弹撤回 ChatGPT 用量下调",
+        "summary": "Android Authority 报道，OpenAI 在用户反弹后改变做法，撤回了下调 ChatGPT 用量限制的计划。具体调整范围以 OpenAI 官方说明为准。",
+        "source_url": "https://x.com/AndroidAuth/status/2116224624518103406",
+        "time": "2026-10-31T01:44:02+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "付费订阅的实际用量还在变，续费前留意官方公告。",
+        "points": [
+          "媒体报道，非官方帖",
+          "涉及 ChatGPT 用量限制",
+          "细节待官方确认"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "宝玉：思科让 27 岁员工无限用 AI，两年重写 98% 老代码",
+        "summary": "宝玉转述：思科总裁兼首席产品官 Jeetu Patel 在 Fortune 晚宴上说，把重写遗留代码的大工程交给了 27 岁的 Padmanabhan Krishnamurthy（EzDubs 创始人，2025 年 11 月随公司被思科收购）。计划先用四周验证可行，目标 24 个月内重写思科 98% 的遗留代码，条件是 AI Token 不限量。",
+        "source_url": "https://x.com/dotey/status/2116218545906319826",
+        "time": "2026-10-31T01:19:53+08:00",
+        "handle": "@dotey",
+        "impact": "大公司开始用「人 + 无限算力」攻遗留代码，这类岗位的形态会变。",
+        "points": [
+          "两人小团队 + 不限量 Token",
+          "四周验证，24 个月目标",
+          "反其道而行：把大工程交给年轻人"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Gorden_Sun：DeepMind 联创 Shane Legg 谈 AI 经济与组织",
+        "summary": "Gorden_Sun 介绍 Google DeepMind 联合创始人 Shane Legg 与两位经济学者提出的框架：AI 只提升个人能力时，社会结构不会巨变，写代码等基础任务报酬会趋近算力成本；当 AI 跨过协作能力的临界点，标准化市场可能被极少数纯 AI 组织接管。人的价值会转向需要人际温度的领域和复杂系统的顶层协调。",
+        "source_url": "https://x.com/Gorden_Sun/status/2116153217537151001",
+        "time": "2026-10-30T21:00:17+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "给「AI 会怎样改变工作」提供了一个可讨论的框架。",
+        "points": [
+          "个人增强 vs 协作临界点",
+          "基础任务报酬趋近算力成本",
+          "人的价值转向医疗、教育、协调"
+        ]
+      },
+      {
+        "title": "GitHub_Daily：Stanford CS329Z《Engineering AI Agents》中文版",
+        "summary": "cs329z-chinese 把 Stanford CS329Z 的公开材料整理成中文教程，共 19 讲加 4 个动手练习，从大模型讲到检索增强（RAG）、工具调用、Agent 记忆、多 Agent 协作，再到评测和安全。有在线网页版，也能下载单文件离线阅读。",
+        "source_url": "https://x.com/GitHub_Daily/status/2116175810906489084",
+        "time": "2026-10-30T22:30:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "想系统入门 Agent 开发的中文读者多了一套顺序清楚的教材。",
+        "points": [
+          "19 讲 + 4 个练习",
+          "覆盖 RAG、工具、记忆、多 Agent、评测",
+          "支持离线单文件"
+        ]
+      },
+      {
+        "title": "wey_gu：Nowledge Mem 的记忆分层设计",
+        "summary": "wey_gu 分享 Nowledge Mem 的记忆设计：原始上下文（trace）从第一天起做 BM25 索引，再蒸馏成记忆单元（memory unit），并继续抽取和结晶。需要时可以随时回溯，渐进读取原始上下文，包括对话、产物和来源。",
+        "source_url": "https://x.com/wey_gu/status/2116130815872753829",
+        "time": "2026-10-30T19:31:16+08:00",
+        "handle": "@wey_gu",
+        "impact": "Agent 记忆怎么分层，这是一份来自一线产品的参考。",
+        "points": [
+          "trace → memory unit → 结晶",
+          "BM25 索引原始上下文",
+          "可回溯读取原文"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "vista8：Gitee 每 275 个仓库就有 1 个泄露云或大模型 API Key",
+        "summary": "vista8 转述 AI Breakfast 的文章：一位研究者分析了 725 万个 Gitee 仓库，平均每 275 个就能找到一个云资源或大模型 API Key。他还提到 GitHub 称 9 月超过 40% 的 PR 由智能体编写，担心 AI 写的代码人审不过来，安全问题会被放大。",
+        "source_url": "https://x.com/vista8/status/2116194243077423283",
+        "time": "2026-10-30T23:43:19+08:00",
+        "handle": "@vista8",
+        "impact": "公开仓库里的密钥仍是高发风险，提交前扫一遍很有必要。",
+        "points": [
+          "725 万仓库样本",
+          "约 1/275 含密钥",
+          "AI 写代码加大审查压力"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenCode v2.2.4：终端可持久化，支持发布交互式产物",
+        "summary": "OpenCode 2.2.4 让桌面终端归属于会话，服务重启后保留滚动记录，并与 TUI 和其他窗口同步。新增可选的 artifacts 功能，Agent 可发布、更新并托管 HTML 或静态产物；还加了 Claude Agent 引导接入和快速选择 base branch 的快捷键。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.4",
+        "time": "2026-10-31T00:59:08+08:00",
+        "impact": "长任务不怕服务重启，Agent 产出能直接变成可访问的页面。",
+        "points": [
+          "终端随会话持久化",
+          "实验性 artifacts",
+          "Claude Agent 引导接入"
+        ]
+      },
+      {
+        "title": "OpenCode「Cheepseek」第四期：送 100 美元 DeepSeek V4.1 Flash 用量",
+        "summary": "OpenCode 官方宣布 Operation Cheepseek 第四期，提供 100 美元的 DeepSeek V4.1 Flash 使用额度。",
+        "source_url": "https://x.com/opencode/status/2116209960673800474",
+        "time": "2026-10-31T00:45:46+08:00",
+        "handle": "@opencode",
+        "impact": "想试 DeepSeek 新模型做编码的人有了低门槛入口；领取方式以官方为准。",
+        "points": [
+          "DeepSeek V4.1 Flash",
+          "100 美元额度"
+        ]
+      },
+      {
+        "title": "Agent Skills 成风：anthropics、mattpocock、expo 的 skills 仓同日上榜",
+        "summary": "GitHub 当日趋势榜上，anthropics/skills、mattpocock/skills、expo/skills 三个基本由 Markdown 组成的技能仓同时上榜。Matt Pocock 的思路是小而可组合、手工编辑的技能，可配合 Claude Code、Codex、Copilot 等使用，不被框架绑定。",
+        "source_url": "https://github.com/mattpocock/skills",
+        "time": "2026-10-31T03:37:10+08:00",
+        "impact": "Agent 配置正在变成新的 dotfiles，值得建一套自己的技能库。",
+        "points": [
+          "三仓同日上 Trending",
+          "纯 Markdown 技能",
+          "跨 Agent 通用"
+        ]
+      },
+      {
+        "title": "Shannon：开源 AI 渗透测试工具上趋势榜",
+        "summary": "KeygraphHQ/shannon 是面向 Web 应用和 API 的 AI 渗透测试工具，会分析源码、识别攻击面并执行真实利用验证，当日在 GitHub TypeScript 趋势榜新增 200 多星。",
+        "source_url": "https://github.com/KeygraphHQ/shannon",
+        "time": "2026-10-31T06:25:00+08:00",
+        "impact": "安全测试也进入 Agent 化；只能用于自己有授权的系统。",
+        "points": [
+          "分析源码找攻击面",
+          "执行真实利用",
+          "当日 +223 星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "iOS 27.3 beta 下周推出，含 Apple Intelligence 中国版",
+        "summary": "彭博社 Mark Gurman 称，iOS 27.3 beta 将于下周推出，如预期包含在中国上线的 Apple Intelligence；苹果确认正式版在 12 月发布。",
+        "source_url": "https://x.com/markgurman/status/2116291741754315244",
+        "time": "2026-10-31T06:10:44+08:00",
+        "handle": "@markgurman",
+        "impact": "国行 iPhone 用户终于有望用上 Apple Intelligence。",
+        "points": [
+          "下周 beta",
+          "Apple Intelligence 中国版",
+          "12 月正式版"
+        ]
+      },
+      {
+        "title": "苹果通知门店：iPhone Duo 存在屏幕开裂问题",
+        "summary": "MacRumors 报道，苹果已向门店发出通知，提及 iPhone Duo 的屏幕开裂问题。",
+        "source_url": "https://x.com/MacRumors/status/2116294117777195452",
+        "time": "2026-10-31T06:20:11+08:00",
+        "handle": "@MacRumors",
+        "impact": "考虑购买或已入手的用户，留意官方维修政策。",
+        "points": [
+          "门店内部通知",
+          "涉及 iPhone Duo 屏幕"
+        ]
+      },
+      {
+        "title": "Cloudflare 复盘 eMudhra 证书漏洞：未打补丁的连接只有 4 个可能密钥",
+        "summary": "Cloudflare 发文称，使用 eMudhra 证书、未打补丁的连接，其密钥只有 4 种可能。文章介绍了 Cloudflare 如何修补自家网络、观察到的利用尝试，以及互联网上仍有多少暴露面。",
+        "source_url": "https://x.com/Cloudflare/status/2116274009813692578",
+        "time": "2026-10-31T05:00:17+08:00",
+        "handle": "@Cloudflare",
+        "impact": "系统和浏览器的根证书更新别拖，自建服务要检查证书链。",
+        "points": [
+          "密钥空间仅 4 个",
+          "已观察到利用尝试",
+          "仍有大量暴露"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Cloudflare One 连接客户可把公网流量接到私有源站",
+        "summary": "Cloudflare 宣布，所有使用 Cloudflare One 连接服务的客户，现在都能把公网流量引到私有源站，并叠加 WAF、机器人管理、缓存和 Workers。",
+        "source_url": "https://x.com/Cloudflare/status/2116179364614189067",
+        "time": "2026-10-30T22:44:11+08:00",
+        "handle": "@Cloudflare",
+        "impact": "家里或内网服务对外开放时，可以把防护放在 Cloudflare 边缘，不必直接暴露端口。",
+        "points": [
+          "私有源站对外服务",
+          "WAF、Bot 管理、缓存、Workers",
+          "面向全部 Cloudflare One 连接客户"
+        ]
+      },
+      {
+        "title": "Tailscale 11 月 4 日办 tailscale-rs 直播和 AMA",
+        "summary": "Tailscale 宣布，Rust 团队将于美东时间 11 月 4 日 11:00 在 Discord 做现场演示和问答，聊 tailscale-rs 的历史、在做的事情和用户提问。",
+        "source_url": "https://x.com/Tailscale/status/2116154431007793310",
+        "time": "2026-10-30T21:05:07+08:00",
+        "handle": "@Tailscale",
+        "impact": "关注 Tailscale 嵌入式和跨平台方向的人可以去听。",
+        "points": [
+          "11 月 4 日美东 11:00（新加坡时间 11 月 5 日 00:00）",
+          "Discord 直播 + AMA",
+          "主题 tailscale-rs"
+        ]
+      },
+      {
+        "title": "IFTTT 开 Reddit AMA，解答 credits 和新套餐问题",
+        "summary": "IFTTT 的 CEO 和工程、产品、市场负责人在 Reddit 开 AMA，回答关于 credits 和新套餐的问题，持续到太平洋时间下午 2 点。",
+        "source_url": "https://x.com/IFTTT/status/2116215606722883725",
+        "time": "2026-10-31T01:08:12+08:00",
+        "handle": "@IFTTT",
+        "impact": "IFTTT 收费方式在变，重度用户留意套餐调整。",
+        "points": [
+          "CEO 与各负责人参与",
+          "话题：credits、新套餐"
+        ]
+      }
+    ]
+  }
+}
