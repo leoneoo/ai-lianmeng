@@ -464,11 +464,17 @@ button, input { font: inherit; color: inherit; }
 
 .card-foot {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
   margin-top: auto;
   padding-top: 0.9rem;
   font-size: 0.86rem;
+}
+
+.posted-at {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 
 .handle { color: var(--muted); }
