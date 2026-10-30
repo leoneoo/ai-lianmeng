@@ -87,6 +87,19 @@ export function isSafeDataPath(value) {
     && /^data\/\d{4}\/\d{2}\/\d{4}-\d{2}-\d{2}-(0600|1200|1800|2200)\.json$/.test(value);
 }
 
+
+/** Homepage hero: primary = edition out-time; secondary = item post time. */
+export function heroMetaTimes(edition, item) {
+  const out = typeof edition?.published_at === "string" ? edition.published_at : "";
+  const posted = typeof item?.time === "string" ? item.time : "";
+  return { out, posted };
+}
+
+/** Sidebar section stamp: always the edition out-time. */
+export function sectionStampIso(edition) {
+  return typeof edition?.published_at === "string" ? edition.published_at : "";
+}
+
 export function formatZhTime(iso) {
   const match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(iso || "");
   if (!match) return iso || "";
