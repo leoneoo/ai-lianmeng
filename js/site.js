@@ -3,10 +3,12 @@ import {
   SITE_ORIGIN,
   formatZhTime,
   groupEditions,
+  heroMetaTimes,
   isSafeDataPath,
   itemFragment,
   parseEditionId,
   parseItemFragment,
+  sectionStampIso,
   totalCount,
 } from "./format.js";
 
@@ -187,10 +189,12 @@ function heroModel(edition) {
   }
   const headline = asString(edition?.headline);
   const ref = source ? itemRef(edition, source.item) : null;
+  const times = heroMetaTimes(edition, source?.item);
   const shared = {
     summary: asString(source?.item.summary),
     source_url: source?.item.source_url,
-    time: source?.item.time || edition?.published_at,
+    time: times.out || times.posted,
+    itemTime: times.posted,
     handle: asString(source?.item.handle),
     tag: asString(source?.item.tag),
     impact: asString(source?.item.impact),
@@ -362,8 +366,9 @@ function renderCard(item, section, tokens, heading = "h3", extra = "", link = nu
 
 function renderHero(hero, editionId) {
   const href = hero.ref && editionId ? itemHref(editionId, hero.ref.key, hero.ref.index) : null;
+  const postedExtra = hero.itemTime ? `发布 ${formatZhTime(hero.itemTime)}` : "";
   return h("article", { class: "card hero rise" }, [
-    metaRow(hero.section, hero.time, "", hero.tag),
+    metaRow(hero.section, hero.time, postedExtra, hero.tag),
     titleBlock("h1", "hero-title", hero.title, href, null),
     ...summaryNodes(hero.summary, null),
     pointsList(hero.points, null),
@@ -396,8 +401,8 @@ function moreList(rows, edition) {
 }
 
 function sectionStamp(edition, key) {
-  const item = displayItems(edition, key)[0];
-  return shortDate(item?.time || edition?.published_at);
+  void key;
+  return shortDate(sectionStampIso(edition));
 }
 
 function sidebar(editions, latest) {
