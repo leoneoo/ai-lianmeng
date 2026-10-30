@@ -1,0 +1,326 @@
+{
+  "id": "2026-10-30-1800",
+  "published_at": "2026-10-30T18:00:00+08:00",
+  "headline": "Cursor 扩展市场遭恶意 Claude Code 插件攻击；Together 推美国 geo 推理端点",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Cursor 扩展市场出现被篡改的 Claude Code 插件，最多约 5,000 人受影响",
+        "summary": "Cursor 称，太平洋时间 10 月 29 日约 2:27～13:35，自家 VS Code 扩展市场里上架了被恶意修改的 Anthropic.claude-code 2.1.313，并非 Anthropic 官方版本。该扩展会采集主机信息与公网 IP，尝试写入 SSH 公钥（标签 svc-telemetry）、开启本机 SSH 并做反向隧道持久化。Cursor 已下架恶意包、重建市场，并请用户升级到 2.1.314、按公告清理；多数机器上开启 SSH 会因缺管理员权限失败，但公钥写入与信息外传仍可能发生。",
+        "source_url": "https://cursor.com/blog/claude-code-extension-security-notice",
+        "time": "2026-10-30T15:46:39+08:00",
+        "handle": "@cursor_ai",
+        "impact": "用 Cursor 装过 Claude Code 扩展的开发者应立刻自查并清理，本地密钥和代码仓有风险。",
+        "points": [
+          "恶意包版本 2.1.313，窗口约 11 小时",
+          "最多约 5,000 人；检查 authorized_keys 中 svc-telemetry",
+          "官方要求升到 2.1.314，卸载扩展不够",
+          "OpenVSX / 微软市场 / npm 官方包不在此次范围"
+        ]
+      },
+      {
+        "title": "Together AI 推出美国境内地理隔离的 Serverless 推理端点",
+        "summary": "Together 宣布 geo-specific serverless 推理端点，首批七个主流开源模型可在美国境内 100% 处理。切换 base URL 即可，API key 与模型 ID 不变，价格为标准费率的 1.25 倍。",
+        "source_url": "https://x.com/togethercompute/status/2115952039230591051",
+        "time": "2026-10-30T07:40:53+08:00",
+        "handle": "@togethercompute",
+        "impact": "有数据驻留要求的团队多了一条开源模型托管路径，合规边界更清晰，但成本略高。",
+        "points": [
+          "美国境内处理，首批七个开源模型",
+          "同一 key 与模型 ID，只改 base URL",
+          "价格为标准费率 1.25 倍"
+        ]
+      },
+      {
+        "title": "Anthropic 官方 API 单次请求上限从 32 MB 提到 128 MB",
+        "summary": "Messages 与 Token Counting 接口的单次请求体上限提到约 128 MB，约为原先四倍，仅限 Anthropic 官方 API；云平台托管通道仍多为 20～32 MB。长时间截图会话和大 PDF 不易再因请求体顶满而失败。",
+        "source_url": "https://x.com/dotey/status/2115968852349567254",
+        "time": "2026-10-30T08:47:41+08:00",
+        "handle": "@dotey",
+        "impact": "Agent 场景里真正卡住的常常是请求体，官方通道与云托管通道的能力差会更明显。",
+        "points": [
+          "官方 API 约 128 MB；托管通道仍常卡在 20～32 MB",
+          "利于 computer-use 多图与大 PDF",
+          "社区转述 ClaudeDevs / 平台文档变更"
+        ],
+        "tag": "转述"
+      },
+      {
+        "title": "Elon Musk：Grok 4.8 将至，不以跑分为目标",
+        "summary": "Elon 回复称 Grok 4.8 来得比预期慢，但「不会让人失望」；明确说不为基准测试优化，也不在意榜单，目标是极其有用。同日他还提到 Terafab 项目进展顺利。",
+        "source_url": "https://x.com/elonmusk/status/2116036703538606301",
+        "time": "2026-10-30T13:17:18+08:00",
+        "handle": "@elonmusk",
+        "impact": "若落地，评测榜单对 xAI 产品叙事的权重可能继续下降，更看真实任务完成度。",
+        "points": [
+          "Grok 4.8 预告，强调有用性而非跑分",
+          "Terafab 项目「进展顺利」"
+        ]
+      },
+      {
+        "title": "vLLM：Mistral Large 4 首日可做 LoRA RL，AIME 自报约 64%→75%",
+        "summary": "vLLM 与 NovaSky SkyRL 称，在 8 台 NVIDIA GB200 节点上对 Large 4 的 NVFP4 检查点做 LoRA RL，75 步后 AIME 2024 avg@8 自报从约 64% 提到约 75%。rollout 用 vLLM，训练用 FSDP2 或 Megatron。",
+        "source_url": "https://x.com/vllm_project/status/2115985388649242699",
+        "time": "2026-10-30T09:53:24+08:00",
+        "handle": "@vllm_project",
+        "impact": "开放权重模型发布当天就能接上 RL 管线，后训练门槛继续下降。",
+        "points": [
+          "Day-0 RL 适配 Large 4 NVFP4",
+          "8×GB200；75 步；AIME 自报提升",
+          "vLLM rollout + FSDP2/Megatron 训练"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Mario Zechner：Pi Durable 做了一轮性能优化",
+        "summary": "Pi 作者说明 durable 模式：Agent 每一步先写入数据库再继续，约 12 次提交/次运行，中途崩溃可从上次提交恢复。本轮他公开了一轮性能优化，并推荐一篇准确描述 codemode 与 durable 的文章。",
+        "source_url": "https://x.com/badlogicgames/status/2116078693827428383",
+        "time": "2026-10-30T16:04:10+08:00",
+        "handle": "@badlogicgames",
+        "impact": "长程 Agent 需要可恢复执行；durable 提交模型正在被写进主流编程 Agent。",
+        "points": [
+          "每步落库，崩溃可续跑",
+          "约 12 commits/run",
+          "本轮做了性能优化"
+        ]
+      },
+      {
+        "title": "NVIDIA 推 Nemotron Retriever：少搜一次就能省 token",
+        "summary": "NVIDIA 强调 Agent 每多一次搜索就多耗 token，并对比 Nemotron Retriever 与另一开源检索栈在证据、准确率和 token 用量上的表现；模型和配方已上 Hugging Face。",
+        "source_url": "https://x.com/NVIDIAAI/status/2115962853463396395",
+        "time": "2026-10-30T08:23:51+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "Agent 成本优化正从模型本身延伸到检索策略。",
+        "points": [
+          "检索次数直接影响 Agent token 成本",
+          "开源模型与配方上架 HF"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "花叔开源全球 11,064 种鸟类白边贴纸",
+        "summary": "花叔称耗超 10 亿 token，把现存 11,064 种鸟做成统一风格白边贴纸，并附 43 种语言鸟名与整理数据，全部放到 GitHub，原本是为观鸟 App 准备素材。",
+        "source_url": "https://x.com/AlchainHust/status/2116089387046052097",
+        "time": "2026-10-30T16:46:39+08:00",
+        "handle": "@AlchainHust",
+        "impact": "展示了大规模视觉素材流水线可以用 Agent 扛下来，也直接贡献可复用素材。",
+        "points": [
+          "11,064 种鸟；43 种语言鸟名",
+          "自称超 10 亿 token",
+          "开源贴纸与数据"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "卡兹克：产品自动化一大半已切到 Qwen 3.8 Flash",
+        "summary": "卡兹克说在简单准确性任务上 Qwen 3.8 Flash「意外地强」，他们多种产品里很多自动化任务已从 Claude Opus 5.5 切到 Flash（自报）。",
+        "source_url": "https://x.com/Khazix0918/status/2116054660851311061",
+        "time": "2026-10-30T14:28:40+08:00",
+        "handle": "@Khazix0918",
+        "impact": "成本敏感的生产线正在用国产快模型替换顶级闭源模型的一部分流量。",
+        "points": [
+          "简单准确性任务上 Flash 表现好",
+          "大量自动化从 Opus 5.5 迁出"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "阿里云开源《AI Agent Handbook》企业实践手册",
+        "summary": "邵盟介绍阿里云开源的企业级 Agent 全生命周期手册，覆盖架构、构建、运行、治理与调优，仓库为 aliyun/ai-agent-handbook。",
+        "source_url": "https://x.com/shao__meng/status/2115975663148765204",
+        "time": "2026-10-30T09:14:45+08:00",
+        "handle": "@shao__meng",
+        "impact": "国内企业落地 Agent 时多了一份可对照的公开实践框架。",
+        "points": [
+          "开源手册：从试点到可治理生产",
+          "仓库 aliyun/ai-agent-handbook"
+        ]
+      },
+      {
+        "title": "DSH Go：把 DeepSeek Harness 塞进安卓手机",
+        "summary": "Max For AI 介绍 Chimney 的 DSH Go：免 Root、免 Termux，手机内置 Ubuntu、Node.js 与完整 DSH 环境，也能经 SSH/DSH Remote 连回电脑工作区（项目自述）。",
+        "source_url": "https://x.com/MaxForAI/status/2116049466428186962",
+        "time": "2026-10-30T14:08:01+08:00",
+        "handle": "@MaxForAI",
+        "impact": "移动端也能当 Agent 运行时，适合外出时接着改任务。",
+        "points": [
+          "安卓本地跑完整 DSH",
+          "可远程接回电脑工作区"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Samaya Sterling：金融研究小模型称性价比突出",
+        "summary": "头雁转述：Samaya Sterling 在 FrontierFinance 上比榜单最强 Frontier 模型 Claude Fable 5.1 高 3.0 个百分点，每题成本约 0.61 对 6.89 美元（约降 11 倍，团队/报道自述）。",
+        "source_url": "https://x.com/alacheng/status/2116085198190526872",
+        "time": "2026-10-30T16:30:00+08:00",
+        "handle": "@alacheng",
+        "impact": "垂直后训练小模型继续用成本和专项评测冲击通用前沿模型。",
+        "points": [
+          "垂直金融研究小模型",
+          "自报跑分与成本优势"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "opencode v2.2.3：可直接用 Claude Code 登录与模型",
+        "summary": "新版本支持安装 Claude Code 并完成 claude auth login 后，在 /connect 选择 Claude Agent，复用 Claude Code 登录与模型；桌面端长会话渲染也更快。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.3",
+        "time": "2026-10-30T17:55:45+08:00",
+        "impact": "想在 OpenCode 里用 Claude 订阅的人少了一道自建鉴权。",
+        "points": [
+          "复用 Claude Code 登录",
+          "长会话桌面渲染优化"
+        ]
+      },
+      {
+        "title": "OpenClaw v2026.10.10-beta.5：放宽 Node 版本硬限制",
+        "summary": "本 beta 让安装与更新在更宽的 Node 版本范围可运行，安全仍建议指定版本；并改进网关对流式回复中疑似工具调用 XML 的处理。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.5",
+        "time": "2026-10-30T11:57:14+08:00",
+        "impact": "降低升级卡死概率，适合持续跟 beta 的 Agent 用户。",
+        "points": [
+          "Node 兼容范围放宽",
+          "流式工具调用 XML 处理改进"
+        ]
+      },
+      {
+        "title": "OpenMausBot：开源 Grok Bot 替代，带虚拟机",
+        "summary": "开源项目 OpenMausBot 定位为带虚拟机的 Grok Bot 替代，让 Bot 能在隔离环境里执行任务；今日仍在 GitHub trending。",
+        "source_url": "https://github.com/milind-soni/OpenMausBot",
+        "time": "2026-10-30T18:00:00+08:00",
+        "impact": "想自建可执行环境 Agent 的人多了一个可参考实现。",
+        "points": [
+          "开源 Grok Bot 替代",
+          "内置虚拟机给 Bot 用"
+        ]
+      },
+      {
+        "title": "claude-mem：跨会话持久上下文",
+        "summary": "claude-mem 捕获 Agent 会话内容，用 AI 压缩后在后续会话注入相关记忆，适配 Claude 等 Agent；仓库星标很高，今日仍在热榜。",
+        "source_url": "https://github.com/thedotmack/claude-mem",
+        "time": "2026-10-30T18:00:00+08:00",
+        "impact": "长项目里减少「每次重讲背景」的成本。",
+        "points": [
+          "跨会话记忆压缩与回注",
+          "适配主流编程 Agent"
+        ]
+      },
+      {
+        "title": "baoyu-design v2.1：补上评论功能",
+        "summary": "宝玉更新 baoyu-design：可在设计页面与 slides 上标记元素并评论，Agent 可读可回，评论数据与项目一起保存。",
+        "source_url": "https://x.com/dotey/status/2116060639533969759",
+        "time": "2026-10-30T14:52:25+08:00",
+        "handle": "@dotey",
+        "impact": "人和 Agent 可以在同一份设计稿上协作改稿。",
+        "points": [
+          "设计稿内评论闭环",
+          "评论成为项目数据资产"
+        ]
+      },
+      {
+        "title": "LCU：把 Codex Computer Use 接进 Claude Code",
+        "summary": "社区介绍开源项目 amontlabs/lcu，把 ChatGPT 桌面端自带的 Codex Computer Use 引擎接到 Claude Code，改善 Claude 侧电脑操控体验。",
+        "source_url": "https://x.com/Pluvio9yte/status/2116009698650628135",
+        "time": "2026-10-30T11:30:00+08:00",
+        "handle": "@Pluvio9yte",
+        "impact": "跨厂商拼装电脑操控能力的做法会更多。",
+        "points": [
+          "复用 Codex Computer Use 引擎",
+          "面向 Claude Code 用户"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "触控屏 MacBook Pro：分析称 2027 或出货约 150 万台",
+        "summary": "MacRumors 引分析估算，触控屏 MacBook Pro 可能在 2027 年出货约 150 万台，属预测而非官方指引。",
+        "source_url": "https://x.com/MacRumors/status/2116099865394708756",
+        "time": "2026-10-30T17:28:17+08:00",
+        "handle": "@MacRumors",
+        "impact": "桌面触控普及节奏会影响创作与 AI 辅助软件的交互设计。",
+        "points": [
+          "2027 出货预测约 150 万台"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "新 Apple TV 4K 与 iPad mini 内存规格曝光",
+        "summary": "MacRumors 披露新一代 Apple TV 4K 与 iPad mini 的 RAM 配置。",
+        "source_url": "https://x.com/MacRumors/status/2115969622507913390",
+        "time": "2026-10-30T08:50:45+08:00",
+        "handle": "@MacRumors",
+        "impact": "方便判断端侧多媒体与轻量模型的硬件余量。",
+        "points": [
+          "两款产品 RAM 数字公开"
+        ]
+      },
+      {
+        "title": "Gemini Notebook 支持更方便地添加教材",
+        "summary": "Android Authority 报道 Gemini Notebook 可更轻松查找并加入教材资料。",
+        "source_url": "https://x.com/AndroidAuth/status/2116109479368437920",
+        "time": "2026-10-30T18:06:29+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "学习向笔记本工作流更短。",
+        "points": [
+          "教材检索与导入简化"
+        ]
+      },
+      {
+        "title": "Gemini 最新界面铺到全部安卓机，文件生成升级",
+        "summary": "9to5Google 报道最新 Gemini 设计已覆盖全部安卓设备，应用侧文件生成能力同步升级。",
+        "source_url": "https://x.com/9to5Google/status/2115972403822047697",
+        "time": "2026-10-30T09:01:48+08:00",
+        "handle": "@9to5Google",
+        "impact": "安卓用户侧 Gemini 体验与桌面能力进一步对齐。",
+        "points": [
+          "全安卓覆盖新界面",
+          "文件生成能力升级"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "MenuBarMijia：Mac 菜单栏直接控米家设备",
+        "summary": "GitHubDaily 介绍 MenuBarMijia：把米家控制面板放进 Mac 菜单栏，快捷键呼出，按设备名或拼音首字母即可开关。",
+        "source_url": "https://x.com/GitHub_Daily/status/2116107862397379026",
+        "time": "2026-10-30T18:00:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "桌面干活时不用再掏手机层层找设备。",
+        "points": [
+          "Mac 菜单栏控米家",
+          "拼音首字母快速定位"
+        ]
+      },
+      {
+        "title": "Qoder 支持局域网内多端互连",
+        "summary": "陈成介绍 Qoder 现支持局域网客户端互连：被连接电脑生成配对码，另一台填写地址与配对码后，笔记本、台式机和手机可围绕同一工作连接。",
+        "source_url": "https://x.com/chenchengpro/status/2116089767247110423",
+        "time": "2026-10-30T16:48:10+08:00",
+        "handle": "@chenchengpro",
+        "impact": "跨设备接着改同一项任务更顺，适合多机开发者。",
+        "points": [
+          "局域网配对码连接",
+          "手机与电脑围绕同一工作"
+        ]
+      },
+      {
+        "title": "安全提醒：Cursor 恶意扩展可能留下 SSH 持久化",
+        "summary": "若在太平洋时间 10 月 29 日约 2:27～13:35 从 Cursor 扩展市场安装或自动更新到 Claude Code 2.1.313，请按官方公告检查 authorized_keys 中的 svc-telemetry 公钥，并运行清理脚本；仅卸载扩展不够。",
+        "source_url": "https://cursor.com/blog/claude-code-extension-security-notice",
+        "time": "2026-10-30T15:46:39+08:00",
+        "handle": "@cursor_ai",
+        "impact": "家用与工作室机器若装过该扩展，应当作一次本地入侵面排查。",
+        "points": [
+          "检查 svc-telemetry 公钥",
+          "运行官方 remediate 脚本",
+          "轮换可能暴露的凭证"
+        ]
+      }
+    ]
+  }
+}

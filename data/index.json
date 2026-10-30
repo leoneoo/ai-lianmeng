@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-30T06:22:21+08:00",
+  "updated_at": "2026-10-30T18:29:22+08:00",
   "editions": [
+    {
+      "id": "2026-10-30-1800",
+      "published_at": "2026-10-30T18:00:00+08:00",
+      "path": "data/2026/10/2026-10-30-1800.json",
+      "counts": {
+        "x_daily": 7,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 6,
+        "tech": 4,
+        "iot": 3
+      },
+      "headline": "Cursor 扩展市场遭恶意 Claude Code 插件攻击；Together 推美国 geo 推理端点"
+    },
     {
       "id": "2026-10-30-0600",
       "published_at": "2026-10-30T06:00:00+08:00",
