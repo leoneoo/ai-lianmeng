@@ -1,0 +1,249 @@
+{
+  "id": "2026-11-01-0600",
+  "published_at": "2026-11-01T06:00:00+08:00",
+  "headline": "DeepSeek 开源常驻编程 Agent 原型 dsh-superagent；微软 4B 模型 Mage-VL-Cowork 混合操作电脑",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "DeepSeek 开源 dsh-superagent：常驻单仓库、按需开工的编程 Agent 原型",
+        "summary": "DeepSeek 在 GitHub 开源 dsh-superagent-prototype（MIT），这是给 DeepSeek Harness 用的主动式编程 Agent：它常驻监听一个 GitHub 仓库（可选接飞书），名单内的人在 issue 或 PR 里提需求后，它为每件事单开会话和目录去做，最后在原对话里回复，比如提一个 PR；另有网页面板列出需要人处理的事项。README 明确写着这是研究原型、不是 DeepSeek 正式产品，和内部版本及配套文章描述的设计并不完全一致。据 meng shao 对配套文章《Exploring Super-agent Design》的解读，文章认为单任务 Agent 已经够强，瓶颈变成一个人同时只盯得住 3～5 个会话，因此改用常驻 Router 加多个隔离 Worker 的双层结构、事件驱动触发和外部 Watchdog。",
+        "source_url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+        "time": "2026-10-31T17:32:46+08:00",
+        "impact": "Agent 的竞争点正从单次任务能力转向少占人的注意力；想把它接进团队仓库的，要先管好授权名单和凭据边界。",
+        "points": [
+          "MIT 开源，06:15 时约 2,050 星；研究代码，非正式产品",
+          "监听 GitHub（可选飞书），只响应名单内的人或团队写好的规则",
+          "Router 常驻负责分派和回复，Worker 隔离上下文执行单个任务",
+          "文章自报合成负载测试（据 meng shao 解读）：完成时间 p50/p95 约 12.4/15.7 分钟，单会话加子 Agent 方案 p95 约 29.5 分钟"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "微软开源 4B 电脑操作模型 Mage-VL-Cowork，OSWorld-Verified 自报 66.0%",
+        "summary": "微软在 Hugging Face 发布 Mage-VL-Cowork（Apache-2.0），这是一个 40 亿参数的视觉语言模型，同一个模型里既能看截图点界面，也能直接用 bash 改文件，自己判断每一步走哪条路，不需要外部多 Agent 调度。模型卡自报在 OSWorld-Verified 上（50 步预算）拿到 66.0%，是 4B 级别最高，操作系统类任务 87.5%。训练用五阶段课程加在线强化学习（GRPO），老师模型是 GPT-5.4，代码和技术报告同时公开。",
+        "source_url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
+        "time": "2026-10-30T20:13:24+08:00",
+        "impact": "小模型做电脑操作的门槛又降了一截，端侧自动化值得关注；成绩是微软自报，还要看第三方复现。",
+        "points": [
+          "4B 参数，Apache-2.0，权重、代码和技术报告公开",
+          "GUI 点按与 bash 编辑在一个策略里自动切换",
+          "OSWorld-Verified 66.0%（自报，50 步预算）",
+          "在线 RL 后每个任务的模型调用从 21.57 次降到 18.77 次"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Google DeepMind 的 PlanAssist 再推广到英国 12 个地方议会",
+        "summary": "Google DeepMind 用 Gemini 为英国政府规划审批官员做了 PlanAssist，官方称它能把审核住宅类规划申请的时间最多缩短 58%，现在开放给另外 12 个议会使用。",
+        "source_url": "https://x.com/GoogleDeepMind/status/2116524000977285321",
+        "time": "2026-10-31T21:33:39+08:00",
+        "handle": "@GoogleDeepMind",
+        "impact": "大模型进入政府审批流程的落地案例又多一个，效果数字来自官方，还要看更多议会的实际反馈。",
+        "points": [
+          "基于 Gemini 的政务审批辅助工具",
+          "审核住宅申请时间最多减少 58%（官方自报）",
+          "新增 12 个议会可用"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "NVIDIA：AI Agent 开始操控艾伦望远镜阵列搜寻地外信号",
+        "summary": "NVIDIA 称 SETI 研究所和 Breakthrough Listen 已让 AI Agent 操控北加州的艾伦望远镜阵列（Allen Telescope Array），搜寻可能的地外信号，背后用的是 NVIDIA Holoscan 和 CUDA-X 库。",
+        "source_url": "https://x.com/NVIDIAAI/status/2116560120457142451",
+        "time": "2026-10-31T23:57:11+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "Agent 从软件任务延伸到科研仪器的实时控制，是科学计算场景的一个新样本。",
+        "points": [
+          "Agent 直接参与射电望远镜的观测调度",
+          "使用 Holoscan 实时流处理与 CUDA-X 库"
+        ]
+      },
+      {
+        "title": "Ethan Mollick：AI 正快速释放老系统迁移的积压需求",
+        "summary": "Mollick 说，老旧系统软件迁移市场一直只有每年约 300 亿美元，因为迁移太贵、维护更省事；他和传统企业交流后发现，一批已经定好范围、更便宜的迁移项目正被 AI 以出乎意料的速度推动起来。",
+        "source_url": "https://x.com/emollick/status/2116526543346483419",
+        "time": "2026-10-31T21:43:45+08:00",
+        "handle": "@emollick",
+        "impact": "AI 编程最先大规模变现的可能是遗留系统改造，做企业服务和外包的团队可以留意。",
+        "points": [
+          "迁移市场长期被成本压在约 300 亿美元/年",
+          "企业侧已有成批待做的迁移项目被 AI 激活"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "三款国产 OCR 模型横向对比：MiniCPM-OCR、Xiaomi-OCR-0、Unlimited-OCR-2",
+        "summary": "meng shao 对比了 OpenBMB、小米和百度刚发布的三个 OCR 模型：Xiaomi-OCR-0（0.8B）在 Real5 拿到 95.24、OmniDoc v1.6 拿到 96.83，适合单页高质量解析和字段抽取；MiniCPM-OCR-1.0（1.3B）同场吞吐最高（1.217 页/秒），适合批量流水线；Unlimited-OCR-2 主打上百页长文档一次通读，单页吞吐最慢。分数均为各家自报。",
+        "source_url": "https://x.com/shao__meng/status/2116535521644105826",
+        "time": "2026-10-31T22:19:26+08:00",
+        "handle": "@shao__meng",
+        "impact": "做文档解析的开发者可以按场景直接挑模型，不必只看单一榜单分数。",
+        "points": [
+          "单页质量与问答抽取：看 Xiaomi-OCR-0",
+          "批量吞吐：看 MiniCPM-OCR-1.0",
+          "整本合同或书：看 Unlimited-OCR-2"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "baoyu-design 新增局域网团队共享，可分只读、评论、编辑权限",
+        "summary": "宝玉的 baoyu-design 加了局域网共享：做好的设计稿或幻灯片会生成一个内网 IP 加端口的链接，同事可以实时一起编辑、评论；数据都留在本机，权限分只读、评论、编辑三档并可随时修改，DeepSeek Harness 插件也同步支持。",
+        "source_url": "https://x.com/dotey/status/2116623097839149231",
+        "time": "2026-11-01T04:07:26+08:00",
+        "handle": "@dotey",
+        "impact": "小团队可以不经云端协作改稿；开放端口前要确认防火墙只放行内网。",
+        "points": [
+          "内网 IP 加端口分享，实时同步",
+          "三档权限可随时调整",
+          "数据不出本机"
+        ]
+      },
+      {
+        "title": "anything2explainer：一个 Skill 把主题变成带配音字幕的讲解视频",
+        "summary": "GitHubDaily 介绍了 anything2explainer，这是给 Claude Code 和 Codex 用的 Skill，输入一个主题（例如「讲一下向量数据库」），就能生成一条带配音、字幕和章节进度条的黑底动画讲解视频。",
+        "source_url": "https://x.com/GitHub_Daily/status/2116538221631099232",
+        "time": "2026-10-31T22:30:10+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "做知识类短视频的人可以把最费时的画动画这一步交给 Agent，再自己审一遍内容。",
+        "points": [
+          "支持 Claude Code 与 Codex",
+          "输出含配音、字幕、章节进度条"
+        ]
+      },
+      {
+        "title": "paper-bro：换个域名就把 arXiv 论文变成交互式课程",
+        "summary": "GitHubDaily 介绍了 paper-bro：把 arXiv 论文链接里的域名换成它的域名，就会先读论文、列大纲，再并行写出多节内容，生成一门可交互的课程，适合公式多、只看摘要读不懂的论文。",
+        "source_url": "https://x.com/GitHub_Daily/status/2116515559500390847",
+        "time": "2026-10-31T21:00:06+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "啃公式多的论文门槛更低了，但生成的课程内容仍要对照原文逐段核实。",
+        "points": [
+          "改域名即可使用",
+          "先列大纲再并行生成各章节"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Vercel Labs 开源 agent-desktop：读无障碍树，给任意编程 Agent 加上电脑操作",
+        "summary": "Vercel Labs 的 agent-desktop 让任何能调命令行的编程 Agent 操作 macOS、Windows、Linux 桌面应用：它读取系统的无障碍树（accessibility tree）来定位界面元素，而不是看截图识别像素；在后台运行，多个 Agent 可以各用一个光标并行工作。Rust 编写，GitHub 约 4,100 星，发布帖在上期窗口前、上期未收录，这期补上。",
+        "source_url": "https://x.com/ctatedev/status/2116323148706771302",
+        "time": "2026-10-31T08:15:32+08:00",
+        "handle": "@ctatedev",
+        "impact": "电脑操作多了一条不依赖截图的路线；授予无障碍权限等于让 Agent 能操作所有应用，要谨慎。",
+        "points": [
+          "跨 macOS / Windows / Linux",
+          "走无障碍树，不依赖截图",
+          "后台运行，多 Agent 各自一个光标"
+        ]
+      },
+      {
+        "title": "opencode 团队的本地语音听写 Hex 3.0 发布稳定版",
+        "summary": "opencode 团队发布 Hex 3.0.0，这是本地运行的语音听写工具，按住快捷键说话就能把文字粘贴到任何应用，适合给各类 Agent 口述指令。正式版面向 Apple 芯片 Mac（macOS 15 起），Windows 和 Linux 为 Beta。3.0 是全新起步，不导入旧版的设置、历史和模型。",
+        "source_url": "https://github.com/anomalyco/hex/releases/tag/v3.0.0",
+        "time": "2026-10-31T08:38:49+08:00",
+        "handle": "@opencode",
+        "impact": "想用语音驱动 Agent 又不愿上传录音的用户有了本地方案；升级前留意旧数据不会自动带过来。",
+        "points": [
+          "语音识别在本机完成",
+          "Mac 正式版，Windows / Linux Beta",
+          "3.0 不迁移旧数据，需重新设置",
+          "GitHub 约 1,900 星"
+        ]
+      },
+      {
+        "title": "T3 Code v0.1.6：侧边聊天、本地提交 Diff、1Password 管理凭据",
+        "summary": "多 Agent 编程客户端 T3 Code 发布 v0.1.6，汇集 137 位贡献者的 521 处改动：可以在侧边聊天里提问而不打断主线程，项目可置顶和归档，Diff 面板能查看本地提交，模型服务和代码托管的凭据可交给 1Password 管理。今天在 GitHub Trending 新增约 1,148 星。",
+        "source_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.6",
+        "time": "2026-10-31T18:52:24+08:00",
+        "impact": "多 Agent 编程客户端开始重视凭据管理，用多家模型账号的开发者可以少存明文密钥。",
+        "points": [
+          "侧边聊天不打断主线程",
+          "Diff 面板支持本地提交",
+          "凭据可接 1Password"
+        ]
+      },
+      {
+        "title": "Orkas：本地优先的桌面 AI 团队，一个指挥调度 16 个专职 Agent",
+        "summary": "Orkas 是 MIT 开源、本地优先的桌面应用（安装包支持 macOS、Windows），由一个 Commander 把目标拆成待办，调度 16 个内置专职 Agent，也能调用 Claude Code、Codex、OpenCode、OpenClaw 和 Hermes，支持项目、定时自动化和 Gmail、Notion 等连接器，可用内置模型或自己的密钥；语音输入会把音频发到 Orkas 云端识别。今天 GitHub Trending 新增约 1,118 星，总星数约 6,100。",
+        "source_url": "https://github.com/Orkas-AI/Orkas",
+        "time": "2026-11-01T06:15:00+08:00",
+        "impact": "多 Agent 编排正在桌面端成形，适合想把几种 Agent 放在一个面板里管理的个人用户。",
+        "points": [
+          "本地优先，MIT 开源",
+          "可调度 Claude Code、Codex、Hermes 等外部 Agent",
+          "支持定时任务和连接器"
+        ]
+      },
+      {
+        "title": "Pi 作者 Mario Zechner 发布 pi-schema：不依赖 eval 的 JSON Schema 库",
+        "summary": "Pi 的作者 Mario Zechner 发布 pi-schema，一个 JSON Schema 构建与校验库，能在任何 JS 环境运行，包括不允许 eval() 的环境；作者称它借助 AI 编写并反复调优（vibe + hill-climbed），主打快、正确、内存占用和包体积小。",
+        "source_url": "https://x.com/badlogicgames/status/2116653884362097081",
+        "time": "2026-11-01T06:09:46+08:00",
+        "handle": "@badlogicgames",
+        "impact": "Pi 生态的工具调用参数校验可能换成更轻的实现，扩展作者值得关注。",
+        "points": [
+          "不用 eval，适合受限运行环境",
+          "借助 AI 编写并反复调优（作者自述）"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Surge iOS 6 开启 TestFlight 测试，内置给 AI Agent 用的 MCP 服务器",
+        "summary": "网络工具 Surge 的 iOS 6 Beta 上了 TestFlight：为 iOS 26 重做，新首页、全面 Liquid Glass 风格、更快的请求列表、配置文件版本管理，并新增给 AI Agent 调用的 MCP 服务器。6.0 是免费更新，只有新首页、配置历史和 MCP 服务器需要有效的更新订阅，订阅过期的用户可以免费试用全部功能 7 天；代理协议也不再需要更新订阅。",
+        "source_url": "https://x.com/nssurge/status/2116530752938737785",
+        "time": "2026-10-31T22:00:29+08:00",
+        "handle": "@nssurge",
+        "impact": "网络调试工具开始直接开放给 Agent；让 Agent 读写代理配置前要想清楚权限范围。",
+        "points": [
+          "新增 MCP 服务器",
+          "配置文件支持版本历史",
+          "免费更新，部分新功能需更新订阅"
+        ]
+      },
+      {
+        "title": "Cloudflare 重建控制面，WAF 规则、Workers 和日志可一键选存放地区",
+        "summary": "Cloudflare 表示正在用 Workers 和 Durable Objects 重建控制面和日志系统，让客户一键选择 WAF 规则、Workers 和日志存放在哪个地区，之后也能一键更改，现已开放 Beta 申请。",
+        "source_url": "https://x.com/Cloudflare/status/2116522276988371217",
+        "time": "2026-10-31T21:26:48+08:00",
+        "handle": "@Cloudflare",
+        "impact": "有数据合规要求的团队以后不必在 Cloudflare 功能和数据驻留地区之间二选一。",
+        "points": [
+          "基于 Workers 与 Durable Objects 重建",
+          "数据驻留地区可随时切换",
+          "Beta 需申请"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "「隔空贴」：开源跨电脑剪贴板同步，Mac、Windows、Linux 互通",
+        "summary": "GitHubDaily 介绍了开源工具「隔空贴」：两台电脑配对一次后，这边复制、那边直接粘贴，Mac、Windows、Linux 互通，文字、图片、文件和整个文件夹都能同步，50MB 以内在复制时就传好。",
+        "source_url": "https://x.com/GitHub_Daily/status/2116492898611130669",
+        "time": "2026-10-31T19:30:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "混用 Mac 和 Windows 的人多了一个类似「通用剪贴板」的开源选择；同步剪贴板前留意别带上密码等敏感内容。",
+        "points": [
+          "三大桌面系统互通",
+          "支持文件和文件夹",
+          "一次配对长期可用"
+        ]
+      },
+      {
+        "title": "Alma 开源自建中继服务器，远程控制电脑端到端加密",
+        "summary": "yetone 开源了 Alma 的 Relay Server，用户可以用自己的中继远程控制电脑上的 Alma：可在 Cloudflare Workers 一键部署（免费套餐就够），也可以用 Docker 一条命令部署并自动配 HTTPS；全程端到端加密，中继只能看到密文。在设置的远程访问里填入自建中继地址即可。",
+        "source_url": "https://x.com/yetone/status/2116599592930488707",
+        "time": "2026-11-01T02:34:02+08:00",
+        "handle": "@yetone",
+        "impact": "在意隐私的用户可以把远程访问链路握在自己手里，和 Tailscale 等组网方案思路一致。",
+        "points": [
+          "Cloudflare Workers 或 Docker 部署",
+          "端到端加密，中继看不到明文",
+          "不必依赖官方中继"
+        ]
+      }
+    ]
+  }
+}
