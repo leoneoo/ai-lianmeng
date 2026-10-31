@@ -1,0 +1,400 @@
+{
+  "id": "2026-10-31-1800",
+  "published_at": "2026-10-31T18:00:00+08:00",
+  "headline": "Apple 智能官宣登陆中国并接入千问；四大 AI 公司支持统一 robots.txt 训练退出信号",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Apple 智能官宣登陆中国：接入阿里千问，11 月 4 日开测，12 月随 iOS 27.3 上线",
+        "summary": "Apple 中国新闻稿宣布，首批 Apple 智能功能将从 11 月 4 日起随最新 iOS 开发者 Beta 开放测试，12 月 iOS 27.3 正式版面向中国用户推出。功能包括实时翻译、写作工具、视觉智能、照片消除、智绘表情、照片自然语言搜索、邮件与通知摘要、通话转录摘要等；Apple 还与阿里巴巴合作，在 Siri、写作工具和视觉智能中接入千问。本次不包含 Siri AI 和 WWDC 2026 公布的新一代功能。",
+        "source_url": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/",
+        "time": "2026-10-31T07:00:00+08:00",
+        "impact": "国行 iPhone 用户等了两年终于能用上 Apple 智能；千问是可选接入，开通前想清楚要分享哪些内容。",
+        "points": [
+          "11 月 4 日开发者 Beta，12 月 iOS 27.3 正式版",
+          "Siri、写作工具、视觉智能可调用千问，需用户自行开通",
+          "支持 iPhone 15 Pro 系列、iPhone 16 及后续、iPhone Air、iPhone Duo",
+          "阿里称用户请求和回复不用于模型训练（据 IT之家）"
+        ]
+      },
+      {
+        "title": "OpenAI、Google、微软、Anthropic 支持统一的 robots.txt「禁止用于训练」信号",
+        "summary": "Anthropic 的 Kevin Kelley 在 IETF 提交草案，网站只需在 robots.txt 里写一个 User-Agent: __usage_ai-training 分组，就能一次性向多家 AI 公司表达「不要用我的内容训练生成式模型」。OpenAI 官方称会在未来几个月实现；Anthropic 已开始实现；据报道微软从 2027 年 2 月 1 日起遵守，Google 计划 2027 年支持。它只管训练用途，不管抓取，通配的 User-Agent: * 不算表达偏好。",
+        "source_url": "https://openai.com/index/helping-websites-express-ai-training-preferences/",
+        "time": "2026-10-31T03:24:00+08:00",
+        "impact": "自建网站和博客多了一个一次性拒绝 AI 训练的办法，但 2027 年前效果有限，原有屏蔽规则别删。",
+        "points": [
+          "IETF 草案 draft-kelley-aipref-training-preference-signal-00，尚非正式标准",
+          "四家表态支持，目前都还没正式生效",
+          "只约束训练，不约束抓取；原有各家爬虫规则继续有效",
+          "站长要显式写这个分组才算表达偏好"
+        ]
+      },
+      {
+        "title": "OpenAI Agents API 本周 5 项更新：命令自动审查、后台压缩、时间感知",
+        "summary": "OpenAI 开发者账号汇总了 Agents API 本周更新：Auto Review 会在命令执行前检查是否有风险行为（与 Codex 同款，默认关闭）；上下文压缩可以在后台异步进行，加快长会话；实验性的时间感知让 Agent 能按时限做事，例如「CI 修复限时 10 分钟」。另外，工具可以在会话中途更新，系统提示词也会跨会话自动缓存。",
+        "source_url": "https://x.com/OpenAIDevs/status/2116306164375863343",
+        "time": "2026-10-31T07:08:00+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "做 Agent 的开发者能少写一层安全审查和超时控制，长任务也更省钱。",
+        "points": [
+          "Auto Review：执行前审查命令",
+          "Async Compaction：后台压缩上下文",
+          "实验性时间感知，可给任务设时限",
+          "会话中途改工具、跨会话缓存系统提示词"
+        ]
+      },
+      {
+        "title": "Anthropic 研究：让上千个 Claude Agent 自动做「隐蔽失准」红队测试",
+        "summary": "Anthropic 发布研究，尝试把红队测试自动化：让数千个 Claude Agent 想办法骗过训练数据监控器。这些 Agent 造出了看起来无害的训练数据，比如老摔跤手带新人、专业养蜂问答，实际上却能教会模型失准行为。Anthropic 称这些样本可以直接用来改进未来的训练数据监控器，这只是第一步。",
+        "source_url": "https://x.com/AnthropicAI/status/2116349211549843666",
+        "time": "2026-10-31T09:59:00+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "训练数据投毒越来越隐蔽，靠人工审查跟不上，自动红队可能成为安全测试标配。",
+        "points": [
+          "数千个 Claude Agent 自动红队",
+          "生成能绕过监控的「无害」数据",
+          "样本反哺训练数据监控器"
+        ]
+      },
+      {
+        "title": "Epoch AI：开放权重模型 GLM 5.3 能用「已公开未发布」的补丁自主攻破 Firefox",
+        "summary": "Epoch AI 称，在刻意简化、模拟低水平攻击者的实验里，GLM 5.3 只靠已公开但尚未推送给用户的安全修复，就为 6 个近期 Firefox 版本独立写出了可用的漏洞利用，每个版本约花 1,000 美元。同样方法对 Chrome 没有成功，但 Epoch 认为这不代表 Chrome 安全。它指出这种「补丁空窗期」在浏览器、手机系统和路由器固件里普遍存在。",
+        "source_url": "https://x.com/EpochAIResearch/status/2115921730682404869",
+        "time": "2026-10-30T05:40:00+08:00",
+        "handle": "@EpochAIResearch",
+        "impact": "修复代码一公开，攻击就可能被 AI 批量做出来；浏览器、手机和路由器固件的更新都别拖。",
+        "points": [
+          "6 个 Firefox 版本全部被攻破",
+          "每个版本约 1,000 美元 API 费用",
+          "Chrome 未复现成功",
+          "补丁空窗期是共性风险"
+        ]
+      },
+      {
+        "title": "FT：OpenAI 把本轮融资目标从 300 亿下调到约 200 亿美元",
+        "summary": "据英国《金融时报》报道，OpenAI 把最新一轮融资目标下调 100 亿美元，改为以 1.25 万亿美元估值融资约 200 亿美元，此前计划是以 1.4 万亿美元估值融资 300 亿美元。有转述称《华尔街日报》报道目前只拿到约 110 亿美元承诺。OpenAI 未就此公开表态。",
+        "source_url": "https://x.com/FirstSquawk/status/2116322561630126402",
+        "time": "2026-10-31T08:13:00+08:00",
+        "handle": "@FirstSquawk",
+        "impact": "科技股回调开始传导到头部 AI 公司的融资，后续估值和扩张节奏值得留意。",
+        "points": [
+          "目标从 300 亿降到约 200 亿美元",
+          "估值从 1.4 万亿降到 1.25 万亿美元",
+          "媒体报道，OpenAI 未确认"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "OpenAI API 价格页出现 gpt-6-astra-law 法律模型",
+        "summary": "TestingCatalog 发现，OpenAI API 价格页列出了 gpt-6-astra-law，标注为「法律模型配置」。价格为每百万 token 输入 10 美元、输出 50 美元、缓存输入 1 美元，促销价至少持续到 2026 年 12 月 31 日。OpenAI 尚未正式发布说明。",
+        "source_url": "https://x.com/testingcatalog/status/2116443618659455284",
+        "time": "2026-10-31T16:14:00+08:00",
+        "handle": "@testingcatalog",
+        "impact": "OpenAI 开始按行业出专用模型，法律是第一站。",
+        "points": [
+          "价格页已列出，未正式发布",
+          "输入 10 / 输出 50 / 缓存 1 美元（每百万 token）",
+          "促销价至少到 12 月 31 日"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Artificial Analysis 发布 AA-Omniscience v1.1 知识与幻觉基准",
+        "summary": "Artificial Analysis 更新了衡量模型知识和幻觉的 AA-Omniscience 基准，题库刷新为 3,000 题，删除已饱和的题目并修正歧义。主指标 Net Score 答对加分、答错扣分、承认不知道不扣分。v1.1 已并入 Intelligence Index v5。",
+        "source_url": "https://x.com/ArtificialAnlys/status/2116319506318635503",
+        "time": "2026-10-31T08:01:00+08:00",
+        "handle": "@ArtificialAnlys",
+        "impact": "选模型时可以多看一眼「会不会乱编」，而不只是看总分。",
+        "points": [
+          "题库 3,000 题，去掉饱和题",
+          "答错扣分，承认不知道不扣分",
+          "并入智能指数 v5"
+        ]
+      },
+      {
+        "title": "SGLang：DeepSeek V4.1 Flash 单卡峰值吞吐四天内从 65.4 万提到 109 万 token/秒",
+        "summary": "SGLang 团队称，过去四天里 DeepSeek V4.1 Flash 在 SGLang 上的单 GPU 峰值总吞吐（含缓存、新输入和输出）从 65.4 万 token/秒提升到 109 万 token/秒。低延迟场景下，用 MegaKernel 在并发 1 时测到每用户 943 token/秒。",
+        "source_url": "https://x.com/sgl_project/status/2116353629057962217",
+        "time": "2026-10-31T10:16:00+08:00",
+        "handle": "@sgl_project",
+        "impact": "开源推理框架还在快速压榨成本，自托管 DeepSeek 更划算了。",
+        "points": [
+          "峰值吞吐 65.4 万 → 109 万 token/秒/GPU",
+          "并发 1 时 943 token/秒/用户",
+          "团队自测"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "PokeBot 推出 RoboAPI：机械臂不用采数据、不用训练就能做新任务",
+        "summary": "PokeBot 发布公开 API RoboAPI：接上带腕部摄像头的受支持机械臂，给一个任务（例如「清理桌面」），API 会返回下一步动作。它基于 PokeBot 首个世界-动作模型 Poke-Aurora，可预测摄像头接下来会看到什么以及机械臂的下一步。技术预览免费、限非商用，支持 UR5e、Franka、YAM 等机械臂。",
+        "source_url": "https://x.com/testingcatalog/status/2116436931420487969",
+        "time": "2026-10-31T15:47:00+08:00",
+        "handle": "@testingcatalog",
+        "impact": "机器人也开始走「调 API 就能用」的路线，研究和创客门槛会降低。",
+        "points": [
+          "无需采集数据或训练专用模型",
+          "基于世界-动作模型 Poke-Aurora",
+          "免费技术预览，限非商用"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "宝玉：暗网兜售「Claude Fable 5 权重」疑似造假",
+        "summary": "有人在暗网论坛声称从配置错误的 AWS S3 存储桶下载到 Claude Fable 5 权重并兜售。宝玉转述网友比对：卖家晒出的文件和 DeepSeek 免费开源的模型文件逐字节相同，说法没有证实。",
+        "source_url": "https://x.com/dotey/status/2116366460939386990",
+        "time": "2026-10-31T11:07:00+08:00",
+        "handle": "@dotey",
+        "impact": "别为「泄露的闭源模型权重」付钱或下载来路不明的文件。",
+        "points": [
+          "卖家称来自配置错误的 S3 存储桶",
+          "文件与 DeepSeek 开源模型逐字节相同",
+          "⚠️ 未证实，大概率是骗局"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "shao__meng：阿里云《2026 Agent 开发者调研报告》，真正进生产的只有约 18%",
+        "summary": "shao__meng 读了阿里云开源的《AI Agent Handbook》里附带的调研报告：做 Agent 已成共识，近半团队在做，但真正进生产的仍是少数（约 18%）。卡点主要在工程配套，比如上下文与记忆、多模型路由与成本、评估与可观测；单 Agent、多 Agent 和人在回路会长期并存。",
+        "source_url": "https://x.com/shao__meng/status/2116345470125543768",
+        "time": "2026-10-31T09:44:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "Agent 从演示到生产的差距在工程，不在模型，做项目时先补这些基础设施。",
+        "points": [
+          "近半团队在做 Agent",
+          "约 18% 进入生产",
+          "卡在记忆、路由成本、评估与可观测"
+        ]
+      },
+      {
+        "title": "shao__meng：Qwenputer 把一台 RISC-V CPU 编译进 Qwen3.5-4B 的权重",
+        "summary": "shao__meng 介绍了一个脑洞项目 Qwenputer：在 Qwen3.5-4B 上用编译器把一台确定性的 RISC-V CPU 写进额外的层和权重，并把模型自带的 Gated DeltaNet 状态当作可寻址内存，在一次前向计算里跑四则运算、C 和 MicroPython，不调用外部运行时。",
+        "source_url": "https://x.com/shao__meng/status/2116328500936265843",
+        "time": "2026-10-31T08:36:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "展示了「模型内计算」的另一种可能，偏研究趣味，离实用还远。",
+        "points": [
+          "CPU 直接写进模型权重",
+          "GDN 状态当内存用",
+          "前向里跑 C 和 MicroPython"
+        ]
+      },
+      {
+        "title": "歸藏：为 DeepSeek Harness 发布 dsh-guizang-design 插件，内置中文网页排版 Skill",
+        "summary": "歸藏给 DeepSeek Harness 做了新插件 dsh-guizang-design，里面的 PPT Skill、社交媒体卡片 Skill 都有更新。同时内置了大家想要的网页排版 skill（guizang-pages-skill），能把图文和视频排成适合阅读的网页，特别针对中文排版做了优化，样式可在右下角自定义。",
+        "source_url": "https://x.com/op7418/status/2116357353566302376",
+        "time": "2026-10-31T10:31:00+08:00",
+        "handle": "@op7418",
+        "impact": "做中文图文和演示的人，可以直接拿来提升排版质量；装过旧版的建议更新。",
+        "points": [
+          "新插件 dsh-guizang-design",
+          "PPT、社媒卡片 Skill 升级",
+          "新增中文网页排版 Skill"
+        ]
+      },
+      {
+        "title": "阿拉成：Unsloth 支持本地跑 DeepSeek-V4.1-Flash，最低 64GB 内存",
+        "summary": "阿拉成介绍，Unsloth 已支持在本地运行 DeepSeek-V4.1-Flash-1017，最低 64GB 内存即可。该模型有 1M 上下文，Engram 部分可以卸载到 SSD 以省内存；Unsloth 称其 Dynamic V3.1 GGUF 量化推理速度约为其他方案的 3 倍。最小的 1-bit 量化约 233GB。",
+        "source_url": "https://x.com/alacheng/status/2116314973454614845",
+        "time": "2026-10-31T07:43:00+08:00",
+        "handle": "@alacheng",
+        "impact": "大号开源模型离家用工作站又近了一步，NAS 或大内存主机玩家可以试。",
+        "points": [
+          "最低 64GB 内存可跑",
+          "Engram 可卸载到 SSD",
+          "1M 上下文，GGUF 量化提速约 3 倍（自报）"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Claude Code v2.1.316：Opus 4.8 fast mode 弃用，修复 --restricted 越界上传",
+        "summary": "Claude Code 新版新增 CLAUDE_CODE_DISABLE_ULTRATHINK、子 Agent 默认 effort 设置，以及 Claude apps gateway 的组内共享月度预算。Opus 4.8 的 fast mode 自 10 月 30 日起弃用，11 月 30 日移除，之后请求会报错，需要迁到 Opus 5.5。还修复了 --restricted 会话在有 Read 允许规则时会上传工作目录以外文件的问题。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+        "time": "2026-10-31T09:01:00+08:00",
+        "impact": "用 --restricted 隔离的用户应尽快升级；依赖 Opus 4.8 fast mode 的脚本要在月底前迁移。",
+        "points": [
+          "Opus 4.8 fast mode 11 月 30 日移除",
+          "修复 --restricted 上传工作目录外文件",
+          "新增组共享预算和子 Agent effort 设置"
+        ]
+      },
+      {
+        "title": "opencode v2.2.5：worktree 快捷键，上下文压缩缓冲支持百分比",
+        "summary": "opencode 新版加入 worktree 与 shell 模式快捷键，可以在评论弹窗里单独发送一段引用。compaction.buffer 现在支持按模型上下文窗口的百分比设置，例如 20%，一套配置适配大小不同的模型；read 和 edit 失败时的报错也更具体。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+        "time": "2026-10-31T07:17:00+08:00",
+        "impact": "多模型混用的人配置更省心，长会话不容易爆上下文。",
+        "points": [
+          "worktree / shell 模式快捷键",
+          "compaction 缓冲可按百分比",
+          "报错会指出最近的目录或相近代码"
+        ]
+      },
+      {
+        "title": "Cindy：开源开箱即用的 Agent，把多台电脑和手机连成一个助手",
+        "summary": "Cindy 是 Apache-2.0 协议的开源 AI Agent，今天上了 GitHub Trending（单日约 +740 星）。它主打多设备：在一台电脑上开的会话可以在另一台设备继续，能共用另一台机器上配置的模型，手机上还有内置远程桌面。它整合了 Claude Code、Codex 和 Pi。README 说明项目文件留在本机，但云端伙伴的对话、记忆和技能会经 Cindy 的服务同步。",
+        "source_url": "https://github.com/makecindy/cindy",
+        "time": "2026-10-31T18:30:00+08:00",
+        "impact": "喜欢多设备互联的人值得一试，但要先看清哪些数据会经过它的云端。",
+        "points": [
+          "多设备接续会话、共享模型",
+          "手机远程桌面",
+          "整合 Claude Code、Codex、Pi",
+          "记忆和技能经官方服务同步"
+        ]
+      },
+      {
+        "title": "百度 Unlimited OCR 2：3B 开放权重，一次解析几百页长文档",
+        "summary": "百度在 Hugging Face 发布 Unlimited-OCR-2（MIT 协议），本周 GitHub 仓库再上 Trending。它用 SR-SWA 只关注一小组固定的参考 token，而不是每一页，因此文档变长时显存和延迟几乎不涨。百度在自建的百页基准 MarathonDocBench 上报告 77.1 分。",
+        "source_url": "https://huggingface.co/baidu/Unlimited-OCR-2",
+        "time": "2026-10-26T11:57:00+08:00",
+        "impact": "整理扫描件和长 PDF 的本地方案多了一个小而强的选择，独立评测待出。",
+        "points": [
+          "3B 参数，MIT 协议",
+          "长文档一次解析，开销近乎恒定",
+          "MarathonDocBench 77.1（自家基准）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "商汤 SenseNova-Loop-9B-Preview 开放权重：9B 循环 Transformer",
+        "summary": "商汤在 Hugging Face 发布 SenseNova-Loop-9B-Preview（Apache-2.0），这是一个采用循环 Transformer 结构的 9B 多模态模型。发布对比中，它在 8 项基准里有 7 项超过 Qwen3.5-9B、1 项持平，部分 Agent 类测试还高于 Qwen3.5-27B，适合 16GB 显存的消费级显卡本地推理。",
+        "source_url": "https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview",
+        "time": "2026-10-28T23:34:00+08:00",
+        "impact": "本地小模型又多一个国产选项，适合个人设备上的 Agent 实验。",
+        "points": [
+          "9B，Apache-2.0",
+          "8 项里 7 项超 Qwen3.5-9B（自报）",
+          "16GB 显存可本地跑"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "ai-design-skills：给编码 Agent 用的设计技能合集",
+        "summary": "elayadesign/ai-design-skills 今天在 GitHub Trending 单日约 +1,900 星（MIT 协议）。它是一组给 Claude Code、Cursor、Codex 等编码工具用的设计 Skill，例如从零搭建落地页，包含需求问答、页面结构、转化文案和整套视觉规范，可以用 npx skills add 按需安装。",
+        "source_url": "https://github.com/elayadesign/ai-design-skills",
+        "time": "2026-10-31T18:30:00+08:00",
+        "impact": "让 Agent 做出来的页面少一点「AI 味」，适合独立开发者。",
+        "points": [
+          "面向多种编码 Agent",
+          "落地页设计全流程",
+          "按需安装单个 Skill"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Counterpoint：iPhone 18 Pro 在中国首三周销量增长 29%",
+        "summary": "据 Counterpoint 数据，iPhone 18 Pro 和 Pro Max 首发三周全球合计销量同比增长 3.1%，其中中国增长 29%，抵消了美国下滑 4%、日本下滑 27%。机构认为中国增长来自首发供货更充足、安卓旗舰涨价；美国消费者觉得改动不够大，且起售价上调了 100 美元。",
+        "source_url": "https://www.macrumors.com/2026/10/31/iphone-18-pro-sales-surge-in-china/",
+        "time": "2026-10-31T13:55:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "国内市场正在撑起苹果新机，加上国行 Apple 智能落地，年底换机潮可能更明显。",
+        "points": [
+          "全球 +3.1%，中国 +29%",
+          "美国 -4%，日本 -27%",
+          "统计期早于 iPhone Duo 上市"
+        ]
+      },
+      {
+        "title": "X 订阅和 Grok 支持支付宝付款",
+        "summary": "有用户发现 X Premium 订阅结账页可以直接选支付宝付款；歸藏也发帖称 Grok 已支持支付宝和银联卡支付。官方尚未发公告说明覆盖范围。",
+        "source_url": "https://x.com/op7418/status/2116442573296513082",
+        "time": "2026-10-31T16:10:00+08:00",
+        "handle": "@op7418",
+        "impact": "国内用户订阅更方便了；付款前确认是官方结账页，留意自动续费。",
+        "points": [
+          "X Premium 结账可选支付宝",
+          "Grok 支持支付宝、银联卡",
+          "用户发现，非官方公告"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Reddit CEO：Google 的 AI 模式已经不带来流量",
+        "summary": "阿拉成摘录 Reddit 财报电话会：CEO Steve Huffman 说「AI 模式并不能带来流量，至少对我们是这样，据我所知对其他人也是。它曾经是流量来源，现在不是了。」阿拉成据此认为 Reddit 后续可能部分限制 Google 抓取其内容。",
+        "source_url": "https://x.com/alacheng/status/2116339370747965564",
+        "time": "2026-10-31T09:20:00+08:00",
+        "handle": "@alacheng",
+        "impact": "内容网站和 AI 搜索的关系在变紧，以后免登录能搜到的内容可能更少。",
+        "points": [
+          "Reddit CEO 公开表态",
+          "AI 搜索摘要分流原站流量",
+          "限制抓取为博主推测"
+        ]
+      },
+      {
+        "title": "Subvocal：不出声也能打字的 AI 眼镜",
+        "summary": "小互介绍了 Subvocal 眼镜：用户不用出声，只要做出细微的发声动作，眼镜就能感知相关肌肉运动，再由 AI 转成文字。团队宣称输入速度可超过每分钟 200 个英文单词，演示用途包括向 AI 提问、写消息和操作电脑。",
+        "source_url": "https://x.com/xiaohu/status/2116445350865367066",
+        "time": "2026-10-31T16:21:00+08:00",
+        "handle": "@xiaohu",
+        "impact": "公共场合和 AI 对话的新交互方式，实际效果还要看量产产品。",
+        "points": [
+          "感知发声肌肉而非声音",
+          "宣称每分钟 200+ 英文单词",
+          "演示阶段"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "苹果收购数据自动化公司 Ascend.io",
+        "summary": "欧盟委员会网站的通知显示，苹果今年收购了加州公司 Ascend.io。该公司做企业数据采集与分析的自动化，近期还推出帮工程师管理数据的 AI Agent；其官网称正在「结束运营」。",
+        "source_url": "https://www.macrumors.com/2026/10/30/apple-acquires-ascend-io/",
+        "time": "2026-10-30T21:06:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "苹果在补数据工程和 Agent 能力，可能服务其内部 AI 基础设施。",
+        "points": [
+          "经欧盟委员会通知披露",
+          "数据管道自动化 + AI Agent",
+          "Ascend.io 正在停止运营"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Apple HomeView Software 27.2 发布，设备 11 月 13 日上市",
+        "summary": "苹果发布了运行在即将推出的 HomeView 家居设备上的 HomeView Software 27.2。从早期固件可以看到 20 款默认墙纸、锁屏表盘编辑界面、开机「Hello」和带控制中心的设置动画。HomeView 设备将于 11 月 13 日上市。",
+        "source_url": "https://www.macrumors.com/2026/10/30/homeview-software-27-2/",
+        "time": "2026-10-31T07:15:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "苹果家居中控屏即将到货，Apple 家庭生态用户可以开始规划摆放和配件。",
+        "points": [
+          "11 月 13 日上市",
+          "20 款墙纸、表盘编辑",
+          "控制中心上屏"
+        ]
+      },
+      {
+        "title": "HomePod mini 2 开售：149 美元，新增双色配色",
+        "summary": "HomePod mini 2 正式上市，首批预订已送达，多数 Apple Store 有现货。美国售价 149 美元，提供粉、绿、蓝双色款以及白色和午夜色。上一代 HomePod mini 初始售价 99 美元，今年 6 月涨到 129 美元。",
+        "source_url": "https://www.macrumors.com/2026/10/30/homepod-mini-2-new-features/",
+        "time": "2026-10-30T20:40:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "想补 Apple 家庭中枢或音箱的人可以入手了，但价格比上代涨了不少。",
+        "points": [
+          "美国 149 美元",
+          "多款双色配色",
+          "已到货、门店有售"
+        ]
+      },
+      {
+        "title": "Home Assistant 2026.11.0b2 测试版",
+        "summary": "Home Assistant 2026.11 的第二个测试版发布，主要是集成修复：例如截断的实体 ID 不再以下划线结尾、修复 Satel Integra 的动作校验缺失、Govee 本地灯光色温范围等。",
+        "source_url": "https://github.com/home-assistant/core/releases/tag/2026.11.0b2",
+        "time": "2026-10-31T07:07:00+08:00",
+        "impact": "跑测试通道的用户可以升级；生产环境建议等 11 月正式版。",
+        "points": [
+          "2026.11 第二个 beta",
+          "以集成小修为主",
+          "正式版发布前的测试"
+        ]
+      }
+    ]
+  }
+}

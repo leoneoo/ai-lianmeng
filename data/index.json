@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T06:26:53+08:00",
+  "updated_at": "2026-10-31T18:27:28+08:00",
   "editions": [
+    {
+      "id": "2026-10-31-1800",
+      "published_at": "2026-10-31T18:00:00+08:00",
+      "path": "data/2026/10/2026-10-31-1800.json",
+      "counts": {
+        "x_daily": 10,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 6,
+        "tech": 5,
+        "iot": 3
+      },
+      "headline": "Apple 智能官宣登陆中国并接入千问；四大 AI 公司支持统一 robots.txt 训练退出信号"
+    },
     {
       "id": "2026-10-31-0600",
       "published_at": "2026-10-31T06:00:00+08:00",
