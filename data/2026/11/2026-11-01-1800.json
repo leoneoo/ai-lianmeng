@@ -1,0 +1,216 @@
+{
+  "id": "2026-11-01-1800",
+  "published_at": "2026-11-01T18:00:00+08:00",
+  "headline": "ChatGPT 与 Codex 12 月起共用额度；Anthropic 称 Claude 主写把 Messages API 改成 Rust",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI：12 月起 Plus、Pro、Business 的 ChatGPT 与 Codex 共用一份按 token 计的额度",
+        "summary": "OpenAI 帮助中心新文章写明，从 12 月起 Plus、Pro、Business 套餐的用量额度将由 ChatGPT 和 Codex 共享，统一按 token 计量，消耗多少取决于所选模型和任务复杂度，Instant 聊天不计入额度；合并后可在「设置 › 用量」看剩余额度和重置时间，用完可等重置、升级或购买 Credits。OpenAI 称这是把 Work 的 Agent 能力并入 ChatGPT 主体验的一部分，并预计多数用户等待重置的频率不会比现在高。同期帮助中心还更新了账号切换说明：网页和 iOS、Android 应用可同时登录 2 个账号并切换，聊天、记忆、账单各自独立，移动端正在陆续推送。",
+        "source_url": "https://community.openai.com/t/usage-allowance-will-be-shared-across-chatgpt-and-codex/1411558",
+        "time": "2026-11-01T16:46:00+08:00",
+        "impact": "重度使用 Codex 的订阅用户要重新估算额度，写代码和聊天会互相挤占；用双账号的人注意切换前确认当前账号，避免重复订阅。",
+        "points": [
+          "12 月起 ChatGPT 与 Codex 共用额度，按 token 计",
+          "Instant 聊天不占额度；用完可等重置、升级或买 Credits",
+          "剩余额度与重置时间统一在「设置 › 用量」查看",
+          "账号切换：最多同时登录 2 个账号，数据与订阅互不相通"
+        ]
+      },
+      {
+        "title": "Anthropic 平台工程负责人：Messages API 由 Claude 主写、从 Python 改写成 Rust",
+        "summary": "Anthropic 平台工程负责人 Katelyn Lesse 在 Latent Space 播客和 InfoQ 访谈中说，Messages API 原本是 CPU 效率很低的 Python 单体服务，团队起初没有一个 Rust 工程师，便让 Claude 负责写大部分实现代码，人负责架构设计、迁移计划和结果验证。新系统先接影子流量、逐项比对 Python 与 Rust 的输出，再逐步切换真实流量，目前已全量上线。她给出的数字是 CPU 消耗降低约 40%～50%，首个 token 时延改善约 10%～20%，长任务改善更大；这些是访谈口径，Anthropic 尚未发布工程文章或基准数据。",
+        "source_url": "https://x.com/WireDeskAI/status/2116699097726058626",
+        "time": "2026-11-01T09:09:25+08:00",
+        "impact": "大型核心服务的跨语言重写开始由 AI 主写、人把关验证，影子流量比对这套做法值得借鉴；性能数字仍是访谈口径，未经第三方核实。",
+        "points": [
+          "团队起初零 Rust 经验，Claude 写大部分代码，人管设计和验证",
+          "影子流量比对输出后逐步切换，已全量上线",
+          "自报 CPU 降约 40%～50%，首 token 时延快约 10%～20%",
+          "下一步计划重构，包括服务端保存对话状态"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Karpathy 用 Claude Opus 5.5 两小时做出 HackerTube：只收 HN 推荐过的 YouTube 视频",
+        "summary": "Andrej Karpathy 在个人博客发布 HackerTube（hackertube.org）：他嫌 YouTube 推荐和缩略图太浮夸，让 Claude Opus 5.5 在 Claude Code 里下载 Hacker News 全部评论，用 Sonnet 工作流过滤垃圾内容，筛出约 4 万条推荐 YouTube 视频的评论，最终收录 2007～2026 年间被推荐过的 6,454 个视频、150 个主题，再套上仿 YouTube 界面部署到 VPS。网站不需要账号，「为你推荐」状态只存在本地浏览器会话里，缩略图改用视频 50% 处的画面，并提供数据导出，方便交给自己的 Agent 再做一个。Karpathy 称整个过程约 2 小时；HN 讨论帖已超过 1,200 分。",
+        "source_url": "https://karpathy.bearblog.dev/hacker-tube/",
+        "time": "2026-11-01T14:24:45+08:00",
+        "impact": "个人用 Agent 两小时搭出可上线的内容站正成为常态，小众高质量推荐源可以自己动手做；数据是 HN 口味加模型标注，未经人工审核。",
+        "points": [
+          "6,454 个视频、约 4 万条 HN 评论、150 个主题",
+          "Opus 5.5 写站，Sonnet 批量过滤评论",
+          "无账号，推荐状态只存本地浏览器",
+          "提供数据导出；服务端代码未公开"
+        ],
+        "tag": "补录"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "卡兹克把 AIHOT 模型榜扩到 56 个公开评测集，重排 ELO",
+        "summary": "数字生命卡兹克把 AIHOT 模型榜背后抓取的公开评测集从 39 份增加到 56 份，按原算法对所有模型重新做 ELO 排名，并剔除尚未正式上线的模型（如 Gemini 4 Carbon）。新结果里综合和编程第一都是 Claude Opus 5.5，科研第一是 GPT-6 Astra，办公第一是 Gemini 4 Argon。",
+        "source_url": "https://x.com/Khazix0918/status/2116801460579234047",
+        "time": "2026-11-01T15:56:11+08:00",
+        "handle": "@Khazix0918",
+        "impact": "选模型时可以按场景分开看，不必只认一个总榜；榜单是聚合公开评测，具体任务仍需自测。",
+        "points": [
+          "评测集 39 → 56 份，剔除未上线模型",
+          "综合、编程：Claude Opus 5.5",
+          "科研：GPT-6 Astra；办公：Gemini 4 Argon"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Tw93 分享一段可直接交给 Agent 的 GitHub Actions 提速提示词",
+        "summary": "Tw93 说 AI 写代码快了，但 CI 校验仍慢，他把 Mole、Kaku、Pake 的 GitHub Actions 全部优化后公开了一段提示词，可直接交给 Agent 执行。思路是先用 gh 拉最近 50 次运行，把每个 job 拆成排队、准备、真正测试三段找瓶颈，再做取消旧运行、文档改动不触发、用好官方缓存等优化，前提是不减少必要的测试。",
+        "source_url": "https://x.com/HiTw93/status/2116797957454401746",
+        "time": "2026-11-01T15:42:15+08:00",
+        "handle": "@HiTw93",
+        "impact": "维护开源仓库的人可以直接让 Agent 按这套步骤体检 CI，省下排队和准备时间。",
+        "points": [
+          "先拉 50 次运行数据，拆分排队、准备、测试耗时",
+          "同一 PR 只跑最新一次（cancel-in-progress），main 分支除外",
+          "只改文档不触发 CI，注意被跳过的必需检查会卡住 PR",
+          "优先用 setup 类 action 自带缓存，注意每仓库 10 GB 上限"
+        ]
+      },
+      {
+        "title": "meng shao 整理：10 月 Codex 上增速最快的 10 个 Skills",
+        "summary": "meng shao 转述 Reddit 上的统计，10 月 Codex 增速最快的 10 个 Skills 大致分三条线：工程工作流（Matt Pocock、Ponytail、Superpowers、Addy）、前端审美与去模板感（Impeccable、Taste、Hallmark）、图示与代码理解（Anatomy、Diagram Design、Graphify）。榜首 mattpocock/skills 当月增长约 3.5 万。",
+        "source_url": "https://x.com/shao__meng/status/2116807132469235878",
+        "time": "2026-11-01T16:18:43+08:00",
+        "handle": "@shao__meng",
+        "impact": "想给 Codex 或 Claude Code 补技能包的人可以从这份清单挑；装第三方 Skill 前先看清它会执行哪些脚本。",
+        "points": [
+          "三条主线：工程工作流、前端审美、图示与代码理解",
+          "榜首 mattpocock/skills，增长约 +35,301",
+          "数据来自 Reddit 网友统计"
+        ]
+      },
+      {
+        "title": "meng shao 解读 Harrison Chase：常驻智能体的新难题在记忆、异步与目标",
+        "summary": "meng shao 整理了 LangChain 创始人 Harrison Chase 的分享：他认为「LLM 循环 + 工具 + 沙箱」的 Agent 架构已基本收敛，摘要、结果外置、Skills、工具检索、子智能体、Bash 等上下文工程手段已有成熟套路；主动常驻的智能体要面对的新难题是长期记忆、异步执行和目标管理。",
+        "source_url": "https://x.com/shao__meng/status/2116712070385185271",
+        "time": "2026-11-01T10:00:58+08:00",
+        "handle": "@shao__meng",
+        "impact": "和 DeepSeek dsh-superagent 的思路互相印证，做 Agent 产品的团队可以把精力转向记忆和异步任务管理。",
+        "points": [
+          "Agent 基础架构已基本收敛",
+          "上下文工程旧题已有套路",
+          "常驻智能体新难点：记忆、异步、目标"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Mika：在后台虚拟屏上替你操作 App 的开源安卓 AI 助手，v0.1.31 加入电脑任务台",
+        "summary": "Mika 是 Apache-2.0 开源的安卓端 AI 助手，一句话让它在一块隐藏的后台屏幕上打开 App、点击、输入和滑动，你照常用手机；它靠看屏幕找按钮，不依赖各 App 的接口。没有 Mika 服务器，模型用自己的 API Key，或登录 ChatGPT、xAI、OpenRouter 账号。仓库 10 月 29 日创建，目前约 3,220 星；今天发布的 v0.1.31 新增电脑浏览器派任务的「电脑任务台」、按模型设置上下文窗口、导出用量记录等。",
+        "source_url": "https://github.com/wangzan101/Mika",
+        "time": "2026-11-01T15:41:51+08:00",
+        "impact": "手机端 Agent 已能开源自部署；但它拿到的是近乎完整的手机控制权，涉及支付和聊天的操作要先确认再放手。",
+        "points": [
+          "后台虚拟屏操作 App，不抢前台",
+          "自带模型 Key，无官方服务器",
+          "v0.1.31：电脑任务台、上下文窗口设置、用量导出",
+          "操作手机 App 需开启无线调试配对"
+        ]
+      },
+      {
+        "title": "Google 开源「大象-金鱼」插件 EGM：长上下文 Agent 写方案，零上下文子 Agent 审方案",
+        "summary": "Google 开源的 Elephant-Goldfish Model（EGM，Apache-2.0）是一套给编程 Agent 用的设计评审技能：「大象」带着项目全部背景起草技术方案，「金鱼」评审子 Agent 不带之前的对话、只看草稿和引用材料来挑问题，以暴露没写明的假设和盲点，最后由人做架构取舍并批准。README 称已有数千名 Google 工程师在用，支持 Antigravity、Claude Code、Codex 等安装。",
+        "source_url": "https://github.com/google/elephant-goldfish-model",
+        "time": "2026-11-01T10:56:01+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "给 Agent 写代码前加一道「冷眼评审」，适合需要设计决策的功能；小 bug 修复不必走这套流程。",
+        "points": [
+          "大象起草方案，金鱼零上下文评审",
+          "人负责架构取舍和最终批准",
+          "可装进 Antigravity、Claude Code、Codex",
+          "GitHub 约 8,270 星"
+        ]
+      },
+      {
+        "title": "X 设计负责人 Benji Taylor 开源 Stageshow Skills：让 Agent 做像真产品的营销插画",
+        "summary": "据 meng shao 介绍，Benji Taylor 开源了 Stageshow Skills，把他手做「假 UI」时的几百个小决定写成工作流、标准样例和自检步骤，专做营销页和文档首图里那种看起来像真产品、其实是编排过的插画，覆盖静帧、短动画、光标演示、手机触控和 bento 布局。",
+        "source_url": "https://x.com/shao__meng/status/2116690844799361364",
+        "time": "2026-11-01T08:36:38+08:00",
+        "handle": "@shao__meng",
+        "impact": "做产品官网和发布图的人可以让 Agent 先出稿；仓库地址以作者主页为准。",
+        "points": [
+          "把设计师手工经验写成 Agent 工作流",
+          "覆盖静帧、短动画、光标演示、bento",
+          "面向营销页、文档首图"
+        ]
+      },
+      {
+        "title": "Lightpanda：为 AI 和自动化设计的无头浏览器，单日涨星 900+",
+        "summary": "Lightpanda 是用 Zig 写的无头浏览器，定位为 AI 和自动化场景，AGPL-3.0 许可，最新版本 1.0.2 于 10 月 23 日发布。今天它在 GitHub 趋势榜单日新增 900 多星，总星数约 3.95 万。",
+        "source_url": "https://github.com/lightpanda-io/browser",
+        "time": "2026-11-01T17:35:11+08:00",
+        "impact": "给 Agent 配浏览器时多了一个比完整 Chrome 更轻的选项；AGPL 许可要留意商用义务。",
+        "points": [
+          "Zig 编写，AGPL-3.0",
+          "定位 AI Agent 与自动化抓取",
+          "1.0.2 发布于 10 月 23 日"
+        ]
+      },
+      {
+        "title": "Kensaku：开源本地文件搜索，能搜文档正文和截图里的文字",
+        "summary": "据 GitHub Daily 介绍，Kensaku 是开源的本地文件搜索工具，除文件名外还能检索文档正文、截图中的文字，也支持直接描述内容来找文件。",
+        "source_url": "https://x.com/GitHub_Daily/status/2116674101922447763",
+        "time": "2026-11-01T07:30:06+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "资料多的人可以少翻下载目录；索引全盘前留意它会读取哪些私人文件。",
+        "points": [
+          "本地运行的文件搜索",
+          "支持正文与截图文字检索",
+          "可用自然语言描述来找"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "3D Model Anything：用带激光雷达的 iPhone 扫房间，再让编码 Agent 重建 3D 场景",
+        "summary": "据 GitHub Daily 介绍，3D Model Anything 把手机扫描和 AI 建模接在一起：用带激光雷达的 iPhone 或 iPad 采集房间，再让编码 Agent 根据尺寸和照片重建场景。仓库包含 iPhone 采集 App 源码和 Three.js 查看器。",
+        "source_url": "https://x.com/GitHub_Daily/status/2116764687920746539",
+        "time": "2026-11-01T13:30:03+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "装修、摆家具前做个房间模型的门槛降低了；扫描数据含家中布局，上传给云端模型前要想清楚。",
+        "points": [
+          "需要带 LiDAR 的 iPhone 或 iPad",
+          "编码 Agent 按尺寸和照片建模",
+          "附采集 App 源码与 Three.js 查看器"
+        ]
+      },
+      {
+        "title": "Filee：拖拽即转换的开源本地文件格式工具",
+        "summary": "据 Gorden Sun 介绍，Filee 是主打拖拽的多格式转换工具：按住快捷键拖动文件，光标旁弹出环形菜单，投向目标格式即可转换。转换全部在本地完成，不上传文件，也不依赖系统装办公软件，支持文档、图片、音视频和电子书互转。",
+        "source_url": "https://x.com/Gorden_Sun/status/2116770003781587395",
+        "time": "2026-11-01T13:51:11+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "处理敏感文档时可以不用在线转换网站，隐私更可控。",
+        "points": [
+          "拖拽加环形菜单选格式",
+          "全程本地转换，不联网上传",
+          "文档、图片、音视频、电子书互转"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Aerial：仿 Apple TV 的开源 Android TV 桌面，手机扫码就能排版",
+        "summary": "据 GitHub Daily 介绍，Aerial 是参照 Apple TV 设计的开源 Android TV 桌面，首页放常用 App，往下是全部应用，也能放文件夹和 HDMI 信号源。扫电视上的二维码后，可以在手机上拖动排序、改名、换图标，把游戏机、电脑等入口放到首页。",
+        "source_url": "https://x.com/GitHub_Daily/status/2116742044270113009",
+        "time": "2026-11-01T12:00:05+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "家里电视盒子多入口的人可以用手机统一整理，比遥控器省事；第三方桌面要从可信渠道安装。",
+        "points": [
+          "Apple TV 风格首页",
+          "支持文件夹和 HDMI 信号源",
+          "手机扫码远程管理桌面布局"
+        ]
+      }
+    ]
+  }
+}
