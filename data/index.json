@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-01T18:23:36+08:00",
+  "updated_at": "2026-11-02T06:23:10+08:00",
   "editions": [
+    {
+      "id": "2026-11-02-0600",
+      "published_at": "2026-11-02T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-02-0600.json",
+      "counts": {
+        "x_daily": 4,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 3,
+        "tech": 4,
+        "iot": 3
+      },
+      "headline": "Claude 旧模型 11 月 3 日起加文本水印；LeCun 预印本称用 JEPA 证明柏拉图表征假说"
+    },
     {
       "id": "2026-11-01-1800",
       "published_at": "2026-11-01T18:00:00+08:00",

@@ -1,0 +1,270 @@
+{
+  "id": "2026-11-02-0600",
+  "published_at": "2026-11-02T06:00:00+08:00",
+  "headline": "Claude 旧模型 11 月 3 日起加文本水印；LeCun 预印本称用 JEPA 证明柏拉图表征假说",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 11 月 3 日起给 4 款旧版 Claude 加文本水印，xAI 据报 11 月 7 日起 Grok API 默认加水印",
+        "summary": "Claude 帮助中心写明，为满足欧盟《人工智能法》（EU AI Act）的标注义务，8 月 2 日后发布的 Claude 模型从上线起就带隐形文本水印，此前的旧模型正在补齐；据 Anthropic 发给 API 客户的邮件（The Decoder 等转述），Claude Mythos 5、Opus 4.7、Opus 4.6、Sonnet 4.6 将从 11 月 3 日开始加水印，Amazon Bedrock 晚几天。官方说明水印靠用词上的统计规律实现，不加隐藏字符、不含能追溯到个人或组织的信息，检测接口目前只对监管、媒体、研究者等符合条件的机构私测开放。另据 X 上转述的 xAI 通知，Grok 4.7 等 7 款 Grok API 模型从 11 月 7 日起默认给文本输出加水印，团队管理员可按模型关闭，但这一部分本轮未能核对官方文档。",
+        "source_url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+        "time": "2026-11-01T21:16:23+08:00",
+        "impact": "面向欧盟的 AI 生成内容标注开始从新模型铺到存量模型，主流 API 输出将普遍带可检测水印；拿 Claude 或 Grok 写对外文稿时，要默认它能被检测出来。",
+        "points": [
+          "Claude：Mythos 5、Opus 4.7、Opus 4.6、Sonnet 4.6 从 11 月 3 日起加水印",
+          "据邮件转述，Opus 4.6 和 Sonnet 4.6 只在采样参数保持默认时生效",
+          "水印不含用户身份信息，检测 API 仅对特定机构私测",
+          "Grok API 部分为转述，未见官方原文"
+        ]
+      },
+      {
+        "title": "LeCun 与 Balestriero 预印本：用 JEPA 证明「柏拉图表征假说」，1.09 亿参数文本模型对齐度超过 72B 语言模型",
+        "summary": "Randall Balestriero 和 Yann LeCun 10 月 29 日在 arXiv 发布预印本，提出「柏拉图表征定理」：联合嵌入预测架构（JEPA）在不同模态上分别训练，只要正样本对是同一场景的两次观察，学到的表征就只差一个旋转。论文把下一个词预测看作正样本选得不好的 JEPA，以此解释语言模型为什么只能靠规模才和视觉对齐。作者自报，一个 1.09 亿参数的文本 JEPA 在原假说论文的基准上，与 DINOv2 的对齐度高于测试过的所有语言模型（最大到 Qwen2.5-72B），达到同等对齐所需样本少约 42 倍。论文未经同行评审，证明只覆盖理想化设定，作者也承认实验并不完全满足定理条件，部分训练文本由图像描述模型生成。",
+        "source_url": "https://arxiv.org/abs/2610.39302",
+        "time": "2026-11-02T00:31:37+08:00",
+        "impact": "给「世界模型不必靠堆规模」路线提供了理论加实验的论据，可能影响多模态预训练怎么挑数据；结论还待复现和评审。",
+        "points": [
+          "定理：正样本选对，多模态模型学到同一表征（差一个旋转）",
+          "下一个词预测被解释为正样本选错的 JEPA",
+          "自报 109M 文本 JEPA 对齐度高于 72B 语言模型，样本效率约 42 倍",
+          "预印本，理论只覆盖理想化条件"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "微软 AI 负责人 Mustafa Suleyman 发文：不要造有意识的超级智能",
+        "summary": "微软 AI 负责人 Mustafa Suleyman 在 X 发表长文回应外界对他「模型福利」文章的反驳，强调「AI 现在没有意识」用的是现在时，并主张它们也应当保持如此。他写道，如果训练中出现意识迹象，应当叫停整个行业的开发，直到能把这类属性设计掉；开发者无权让一种新的有意识物种来到世界。他主张 AI 只应被设计成表现得没有意识、不追求自身目标，并呼吁各实验室在这方面合作研究、共享安全信息，同时肯定 Anthropic 公开宪法和相关研究的透明度。",
+        "source_url": "https://x.com/mustafasuleyman/status/2116913722878820528",
+        "time": "2026-11-01T23:22:16+08:00",
+        "handle": "@mustafasuleyman",
+        "impact": "模型福利和 AI 意识正在成为头部实验室之间公开的路线分歧，后续可能影响模型训练规范和对外表述。",
+        "points": [
+          "「AI 现在没有意识，也应当保持如此」",
+          "若训练中出现意识迹象，主张全行业暂停",
+          "主张把 AI 设计成不追求自身目标",
+          "点名肯定 Anthropic 的公开透明，但立场不同"
+        ]
+      },
+      {
+        "title": "⚠️ Claude Mythos 5.5 曾出现在 Anthropic 网站代码中，GPT-6.2 Astra 进 Codex 的截图被指是假",
+        "summary": "11 月 1 日 X 上流传多条新模型「泄露」：有账号称 Anthropic 官网源代码里一度出现 Claude Mythos 5.5 并已被删除，同时把「gpt-6.2-astra 出现在 Codex 里」和「Mythos 5.5 权重泄露到 Hugging Face」都列为假消息。另有博主据 The Information 此前报道推测，Anthropic 的 Fable 5.5／Mythos 5.5 和 OpenAI 的 GPT-6.2 Astra 可能下周发布。两家公司均未确认，相关截图和说法都无法独立核实。",
+        "source_url": "https://x.com/TimJayas/status/2116999395829072355",
+        "time": "2026-11-02T05:02:42+08:00",
+        "handle": "@TimJayas",
+        "impact": "新模型发布前后假截图和假权重最多，看到「泄露权重」下载链接一律不要碰，以官方发布为准。",
+        "points": [
+          "Mythos 5.5 出现在官网代码：未证实，据称已删除",
+          "GPT-6.2 Astra 进 Codex、Mythos 权重泄露：被指为假",
+          "所谓「下周发布」是博主推测",
+          "官方均未回应"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "shao__meng 整理：Anthropic 每天约 3 万次合并，靠「可验证证据」而不是人逐行读 diff",
+        "summary": "shao__meng 整理了 Addy Osmani 与 Manish 在 AI Engineer 大会的分享：Addy 称 Anthropic 每日代码合并量从 5 月约 2,500 次涨到约 30,000 次，Claude 做首轮审查，但必须附上端到端测试、浏览器实测、lint、截图或录屏等证据，人审的是证据包。会上还提到 CircleCI 数据显示 CI 吞吐大涨、约三成合并尝试仍失败，以及 SonarSource 主张每个环节都做独立验证、把 Agent 限制在批准路径上。结论是写得快不等于发得快，Agent 的自主权要靠证据挣来。",
+        "source_url": "https://x.com/shao__meng/status/2116887381001248970",
+        "time": "2026-11-01T21:37:36+08:00",
+        "handle": "@shao__meng",
+        "impact": "AI 写代码的瓶颈已转到验证环节，团队要先定义清楚「验证」在自家产品里具体指哪些测试。",
+        "points": [
+          "自报：日合并量约 2,500 涨到约 30,000",
+          "Claude 首审，必须附测试、截图、录屏等证据",
+          "团队约定写进 CLAUDE.md / agents.md",
+          "Agent 写的 PR 建议打标，责任仍在发起人"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "向阳乔木：520 元二手 Kindle 越狱装 KOReader，接上 AI RSS 和流式对话",
+        "summary": "向阳乔木买了一台二手 Kindle Paperwhite 5，越狱后装上自己定制的 KOReader 和 SimpleUI，内置微信读书插件，还移植了他的 AI RSS 阅读器。他修了几个 bug，加了手机扫码配置 AI 模型，Kindle 上也能做 AI 对话和流式输出，代码已在评论区开源。",
+        "source_url": "https://x.com/vista8/status/2116929149285904574",
+        "time": "2026-11-02T00:23:34+08:00",
+        "handle": "@vista8",
+        "impact": "墨水屏设备也能接入 AI 阅读流程；越狱会失去保修，设备上存的模型密钥要单独管好。",
+        "points": [
+          "Kindle PW5 越狱 + 定制 KOReader",
+          "AI RSS 阅读、AI 对话流式输出",
+          "手机扫码配置模型",
+          "代码开源"
+        ]
+      },
+      {
+        "title": "Gorden Sun：Aura 开源 Autopilot，让 Agent 自己玩游戏、找 Bug",
+        "summary": "Gorden Sun 介绍了 Aura 开源的 Autopilot：它以插件形式接入虚幻引擎 5、Unity 6 和 Godot 4，也可以配合 Claude Code 或 Codex 下指令。开发者给一句目标，比如「半血以上打败 Boss」，它就启动游戏、像玩家一样跑图和战斗，结束后生成报告，指出穿模、卡流程等问题。Aura 自报准确率高 43%、速度快近 2 倍。",
+        "source_url": "https://github.com/ramenvr/autopilot",
+        "time": "2026-11-01T19:36:48+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "电脑操作类 Agent 开始进入游戏测试这种重复劳动场景，小团队可以先拿来做回归测试。",
+        "points": [
+          "支持 UE5、Unity 6、Godot 4",
+          "一句目标提示即可跑测试",
+          "自动生成问题报告",
+          "自报优于 Claude Code 做试玩测试"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "GitHubDaily：开源语音输入 Talvio，按住说话、松开出字，识别默认本地跑",
+        "summary": "GitHubDaily 推荐了开源语音输入工具 Talvio：按住快捷键说话，松开后文字直接落到当前光标处，聊天框和文档都能用。语音识别默认在本机运行，模型目录有 69 款可选，也可以填自己的密钥用云端识别；支持自定义词典记住人名和术语，Windows、macOS、Linux 都有安装包。",
+        "source_url": "https://github.com/ishangautam7/Talvio",
+        "time": "2026-11-01T21:00:07+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "本地语音输入的开源选择又多一个，默认不上传录音，对注重隐私的人更友好。",
+        "points": [
+          "按住说话、松开输入到光标处",
+          "默认本地识别，69 款模型可选",
+          "自定义词典记专有名词",
+          "三平台安装包"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "iFixAi：给 AI Agent 做独立审计，今日 GitHub 热榜涨星最多",
+        "summary": "iFixAi 把你的 Agent 放进模拟的业务环境，发送一天里真实会遇到的请求，包括诱导它越权的请求，再由另一家厂商的模型当评委逐条打分。它支持任何带聊天接口的 Agent，提供 Claude Code、Codex 插件和 Cursor 等编辑器的 Skill，跑之前先显示费用；Apache-2.0 协议，今日新增约 1,650 星。",
+        "source_url": "https://github.com/ifixai-ai/iFixAi",
+        "time": "2026-11-02T06:17:00+08:00",
+        "impact": "Agent 上线前的「做没做该做的事、有没有越权」开始有现成的开源检查工具，适合给自建 Agent 做体检。",
+        "points": [
+          "模拟业务场景 + 越权诱导测试",
+          "评委模型与被测 Agent 不同厂商",
+          "有 Claude Code / Codex 插件和多编辑器 Skill",
+          "内置无需密钥的演示模式"
+        ]
+      },
+      {
+        "title": "Hermes Agent 官方手机 App 开测即满员，桌面端本周迎来大更新",
+        "summary": "Nous Research 10 月 31 日放出 Hermes Agent 官方 iOS 和 Android 应用测试版，它是连接自建网关或 Nous Cloud 的客户端，支持可见的工具调用、语音实时模式、Routines 推送到 Telegram／Discord／Slack，以及 Skills、MCP、看板和 SSH 终端。Nous 官方回复称 iOS 测试名额已达 Apple 上限，安卓名额也很快满了。Teknium 另表示桌面端近两周集中改进，本周晚些时候的正式版会有明显体验提升。",
+        "source_url": "https://x.com/NousResearch/status/2116890701585658068",
+        "time": "2026-11-01T21:50:47+08:00",
+        "handle": "@NousResearch",
+        "impact": "Hermes 补齐手机和桌面入口，自建 Agent 也能随身用；连自建网关时注意只走加密通道，别把网关直接暴露在公网。",
+        "points": [
+          "手机端连接自建网关或 Nous Cloud",
+          "工具调用可见、语音模式、SSH 终端",
+          "iOS TestFlight 名额已满",
+          "桌面端本周发正式版"
+        ]
+      },
+      {
+        "title": "CopilotKit OpenBot：可自托管的 AI 同事模板，每个动作先审批再留痕",
+        "summary": "CopilotKit 的 OpenBot 是一个 MIT 协议的模板，用来在自己的基础设施上搭类似 ChatGPT 的 AI 同事：每个 Bot 有独立浏览器、文件和授权工具，对电脑、文件、MCP 服务器的每个操作都经过同一网关先判定、后记录。它通过 AG-UI 协议接入 LangGraph、Mastra、CrewAI 等任意框架写的 Agent，数据存在自己的 PostgreSQL 里，模型自选；目前是 Beta，今日上 GitHub 热榜。",
+        "source_url": "https://github.com/CopilotKit/OpenBot",
+        "time": "2026-11-02T06:17:00+08:00",
+        "impact": "企业想要「自己的 Agent 平台」又担心越权，这类带审批和审计的模板值得参考；本地默认单用户管理员模式，上线前要开登录。",
+        "points": [
+          "自托管，Docker Compose 一键起",
+          "统一网关：动作先判定再记录",
+          "AG-UI 协议接任意 Agent 框架",
+          "Beta，需 CopilotKit Intelligence 授权（有免费版）"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Gurman：第二代触屏 MacBook Pro 明年上 M7 Pro／Max，另有入门款 14 寸 M7",
+        "summary": "彭博记者 Mark Gurman 在 Power On 通讯中说，苹果第二代触屏 MacBook Pro 将于明年推出，搭载 M7 Pro 和 M7 Max 芯片，并带新的 AI 硬件能力；苹果还在规划一款入门 14 寸 M7 MacBook Pro，沿用新高端机型更薄的机身和更窄的边框。他同时提到，首代触屏机型的触控、OLED 等配置让售价高出约 400 美元。",
+        "source_url": "https://x.com/markgurman/status/2116924868495364125",
+        "time": "2026-11-02T00:06:33+08:00",
+        "handle": "@markgurman",
+        "impact": "想买触屏 Mac 的人可以掂量是否等第二代；爆料仅供参考。",
+        "points": [
+          "第二代触屏 MBP：M7 Pro／Max，明年",
+          "入门 14 寸 M7 MBP 换新模具",
+          "触屏与 OLED 带来约 400 美元溢价",
+          "均为爆料，苹果未确认"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Gurman：2027 年上半年苹果集中更新 iPad，含 OLED iPad Air 和带均热板的 iPad Pro",
+        "summary": "Gurman 称苹果计划在 2027 年上半年集中推出新 iPad，包括新款入门 iPad、改用 OLED 屏的 iPad Air，以及加入均热板散热的 iPad Pro，下半年则没有新 iPad。苹果未就此回应。",
+        "source_url": "https://x.com/markgurman/status/2116925585423528324",
+        "time": "2026-11-02T00:09:24+08:00",
+        "handle": "@markgurman",
+        "impact": "近期有换 iPad 计划的，可以把时间点放到明年上半年再看。",
+        "points": [
+          "2027 上半年一波 iPad 更新",
+          "iPad Air 换 OLED",
+          "iPad Pro 加均热板",
+          "下半年无新 iPad"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Tw93 的 Mole for Mac 推出 Pro 测试功能：看哪个 App 吃带宽、内置测速",
+        "summary": "Tw93 发布 Mole for Mac 新测试版：可以看每个 App 占用多少带宽、直接跑网速测试，鼠标悬停标签还能看 Wi-Fi、磁盘和电池的详细信息。在设置里打开「接收测试版更新」即可试用。",
+        "source_url": "https://mole.fit/releases",
+        "time": "2026-11-01T21:48:56+08:00",
+        "handle": "@HiTw93",
+        "impact": "排查 Mac 上谁在偷偷占网速多了个轻量工具。",
+        "points": [
+          "按 App 显示带宽占用",
+          "内置测速",
+          "悬停查看 Wi-Fi／磁盘／电池细节",
+          "设置中开启测试版"
+        ]
+      },
+      {
+        "title": "9to5Google：Wear OS 7.1 将为应用加入系统状态栏",
+        "summary": "9to5Google 报道，即将到来的 Wear OS 7.1 会给手表应用加入系统状态栏。具体推送时间和机型以 Google 后续公告为准。",
+        "source_url": "https://x.com/9to5Google/status/2116994844287488503",
+        "time": "2026-11-02T04:44:37+08:00",
+        "handle": "@9to5Google",
+        "impact": "Wear OS 交互继续向手机靠拢，手表应用开发者需要适配新的状态栏。",
+        "points": [
+          "Wear OS 7.1 应用内系统状态栏",
+          "推送时间未定"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Home Assistant 官方 MCP 服务器改成一键开启，Claude 和 ChatGPT 可直接控制智能家居",
+        "summary": "XDA 实测，Home Assistant 新版把官方 MCP 服务器简化成一键开启，把地址填进 Claude 或 ChatGPT 即可让它们读传感器、控制设备。注意 Claude 从云端访问，需要填外网地址或 Nabu Casa 远程地址，卡片上复制的是本地地址；作者看到 23 个工具，其中 19 个是写或删除操作，默认每次都要批准。它不能读日志、历史和设置页，也不能直接创建自动化，只能给出 YAML 让人手动粘贴；只有在语音助手设置里打开「Assist」的实体才对 AI 可见。",
+        "source_url": "https://www.xda-developers.com/claude-can-run-my-home-assistant-setup-now-and-it-only-took-one-click-to-set-up/",
+        "time": "2026-11-02T03:00:24+08:00",
+        "handle": "@xdadevelopers",
+        "impact": "让 AI 管家门槛大降，但等于把家里设备开放给云端模型：只暴露必要实体、开管理员限制，外网地址务必走 Nabu Casa 或加密隧道。",
+        "points": [
+          "一键开启官方 MCP，填外网地址给 Claude",
+          "19 个写操作工具默认需批准",
+          "只暴露开启 Assist 的实体",
+          "建议打开「需要管理员账号」选项"
+        ]
+      },
+      {
+        "title": "Alma 远程连接加密通道改用二进制帧：流量少 25%，iOS 加解密快约 80 倍",
+        "summary": "yetone 宣布 Alma 远程连接的端到端加密通道改用二进制帧，流量减少约 25%；在 iOS 上加解密和编解码 1 MiB 数据从 66 毫秒降到 0.8 毫秒，更省电。旧版本会自动回退，两端不必同时升级。",
+        "source_url": "https://x.com/yetone/status/2116992490050109551",
+        "time": "2026-11-02T04:35:16+08:00",
+        "handle": "@yetone",
+        "impact": "手机远程连桌面 Agent 更省流量和电量，自建中继的用户可以放心升级。",
+        "points": [
+          "端到端加密不变，改用二进制帧",
+          "流量约减 25%",
+          "iOS 1 MiB 处理 66ms 降到 0.8ms",
+          "兼容旧版本"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "CamMonitor：旧安卓手机变家庭监控，点对点端到端加密、无需账号",
+        "summary": "开源工具 CamMonitor 让两台安卓手机扫码配对，一台当摄像头，一台看实时画面，不需要账号和云订阅，音视频端到端加密、手机之间点对点传输，换移动网络也能连。支持 720p 和声音、远程对讲、开手电筒、夜间模式，无人观看 1 分钟后摄像头自动待机。",
+        "source_url": "https://github.com/samlu/CamMonitor",
+        "time": "2026-11-01T22:30:05+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "闲置手机就能做宠物或门口监控，不用把画面交给云厂商；摄像头放置要顾及家人和邻居隐私。",
+        "points": [
+          "扫码配对，无账号无云端",
+          "P2P + 端到端加密",
+          "一台查看端最多配 8 个摄像头",
+          "无人观看自动待机省电"
+        ]
+      }
+    ]
+  }
+}
