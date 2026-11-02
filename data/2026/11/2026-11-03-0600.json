@@ -1,0 +1,355 @@
+{
+  "id": "2026-11-03-0600",
+  "published_at": "2026-11-03T06:00:00+08:00",
+  "headline": "Claude Message Threads 公测；OpenAI 发布日常事务基准 LifeVal",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic Messages API 公测 Message Threads：长对话不用每轮重发历史，首包延迟约降 35%",
+        "summary": "ClaudeDevs 宣布 Message Threads 在 Messages API 进入公测：服务器在回合之间暂存对话，下一轮只需发新消息和上一条回复的 ID，不用把整段历史再传一遍。官方文章写明，Claude Code 多数用户已默认开启；在 50 万到 100 万 token 的请求上，到首个 token 的中位延迟大约降低 35%。官方帖还说，长对话里单次请求体积从大约 800 KB 降到约 1.8 KB。线程在内存中加密暂存、不落盘，上次请求后 5 分钟过期，最长约 1 小时后删除；过期后需重新整段回放。计费仍按标准 token 价，已在 Claude Platform、AWS、Microsoft Foundry 和 Google Cloud 上线。",
+        "source_url": "https://claude.com/resources/articles/message-threads",
+        "time": "2026-11-03T03:06:08+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "跑长会话 Agent 或 Claude Code 的开发者，接入后首包会更快，带宽也更省；记得自己留一份完整对话，方便线程过期后回放。",
+        "points": [
+          "公测：请求加 thread 参数与 beta 头 message-threads-2026-08-12",
+          "500k～1M token 请求中位 TTFT 约降 35%（官方）",
+          "长对话请求体积约 800 KB→1.8 KB；token 用量不变",
+          "线程 5 分钟无活动过期；应用仍须自存完整对话"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 发布 LifeVal：按日常事务衡量个人助理，不再只看考试题",
+        "summary": "OpenAI 发布 LifeVal，用来衡量模型在日常生活任务上的表现。题目来自美国与跨国时间使用调查，再叠加一份 3,995 人的代表性问卷，覆盖托幼、就医、教育、家务、个人财务、购物和政府办事等人们最希望助理帮忙的领域。官网示例里，最新模型在「搬家后选幼儿园」「洪灾前组织志愿者」「按预算找带独立单元的房子」等任务上自报得分约 90%～100%。OpenAI 说过去一年已用这套评测推动浏览器使用、电脑使用和连接器（connectors）能力，希望把 ChatGPT 从聊天工具推成能办事的个人助理。",
+        "source_url": "https://openai.com/index/lifeval/",
+        "time": "2026-11-03T01:27:26+08:00",
+        "handle": "@OpenAI",
+        "impact": "个人助理产品以后会更多按「办事」而不是「答题」来比；看成绩时记得这些是官方自测场景。",
+        "points": [
+          "3,995 人问卷叠加时间使用调查定题",
+          "任务偏托幼、财务、政府办事、购物等",
+          "官网示例自报多项约 90%～100%",
+          "明确把评测从考试题转向「能把事办完」"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "⚠️ 研究者展示「权重空间编程」：称用 GPT-6 Astra 直接改 Qwen 小模型权重，数学最高提升约 6 倍",
+        "summary": "研究者 Rikiya Takehi 发帖称，让 GPT-6 Astra 直接编辑 Qwen3.5-0.8B 的权重来提升数学能力：只改约 0.016% 的权重、不用梯度和常规训练，就修好了小模型的推理循环，数学最高提升约 6 倍，指令跟随约提升 3 倍，并称之为 Weight-Space Programming（权重空间编程）。帖子互动很高；Ethan Mollick 转发时写「等复现，但这事不小」，Hugging Face 的 Thomas Wolf 也有反应。目前只有作者自报结果，未见独立复现或论文。",
+        "source_url": "https://x.com/rikiyatakehi/status/2117313742891327994",
+        "time": "2026-11-03T01:51:48+08:00",
+        "handle": "@rikiyatakehi",
+        "impact": "如果能复现，等于多了一条「用大模型改小模型权重」的路线；在复现出来之前，先当技术演示看。",
+        "points": [
+          "自称只改 0.016% 权重、无梯度训练",
+          "数学最高约 6×、指令跟随约 3×（自报）",
+          "Mollick：等待复现",
+          "尚无第三方复现或论文"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Anthropic Residency 开放申请：付费驻留做 AI 安全，不要求机器学习背景，11 月 22 日截止",
+        "summary": "Anthropic 宣布 Anthropic Residency 开放申请：面向学者、技术创始人和资深工程师的付费、固定期限研究项目，目标是让 AI 更安全、更有益，明确写了不要求机器学习背景，申请截止 11 月 22 日。中文博主宝玉转述年薪大约折合 35 万到 50 万美元，具体以官方申请页为准。",
+        "source_url": "https://x.com/AnthropicAI/status/2117343929960112486",
+        "time": "2026-11-03T03:51:45+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "想转行做 AI 安全的工程师和学者多了一条官方通道；薪酬以申请页为准。",
+        "points": [
+          "付费固定期限驻留，截止 11 月 22 日",
+          "不要求 ML 背景",
+          "面向学者、技术创始人、资深工程师",
+          "薪酬数字来自中文转述，非官方原文"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Hugging Face 生物团队公开 FineDNA：用三阶段数据把 Qwen3-14B 推到 GPT-Sol 6.1 水平",
+        "summary": "Hugging Face 研究负责人 Leandro von Werra 宣布公开 FineDNA 数据包，这是训练 Carbon-X 的数据：中期训练约 5140 亿 token（实际读入约 3020 亿）、SFT 约 20 万段对话、强化学习约 10 万个任务环境。官方称在此数据上把 Qwen3-14B 推到 GPT-Sol 6.1 表现，并强调要保持生物方向的开源前沿。数据集在 HuggingFaceBio/FineDNA，Apache-2.0。",
+        "source_url": "https://huggingface.co/datasets/HuggingFaceBio/FineDNA",
+        "time": "2026-11-02T21:56:59+08:00",
+        "handle": "@lvwerra",
+        "impact": "做生物大模型后训练的人多了一份可复用配方；普通应用开发者可以先观望。",
+        "points": [
+          "三阶段：Mid / SFT / RL 全开源",
+          "起点是 Qwen3-14B，目标模型 Carbon-X",
+          "自称达到 GPT-Sol 6.1",
+          "面向生物/基因组场景"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Runway 上线 Cursor 插件：用自然语言让 Cursor 帮你接 Runway API",
+        "summary": "Runway 宣布正式登上 Cursor：装一个插件后，可以在 Cursor 里用自然语言描述要生成什么，让编程助手直接帮你把 Runway API 接到应用里。",
+        "source_url": "https://x.com/runwayml/status/2117341561759629709",
+        "time": "2026-11-03T03:42:21+08:00",
+        "handle": "@runwayml",
+        "impact": "在 Cursor 里做创意工具的开发者，接 Runway 少写一段样板代码。",
+        "points": [
+          "Cursor 插件一键安装",
+          "面向把视频/图像生成 API 接到自有产品",
+          "具体计费仍走 Runway 账号"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "头雁解读 Amazon 开源后训练配方 Rufus-Air：在 GLM-4.5-Air-Base 上复现购物助手",
+        "summary": "头雁介绍 Amazon 公开的 Rufus-Air: An Open LLM Post-Training Recipe，目标是让别人按阶段复现或复用。配方基于公开的 GLM-4.5-Air-Base（约 106B 总参数、12B 激活的 MoE），按阶段给出后训练做法，方便做购物类助手的团队对照。",
+        "source_url": "https://x.com/alacheng/status/2117215141137924282",
+        "time": "2026-11-02T19:20:00+08:00",
+        "handle": "@alacheng",
+        "impact": "做垂直助手后训练的人多了一份大厂公开菜谱，可对照自家数据看差异。",
+        "points": [
+          "公开配方，强调可复现",
+          "底座是 GLM-4.5-Air-Base MoE",
+          "面向 Rufus 类购物助手场景"
+        ]
+      },
+      {
+        "title": "向阳乔木做了基于 Hacker News 的书籍推荐站，可直达 Goodreads 和豆瓣书评",
+        "summary": "向阳乔木接着之前的 HN 论文站，又做了一个基于 Hacker News 的书籍推荐网站，可跳到 Goodreads 和豆瓣书评。他笑称消耗了大量 Token。",
+        "source_url": "https://x.com/vista8/status/2117290723255226820",
+        "time": "2026-11-03T00:20:20+08:00",
+        "handle": "@vista8",
+        "impact": "公开数据集加 AI 整理，一个人就能做出可读的垂直站，是个人项目的好样板。",
+        "points": [
+          "数据仍来自 Hugging Face 上的 HN 公开集",
+          "接 Goodreads / 豆瓣",
+          "个人用 AI 搭的垂直内容站"
+        ]
+      },
+      {
+        "title": "shao__meng：DeepSeek Search / Fetch 工具 API 今日起按次计费，每千次成功请求 0.75 美元",
+        "summary": "meng shao 提醒：DeepSeek 的 Search 和 Fetch 两个网页工具 API，经 DeepSeek Harness、Claude Code、Codex 等打出去的服务端调用，从今天起结束免费，按成功请求次数计费，单价同为每千次 0.75 美元。Search 返回结果列表，Fetch 拉网页正文。",
+        "source_url": "https://x.com/shao__meng/status/2117249746234466370",
+        "time": "2026-11-02T21:37:30+08:00",
+        "handle": "@shao__meng",
+        "impact": "高频用 DeepSeek 联网工具的 Agent 要重新算成本；本地可改用自建搜索或别家接口。",
+        "points": [
+          "Search 与 Fetch 同步结束免费",
+          "每千次成功请求 0.75 美元",
+          "走 Harness / Claude Code / Codex 等工具调用同样计费"
+        ]
+      },
+      {
+        "title": "wquguru 更新开源姿势库 Shisei：1000+ 机位线稿，并加入商到民国四视角服饰",
+        "summary": "wquguru 给开源姿势库 Shisei（可免费商用）更新了 1000+ 个姿势机位的线稿、白模、深度和法线图，最多五个机位且与线稿逐像素对齐，可喂给 ControlNet 或视频模型。随后又上线服装库：227 张中国历代四视角立体服装图（CC0），从商朝到民国共 57 件服饰外加婚服。",
+        "source_url": "https://x.com/wquguru/status/2117202562160238691",
+        "time": "2026-11-02T18:30:01+08:00",
+        "handle": "@wquguru",
+        "impact": "做角色一致性或古装生成的人，少自己抠参考图；商用前再核对许可证全文。",
+        "points": [
+          "姿势库免费商用、自由分发",
+          "服装库 CC0，四视角立体轮廓",
+          "可直接接 ControlNet / 视频模型"
+        ]
+      },
+      {
+        "title": "小互拆解 DeepSeek Harness 的 Super-agent：Router 只派活，Worker 并行干活",
+        "summary": "小互介绍 DeepSeek Harness 团队公开的 Super-agent 设计：人只跟同一个 Agent 说话，后台同时推进多件事。Router 只用便宜快模型，负责沟通和派活，连 Bash 都不给；Worker 才真正执行。思路是 session 别让人管，交给系统。",
+        "source_url": "https://x.com/xiaohu/status/2117252023754326117",
+        "time": "2026-11-02T21:46:33+08:00",
+        "handle": "@xiaohu",
+        "impact": "自己搭多 Agent 编排时，可以把「说话」和「干活」拆开，省模型和注意力。",
+        "points": [
+          "Router / Worker 两层",
+          "Router 不给 Bash，用便宜模型",
+          "面向同时开多个 Agent 盯不过来的场景"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Pi v1.5.0：扩展更新可显示 changelog，流式渲染更快，并接入 GPT-6.1 Terra",
+        "summary": "earendil-works/pi 发布 v1.5.0。扩展包更新后，下次冷启动可显示 changelog；大工具调用改为增量解析，代码和 Markdown 渲染复用高亮结果，界面更跟得上。还支持自定义自更新命令，并通过 OpenAI / Azure / Codex 接入 GPT-6.1 Terra（Codex 侧号称 50 万上下文）。破坏性变更：工具参数校验改走 @earendil-works/pi-schema，纯 TypeBox 特有写法不再生效。",
+        "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.5.0",
+        "time": "2026-11-02T19:05:31+08:00",
+        "handle": "@badlogicgames",
+        "impact": "日常用 Pi 的可以升；写过自定义 TypeBox 校验的扩展要按新文档改一版。",
+        "points": [
+          "扩展更新 changelog 可见",
+          "流式与大工具调用更顺",
+          "接入 GPT-6.1 Terra",
+          "工具 schema 校验切到 pi-schema"
+        ]
+      },
+      {
+        "title": "Hermes Agent v0.22.6：汇总自 v0.22.5 以来约 776 个 PR；官方演示 hermes migrate grok-bot",
+        "summary": "NousResearch/hermes-agent 发布 v0.22.6，官方称这是补丁标签，把自 v0.22.5 以来约 776 个已合并 PR、三千多个非合并提交收进稳定版，供 CLI、安装包、微软商店应用、Docker 和 Hermes Cloud 使用；详细发行说明留给 v0.23.0。同日官方账号还演示了 `hermes migrate grok-bot`，方便从 Grok Bot 迁过来。",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.6",
+        "time": "2026-11-03T01:18:36+08:00",
+        "handle": "@NousResearch",
+        "impact": "跟 Hermes 的人可以升到这一稳定点；想看完整新功能，等 v0.23.0 发行说明。",
+        "points": [
+          "776 个 PR 滚进稳定标签",
+          "详细功能说明延后到 v0.23.0",
+          "官方展示 migrate grok-bot"
+        ]
+      },
+      {
+        "title": "OpenMausBot：开源的 Grok Bot 替代品，自带可供 Bot 使用的虚拟机",
+        "summary": "milind-soni/OpenMausBot 今天在 TypeScript 热榜涨了约 910 星，总星约 11,189。项目定位是开源的 Grok Bot 替代方案，并给 Bot 配了一台可操作的虚拟机。",
+        "source_url": "https://github.com/milind-soni/OpenMausBot",
+        "time": "2026-11-03T06:12:00+08:00",
+        "impact": "想自托管「带电脑的 Bot」的人多了一个开源对照；使用前自行评估安全边界。",
+        "points": [
+          "今日约 +910 星，总星约 1.1 万",
+          "自带虚拟机供 Bot 使用",
+          "与闭源 Grok Bot 对照着看"
+        ]
+      },
+      {
+        "title": "Heretic：免训练修改语言模型，去掉审查、压制套话、降低拒答",
+        "summary": "p-e-w/heretic 今天在热榜涨了约 404 星，总星约 38,000。项目自称无需训练即可修改语言模型：去掉审查、压制套话（slop）、减少拒答。最新正式版 v2.0.0 于 11 月 1 日发布。",
+        "source_url": "https://github.com/p-e-w/heretic",
+        "time": "2026-11-03T06:12:00+08:00",
+        "impact": "本地改模型行为的工具又火了一把；改审查相关权重要自担合规风险。",
+        "points": [
+          "今日约 +404 星，总星约 3.8 万",
+          "免训练改模型行为",
+          "和「权重空间编程」同一大方向，但做法不同"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "DeepSeek Harness 上线 Creator Mode：把想法做成可复用插件",
+        "summary": "DeepSeek Harness 官方发布 Creator Mode：用户可以把想法做成自己能用的插件，示例包括设计工作区、沙盒游戏和 3D LLM 可视化。宣传片里还出现「make no mistake / make AGI」一类口号，属产品营销。",
+        "source_url": "https://x.com/DeepSeekHarness/status/2117256196227019194",
+        "time": "2026-11-02T22:03:08+08:00",
+        "handle": "@DeepSeekHarness",
+        "impact": "玩 DeepSeek Harness 的人多了一条「自己扩展能力」的入口；稳定性以实际试用为准。",
+        "points": [
+          "在 Harness 里自定义插件",
+          "示例含设计工作区与沙盒",
+          "与既有 dsh-superagent 方向一致"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Worktrunk：给并行 AI Agent 用的 Git worktree 管理 CLI",
+        "summary": "max-sixty/worktrunk 今天出现在 GitHub 热榜，定位是面向并行 AI Agent 的 Git worktree 管理命令行工具，方便同时开多个工作树让不同 Agent 改代码。",
+        "source_url": "https://github.com/max-sixty/worktrunk",
+        "time": "2026-11-03T06:12:00+08:00",
+        "impact": "一个人同时开好几个编码 Agent 时，用 worktree 隔离改动更干净。",
+        "points": [
+          "今日热榜可见",
+          "专为多 Agent 并行改同一仓库设计",
+          "CLI 形态"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果公布 2026 财年第四财季：营收 1145 亿美元同比增 12%，印度创单季新高",
+        "summary": "苹果发布 2026 财年第四财季业绩：营收 1145 亿美元，同比约增 12%，利润 307 亿美元。这是 CEO John Ternus 任内首份财报。Mark Gurman 还提到印度创公司单季新高，且整个 2026 财年 Mac 销量超过以往任何一个财年；同时 Ternus 表示 iPhone Duo 缺货暂看不到结束日期。Gurman 提醒接下来要盯假日季指引：没有 iPhone 18、没有 Air 2、Pro 升级偏小、Duo 难买，增长压力不小。",
+        "source_url": "https://www.macrumors.com/2026/11/02/apple-q4-2026-earnings/",
+        "time": "2026-11-03T05:38:19+08:00",
+        "handle": "@MacRumors",
+        "impact": "果粉和渠道商先把 Duo 供应预期放低；看投资或供应链的，重点听假日季电话会。",
+        "points": [
+          "营收 1145 亿美元，同比约 +12%",
+          "印度单季新高；FY2026 Mac 销量创新高",
+          "iPhone Duo 缺货暂无结束日期",
+          "假日季指引是下一焦点"
+        ]
+      },
+      {
+        "title": "谷歌：明年起安卓和 iOS 应用可直接接入 Quick Share",
+        "summary": "9to5Google 报道，谷歌将允许安卓和 iOS 应用在明年直接集成 Quick Share，开发者可以把系统级互传能力嵌进自己的 App，而不必只走系统分享菜单。",
+        "source_url": "https://x.com/9to5Google/status/2117313691725025717",
+        "time": "2026-11-03T01:51:36+08:00",
+        "handle": "@9to5Google",
+        "impact": "做跨端文件或相册类 App 的，可以把系统互传收进产品流程里。",
+        "points": [
+          "安卓与 iOS 应用都可接",
+          "预计明年落地",
+          "细节以谷歌正式文档为准"
+        ]
+      },
+      {
+        "title": "谷歌关停影响数百万 Android TV / Google TV 盒子的隐蔽恶意后门",
+        "summary": "9to5Google 报道，谷歌关闭了一个藏在大量 Android TV 和 Google TV 盒子里的隐蔽恶意后门。具体厂商名单和利用者以原文为准。",
+        "source_url": "https://x.com/9to5Google/status/2117341032874447227",
+        "time": "2026-11-03T03:40:15+08:00",
+        "handle": "@9to5Google",
+        "impact": "家里用杂牌电视盒子的，尽快确认系统更新渠道，不要装来路不明的 APK。",
+        "points": [
+          "影响面声称达数百万台",
+          "覆盖 Android TV 与 Google TV 盒子",
+          "建议检查设备固件与应用来源"
+        ]
+      },
+      {
+        "title": "OpenAI 将停用 ChatGPT Classic 应用，并合并 Chat 与 Work 标签",
+        "summary": "9to5Mac 报道，OpenAI 准备停用 ChatGPT Classic 应用，并在新应用里合并 Chat 与 Work 两个标签。具体下线时间以 OpenAI 公告为准。",
+        "source_url": "https://x.com/9to5mac/status/2117347857351037023",
+        "time": "2026-11-03T04:07:22+08:00",
+        "handle": "@9to5mac",
+        "impact": "还在用 Classic 客户端的，提前导出重要对话并改用现行 App。",
+        "points": [
+          "Classic 应用将退役",
+          "Chat / Work 标签合并",
+          "以官方迁移说明为准"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "yetone：跨端同步工具 Alma 安卓版已发布，可官网下载",
+        "summary": "yetone 宣布 Alma 安卓版上线，可在官网下载。Alma 此前以端到端、二进制帧同步等能力在桌面端推进，安卓版补齐手机端。",
+        "source_url": "https://x.com/yetone/status/2117292461769069027",
+        "time": "2026-11-03T00:27:14+08:00",
+        "handle": "@yetone",
+        "impact": "安卓用户可以开始试用 Alma；注意权限和备份策略。",
+        "points": [
+          "安卓版可官网下载",
+          "与既有桌面端能力对齐",
+          "具体功能以官网说明为准"
+        ]
+      },
+      {
+        "title": "Cloudflare：DNS 分区变更改用「最小安全构建」规划器，全量构建约减 40%",
+        "summary": "Cloudflare 介绍新的 DNS 构建规划器：以前改分区设置会重建整个 DNS 区，哪怕有上千万条记录；现在会选最小的安全构建范围。官方称全量构建减少约 40%，峰值内存约降 85%，构建延迟大约减半。",
+        "source_url": "https://x.com/Cloudflare/status/2117256679381164434",
+        "time": "2026-11-02T22:05:03+08:00",
+        "handle": "@Cloudflare",
+        "impact": "大区 DNS 变更会更快更省资源；自管 Cloudflare DNS 的体感主要在变更高峰。",
+        "points": [
+          "按最小安全范围构建，而不是整区重做",
+          "全量构建约 -40%，峰值内存约 -85%",
+          "构建延迟约减半（官方）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "向阳乔木开源：一键把 EPUB 做成双语对照，并可 Wi-Fi 推到越狱 KOReader Kindle",
+        "summary": "向阳乔木开源了一个小工具：一键把 EPUB 译成双语对照版下载，也可以通过 Wi-Fi 推到装了 KOReader 的越狱 Kindle。项目基于网友代码改造。",
+        "source_url": "https://x.com/vista8/status/2117303854308212895",
+        "time": "2026-11-03T01:12:31+08:00",
+        "handle": "@vista8",
+        "impact": "用 Kindle 读外文的人可以少做几步手工转换；越狱与推送风险自负。",
+        "points": [
+          "EPUB → 双语对照",
+          "可 Wi-Fi 推 KOReader Kindle",
+          "开源，基于既有项目改造"
+        ]
+      },
+      {
+        "title": "有人把 Hermes Agent 接到 Home Assistant Voice PE，儿童试用反应不错",
+        "summary": "用户分享：Hermes Agent 跑在 Home Assistant 的 Voice PE 上初步效果不错，孩子也愿意用。属于个人试用反馈，不是 Home Assistant 或 Nous 的官方发布。",
+        "source_url": "https://x.com/NetworkChuck/status/2117268785103048876",
+        "time": "2026-11-02T22:53:09+08:00",
+        "impact": "家里已有 Voice PE 又玩 Hermes 的，可以留意社区接法；正式支持还要等官方。",
+        "points": [
+          "跑在 HA Voice PE 上",
+          "个人试用，非官方产品",
+          "和 Hermes 手机/桌面端形成对照"
+        ],
+        "tag": "自报"
+      }
+    ]
+  }
+}
