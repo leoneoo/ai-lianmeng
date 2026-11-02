@@ -1,0 +1,281 @@
+{
+  "id": "2026-11-02-1800",
+  "published_at": "2026-11-02T18:00:00+08:00",
+  "headline": "SemiAnalysis 发布 GDPx 基准，最强的 Claude Opus 5.5 只拿 12%",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "SemiAnalysis 发布 GDPx 基准：206 个高价值 Agent 任务，最强的 Claude Opus 5.5 也只拿 12%",
+        "summary": "SemiAnalysis 11 月 2 日发布 GDPx，用来衡量模型在最值钱领域里的 Agent 能力，覆盖芯片设计、网络安全、生物、金融、法律、量化交易、递归自我改进（RSI）、硬件设计、材料、对齐和软件工程 11 个领域，共 206 个任务，由 14 家专业数据伙伴参与出题。官网榜单上 Claude Opus 5.5 以 12.0% 排第一，Gemini 4 Carbon 10.9%、GPT-6 Astra 9.6%、Muse Wonder Full 9.0%，Grok 4.7 为 3.9%。SemiAnalysis 特别指出，Opus 5.5 和 GPT-6 Astra 在网络安全、生物、对齐三个领域会被安全分类器拦下，总分因此被压低；金融和法律任务难到几乎所有模型都是 0 分。",
+        "source_url": "https://gdpx.semianalysis.com/",
+        "time": "2026-11-02T10:06:42+08:00",
+        "handle": "@SemiAnalysis_",
+        "impact": "继 OpenAI 的 GDPval 之后，前沿模型又多了一个专门考「高价值 Agent 工作」的标尺；选模型时，安全分类器拦截率和单任务成本要和分数一起看。",
+        "points": [
+          "官网榜单：Opus 5.5 12.0%、Gemini 4 Carbon 10.9%、GPT-6 Astra 9.6%、Grok 4.7 3.9%",
+          "按领域看：Opus 赢量化、硬件和芯片设计，Gemini 4 Carbon 赢生物和软件工程，GPT-6 Astra 赢 RSI 和材料",
+          "安全分类器会明显影响得分，SemiAnalysis 称网络安全领域目前最强的是 Muse Wonder Full",
+          "成本与成绩的帕累托曲线上，Gemini 4 Carbon 是最值得盯的新面孔"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Sakana AI 宣布从零训练自有大模型「Sakana Sawara」，主打 Agent 原生",
+        "summary": "Sakana AI 发布 10 月 26 日东京研讨会的报告：首席科学顾问 Jürgen Schmidhuber 做主题演讲，并与 CEO David Ha 对谈，400 多人到场。联合创始人 hardmaru 在 X 上说，公司的 RSI 实验室正在从零训练一个 Agent 原生的大模型，名为 Sakana Sawara。按公司报告，首个模型 Sawara Small 计划在 2027 年春季推出。",
+        "source_url": "https://x.com/hardmaru/status/2117073468345004258",
+        "time": "2026-11-02T09:57:02+08:00",
+        "handle": "@hardmaru",
+        "impact": "日本又多一个自研基础模型玩家，而且一开始就按 Agent 场景设计；距离首个模型上线还有约半年，先放进观察名单。",
+        "points": [
+          "Sawara 是从零训练的自有模型，不是在别家开源模型上微调",
+          "由 Sakana 的 RSI（递归自我改进）实验室负责",
+          "研讨会报告同时提到世界模型和 Physical AI 方向"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "⚠️ 美团 LongCat-2.5 据报上线 API：1.6T MoE、约 48B 激活、100 万上下文",
+        "summary": "据科技资讯账号 ChinaHotTech 整理，美团 LongCat-2.5 是 1.6T 参数的 MoE 模型，每次约激活 48B，原生多模态，面向长链路 Agent 编程，上下文 100 万 token，提供兼容 OpenAI 和 Anthropic 格式的 API。权重这次没有开放，跑分为厂商自测。本轮没找到美团官方的发布原文，Hugging Face 上的 meituan-longcat 组织也还没有新模型。",
+        "source_url": "https://chinahottech.com/posts/2026-11-02-longcat-2-5/",
+        "time": "2026-11-02T13:30:44+08:00",
+        "handle": "@ChinaHotTech",
+        "impact": "国产大模型继续往 Agent 编程方向卷；在看到美团官方原文和第三方复测之前，参数和价格都只当参考。",
+        "points": [
+          "1.6T MoE、约 48B 激活、100 万上下文（转述）",
+          "只开 API，不开权重",
+          "跑分为厂商自测，未见第三方复测",
+          "MaxForAI 称「LongCat 2.5 正式版」本周发布，用纯国产卡训练"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "shao__meng：浙大开源个人 Agent 系统报告和 nanoMuse，以 Meta Muse 作对照",
+        "summary": "浙江大学团队发表了一份开源个人 Agent 系统报告，拿 Meta Muse 当参照，讨论「个人 Agent」应该具备哪些能力，同时开源了自己的实现 nanoMuse。论文已上 Hugging Face Papers，项目有独立主页。",
+        "source_url": "https://x.com/shao__meng/status/2117171145342644530",
+        "time": "2026-11-02T16:25:10+08:00",
+        "handle": "@shao__meng",
+        "impact": "想自建个人助理的人多了一个有论文、有代码的参考实现，可以对照 Hermes、Pi 看设计取舍。",
+        "points": [
+          "论文：Hugging Face Papers 2610.08699",
+          "项目主页 nanomuse.cn",
+          "以 Meta Muse 为对照定义个人 Agent"
+        ]
+      },
+      {
+        "title": "wquguru 拆解飞书会议纪要的工程设计，照着写了个 Mac 版（即将开源）",
+        "summary": "wquguru 用逆向工具把飞书桌面端的会议纪要拆了一遍，总结出三个核心设计，并照此写了一个 Mac 版，说很快开源。三点分别是：录音每秒切片先存本地、上传成功才删，崩溃后自动补传；纪要拆成总结、待办、关键决策、章节等独立任务，谁先完成先显示谁；自动生成的鱼骨图每个分支都绑着原句，点一下能跳回原话。",
+        "source_url": "https://x.com/wquguru/status/2117070715803640272",
+        "time": "2026-11-02T09:46:06+08:00",
+        "handle": "@wquguru",
+        "impact": "做录音、转写类 AI 应用可以直接借鉴这三点；工具开源后再看代码质量和隐私处理。",
+        "points": [
+          "录音转 16kHz 每秒切片，保证不丢",
+          "纪要拆成多个并行小任务，减少用户干等",
+          "图表分支绑定原文并统计引用量，用来识别空话"
+        ]
+      },
+      {
+        "title": "shao__meng 解读 OpenRouter 的可验证代码审查脚本：每条问题都在沙箱里复现",
+        "summary": "OpenRouter 给出一份 233 行、只用标准库的 Python 脚本 review.py，把变更文件、测试和 diff 传到 OpenRouter，在托管 Linux 沙箱里跑短脚本复现问题，再给出补丁。每条发现都标成 confirmed（附命令和输出）或 unconfirmed；五个 bug 的样例里，一次审查约 1～4 分钟、0.015～0.045 美元。",
+        "source_url": "https://x.com/shao__meng/status/2117071027784056947",
+        "time": "2026-11-02T09:47:20+08:00",
+        "handle": "@shao__meng",
+        "impact": "和上午 Anthropic「靠证据审 PR」的思路一致，AI 审代码正在从「给意见」走向「给证据」；注意它会把代码上传到第三方。",
+        "points": [
+          "可挂在 pre-push 或 GitHub Actions，严重度不达标就拦推送",
+          "补丁先打在本地临时副本，加 --apply 才写回",
+          "用严格 JSON 的函数工具收尾，避免小模型输出跑偏"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "向阳乔木受 HackerTube 启发，把 HN 20 年提到的论文做成网站",
+        "summary": "向阳乔木用 Hugging Face 上约 12G 的 Hacker News 数据，把 2006～2026 年 HN 上被提到的论文整理成一个网站，不少附中文导读和翻译。他说接下来还在做电子书库和高赞链接库。",
+        "source_url": "https://x.com/vista8/status/2117176698336842027",
+        "time": "2026-11-02T16:47:14+08:00",
+        "handle": "@vista8",
+        "impact": "公开数据集加 AI 整理，一个人就能做出垂直内容站，是很好的个人项目样板。",
+        "points": [
+          "数据来自 Hugging Face 上的 HN 公开数据集",
+          "灵感来自 Karpathy 的 HackerTube",
+          "部分论文带中文导读"
+        ]
+      },
+      {
+        "title": "MaxForAI 预告本周国产模型：混元 HY4 正式版、DeepSeek V4.1-Pro、Qwen4 等",
+        "summary": "MaxForAI 列出本周可能发布的几款国产模型：腾讯混元 HY4 正式版、DeepSeek V4.1-Pro、Kimi K3.1 的另一个版本、美团 LongCat 2.5 正式版和 Qwen4。他也说 DeepSeek 和 Qwen 能否如期要看流程和性能，智谱的新旗舰还要等一段时间。",
+        "source_url": "https://x.com/MaxForAI/status/2117156375293825036",
+        "time": "2026-11-02T15:26:29+08:00",
+        "handle": "@MaxForAI",
+        "impact": "本周国产模型可能密集发布，具体以各家官方公告为准。",
+        "points": [
+          "HY4 正式版称比 Preview 有较大提升",
+          "DeepSeek V4.1-Pro、Qwen4 均带「如果没有意外」的前提",
+          "均为个人预告，无官方确认"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "AiSOC：开源 AI 安全运营中心，每一步 Agent 决策都可回放",
+        "summary": "AiSOC 今天在 GitHub 热榜涨了 446 星，总星约 6,510。它把告警合并、LLM Agent 分诊和按 MITRE ATT&CK 框架调查放在一起，并给每一步 Agent 操作留一份可回放的决策记录。项目可自托管、不需要 API 密钥即可运行，MIT 许可，还带一个给 Claude、Cursor、Continue 用的 MCP 服务器。",
+        "source_url": "https://github.com/beenuar/AiSOC",
+        "time": "2026-11-02T18:12:00+08:00",
+        "impact": "Agent 进入安全运营，「每一步可追溯」成了标配；拿来练手或做家庭网络告警分诊都合适。",
+        "points": [
+          "今日 +446 星，总星约 6,510",
+          "决策记录可回放，方便审计 Agent",
+          "自托管、MIT 许可、自带 MCP 服务器"
+        ]
+      },
+      {
+        "title": "OpenMontage：把编程助手变成视频制作工作室的开源系统",
+        "summary": "OpenMontage 今天涨了 448 星，总星约 74,700。它自称首个开源的 Agent 视频制作系统，内置 12 条制作流水线、100 多个工具和 700 多份 Agent 技能与制作知识文件，让 AI 编程助手直接接手视频制作。",
+        "source_url": "https://github.com/calesthio/OpenMontage",
+        "time": "2026-11-02T18:12:00+08:00",
+        "impact": "Skills 生态从写代码扩到做视频，同一个 Agent 能干的活越来越多。",
+        "points": [
+          "今日 +448 星，总星约 7.5 万",
+          "12 条流水线、100+ 工具、700+ 技能文件",
+          "思路是复用现有编程 Agent，而不是另做一个视频 App"
+        ]
+      },
+      {
+        "title": "Paperclip：管理工作中多个 AI Agent 的开源应用，总星破 11 万",
+        "summary": "paperclipai/paperclip 今天在 TypeScript 热榜涨了 507 星，总星约 110,000。项目定位是在工作中统一管理多个 AI Agent 的开源应用。",
+        "source_url": "https://github.com/paperclipai/paperclip",
+        "time": "2026-11-02T18:12:00+08:00",
+        "impact": "Agent 多了以后，「谁在干什么、花了多少」的管理层工具开始走热。",
+        "points": [
+          "今日 +507 星，总星约 11 万",
+          "TypeScript 实现、开源",
+          "面向团队里同时跑多个 Agent 的场景"
+        ]
+      },
+      {
+        "title": "FreeToken：把数据中心级的大模型推理搬到桌面电脑",
+        "summary": "FreeToken 今天涨了 242 星，总星约 15,700。项目主打在本地桌面上高效运行超大模型，把数据中心那一套推理服务做法搬到个人电脑上。",
+        "source_url": "https://github.com/FlashML-org/FreeToken",
+        "time": "2026-11-02T18:12:00+08:00",
+        "impact": "本地推理工具持续升温，给 NAS 或 Mac 跑私有模型多一个选项。",
+        "points": [
+          "今日 +242 星，总星约 1.57 万",
+          "主打本地跑大模型",
+          "性能说法为项目自述，需自测"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "DeepSeek 的 tianyi：每一代模型都要好好支持 Pi 等主流 Agent 框架",
+        "summary": "DeepSeek 的 tianyi 在 X 上说，和 Pi 作者 Mario Zechner（@badlogicgames）、Armin Ronacher（@mitsuhiko）交流后很受启发。他表示 DeepSeek 相信要在各种 Agent 框架上都做好适配，目标是每一代模型都为 Pi 等全球主流 Agent 框架提供良好支持。",
+        "source_url": "https://x.com/tianyi/status/2117064134961631414",
+        "time": "2026-11-02T09:19:57+08:00",
+        "handle": "@tianyi",
+        "impact": "Pi 用户以后用 DeepSeek 模型可能更顺手；等新模型发布时看实际兼容情况。",
+        "points": [
+          "DeepSeek 点名支持 Pi",
+          "思路是适配多种 Agent 框架，而不只绑自家工具",
+          "具体适配方式和时间未公布"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "天气 AI 论文：把 AI 天气模型集合预报加进多模式概率融合，价值有多大",
+        "summary": "arXiv 新论文《Value of Adding AI Weather Model Ensembles to a Multi-model Probabilistic Blend》，作者包括 Harris Sop Nkuiate、Gavin Evans、Christopher Ferro、Frank Kwasniok、Caroline Bain 和 Stefan Siegert。论文研究把 AI 天气模型的集合预报并入现有多模式概率融合系统后，预报能提升多少。",
+        "source_url": "https://x.com/OceanicPhysics/status/2117180904061726897",
+        "time": "2026-11-02T17:03:57+08:00",
+        "impact": "AI 天气模型正从单独比分走向并入业务融合，对做多模式对比的天气简报有参考意义。",
+        "points": [
+          "题目直指业务化问题：AI 集合是否值得并入融合系统",
+          "作者含多位气象业务和统计学研究者",
+          "具体结论需读原文"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果五款新品 11 月 6 日周五开卖，含首款触屏 MacBook Pro",
+        "summary": "据 MacRumors，上周开启预购的五款新品本周五（11 月 6 日）开售：OLED 屏加 A20 Pro 的 iPad mini、M6 iMac、M6 14 寸 MacBook Pro，以及 14 寸和 16 寸 OLED 触屏 MacBook Pro。美国起价分别为 iPad mini 699 美元、iMac 1,499 美元、M6 MacBook Pro 1,999 美元，触屏款 14 寸 2,899 美元、16 寸 3,399 美元。",
+        "source_url": "https://www.macrumors.com/2026/11/02/apple-launching-five-new-products-this-friday/",
+        "time": "2026-11-02T17:22:30+08:00",
+        "handle": "@MacRumors",
+        "impact": "苹果首批触屏 Mac 本周到用户手里，第一波实际体验和 macOS 触控适配值得看。",
+        "points": [
+          "五款新品 11 月 6 日开售",
+          "触屏 MacBook Pro 14 寸 2,899 美元起、16 寸 3,399 美元起",
+          "基础款 14 寸触屏深空黑发货要 3～4 周"
+        ]
+      },
+      {
+        "title": "LINE 11 月 4 日起停止支持旧版：需 iOS 15 或 Android 8 以上",
+        "summary": "据台湾资讯账号白耳整理 LINE 10 月 16 日的公告，从 11 月 4 日起，iPhone 版 14.6.3、Android 版 14.4.6 之前的 LINE 不再支持。手机系统要 iOS 15 或 Android 8 以上才能升级；升不上去的，LINE 建议换用受支持的手机，换机前先备份聊天记录。",
+        "source_url": "https://x.com/whiteear_news/status/2117083385638355008",
+        "time": "2026-11-02T10:36:27+08:00",
+        "handle": "@whiteear_news",
+        "impact": "家里长辈用旧手机登 LINE 的，这周内要检查版本并备份。",
+        "points": [
+          "11 月 4 日生效",
+          "最低 iOS 15 或 Android 8",
+          "换机前先备份聊天记录"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Folo 桌面版 1.17.0：离线改动联网后自动同步，并修复换号时设置串到别的账号",
+        "summary": "RSS 阅读器 Folo 发布桌面版 1.17.0 和移动版 0.6.2。离线或服务器连不上时做的改动会先保留，恢复后自动同步，只有被服务器拒绝的才撤销并说明原因；两台设备同时改自动化规则也不再互相覆盖。更新日志还写明修复了一个隐私问题：同一设备换另一个账号登录时，上一个账号的设置（包括 AI 服务密钥和 MCP 请求头）会被上传到新账号。",
+        "source_url": "https://github.com/RSSNext/Folo/releases/tag/desktop/v1.17.0",
+        "time": "2026-11-02T16:34:00+08:00",
+        "impact": "多端同步更可靠；在同一台设备登过多个 Folo 账号的，建议升级后检查并轮换存过的 AI 密钥。",
+        "points": [
+          "离线改动保留并在联网后同步",
+          "多设备编辑规则不再互相覆盖",
+          "修复换账号时 AI 密钥、MCP 请求头串号上传",
+          "新增视频自动播放开关，统计不再收姓名和邮箱"
+        ]
+      },
+      {
+        "title": "Miniflux 2.3.5：支持只用通行密钥登录，修补多处安全问题",
+        "summary": "自托管 RSS 阅读器 Miniflux 发布 2.3.5。新版允许关闭密码登录后只用 WebAuthn 通行密钥，加了 OpenID Connect 管理员角色映射；安全方面改为修改密码前需输入原密码、改密后踢掉其他会话，并堵住了绕过服务端请求伪造（SSRF）过滤的地址。客户端 IP 现在从 X-Forwarded-For 的右侧取值。",
+        "source_url": "https://github.com/miniflux/v2/releases/tag/2.3.5",
+        "time": "2026-11-02T12:29:00+08:00",
+        "impact": "自建 Miniflux 的值得尽快升级；走 Cloudflare 等多层代理的，升级后先补好可信代理网段。",
+        "points": [
+          "可只用通行密钥登录，关闭前先注册至少一个通行密钥",
+          "改密码后其他会话全部下线",
+          "多层反向代理（如 Cloudflare 加 nginx）要把每层网段加进 TRUSTED_REVERSE_PROXY_NETWORKS",
+          "Fever 和 Google Reader 接口多处修复"
+        ]
+      },
+      {
+        "title": "NectarLink：开源的安卓与 Windows 互联工具，端到端加密、无需账号",
+        "summary": "GitHubDaily 介绍了开源工具 NectarLink：安卓手机和 Windows 电脑扫码配对后，可以在电脑上看和回复手机通知、浏览相册、断点续传文件，还能把手机 App 单独开窗口操作。投屏最高 60 帧，手机也能反过来当电脑的触控板、键盘和演示遥控器。",
+        "source_url": "https://x.com/GitHub_Daily/status/2117157274947088565",
+        "time": "2026-11-02T15:30:03+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "安卓加 Windows 的组合多了一个开源的「互联」方案，适合不想装厂商全家桶的人。",
+        "points": [
+          "走局域网或数据线，内容端到端加密",
+          "无需注册账号",
+          "每台配对设备可单独开关共享哪些功能"
+        ]
+      },
+      {
+        "title": "用户发现群晖套件中心的 Tailscale 仍停在 2024 年版本",
+        "summary": "日本博主 oshiete_suitman 发现，群晖套件中心里的 Tailscale 一直停在 2024 年的版本没有更新，于是改从 Tailscale 官网下载套件手动安装，并写了步骤和踩坑记录。同一天也有台湾用户提到，因为近期群晖漏洞，重新收紧了 Tailscale 的安全设置。",
+        "source_url": "https://x.com/oshiete_suitman/status/2117093011867971856",
+        "time": "2026-11-02T11:14:42+08:00",
+        "handle": "@oshiete_suitman",
+        "impact": "群晖上跑 Tailscale 的，值得看一眼版本号，旧版可能缺近期的安全修复。",
+        "points": [
+          "套件中心版本可能落后",
+          "可从 Tailscale 官网下载群晖套件手动升级",
+          "个人反馈，未见群晖或 Tailscale 官方说明"
+        ]
+      }
+    ]
+  }
+}
