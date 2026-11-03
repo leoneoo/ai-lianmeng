@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T18:20:59+08:00",
+  "updated_at": "2026-11-04T06:16:03+08:00",
   "editions": [
+    {
+      "id": "2026-11-04-0600",
+      "published_at": "2026-11-04T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-04-0600.json",
+      "counts": {
+        "x_daily": 9,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 4,
+        "tech": 4,
+        "iot": 1
+      },
+      "headline": "Claude 插件登录即自动连接；Kimi K3.1 Pro 发布待放权重"
+    },
     {
       "id": "2026-11-03-1800",
       "published_at": "2026-11-03T18:00:00+08:00",

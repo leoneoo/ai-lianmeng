@@ -1,0 +1,263 @@
+{
+  "id": "2026-11-04-0600",
+  "published_at": "2026-11-04T06:00:00+08:00",
+  "headline": "Claude 插件登录即自动连接；Kimi K3.1 Pro 发布待放权重",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Claude 上线插件自动连接：团队/企业版登录即连，不再逐个 OAuth 授权",
+        "summary": "Anthropic 开发者账号 ClaudeDevs 11 月 3 日宣布，用户登录 Claude 时可以自动连上插件，前提是插件背后的 MCP 服务器接受 Claude 作为可信签发方（trusted issuer）。据宝玉解读，目前是测试版，面向 Team 和 Enterprise：一种走公司身份提供方（IdP，如 Okta）的企业托管授权（EMA，MCP 的公开扩展），另一种由 Claude 直接为已登录员工担保身份。连接到期后在后台续上，管理员可在 IdP 一侧统一开通和收回权限。",
+        "source_url": "https://x.com/ClaudeDevs/status/2117680635561312732",
+        "time": "2026-11-04T02:09:00+08:00",
+        "impact": "企业接 MCP 工具少了大量授权步骤，但「Claude 替员工担保身份」让权限边界更依赖管理员配置，开通前要先理清哪些插件能自动连。",
+        "points": [
+          "用户登录 Claude 即自动连接已开通插件",
+          "两条路：IdP 企业托管授权（EMA），或 Claude 作为可信签发方",
+          "连接自动续期，离职时可在 IdP 统一收回",
+          "插件开发方需主动加支持"
+        ],
+        "tag": "测试版"
+      },
+      {
+        "title": "Kimi K3.1 Pro 发布，Together AI 称权重 11 月 4 日放出",
+        "summary": "Together AI 发帖说 Kimi K3.1 Pro 已经发布，权重将在次日（11 月 4 日）放出。Together 同日安排了月之暗面 Feihu Tang 的直播，讲架构设计、长时间运行的 Agent 和生产推理。本轮没查到月之暗面官方账号的发布帖，参数和成绩暂无一手数字。",
+        "source_url": "https://x.com/togethercompute/status/2117721182573322671",
+        "time": "2026-11-04T04:50:00+08:00",
+        "impact": "如果权重按时开放，国产开源模型在长任务 Agent 方向又多一个可自部署选项；具体能力还要看官方技术报告。",
+        "points": [
+          "合作方 Together AI 披露：K3.1 Pro 已发布",
+          "权重预计 11 月 4 日开放",
+          "11 月 4 日太平洋时间 9 点技术直播"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "Mistral Large 4 上架 Open Math OS：1.05T 开放权重、100 万上下文",
+        "summary": "Mistral 宣布 Mistral Large 4 加入 Open Math OS 的模型阵容，官方给出的规格是 1.05T 开放权重、100 万 token 上下文，今天起对通过审核的团队开放。Open Math OS 是让数学家和 AI Agent 共同做项目的研究工作区，只用开放模型。Mistral 同日还展示了 Large 4 自主做出实时卫星和碎片 3D 追踪应用的案例。",
+        "source_url": "https://x.com/MistralAI/status/2117670644506861900",
+        "time": "2026-11-04T01:30:00+08:00",
+        "impact": "万亿级开放权重模型进入数学研究工具链，开源阵营在大参数段又多一个选择；实际可用性受审核名额限制。",
+        "points": [
+          "1.05T 开放权重，100 万上下文（自报）",
+          "Open Math OS 只接开放模型",
+          "先对审核通过的团队开放"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Claude Code 产品负责人 Cat Wu 离开 Anthropic",
+        "summary": "Claude Code 和 Cowork 的产品负责人 Cat Wu 发帖说，上周五是她在 Anthropic 的最后一天，没有说明原因和去向。她回顾，Claude Code 刚发布时多数用户手动批准每个权限请求，现在默认是信任 Claude 自动批准，并能做大型迁移和新产品。她 2024 年 8 月加入 Anthropic。",
+        "source_url": "https://x.com/_catwu/status/2117731934340337676",
+        "time": "2026-11-04T05:33:00+08:00",
+        "impact": "Claude Code 核心产品负责人变动，后续路线是否调整值得观察；她的去向可能牵动编程 Agent 赛道格局。",
+        "points": [
+          "本人发帖确认离职，未说去向",
+          "负责 Claude Code、Cowork 和 Tag",
+          "帖中提到默认已转向自动批准权限"
+        ]
+      },
+      {
+        "title": "OpenAI 称 ChatGPT 查询量约为 Google 搜索的 20%",
+        "summary": "9to5Google 报道，OpenAI 表示 ChatGPT 的使用量已达到 Google 搜索量的约 20%。这是 OpenAI 自报口径，统计方法未公开。",
+        "source_url": "https://x.com/9to5Google/status/2117722251684409540",
+        "time": "2026-11-04T04:55:00+08:00",
+        "impact": "如果口径可比，对话式 AI 正在实打实分走搜索流量，搜索广告生意会更受关注。",
+        "points": [
+          "约 20%，OpenAI 自报",
+          "统计口径未公开"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Perplexity Computer 支持 Agent 插件，可打包整组应用和技能",
+        "summary": "Aravind Srinivas 说，Perplexity 的 Agent 框架 Computer 现在支持 Agent Plugins，可以在单个连接器之上直接调用一整组应用及对应技能。官方同日还展示了用 Computer 管理 Shopify 店铺、Meta 广告和 Klaviyo 邮件营销。",
+        "source_url": "https://x.com/AravSrinivas/status/2117725519982784940",
+        "time": "2026-11-04T05:08:00+08:00",
+        "impact": "Agent 产品的竞争点正从接多少个工具，转到能不能整包交付一类工作流。",
+        "points": [
+          "插件 = 应用包 + 技能",
+          "面向电商运营等多应用流程"
+        ]
+      },
+      {
+        "title": "Revolut 把开放模型设为编程默认：约 2000 名工程师，成本降到十分之一",
+        "summary": "Together AI 称，Revolut 已把开放模型设为编程默认选择，覆盖约 2,000 名工程师，成本为原来的十分之一，交付周期快 70%。数字来自 Together 的宣传帖，Revolut 方面本轮未见一手说明。",
+        "source_url": "https://x.com/togethercompute/status/2117666686757372106",
+        "time": "2026-11-04T01:14:00+08:00",
+        "impact": "大公司开始把开放模型当编程主力，闭源编程模型的价格压力会继续加大。",
+        "points": [
+          "约 2,000 名工程师",
+          "成本 1/10、交付周期快 70%（合作方自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 介绍 ChatGPT 和 Codex 用于机械、电气设计与仿真",
+        "summary": "OpenAI 发文介绍 ChatGPT 和 Codex 在机械设计、电气工程和仿真上的使用进展，既用于自家硬件团队加快迭代，也在和行业伙伴测试新工作流。",
+        "source_url": "https://x.com/OpenAI/status/2117692475775258785",
+        "time": "2026-11-04T02:56:00+08:00",
+        "impact": "编程 Agent 开始往硬件工程延伸，CAD 和 EDA 工具厂商会受到直接影响。",
+        "points": [
+          "覆盖机械设计、电气工程、仿真",
+          "先在 OpenAI 硬件团队内部使用"
+        ]
+      },
+      {
+        "title": "Cohere 在主权推理平台 Model Vault 上开放开源模型",
+        "summary": "Cohere 宣布，1 月推出的主权推理平台 Model Vault 现在也提供开放模型，客户可在同一平台按任务选模型，数据保留在受控环境里。",
+        "source_url": "https://x.com/cohere/status/2117694764665471270",
+        "time": "2026-11-04T03:05:00+08:00",
+        "impact": "对数据合规要求高的企业，多了一个在受控环境里混用闭源和开放模型的选择。",
+        "points": [
+          "Model Vault 加入开放模型",
+          "主打数据主权"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "腾讯微信开源 WeVisOne-VL：2B/4B 模型统一检测、计数、OCR、分割和抠图",
+        "summary": "微信视觉团队开源视觉语言模型 WeVisOne-VL，主干基于 Qwen3-VL，加一个 960 万参数的像素解码器，不依赖 SAM 就能输出掩码和透明度蒙版。目标不存在时输出 None，不硬编框；训练数据由自建数据引擎标注超过 1 亿张图。",
+        "source_url": "https://x.com/shao__meng/status/2117627401106784739",
+        "time": "2026-11-03T22:38:00+08:00",
+        "impact": "做端侧视觉应用的开发者多一个小尺寸、多任务的开源选择。",
+        "points": [
+          "2B/4B 两个尺寸",
+          "像素解码器仅 960 万参数",
+          "标注器 Mask2Alpha 单独开源"
+        ]
+      },
+      {
+        "title": "腾讯混元 Hyra 2.0：三层 Agent 自主研发科研模型和工具",
+        "summary": "腾讯混元发布 Hyra 2.0，用规划、专项研究、执行复核三层 Agent 长时间协作，把调试经验沉淀成技能库。官方称已产出蛋白质设计模型 HyInv（生成快 57 倍）、自动证明工作流 HyProver 等，并为香山处理器修了 10 个缺陷。系统未开源。",
+        "source_url": "https://x.com/Gorden_Sun/status/2117625758814474746",
+        "time": "2026-11-03T22:31:00+08:00",
+        "impact": "「Agent 做科研」从解单题转向沉淀可复用工具，但成绩都是自报，需等论文核对。",
+        "points": [
+          "三层 Agent + 技能库",
+          "HyInv 生成速度快 57 倍（自报）",
+          "未开源"
+        ]
+      },
+      {
+        "title": "宝玉谈 /retro 类复盘 Skill：AI 自我复盘要由人把关",
+        "summary": "宝玉介绍 /retro Skill：编码任务结束后让 AI 复盘刚完成的工作，列出修改建议，由人决定是否采纳。他也讨论了其他「自我进化」类 Skill 的局限。",
+        "source_url": "https://x.com/dotey/status/2117706197797114009",
+        "time": "2026-11-04T03:51:00+08:00",
+        "points": [
+          "任务后复盘，人来拍板",
+          "对自我进化类 Skill 保持审慎"
+        ]
+      },
+      {
+        "title": "郭宇：Tuwa 让 Agent 借云手机打微信语音、代开 Zoom 会议",
+        "summary": "郭宇说 Tuwa 开始向内测用户出借云手机，可装自己的常用 App；Tuwa Device 新增微信 Mac 版语音通话和 Zoom 会议支持，可让 AI Agent 代用户给亲友打电话或参会。",
+        "source_url": "https://x.com/turingou/status/2117600442607919364",
+        "time": "2026-11-03T20:51:00+08:00",
+        "impact": "Agent 代人通话很方便，但意味着把账号和通话交给第三方云设备，隐私风险要先想清楚。",
+        "points": [
+          "内测用户可借云手机",
+          "支持微信语音和 Zoom"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "NVIDIA 开源 Auto Ontology：给 Agent 用的企业语义层和 Text-to-SQL",
+        "summary": "NVIDIA 开源 Auto Ontology，从数据库元数据自动生成业务本体，通过 Web、API 和 MCP 交给任意 Agent，让 AI 查企业数据时先弄清指标定义，再生成 SQL，并附上数据来源。技术栈为 FastAPI、Postgres、Better Auth 和 NVIDIA NIM。",
+        "source_url": "https://x.com/Gorden_Sun/status/2117620622155207119",
+        "time": "2026-11-03T22:11:00+08:00",
+        "points": [
+          "自动从元数据生成语义层",
+          "通过 MCP 对接 Agent",
+          "回答附出处"
+        ]
+      },
+      {
+        "title": "OpenHands × Snowflake：按自己的 Agent 配置后训练开放模型",
+        "summary": "OpenHands 与 Snowflake Cortex Training 合作，开发者可直接用现有 Agent 配置和任务数据后训练开放权重模型，让模型适配自己的 Agent 框架。OpenHands 同日发布 v1.35.0。",
+        "source_url": "https://x.com/OpenHandsDev/status/2117700761521967523",
+        "time": "2026-11-04T03:29:00+08:00",
+        "points": [
+          "用现有 Agent 任务做后训练",
+          "OpenHands v1.35.0 同日发布"
+        ]
+      },
+      {
+        "title": "opencode 免费开放隐身模型 Crouton Alpha 一周",
+        "summary": "opencode 宣布隐身模型 Crouton Alpha 未来一周免费，100 万上下文、多模态，称不用用户数据训练，仅限部分地区。模型来源未公布。",
+        "source_url": "https://x.com/opencode/status/2117717721458843711",
+        "time": "2026-11-04T04:37:00+08:00",
+        "points": [
+          "100 万上下文、多模态",
+          "不训练用户数据（自报）",
+          "来源未公开"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Hermes Agent v0.22.7：汇总约 174 个 PR 的稳定版",
+        "summary": "Hermes Agent 发布 v0.22.7，汇总 v0.22.6 以来合并的约 174 个 PR，同步到 CLI、安装包、Microsoft Store、Docker 和 Hermes Cloud；完整更新说明随 v0.23.0 发布。",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.7",
+        "time": "2026-11-04T05:53:00+08:00",
+        "points": [
+          "约 174 个 PR 汇总",
+          "详细说明见 v0.23.0"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Xcode 27.3 内置编程助手接入 GitHub Copilot",
+        "summary": "9to5Mac 报道，Xcode 27.3 在内置编程助手里加入了 GitHub Copilot 选项。",
+        "source_url": "https://x.com/9to5mac/status/2117724579468644412",
+        "time": "2026-11-04T05:04:00+08:00",
+        "points": [
+          "Xcode 27.3 测试版"
+        ]
+      },
+      {
+        "title": "苹果天气疑似出 Bug：国内多地 10 日预报最低温显示 -32℃",
+        "summary": "MaxForAI 截图显示，苹果天气里武汉、杭州、石家庄 10 日预报最后一天最低温均为 -32℃，北京通州 -31℃，还配了下雪图标。属个人截图，苹果未回应。",
+        "source_url": "https://x.com/MaxForAI/status/2117663273558691888",
+        "time": "2026-11-04T01:00:00+08:00",
+        "points": [
+          "多地最后一天预报异常",
+          "未获官方确认"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "Google 推「引导式学习」：学校不接受 AI 功能将关闭学生搜索",
+        "summary": "9to5Google 报道，Google 将对学生账号关闭搜索，除非学校接受「Guided Learning」中的 AI 功能。",
+        "source_url": "https://x.com/9to5Google/status/2117717263717486717",
+        "time": "2026-11-04T04:35:00+08:00",
+        "points": [
+          "面向教育账号"
+        ]
+      },
+      {
+        "title": "苹果明令禁止员工用内部信息参与预测市场",
+        "summary": "9to5Mac 报道，苹果已在员工规定中明确禁止利用保密信息参与预测市场交易。",
+        "source_url": "https://x.com/9to5mac/status/2117738334701187225",
+        "time": "2026-11-04T05:58:00+08:00",
+        "points": [
+          "新增员工规定"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "向阳乔木做 Jot：一个快捷键把灵感和截图收进 Obsidian 日记",
+        "summary": "向阳乔木用 AI 做了 Mac 工具「乔木闪记 Jot」：快捷键随手记、选中文字一键存入并带来源链接、截图文字本地识别，统一存进 Obsidian 当天日记；称等 Apple 公证后提供下载。",
+        "source_url": "https://x.com/vista8/status/2117682826313339095",
+        "time": "2026-11-04T02:18:00+08:00",
+        "points": [
+          "⌘⇧J 记录、⌘⇧K 存选中",
+          "截图本地 OCR"
+        ]
+      }
+    ]
+  }
+}
