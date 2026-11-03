@@ -1,0 +1,327 @@
+{
+  "id": "2026-11-03-1800",
+  "published_at": "2026-11-03T18:00:00+08:00",
+  "headline": "Anthropic 修订招股书：三季度收入约 170 亿美元；Anthropic 开源 FlashProve 可证明推理",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 提交修订版上市招股书：三季度收入约 170 亿美元，算力承诺约 8,954 亿美元",
+        "summary": "Anthropic 向美国证监会（SEC）提交了 S-1/A 修订版招股书，补上 2026 年三季度数据，拟在纳斯达克以代码「ANT」上市，发行价仍空着。招股书显示，三季度收入 169.56 亿美元，去年同期是 13.82 亿美元，约 12 倍；环比增速放缓到约 47%。同季经营亏损 5.67 亿美元，主要原因是约 50 亿美元短期算力采购；净亏损 232.9 亿美元，大部分来自可转债等公允价值变动。截至 9 月 30 日及之后，公司已签的采购和租赁承诺约 8,954 亿美元，几乎都是算力和基础设施，其中约 4,475 亿美元预计在 2030 年底前发生。",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/0001628280-26-068676-index.htm",
+        "time": "2026-11-03T08:00:00+08:00",
+        "impact": "前沿模型公司少有地把收入、亏损和算力账单在官方文件里完整摊开，之后看 AI 公司的估值和算力投入，有了可以对照的硬数字。",
+        "points": [
+          "三季度收入 169.56 亿美元，同比约 12 倍、环比约 +47%",
+          "经营亏损 5.67 亿美元；调整后经营利润 24.63 亿美元",
+          "算力与基础设施承诺约 8,954 亿美元，2030 年前约 4,475 亿",
+          "招股书称：内部 Claude 用量按标价折算 1～9 月涨超 250 倍，4 月起每月超过人力成本（不含股权激励）；9 月代码库 90% 以上的贡献由 Claude 写"
+        ]
+      },
+      {
+        "title": "Anthropic 开源 FlashProve：用零知识证明核对「这次回答是不是真由那个模型生成的」",
+        "summary": "Anthropic 公开了研究原型 FlashProve（Apache 2.0，标明不再维护）。服务商先公布一个绑定某套权重的承诺 ID；每次生成回答时，GPU 顺带产出一份证明；任何人不用拿到权重，在普通 CPU 上几秒就能验证。README 写明：可在单张 H100 上跑完整尺寸的 Llama 4 Maverick（4000 亿参数 MoE），上下文 1,024 token，批量 24 时预填充约每秒 110 token；协议的可靠性在 Lean 4 中做了形式化证明。",
+        "source_url": "https://github.com/anthropics/FlashProve",
+        "time": "2026-11-03T13:30:00+08:00",
+        "impact": "经中转站或第三方路由调用模型时，「被偷换成便宜模型」第一次有了可以用密码学验证的办法；离真正上生产还有距离。",
+        "points": [
+          "承诺—证明—验证三步，权重保持保密",
+          "单张 H100 跑 Llama 4 Maverick 全尺寸",
+          "CPU 上用 cp_verify 几秒验证",
+          "研究原型：上下文仅 1,024 token，不再维护"
+        ],
+        "tag": "研究原型"
+      },
+      {
+        "title": "OpenAI 自研 Git 后端 Pando：推送延迟降约 80%，每天分发近 1 PB 代码数据",
+        "summary": "OpenAI 介绍了给自家单体仓库（monorepo）用的 Git 服务器后端 Pando：工程师和 Agent 照常用 git push / pull，只换掉服务器。官方说推送延迟降了约 80%，每天分发近 1 PB 数据。宝玉的解读提到，OpenAI 合入主线的提交数相比 2024 年一季度涨到近 15 倍，Pando 从立项到上线 10 周，代码主要由 Codex 驱动的 Agent 写。Greg Brockman 说在考虑对外提供，部分修复已提交给 Git 上游；Anthropic 10 月发布的自研系统 Scion 走的是彻底替换 Git 的路线。",
+        "source_url": "https://x.com/OpenAIDevs/status/2117408792346509663",
+        "time": "2026-11-03T08:09:30+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "Agent 写代码太快，代码托管成了新瓶颈；用 GitHub / GitLab 的团队，后面可能会从 Git 上游拿到这些改进。",
+        "points": [
+          "保留 Git 协议，只换服务器后端",
+          "推送延迟约 -80%，日分发近 1 PB",
+          "每个分支各自处理并发，不全局排队",
+          "Brockman：考虑对外提供"
+        ]
+      },
+      {
+        "title": "OpenAI 联合 Cathedral Systems 做内部安全攻防，漏洞赏金最高提到 17.2 万美元",
+        "summary": "OpenAI 说，AI 找漏洞的能力越来越强，防守方要先用起来。下一轮内部安全冲刺会请 Cathedral Systems 的研究员，用 OpenAI 的模型和内部团队一起攻自家防线。同时提高漏洞赏金：严重漏洞的奖励提高到原来的四倍多，特别重大的发现连奖金最高 17.2 万美元。",
+        "source_url": "https://x.com/OpenAI/status/2117444048227123277",
+        "time": "2026-11-03T10:29:35+08:00",
+        "handle": "@OpenAI",
+        "impact": "大厂开始明着用 AI 攻自己的系统，赏金也跟着涨，安全研究员的门槛和回报都在变。",
+        "points": [
+          "外部团队用 OpenAI 模型做红队",
+          "严重漏洞赏金提高到四倍以上",
+          "单个发现最高 17.2 万美元（含奖金）"
+        ]
+      },
+      {
+        "title": "Replit 发布安全建议：别让 AI Agent 跑在员工电脑上，改用隔离的托管云环境",
+        "summary": "Replit 的 Luis Héctor Chávez 发布长文安全建议，Amjad Masad 转发时提到，据报高盛已限制 Claude Code 等工具。文章列举了被篡改的 Claude Code 扩展经 Cursor 插件市场传播、Nx「s1ngularity」恶意包借用本机 AI 命令行找密钥、GitHub MCP 被恶意 issue 诱导泄露私库等案例。建议把 Agent 放进组织控制的专用沙箱：凭据由代理（broker）发放、不进 Agent 可读的环境；按任务给最小权限、限制网络和数据流；生产变更另走审批；审计和「急停」放在 Agent 碰不到的地方。",
+        "source_url": "https://x.com/lhchavez/status/2117496522656841766",
+        "time": "2026-11-03T13:58:06+08:00",
+        "handle": "@lhchavez",
+        "impact": "个人或团队在本机跑编程 Agent 时，SSH 密钥、浏览器会话和云凭据都可能暴露；把 Agent 关进隔离环境正在变成企业的硬要求。",
+        "points": [
+          "引用 Salt 调查：86.4% 组织有 Agent，仅 17.5% 能自动叫停",
+          "案例：恶意扩展、供应链包、MCP 提示注入",
+          "要求：凭据代理、任务级权限、网络与数据流限制、独立审计",
+          "高盛限制 Claude Code 属「据报」"
+        ],
+        "tag": "厂商观点"
+      },
+      {
+        "title": "Mistral 在 arXiv 公开 Le Chonk 技术报告",
+        "summary": "Mistral 把 10 月底发布的 Le Chonk 的构建过程写成技术报告放上 arXiv，由研发团队讲述模型是怎么做出来的。模型本身此前已推送过，这次新增的是训练和工程细节的一手文档。",
+        "source_url": "https://x.com/MistralAI/status/2117558028111421576",
+        "time": "2026-11-03T18:02:00+08:00",
+        "handle": "@MistralAI",
+        "impact": "想复现或对比 Mistral 训练做法的人，现在有了正式文档可查。",
+        "points": [
+          "一手技术报告，已上 arXiv",
+          "模型本体 10 月底已发布"
+        ]
+      },
+      {
+        "title": "⚠️ OpenAI Codex 负责人发「Le GPT Fat」，外界猜下一代 GPT 临近",
+        "summary": "OpenAI 的 Tibo（@thsottiaux）只发了一句「Le GPT Fat」，宝玉把它和 Altman 11 月 2 日在阿布扎比说的「下一个 GPT 很快发布」联系起来，猜测新模型临近。另有中文博主反映 Codex 里模型的思考过程被隐藏，怀疑在灰度新模型。目前没有任何正式发布。",
+        "source_url": "https://x.com/thsottiaux/status/2117489367417803042",
+        "time": "2026-11-03T13:29:40+08:00",
+        "handle": "@thsottiaux",
+        "impact": "近期可能有新 GPT，先别急着改模型选型，等官方公告。",
+        "points": [
+          "只有一句暗示，没有官方信息",
+          "Codex 用户观察到界面变化（个例）"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "NVIDIA 推出 AI Cluster Runtime：在 Kubernetes 上一键配好 Dynamo 推理栈",
+        "summary": "NVIDIA 推出 AI Cluster Runtime，把 Dynamo 推理框架和它依赖的基础设施打包，给出测试过的组件版本组合，并带检查工具，确认 Kubernetes 上的 GPU 集群配置正确。官方提供配置、部署和验证的分步教程，下周 KubeCon 北美大会会现场展示。",
+        "source_url": "https://x.com/NVIDIAAI/status/2117493094849622097",
+        "time": "2026-11-03T13:44:29+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "自建推理集群的团队，少踩一些版本不兼容的坑。",
+        "points": [
+          "Dynamo + 依赖组件的版本组合",
+          "自带集群配置校验",
+          "面向 Kubernetes GPU 集群"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "头雁介绍基于 EmbeddingGemma 2 的端侧语音转文字小模型：M3 Air 上约 13 秒转写 1 小时音频",
+        "summary": "头雁介绍一个端侧语音转文字小模型：冻结 EmbeddingGemma 2 的音频编码器，只在上面加一个约千万参数的「读取器」（CTC 头），把音频特征映射到文本嵌入空间，再和约 22.9 万个英文单词的嵌入表做最近邻匹配，不需要额外的语言模型。目前词错误率约 5%，领先的 STT 模型是 2%～3%。",
+        "source_url": "https://x.com/alacheng/status/2117534750780866638",
+        "time": "2026-11-03T16:30:01+08:00",
+        "handle": "@alacheng",
+        "impact": "多模态共享嵌入空间可以低成本拼出专用小模型，本地语音输入又多了一个轻量方案。",
+        "points": [
+          "约千万参数的读取器，主干冻结",
+          "M3 MacBook Air 约 13 秒转写 1 小时",
+          "词错误率约 5%，仍在改进"
+        ]
+      },
+      {
+        "title": "向阳乔木拆解 AI 短剧《持械入宋》：十来人团队，播放超 60 亿",
+        "summary": "向阳乔木介绍 AI 短剧《持械入宋》：2026 年 7 月底上线第一季，最高热度 8200 万，播放量超过 60 亿，后几季完播率稳定在 70% 以上。团队只有十来人，总导演用「一人成剧」模式把控全链条，用资产中台保证角色一致，一周上一季，边看评论边调整剧本。",
+        "source_url": "https://x.com/vista8/status/2117508130431283416",
+        "time": "2026-11-03T14:44:00+08:00",
+        "handle": "@vista8",
+        "impact": "AI 视频已经撑起长连续剧的生产，小团队的速度优势很明显。",
+        "points": [
+          "播放超 60 亿、完播率 70% 以上（自述数据）",
+          "十来人团队，一周一季",
+          "资产中台解决角色一致性"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "头雁介绍 YC 项目 Subvocal：不出声的「无声语音输入」眼镜",
+        "summary": "Subvocal 是 YC 2026 秋季项目，累计融资约 130 万美元。眼镜向面部发射低功率射频信号，感知发音肌肉的细微动作，再由 AI 解码成文字；不用摄像头、不读唇，官方称速度可达每分钟 200 词以上。头雁认为方向有价值，但眼镜形态偏重。",
+        "source_url": "https://x.com/alacheng/status/2117475607453778309",
+        "time": "2026-11-03T12:35:00+08:00",
+        "handle": "@alacheng",
+        "impact": "不方便说话的场合也能语音输入，AI 输入设备又多了一种形态。",
+        "points": [
+          "射频感知口型肌肉，不用摄像头",
+          "官方称 200+ 词/分钟",
+          "可用来给 ChatGPT、Claude 下指令"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "陈成梳理工具调用演进：从少量工具、MCP 堆积到 tool search 再到 code mode",
+        "summary": "陈成推荐一篇 code mode 科普文，并补充了工具调用的演进脉络：早期只给少数工具，因为模型在大目录里选不准；后来几十个工具加一堆 MCP server 撑爆上下文，于是出现 tool search；再往后让模型直接写代码调用工具，也就是 code mode。他认为原文「只剩一个 Tool」的说法有点标题党。",
+        "source_url": "https://x.com/chenchengpro/status/2117452147822673956",
+        "time": "2026-11-03T11:01:47+08:00",
+        "handle": "@chenchengpro",
+        "impact": "设计 Agent 工具层时，可以按这条路线判断自己处在哪个阶段。",
+        "points": [
+          "工具多了先撑爆上下文",
+          "tool search 是中间方案",
+          "code mode 让模型写代码组合工具"
+        ]
+      },
+      {
+        "title": "GitHubDaily 推荐 unslop：专改「一眼 AI 味」前端界面的开源 Skill",
+        "summary": "unslop 是给 Claude Code 和 Codex 用的开源 Skill，专门处理 AI 生成页面常见的紫色渐变、大号卡片、发光按钮这套模板感：先指出哪里太像 AI 生成，再按产品本身定设计方向。",
+        "source_url": "https://x.com/GitHub_Daily/status/2117557428384682389",
+        "time": "2026-11-03T18:00:07+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "用 Agent 写前端的人，可以加一道去模板化的工序。",
+        "points": [
+          "适配 Claude Code / Codex",
+          "先诊断再改设计方向"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Claude Code v2.1.317：外发账户邮箱前先询问，定时任务被加了多余连接器会警告",
+        "summary": "这一版加了几项安全相关改动：网页或 shell 工具调用要把你的账户邮箱发到网络前，会先征求同意；/schedule 新建云端定时任务时，如果被挂上你没要求的连接器，会给出警告和移除方法；Agent SDK 的 hook 回调新增 onFailure: \"block\"，回调失败时直接拦下操作。另外 Claude apps 网关新增按开发者、按天查看成本的管理接口。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+        "time": "2026-11-03T09:25:46+08:00",
+        "impact": "建议尽快升级，尤其是用云端定时任务或 SDK hook 做自动化的人。",
+        "points": [
+          "外发账户邮箱前询问",
+          "定时任务多余连接器警告",
+          "hook 失败可设为阻断",
+          "网关新增成本报表 API"
+        ]
+      },
+      {
+        "title": "OpenClaw 2026.10.10 正式版：备份自动剔除凭据，本地和云端会话可互相迁移",
+        "summary": "OpenClaw 2026.10.10 的 Git 备份会自动脱敏，覆盖 PostgreSQL 导出，并排除已识别的插件凭据、通知钩子令牌和凭据数据块。本地桌面和云端会话可以互相迁移；子 Agent 续跑和重启恢复更可靠；Android 节点新增照片、通讯录、日历等能力；托管的 Codex CLI 升到 0.164.0。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.10",
+        "time": "2026-11-03T11:22:35+08:00",
+        "impact": "自托管 OpenClaw 的人升级后备份更安全；给 Android 节点开新权限前先想清楚开到哪一级。",
+        "points": [
+          "备份脱敏覆盖钩子令牌和凭据",
+          "本地↔云会话迁移",
+          "Android 节点新增照片、通讯录、日历权限"
+        ]
+      },
+      {
+        "title": "Hermes Agent：Nous Portal 订阅附带云端 Agent 和独立电脑",
+        "summary": "Nous Research 的 Teknium 说，现在每个 Nous Portal 订阅在 Hermes 里都附带一个云端 Agent 和它自己的电脑，配高额度模型和搜索、抓取、浏览器操作、生图等工具。他还提醒多机 / 网关用户升级当天的补丁版本。",
+        "source_url": "https://x.com/Teknium/status/2117513285440590035",
+        "time": "2026-11-03T15:04:43+08:00",
+        "handle": "@Teknium",
+        "impact": "Hermes 从本地 Agent 往托管云 Agent 延伸，想省自建运维的人多了一个选择。",
+        "points": [
+          "订阅附带云端 Agent + 独立虚拟机",
+          "内置搜索、抓取、浏览器、生图",
+          "多机/网关用户建议升级补丁"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "colibri：纯 C、零依赖，从硬盘流式加载专家，在普通硬件上跑前沿 MoE 模型",
+        "summary": "colibri 是一个纯 C、零依赖的小型推理引擎，把 MoE 模型的专家权重从磁盘按需流式读入，让大型 MoE 能在现有硬件上运行。今日新增约 675 星，总星标约 4.7 万。",
+        "source_url": "https://github.com/JustVugg/colibri",
+        "time": "2026-11-03T18:15:00+08:00",
+        "impact": "本地跑大 MoE 又多了一条省内存的路，代价是速度受硬盘带宽限制。",
+        "points": [
+          "纯 C、零依赖",
+          "专家按需从磁盘读入",
+          "今日约 +675 星"
+        ]
+      },
+      {
+        "title": "Claude-Code-Game-Studios：49 个 Agent、72 个工作流 Skill，把 Claude Code 组成游戏工作室",
+        "summary": "这个项目把 Claude Code 编排成一个完整的游戏开发工作室，含 49 个 AI Agent、72 个工作流 Skill，以及仿照真实工作室层级的协作体系。今日新增约 1,379 星，总星标约 3.4 万。",
+        "source_url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+        "time": "2026-11-03T18:15:00+08:00",
+        "impact": "多 Agent 按组织架构分工的模板越来越成熟，可以参考它的角色拆分方式。",
+        "points": [
+          "49 个角色 Agent",
+          "72 个工作流 Skill",
+          "今日约 +1,379 星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "App Store 新规：约会类和 AI 恋爱陪伴应用须标 18+，位置共享功能须申报",
+        "summary": "苹果宣布 App Store 年龄分级新要求：带约会或亲密关系功能的应用，包括 AI 恋爱陪伴类，须定为 18+；开发者还要申报应用里的位置共享和约会功能。",
+        "source_url": "https://x.com/9to5mac/status/2117428764283945304",
+        "time": "2026-11-03T09:28:00+08:00",
+        "handle": "@9to5mac",
+        "impact": "做 AI 陪伴类产品的开发者要重新检查分级和功能申报，家长管控也会更严。",
+        "points": [
+          "AI 恋爱陪伴纳入 18+",
+          "位置共享功能须申报"
+        ]
+      },
+      {
+        "title": "苹果向 99 个国家的用户发出雇佣型间谍软件攻击警告",
+        "summary": "据 9to5Mac 报道，苹果近期向 99 个国家的用户发出通知，提醒他们可能是雇佣型间谍软件（mercenary spyware）的攻击目标；德国当局正在调查相关报告。",
+        "source_url": "https://x.com/9to5mac/status/2117441549759807556",
+        "time": "2026-11-03T10:19:00+08:00",
+        "handle": "@9to5mac",
+        "impact": "收到苹果威胁通知的用户应立即开启锁定模式（Lockdown Mode）并更新系统。",
+        "points": [
+          "覆盖 99 个国家",
+          "属于定向高级攻击警告"
+        ]
+      },
+      {
+        "title": "谷歌确认 Pixel Watch 异常耗电，修复已开始推送",
+        "summary": "据 Android Authority 报道，谷歌确认部分 Pixel Watch 近期电池掉电变快，已找到原因，修复正在推送。",
+        "source_url": "https://x.com/AndroidAuth/status/2117533870212223463",
+        "time": "2026-11-03T16:26:00+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "Pixel Watch 用户留意系统更新，装上修复版就行。",
+        "points": [
+          "谷歌官方确认",
+          "修复已在推送"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Seeed 与 OpenDisplay 推出蓝牙墨水屏套件，开源固件，直连 Home Assistant",
+        "summary": "Seeed Studio 和 OpenDisplay 合作推出两款低功耗无线墨水屏套件：4.26 英寸黑白款 39.9 美元、7.3 英寸彩色款 75.9 美元，预装 OpenDisplay 开源固件，走蓝牙低功耗（BLE），可直接接入 Home Assistant。",
+        "source_url": "https://x.com/seeedstudio/status/2117437586318991392",
+        "time": "2026-11-03T10:03:00+08:00",
+        "handle": "@seeedstudio",
+        "impact": "家里做低功耗信息屏（天气、日程、状态面板）多了一个便宜、开源的现成选择。",
+        "points": [
+          "4.26 英寸黑白 $39.9 / 7.3 英寸彩色 $75.9",
+          "开源固件 + BLE",
+          "可直接接入 Home Assistant"
+        ]
+      },
+      {
+        "title": "Alma 手机端远程桌面支持按窗口单独控制",
+        "summary": "yetone 发帖说，Alma 手机端的远程桌面现在可以单独选中某个窗口进行远程控制，不必操作整块屏幕。",
+        "source_url": "https://x.com/yetone/status/2117547490191004054",
+        "time": "2026-11-03T17:20:00+08:00",
+        "handle": "@yetone",
+        "impact": "用手机远程盯电脑上的 Agent 或某个应用时更顺手；记得只给可信设备开远控。",
+        "points": [
+          "手机遥控电脑单个窗口",
+          "小屏操作更方便"
+        ]
+      },
+      {
+        "title": "开源项目 LANovo 让旧款 Google 智能屏改听 Home Assistant",
+        "summary": "有用户分享，用 ygelfand 在 GitHub 上开源的 LANovo，把两台旧 Google 智能屏改成接受 Home Assistant 控制，不再依赖谷歌云；另有 13 个买来的设备刷了 ESPHome，断网也能用。大号 Google 音箱目前还没有替代软件。",
+        "source_url": "https://x.com/tech2urdoor/status/2117534908876718462",
+        "time": "2026-11-03T16:30:00+08:00",
+        "handle": "@tech2urdoor",
+        "impact": "快被淘汰的谷歌智能家居设备有了本地化的续命办法；刷机有风险，先确认型号。",
+        "points": [
+          "旧 Google 智能屏改接 HA",
+          "ESPHome 设备断网可用"
+        ],
+        "tag": "用户分享"
+      }
+    ]
+  }
+}

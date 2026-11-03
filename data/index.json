@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T06:22:11+08:00",
+  "updated_at": "2026-11-03T18:20:59+08:00",
   "editions": [
+    {
+      "id": "2026-11-03-1800",
+      "published_at": "2026-11-03T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-03-1800.json",
+      "counts": {
+        "x_daily": 8,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 5,
+        "tech": 3,
+        "iot": 3
+      },
+      "headline": "Anthropic 修订招股书：三季度收入约 170 亿美元；Anthropic 开源 FlashProve 可证明推理"
+    },
     {
       "id": "2026-11-03-0600",
       "published_at": "2026-11-03T06:00:00+08:00",
