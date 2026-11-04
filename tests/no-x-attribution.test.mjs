@@ -4,7 +4,7 @@ import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
-const banned = [/内容整理自/, /公开帖子/, /skyfeed\.clouds\.wiki/i];
+const banned = [/内容整理自/, /公开帖子/, /skyfeed\.clouds\.wiki/i, /免费中文 AI 新闻站/, /整理 ?X ?上的公开动态/];
 function walk(dir, out = []) {
   for (const n of readdirSync(dir)) {
     if (n === ".git" || n === "node_modules" || n === "tests") continue;
@@ -19,4 +19,10 @@ test("no X public-posts attribution text in site sources/templates/data", () => 
     const s = readFileSync(f, "utf8");
     for (const re of banned) assert.ok(!re.test(s), `${f} contains ${re}`);
   }
+});
+test("new tagline and description present", () => {
+  const html = readFileSync(join(root, "index.html"), "utf8");
+  assert.match(html, /免费中文 AI 资讯站/);
+  const js = readFileSync(join(root, "js/site.js"), "utf8");
+  assert.match(js, /每期整理 社交平台上的公开动态，/);
 });
