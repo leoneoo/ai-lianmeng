@@ -411,7 +411,7 @@ function sectionStamp(edition, key) {
 function sidebar(editions, latest) {
   const intro = h("section", { class: "side-card rise" }, [
     h("h2", { class: "side-title" }, [text("AI联盟")]),
-    h("p", {}, [text("免费中文 AI 资讯站。每期整理 社交平台上的公开动态，连同中文博主、开源与 Agent、科技数码和万物互联，并为每条保留原文链接。")]),
+    h("p", {}, [text("免费中文 AI 资讯站。每期整理社交平台上的公开动态，连同中文博主、开源与 Agent、科技数码和万物互联，并为每条保留原文链接。")]),
   ]);
   const listed = latest
     ? DISPLAY.filter((section) => displayItems(latest, section.key).length)
