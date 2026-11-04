@@ -1,0 +1,245 @@
+{
+  "id": "2026-11-05-0600",
+  "published_at": "2026-11-05T06:00:00+08:00",
+  "headline": "OpenAI 收购 Pierre 补强 Codex；Ripple-65B 开源模型发布",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 收购开发者工具公司 Pierre，补强 Codex 的代码浏览与审查",
+        "summary": "Pierre Computer Company 11 月 4 日宣布加入 OpenAI，OpenAI 总裁 Greg Brockman 随后发帖欢迎。据宝玉介绍，Codex App 里浏览项目文件、查看代码改动用的就是 Pierre 做的两个开源组件；Gorden Sun 补充说 Pierre 还在做面向 Agent 的 Git 代码存储。收购金额未公开。",
+        "source_url": "https://x.com/gdb/status/2118042051057250377",
+        "time": "2026-11-05T02:05:00+08:00",
+        "impact": "OpenAI 在补齐 Codex 的「看代码、审代码、存代码」环节，Coding Agent 之争正从模型延伸到整套开发基础设施。",
+        "points": [
+          "Pierre 的开源组件已在 Codex 中使用",
+          "方向：AI 协作写代码的工具链",
+          "金额未披露"
+        ]
+      },
+      {
+        "title": "Ricursive 发布 Ripple-65B Preview：从零预训练的 65B 稠密开源模型",
+        "summary": "Ricursive 发布自研从零预训练的 65B 稠密模型 Ripple-65B Preview，称它在 Agent 编程任务上刷新美国开源权重模型最好成绩，超过 Muse Spark Open-816B、Beam-501B 等更大的模型。swyx 转引其说法：包括预训练在内的全部研发成本约 3200 万美元，约为此前开源 SOTA 的十分之一。",
+        "source_url": "https://x.com/RicursiveAI/status/2118046765857546733",
+        "time": "2026-11-05T02:24:00+08:00",
+        "impact": "如果成绩站得住，说明中等规模稠密模型靠训练配方也能在 Agent 编程上追平大得多的 MoE，开源模型的训练门槛在下降。",
+        "points": [
+          "65B 稠密，从零预训练",
+          "自称美国开源模型 Agent 编程第一",
+          "全部研发成本约 3200 万美元（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Anthropic 生物团队借助 Claude 解出首个细菌「穹窿颗粒」三维结构",
+        "summary": "Anthropic 分享其生物研究团队与 Claude 合作，首次测定了来自细菌的穹窿颗粒（vault particle）三维结构。穹窿颗粒是细胞里最大的一类桶状蛋白结构，功能长期不清楚。帖子以案例形式介绍了 Claude 在这项结构生物学研究中的参与过程。",
+        "source_url": "https://x.com/AnthropicAI/status/2118073665296228863",
+        "time": "2026-11-05T04:11:00+08:00",
+        "impact": "这是前沿实验室用自家模型做一线科研并拿出具体成果的又一例，AI for Science 正从演示走向论文级产出。",
+        "points": [
+          "首个细菌来源的穹窿颗粒 3D 结构",
+          "Anthropic 自有生物研究团队主导",
+          "Claude 参与科研流程"
+        ]
+      },
+      {
+        "title": "彭博：苹果收紧员工 AI 预算，工程师每日额度从 300 美元降到 200 美元",
+        "summary": "Mark Gurman 报道，苹果一边推动员工多用 AI，一边削减 AI 开销额度：工程师的每日上限已从 300 美元降到 200 美元，计划再降到 100 美元，其他团队可能降到 25 美元。9to5Mac 称这与新管理层压缩成本有关。",
+        "source_url": "https://x.com/markgurman/status/2118068667103453360",
+        "time": "2026-11-05T03:51:00+08:00",
+        "impact": "大公司开始把 AI token 当成需要精打细算的预算项，「AI 用量管控」会成为企业内部工具和采购的新话题。",
+        "points": [
+          "工程师日额度 300→200 美元，计划降到 100",
+          "其他团队或降至 25 美元",
+          "苹果仍在推员工多用 AI"
+        ]
+      },
+      {
+        "title": "Perplexity：Computer 代管 3 万美元 Meta 广告，收入为原来 3.5 倍",
+        "summary": "Perplexity 称其 Agent 产品 Computer 为一家龙虾电商代管 3 万美元 Meta 广告投放，自动完成素材分析、制作和买量，收入是该客户常规广告的 3.5 倍，ROAS 高 63%。",
+        "source_url": "https://x.com/perplexity_ai/status/2118035494898704781",
+        "time": "2026-11-05T01:39:00+08:00",
+        "impact": "Agent 开始接手有真金白银的投放决策，效果数字目前只有厂商一方说法。",
+        "points": [
+          "预算 3 万美元",
+          "收入 3.5 倍、ROAS +63%（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Hugging Face 成为真机机器人评测 RoboColosseum 创始伙伴",
+        "summary": "RoboColosseum 用 100 多台真实机器人、140 多个真实场景评测机器人模型，每次执行（包括失败）都公开在 Hugging Face Hub 上。",
+        "source_url": "https://x.com/huggingface/status/2118004921597665638",
+        "time": "2026-11-04T23:38:00+08:00",
+        "impact": "机器人模型有了公开可复现的真机评测，比只看仿真分数更可信。",
+        "points": [
+          "100+ 真机、140+ 场景",
+          "全部执行记录开放"
+        ]
+      },
+      {
+        "title": "Mistral 演示 133 个 Agent 协作：用 Large 4 找出、复现并修补 Django 漏洞",
+        "summary": "Mistral 用一个近期 Django CVE 测试 Mistral Large 4：133 个 Agent 分工梳理代码、找漏洞、验证攻击场景，最后由模型生成补丁，全程是分诊、复现、修补三步。",
+        "source_url": "https://x.com/MistralAI/status/2117925908572991748",
+        "time": "2026-11-04T18:24:00+08:00",
+        "impact": "多 Agent 自动化安全审计正在成为模型厂商展示能力的新场景。",
+        "points": [
+          "133 个 Agent 并行",
+          "覆盖分诊、复现、修补"
+        ]
+      },
+      {
+        "title": "OpenAI API 列表短暂出现两个神秘模型 ID",
+        "summary": "据 Max For AI 转述模型追踪机器人的发现，11 月 4 日凌晨 OpenAI API 模型列表短暂出现 rc-ada-or-vm、rc-ada-sh-vm 两个 ID，几分钟后消失。社区猜测与传闻中的新模型有关，OpenAI 未回应。",
+        "source_url": "https://x.com/MaxForAI/status/2118077014636921044",
+        "time": "2026-11-05T04:24:00+08:00",
+        "impact": "可能预示 OpenAI 近期有新模型上线，但目前只是线索。",
+        "points": [
+          "两个 ID 出现数分钟即撤下",
+          "⚠️ 未证实，属于爆料"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Cicada：开源原生 macOS 实时语音翻译和会议助手",
+        "summary": "在 Zoom、腾讯会议、飞书、YouTube 里给出实时双语字幕和会议纪要，还能把你说的话翻译后经虚拟麦克风传进会议软件。",
+        "source_url": "https://x.com/dotey/status/2118052017755005210",
+        "time": "2026-11-05T02:45:00+08:00",
+        "impact": "跨语言开会多了一个免费的本地化选项。",
+        "points": [
+          "实时双语字幕＋AI 纪要",
+          "虚拟麦克风输出译音"
+        ]
+      },
+      {
+        "title": "郭宇：自动化 AI Agent 运维，VPS 开机到可用中位数 94 秒",
+        "summary": "他让 AI Agent 根据服务负载自动开通 VPS 或裸金属机、装好服务并加入负载均衡，实测 VPS 中位数 94 秒可用、裸金属 6 分钟，只在高峰时段扩容。",
+        "source_url": "https://x.com/turingou/status/2117960780566184373",
+        "time": "2026-11-04T20:42:00+08:00",
+        "impact": "Agent 运维已经能在个人项目里替代常驻机器，省钱效果明显。",
+        "points": [
+          "VPS 94 秒、裸金属 6 分钟",
+          "按高峰时段自动扩缩"
+        ]
+      },
+      {
+        "title": "TemPad Dev：把 Figma 接进 Coding Agent",
+        "summary": "一个 Chrome 扩展加本地 MCP 服务，让 Codex、Claude Code、Cursor 读取 Figma 设计、按项目规范写代码，还能直接在可编辑文件里新建和修改 Figma 图层。",
+        "source_url": "https://x.com/shao__meng/status/2117969787993440649",
+        "time": "2026-11-04T21:18:00+08:00",
+        "impact": "设计稿到代码的往返能交给 Agent 双向处理。",
+        "points": [
+          "Chrome 扩展＋本地 MCP",
+          "读设计也能改画布"
+        ]
+      },
+      {
+        "title": "向阳乔木开源「一句话开发 Mac App」Skill",
+        "summary": "他把让 Opus 5.5 开发两款 Mac 小工具的经验做成 Skill（npx skills add joeseesun/qiaomu-macos-dev），涵盖图标设计、借 GitHub 在线更新和自动公证 DMG。",
+        "source_url": "https://x.com/vista8/status/2117995231958512114",
+        "time": "2026-11-04T22:59:00+08:00",
+        "impact": "个人开发自用 Mac 工具的流程又被压缩了一截。",
+        "points": [
+          "可一行命令安装",
+          "覆盖打包、更新、公证"
+        ]
+      },
+      {
+        "title": "OpenMausBot：把本机 Claude、Codex 变成聊天联系人",
+        "summary": "把多个 Agent 做成聊天软件里的联系人，每个可选不同模型、设定角色，打开对话就能接着交代任务，后台调用本机已有的 Claude、Codex。",
+        "source_url": "https://x.com/GitHub_Daily/status/2117965119313621121",
+        "time": "2026-11-04T21:00:00+08:00",
+        "impact": "多 Agent 并行时，任务不再散落在一堆终端窗口里。",
+        "points": [
+          "一个 Agent 一个联系人",
+          "复用本机 CLI"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent 上线统一市场，并开启 2 万美元插件黑客松",
+        "summary": "Nous 把 Hermes Agent 的插件、连接器和 Skills 统一放进 Hermes Marketplace，几下点击即可安装；同时启动为期 7 天、现金奖 2 万美元的插件黑客松，插件可改动底层模型等各个环节。",
+        "source_url": "https://x.com/NousResearch/status/2118058453415371119",
+        "time": "2026-11-05T03:11:00+08:00",
+        "impact": "Hermes 正在从单个 Agent 走向插件生态。",
+        "points": [
+          "插件/连接器/Skills 一站式市场",
+          "7 天黑客松，奖金 2 万美元"
+        ]
+      },
+      {
+        "title": "vercel-labs/agent-desktop：给 AI Agent 的电脑操作 CLI",
+        "summary": "Vercel Labs 开源的 Computer Use 命令行工具，让 Agent 操作桌面，今日 GitHub 新增约 2,463 星，位列 Trending 前列。",
+        "source_url": "https://github.com/vercel-labs/agent-desktop",
+        "time": "2026-11-05T06:20:00+08:00",
+        "impact": "Computer Use 能力正被拆成可组合的开源工具。",
+        "points": [
+          "Computer Use CLI",
+          "今日约 +2,463 星"
+        ]
+      },
+      {
+        "title": "mattpocock/skills：TypeScript 名人公开自己的 Agent Skills",
+        "summary": "Matt Pocock 把自己 .agents 目录里的工程向 Skills 开源，今日约 +1,376 星；同榜 claude-mem（跨会话持久记忆，约 +1,165 星）也在上升。",
+        "source_url": "https://github.com/mattpocock/skills",
+        "time": "2026-11-05T06:20:00+08:00",
+        "impact": "Skills 和 Agent 记忆是开发者当下最想要的两类扩展。",
+        "points": [
+          "工程师实战 Skills",
+          "claude-mem 同期走热"
+        ]
+      },
+      {
+        "title": "worktrunk：为并行 AI Agent 设计的 Git worktree 管理工具",
+        "summary": "用 Git worktree 让多个 Agent 在各自目录里并行改代码，今日约 +524 星。",
+        "source_url": "https://github.com/max-sixty/worktrunk",
+        "time": "2026-11-05T06:20:00+08:00",
+        "impact": "并行跑多个 Coding Agent 的基础设施在成形。",
+        "points": [
+          "面向多 Agent 并行",
+          "今日约 +524 星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "macOS 27.3 让没有灵动岛的 Mac 也能显示实时活动",
+        "summary": "macOS 27.3 测试版把 iPhone 的实时活动（Live Activities）带到 Mac 菜单栏一带；同批 iOS 27.3 还升级了 Apple Music。",
+        "source_url": "https://x.com/MacRumors/status/2118035703229735044",
+        "time": "2026-11-05T01:40:00+08:00",
+        "impact": "苹果跨设备体验继续向 Mac 靠拢。",
+        "points": [
+          "Mac 支持实时活动",
+          "27.3 仍在测试"
+        ]
+      },
+      {
+        "title": "9to5Mac：创纪录的 63 亿美元币安被盗案始于 Mac 上的假 Homebrew 安装",
+        "summary": "9to5Mac 安全专栏称，币安 63 亿美元被盗事件的起点是一次伪造的 Homebrew 安装，攻击者以招聘面试为诱饵。",
+        "source_url": "https://x.com/9to5mac/status/2118030252207227267",
+        "time": "2026-11-05T01:18:00+08:00",
+        "impact": "开发者照着网页或聊天里的命令装软件要格外小心，只用官方来源。",
+        "points": [
+          "假 Homebrew 安装命令",
+          "以面试为诱饵"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "iOS 27.3 起苹果将检查公开 iCloud 链接中的有害内容",
+        "summary": "MacRumors 报道，从 iOS 27.3 开始，苹果会对通过公开链接分享的 iCloud 内容做有害内容检查。",
+        "source_url": "https://x.com/MacRumors/status/2118058816298537168",
+        "time": "2026-11-05T03:12:00+08:00",
+        "impact": "用 iCloud 公开链接同步分享文件的人，要知道这些内容会被平台扫描。",
+        "points": [
+          "只涉及公开分享链接",
+          "iOS 27.3 起生效"
+        ]
+      }
+    ]
+  }
+}
