@@ -1,6 +1,6 @@
 # AI联盟
 
-免费中文 AI 新闻站，内容整理自 X 上的公开帖子。线上地址：[https://leoneoo.github.io/ai-lianmeng/](https://leoneoo.github.io/ai-lianmeng/)。
+免费中文 AI 新闻站。线上地址：[https://leoneoo.github.io/ai-lianmeng/](https://leoneoo.github.io/ai-lianmeng/)。
 
 每天两期，北京时间（全年 UTC+8）：**06:00、18:00**。早期归档里还有 12:00、22:00 的期刊，校验仍接受这两个时段，旧期刊保持有效。一期必填两个栏目：「AI 日报」「中文博主」。还可以带三个可选栏目：「开源与 Agent 技术」「科技与数码」「万物互联」。`sections.en_topics` 已停用，可以省略；旧期刊里的条目仍会显示在 AI 日报中。站点在没有期刊时只显示空状态，不会放示例新闻。
 
