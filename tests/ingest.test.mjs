@@ -321,7 +321,7 @@ test("build publishes the site without the sample", () => {
     }
     const html = readFileSync(path.join(out, "index.html"), "utf8");
     assert.match(html, /AI联盟/);
-    assert.match(html, /免费中文 AI 新闻站/);
+    assert.match(html, /免费中文 AI 资讯站/);
     assert.doesNotMatch(html, /【示例】/);
     const sitemap = readFileSync(path.join(out, "sitemap.xml"), "utf8");
     assert.match(sitemap, new RegExp(SITE_ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
