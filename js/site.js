@@ -498,7 +498,7 @@ function emptyLead(kicker) {
   return h("div", { class: "lead" }, [
     h("p", { class: "kicker rise" }, [text(kicker)]),
     h("h1", { class: "page-title rise" }, [text("还没有期刊")]),
-    h("p", { class: "summary" }, [text("每天 06:00、18:00 收录一期。内容整理自 X 上的公开帖子，第一期发布后会出现在这里。")]),
+    h("p", { class: "summary" }, [text("每天 06:00、18:00 收录一期。第一期发布后会出现在这里。")]),
   ]);
 }
 
