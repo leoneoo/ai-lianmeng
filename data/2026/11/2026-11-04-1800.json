@@ -1,0 +1,213 @@
+{
+  "id": "2026-11-04-1800",
+  "published_at": "2026-11-04T18:00:00+08:00",
+  "headline": "腾讯混元 Hy4 正式发布：补上视觉和电脑操作，开源权重“即将”放出",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "腾讯混元 Hy4 正式发布：补上视觉和电脑操作，开源权重“即将”放出",
+        "summary": "腾讯混元官方账号 11 月 4 日宣布 Hy4 结束预览、正式上线，新增视觉理解和电脑操作（命令行加图形界面）能力。据头雁整理的技术报告，API 价格与预览版持平或更低，约每百万 token 输入 0.83 美元、输出 2.50 美元。腾讯自测 DeepSWE v1.1 得分 74.9、APEX-Agents v1.1 得分 75.2，称与 Claude Opus 5.5 基本持平；官方回复说权重会很快开放，具体日期未给。",
+        "source_url": "https://x.com/TencentHunyuan/status/2117870250838630539",
+        "time": "2026-11-04T14:43:00+08:00",
+        "handle": "@TencentHunyuan",
+        "impact": "国产开源阵营多一个带视觉和电脑操作的 Agent 模型；成绩是腾讯自测，权重何时放出还要看官方。",
+        "points": [
+          "首个能看图的混元大模型，支持 CLI 与 GUI 电脑操作",
+          "API 约 $0.83/M 输入、$2.50/M 输出",
+          "DeepSWE 74.9、APEX-Agents 75.2（腾讯自测）",
+          "开源权重只说“即将”，未给日期"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Kimi K3.1 Pro：SecureBio 评估生物能力开放模型第二，权重截至发稿 HF 未见",
+        "summary": "独立机构 SecureBio 发布简短评估：Kimi K3.1 Pro 在其生物能力指数（BCI）得分 149，开放权重模型中排第二、总榜第 19，略低于上一代 Kimi K3 的 150。多位用户转述月之暗面口径：2.8T 参数 MoE、100 万上下文、Terminal-Bench 4.0 得分 65.7%，API 每百万 token 输入 2 美元、输出 10 美元，开放版删掉了网络攻防类训练数据。截至 18 时，Hugging Face 上 moonshotai 账号尚未出现 K3.1 权重。",
+        "source_url": "https://x.com/SecureBio/status/2117744557278351845",
+        "time": "2026-11-04T06:23:00+08:00",
+        "handle": "@SecureBio",
+        "impact": "如果权重按时放出，自部署要准备约 5TB 级存储；规格和成绩还要以月之暗面官方报告为准。",
+        "points": [
+          "SecureBio BCI 149，开放模型第二",
+          "2.8T MoE、Terminal-Bench 65.7%（转述，未见官方原帖）",
+          "开放版移除网络攻防数据（转述）",
+          "HF 截至 18 时未见权重"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Cognition 安全负责人汇总两周安全事件：Cursor 上 Claude Code 扩展曾被投毒",
+        "summary": "陈成转发并整理 Cognition 安全产品负责人 Jack Cable 的长帖。帖中提到：Cursor 上的 Claude Code 扩展被投毒（10 月 29 日披露），恶意版本会装持久后门、允许 SSH 进入开发机，自动更新下不到 5000 人中招，问题出在 Open VSX 下游发布流程；Binance 被盗约 63.4 亿美元，起点是工程师电脑被假面试和篡改安装包攻破。建议包括高风险账号上通行密钥或硬件密钥、扩展走白名单并延迟自动更新、用工具扫开发机里的密钥。",
+        "source_url": "https://x.com/chenchengpro/status/2117845238786252885",
+        "time": "2026-11-04T13:03:00+08:00",
+        "handle": "@chenchengpro",
+        "impact": "用 Cursor、VS Code 系编辑器和本地 Agent 的人应马上核对已装扩展和本机密钥；事件细节以原帖作者口径为准。",
+        "points": [
+          "Claude Code 扩展（Cursor 渠道）投毒，可 SSH 后门",
+          "攻击起点多在开发者电脑和扩展、MCP server",
+          "马上做：防钓鱼 MFA、扫本机密钥、盘点扩展和 MCP",
+          "30 天内：密钥进 secrets manager 并轮换"
+        ]
+      },
+      {
+        "title": "Artificial Analysis 职业能力指数升到 v2.0，更看重不幻觉和工具调用",
+        "summary": "Artificial Analysis 把金融、战略运营、法律、医疗、工程、经济六个职业能力指数更新到 v2.0，与其智能指数 v5.0 对齐，并加大“不幻觉”和 Agent 工具调用的权重。指数按美国职业数据库 O*NET 把任务映射到各行业。有用户整理称，Claude Opus 5.5 六项全部领先，开放模型里 Kimi K3.1 Pro 最好。",
+        "source_url": "https://x.com/ArtificialAnlys/status/2117780641618207006",
+        "time": "2026-11-04T08:47:00+08:00",
+        "handle": "@ArtificialAnlys",
+        "impact": "企业选模型可以按行业看分数，不必只看一个总分；具体排名以 AA 官网为准。",
+        "points": [
+          "六个职业指数统一升级 v2.0",
+          "加权不幻觉与 Agent 工具调用",
+          "用户整理：Opus 5.5 六项第一"
+        ]
+      },
+      {
+        "title": "传闻 Anthropic 取消 IPO，暂无官方确认",
+        "summary": "美国中期选举结果出炉后，X 上流传 Anthropic 取消上市的说法，中文博主 MaxForAI 也转发了这一爆料。hqmank 指出，Anthropic 两天前（11 月 2 日）刚提交 S-1/A 修订版招股书，目前没有任何官方确认，更可能只是推迟的猜测。",
+        "source_url": "https://x.com/hqmank/status/2117867375966232833",
+        "time": "2026-11-04T14:31:00+08:00",
+        "handle": "@hqmank",
+        "impact": "在官方或 SEC 文件出来前不宜当真；关注 Anthropic 路演和定价是否照常。",
+        "points": [
+          "来源为匿名爆料，未见官方或 SEC 文件",
+          "11 月 2 日刚提交 S-1/A"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Google ScientistTwo：全自动科研框架，107 个顶会课题 80.4% 超过人类最佳",
+        "summary": "据 Gorden Sun 介绍，Google 推出端到端自动科研框架 ScientistTwo：先找顶会论文的短板并提出新方案，再从小数据集到全量跑实验和消融，最后模拟同行评审反复修改论文。官方称在 NeurIPS、ICML、ICLR 的 107 个课题上，80.4% 的任务超过人类最好结果，平均提升 25.2%，一篇论文平均约 2.5 天。",
+        "source_url": "https://x.com/Gorden_Sun/status/2117881047073607825",
+        "time": "2026-11-04T15:26:00+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "AI 自动做研究又往前一步，但“超过人类”的口径和评审方式还要看论文细节。",
+        "points": [
+          "全流程：找问题、跑实验、写论文、模拟评审",
+          "80.4% 任务超人类最佳、平均提升 25.2%（自报）",
+          "单篇约 2.5 天"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "AMD 预计数据中心业务将占其收入八成以上",
+        "summary": "The Verge 报道，AMD 认为未来超过 80% 的收入将来自数据中心业务。这是 AMD 对自身业务结构的长期判断。",
+        "source_url": "https://x.com/verge/status/2117787975681757631",
+        "time": "2026-11-04T09:16:00+08:00",
+        "handle": "@verge",
+        "impact": "AI 算力需求正在重塑芯片公司的业务重心，消费级产品线的投入可能被相对压缩。",
+        "points": [
+          "数据中心收入占比目标超 80%"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Nexus Mods 要求新上传模组声明是否使用 AI",
+        "summary": "The Verge 报道，游戏模组平台 Nexus Mods 规定，新上传模组的作者必须声明作品中是否用到 AI。",
+        "source_url": "https://x.com/verge/status/2117780292983558504",
+        "time": "2026-11-04T08:45:00+08:00",
+        "handle": "@verge",
+        "impact": "内容平台开始把 AI 使用情况做成必填信息，创作者社区的 AI 标注可能成为常态。",
+        "points": [
+          "新上传模组需声明 AI 使用"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "数字生命卡兹克开源 Agent-Autoloop：内核加插件的 Agent 自动化系统",
+        "summary": "卡兹克把自己用了一年的 Agent 自动化系统重写后开源，命名 Agent-Autoloop。他借鉴 Pi 的极简内核与扩展设计、DeepSeek Harness「一切皆插件」思路，把事件、通道、Agent 执行都拆成插件，可热插拔。",
+        "source_url": "https://x.com/Khazix0918/status/2117861191305609408",
+        "time": "2026-11-04T14:07:00+08:00",
+        "handle": "@Khazix0918"
+      },
+      {
+        "title": "meng shao 转述 Playwright 官方：别急着删，Agent 用的是系统 Chrome",
+        "summary": "Playwright 安装包本身不带浏览器；Playwright MCP 和命令行工具调用的是本机正式版 Chrome/Edge，会正常更新、沙箱默认开启。只有测试用的固定版 Chrome for Testing 缺最新补丁且默认关沙箱，爬虫和 Agent 脚本应改用 channel: chrome 并打开沙箱。",
+        "source_url": "https://x.com/shao__meng/status/2117811571674214571",
+        "time": "2026-11-04T10:50:00+08:00",
+        "handle": "@shao__meng"
+      },
+      {
+        "title": "向阳乔木提醒：去 Stripe 后台查一遍没取消的 AI 订阅",
+        "summary": "向阳乔木建议趁黑五前登录 Stripe 用户后台，在“经常性”菜单里查看所有订阅，取消不再使用的 AI 工具，避免事后找退款。",
+        "source_url": "https://x.com/vista8/status/2117864406122221916",
+        "time": "2026-11-04T14:19:00+08:00",
+        "handle": "@vista8"
+      },
+      {
+        "title": "宝玉更新 Baoyu Design Skill 的 DeepSeek Harness 插件",
+        "summary": "新版插件提供统一入口，可以查看所有生成的幻灯片、设计稿、仪表盘和动效结果，并从结果直接发起相应会话。",
+        "source_url": "https://x.com/dotey/status/2117838908721660026",
+        "time": "2026-11-04T12:38:00+08:00",
+        "handle": "@dotey"
+      },
+      {
+        "title": "Cheery：百度搭子 7 月月活 674 万，国产 Agent 第二",
+        "summary": "Cheery 引用 7 月 AI 产品榜：3 月上线的百度搭子月活 674 万，一个月涨 10 倍多，排国产 Agent 第二。数据为第三方榜单口径。",
+        "source_url": "https://x.com/cheery9998/status/2117824909300625492",
+        "time": "2026-11-04T11:43:00+08:00",
+        "handle": "@cheery9998"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenClaw 2026.11.5-beta.1：知识记录、PostgreSQL 存储、聊天里直接提 PR",
+        "summary": "OpenClaw 发布 2026.11.5-beta.1 测试版，新增 Knowledge Scribes 知识记录工作流、PostgreSQL 状态存储和迁移工具、对话中准备和发布 PR 的完整流程，并重做了移动端和桌面端控制界面。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.1",
+        "time": "2026-11-04T12:51:00+08:00"
+      },
+      {
+        "title": "Claude Code v2.1.318：登录到期前 10 天提醒，修复多处配置写入问题",
+        "summary": "新版在 claude auth status 和 -p 输出里显示 claude.ai 登录到期时间，到期前 10 天给出提示；修复共享网络目录下 /logout、MCP 设置变更静默失败，以及 mcp add/remove 不加锁写配置的问题。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+        "time": "2026-11-04T08:01:00+08:00"
+      },
+      {
+        "title": "Offline Emergency Library：离线维基、地图、维修教程加本地 AI 一键下载",
+        "summary": "GitHubDaily 推荐的开源工具，把英文维基百科、分地区地图、iFixit 维修教程等离线资料和本地 AI 打包成下载器，选好硬盘位置即可拉取，适合没信号时备用。",
+        "source_url": "https://x.com/GitHub_Daily/status/2117829232130965795",
+        "time": "2026-11-04T12:00:00+08:00",
+        "handle": "@GitHub_Daily"
+      },
+      {
+        "title": "Craft Anything：先观察原项目，再让编码 Agent 重建并对照修改",
+        "summary": "开源的软件研究与重建工具：先分析原网站或项目，再交给编码 Agent 实现，最后对照原版检查差异并继续修改，解决截图仿写时移动端布局对不上的问题。",
+        "source_url": "https://x.com/GitHub_Daily/status/2117882058328756362",
+        "time": "2026-11-04T15:30:00+08:00",
+        "handle": "@GitHub_Daily"
+      }
+    ],
+    "tech": [
+      {
+        "title": "Siri 开放 App Intents：第三方 App 可接入 Siri AI，27.3 测试版可试",
+        "summary": "据歸藏介绍，苹果推出 App Intents 更新，开发者可自选把 App 的哪些功能交给 Siri AI 操作，比如改网约车上车点、跨 App 转发收藏商品。Siri 还内置一套 Agent Skill 格式的子集，先读 Skill 再判断是否匹配请求。开发者从 27.3 测试版起可测试。",
+        "source_url": "https://x.com/op7418/status/2117804545829171299",
+        "time": "2026-11-04T10:22:00+08:00",
+        "handle": "@op7418"
+      },
+      {
+        "title": "macOS 27.3 的快速查看原生支持 Markdown 渲染",
+        "summary": "9to5Mac 报道，macOS 27.3 让 Quick Look（空格预览）直接渲染 Markdown 文件，不再显示纯文本。",
+        "source_url": "https://x.com/9to5mac/status/2117756553046405372",
+        "time": "2026-11-04T07:11:00+08:00",
+        "handle": "@9to5mac"
+      },
+      {
+        "title": "Sonos AI 语音助手即将开始抢先体验测试",
+        "summary": "The Verge 报道，Sonos 的 AI 语音助手很快将开放早期测试。",
+        "source_url": "https://x.com/verge/status/2117746515687161863",
+        "time": "2026-11-04T06:31:00+08:00",
+        "handle": "@verge"
+      }
+    ],
+    "iot": [
+      {
+        "title": "Home Assistant 2026.11 简化命名规则，旧实体 ID 和自动化不受影响",
+        "summary": "Home Assistant 官方博客介绍 2026.11 版本对设备和实体命名的调整，目标是让命名更简单；官方强调已有的实体 ID 和自动化会继续正常工作。",
+        "source_url": "https://www.home-assistant.io/blog/2026/11/03/naming-things-in-home-assistant/",
+        "time": "2026-11-04T16:18:00+08:00",
+        "handle": "@home_assistant"
+      }
+    ]
+  }
+}
