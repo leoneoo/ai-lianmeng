@@ -1,0 +1,164 @@
+{
+  "id": "2026-11-05-1800",
+  "published_at": "2026-11-05T18:00:00+08:00",
+  "headline": "OpenAI 自动修补近千个 Linux 漏洞；ChatGPT Images 2.6 上线",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 自动化漏洞流水线找出并修补近千个 Linux 本地提权漏洞",
+        "summary": "OpenAI 安全研究员搭建了一条自动发现、利用验证并生成补丁的漏洞流水线，配合一款即将推出的网络安全模型，单次运行就验证了 948 个 Linux 内核本地提权漏洞并生成补丁。OpenAI 总裁 Greg Brockman 补充，每个漏洞的成本约 1000 美元。",
+        "source_url": "https://x.com/OpenAI/status/2118119451401048497",
+        "time": "2026-11-05T07:13:24+08:00",
+        "handle": "@OpenAI",
+        "impact": "漏洞挖掘和修补开始规模化，开源软件加固会提速，攻击方获得同类能力的风险也需提前防范。",
+        "points": [
+          "单次运行验证 948 个 Linux 本地提权漏洞",
+          "自动生成补丁",
+          "每个漏洞成本约 1000 美元"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "ChatGPT Images 2.6 上线，API 新增两款出图快 50% 的模型",
+        "summary": "ChatGPT 图像功能升级到 Images 2.6，支持生成 GIF 和使用参考图。GPT-Image-2.6 同步进入 Codex 和 API，新模型 Flare 与 Sunburst 出图速度比之前快 50%；Sunburst 在中高质量下多轮编辑时细节更一致。",
+        "source_url": "https://x.com/OpenAIDevs/status/2118124753340756055",
+        "time": "2026-11-05T07:34:28+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "图像生成的竞争点转向速度和连续编辑一致性，设计和电商素材团队可直接换 API 试用。",
+        "points": [
+          "支持 GIF 和参考图",
+          "API 新模型 Flare、Sunburst 快 50%",
+          "Sunburst 多轮编辑细节更稳定"
+        ]
+      },
+      {
+        "title": "OpenAI GPT-Live 支持外呼电话",
+        "summary": "OpenAI 总裁 Greg Brockman 发帖介绍 GPT-Live 可用于外呼电话场景。这意味着实时语音模型可以主动拨打电话完成任务，具体细节见原帖。",
+        "source_url": "https://x.com/gdb/status/2118204795219489172",
+        "time": "2026-11-05T12:52:32+08:00",
+        "handle": "@gdb",
+        "impact": "实时语音 Agent 开始进入电话客服和代办场景。",
+        "points": [
+          "GPT-Live 用于外呼电话",
+          "实时语音 Agent 进入电话场景"
+        ]
+      },
+      {
+        "title": "Meta 吸纳 Conductor 团队",
+        "summary": "Meta 首席 AI 官 Alexandr Wang 发帖欢迎 Conductor 团队加入 Meta。具体交易形式和金额没有披露。",
+        "source_url": "https://x.com/alexandr_wang/status/2118170983643415008",
+        "time": "2026-11-05T10:38:10+08:00",
+        "handle": "@alexandr_wang",
+        "impact": "Meta 继续靠收编团队补强 AI 产品线。",
+        "points": [
+          "Conductor 团队加入 Meta",
+          "交易细节未披露"
+        ]
+      },
+      {
+        "title": "首届 AI Engineer 大会上海站开幕",
+        "summary": "swyx 发帖称首届中国 AI Engineer 大会在上海开幕，现场满座，Microsoft、MiniMax、World Labs 等参与分享。",
+        "source_url": "https://x.com/swyx/status/2118246851136909731",
+        "time": "2026-11-05T15:39:39+08:00",
+        "handle": "@swyx",
+        "impact": "海外 AI 工程社区开始正式落地中国，中外开发者交流多了一个渠道。",
+        "points": [
+          "首届中国 AIE 在上海举办",
+          "多家海内外 AI 公司分享"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Perceptron 1.0 降低机器人视频标注成本",
+        "summary": "小互介绍，训练机器人最大的痛点是第一人称视频标注：分清哪只手抓什么、手指弯曲角度和亚秒级动作起止很难，用顶级大模型标一小时视频要 70 多美元。Perceptron 1.0 主打这类细粒度动作标注。",
+        "source_url": "https://x.com/xiaohu/status/2118226408699043881",
+        "time": "2026-11-05T14:18:25+08:00",
+        "handle": "@xiaohu",
+        "impact": "机器人数据标注变便宜，会加快具身智能的数据积累。",
+        "points": [
+          "机器人第一人称视频标注成本高",
+          "Perceptron 1.0 做细粒度动作标注"
+        ]
+      },
+      {
+        "title": "网易免费语音输入法「叭哥说」实测",
+        "summary": "歸藏实测网易的语音输入法「叭哥说」，认为效果不错，而且免费。它用的是网易自己训练的本地语音识别模型，可对标海外收费的 Typeless。",
+        "source_url": "https://x.com/op7418/status/2118255706759651755",
+        "time": "2026-11-05T16:14:50+08:00",
+        "handle": "@op7418",
+        "impact": "语音输入有了免费的国产替代。",
+        "points": [
+          "免费",
+          "自训本地 ASR 模型"
+        ]
+      },
+      {
+        "title": "Kami 支持让 Agent 生成小红书卡片",
+        "summary": "Tw93 介绍 Kami 新增社交图功能：告诉 Agent 用 Kami 把内容变成小红书卡片，就能得到排版好的图片，提供 8 种底色。",
+        "source_url": "https://x.com/HiTw93/status/2118260222338924987",
+        "time": "2026-11-05T16:32:47+08:00",
+        "handle": "@HiTw93",
+        "impact": "内容排版可以交给 Agent 一步完成。",
+        "points": [
+          "新增社交图功能",
+          "Agent 直接调用生成卡片"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenClaw 演示新记忆方案 Scribes",
+        "summary": "OpenClaw 官方节目 ClawCast 第 16 期演示了 Scribes、记忆整合（consolidation）以及超越聊天记录的 Agent 记忆方案。",
+        "source_url": "https://x.com/openclaw/status/2118166584623874319",
+        "time": "2026-11-05T10:20:42+08:00",
+        "handle": "@openclaw",
+        "impact": "开源 Agent 正把长期记忆做成核心能力。",
+        "points": [
+          "Scribes 记忆机制",
+          "记忆整合"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果允许开发者在用户取消订阅时提供折扣",
+        "summary": "9to5Mac 报道，苹果现在允许开发者在用户准备取消订阅时提供折扣，用优惠挽留用户。",
+        "source_url": "https://x.com/9to5mac/status/2118135663354642585",
+        "time": "2026-11-05T08:17:49+08:00",
+        "handle": "@9to5mac",
+        "impact": "用户取消订阅时会多一步挽留，开发者多了留存手段。",
+        "points": [
+          "取消订阅时可弹出折扣",
+          "面向 App Store 开发者"
+        ]
+      },
+      {
+        "title": "苹果智能在国内测试版可开通",
+        "summary": "博主 Cheery 实测，苹果智能已可在国内开通：需注册 Apple Developer 开发者并升级测试版系统。",
+        "source_url": "https://x.com/cheery9998/status/2118229430023938123",
+        "time": "2026-11-05T14:30:25+08:00",
+        "handle": "@cheery9998",
+        "impact": "国内用户可以提前体验苹果智能，但测试版稳定性需自担。",
+        "points": [
+          "需注册开发者",
+          "需升级测试版系统"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "MacRumors：苹果明天将发布五款新品",
+        "summary": "MacRumors 报道苹果将于明天发布五款新产品，具体型号以官方发布为准。",
+        "source_url": "https://x.com/MacRumors/status/2118266899557655010",
+        "time": "2026-11-05T16:59:19+08:00",
+        "handle": "@MacRumors",
+        "impact": "关注苹果新品的用户可以等等再买。",
+        "points": [
+          "五款新品",
+          "以官方为准"
+        ],
+        "tag": "传闻"
+      }
+    ]
+  }
+}
