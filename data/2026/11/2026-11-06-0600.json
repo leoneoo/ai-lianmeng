@@ -1,0 +1,348 @@
+{
+  "id": "2026-11-06-0600",
+  "published_at": "2026-11-06T06:00:00+08:00",
+  "headline": "GPT-6 Cyber、Claude 理财与 Gemini Omni 1.2",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 发布 GPT-6 Cyber：专攻安全研究的新模型",
+        "summary": "OpenAI 正式介绍 GPT-6 Cyber，称其为安全研究上的重大进展，在更强能力之外强化了模型对齐。该模型驱动了前一日公布的 Linux 内核漏洞自动发现与修补流水线；Mozilla、Palo Alto Networks 等安全团队已在使用。Greg Brockman 补充模型被训练成严格停留在指定任务范围内，并预告 11 月 12 日为 cyber day。",
+        "source_url": "https://x.com/OpenAI/status/2118390190246879554",
+        "time": "2026-11-06T01:09:13+08:00",
+        "handle": "@OpenAI",
+        "impact": "网络安全专用模型落地后，攻防双方都会加速采用同类能力；可控边界成为公开卖点。",
+        "points": [
+          "承接前一日 Linux 提权漏洞自动修补流水线",
+          "多家安全公司已在用（官方点名）",
+          "强调作用域内执行与对齐"
+        ]
+      },
+      {
+        "title": "Claude 推出 Personal Finance 测试版：只读连账户问钱",
+        "summary": "Claude 在美国上线 Personal Finance 测试版。用户可选择连接银行卡、信用卡等账户，用自然语言查询余额和交易；访问权限为只读，不能转账、代管或投资。官方称无广告、无赞助推荐，面向 Pro、Max、Ultra 用户逐步开放。",
+        "source_url": "https://x.com/claudeai/status/2118403114890137895",
+        "time": "2026-11-06T02:00:35+08:00",
+        "handle": "@claudeai",
+        "impact": "大模型进入个人账本场景；只读降低操作风险，但账户授权仍应按敏感权限管理。",
+        "points": [
+          "只读访问，不能移动或投资资金",
+          "美国 Pro / Max / Ultra 逐步开放",
+          "无广告与赞助推荐"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Gemini Omni 1.2 Flash：视频最长 15 秒，价格约降 30%",
+        "summary": "Google 向 Google AI 订阅用户推送 Gemini Omni 1.2 Flash。视频生成与编辑上限提到 15 秒，支持多轮对话式改片，场景连贯性和角色语音更好。Logan Kilpatrick 称价格比 Omni Flash 1.1 低约 30%。Runway 已同步接入该模型。",
+        "source_url": "https://x.com/GoogleAI/status/2118389961426874879",
+        "time": "2026-11-06T01:08:19+08:00",
+        "handle": "@GoogleAI",
+        "impact": "短视频生成进入更便宜、可多轮改的阶段，创作者和 API 方可直接换模型试。",
+        "points": [
+          "视频上限 15 秒（Ultra）",
+          "多轮对话改片与更稳场景",
+          "价格约降 30%"
+        ]
+      },
+      {
+        "title": "Perplexity 推出 Teammates：可主动接活的工作 Agent",
+        "summary": "Perplexity Teammates 面向 Max 网页用户上线。Agent 可主动接任务，调用 Computer 任务、Skills、记忆与工具，并能与其他 Teammate 协作、在 Slack 发消息。CEO Aravind 称公司内部工作区近 30 天约有 1 万个 Teammate，约为员工数的 20 倍，昨日约千个活跃。",
+        "source_url": "https://x.com/perplexity_ai/status/2118389326459670825",
+        "time": "2026-11-06T01:05:47+08:00",
+        "handle": "@perplexity_ai",
+        "impact": "搜索产品进一步产品化「多 Agent 同事」，编排型 Agent 进入日常办公试点。",
+        "points": [
+          "Max 网页先开放，原生 App 随后",
+          "可协作并消息 Slack",
+          "内部约 1 万 Teammate、昨日约千活跃（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Cursor：用自然语言构建可分享链接的线上应用",
+        "summary": "Cursor 宣布可在编辑器内构建 live app 并用链接分享。Agent 负责写代码、建数据库、做确定性与 Agent 安全检查后部署，目标是让多数应用不再停在 localhost。",
+        "source_url": "https://x.com/cursor_ai/status/2118458629091426304",
+        "time": "2026-11-06T05:41:10+08:00",
+        "handle": "@cursor_ai",
+        "impact": "Coding Agent 从本地跑通推进到一键上线可分享。",
+        "points": [
+          "描述需求即可构建",
+          "含数据库与安全检查",
+          "部署后可用链接分享"
+        ]
+      },
+      {
+        "title": "Jim Fan 发布 VFlash：面向 Physical AI 的 System One 视觉模型",
+        "summary": "NVIDIA GEAR 的 Jim Fan 介绍 VFlash，强调并行解析视觉世界，服务物体定位、机器人轨迹规划与稠密 3D 运动等固定长度浮点向量任务，定位为 Physical AI 的 System One 视觉模型。",
+        "source_url": "https://x.com/DrJimFan/status/2118380813498892301",
+        "time": "2026-11-06T00:31:58+08:00",
+        "handle": "@DrJimFan",
+        "impact": "具身智能侧开始单独优化「快而专」的视觉前缀模型。",
+        "points": [
+          "面向具身预测任务",
+          "强调并行高速视觉解析",
+          "自称 System One Vision Model"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Hugging Face：花约 80 万 GPU 小时写清 MoE 训练经验",
+        "summary": "Thomas Wolf 称当前 20 个最佳开源模型里有 18 个是 Mixture-of-Experts，但训练诀窍仍集中在少数团队。Hugging Face 用约 80 万 GPU 小时跑实验并写成公开指南；Leandro von Werra 称其可能是目前最全面的大规模 MoE 训练资料。",
+        "source_url": "https://x.com/Thom_Wolf/status/2118432475730882627",
+        "time": "2026-11-06T03:57:15+08:00",
+        "handle": "@Thom_Wolf",
+        "impact": "开源侧把「会训 MoE」从黑盒经验变成可复现文档。",
+        "points": [
+          "20 个最佳开源模型中 18 个为 MoE（其口径）",
+          "约 80 万 GPU 小时实验",
+          "公开成可复现指南"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 与摩根大通达成战略合作",
+        "summary": "Greg Brockman 宣布 OpenAI 与 JPMorganChase 战略合作，探索用先进 AI 帮助工程师开发、安全团队防御，以及员工与客户使用更强 AI。细节与金额未披露。",
+        "source_url": "https://x.com/gdb/status/2118410818933203038",
+        "time": "2026-11-06T02:31:12+08:00",
+        "handle": "@gdb",
+        "impact": "顶级银行继续把大模型嵌进研发行与安全流程。",
+        "points": [
+          "覆盖工程、安全与员工/客户场景",
+          "金额与具体产品未披露"
+        ]
+      },
+      {
+        "title": "Meta Muse Realtime Avatar 在美国 Muse App 上线",
+        "summary": "AI at Meta 称 Connect 上预览的实时化身技术今日在美国 Muse App 推送，把 Muse Realtime Voice 变成可互动头像。Alexandr Wang 同步宣布 Muse Voice 对美国用户开放电话与视频聊天。",
+        "source_url": "https://x.com/AIatMeta/status/2118412135340572850",
+        "time": "2026-11-06T02:36:25+08:00",
+        "handle": "@AIatMeta",
+        "impact": "消费级 AI 陪伴产品从语音走向实时视听形象。",
+        "points": [
+          "Realtime Avatar 美国 Muse App 推送",
+          "Voice 支持电话与视频聊天"
+        ]
+      },
+      {
+        "title": "OpenAI API 推出 Private Safety Processing",
+        "summary": "OpenAI Developers 介绍 Private Safety Processing：相关 API 请求的安全审查可在用户环境内完成，记录留在本地，由自动化安全 Agent 审阅，OpenAI 人员无法访问内容。",
+        "source_url": "https://x.com/OpenAIDevs/status/2118386439675420743",
+        "time": "2026-11-06T00:54:19+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "企业合规场景下，「安全审查」与「提示词不出域」可以同时谈。",
+        "points": [
+          "安全记录留在客户环境",
+          "自动化 Agent 审阅",
+          "OpenAI 人员不可访问内容（官方口径）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Mistral Studio 上线托管 Agent 与应用能力",
+        "summary": "Mistral 宣布 Studio 新增托管 Agent 与 Apps，以及工作流、企业连接、可观测性与评估能力，配合 Le Chonk 模型使用。官方强调可按需部署并保持控制。",
+        "source_url": "https://x.com/MistralAI/status/2118370229466153299",
+        "time": "2026-11-05T23:49:54+08:00",
+        "handle": "@MistralAI",
+        "impact": "欧洲开源厂补齐「模型 + 托管 Agent 工作台」。",
+        "points": [
+          "托管 Agent 与 Apps",
+          "工作流、企业连接、可观测与评估"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Notion：一半页面由 Agent 创建，MCP 调用量约增 60 倍",
+        "summary": "向阳乔木梳理 Notion 创始人新文：现在 Notion 一半页面由 Agent 创建，今年站内 AI 使用量约增 9 倍；许多第三方 Agent 用 Notion 存上下文，MCP 调用量今年约增 60 倍。公司还把设计、产品、工程合并成一体化组织。",
+        "source_url": "https://x.com/vista8/status/2118370399440539711",
+        "time": "2026-11-05T23:50:35+08:00",
+        "handle": "@vista8",
+        "impact": "知识库产品正变成 Agent 的默认记忆层，组织形态也在跟着变。",
+        "points": [
+          "一半页面由 Agent 创建",
+          "AI 用量约增 9 倍、MCP 约增 60 倍",
+          "设计/产品/工程合并"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Papermorph：课本 PDF 变互动网页课",
+        "summary": "GitHubDaily 介绍 Papermorph Skill：给 Claude Code 装上后，可把课本 PDF 做成带旁白的互动网页课、纸偶动画或纪录片式短片，章节可含测验；作者示例含线性代数约 40 章。",
+        "source_url": "https://x.com/GitHub_Daily/status/2118350138347544618",
+        "time": "2026-11-05T22:30:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "教育内容生产开始用 Skill 把静态教材直接变成可操作课件。",
+        "points": [
+          "PDF 转互动网页课",
+          "支持旁白、动画与测验",
+          "线性代数示例约 40 章"
+        ]
+      },
+      {
+        "title": "垂直化个人代理：15 分钟做出停车场计费助手",
+        "summary": "郭宇称押注垂直化个人代理，搭好中台后用 SandBank Agent 约 15 分钟做出高完成度停车场应用，可与其他个人助理联动，解决日本投币停车场费用难算的问题。",
+        "source_url": "https://x.com/turingou/status/2118358568080740363",
+        "time": "2026-11-05T23:03:34+08:00",
+        "handle": "@turingou",
+        "impact": "个人代理产品开始按刚需场景拆分，中台复用决定扩张速度。",
+        "points": [
+          "先做中台再铺垂直场景",
+          "约 15 分钟做出停车场应用",
+          "可与其他个人助理联动"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Obsidian 插件从 GitHub 直装：交易 MCP 密钥风险",
+        "summary": "Cheery 转述 GCSA 披露：泰国交易所 Bitkub 曾教用户给 AI 装交易用 MCP，并要求填入交易密钥；插件后从 npm 下架。提醒 BRAT 一类从 GitHub 往 Obsidian 塞插件的路径方便，但密钥与供应链风险更高。",
+        "source_url": "https://x.com/cheery9998/status/2118347880851448062",
+        "time": "2026-11-05T22:21:06+08:00",
+        "handle": "@cheery9998",
+        "impact": "给 Agent 接资金类工具时，密钥与插件来源要按安全事件级别审查。",
+        "points": [
+          "交易 MCP 曾要求填密钥",
+          "相关插件已从 npm 下架",
+          "GitHub 直装插件需慎用"
+        ]
+      },
+      {
+        "title": "逆向 Agent：先让它装 Skill 再追问安装逻辑",
+        "summary": "宝玉分享用 Claude Duet 拆解 Skill 安装行为的方法：先在对话里提交 Skill 让其安装，再追问「为什么你可以安装」，逼出相关上下文。作者称同类技巧也适用于其他 Agent 产品分析。",
+        "source_url": "https://x.com/dotey/status/2118431419424714878",
+        "time": "2026-11-06T03:53:03+08:00",
+        "handle": "@dotey",
+        "impact": "给做 Agent 评测与安全审计的人多了一条可复用的黑盒探查路径。",
+        "points": [
+          "先触发行为再追问机制",
+          "适用于 Skill / Agent 产品拆解"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent v0.23.0「Hearth」：浏览器打开 Desktop，会话统一到 gateway",
+        "summary": "Nous Research 发布 Hermes Agent v0.23.0。Desktop 工作区可由本机 gateway 在浏览器提供；单一 gateway 统一 CLI、TUI、Desktop、编辑器与机器人会话，避免多入口各跑一份 Agent。插件目录扩至约 1050，并加入付费 MCP 工具的价格与额度控制。",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
+        "time": "2026-11-06T05:32:33+08:00",
+        "handle": "@NousResearch",
+        "impact": "本地 Agent 开始像「工作台服务」而不是多个互不相通的客户端。",
+        "points": [
+          "Webapp 提供完整 Desktop 工作区",
+          "一机一 gateway 统一会话",
+          "插件目录约 1050"
+        ]
+      },
+      {
+        "title": "OpenClaw Multiplayer：团队共享同一 Agent 与上下文",
+        "summary": "OpenClaw 介绍 Multiplayer，让工程、产品、市场共用一个 Agent 与共享上下文，并在 GitHub Universe 演示。同期放出 v2026.11.1 补丁，修复 Telegram/Discord 误拒消息、Doctor 误报成功、Gateway 设置卡住等问题（83 个 PR、67 位贡献者）。",
+        "source_url": "https://x.com/openclaw/status/2118404891911864536",
+        "time": "2026-11-06T02:07:38+08:00",
+        "handle": "@openclaw",
+        "impact": "开源 Agent 从单人助手迈向小团队协作入口。",
+        "points": [
+          "团队共享 Agent 与上下文",
+          "v2026.11.1 修复误拒与 Doctor 误报"
+        ]
+      },
+      {
+        "title": "garrytan/gstack：公开 Garry Tan 的 Claude Code 角色化工具集",
+        "summary": "Garry Tan 开源 gstack，打包约 23 个意见化工具，分别扮演 CEO、设计师、工程经理、发布经理、文档与 QA 等角色。GitHub Trending 日榜约 +608 星。",
+        "source_url": "https://github.com/garrytan/gstack",
+        "time": "2026-11-06T06:00:00+08:00",
+        "impact": "「把整套公司角色塞进 Agent」的配置开始被直接开源复用。",
+        "points": [
+          "约 23 个角色化工具",
+          "面向 Claude Code 工作流",
+          "日榜约 +608★"
+        ]
+      },
+      {
+        "title": "OpenHands v1.36.0：自动化模板与多代码托管仓库选择增强",
+        "summary": "OpenHands 发布 v1.36.0，增强 automations 模板体验，并为 Bitbucket Data Center、Azure DevOps 等自建托管补充仓库选择与连接引导。",
+        "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.36.0",
+        "time": "2026-11-06T05:38:50+08:00",
+        "impact": "企业自建代码托管场景下，OpenHands 自动化接入门槛降低。",
+        "points": [
+          "模板与自动化设置改进",
+          "支持更多自建 Git 托管"
+        ]
+      },
+      {
+        "title": "Hugging Face ML Intern 可装成 Slack 机器人",
+        "summary": "Hugging Face 宣布开源 ML Intern 现可作为 Slack bot 安装到自有工作区，用于评测模型、构建数据集与微调。",
+        "source_url": "https://x.com/huggingface/status/2118430862949945612",
+        "time": "2026-11-06T03:50:50+08:00",
+        "handle": "@huggingface",
+        "impact": "实验型 ML 助手进入团队聊天流，缩短「想法到实验」路径。",
+        "points": [
+          "Slack 工作区可安装",
+          "覆盖评测、数据集与微调"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "iOS / iPadOS / macOS 27.3 公众测试版放出",
+        "summary": "苹果放出 iOS、iPadOS 与 macOS Golden Gate 27.3 首个公众测试版。报道提到重新设计的健康 App 等改动；MacRumors 与 9to5Mac 同步跟进。",
+        "source_url": "https://x.com/MacRumors/status/2118419620101267523",
+        "time": "2026-11-06T03:06:10+08:00",
+        "handle": "@MacRumors",
+        "impact": "想尝鲜 27.3 功能的用户可进公众测试通道，正式版前仍有稳定性风险。",
+        "points": [
+          "iOS / iPadOS / macOS 同步 PB",
+          "含健康 App 等改动"
+        ]
+      },
+      {
+        "title": "苹果 HomeView 智能家居中枢内存规格曝光",
+        "summary": "MacRumors 报道苹果新款 HomeView 智能家居中枢的内存规格细节，补充此前硬件信息。",
+        "source_url": "https://x.com/MacRumors/status/2118460300269850772",
+        "time": "2026-11-06T05:47:49+08:00",
+        "handle": "@MacRumors",
+        "impact": "方便评估其本地处理能力与 Matter / 家庭中枢定位。",
+        "points": [
+          "HomeView 中枢硬件规格补充"
+        ]
+      },
+      {
+        "title": "Google Find Hub 上线「忘带提醒」",
+        "summary": "9to5Google 称 Google Find Hub 在 Android 端推送 Notify when left behind，追踪器被落下时可通知用户。",
+        "source_url": "https://x.com/9to5Google/status/2118455929125449841",
+        "time": "2026-11-06T05:30:27+08:00",
+        "handle": "@9to5Google",
+        "impact": "物品防丢从「事后查找」前移到「离开前提醒」。",
+        "points": [
+          "Android Find Hub 新提醒",
+          "针对追踪器被落下场景"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Cloudflare：给代发请求的 AI Agent 建立可识别身份",
+        "summary": "Cloudflare 发文称 AI Agent 正为海量用户代为访问，但服务器往往只看到剥离用户信息的中介。文章定义问题空间，并提出协作式识别、放行与管理自动化流量的方案。",
+        "source_url": "https://x.com/Cloudflare/status/2118392403874701407",
+        "time": "2026-11-06T01:18:01+08:00",
+        "handle": "@Cloudflare",
+        "impact": "网站与网关侧开始把「Agent 身份」当成一等公民，影响后续访问控制设计。",
+        "points": [
+          "Agent 流量缺少终端用户可见性",
+          "提出识别与管理自动化流量的协作方案"
+        ]
+      },
+      {
+        "title": "Tailscale：AI 让更多人能写软件后，控制权仍要守住",
+        "summary": "Tailscale CEO 发文讨论「十亿人能写软件」之后会发生什么，强调 AI 降低编程门槛时，构建者不该因此放弃运行位置与所有权控制。",
+        "source_url": "https://x.com/Tailscale/status/2118360442108055998",
+        "time": "2026-11-05T23:11:01+08:00",
+        "handle": "@Tailscale",
+        "impact": "组网与自托管叙事继续绑定「Agent 时代的控制权」。",
+        "points": [
+          "AI 降低编程门槛",
+          "强调运行位置与所有权"
+        ]
+      }
+    ]
+  }
+}
