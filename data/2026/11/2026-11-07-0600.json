@@ -1,0 +1,331 @@
+{
+  "id": "2026-11-07-0600",
+  "published_at": "2026-11-07T06:00:00+08:00",
+  "headline": "Anthropic 公开 Agent 记忆与做梦机制；DeepMind 压测 RSA；Meta Muse 专用模型与 Spaces",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 公开 Agent 记忆组件与「做梦」整理机制",
+        "summary": "Anthropic 发布《The components of agent memory》。会话内写记忆笔记，离线「做梦」对照 transcript 纠错、合并重复并生成 wiki 索引。Pokémon 实验中 Sonnet 3.7 写 413 个文件只拿 1 枚徽章，Fable 5 写 9 个文件拿 4 枚；对约 4.2 亿 token 语料，做梦从 2 轮到 128 轮，问答标准命中率自报从 13% 提到 48%。",
+        "source_url": "https://www.anthropic.com/research/components-of-agent-memory",
+        "time": "2026-11-07T05:16:17+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "把长期记忆拆成可工程化的笔记、离线整理、表征与上下文注入，并给出可复现评测。",
+        "points": [
+          "记忆笔记是对下一轮需求的预测",
+          "做梦对照 transcript 纠错并建 wiki",
+          "Managed Agents 可带 dreaming-2026-04-21"
+        ]
+      },
+      {
+        "title": "DeepMind：AI Agent 协助压测加密，发现遗留 1024 位 RSA 弱点",
+        "summary": "Google DeepMind 称在人类引导下，模型协助加速压测加密的研究，并在遗留 1024 位 RSA 体制中发现两处重大弱点。官方同时说明现代 2048 位系统不受这些具体利用影响，但强调 AI 时代不能再依赖历史硬度假设。",
+        "source_url": "https://x.com/GoogleDeepMind/status/2118755418675765656",
+        "time": "2026-11-07T01:20:31+08:00",
+        "handle": "@GoogleDeepMind",
+        "impact": "对仍存 1024 位遗产系统是明确风险信号，密码标准需持续压力测试。",
+        "points": [
+          "人机协同做密码分析科研",
+          "命中遗留 1024 位 RSA 两处弱点",
+          "2048 位不受这些具体利用影响"
+        ]
+      },
+      {
+        "title": "Meta Muse / Meta AI 上线 Wonder 专用模型，Spaces 可对话生成常驻界面",
+        "summary": "Muse 与 Meta AI 接入用 Muse Wonder 训练的专用模型，强调 Active Memory（跨时间记住关键事）与 Active Focus（遇阻仍推进目标）。同期 Spaces 上线：用自然语言描述需求，Muse 生成并持续更新可固定到导航栏的空间。",
+        "source_url": "https://x.com/AIatMeta/status/2118768974779634084",
+        "time": "2026-11-07T02:14:23+08:00",
+        "handle": "@AIatMeta",
+        "impact": "消费级助手从聊天扩到带记忆的常驻工作面，与 Anthropic 记忆叙事同日呼应。",
+        "points": [
+          "Active Memory / Active Focus",
+          "Spaces 对话生成常驻界面",
+          "Alexandr Wang 同步推广"
+        ]
+      },
+      {
+        "title": "OpenAI 与 Ligo 发布 BioBasicsBench：100 项湿实验例行分析",
+        "summary": "新基准覆盖凝胶、菌落板、显微等原始数据判读，并考察「证据不够别瞎下结论」。社区读图自报：最高努力档 GPT-6 Astra 约 66.7%，上代 GPT-5.6 Sol 约 43.8%。",
+        "source_url": "https://x.com/OpenAI/status/2118782708767965238",
+        "time": "2026-11-07T03:08:57+08:00",
+        "handle": "@OpenAI",
+        "impact": "把 Agent 评测从论文图拉回实验室脏数据。",
+        "points": [
+          "100 项真实湿实验任务",
+          "与酶设计公司 Ligo 共建",
+          "Astra 自报约 66.7%"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 与 FMF 发布绕过 AI 防护导致严重网络危害的识别框架",
+        "summary": "OpenAI 与金融业 FMF 及成员机构合作，给出何时「绕过模型护栏」可能促成严重网络危害、并应加强防护的共同方法。",
+        "source_url": "https://x.com/OpenAI/status/2118795218099253606",
+        "time": "2026-11-07T03:58:39+08:00",
+        "handle": "@OpenAI",
+        "impact": "安全治理从口号走向可共享的评估方法。",
+        "points": [
+          "与 FMF 成员机构共建",
+          "聚焦绕过护栏的网络危害",
+          "推动共同评估口径"
+        ]
+      },
+      {
+        "title": "NVIDIA Lyra 2.0：单图生成可沿相机路径探索的 3D 世界",
+        "summary": "NVIDIA 结合视频生成与 3D 重建，沿用户选定相机路径生成环境，并学习纠正累积视觉误差，把单张图变成可探索场景。",
+        "source_url": "https://x.com/NVIDIAAI/status/2118800021013643269",
+        "time": "2026-11-07T04:17:45+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "世界模型演示继续从短视频走向可漫游场景。",
+        "points": [
+          "单图到可漫游 3D",
+          "沿自定义相机路径生成",
+          "纠正累积视觉误差"
+        ]
+      },
+      {
+        "title": "Mistral Voxtral 3 增加 end-of-turn 检测",
+        "summary": "Mistral 语音模型 Voxtral 3 增加说完检测，方便开发者判断用户是否结束发言，搭更跟手的语音交互。",
+        "source_url": "https://x.com/MistralAI/status/2118744719870066936",
+        "time": "2026-11-07T00:38:00+08:00",
+        "handle": "@MistralAI",
+        "impact": "语音 Agent 落地的关键细节从转写扩展到轮次判定。",
+        "points": [
+          "end-of-turn 检测",
+          "面向语音交互产品",
+          "减少误打断"
+        ]
+      },
+      {
+        "title": "Cohere North 2：可复用 Agent 与 Skills 可分享给团队",
+        "summary": "Cohere 升级代理平台 North 2，强调可复用 Agent 与 Skills，个人用完可分享给团队，减少重复搭流水线。",
+        "source_url": "https://x.com/cohere/status/2118771361870942532",
+        "time": "2026-11-07T02:23:52+08:00",
+        "handle": "@cohere",
+        "impact": "企业代理平台继续把「一次配好、多人复用」做成卖点。",
+        "points": [
+          "可复用 Agent/Skills",
+          "团队共享",
+          "面向琐事自动化"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Agents Anywhere：跨设备开源 Agent 工作台",
+        "summary": "工作台自己不跑模型，把本机已登录的 Codex、Claude Code、DeepSeek Harness 接到手机、平板、浏览器，看进度、回话、批权限、开终端。官方称 Web/Win/Mac/iPhone/iPad/安卓全平台。",
+        "source_url": "https://x.com/Pluvio9yte/status/2118720959431774271",
+        "time": "2026-11-06T23:03:35+08:00",
+        "handle": "@Pluvio9yte",
+        "impact": "把「人在手机上盯 Agent」做成可安装产品，而不是网页凑合。",
+        "points": [
+          "跨设备遥控本机 Agent",
+          "支持 Codex/Claude Code/DSH",
+          "原生移动端 UI"
+        ]
+      },
+      {
+        "title": "OpenScreen：录屏后自动缩放并本地字幕",
+        "summary": "录完屏会跟着鼠标自动放大、磨平轨迹并加点击效果，字幕本地识别可不上传；个人与商用都免费。",
+        "source_url": "https://x.com/GitHub_Daily/status/2118712530898190845",
+        "time": "2026-11-06T22:30:05+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "产品演示视频的后期琐事被自动化，适合 Agent 演示录制。",
+        "points": [
+          "自动缩放跟随鼠标",
+          "本地字幕",
+          "个人商用免费"
+        ]
+      },
+      {
+        "title": "stack-diagram Skill：一句话出带官方 Logo 的架构图",
+        "summary": "装上 Skill 后描述技术栈，例如 Next.js 在 Vercel、数据库 Neon、支付 Stripe，即可生成带官方 Logo 的架构图，Logo 自动取自 svgl、devicon 等。",
+        "source_url": "https://x.com/GitHub_Daily/status/2118689874891223340",
+        "time": "2026-11-06T21:00:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "文档配图从找 Logo 对齐变成一句 Skill 调用。",
+        "points": [
+          "一句话生成架构图",
+          "自动拉官方 Logo",
+          "面向项目文档"
+        ]
+      },
+      {
+        "title": "个人电脑可学的 Qwen3-1.7B 微调+RL 小项目",
+        "summary": "头雁推荐一个体量很小、适合在个人电脑上跟完微调与强化学习闭环的学习案例，模型为 Qwen3-1.7B。",
+        "source_url": "https://x.com/alacheng/status/2118664977964060704",
+        "time": "2026-11-06T19:21:08+08:00",
+        "handle": "@alacheng",
+        "impact": "降低跟完后训练流程的门槛，适合自学而非生产部署。",
+        "points": [
+          "Qwen3-1.7B",
+          "微调+RL 闭环",
+          "个人电脑可跑"
+        ]
+      },
+      {
+        "title": "Agent-Autoloop 完成 Windows 兼容",
+        "summary": "数字生命卡兹克为 Agent-Autoloop 补完 Windows 兼容并上线；开源数日自报约 3.5K★。",
+        "source_url": "https://x.com/Khazix0918/status/2118682277102391312",
+        "time": "2026-11-06T20:29:52+08:00",
+        "handle": "@Khazix0918",
+        "impact": "让 Windows 用户也能跑同一套 Agent 自动循环。",
+        "points": [
+          "Windows 现已支持",
+          "Agent 自动化循环",
+          "自报约 3.5K★"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenHands v1.37.0：自动化流程可用 Mermaid 图解释",
+        "summary": "新版本为每条自动化流程生成 Mermaid 说明图，并修复会话恢复排序、空聊天建议闪现与直播更新时的历史扫描性能。",
+        "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.37.0",
+        "time": "2026-11-06T20:54:14+08:00",
+        "impact": "让自动化配置对人类更可读，降低误配风险。",
+        "points": [
+          "Mermaid 解释自动化",
+          "会话恢复修复",
+          "聊天性能优化"
+        ]
+      },
+      {
+        "title": "Claude Code v2.1.319：auto mode 服务端校验与 MCP 后台任务",
+        "summary": "关遥测或特性开关时，服务端无法校验的调用改为询问或拒绝，不再回退内置分类器；MCP 工具任务可立即后台化，结果完成后再告知。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+        "time": "2026-11-07T01:04:01+08:00",
+        "impact": "网关与托管场景下的权限边界更硬，长任务不堵终端。",
+        "points": [
+          "auto mode 无校验则询问/拒绝",
+          "MCP 任务可后台",
+          "可用环境变量回退"
+        ]
+      },
+      {
+        "title": "google/skills 继续冲 GitHub Trending",
+        "summary": "面向 Google 产品与技术的 Agent Skills 集合继续登上热榜，当日约新增 532 星。",
+        "source_url": "https://github.com/google/skills",
+        "time": "2026-11-07T06:00:00+08:00",
+        "impact": "官方 Skills 包仍是 Agent 扩展的高关注入口。",
+        "points": [
+          "Google 系 Skills",
+          "Trending 热度",
+          "当日约 +532★"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "microsoft/VibeVoice 再登热榜",
+        "summary": "微软开源语音模型 VibeVoice 继续登上 Python 热榜，当日约新增 1,001 星。",
+        "source_url": "https://github.com/microsoft/VibeVoice",
+        "time": "2026-11-07T06:00:00+08:00",
+        "impact": "语音开源栈热度维持，适合关注本地语音 Agent 的开发者。",
+        "points": [
+          "开源语音模型",
+          "Python Trending",
+          "当日约 +1,001★"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "tech": [
+      {
+        "title": "上手体验：新款 OLED 触摸屏 MacBook Pro",
+        "summary": "MacRumors 发布新款 OLED 触摸屏 MacBook Pro 的实机上手报道，覆盖首批触屏 Mac 到货后的使用感受。",
+        "source_url": "https://x.com/MacRumors/status/2118827297059012998",
+        "time": "2026-11-07T06:06:08+08:00",
+        "handle": "@MacRumors",
+        "impact": "触屏 Mac 从发售叙事进入真实使用反馈阶段。",
+        "points": [
+          "OLED 触屏 MBP",
+          "实机上手",
+          "首批用户到货"
+        ]
+      },
+      {
+        "title": "苹果称已有逾 10 万款应用适配 iPhone Duo",
+        "summary": "苹果向媒体表示 App Store 已有远超 10 万款为 iPhone Duo 打造的应用，每天仍有数千款优化版上架；媒体同时盘点仍缺的品类。",
+        "source_url": "https://x.com/MacRumors/status/2118754957717610662",
+        "time": "2026-11-07T01:18:41+08:00",
+        "handle": "@MacRumors",
+        "impact": "折叠 iPhone 生态从「能不能用」转向「缺什么还没跟上」。",
+        "points": [
+          "逾 10 万款适配",
+          "每日数千优化版",
+          "仍有缺口品类"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Cloudflare Workers 内置 Temporal 日期时间 API",
+        "summary": "JavaScript 现代日期时间 API Temporal 已在 Cloudflare Workers 可用，支持内置时区、历法感知运算与不可变值。",
+        "source_url": "https://x.com/CloudflareDev/status/2118748243203088511",
+        "time": "2026-11-07T00:52:00+08:00",
+        "handle": "@CloudflareDev",
+        "impact": "边缘函数处理跨时区时间不再依赖易错的 Date 拼装。",
+        "points": [
+          "Workers 支持 Temporal",
+          "时区与历法感知",
+          "不可变日期值"
+        ]
+      },
+      {
+        "title": "OPPO Find X10 Ultra 或被搁置",
+        "summary": "Android Authority 称 OPPO  reportedly 暂停一款即将发布的旗舰，措辞指向 Find X10 Ultra；细节不明，可能是延期或更大调整。",
+        "source_url": "https://x.com/AndroidAuth/status/2118753057521672242",
+        "time": "2026-11-07T01:11:08+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "若属实将影响高端安卓换机节奏，仍需官方确认。",
+        "points": [
+          "旗舰项目 reportedly 暂停",
+          "指向 Find X10 Ultra",
+          "细节未明"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "iot": [
+      {
+        "title": "Cloudflare：后量子 Web 隐私与盲签名新路径",
+        "summary": "Cloudflare 介绍面向 Privacy Pass 后继的 MOLE 构想，以及基于 VOLE-in-the-Head 与多元签名的后量子盲签名突破，目标是在代理流量治理中隐藏签发方身份并保持隐私。",
+        "source_url": "https://blog.cloudflare.com/vole-mole",
+        "time": "2026-11-06T22:07:33+08:00",
+        "handle": "@Cloudflare",
+        "impact": "为 Agent 流量过载场景准备「可验证但不露身份」的隐私凭证。",
+        "points": [
+          "MOLE 无链接背书",
+          "后量子盲签名",
+          "面向代理流量治理"
+        ]
+      },
+      {
+        "title": "Home Assistant 十一月征集「What the Heck?!」难用点",
+        "summary": "Home Assistant 发起月度吐槽活动，邀请用户及同住家人反馈难用之处，无论新旧或是否技术背景。",
+        "source_url": "https://x.com/home_assistant/status/2118784530047709384",
+        "time": "2026-11-07T03:16:11+08:00",
+        "handle": "@home_assistant",
+        "impact": "本地智能家居继续用社区吐槽驱动体验改造。",
+        "points": [
+          "WTH 月度征集",
+          "邀请家人一起反馈",
+          "聚焦上手摩擦"
+        ]
+      },
+      {
+        "title": "Zapier 预告 Agentically managed Zaps",
+        "summary": "Zapier 预告自动化流程将更多由代理托管管理，具体能力仍在预热阶段。",
+        "source_url": "https://x.com/zapier/status/2118704482418610542",
+        "time": "2026-11-06T21:58:06+08:00",
+        "handle": "@zapier",
+        "impact": "主流自动化平台也在把 Agent 写进编排层。",
+        "points": [
+          "代理托管 Zaps",
+          "预告阶段",
+          "自动化产品线延伸"
+        ]
+      }
+    ]
+  }
+}

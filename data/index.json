@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T18:47:05+08:00",
+  "updated_at": "2026-11-07T06:18:14+08:00",
   "editions": [
+    {
+      "id": "2026-11-07-0600",
+      "published_at": "2026-11-07T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-07-0600.json",
+      "counts": {
+        "x_daily": 8,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 4,
+        "tech": 4,
+        "iot": 3
+      },
+      "headline": "Anthropic 公开 Agent 记忆与做梦机制；DeepMind 压测 RSA；Meta Muse 专用模型与 Spaces"
+    },
     {
       "id": "2026-11-06-1800",
       "published_at": "2026-11-06T18:00:00+08:00",
