@@ -1,0 +1,314 @@
+{
+  "id": "2026-11-06-1800",
+  "published_at": "2026-11-06T18:00:00+08:00",
+  "headline": "Inkling 2 Small、Perplexity 代理工时与 Replit 沙箱",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Thinking Machines 发布 Inkling 2 Small：594B MoE，AA Index 31",
+        "summary": "Thinking Machines Lab 推出第二代 Inkling 的 Inkling 2 Small：Mixture-of-Experts，总参数 594B、激活约 17B，支持图像输入与可变努力度。Artificial Analysis Intelligence Index 报 31。预训练在 NVIDIA GB300 上约 68 小时并原生使用 NVFP4，后训练约 1700 万次 rollout。模型今日起可在 Tinker 微调与推理；完整权重计划在外部安全测试后于下周以 Apache 2.0 放出。",
+        "source_url": "https://x.com/thinkymachines/status/2118489527362912566",
+        "time": "2026-11-06T07:43:57+08:00",
+        "handle": "@thinkymachines",
+        "impact": "美国一线新实验室加入可开源大 MoE 竞赛，并明确先托管、再开源的安全路径。",
+        "points": [
+          "594B 总参 / 约 17B 激活，AA Index 31（自报）",
+          "GB300 预训练约 68 小时，原生 NVFP4",
+          "下周计划 Apache 2.0 开源权重"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Perplexity：员工人均 Teammate 工时较 9 月增约 7 倍",
+        "summary": "CEO Aravind 称中位员工每周从 Teammates 获得的代理工时约为 9 月的 7 倍，约 1/5 员工已到每周 40 小时以上。他另指出 Agent 将更多被其他 Agent 调用，编排可围绕 git 这一可累积系统记录，在 code-mode 与版本化轨迹下形成更少人在环的递归循环。",
+        "source_url": "https://x.com/AravSrinivas/status/2118549314746429552",
+        "time": "2026-11-06T11:41:32+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "把 Teammates 从产品发布推进到可量化内部用量，并点名下一阶段编排重点。",
+        "points": [
+          "中位代理工时约 7 倍于 9 月（自报）",
+          "约 1/5 员工每周 40+ 代理工时",
+          "强调 Agent→Agent 与 git 真源"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Replit：microVM 沙箱自报可避开约 96% Linux 零日",
+        "summary": "Replit CEO Amjad Masad 称定制内核构建可避开约 96% 的 Linux 零日漏洞。官方工程文说明沙箱引擎改为 microVM，每沙箱独立 guest 内核；网络控制在 guest 外执行，凭证经 broker 授权而不下发可复用账号密钥。",
+        "source_url": "https://x.com/amasad/status/2118503241390665776",
+        "time": "2026-11-06T08:38:27+08:00",
+        "handle": "@amasad",
+        "impact": "Coding Agent 落地关键转向可隔离执行边界，与安全专用模型叙事互补。",
+        "points": [
+          "microVM 每沙箱独立内核",
+          "网络控制在 guest 外",
+          "自报避开约 96% Linux 零日"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Jeff Dean 等经 Laude Institute 资助开放科学登月项目",
+        "summary": "Jeff Dean 宣布与 Sanjay Ghemawat、John Hennessy、Dave Patterson、Ben Gomes、Andy Konwinski 等一起，通过 Laude Institute 支持开放科学大型资助项目。",
+        "source_url": "https://x.com/JeffDean/status/2118554350859813374",
+        "time": "2026-11-06T12:01:32+08:00",
+        "handle": "@JeffDean",
+        "impact": "顶级系统人物把声誉押在开放、长周期科研资金池上。",
+        "points": [
+          "联合多位系统与芯片元老",
+          "面向开放科学 moonshot",
+          "经 Laude Institute 出资"
+        ]
+      },
+      {
+        "title": "Thomas Wolf：METR 的 Anthropic 研发加速评估偏内向",
+        "summary": "Hugging Face 的 Thomas Wolf 评论 METR 与 Anthropic 合作的研发加速报告：其主要统计实验室算力、招聘与内部数据，再把约 80% 加速归因于 AI。他认为实验室更像资金与生态的汇聚点，许多「AI 加速 AI 研发」实际发生在实验室外的数据与强化学习环境公司。",
+        "source_url": "https://x.com/Thom_Wolf/status/2118479815221096785",
+        "time": "2026-11-06T07:05:22+08:00",
+        "handle": "@Thom_Wolf",
+        "impact": "把「AI 是否加速自身研发」从实验室自报拉到生态外溢视角。",
+        "points": [
+          "METR 报约 80% 加速来自 AI",
+          "批评视角偏实验室内部",
+          "强调外部数据/RL 环境供应链"
+        ]
+      },
+      {
+        "title": "SGLang：GB300 上自报 420+ tok/s/用户与 31K+ tok/s/GPU",
+        "summary": "SGLang 公布与 NVIDIA、AMD、Kimi、SemiAnalysis 等协作的 day-0 数据：在 GB300 NVL72 上，低并发可达每用户 420+ tok/s，高并发每 GPU 约 31K+ tok/s。",
+        "source_url": "https://x.com/sgl_project/status/2118533859524665547",
+        "time": "2026-11-06T10:40:07+08:00",
+        "handle": "@sgl_project",
+        "impact": "开源推理栈继续用 Blackwell 硬件同时宣传延迟与吞吐。",
+        "points": [
+          "GB300 NVL72 实测（自报）",
+          "低并发重视延迟",
+          "高并发刷吞吐"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "vLLM Semantic Router 推出 System Duo 分流架构",
+        "summary": "vLLM 介绍 Semantic Router 的 System Duo：快速决策模型处理分流、守卫与校验等瞬时判断，真正需要深度推理时再路由到合适模型。",
+        "source_url": "https://x.com/vllm_project/status/2118483782223470605",
+        "time": "2026-11-06T07:21:07+08:00",
+        "handle": "@vllm_project",
+        "impact": "把推理成本与深度分配做成可组合的路由层。",
+        "points": [
+          "快模型做 triage/guard",
+          "重推理按需路由",
+          "开源推理侧产品化「何时深想」"
+        ]
+      },
+      {
+        "title": "OpenAI Codex CLI rust-v0.167.0：终端 Agent 指挥中心",
+        "summary": "Codex 发布 rust-v0.167.0。可用 codex agents --no-daemon 打开 agent command center，会话选择器标记未读结果；支持在终端切换已连接后端并保留草稿，并增强本地图片预览与 Google Cloud Vertex 配置向导。",
+        "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+        "time": "2026-11-06T09:40:00+08:00",
+        "impact": "Codex 从单会话 CLI 进一步走向多 Agent 工作台。",
+        "points": [
+          "agents command center",
+          "多后端切换保留草稿",
+          "GCP Vertex 向导"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "让 Agent 交 PR 必须带功能截图",
+        "summary": "宝玉把「人提交 PR 要自测截图」的纪律套到 Agent 上：每次改动都要求带上相关功能截屏，逼模型先跑通再交差，减少只会写代码不会自测的 slop。",
+        "source_url": "https://x.com/dotey/status/2118569598379229219",
+        "time": "2026-11-06T13:02:08+08:00",
+        "handle": "@dotey",
+        "impact": "给 Coding Agent 加一条低成本、可检查的质量门槛。",
+        "points": [
+          "复用人工 PR 审查纪律",
+          "截图倒逼自测",
+          "直接约束 Agent 交付"
+        ]
+      },
+      {
+        "title": "怎么用 AI 做出不丑且易用的产品",
+        "summary": "Tw93 从产品工程师视角分享如何避开 AI Slop：不只追生成速度，而要在视觉克制、信息层级和真实易用性上下功夫，并给出可执行的设计取舍。",
+        "source_url": "https://x.com/HiTw93/status/2118624034334326902",
+        "time": "2026-11-06T16:38:26+08:00",
+        "handle": "@HiTw93",
+        "impact": "帮用 AI 做产品的人把「能生成」推进到「敢给用户用」。",
+        "points": [
+          "针对 AI Slop 视觉问题",
+          "产品工程师视角",
+          "强调易用与克制"
+        ]
+      },
+      {
+        "title": "reanimate：逐帧对比把动效复刻准",
+        "summary": "GitHubDaily 介绍 Claude Code Skill reanimate：先录下原版动效写入项目，再录复刻版逐帧对比，通常 2 到 5 轮即可把时间误差压到约 80 毫秒内。",
+        "source_url": "https://x.com/GitHub_Daily/status/2118576665895014540",
+        "time": "2026-11-06T13:30:13+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "把「Agent 仿动效总差一点」变成可自动迭代的闭环。",
+        "points": [
+          "录原版再录复刻",
+          "逐帧对比",
+          "默认时间误差约 80ms"
+        ]
+      },
+      {
+        "title": "Shopify Reflex：不靠模拟器验证原生 App",
+        "summary": "meng shao 解读 Shopify Engineering 的 Reflex：把业务逻辑与界面分开，让 Agent 通过命令行直接读状态、执行操作并验证结果；iOS 与 Android 仍写原生代码，但共享同一套行为测试。",
+        "source_url": "https://x.com/shao__meng/status/2118622217525416174",
+        "time": "2026-11-06T16:31:13+08:00",
+        "handle": "@shao__meng",
+        "impact": "给移动端 Coding Agent 提供不依赖 GUI 模拟器的验证路径。",
+        "points": [
+          "逻辑与 UI 分离",
+          "CLI 可读状态与断言",
+          "双端共享行为测试"
+        ]
+      },
+      {
+        "title": "rea-video：拆短视频里哪些镜头是 AI",
+        "summary": "GitHubDaily 介绍开源工具 rea-video：把短视频拆成镜头，标出画面制作方式、字幕剪辑，以及配音配乐是真人还是 AI，并给出整体 AI 占比总结。",
+        "source_url": "https://x.com/GitHub_Daily/status/2118644590131757296",
+        "time": "2026-11-06T18:00:07+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "给内容审核和创作者提供可检查的 AI 成片溯源工具。",
+        "points": [
+          "逐镜头拆解",
+          "区分真人与 AI 配音",
+          "输出占比总结"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "openai/codex rust-v0.167.0：Agent 指挥中心",
+        "summary": "Codex CLI 新版本加入 agents command center、多后端切换、本地图片预览与 GCP Vertex 向导，把终端里的多 Agent 会话管起来。",
+        "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+        "time": "2026-11-06T09:40:00+08:00",
+        "impact": "CLI Coding Agent 补齐多会话工作台能力。",
+        "points": [
+          "command center",
+          "后端切换保留草稿",
+          "图片预览与 GCP 向导"
+        ]
+      },
+      {
+        "title": "google/skills 登上 GitHub Trending",
+        "summary": "Google 开源的 Agent Skills 集合面向自家产品与技术栈，方便 Agent 按场景调用约定好的技能包；当日约新增 211 星。",
+        "source_url": "https://github.com/google/skills",
+        "time": "2026-11-06T18:00:00+08:00",
+        "impact": "大厂开始把「可安装技能包」当作 Agent 生态标配。",
+        "points": [
+          "面向 Google 产品",
+          "Agent Skills 格式",
+          "当日约 +211★"
+        ]
+      },
+      {
+        "title": "scenario-labs/skills：帮 Agent 选对生成模型并先报价",
+        "summary": "该技能包通过 Scenario MCP 为 Agent 选择图像、视频、音频与 3D 模型，可在花费前估价，并尽量保持角色与品牌一致；当日约 +667 星。",
+        "source_url": "https://github.com/scenario-labs/skills",
+        "time": "2026-11-06T18:00:00+08:00",
+        "impact": "把生成式媒体的选模与成本控制写进 Agent 技能层。",
+        "points": [
+          "多模态模型路由",
+          "花费前报价",
+          "角色/品牌一致性"
+        ]
+      },
+      {
+        "title": "microsoft/VibeVoice 继续冲上热榜",
+        "summary": "微软开源语音项目 VibeVoice 再度出现在 GitHub 日榜，当日约 +223 星，定位为开源前沿语音 AI。",
+        "source_url": "https://github.com/microsoft/VibeVoice",
+        "time": "2026-11-06T18:00:00+08:00",
+        "impact": "开源语音模型关注度仍高，适合关注本地语音 Agent 的人跟进。",
+        "points": [
+          "微软开源语音",
+          "日榜热度延续",
+          "面向语音生成/交互"
+        ]
+      },
+      {
+        "title": "pingdotgg/t3code 登 TypeScript 热榜",
+        "summary": "Theo 相关仓库 t3code 出现在 TypeScript 日榜前列，当日约 +1,879 星，反映社区对一类编码/Agent 工具链的集中关注。",
+        "source_url": "https://github.com/pingdotgg/t3code",
+        "time": "2026-11-06T18:00:00+08:00",
+        "impact": "短时星标暴涨说明开发者仍在快速试新的编码 Agent 外壳。",
+        "points": [
+          "TS 日榜靠前",
+          "当日约 +1,879★",
+          "与编码工具链相关"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Googlebook 十一月更新：端侧 AI 优化可腾出约 3–6GB 内存",
+        "summary": "Android Authority 与 9to5Google 报道 Googlebook 大规模十一月更新：通过优化端侧 AI 可释放约 3 到 6GB 内存，并带来约 30 项修复，覆盖 USB 麦克风、外接显示器播放，以及更新中断导致的启动循环。",
+        "source_url": "https://x.com/AndroidAuth/status/2118617939129880583",
+        "time": "2026-11-06T16:14:13+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "端侧模型常驻后，系统更新开始把「给 AI 让路」写成可感知的内存收益。",
+        "points": [
+          "端侧 AI 优化腾内存",
+          "约 30 项修复",
+          "修启动循环等问题"
+        ]
+      },
+      {
+        "title": "WhatsApp iOS 开始推送 AI 扩图",
+        "summary": "9to5Mac 报道 WhatsApp 的 AI 照片扩展工具开始在 iOS 推送，可在聊天场景直接扩图。",
+        "source_url": "https://x.com/9to5mac/status/2118514896329494680",
+        "time": "2026-11-06T09:24:46+08:00",
+        "handle": "@9to5mac",
+        "impact": "即时通讯把基础生成式修图做成默认能力。",
+        "points": [
+          "iOS 开始推送",
+          "聊天内扩图",
+          "AI 图像编辑进主流 IM"
+        ]
+      },
+      {
+        "title": "苹果说明关闭新款 MacBook Pro 发光 Logo，触摸屏 Mac 到货",
+        "summary": "9to5Mac 介绍如何关闭新款 MacBook Pro 的发光 Logo；MacRumors 称苹果首款触摸屏 Mac 已开始送达用户。",
+        "source_url": "https://x.com/9to5mac/status/2118520926400602616",
+        "time": "2026-11-06T09:48:43+08:00",
+        "handle": "@9to5mac",
+        "impact": "触摸屏 Mac 从发布叙事进入真实开箱阶段。",
+        "points": [
+          "发光 Logo 可关",
+          "触摸屏 Mac 到货",
+          "属新硬件落地细节"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Home Assistant 推出「No Cloud Calendar 2027」",
+        "summary": "Home Assistant 用玩笑产品「No Cloud Calendar 2027」强调本地年历：本地运行、适配多数墙壁、安装向导是一颗钉子，一次性购买且无自动续费。",
+        "source_url": "https://x.com/home_assistant/status/2118629919534043170",
+        "time": "2026-11-06T17:01:49+08:00",
+        "handle": "@home_assistant",
+        "impact": "用幽默方式重申智能家居社区的本地优先立场。",
+        "points": [
+          "本地年历玩笑产品",
+          "一次性购买",
+          "强调无云续费"
+        ]
+      },
+      {
+        "title": "IFTTT：博客 RSS 自动发到 Bluesky",
+        "summary": "IFTTT 介绍新能力：粘贴博客 RSS 地址后，每篇新文章会自动出现在 Bluesky，并带上标题与内容摘要链接。",
+        "source_url": "https://x.com/IFTTT/status/2118473683782234206",
+        "time": "2026-11-06T06:41:00+08:00",
+        "handle": "@IFTTT",
+        "impact": "订阅源自动化继续补齐新兴社交平台出口。",
+        "points": [
+          "RSS→Bluesky",
+          "自动带标题与链接",
+          "降低跨站分发成本"
+        ]
+      }
+    ]
+  }
+}
