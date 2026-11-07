@@ -1,0 +1,212 @@
+{
+  "id": "2026-11-08-0600",
+  "published_at": "2026-11-08T06:00:00+08:00",
+  "headline": "Qoder 隐身模型 Qoduck；HA 2026.11 内置 Marketplace；Cloudflare 安全审计 Skill",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "阿里系 Qoder 上线隐身模型 Qoduck，限时每日免费",
+        "summary": "阿里旗下编程 Agent 平台 Qoder 的官方号发布新的隐身模型 Qoduck，只说「来源不公开」，个人用户限时每天免费用。窗口内同时出现大量措辞相近的推广帖，模型能力还没有公开评测。",
+        "source_url": "https://x.com/qoder_ai_ide/status/2119067112501379261",
+        "time": "2026-11-07T21:59:04+08:00",
+        "handle": "@qoder_ai_ide",
+        "impact": "国内大厂又一个编程模型进入灰度测试，实际水平要等独立测评。",
+        "points": [
+          "隐身模型，来源不公开",
+          "个人用户限时每日免费",
+          "暂无公开评测"
+        ]
+      },
+      {
+        "title": "Inkling 2 Small 限时在 OpenCode 免费开放",
+        "summary": "Thinking Machines 联合创始人 Soumith Chintala 表示，Inkling 2 Small 在开源编程 Agent OpenCode 上限时免费，用来收集使用数据、改进模型。",
+        "source_url": "https://x.com/soumithchintala/status/2119086689201316272",
+        "time": "2026-11-07T23:16:52+08:00",
+        "handle": "@soumithchintala",
+        "impact": "开发者可以零成本在开源编程 Agent 里试这款新模型，OpenCode 也在变成模型厂商的测试渠道。",
+        "points": [
+          "Thinking Machines 新模型",
+          "OpenCode 内限时免费",
+          "用于收集反馈改进模型"
+        ]
+      },
+      {
+        "title": "Ethan Mollick：新模型查事实、核查说法已胜过人类专家",
+        "summary": "沃顿商学院教授 Ethan Mollick 认为，日常工作中对 AI 事实错误的担心已经过时，并附图引用数据称较新的模型在查找事实和核查说法上胜过包括博士在内的人类专家。帖文正文没有注明数据出处。",
+        "source_url": "https://x.com/emollick/status/2119140502746308674",
+        "time": "2026-11-08T02:50:42+08:00",
+        "handle": "@emollick",
+        "impact": "如果这个判断成立，企业的人工复核流程可以减少，但还要看具体任务和数据口径。",
+        "points": [
+          "观点：核查顾虑过时",
+          "附图称模型胜过博士级专家",
+          "正文未注明数据出处"
+        ],
+        "tag": "观点"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "PSI 称用 AI 证明了 Aaronson-Ambainis 猜想",
+        "summary": "Physical Superintelligence（PSI）称其研究系统证明了 2008 年提出的量子复杂度猜想 Aaronson-Ambainis，结论是量子计算机面对无规律的随机数据难以取得指数级加速。证明和 Lean 形式化已放上 GitHub，尚未经同行评审。PSI 于 11 月 6 日发布，Gorden Sun 在本期窗口内做了中文解读。",
+        "source_url": "https://x.com/Gorden_Sun/status/2119029485207162997",
+        "time": "2026-11-07T19:29:33+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "AI 参与数学证明又多一个可核查的案例，结论成立与否还要等专家审阅。",
+        "points": [
+          "2008 年的量子复杂度猜想",
+          "Lean 形式化已公开",
+          "未经同行评审"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "claude-animation-skills：给 Claude Code 装 6 个做动画的 Skill",
+        "summary": "GitHubDaily 介绍的开源项目，给 Claude Code 加上 6 个动画 Skill，一句话描述就能在本地渲染竖屏短片，并按 Instagram 安全区检查画面。例如输入路线和距离，就能生成 3D 地图路线动画和目的地卡片。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119074923297796597",
+        "time": "2026-11-07T22:30:06+08:00",
+        "handle": "@GitHub_Daily",
+        "points": [
+          "6 个动画 Skill",
+          "本地渲染竖屏短片",
+          "检查 Instagram 安全区"
+        ]
+      },
+      {
+        "title": "mg-styles-15：15 种 MG 动画风格样片，全部由代码生成",
+        "summary": "GitHubDaily 介绍的项目收录了 15 种 MG 动态设计风格，每种一支 10 秒成片，全部由 Claude Opus 5.5 写代码完成。画面不用图像或视频生成模型，只用 SVG、Canvas 和 Three.js，可以拿来给 AI 当风格参考。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119052363046797319",
+        "time": "2026-11-07T21:00:28+08:00",
+        "handle": "@GitHub_Daily",
+        "points": [
+          "15 种 MG 风格",
+          "SVG/Canvas/Three.js",
+          "可做风格参考"
+        ]
+      },
+      {
+        "title": "AIHOT 额度重置监控扩展到 Codex、Antigravity、Claude",
+        "summary": "数字生命卡兹克升级了 AIHOT 的 Codex 额度重置监控，同时新增 Google Antigravity 和 Claude 的重置监控，并照例开放匿名免费 API 供二次开发。",
+        "source_url": "https://x.com/Khazix0918/status/2119083614382219734",
+        "time": "2026-11-07T23:04:38+08:00",
+        "handle": "@Khazix0918",
+        "points": [
+          "覆盖 Codex/Antigravity/Claude",
+          "开放匿名免费 API"
+        ]
+      },
+      {
+        "title": "meng shao 解读 Google SLEEP 框架",
+        "summary": "meng shao 解读 Google Research 的 SLEEP 框架，认为它和 Anthropic 的 Dreaming 有明显区别：SLEEP 让模型在离线阶段把临时学到的信息写进长期参数，再用自生成练习强化能力，同时减少对旧知识的覆盖。Google 原文发布于 10 月 27 日。",
+        "source_url": "https://x.com/shao__meng/status/2119051833872466407",
+        "time": "2026-11-07T20:58:21+08:00",
+        "handle": "@shao__meng",
+        "points": [
+          "离线把记忆写进参数",
+          "自生成练习强化",
+          "Google 原文 10 月 27 日"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "cloudflare/security-audit-skill：让编码 Agent 做安全审计",
+        "summary": "Cloudflare 开源的安全审计 Skill，分侦察、按覆盖率排查、候选验证、结构化输出、独立复核和报告六个阶段，每个候选漏洞都交给新的 Agent 尝试推翻。它是 Cloudflare 内部漏洞挖掘 harness 的起点。今日 GitHub 约 +2,088 星，总星约 6.6 万。",
+        "source_url": "https://github.com/cloudflare/security-audit-skill",
+        "time": "2026-11-08T06:20:00+08:00",
+        "impact": "团队可以直接拿 Cloudflare 的方法让 Agent 做代码安全审计。",
+        "points": [
+          "六阶段审计流程",
+          "独立 Agent 复核候选漏洞",
+          "今日约 +2,088 星"
+        ]
+      },
+      {
+        "title": "stablyai/orca：用自己的订阅同时跑一队编码 Agent",
+        "summary": "Orca 可以用用户自己的订阅同时调度多个 Claude Code、Codex 等编码 Agent，支持桌面、手机和远程运行环境。今日 GitHub 约 +917 星。",
+        "source_url": "https://github.com/stablyai/orca",
+        "time": "2026-11-08T06:20:00+08:00",
+        "points": [
+          "多 Agent 并行",
+          "自带订阅",
+          "桌面/手机/远程"
+        ]
+      },
+      {
+        "title": "HyperFlow H3 Flash：压缩版 MiniMax-H3 音视频生成模型",
+        "summary": "Video-Rebirth 开源 HyperFlow H3 Flash，是 MiniMax-H3 的 13.7B 压缩版，4～8 步采样，提供 INT8 和 GGUF 版本，可同时生成视频和音频。据 Gorden Sun 介绍，体积最低约 9.1GB，家用大显存显卡可以跑。",
+        "source_url": "https://github.com/Video-Rebirth/hyperflow-h3-flash",
+        "time": "2026-11-07T23:12:59+08:00",
+        "points": [
+          "13.7B 压缩模型",
+          "4～8 步采样",
+          "INT8/GGUF"
+        ]
+      },
+      {
+        "title": "billion-context：编码 Agent 上下文压缩插件",
+        "summary": "billion-context 是给编码 Agent 用的上下文压缩插件，主打 100K 窗口也够用、约省 5 倍 token、单个会话可以连续用一个月，支持 Claude Code、Codex、OpenCode、Pi、Gemini CLI 等。今日 GitHub 约 +185 星。",
+        "source_url": "https://github.com/ranxianglei/billion-context",
+        "time": "2026-11-08T06:20:00+08:00",
+        "points": [
+          "约省 5 倍 token",
+          "月级长会话",
+          "多 Agent 支持"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "tech": [
+      {
+        "title": "OPPO 据报取消 Find X10 Ultra",
+        "summary": "9to5Google 援引爆料者数码闲聊站的微博称，OPPO 取消了 Find X10 Ultra。9to5Google 推测原因是内存涨价，原帖并未写明。此前的报道还只是「搁置」。",
+        "source_url": "https://9to5google.com/2026/11/07/oppo-reportedly-cancels-find-x10-ultra-thanks-to-ramageddon/",
+        "time": "2026-11-07T20:30:16+08:00",
+        "handle": "@9to5Google",
+        "impact": "内存涨价可能正在压缩安卓 Ultra 机型的产品线，还要看 OPPO 官方表态。",
+        "points": [
+          "爆料源：数码闲聊站",
+          "原因推测为内存涨价"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "iot": [
+      {
+        "title": "Home Assistant 2026.11：HACS 内置为官方 Marketplace",
+        "summary": "Home Assistant 官方推介 2026.11 版：社区商店 HACS 直接内置到设置里，改名 Marketplace，已装的集成照常更新。这一版还支持在目标中排除部分设备、重做实体命名（不向后兼容），新增 Matter 摄像头对讲、LoRaWAN、本地硬盘备份和 38 个新集成。",
+        "source_url": "https://x.com/home_assistant/status/2119151706613174368",
+        "time": "2026-11-08T03:35:13+08:00",
+        "handle": "@home_assistant",
+        "impact": "第三方集成不用再单独装 HACS，升级前要留意实体命名变化。",
+        "points": [
+          "HACS 变为内置 Marketplace",
+          "实体命名不向后兼容",
+          "38 个新集成"
+        ]
+      },
+      {
+        "title": "localthings：Home Assistant 本地控制三星家电",
+        "summary": "开源集成 localthings 让 Home Assistant 在局域网内直接控制三星家电，不需要云账号。今日 GitHub 约 +184 星。",
+        "source_url": "https://github.com/mbillow/localthings",
+        "time": "2026-11-08T06:20:00+08:00",
+        "points": [
+          "局域网控制",
+          "无需云账号"
+        ]
+      },
+      {
+        "title": "BoxPlayer：多网盘和 Jellyfin/Emby/Plex 合成一个片库",
+        "summary": "GitHubDaily 介绍 BoxPlayer，把阿里云盘、百度网盘、夸克、115、123、PikPak、OneDrive 等十几家网盘，以及本地文件和 Jellyfin、Emby、Plex 放进同一个入口，扫描后自动补海报和演员信息。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119029628249801177",
+        "time": "2026-11-07T19:30:07+08:00",
+        "handle": "@GitHub_Daily",
+        "points": [
+          "十几家网盘",
+          "兼容 Jellyfin/Emby/Plex",
+          "自动刮削"
+        ]
+      }
+    ]
+  }
+}
