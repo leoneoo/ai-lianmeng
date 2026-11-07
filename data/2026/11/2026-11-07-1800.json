@@ -1,0 +1,266 @@
+{
+  "id": "2026-11-07-1800",
+  "published_at": "2026-11-07T18:00:00+08:00",
+  "headline": "OpenCode Browse 接管真实浏览器；Together Compiler；Meta Muse Voice 美国上线",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenCode Browse：Agent 可操控真实浏览器（含登录态与扩展）",
+        "summary": "OpenCode 上线 Browse：以 MCP 服务加 Chromium 扩展，让 Agent 用 Playwright 驱动本机真实浏览器，复用已登录站点、扩展与标签。Agent 在后台折叠分组工作；遇到登录、2FA 或支付时把标签交还用户，点 Continue 后继续。支持截图、录屏与 HAR，可用白名单限站点，兼容 Claude Code、Cursor、Codex、Zed 等 MCP 客户端。",
+        "source_url": "https://opencode.ai/product/browse",
+        "time": "2026-11-07T10:35:40+08:00",
+        "handle": "@opencode",
+        "impact": "浏览器 Agent 从沙箱浏览器走向「用你的真实会话干活」，权限设计会成标配。",
+        "points": [
+          "真实浏览器 + 登录态 + 扩展",
+          "2FA/支付 handoff 给用户",
+          "MCP 多客户端可用"
+        ]
+      },
+      {
+        "title": "Together Compiler：持续为模型×硬件×流量优化内核的编译 Agent",
+        "summary": "Together AI 发布 Together Compiler，由 Agent 持续编译优化推理内核，目标把 FlashAttention、ThunderKittens 等研究能力铺到客户部署。官方自报：在已手工重度优化的 serverless 端点上，中位 TPS 再升约 12%～20%；生产客户响应与生成时间约缩短三分之一到近一半。",
+        "source_url": "https://www.together.ai/blog/together-compiler-continual-compilation-for-ai-inference",
+        "time": "2026-11-07T06:56:00+08:00",
+        "handle": "@togethercompute",
+        "impact": "推理优化从人肉 kernel 工程转向可规模化持续编译，直接影响开放模型单位成本。",
+        "points": [
+          "Agent 持续编译优化 kernel",
+          "自报中位 TPS +12%～20%",
+          "客户延迟约降 1/3～1/2"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Meta Muse Voice：美国上线实时语音通话与表情 Avatar",
+        "summary": "Muse Voice 已向美国用户开放：应用内点通话即可实时语音对话，可随时打断换话题，并配会做表情与手势的 Avatar，可选多种声音；手机、网页与 Mac 可用。Alexandr Wang 发视频回应催更。部分用户称对方看不到你的画面与屏幕。",
+        "source_url": "https://x.com/alexandr_wang/status/2118923825232621998",
+        "time": "2026-11-07T12:29:42+08:00",
+        "handle": "@alexandr_wang",
+        "impact": "在 Wonder 与 Spaces 之后补齐带形象的实时语音层，助手更像可通话常驻角色。",
+        "points": [
+          "美国实时语音 + Avatar",
+          "可打断、多声音",
+          "手机/网页/Mac"
+        ]
+      },
+      {
+        "title": "Anthropic：20.7 万科研会话估算 AI 可承担 27%～52% 研究者时间",
+        "summary": "Anthropic 用隐私保护方法分析约 20.7 万 Claude / Claude Code 科研会话。相对人数，形式科学用得更多，健康与实验物理科学更少；主要用途是数据分析与写作。若能力被广泛采用，自报可覆盖完成一项新研究所需研究者时间的 27%～52%，各领域中位约 38%。",
+        "source_url": "https://www.anthropic.com/research/how-researchers-use-claude",
+        "time": "2026-11-07T08:14:27+08:00",
+        "handle": "@emollick",
+        "impact": "给「AI 加速科研」补上可核对的使用分布与加速区间。",
+        "points": [
+          "约 20.7 万科研会话",
+          "数据与写作为主用途",
+          "中位约 38% 时间替代"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "同一开源模型换不同 harness，结果差很远",
+        "summary": "Hugging Face Thomas Wolf 转发 Harness Leaderboard：作者跑 28,849 次试验，比较 9 个 coding-agent harness 在开源模型上的表现，结论是同一模型换 harness 差距很大。",
+        "source_url": "https://x.com/Thom_Wolf/status/2118863053001531676",
+        "time": "2026-11-07T08:28:13+08:00",
+        "handle": "@Thom_Wolf",
+        "impact": "评模型若不固定 harness，榜单噪声会很大。",
+        "points": [
+          "28,849 次试验",
+          "9 个 coding harness",
+          "harness 选择决定差距"
+        ]
+      },
+      {
+        "title": "NVIDIA Auto Ontology 开源冲上 GitHub 日榜",
+        "summary": "NVIDIA 开源 Auto Ontology：在数据上建语义图推理层，面向 LLM / Agent 的确定性查询生成、更好上下文检索与可解释性。Trending daily 约 +2,015★，仓库总星约 9.5k。",
+        "source_url": "https://github.com/NVIDIA/auto-ontology",
+        "time": "2026-11-07T18:00:00+08:00",
+        "impact": "把给 Agent 的结构化知识层做成可直接 star 的工程件。",
+        "points": [
+          "语义图推理层",
+          "服务 LLM/Agent 检索",
+          "日榜约 +2,015★"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI Developers 插件 Showcase 与应用侧 API 额度",
+        "summary": "OpenAI Developers 插件新增 Showcase 页展示周末作品；符合条件的 ChatGPT Pro / Business 订户可在账单设置领取 API 额度，覆盖应用调用。",
+        "source_url": "https://x.com/OpenAIDevs/status/2118856544733532452",
+        "time": "2026-11-07T08:02:21+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "降低开发者用 ChatGPT 插件试应用的起步成本。",
+        "points": [
+          "Showcase 展示页",
+          "Pro/Business 可领额度",
+          "面向插件应用"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Capwise 开源录屏第一版基本完成",
+        "summary": "向阳乔木称 Capwise 第一版基本完成：Opus 5.5 做了美颜、双语字幕、本地/云 ASR 与口水词处理；Codex Goal 连跑约 6 小时补上降噪、音频录制、素材库、封面与片头片尾，并用 Suno 做了 8 首背景乐。",
+        "source_url": "https://x.com/vista8/status/2118868459295797281",
+        "time": "2026-11-07T08:49:42+08:00",
+        "handle": "@vista8",
+        "impact": "把演示视频后期琐事收成一条开源工具链，适合 Agent 演示录制。",
+        "points": [
+          "美颜+双语字幕+ASR",
+          "Codex Goal 连跑约 6 小时",
+          "开源录屏工具"
+        ]
+      },
+      {
+        "title": "android-airplay-server：安卓变 AirPlay 接收端",
+        "summary": "GitHubDaily 介绍开源项目，把 Android 7.0+ 设备变成 AirPlay 接收端，iPhone/iPad/Mac 可投画面与声音，支持镜像、视频、音乐与封面。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119006995898605640",
+        "time": "2026-11-07T18:00:11+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "苹果设备往安卓大屏投屏少一层专有硬件门槛。",
+        "points": [
+          "安卓变 AirPlay 接收端",
+          "镜像/视频/音乐",
+          "Android 7.0+"
+        ]
+      },
+      {
+        "title": "Quiet.md：本地笔记直接吃飞书文档格式",
+        "summary": "从飞书或网页复制过来，标题、表格、待办、分栏可原样保留；界面用 Rust 自绘不套网页壳，作者用约 100 万字文档测打字与滚动帧时间。",
+        "source_url": "https://x.com/GitHub_Daily/status/2118893730426134882",
+        "time": "2026-11-07T10:30:07+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "工作飞书文档与私人本地笔记之间的格式摩擦变小。",
+        "points": [
+          "飞书格式本地笔记",
+          "Rust 自绘界面",
+          "大文档流畅编辑"
+        ]
+      },
+      {
+        "title": "Airbnb 小模型：约 1% 推理成本贴近前沿分类",
+        "summary": "meng shao 转述 AirbnbEng：在高频实时内容审核任务上，微调小模型延迟不到 100 毫秒，高流量下推理成本约为前沿 API 的 1%；关键前提是任务明确、数据充足、调用量大。",
+        "source_url": "https://x.com/shao__meng/status/2118944612299805088",
+        "time": "2026-11-07T13:52:18+08:00",
+        "handle": "@shao__meng",
+        "impact": "提醒企业：不是小模型全面追上大模型，而是对口任务可以极便宜。",
+        "points": [
+          "延迟 <100ms",
+          "成本约前沿 API 的 1%",
+          "适合明确高频任务"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Grok Bot 中文工作流配方盘点",
+        "summary": "Cheery 整理 awesome-grokbot-playbooks、官方 For Work 四人组模板、社区模板目录与 handbook，覆盖选题流水线、邮件日历与购物通话，并提醒第三方配方外发要人工确认。",
+        "source_url": "https://x.com/cheery9998/status/2118984550651175099",
+        "time": "2026-11-07T16:31:00+08:00",
+        "handle": "@cheery9998",
+        "impact": "降低用 Grok Bot 搭自媒体与办公流水线的起步成本，同时点出权限风险。",
+        "points": [
+          "中文 playbooks 与官方模板",
+          "办公四人组指南",
+          "强调人工确认外发"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenCode v2.2.6：Shared MCP Connections",
+        "summary": "新版本可为 MCP 服务开启跨项目共享连接，同一配置少起进程、启动更快。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
+        "time": "2026-11-07T07:37:20+08:00",
+        "impact": "多仓库并行用同一 MCP 时更省资源。",
+        "points": [
+          "MCP 连接池化",
+          "跨项目共享",
+          "启动更快"
+        ]
+      },
+      {
+        "title": "Hermes Agent：应用内浏览器可继承 cookie/密码（下版）",
+        "summary": "Nous 的 Teknium 预告下一补丁中，应用内浏览器可像 agent 自带浏览器工具一样，在用户 opt-in 后继承 cookie 与密码。",
+        "source_url": "https://x.com/Teknium/status/2118961635494920244",
+        "time": "2026-11-07T14:59:56+08:00",
+        "handle": "@Teknium",
+        "impact": "Hermes 桌面 Agent 访问已登录站点更顺，也带来会话出借风险。",
+        "points": [
+          "opt-in 继承登录态",
+          "对齐 agent 浏览器工具",
+          "下个补丁"
+        ]
+      },
+      {
+        "title": "gif-factory：按风格批量做 GIF 的 Agent Skill",
+        "summary": "新开源 Skill，可按像素、人物宠物、粘土吉祥物等风格批量制作 GIF，创建后星标快速上涨。",
+        "source_url": "https://github.com/WoYun520/gif-factory",
+        "time": "2026-11-07T18:00:00+08:00",
+        "impact": "把表情与动态海报生产收成可复用 Skill。",
+        "points": [
+          "风格化 GIF Skill",
+          "面向 Agent 调用",
+          "新仓热度高"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "tech": [
+      {
+        "title": "Raycast：Dictate to AI 叠加屏幕感知",
+        "summary": "在 Screen Awareness 之后，Raycast 新增 Dictate to AI：对着当前窗口说话即可带上屏幕上下文提问，不必复制文本或贴截图。",
+        "source_url": "https://9to5mac.com/2026/11/06/raycast-combines-voice-dictation-and-screen-awareness-in-new-ai-feature/",
+        "time": "2026-11-07T06:28:14+08:00",
+        "handle": "@9to5mac",
+        "impact": "桌面 AI 交互从「先选中再问」变成「看着屏幕直接说」。",
+        "points": [
+          "语音 + 屏幕上下文",
+          "无需复制贴图",
+          "Mac 启动器 AI"
+        ]
+      },
+      {
+        "title": "Android XR 眼镜确认 12 月发售窗口",
+        "summary": "9to5Google 报道：在本周预购信息之后，另一家 Android XR 合作伙伴确认眼镜将于 12 月上市。",
+        "source_url": "https://9to5google.com/2026/11/06/android-xr-glasses-release-date-window-confirmed/",
+        "time": "2026-11-07T06:40:02+08:00",
+        "handle": "@9to5Google",
+        "impact": "消费级 XR 眼镜从预热进入可对表的发售月。",
+        "points": [
+          "12 月发售窗口",
+          "Android XR 合作伙伴",
+          "继预购信息之后"
+        ]
+      },
+      {
+        "title": "更多适配 iPhone Duo 的趣味应用",
+        "summary": "MacRumors 继续盘点适合 iPhone Duo 双屏体验的趣味应用，补充官方「逾十万适配」之外的可玩清单。",
+        "source_url": "https://x.com/MacRumors/status/2118847880236839111",
+        "time": "2026-11-07T07:27:55+08:00",
+        "handle": "@MacRumors",
+        "impact": "折叠 iPhone 的日常可玩内容继续补齐。",
+        "points": [
+          "Duo 趣味应用盘点",
+          "双屏玩法",
+          "生态跟进"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "IFTTT：Instagram 新帖自动发 Bluesky",
+        "summary": "新 Applet 在 Instagram 发图后自动在 Bluesky 发同图同文，减少双平台手动同步。",
+        "source_url": "https://x.com/IFTTT/status/2118836323364880389",
+        "time": "2026-11-07T06:42:00+08:00",
+        "handle": "@IFTTT",
+        "impact": "跨社媒发布的自动化继续补齐新兴平台。",
+        "points": [
+          "IG → Bluesky 自动同步",
+          "同图同文",
+          "无额外手工步骤"
+        ]
+      }
+    ]
+  }
+}
