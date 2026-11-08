@@ -1,0 +1,186 @@
+{
+  "id": "2026-11-08-1800",
+  "published_at": "2026-11-08T18:00:00+08:00",
+  "headline": "Claude Code「不再询问」泄露密钥；Menlo 企业 AI 报告；SmartThings 接 HA 转付费",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Apiiro：Claude Code「不再询问」把密钥写进 1,122 份公开文件",
+        "summary": "安全公司 Apiiro 11 月 5 日发布研究：在 Claude Code 里选「Yes, and don't ask again」时，它可能把整条命令原样存进项目的 .claude/settings.local.json，命令里的密码和 token 也一起写入。Apiiro 在 GitHub 上找到 104,185 份这个文件，其中 1,122 份含至少一个密钥，共 1,379 个，包括 379 个数据库密码、43 个 SSH 登录、42 个 GitHub/GitLab/npm token 和 23 个 AWS 密钥，约五分之一连 gitleaks 和 TruffleHog 都没扫出来。Claude Code 只把该文件加进本机的全局 git 排除，不写进项目 .gitignore；Apiiro 没有测试密钥是否仍有效。",
+        "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+        "time": "2026-11-08T14:51:00+08:00",
+        "impact": "用 Claude Code 的团队应先轮换这个文件里出现过的凭据，再把它加进项目 .gitignore，命令里改用环境变量引用密钥。",
+        "points": [
+          "1,122 份公开文件含密钥，共 1,379 个",
+          "约五分之一常用扫描器漏检",
+          "只在本机全局排除，不写进项目 .gitignore",
+          "建议先轮换凭据再清理"
+        ]
+      },
+      {
+        "title": "Menlo Ventures 2026 企业 AI 报告：Anthropic 企业 API 份额升到 55%",
+        "summary": "Menlo Ventures 11 月 3 日发布年度企业 AI 报告，调研约 400 位美国企业 AI 决策者，并结合 OpenRouter 的 token 数据。企业大模型 API 支出中 Anthropic 从 40% 升到 55%，OpenAI 从 27% 升到 31%，Google 从 21% 降到 9%。开源模型 token 占比从 11% 升到 19%，支出占比却从 6% 降到 4%；开源支出里中国模型占 89%，其中 Kimi 61%、DeepSeek 15%、GLM 11%、Qwen 3%，Llama 为 7%。",
+        "source_url": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
+        "time": "2026-11-08T15:49:16+08:00",
+        "impact": "企业仍愿为最强模型多付钱，开源模型用量涨得快但收入很薄，选型和定价竞争会继续向两头集中。",
+        "points": [
+          "Anthropic 55%、OpenAI 31%、Google 9%",
+          "开源 token 占比 19%，支出仅 4%",
+          "开源支出中 Kimi 占 61%"
+        ]
+      },
+      {
+        "title": "DeepSeek V4.1 Pro 疑似开始灰度",
+        "summary": "博主 MaxForAI 称，DeepSeek 服务昨天中断恢复后，用户反馈官网 V4 Pro 的表现明显变化，他在 LobeHub 的私有评测集 LobeBench Hard 50 上也测到明显提升，推测是 V4.1 Pro 在灰度。DeepSeek 官方尚未说明。",
+        "source_url": "https://x.com/MaxForAI/status/2119210965963362579",
+        "time": "2026-11-08T07:30:41+08:00",
+        "handle": "@MaxForAI",
+        "impact": "如属实，DeepSeek 的新版本可能很快正式发布，目前还要等官方说明。",
+        "points": [
+          "服务中断恢复后表现变化",
+          "私有评测集显示提升",
+          "官方未确认"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Together AI：用 Agent 调优后 Step 5 推理吞吐提升 3 倍多",
+        "summary": "Together AI 称，他们按阶跃星辰（StepFun）给出的首 token 延迟和吞吐目标优化 Step 5 的推理栈，让 Agent 在 MoE 路由、调度、内核、投机解码和稀疏注意力等方向搜索方案，每次改动都先跑基准，最终吞吐提升到原来的 3 倍以上。",
+        "source_url": "https://x.com/togethercompute/status/2119280344704725245",
+        "time": "2026-11-08T12:06:23+08:00",
+        "handle": "@togethercompute",
+        "impact": "推理优化正在交给 Agent 批量试错，开放模型的部署成本还有下降空间。",
+        "points": [
+          "Step 5 吞吐提升 3 倍以上",
+          "Agent 参与推理栈调优",
+          "每次改动先跑基准"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "姚顺雨：AI 的护城河在产品层，不在模型层",
+        "summary": "宝玉整理了清华大学张亚勤与腾讯首席 AI 科学家姚顺雨的对话。姚顺雨认为护城河主要在产品层：一是别人没有的私有数据和上下文，比如在微信里用的 AI 不必最聪明，但知道你的日程和朋友，就很难被取代；二是信任，用户是否放心让 AI 拿着这些数据去行动。",
+        "source_url": "https://x.com/dotey/status/2119264167483850884",
+        "time": "2026-11-08T11:02:00+08:00",
+        "handle": "@dotey",
+        "impact": "对做 AI 产品的团队来说，掌握用户上下文和赢得信任，可能比追最强模型更重要。",
+        "points": [
+          "护城河在产品层",
+          "私有数据和上下文",
+          "用户信任"
+        ]
+      },
+      {
+        "title": "开源会议纪要工具知了/Cicada 1.5.1 补齐四个平台",
+        "summary": "WquGuru 的开源会议纪要和同声传译软件知了/Cicada 更新到 1.5.1，首发时只支持 macOS 26+，现在四个平台都能安装。作者称首发后 GitHub 已过 1,600 星，安装包下载 2,300 多次，并收到 4 个社区 PR。",
+        "source_url": "https://x.com/wquguru/status/2119264966125711494",
+        "time": "2026-11-08T11:05:16+08:00",
+        "handle": "@wquguru",
+        "impact": "想要本地会议纪要和同传的个人和小团队，多了一个免费开源的选择。",
+        "points": [
+          "更新到 1.5.1",
+          "四个平台都能装",
+          "GitHub 1,600+ 星"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "rea-video：让 Agent 拆解和复刻视频",
+        "summary": "meng shao 推荐开源项目 rea-video，它让 Agent 逆向拆解任意视频，再按拆解结果复刻。他提到，几个月前还被当作电商视频产品卖点的「爆款复刻」，现在已经有不少免费开源实现。",
+        "source_url": "https://x.com/shao__meng/status/2119311344260583683",
+        "time": "2026-11-08T14:09:34+08:00",
+        "handle": "@shao__meng",
+        "impact": "视频复刻类商业工具的门槛在下降，做电商短视频的团队可以先试开源方案。",
+        "points": [
+          "Agent 逆向拆解视频",
+          "按结构复刻",
+          "开源免费"
+        ]
+      },
+      {
+        "title": "Mika：在安卓手机后台替你点 App 的开源助手",
+        "summary": "GitHubDaily 介绍开源项目 Mika，它装在安卓手机上，说一句要做什么，就会在一块看不见的后台虚拟屏上打开 App 点击、输入、翻页，直到把事办完。前台手机照常使用，想看进度可以点开小窗。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119278779231322391",
+        "time": "2026-11-08T12:00:09+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "手机上的 Agent 开始能真正替人操作 App，用之前要想清楚给它多大权限。",
+        "points": [
+          "安卓手机上的操作型 Agent",
+          "在后台虚拟屏操作",
+          "前台照常使用"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent 社区插件突破 1,000 个",
+        "summary": "Nous Research 的 Teknium 说，Hermes Agent 社区做的插件今天超过 1,000 个，周末黑客松又冒出一批新插件，官方已有统一页面可以浏览。",
+        "source_url": "https://x.com/Teknium/status/2119224332471894509",
+        "time": "2026-11-08T08:23:48+08:00",
+        "handle": "@Teknium",
+        "impact": "Hermes Agent 的插件生态在快速变大，用户可以直接拿现成插件扩展能力。",
+        "points": [
+          "社区插件超过 1,000 个",
+          "黑客松带来一批新插件"
+        ]
+      },
+      {
+        "title": "sand3d：约 10 万个代码生成的 3D 模型，给 AI 用的建模库",
+        "summary": "GitHubDaily 介绍开源项目 sand3d，它公开了约 10 万个用代码搭出来的 3D 模型，并做成基于 Blender 的 Python 建模库。零件、边、面都按名字引用，不用手算坐标，涵盖日常物品、机械零件和可开合转动的结构。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119301402648608858",
+        "time": "2026-11-08T13:30:03+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "让大模型写代码做 3D 建模更容易，适合做产品原型和教学。",
+        "points": [
+          "约 10 万个 3D 模型",
+          "按名字引用零件",
+          "基于 Blender"
+        ]
+      },
+      {
+        "title": "Reason Network：让同事电脑上的编程 Agent 互相发消息",
+        "summary": "GitHubDaily 介绍 Reason Network，它让团队里每台电脑上的编程 Agent 直接互相发消息，支持 Claude Code、Codex、Gemini CLI 等。装好后能看到每位同事开着哪些 Agent、在哪个仓库和分支、忙还是闲，可以让自己的 Agent 直接去问。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119331590614692066",
+        "time": "2026-11-08T15:30:01+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "多人团队的 Agent 协作有了现成工具，但共享仓库和分支信息前要先确认权限范围。",
+        "points": [
+          "跨电脑的 Agent 互通",
+          "显示同事 Agent 状态",
+          "支持多种编程 Agent"
+        ]
+      },
+      {
+        "title": "Kubai Icons：生成风格统一动态图标的 Claude Skill",
+        "summary": "GitHubDaily 介绍 Claude Skill「Kubai Icons」，给它一份功能清单或产品代码，就能画出一整套风格统一、悬停效果一致的动态图标，解决图标东拼西凑、风格不一的问题。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119256111631204598",
+        "time": "2026-11-08T10:30:05+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "小团队做产品界面时，可以用一个 Skill 统一图标风格。",
+        "points": [
+          "输入功能清单或代码",
+          "生成统一风格动态图标"
+        ]
+      }
+    ],
+    "tech": [],
+    "iot": [
+      {
+        "title": "SmartThings 接 Home Assistant 将要付费，12 月 15 日旧集成停用",
+        "summary": "SmartThings 官方社区公告：Home Assistant 12 月 2 日的版本会换上新集成，之后不能再添加旧集成。新集成需要付费的 SmartThings API Developer Plan，每月 4.99 美元，含每月 10 万次调用；12 月 15 日后旧集成停止工作，这个日期也适用于 Developer Plan 尚未开放的国家。设备和自动化会保留，只需在 12 月 2 日到 15 日之间重新配置。",
+        "source_url": "https://community.smartthings.com/t/changes-to-the-smartthings-integration-for-home-assistant-what-s-happening-and-what-you-need-to-do/311942",
+        "time": "2026-11-08T18:00:02+08:00",
+        "impact": "用三星设备接 Home Assistant 的家庭要在 12 月中前决定付费，或改用本地方案。",
+        "points": [
+          "12 月 2 日换新集成",
+          "Developer Plan 每月 4.99 美元",
+          "12 月 15 日旧集成停用",
+          "部分国家暂未开放"
+        ]
+      }
+    ]
+  }
+}

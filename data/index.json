@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-08T06:20:40+08:00",
+  "updated_at": "2026-11-08T18:25:14+08:00",
   "editions": [
+    {
+      "id": "2026-11-08-1800",
+      "published_at": "2026-11-08T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-08-1800.json",
+      "counts": {
+        "x_daily": 4,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 4,
+        "tech": 0,
+        "iot": 1
+      },
+      "headline": "Claude Code「不再询问」泄露密钥；Menlo 企业 AI 报告；SmartThings 接 HA 转付费"
+    },
     {
       "id": "2026-11-08-0600",
       "published_at": "2026-11-08T06:00:00+08:00",
