@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-08T18:25:14+08:00",
+  "updated_at": "2026-11-09T06:20:26+08:00",
   "editions": [
+    {
+      "id": "2026-11-09-0600",
+      "published_at": "2026-11-09T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-09-0600.json",
+      "counts": {
+        "x_daily": 4,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 5,
+        "tech": 2,
+        "iot": 1
+      },
+      "headline": "DeepSeek Harness 日活 154 万、将建插件市场；OpenAI 预告今天发布"
+    },
     {
       "id": "2026-11-08-1800",
       "published_at": "2026-11-08T18:00:00+08:00",

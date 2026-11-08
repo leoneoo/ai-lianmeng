@@ -1,0 +1,224 @@
+{
+  "id": "2026-11-09-0600",
+  "published_at": "2026-11-09T06:00:00+08:00",
+  "headline": "DeepSeek Harness 日活 154 万、将建插件市场；OpenAI 预告今天发布",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "DeepSeek Harness 日活 154 万，插件约 3.5 万个，将建官方插件市场",
+        "summary": "DeepSeek Harness 官方发文披露，截至 11 月 4 日（含官方 API 用户）日活约 154 万，每天消耗约 92 万亿 token；第三方插件约 3.5 万个，约六成活跃用户做过或装过至少一个插件。官方接下来会加强插件 API 的稳定性、兼容性和安全，建官方插件市场，并准备给插件作者 token 补贴、技术交流和推广的扶持计划，细则未定。DeepSeek 的 Tianyi Cui 解释，官方会内置大多数人需要的通用功能，但在「一切皆插件」的设计下内置功能也能被第三方插件替换，目标是做「Agent 时代的操作系统」。",
+        "source_url": "https://x.com/DeepSeekHarness/status/2119431663642153128",
+        "time": "2026-11-08T22:07:40+08:00",
+        "handle": "@DeepSeekHarness",
+        "impact": "国产 Agent 工具的竞争开始从模型能力转向插件生态和分发入口，插件作者有了更明确的曝光渠道，用户装插件前也要更留意权限和来源。",
+        "points": [
+          "日活约 154 万，日耗约 92 万亿 token",
+          "第三方插件约 3.5 万个，六成活跃用户在用",
+          "将建官方插件市场和作者扶持计划",
+          "内置功能也可被插件替换"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Google DeepMind Pushmeet Kohli：未来几周会发布科学发现方面的成果",
+        "summary": "Google DeepMind 负责科学方向的 Pushmeet Kohli 说，DeepMind 各项目正在经历科学发现速度的「相变」，未来几周的发布会让外界看到一部分。帖子没有透露具体领域，发出后约 6,900 赞。",
+        "source_url": "https://x.com/pushmeet/status/2119373171321196892",
+        "time": "2026-11-08T18:15:14+08:00",
+        "handle": "@pushmeet",
+        "impact": "DeepMind 近期可能密集发布 AI 做科研的新成果，值得留意其官方账号和博客。",
+        "points": [
+          "DeepMind 称科学发现速度出现「相变」",
+          "未来几周有相关发布",
+          "具体领域未透露"
+        ]
+      },
+      {
+        "title": "OpenAI Developers 预告「明天」有发布，用户称已灰度到 GPT-6.2 Sol",
+        "summary": "OpenAI Developers 发了一段只写着「Tomorrow.」的视频预告，没有说明内容。同一晚，博主数字生命卡兹克称自己被灰度路由到「GPT-6.2 Sol」，前端审美和防御性问题的处理明显变好，20 个并发前端测试跑 10 分钟只用掉 200 美元 Pro 套餐约 1% 的额度；宝玉也猜测是 GPT-6.2。型号名称和发布内容 OpenAI 都还没有确认。",
+        "source_url": "https://x.com/OpenAIDevs/status/2119521359185478140",
+        "time": "2026-11-09T04:04:05+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "如果是新模型，编程和前端生成可能迎来一轮更新，正式内容以 OpenAI 的公告为准。",
+        "points": [
+          "官方只发了「Tomorrow.」预告",
+          "用户称灰度到 GPT-6.2 Sol",
+          "型号与内容均未确认"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "22 美元、60 步强化学习：Inkling 2 Small 在安全任务上超过 GLM-5.3-Flash",
+        "summary": "安全研究者 Matt Suiche 在博客里记录，他用 Thinking Machines 的后训练服务 Tinker 对 Inkling 2 Small 做了 60 步 GRPO 强化学习，训练集是 523 个可自动校验的安全任务。他自建的漏洞利用测试集上，pass@1 从 0.667 升到 0.708，超过 GLM-5.3-Flash，总花费约 22 美元。头雁转发时说，这对个人和小团队学习后训练是很低成本的方案。",
+        "source_url": "https://www.msuiche.com/posts/rlvr-on-inkling-2-small-beating-glm-5.3-flash-in-60-steps-for-22/",
+        "time": "2026-11-08T22:01:19+08:00",
+        "impact": "小模型针对具体任务做强化学习的成本已经很低，小团队也能自己做后训练实验。",
+        "points": [
+          "60 步 GRPO，约 22 美元",
+          "pass@1 从 0.667 到 0.708",
+          "训练集为 523 个可校验安全任务"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Pake V3.18：一条命令把网页打包成桌面应用",
+        "summary": "Tw93 的开源工具 Pake 更新到 3.18，它能用一条命令把任意网页打包成轻量桌面应用，目前约 6.29 万星。新版有了独立文档站和入门教程，拖文件到页面上传更稳定，下载的文件保留原名，不再出现 %20 这样的编码，Windows 下载也有改进。",
+        "source_url": "https://x.com/HiTw93/status/2119430741024972807",
+        "time": "2026-11-08T22:04:00+08:00",
+        "handle": "@HiTw93",
+        "impact": "想把常用网页变成独立桌面应用的人，多了一个更稳的开源选择。",
+        "points": [
+          "更新到 3.18，约 6.29 万星",
+          "新增独立文档站和教程",
+          "拖拽上传与下载文件名修复"
+        ]
+      },
+      {
+        "title": "sweety-handdraw-video：一个 Skill 做出「边画边讲」的科普视频",
+        "summary": "GitHubDaily 介绍了 sweety-handdraw-video 这个 Skill。给它一个主题、一篇文章或一段完整故事，它就把画画、配音和卡时间轴都包下来，生成手绘讲解的有声视频，原本要折腾好几天的活交给 Agent 完成。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119437327663784409",
+        "time": "2026-11-08T22:30:00+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "做科普和教学视频的门槛进一步降低，内容创作者可以直接试用。",
+        "points": [
+          "输入主题、文章或故事",
+          "自动画画、配音、对时间轴",
+          "生成手绘讲解视频"
+        ]
+      },
+      {
+        "title": "MatAnyone-E：普通显卡也能跑的超高清视频抠像",
+        "summary": "Gorden Sun 介绍了 MatAnyone-E。常规 AI 给超高清视频抠像要逐帧比对前后画面细节，计算量大到普通显卡跑不动；MatAnyone-E 主打高效处理这类超高清视频的抠像。",
+        "source_url": "https://x.com/Gorden_Sun/status/2119390142960193998",
+        "time": "2026-11-08T19:22:00+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "视频后期抠像有望在普通电脑上完成，减少对高端显卡的依赖。",
+        "points": [
+          "面向超高清视频抠像",
+          "降低逐帧比对的计算量"
+        ]
+      },
+      {
+        "title": "用 AI 写代码更快了，安全坑也更多",
+        "summary": "Cheery 提醒，用 Claude Code、Codex 写的代码能跑不等于安全，API Key 泄露、权限开太大、接口鉴权没做好都很常见。她还提到 GCSA 与香港大学合办了 AI 与网络安全研究中心，重点研究大模型安全和 AI 自动化防御，计划推出安全评测基准和开源工具。",
+        "source_url": "https://x.com/cheery9998/status/2119455300910752222",
+        "time": "2026-11-08T23:41:00+08:00",
+        "handle": "@cheery9998",
+        "impact": "用编程 Agent 的人要把密钥管理、权限和鉴权检查当成固定步骤。",
+        "points": [
+          "AI 写的代码常见密钥泄露和权限过大",
+          "GCSA 与港大合办 AI 安全研究中心",
+          "计划推出评测基准和开源工具"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent：官方 Security 插件，帮你审代码里的安全漏洞",
+        "summary": "Nous Research 发布由 mark_s 根据自己安全审计经验做的 Hermes Agent 官方插件。它先梳理攻击者能碰到哪些入口、代码信任哪些输入，再把代码分给多个并行子 Agent 检查，每个疑似问题都回到代码里逐一核对。",
+        "source_url": "https://x.com/NousResearch/status/2119501958981857543",
+        "time": "2026-11-09T02:47:00+08:00",
+        "handle": "@NousResearch",
+        "impact": "Hermes Agent 用户可以直接用它给代码做一轮安全体检，结果仍需人工确认。",
+        "points": [
+          "官方安全审查插件",
+          "先梳理攻击面和信任输入",
+          "并行子 Agent 检查并逐条核对"
+        ]
+      },
+      {
+        "title": "OpenClaw 2026.11.2：把密钥和对话挡在诊断日志外",
+        "summary": "OpenClaw 2026.11.2 的重点是隐私与信任边界：配置密钥、对话内容、工具报错和渠道数据不再写进诊断日志，同时收紧模型提供方和页面跳转的信任边界，并在 CLI 会话结束后释放 MCP 授权。这一版还修了定时投递时账号身份的保持和网关卡顿问题。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.2",
+        "time": "2026-11-09T03:31:04+08:00",
+        "impact": "自托管 OpenClaw 的用户建议升级，降低日志泄露密钥和对话的风险。",
+        "points": [
+          "密钥和对话不再进诊断日志",
+          "收紧提供方与跳转信任边界",
+          "会话结束后释放 MCP 授权"
+        ]
+      },
+      {
+        "title": "OpenMausBot：带虚拟机的开源 Grok Bot 替代品",
+        "summary": "OpenMausBot 今天登上 GitHub Trending，单日约 1,437 星，总星数约 1.8 万。项目定位是开源的 Grok Bot 替代品，给 Bot 配一台可以操作的虚拟机。",
+        "source_url": "https://github.com/milind-soni/OpenMausBot",
+        "time": "2026-11-09T06:15:00+08:00",
+        "impact": "「Agent 配一台自己的电脑」的形态正在被开源社区复刻。",
+        "points": [
+          "GitHub Trending 单日约 1,437 星",
+          "给 Bot 配可操作的虚拟机"
+        ]
+      },
+      {
+        "title": "meta/astryx：Meta 开源、给 Agent 用的设计系统",
+        "summary": "Meta 的开源设计系统 astryx 今天登上 GitHub Trending，单日约 863 星，总星数约 1.6 万。它可以完全自定义，官方称为 Agent 准备好（agent ready），方便 Agent 直接按设计规范生成界面。",
+        "source_url": "https://github.com/meta/astryx",
+        "time": "2026-11-09T06:15:00+08:00",
+        "impact": "设计系统开始按 Agent 的使用方式来设计，前端生成的一致性有望提高。",
+        "points": [
+          "单日约 863 星，总约 1.6 万",
+          "可完全自定义",
+          "面向 Agent 生成界面"
+        ]
+      },
+      {
+        "title": "vercel-labs/agent-browser：给 AI Agent 用的浏览器自动化命令行",
+        "summary": "Vercel Labs 的 agent-browser 今天登上 GitHub Trending，单日约 812 星，总星数约 4.75 万。它是一个让 AI Agent 通过命令行操控浏览器的工具。",
+        "source_url": "https://github.com/vercel-labs/agent-browser",
+        "time": "2026-11-09T06:15:00+08:00",
+        "impact": "浏览器操作正在成为 Agent 的标准能力，这类命令行工具让接入更简单。",
+        "points": [
+          "单日约 812 星，总约 4.75 万",
+          "命令行方式操控浏览器"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果据报明年让 Siri「更像 Agent」，并调整 iOS 28 开发方式",
+        "summary": "彭博 Mark Gurman 称，苹果 CEO John Ternus 近几周与软件主管 Craig Federighi 闭门会谈，要求加快 AI 路线；苹果计划最早明年让 Siri 主动管理任务、替用户办事，并承认在电脑操控（Computer Use）上落后于 OpenAI 和 Anthropic。iOS 28、iPadOS 28 和 macOS 28 会给工程师更多时间先探索再锁定功能；帮助挽救 Siri 的 Mike Rockwell 仍在考虑明年离任。",
+        "source_url": "https://x.com/markgurman/status/2119451386111005129",
+        "time": "2026-11-08T23:26:00+08:00",
+        "handle": "@markgurman",
+        "impact": "苹果设备上的 AI 助手可能在一年内从「回答」转向「代办」，以官方发布为准。",
+        "points": [
+          "Siri 最早明年转向 Agent",
+          "苹果在 Computer Use 上仍有差距",
+          "iOS 28 开发方式调整",
+          "Siri 负责人或明年离任"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "macOS 27.3 可能改变 AI Agent 获取「完全磁盘访问」的方式",
+        "summary": "苹果上月表示会在后续 macOS 更新中收紧隐私控制，起因是有 AI Agent 申请完全磁盘访问后，在用户不完全知情的情况下处理数据。9to5Mac 介绍了 macOS 27.3 里可能出现的新授权方式。",
+        "source_url": "https://9to5mac.com/2026/11/08/macos-changes-for-full-disk-access-ai-agents-imessage/",
+        "time": "2026-11-09T03:52:00+08:00",
+        "handle": "@9to5mac",
+        "impact": "在 Mac 上用 AI Agent 的人，授权完全磁盘访问时会多一道确认，现在也应只给必要权限。",
+        "points": [
+          "苹果将收紧 Agent 的完全磁盘访问",
+          "起因是 Agent 越权处理数据",
+          "27.3 可能出现新授权方式"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "用 Home Assistant 把小米门铃云端视频永久存到群晖 NAS",
+        "summary": "ironfeet 写了一篇博客：用 Home Assistant 加 Xiaomi Miot Auto 集成，把小米智能门铃 3S 的云端视频自动下载、解密并存进群晖 NAS，文中记录了踩过的四个坑。",
+        "source_url": "https://x.com/ironfeet/status/2119435730539737140",
+        "time": "2026-11-08T22:23:00+08:00",
+        "handle": "@ironfeet",
+        "impact": "米家设备用户可以把云端录像留在自己家里的 NAS，减少对云存储的依赖。",
+        "points": [
+          "小米门铃云视频自动下载到 NAS",
+          "基于 Home Assistant 和 Xiaomi Miot Auto",
+          "记录四个踩坑点"
+        ]
+      }
+    ]
+  }
+}
