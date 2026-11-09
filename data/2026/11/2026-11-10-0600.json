@@ -1,0 +1,321 @@
+{
+  "id": "2026-11-10-0600",
+  "published_at": "2026-11-10T06:00:00+08:00",
+  "headline": "Anthropic 发布 Claude Fable 5.2 和 Mythos 5.2；Meta 推出小模型 Muse Ember",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 发布 Claude Fable 5.2 和 Mythos 5.2：更快、降价两成",
+        "summary": "Anthropic 11 月 9 日发布最高一档的 Claude Fable 5.2 和 Claude Mythos 5.2，两者是同一个底层模型：Fable 加了网络安全和生物方面的防护，向所有用户开放；Mythos 只给通过网络安全或生命科学验证计划的机构。官方称输出比 5.1 最多快 30%，价格为每百万 token 输入 8 美元、输出 40 美元（CNBC 称比 5.1 便宜 20%），上下文 1M、最长输出 128K，另有最高提速 2.5 倍、价格翻倍的快速模式。官方说预发布测试中它从零设计了 3 个能用的电子设备、解决两个黑洞物理开放问题、用 30 小时形式化了费马大定理的证明。第三方当天给出数据：Cursor 称 max 档 CursorBench 60% 排第一，默认档 56.9%（5.1 为 49.2%）；Zapier AutomationBench 51.4%（5.1 为 22.4%）。",
+        "source_url": "https://x.com/claudeai/status/2119867114450268322",
+        "time": "2026-11-10T02:57:59+08:00",
+        "handle": "@claudeai",
+        "impact": "顶级模型降价又提速，长时间运行的编程和研究 Agent 成本会明显下降，常用工具今天就能切换。",
+        "points": [
+          "输出最多快 30%，$8/$40 每百万 token",
+          "Fable 全量开放，Mythos 需验证",
+          "Cursor、Perplexity、Zapier、Claude Code 当天接入",
+          "CNBC 称 IPO 最快下周，公司未确认"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Meta 发布最小模型 Muse Ember，专做 Agent 的重复杂活",
+        "summary": "Muse Ember 是 Meta 迄今最小、最省钱的模型，1M 上下文，原生理解文字、图片、音频和视频，能跨应用跑流程、按顺序调用工具、跑测试和做针对性的代码修复。Alexandr Wang 称价格为每百万 token 输入 0.10 美元、输出 0.50 美元，据 Artificial Analysis 测算智能接近 Muse Spark 1.3（max）而便宜 17 倍；它也是第一个用 Muse Wonder Full 训练的模型。当天已上 OpenRouter、OpenCode、Cline、Cloudflare AI Gateway 和 Google Cloud。",
+        "source_url": "https://x.com/AIatMeta/status/2119853591703998787",
+        "time": "2026-11-10T02:04:15+08:00",
+        "handle": "@AIatMeta",
+        "impact": "多 Agent 系统的子任务可以交给这类便宜快速的小模型，整体成本还会往下走。",
+        "points": [
+          "1M 上下文，原生多模态",
+          "$0.10/$0.50 每百万 token",
+          "接近 Muse Spark 1.3（max），便宜 17 倍（据 AA）",
+          "多家工具和云平台当天接入"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 公开 Control Room：35 秒内叫停研究中的模型任务",
+        "summary": "OpenAI 介绍了内部系统 Control Room，它把研究基础设施上的所有推理任务集中接起来，包括训练和评测用的 Agent 采样、数据处理等。它和错位（Misalignment）监控系统配合，一旦决定干预，35 秒内就能停止或暂停任务的模型输出。这是 OpenAI 首次公开这类「紧急刹车」的工程细节。",
+        "source_url": "https://x.com/OpenAI/status/2119913172039868579",
+        "time": "2026-11-10T06:01:00+08:00",
+        "handle": "@OpenAI",
+        "impact": "模型越强，训练和评测环节能否随时叫停会成为安全治理的硬指标，其他实验室可能跟进。",
+        "points": [
+          "集中追踪全部研究推理负载",
+          "与错位监控系统联动",
+          "决定干预后 35 秒内停止输出"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI dot 可同时连接多台本地电脑",
+        "summary": "OpenAI 的云端常驻助理 dot 现在可以连上用户的多台电脑，每个任务由用户指定用哪一台。比如让它在一台专用机器上编译和测试应用，你继续在笔记本上写代码。",
+        "source_url": "https://x.com/OpenAIDevs/status/2119883176726409645",
+        "time": "2026-11-10T04:01:49+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "个人 Agent 开始管理多台机器，闲置电脑可以变成它的工作机。",
+        "points": [
+          "一个 dot 连多台本地电脑",
+          "按任务指定机器"
+        ]
+      },
+      {
+        "title": "Google AI Studio 一键接入 Google 地图平台",
+        "summary": "Google AI Studio 现在可以一键配置 Google Maps Platform。用户用自然语言描述想法，Gemini 就能生成地图应用，可用地图瓦片、地点、天气、路线和 3D 数据。",
+        "source_url": "https://x.com/GoogleAIStudio/status/2119837788937896234",
+        "time": "2026-11-10T01:01:28+08:00",
+        "handle": "@GoogleAIStudio",
+        "impact": "做本地生活和出行类原型的门槛进一步降低。",
+        "points": [
+          "一键配置地图平台",
+          "描述想法即生成地图应用",
+          "含地点、天气、路线和 3D"
+        ]
+      },
+      {
+        "title": "Runway 推出 Sightline：一致的 360 度场景取景",
+        "summary": "Runway 新功能 Sightline 先为任意地点生成 360 度全景，再从任意角度取景，镜头之间环境保持一致。全景还能导出成 3D 场景使用。",
+        "source_url": "https://x.com/runwayml/status/2119874555581694370",
+        "time": "2026-11-10T03:27:34+08:00",
+        "handle": "@runwayml",
+        "impact": "视频创作者做多机位镜头时更容易保持场景连贯。",
+        "points": [
+          "生成 360 度全景",
+          "多镜头环境一致",
+          "可导出 3D 场景"
+        ]
+      },
+      {
+        "title": "Hark 上线 iMessage 和 RCS",
+        "summary": "Brett Adcock 宣布 Hark 上线 iMessage 和 RCS，用户可以直接在短信里让它订行程、买东西、省钱，原有的安全登录和支付功能保留。",
+        "source_url": "https://x.com/adcock_brett/status/2119823574773141622",
+        "time": "2026-11-10T00:04:59+08:00",
+        "handle": "@adcock_brett",
+        "impact": "AI 助手正从独立 App 走进用户每天用的短信入口。",
+        "points": [
+          "支持 iMessage 和 RCS",
+          "可订行程和购物"
+        ]
+      },
+      {
+        "title": "Scale AI 与 Oracle 发布主权 AI 生产参考方案",
+        "summary": "Scale AI 和 Oracle 联合发布主权 AI 生产部署参考方案，给政府团队一条在 OCI 专属区域里从试点走到上线的验证路径，数据和模型都留在自己控制之下。",
+        "source_url": "https://x.com/scale_AI/status/2119852739580801281",
+        "time": "2026-11-10T02:00:52+08:00",
+        "handle": "@scale_AI",
+        "impact": "主权 AI 正从口号变成可照着部署的方案。",
+        "points": [
+          "面向政府团队",
+          "基于 OCI 专属区域",
+          "数据和模型自控"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "字节 Seedream 5.5：同一张图连改 100 轮不走样",
+        "summary": "宝玉介绍，字节 Seed 团队 11 月 9 日发布图像模型 Seedream 5.5，重点解决多轮改图时其他部分跟着变的问题，还能直接生成透明底素材，即梦和豆包会陆续上线。小互实测也称最多可连续编辑 100 多轮不损失画质。",
+        "source_url": "https://x.com/dotey/status/2119823986603299193",
+        "time": "2026-11-10T00:06:37+08:00",
+        "handle": "@dotey",
+        "impact": "用 AI 反复改图的设计和电商场景会省不少返工。",
+        "points": [
+          "多轮编辑保持一致",
+          "可出透明底素材",
+          "即梦、豆包陆续上线"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "换新模型时顺手清理提示词的一句话",
+        "summary": "宝玉建议，每次换用新模型都是精简提示词的好时机，可以让它通读整个项目：「找出所有损坏、不一致、低效或不再需要的东西，修复你确信的部分，其余列出来供我审查。」前提是以后一直用新模型。",
+        "source_url": "https://x.com/dotey/status/2119894229581508868",
+        "time": "2026-11-10T04:45:44+08:00",
+        "handle": "@dotey",
+        "impact": "升级到 Fable 5.2 等新模型时，可以顺手给项目和提示词做一次体检。",
+        "points": [
+          "提示词可直接复用",
+          "修确定的，其余留给人审"
+        ]
+      },
+      {
+        "title": "Mirage：22MB 的手机端视觉模型",
+        "summary": "Gorden Sun 介绍了 Mirage，一个 5130 万参数的多功能视觉模型，用专门的 2 比特量化压到约 22MB。作者称在三星 S26 的 NPU 上完成一次全流程分析只要约 74 毫秒。",
+        "source_url": "https://x.com/Gorden_Sun/status/2119810857920307387",
+        "time": "2026-11-09T23:14:27+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "手机本地跑视觉 AI 的体积和延迟门槛继续下降。",
+        "points": [
+          "5130 万参数，约 22MB",
+          "S26 NPU 上约 74 毫秒"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Rewind for X：在本地回看刷过的推文",
+        "summary": "yetone 做了开源浏览器插件 Rewind for X，会默默记下你在 X 首页刷过的每条推文，可以随时打开侧栏回看和搜索。数据只存在自己电脑上，不上传。",
+        "source_url": "https://x.com/yetone/status/2119752096421687336",
+        "time": "2026-11-09T19:20:57+08:00",
+        "handle": "@yetone",
+        "impact": "首页刷新后找不回好帖的问题有了本地、不上传的解决办法。",
+        "points": [
+          "记录首页刷过的推文",
+          "侧栏回看和搜索",
+          "数据只存本地"
+        ]
+      },
+      {
+        "title": "Capwise 开源录屏软件内测",
+        "summary": "向阳乔木发布开源录屏软件 Capwise 内测版：录完自动生成双语字幕，鼠标点击时自动放大并显示快捷键，支持摄像头美颜和背景美化；还提供命令行，第三方 Agent 可以调用它自动录屏。",
+        "source_url": "https://x.com/vista8/status/2119744512448987155",
+        "time": "2026-11-09T18:50:49+08:00",
+        "handle": "@vista8",
+        "impact": "做教程和产品演示的人可以让 Agent 直接录屏出片。",
+        "points": [
+          "自动双语字幕",
+          "点击自动放大",
+          "命令行供 Agent 调用"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "Claude Code v2.1.321：接入 Fable 5.2，修了几处安全问题",
+        "summary": "Claude Code 新版新增 claude-fable-5-2 并设为默认 Fable 模型。同时修复了几处安全问题：MCP OAuth 在服务器重定向时会把 refresh token 等密钥发到别的主机；只读 Bash 命令可能不提示就在沙盒外运行；cp 或 mv 进目录时拒绝规则不生效。用 Claude Code 连 MCP 的用户建议尽快升级。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+        "time": "2026-11-10T03:22:30+08:00",
+        "impact": "涉及密钥泄露和沙盒绕过，连 MCP 的用户应尽快升级。",
+        "points": [
+          "默认 Fable 模型换成 5.2",
+          "修复 MCP OAuth 重定向泄露密钥",
+          "修复沙盒和权限检查绕过"
+        ]
+      },
+      {
+        "title": "goose v1.58.0：能看清上下文窗口用到哪了",
+        "summary": "开源 Agent goose 发布 v1.58.0，新增上下文窗口报告和查看器、可选的上下文相关性筛选，并加入 AIHubMix、RouterPlex、Lemonade 三个模型提供方；桌面版默认折叠思考过程。",
+        "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.58.0",
+        "time": "2026-11-10T03:07:20+08:00",
+        "impact": "长会话里更容易发现上下文被什么占满，及时清理。",
+        "points": [
+          "上下文窗口报告和查看器",
+          "新增三个模型提供方"
+        ]
+      },
+      {
+        "title": "Hermes Cloud Agent 可在浏览器里直接用",
+        "summary": "Nous Research 托管的 Hermes 个人 Agent 现在能在浏览器标签页打开，界面和 Hermes Desktop 一样。在 Nous Portal 选好名字和模型即可，它 24 小时在独立容器里运行定时任务、在各渠道回复；Plus、Super、Ultra 套餐各含一个云端 Agent。",
+        "source_url": "https://x.com/NousResearch/status/2119851439904510217",
+        "time": "2026-11-10T01:55:42+08:00",
+        "handle": "@NousResearch",
+        "impact": "不想自己维护服务器的用户也能用上常驻的 Hermes Agent。",
+        "points": [
+          "浏览器界面同桌面版",
+          "托管容器 24 小时运行",
+          "付费套餐各含一个"
+        ]
+      },
+      {
+        "title": "anthropics/skills 登上 GitHub Trending",
+        "summary": "Anthropic 官方的 Agent Skills 仓库 anthropics/skills 今日新增约 1,052 星，收录可以直接装进 Claude 的技能范例。Fable 5.2 发布当天，Anthropic 的 claude-quickstarts 仓库也同时上榜。",
+        "source_url": "https://github.com/anthropics/skills",
+        "time": "2026-11-10T06:20:00+08:00",
+        "impact": "想给 Claude 写自定义技能的人可以直接参考官方写法。",
+        "points": [
+          "今日约 1,052 星",
+          "官方技能范例合集"
+        ]
+      },
+      {
+        "title": "VoiceStudio：本地运行的开源 ElevenLabs 替代",
+        "summary": "VoiceStudio 今日在 GitHub 新增约 1,247 星，定位是完全本地运行的开源 ElevenLabs 替代品，支持声音克隆、声音设计、视频配音、听写和转写。",
+        "source_url": "https://github.com/debpalash/VoiceStudio",
+        "time": "2026-11-10T06:20:00+08:00",
+        "impact": "对隐私敏感的语音需求可以不再上传到云端服务。",
+        "points": [
+          "今日约 1,247 星",
+          "声音克隆、配音、转写",
+          "完全本地运行"
+        ]
+      },
+      {
+        "title": "LongCat 2.5 在 OpenCode 免费两周",
+        "summary": "OpenCode 宣布 LongCat 2.5 在平台上免费使用两周，模型支持 1M 上下文和多模态，OpenCode 称不保留数据。",
+        "source_url": "https://x.com/opencode/status/2119789096503746751",
+        "time": "2026-11-09T21:47:59+08:00",
+        "handle": "@opencode",
+        "impact": "想试国产长上下文模型做编程的人有了免费窗口。",
+        "points": [
+          "免费两周",
+          "1M 上下文、多模态",
+          "称零数据留存"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "iOS 27.2.1、macOS 27.2.1 安全更新",
+        "summary": "苹果推送 iOS 27.2.1，修复信息（Messages）、AirPlay 等多处安全问题；macOS 27.2.1 修复了命令行工具中与 eMudhra 证书有关的漏洞。建议尽快更新。",
+        "source_url": "https://x.com/9to5mac/status/2119887755853344907",
+        "time": "2026-11-10T04:20:01+08:00",
+        "handle": "@9to5mac",
+        "impact": "涉及安全修复，iPhone 和 Mac 用户应尽快升级。",
+        "points": [
+          "iOS 修复信息、AirPlay 等问题",
+          "macOS 修复 eMudhra 证书漏洞"
+        ]
+      },
+      {
+        "title": "Fitbit Sense、Versa 本月停用第三方表盘",
+        "summary": "9to5Google 报道，Fitbit Sense 和 Versa 系列本月起不再支持安装第三方表盘，已经下载的表盘可以继续使用。",
+        "source_url": "https://x.com/9to5Google/status/2119903196395057562",
+        "time": "2026-11-10T05:21:22+08:00",
+        "handle": "@9to5Google",
+        "impact": "老款 Fitbit 手表的生态在继续收缩。",
+        "points": [
+          "本月起不能装新第三方表盘",
+          "已下载的仍可用"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Tailscale OAuth 应用正式可用：Agent 能连 tailnet 里的私有 MCP",
+        "summary": "Tailscale 宣布 OAuth apps 正式发布。AI 助手可以借它连接 tailnet 内的私有 MCP 服务器，服务不用暴露到公网；开发者也能用它做安全的 Agent 集成。",
+        "source_url": "https://x.com/Tailscale/status/2119892081581682974",
+        "time": "2026-11-10T04:37:12+08:00",
+        "handle": "@Tailscale",
+        "impact": "家里 NAS、内网服务接 AI 助手时，可以少开公网端口。",
+        "points": [
+          "OAuth apps 正式发布",
+          "私有 MCP 不必暴露公网"
+        ]
+      },
+      {
+        "title": "ha-mcp：用 AI 助手配置 Home Assistant",
+        "summary": "homeassistant-ai/ha-mcp 登上 GitHub Trending，它是一个 MCP 服务器，让 Claude、ChatGPT 等 AI 助手直接配置 Home Assistant、编写自动化。",
+        "source_url": "https://github.com/homeassistant-ai/ha-mcp",
+        "time": "2026-11-10T06:20:00+08:00",
+        "impact": "智能家居自动化可以用对话来配置，但要注意给 AI 的权限范围。",
+        "points": [
+          "MCP 接入 Home Assistant",
+          "AI 直接写自动化"
+        ]
+      },
+      {
+        "title": "Hunter 吊扇取消 Google Home、Alexa 控制",
+        "summary": "9to5Google 报道，Hunter 将停止旗下智能吊扇对 Google Home 和 Alexa 的支持。",
+        "source_url": "https://x.com/9to5Google/status/2119884035740602499",
+        "time": "2026-11-10T04:05:14+08:00",
+        "handle": "@9to5Google",
+        "impact": "买智能家居设备时，选支持 Matter 等开放协议的更不容易被厂商断掉。",
+        "points": [
+          "停止 Google Home 支持",
+          "停止 Alexa 支持"
+        ]
+      }
+    ]
+  }
+}

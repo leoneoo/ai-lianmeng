@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T18:18:26+08:00",
+  "updated_at": "2026-11-10T06:25:04+08:00",
   "editions": [
+    {
+      "id": "2026-11-10-0600",
+      "published_at": "2026-11-10T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-10-0600.json",
+      "counts": {
+        "x_daily": 8,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 6,
+        "tech": 2,
+        "iot": 3
+      },
+      "headline": "Anthropic 发布 Claude Fable 5.2 和 Mythos 5.2；Meta 推出小模型 Muse Ember"
+    },
     {
       "id": "2026-11-09-1800",
       "published_at": "2026-11-09T18:00:00+08:00",
