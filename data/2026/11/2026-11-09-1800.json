@@ -1,0 +1,222 @@
+{
+  "id": "2026-11-09-1800",
+  "published_at": "2026-11-09T18:00:00+08:00",
+  "headline": "NVIDIA 首尔 AI Day 给韩国开源模型出部署配方；群晖 Plex 套件需单独升级",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "NVIDIA 首尔 AI Day 给韩国开源模型出 Dynamo 部署配方",
+        "summary": "NVIDIA 11 月 9 日在首尔办 AI Day，官方称有 2,000 多名开发者、创业者和研究者参加。NVIDIA 发布 Dynamo 推理框架的新部署配方，支持 SK 电讯 A.X K2、LG K-EXAONE 2.0、Upstage Solar Open 2 和 Motif-3 四个韩国开源模型，称推理最高提速约 2 倍。企业 Agent 方面，现代汽车集团在评估 NVIDIA 的 NemoClaw 和 OpenShell，AIM Safety 正把 OpenShell 集成进产品，帮企业更安全地使用 AI Agent。",
+        "source_url": "https://x.com/NVIDIAAI/status/2119667551982813584",
+        "time": "2026-11-09T13:45:00+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "NVIDIA 正把主权 AI 从卖卡延伸到推理栈和企业 Agent 安全层，各国自研开源模型能更快接上它的软件生态。",
+        "points": [
+          "Dynamo 配方覆盖 4 个韩国开源模型",
+          "推理最高提速约 2 倍（自报）",
+          "现代汽车评估 NemoClaw 与 OpenShell",
+          "韩媒称 NVIDIA 拟投资 Motif、Upstage，官方未确认"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "马斯克称 Grok Bot 质量问题连夜修复，用户称额度已重置",
+        "summary": "马斯克说刚和 Grok Bot 工程团队开完评审会，修复会连夜上线，明天应有明显改善，还有问题可以直接回复他。多位中文博主反馈 Grok Bot 用量已经免费重置，原定重置时间不变；也有人实测额度消耗偏快的问题还没修好。",
+        "source_url": "https://x.com/elonmusk/status/2119617455102333206",
+        "time": "2026-11-09T10:25:56+08:00",
+        "handle": "@elonmusk",
+        "impact": "Grok Bot 用户这两天可以留意质量和额度消耗是否恢复正常，还要看修复后的实际表现。",
+        "points": [
+          "官方称修复连夜上线",
+          "用户反馈额度已免费重置",
+          "额度消耗偏快仍有人反映"
+        ]
+      },
+      {
+        "title": "Mistral 用 Voxtral 3 Transcribe 给 AI Engineer Paris 做实时字幕",
+        "summary": "Mistral 在 AI Engineer Paris 大会上用自家语音识别模型 Voxtral 3 Transcribe 实时转写所有主会场演讲。为了提高准确率，他们把讲者名字和大会里的技术术语作为上下文喂给模型，也就是上下文偏置（Context Biasing）。",
+        "source_url": "https://x.com/MistralAI/status/2119651192737259701",
+        "time": "2026-11-09T12:40:00+08:00",
+        "handle": "@MistralAI",
+        "impact": "会议、直播这类专业词多的场景，实时字幕可以靠预先提供术语表来提高准确率。",
+        "points": [
+          "主会场演讲全程实时转写",
+          "用讲者名和术语做上下文偏置"
+        ]
+      },
+      {
+        "title": "Sakana AI 开发首款手机 App，在日本招 beta 测试",
+        "summary": "以研究为主的日本 AI 公司 Sakana AI 宣布正在开发第一款手机应用「Sakana AI App（暂名）」。联合创始人 hardmaru 说这是公司的新方向，目前只面向在日本的用户招募早期测试者，具体功能还没有公布。",
+        "source_url": "https://x.com/hardmaru/status/2119618394697982076",
+        "time": "2026-11-09T10:29:40+08:00",
+        "handle": "@hardmaru",
+        "impact": "研究型 AI 公司开始直接做面向消费者的产品，还要看它和现有聊天应用拉开多大差别。",
+        "points": [
+          "Sakana AI 首款手机 App",
+          "目前只在日本招测试者",
+          "功能尚未公布"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "一句提示词找出 App 里的 18 个隐式状态机",
+        "summary": "WquGuru 用提示词「find all of the implicit state machines in my app」让编程 Agent 扫描自己的开源会议纪要工具知了/Cicada，找出 18 个隐式状态机，其中 5 个值得优化。他说这对提升应用的健壮性帮助很大。",
+        "source_url": "https://x.com/wquguru/status/2119630602366488732",
+        "time": "2026-11-09T11:18:11+08:00",
+        "handle": "@wquguru",
+        "impact": "用编程 Agent 做代码体检时，可以把这句提示词加进固定检查清单。",
+        "points": [
+          "提示词可直接复用",
+          "找出 18 个隐式状态机，5 个值得优化"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Garry Tan 开源 g-harness-evals：同一模型只换 Agent 外壳",
+        "summary": "meng shao 介绍了 Garry Tan 开源的 g-harness-evals。它固定同一个前沿模型和同一批任务，只替换系统提示、工具和记忆这些 Agent 外围设计，比较哪种更准、哪种更省钱。任务不是编程题，而是虚构公司 Pemberline 的多人办公场景。",
+        "source_url": "https://x.com/shao__meng/status/2119715268393836956",
+        "time": "2026-11-09T16:54:37+08:00",
+        "handle": "@shao__meng",
+        "impact": "选 Agent 产品时，外壳设计的差别可能和换模型一样大，这套评测给了对比方法。",
+        "points": [
+          "固定模型和任务，只换 Agent 外壳",
+          "同时比准确率和成本",
+          "任务为模拟公司办公场景"
+        ]
+      },
+      {
+        "title": "MIT《How to AI an AI》第 6 讲：大模型强化学习怎么跑起来",
+        "summary": "meng shao 整理了 MIT 课程《How to AI an AI》第 6 讲，从 PPO、GRPO 讲到同策略蒸馏，重点是大模型强化学习在工程上怎么真正落地运行。",
+        "source_url": "https://x.com/shao__meng/status/2119675683836416068",
+        "time": "2026-11-09T14:17:19+08:00",
+        "handle": "@shao__meng",
+        "impact": "想补后训练基础的开发者可以把它当入门路线。",
+        "points": [
+          "覆盖 PPO、GRPO 和同策略蒸馏",
+          "侧重工程实现"
+        ]
+      },
+      {
+        "title": "Tw93：在快 AI 时代把 Mole 做成一款慢产品",
+        "summary": "开源工具作者 Tw93 发长文，复盘他在 AI 让开发越来越快的环境里，怎样刻意放慢 Mole 的产品节奏，把它做成一款「慢产品」。",
+        "source_url": "https://x.com/HiTw93/status/2119689899062534393",
+        "time": "2026-11-09T15:13:48+08:00",
+        "handle": "@HiTw93",
+        "impact": "对独立开发者来说，AI 让做得快变容易，想清楚做什么反而更重要。",
+        "points": [
+          "独立开发者的产品节奏复盘",
+          "主题是在 AI 加速下刻意做慢"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "Hugging Face TRL 原生支持多教师同策略蒸馏（MOPD）",
+        "summary": "头雁介绍，多教师同策略蒸馏（Multi-teacher On-Policy Distillation，MOPD）是 MiMo、DeepSeek、Moonshot、NVIDIA、Mistral、Liquid AI 等前沿实验室今年用得比较多的后训练技术。现在 Hugging Face 的后训练核心库 TRL 已经支持 MOPD，并详细写了原理和用法。",
+        "source_url": "https://x.com/alacheng/status/2119724173539045684",
+        "time": "2026-11-09T17:30:00+08:00",
+        "handle": "@alacheng",
+        "impact": "中小团队也能用开源工具复现多教师蒸馏，把几个强模型的能力合进一个小模型。",
+        "points": [
+          "TRL 新增 MOPD 支持",
+          "前沿实验室今年常用的后训练方法",
+          "官方附原理和用法"
+        ]
+      },
+      {
+        "title": "NVKE：NVIDIA 开源的裸金属 GPU Kubernetes 管理面",
+        "summary": "NVIDIA 认证组织 DSX AI Factory 的 NVKE（NVIDIA Kubernetes Engine）今天登上 GitHub Trending，单日约 345 星，总星数约 985。它是在裸金属服务器上管理 GPU Kubernetes 集群的管理面。",
+        "source_url": "https://github.com/dsx-ai-factory/nvke",
+        "time": "2026-11-09T18:12:00+08:00",
+        "impact": "自建 GPU 集群的团队多了一个官方背景的 Kubernetes 管理选择。",
+        "points": [
+          "GitHub Trending 单日约 345 星",
+          "面向裸金属 GPU 集群",
+          "NVIDIA 认证组织发布"
+        ]
+      },
+      {
+        "title": "terminal-mac：给 Agent 单独开一台 macOS 虚拟机",
+        "summary": "GitHubDaily 介绍了 terminal-mac。让 Agent 操作 Mac 软件时，它常常抢走鼠标、改掉剪贴板；terminal-mac 在 Apple 芯片 Mac 上开一台完整的 macOS 虚拟机专门给 Agent 用，画面直接显示在终端里，Agent 通过截图、点击、拖动和打字来操作。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119663779822879065",
+        "time": "2026-11-09T13:30:01+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "在 Mac 上用电脑操控类 Agent 的人，可以把它和自己的工作环境隔离开。",
+        "points": [
+          "Agent 在独立 macOS 虚拟机里操作",
+          "不再抢用户的鼠标和剪贴板",
+          "画面显示在终端里"
+        ]
+      },
+      {
+        "title": "rakazo：可自选模型和沙盒的开源 Grok Bot 替代品",
+        "summary": "rakazo 今天登上 GitHub Trending，单日约 107 星，总星数约 7,623。项目定位是开源的 Grok Bot 替代品，用户可以自己选择模型和运行沙盒。",
+        "source_url": "https://github.com/elie222/rakazo",
+        "time": "2026-11-09T18:12:00+08:00",
+        "impact": "想自托管个人 Agent 的用户多了一个可替换模型的开源方案。",
+        "points": [
+          "单日约 107 星，总约 7,623",
+          "自选模型和沙盒"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "三星或将推出 Galaxy AI 付费订阅",
+        "summary": "Android Authority 称，三星可能把最好的 Galaxy AI 功能放进付费订阅，价格为每月 4.99 美元或每年 47.99 美元，订阅用户可用新功能，用量上限是免费版的 4 倍。三星尚未正式宣布。",
+        "source_url": "https://x.com/AndroidAuth/status/2119699042930479602",
+        "time": "2026-11-09T15:50:08+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "如果属实，手机厂商的 AI 功能会走向「买机器之外再付订阅」，还要看三星正式方案。",
+        "points": [
+          "每月 4.99 美元或每年 47.99 美元",
+          "用量上限为免费版 4 倍",
+          "三星尚未官宣"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "iPad mini 8 上手：比 iPhone Duo 只重 1 克",
+        "summary": "Orange AI 用了两天 iPad mini 8，说手感很好。和折叠屏 iPhone Duo 相比，它只重 1 克、厚 0.2 毫米，价格约为三分之一；不能折叠、携带没那么方便，但屏幕没有折痕。",
+        "source_url": "https://x.com/oran_ge/status/2119566196429476047",
+        "time": "2026-11-09T07:02:15+08:00",
+        "handle": "@oran_ge",
+        "impact": "在折叠屏 iPhone 和小尺寸 iPad 之间犹豫的人，多了一份实际对比参考。",
+        "points": [
+          "比 iPhone Duo 重 1 克、厚 0.2 毫米",
+          "价格约为三分之一",
+          "不能折叠但无折痕"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "群晖 NAS 的 Plex 套件有四个 Plex2Shell 漏洞",
+        "summary": "群晖 11 月 8 日发布安全公告 Synology-SA-26:17，Plex Media Server 套件有 4 个 CVE，最高 CVSS 7.2，包括任意文件写入和服务端请求伪造；媒体称串联利用可绕过认证并远程执行代码，QNAP 此前称同一漏洞已有疑似被利用案例。修复版为 DSM 7.4/7.3 的 1.43.5.11079-720011079 和 DSM 7.2.2/7.2.1 的 1.43.5.11079-700011079，只升级 DSM 不能修复。群晖今天还更新了 Node2Shell 公告，Synology Chat 桌面客户端需升级到 1.2.5-0240 以上。",
+        "source_url": "https://www.synology.com/en-global/security/advisory/Synology_SA_26_17",
+        "time": "2026-11-08T10:15:47+08:00",
+        "impact": "在群晖上装了 Plex、尤其开了外网访问的用户，应尽快升级套件并检查访问记录。",
+        "points": [
+          "4 个 CVE，最高 CVSS 7.2",
+          "需单独升级 Plex 套件",
+          "Chat 桌面客户端需升到 1.2.5-0240"
+        ]
+      },
+      {
+        "title": "rss-pod：把 RSS 文章变成多人对谈播客",
+        "summary": "GitHubDaily 介绍了开源项目 rss-pod。它先用大模型把 RSS 里的文章改写成多人对话脚本，再用 Edge TTS 或 Azure 合成多个声音，可以在网页播放器里收听，也能生成播客订阅地址。",
+        "source_url": "https://x.com/GitHub_Daily/status/2119731747197972672",
+        "time": "2026-11-09T18:00:05+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "订阅源太多读不完的人，可以把一部分改成通勤时听。",
+        "points": [
+          "RSS 文章改写成对话脚本",
+          "Edge TTS 或 Azure 合成多人声音",
+          "可生成播客订阅地址"
+        ]
+      }
+    ]
+  }
+}

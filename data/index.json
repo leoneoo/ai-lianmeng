@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T06:20:26+08:00",
+  "updated_at": "2026-11-09T18:18:26+08:00",
   "editions": [
+    {
+      "id": "2026-11-09-1800",
+      "published_at": "2026-11-09T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-09-1800.json",
+      "counts": {
+        "x_daily": 4,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 4,
+        "tech": 2,
+        "iot": 2
+      },
+      "headline": "NVIDIA 首尔 AI Day 给韩国开源模型出部署配方；群晖 Plex 套件需单独升级"
+    },
     {
       "id": "2026-11-09-0600",
       "published_at": "2026-11-09T06:00:00+08:00",
