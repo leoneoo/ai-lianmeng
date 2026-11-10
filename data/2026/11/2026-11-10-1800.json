@@ -1,0 +1,302 @@
+{
+  "id": "2026-11-10-1800",
+  "published_at": "2026-11-10T18:00:00+08:00",
+  "headline": "Anthropic 发布官方选型指南；Fable 5.2 登顶 GDPx",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 官方选型指南：多数工作先用 Opus 5.5",
+        "summary": "Anthropic 在 claude.dev 博客发文（作者 Addy Osmani），建议多数编程和知识工作先用 Opus 5.5、思考力度默认 medium；规格清楚的日常改动用 Sonnet 5.5，分类、路由、抽取和子 Agent 用 Haiku 5.5，最难的编程、金融、科研和长时间无人值守任务再换 Fable 5.2。官方价格为每百万 token 输入/输出：Haiku 5.5 0.10/0.50 美元（提示超 10 万 token 按五倍计）、Sonnet 5.5 2/10、Opus 5.5 4/20、Fable 5.2 8/40。官方数据显示，FrontierCode 2.0 上 Fable 5.2 开 high 得 45.3%，与 Opus 5.5 开 max 的 45.5% 基本持平，单任务成本约一半；SWE-bench Pro 上 Opus 5.5 先用 low、失败再用 high 重跑，通过率约 97%、每题约 0.17 美元，好于全部用 high 的 95.3%、0.29 美元。",
+        "source_url": "https://claude.dev/blog/which-claude-model-should-you-build-with/",
+        "time": "2026-11-10T10:09:59+08:00",
+        "impact": "接 API 或用 Claude Code 的开发者可按这张表分配模型来省钱，换 Fable 5.2 前要先测请求格式。",
+        "points": [
+          "多数任务先用 Opus 5.5 medium",
+          "先调思考力度，再换模型",
+          "Fable 5.2 high 约等于 Opus max，成本约一半",
+          "Fable 5.2 要求历史只追加，改动会报 400"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Fable 5.2 登顶 SemiAnalysis GDPx，金融法律没进步",
+        "summary": "SemiAnalysis 的 GDPx 排行榜上，Claude Fable 5.2 以 16.4% 排第一。Dylan Patel 说它在芯片设计、软件工程、生物和材料科学上明显更强，但金融和法律类任务没有提升。Ethan Mollick 也指出，它在 ECI、Remote Labor（端到端完成自由职业任务）和 RoboDojo（控制机器人）三个还没饱和的基准上，高于原本就很陡的趋势线。",
+        "source_url": "https://x.com/SemiAnalysis_/status/2119961447199289640",
+        "time": "2026-11-10T09:12:50+08:00",
+        "handle": "@SemiAnalysis_",
+        "impact": "Fable 5.2 的提升集中在硬核技术和科学领域，做金融、法律的团队不必急着为它多付一倍价钱。",
+        "points": [
+          "GDPx 得分 16.4%，排第一",
+          "芯片设计、软件、生物、材料更强",
+          "金融、法律任务无提升",
+          "三个未饱和基准高于趋势线"
+        ]
+      },
+      {
+        "title": "Gemini 4 Carbon 可能今天全面开放",
+        "summary": "Google 产品负责人 Logan Kilpatrick 发了一个字「Gemini」，TestingCatalog 等账号据此称 Gemini 4 Carbon 可能今天全面开放，Gemini 4 Hydrogen（Flash）也可能同步。截至本期，Google 官方没有公布任何内容。",
+        "source_url": "https://x.com/OfficialLoganK/status/2120024720510984234",
+        "time": "2026-11-10T13:24:16+08:00",
+        "handle": "@OfficialLoganK",
+        "impact": "如果属实，本周会出现 Fable 5.2 和 Gemini 4 同场对比，还要看官方正式发布内容。",
+        "points": [
+          "Logan 一字预告",
+          "Carbon 全面开放属传闻",
+          "官方尚未公布"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Meta Muse 上了 Apple Watch 和 WearOS",
+        "summary": "Alexandr Wang 宣布 Meta 的 Muse 助手已上线 Apple Watch 和 Android WearOS。他还透露，此前匿名测试的 crouton-alpha 就是 Muse Ember 的早期版本，测试期间处理了超过 5 万亿 token，发布前修了一批问题。",
+        "source_url": "https://x.com/alexandr_wang/status/2119918987543032038",
+        "time": "2026-11-10T06:24:07+08:00",
+        "handle": "@alexandr_wang",
+        "impact": "Meta 的助手开始进入手表等随身设备，和 Siri、Gemini 抢手腕入口。",
+        "points": [
+          "Muse 上 Apple Watch、WearOS",
+          "crouton-alpha 即 Muse Ember 早期版",
+          "测试处理超 5 万亿 token"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Google Antigravity 新增 Knowledge Work 界面",
+        "summary": "9to5Google 报道，Google 的 Agent 开发工具 Antigravity 新增 Knowledge Work 界面，面向写文档、做调研等非编程工作。",
+        "source_url": "https://x.com/9to5Google/status/2119945287296761874",
+        "time": "2026-11-10T08:08:37+08:00",
+        "handle": "@9to5Google",
+        "impact": "编程 Agent 工具正在向普通办公用户扩展，和 Claude、ChatGPT 的办公功能正面竞争。",
+        "points": [
+          "新增 Knowledge Work 界面",
+          "面向非编程工作"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "给 Fable 5.2 用的 5 条代码库提示词",
+        "summary": "陈成汇总了五条可以直接复制的提示词：Anthropic 的 Alex Albert 的「全面体检」、Anthony Riera 的「先删再简化」、找出代码里的隐式状态机、WquGuru 的「审查整套 Agent 配置」（AGENTS.md、CLAUDE.md、skills、hooks、权限和 MCP），以及 shadcn/improve。",
+        "source_url": "https://x.com/chenchengpro/status/2120040764243894547",
+        "time": "2026-11-10T14:28:01+08:00",
+        "handle": "@chenchengpro",
+        "impact": "升级新模型时，可以直接拿这几条给项目和 Agent 配置做一次体检。",
+        "points": [
+          "全面体检：修确定的，其余列给人审",
+          "先删除，再简化，再优化",
+          "审查 Agent 配置的安全护栏"
+        ]
+      },
+      {
+        "title": "Meta JiTTests：合入前生成会失败的测试抓缺陷",
+        "summary": "meng shao 解读 Meta 工程博客：JiTTests 针对还没合入的代码改动，自动生成在新版本失败、旧版本通过的测试，把行为差异摊开，再用规则工具和多模型评审团过滤误报，审阅负担降约 70%。Meta 自报 2026 年上半年在合入前拦下 74 起严重隐私事故，同类事故率降约 20%。",
+        "source_url": "https://x.com/shao__meng/status/2119978619196084717",
+        "time": "2026-11-10T10:21:04+08:00",
+        "handle": "@shao__meng",
+        "impact": "给大团队一个思路：用 AI 生成针对改动的测试，比单纯加速代码审查更能挡住事故。",
+        "points": [
+          "生成能区分新旧行为的测试",
+          "多模型评审团降审阅负担约 70%",
+          "上半年合入前拦下 74 起严重隐私事故"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "用「产品原子」看三类 Agent 产品",
+        "summary": "李继刚提出用「产品原子」（用户创建、命名、分享、归档的最小单位）来看 Agent 产品，分成以对话、以项目、以角色为原子三类。差别在连续性落在谁身上：对话类靠用户自己记，项目类靠文档，角色类沉淀在每个 Bot 身上；他建议按「层内交互强、层间交互弱」来切分 Bot 的职责。",
+        "source_url": "https://x.com/lijigang/status/2120013746974212464",
+        "time": "2026-11-10T12:40:39+08:00",
+        "handle": "@lijigang",
+        "impact": "用多个 Bot 分工的人，可以按这个思路重新划分各自的职责边界。",
+        "points": [
+          "对话、项目、角色三类原子",
+          "连续性的归属不同",
+          "按近可分解性切分 Bot 职责"
+        ]
+      },
+      {
+        "title": "Sutton：光靠暴力算力不够，还要巧妙的新方法",
+        "summary": "宝玉解读《苦涩的教训》作者 Richard Sutton 的新推文：暴力计算不足以实现真正的智能，需要巧妙的新方法。他认为这篇文章反对的是把人类知识硬编码进系统，而不是算法和架构上的创新，Transformer、反向传播、蒙特卡洛树搜索都属于后者。",
+        "source_url": "https://x.com/dotey/status/2120039846118821976",
+        "time": "2026-11-10T14:24:22+08:00",
+        "handle": "@dotey",
+        "impact": "「只堆算力」的路线被原作者亲自纠偏，新算法研究仍有空间。",
+        "points": [
+          "Sutton 称暴力计算不够",
+          "反对硬编码人类知识",
+          "不反对算法和架构创新"
+        ]
+      },
+      {
+        "title": "Ducter：用自己订阅跑的开源个人 Agent",
+        "summary": "古思为周末做了开源项目 Ducter，在自己的 Mac 或 VPS 上调度 Claude Code、Codex、pi 或 DeepSeek Harness，只在需要时通知你，支持 iOS 和 iPadOS。项目还比较早期，欢迎试用和贡献。",
+        "source_url": "https://x.com/wey_gu/status/2120034422988943679",
+        "time": "2026-11-10T14:02:49+08:00",
+        "handle": "@wey_gu",
+        "impact": "想要常驻 Agent 又不想换订阅的人，多了一个可自托管的选择。",
+        "points": [
+          "自托管在 Mac 或 VPS",
+          "用自己的模型订阅",
+          "支持 iOS、iPadOS"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Pi v1.5.1：命令行登录，空闲时保温提示缓存",
+        "summary": "Pi（earendil-works/pi，作者 Mario Zechner）发布 v1.5.1：新增 pi auth login/logout，不用开会话就能登录或退出模型提供方；新增空闲缓存保温，在预计划算时让提示缓存在两次运行之间最多保持 30 分钟；Anthropic 请求只发新消息；还能调用 GitHub Copilot 的分类模型。保温会在你没对话时也产生少量调用费用，在意花费可在设置里查看 cacheWarming。",
+        "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.5.1",
+        "time": "2026-11-10T07:47:44+08:00",
+        "impact": "长会话用户能省下重复的缓存写入费，但空闲保温本身也计费，要按自己的用量判断。",
+        "points": [
+          "命令行直接登录、退出",
+          "空闲缓存保温最多 30 分钟",
+          "Anthropic 请求只发新消息",
+          "可调用 Copilot 分类模型"
+        ]
+      },
+      {
+        "title": "Hermes Agent v0.23.1 修复插件目录，桌面版将改版",
+        "summary": "Hermes Agent 发布 v0.23.1：11 月 9 日起线上插件目录文件超过客户端 2 MiB 上限，导致 hermes plugins install 一直用随版本附带的旧目录，这一版把上限提到 16 MiB，停在 v0.23.0 及更早版本的要升级。Teknium 另称桌面版和网页版界面正在重做，预计 1 到 2 周上线。",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1",
+        "time": "2026-11-10T09:42:15+08:00",
+        "impact": "Hermes 用户应升级到 v0.23.1，否则装插件时拿到的是旧版本。",
+        "points": [
+          "插件目录上限 2 MiB 提到 16 MiB",
+          "旧版本装不到新插件",
+          "桌面和网页界面 1 到 2 周后改版"
+        ]
+      },
+      {
+        "title": "OpenCode 免费开放 MiniMax M3.1 Flash",
+        "summary": "OpenCode 宣布 MiniMax M3.1 Flash 可在平台上免费使用，帖子获得约 2,800 个赞。",
+        "source_url": "https://x.com/opencode/status/2119982381021192354",
+        "time": "2026-11-10T10:36:01+08:00",
+        "handle": "@opencode",
+        "impact": "想低成本试国产快模型做编程的人，多了一个免费入口。",
+        "points": [
+          "MiniMax M3.1 Flash 免费",
+          "在 OpenCode 中直接可用"
+        ]
+      },
+      {
+        "title": "ZONOS3-Mini：能在手机上实时跑的开源语音克隆 TTS",
+        "summary": "Zyphra 开源 ZONOS3-Mini，是 800M 参数的 MoE 语音合成模型，每个 token 激活约 80M 参数，支持声音克隆和逐词控制，官方称可在手机上实时运行。SGLang-Omni 首日支持，单张 H100 上首段音频约 57 毫秒返回。",
+        "source_url": "https://x.com/ZyphraAI/status/2119914895861076151",
+        "time": "2026-11-10T06:07:51+08:00",
+        "handle": "@ZyphraAI",
+        "impact": "本地语音合成又多一个开源选择，适合做离线配音和语音助手。",
+        "points": [
+          "800M MoE，激活约 80M",
+          "支持声音克隆、逐词控制",
+          "SGLang-Omni 首音约 57 毫秒"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "vLLM 用上 LibTorch 稳定 ABI",
+        "summary": "vLLM 宣布借助 LibTorch Stable ABI，新版 PyTorch 发布后不再必须重新编译 vLLM。用户能更快升级 PyTorch，发行方少重复打包，开发者测试 torch 改动也不用重编 vLLM。",
+        "source_url": "https://x.com/vllm_project/status/2119977386553073736",
+        "time": "2026-11-10T10:16:10+08:00",
+        "handle": "@vllm_project",
+        "impact": "自建推理服务的团队升级 PyTorch 会更省事。",
+        "points": [
+          "PyTorch 升级不再强制重编",
+          "发行方少重复打包"
+        ]
+      },
+      {
+        "title": "garrytan/gbrain 登上 GitHub 日榜",
+        "summary": "Garry Tan 的 gbrain 是给 OpenClaw、Hermes 等 Agent 用的「大脑」，帮长期运行的 Agent 组织知识和记忆，今日约新增 216 星，登上 GitHub TypeScript 日榜。",
+        "source_url": "https://github.com/garrytan/gbrain",
+        "time": "2026-11-10T18:18:00+08:00",
+        "impact": "给自托管 Agent 加长期记忆的人，可以参考这套做法。",
+        "points": [
+          "面向 OpenClaw、Hermes",
+          "组织 Agent 长期记忆",
+          "今日约 216 星"
+        ]
+      },
+      {
+        "title": "Pinky：让 Agent 操作真手机，危险步骤先问人",
+        "summary": "GitHubDaily 介绍 Pinky：让 Claude Code、Codex、Cursor 等 Agent 通过 MCP 操作真实的 iPhone 或安卓手机，全程能在电脑上看着；遇到付款、删除等风险操作会停下来等人批准，也能随时接手自己点。",
+        "source_url": "https://x.com/GitHub_Daily/status/2120026203881173316",
+        "time": "2026-11-10T13:30:09+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "手机自动化开始带上人工审批，交给 Agent 操作手机前更放心一些。",
+        "points": [
+          "经 MCP 操作真实手机",
+          "风险步骤停下等人批准",
+          "可随时人工接手"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Apple Intelligence 完成 iPad 和 Mac 在中国的备案",
+        "summary": "9to5Mac 报道，iPad 和 Mac 版 Apple Intelligence 已完成在中国的监管备案，国行设备正式用上又近了一步。",
+        "source_url": "https://x.com/9to5mac/status/2119926727136673953",
+        "time": "2026-11-10T06:54:52+08:00",
+        "handle": "@9to5mac",
+        "impact": "国行 iPad 和 Mac 用户有望走官方渠道用上 Apple Intelligence，具体时间还要看苹果公布。",
+        "points": [
+          "iPad、Mac 版完成备案",
+          "国行上线又近一步"
+        ]
+      },
+      {
+        "title": "加拿大法院认证苹果与 Google 搜索协议集体诉讼",
+        "summary": "9to5Mac 报道，加拿大法院已认证一起针对苹果与 Google 搜索合作协议的集体诉讼。",
+        "source_url": "https://x.com/9to5mac/status/2119978382423183693",
+        "time": "2026-11-10T10:20:08+08:00",
+        "handle": "@9to5mac",
+        "impact": "苹果与 Google 的默认搜索合作在更多国家面临法律压力。",
+        "points": [
+          "加拿大法院认证集体诉讼",
+          "针对苹果与 Google 搜索协议"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "群晖 NAS 遭 C3RB3R 勒索攻击，旧版 DSM 要马上更新",
+        "summary": "Synology 称攻击者正利用 2024 年 12 月已修补的漏洞攻击没有更新的 DSM，加密文件并勒索；360 的分析称还用到 9 月才修补的两个 9.8 分漏洞。中招的特征是文件多出 .L0CK3D 扩展名、目录里出现 read-me3.txt。建议更新到机型支持的最新 DSM、打开自动更新，不要把 DSM 管理界面直接暴露在公网。",
+        "source_url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+        "time": "2026-11-10T16:00:27+08:00",
+        "impact": "家里用群晖的用户应立刻检查 DSM 版本，远程访问改走 VPN（如 Tailscale）。",
+        "points": [
+          "攻击针对未更新的 DSM",
+          "特征：.L0CK3D 和 read-me3.txt",
+          "更新 DSM 并开自动更新",
+          "管理界面不要暴露公网"
+        ]
+      },
+      {
+        "title": "Google Home 可把家门钥匙放进 Google Wallet",
+        "summary": "据网友转述 Google 11 月 9 日的更新说明，用户可以通过 Google Home 把支持 Matter Aliro 的门锁钥匙加进 Google Wallet，手机靠近就能开门，前提是门锁支持 Aliro。",
+        "source_url": "https://x.com/koshi011/status/2120070706977182017",
+        "time": "2026-11-10T16:27:00+08:00",
+        "handle": "@koshi011",
+        "impact": "Matter 的门禁标准开始落地，安卓手机当家门钥匙更方便，买门锁可留意是否支持 Aliro。",
+        "points": [
+          "经 Google Home 添加",
+          "门锁需支持 Matter Aliro",
+          "钥匙存进 Wallet"
+        ],
+        "tag": "转述"
+      },
+      {
+        "title": "Home Assistant 2026.11.1 补丁发布",
+        "summary": "Home Assistant 2026.11 的第一个修复版发布，修复了 Shelly 休眠电池设备醒来后不出现新实体、窗帘在位置 0 时状态不对等问题，ESPHome 也有修复。",
+        "source_url": "https://x.com/AlexKvazis/status/2120094125299286323",
+        "time": "2026-11-10T18:00:03+08:00",
+        "handle": "@AlexKvazis",
+        "impact": "已升到 2026.11 的用户可以顺手打这个补丁。",
+        "points": [
+          "2026.11 首个修复版",
+          "修复 Shelly 和 ESPHome 问题"
+        ]
+      }
+    ]
+  }
+}
