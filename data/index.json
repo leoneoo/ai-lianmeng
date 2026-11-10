@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T18:26:55+08:00",
+  "updated_at": "2026-11-11T06:19:35+08:00",
   "editions": [
+    {
+      "id": "2026-11-11-0600",
+      "published_at": "2026-11-11T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-11-0600.json",
+      "counts": {
+        "x_daily": 13,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 8,
+        "tech": 3,
+        "iot": 3
+      },
+      "headline": "Google 正式发布 Gemini 4 Carbon；Anthropic 启动 IPO 路演"
+    },
     {
       "id": "2026-11-10-1800",
       "published_at": "2026-11-10T18:00:00+08:00",

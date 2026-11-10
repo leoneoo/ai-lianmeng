@@ -1,0 +1,420 @@
+{
+  "id": "2026-11-11-0600",
+  "published_at": "2026-11-11T06:00:00+08:00",
+  "headline": "Google 正式发布 Gemini 4 Carbon；Anthropic 启动 IPO 路演",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Google 正式发布 Gemini 4 Carbon",
+        "summary": "Google 把 Gemini 4 Carbon 称为目前最强的前沿模型，主打复杂、长时间的 Agent 任务，会反复探索问题并做长时间验证，覆盖软件工程、网络安全、知识工作和科研。开发者今天就能在 Gemini API 和 AI Studio 使用，Google AI Ultra 订阅用户也在陆续开通；据宝玉整理，API 有引入价到 11 月 30 日，Ultra 每月 99.99 美元起。Cursor 称它开 high 时在 CursorBench 上得 60.4%、排第一；Perplexity 称它在 WANDR 基准得 0.857 分、每任务 5.86 美元，与 Claude Fable 5.2 持平而成本约 40%。",
+        "source_url": "https://x.com/GoogleAI/status/2120187753329791341",
+        "time": "2026-11-11T00:12:06+08:00",
+        "handle": "@GoogleAI",
+        "impact": "Google 重新跟上前沿模型节奏，最难的长任务多了一个可能更便宜的选择。",
+        "points": [
+          "主打长时间 Agent 任务和网络安全",
+          "API、AI Studio 今天可用，Ultra 用户陆续开通",
+          "CursorBench 60.4% 排第一（Cursor 自报）",
+          "WANDR 与 Fable 5.2 持平、成本约 40%（Perplexity 自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Anthropic 官方宣布启动 IPO 路演",
+        "summary": "Anthropic 官方账号宣布，拟议首次公开募股（IPO）的路演已经开始。相关注册文件已提交美国证监会（SEC），但尚未生效。此前只有媒体报道，这次是公司自己确认。",
+        "source_url": "https://x.com/AnthropicAI/status/2120117722230968385",
+        "time": "2026-11-10T19:33:49+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "头部模型公司开始走向公开市场，之后财务和风险信息会更透明。",
+        "points": [
+          "IPO 路演已开始",
+          "注册文件已提交 SEC，尚未生效",
+          "公司首次官方确认"
+        ]
+      },
+      {
+        "title": "Google DeepMind 发布 Gemini Robotics 2.5",
+        "summary": "Google DeepMind 发布新一代机器人模型 Gemini Robotics 2.5，称能学会数百种日常技能。官方演示包括叠衣服、夹取糕点，以及在工厂产线上自主分拣汽车零件。",
+        "source_url": "https://x.com/GoogleDeepMind/status/2120169787896525104",
+        "time": "2026-11-10T23:00:42+08:00",
+        "handle": "@GoogleDeepMind",
+        "impact": "机器人模型开始从实验室演示走向真实产线任务。",
+        "points": [
+          "能学数百种日常技能",
+          "演示叠衣服、夹糕点",
+          "工厂产线自主分拣零件"
+        ]
+      },
+      {
+        "title": "NVIDIA 发布开放机器人模型 GR00T 2",
+        "summary": "NVIDIA 的 Jim Fan 发布 GR00T 2，称这是 NVIDIA 最强的开放机器人 System One 模型。它完全在机器人自带算力上运行、不用联网，用户拥有全部权重，主打把灵巧操作和全身控制串成长流程任务。",
+        "source_url": "https://x.com/DrJimFan/status/2120186651741655428",
+        "time": "2026-11-11T00:07:43+08:00",
+        "handle": "@DrJimFan",
+        "impact": "开放权重加端侧运行，降低了机器人公司接入门槛和对云端的依赖。",
+        "points": [
+          "开放权重，用户拥有全部权重",
+          "完全在机器人本机运行",
+          "支持长流程灵巧操作和全身控制"
+        ]
+      },
+      {
+        "title": "MiniMax H3-Image 开放权重：10 秒出 4K 图",
+        "summary": "MiniMax 发布 H3-Image，称 10 秒能生成约 1600 万像素的 4K 图像，支持精确的指令跟随和编辑，最多可用 16 张参考图。模型开放权重，也能通过 API、MiniMax Code 和海螺 AI 使用。",
+        "source_url": "https://x.com/MiniMax_AI/status/2120179737695826420",
+        "time": "2026-11-10T23:40:15+08:00",
+        "handle": "@MiniMax_AI",
+        "impact": "高分辨率生图的开源选择又多一个，本地部署和二次开发更方便。",
+        "points": [
+          "10 秒生成 4K 图（自报）",
+          "最多 16 张参考图",
+          "开放权重"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Claude 上线白板、表格和 Claude Data",
+        "summary": "Anthropic 开始推送 Claude Whiteboards（白板）和 Claude Sheets（表格），可以和同事一起编辑。据宝玉整理，这两项所有付费套餐可用、目前是测试版，原来的仪表盘改名 Claude Data 正式上线。",
+        "source_url": "https://x.com/claudeai/status/2120206365759094857",
+        "time": "2026-11-11T01:26:03+08:00",
+        "handle": "@claudeai",
+        "impact": "Claude 从聊天工具往办公协作套件走，和 Office、Google 文档的竞争更直接。",
+        "points": [
+          "新增白板和表格，可协作",
+          "付费套餐可用，测试版",
+          "仪表盘改名 Claude Data"
+        ]
+      },
+      {
+        "title": "微软 MAI-Transcribe-2：每小时音频 0.10 美元",
+        "summary": "微软 AI 负责人 Mustafa Suleyman 称，MAI-Transcribe-2 是目前最快、最便宜、最准的转写模型，比 GPT-Transcribe 快 10 倍、比 Gemini 3.5 快 5 倍，每小时音频只要 0.10 美元。",
+        "source_url": "https://x.com/mustafasuleyman/status/2120200206272921716",
+        "time": "2026-11-11T01:01:35+08:00",
+        "handle": "@mustafasuleyman",
+        "impact": "语音转写价格继续往下走，做会议纪要和字幕的应用成本会更低。",
+        "points": [
+          "比 GPT-Transcribe 快 10 倍（自报）",
+          "每小时音频 0.10 美元"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "ChatGPT Business 套餐可登录第三方工具",
+        "summary": "OpenAI 开发者账号宣布，ChatGPT Business 套餐现在可以通过「用 ChatGPT 登录」在 Notion、v0、Amp、Kilo Code、Warp、Nous 的 Hermes、OpenClaw、OpenCode 等工具里使用。",
+        "source_url": "https://x.com/OpenAIDevs/status/2120212596850663712",
+        "time": "2026-11-11T01:50:49+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "公司买的 ChatGPT 套餐可以直接用在常用的 Agent 工具里，少管一套 API 账单。",
+        "points": [
+          "支持 Notion、v0、Warp 等",
+          "Hermes、OpenClaw、OpenCode 也支持"
+        ]
+      },
+      {
+        "title": "ChatGPT 商家功能测试版上线",
+        "summary": "OpenAI 推出 Businesses in ChatGPT 测试版：商家可以认领并管理自己在 ChatGPT 里的信息，查看用户互动数据，符合条件的还能建一个 Business Agent 回答顾客问题。",
+        "source_url": "https://x.com/OpenAI/status/2120216592395174382",
+        "time": "2026-11-11T02:06:42+08:00",
+        "handle": "@OpenAI",
+        "impact": "ChatGPT 开始做商家入口，类似搜索引擎的商家页面。",
+        "points": [
+          "商家可认领并管理信息",
+          "可看互动数据",
+          "可建 Business Agent"
+        ]
+      },
+      {
+        "title": "OpenAI 预告周四网络安全发布会",
+        "summary": "OpenAI 预告周四举行「Cyber at the Frontier」直播发布会，称已用前沿模型发现并修复一批重要漏洞，要把防御自家系统的经验做成给客户用的工具。",
+        "source_url": "https://x.com/OpenAI/status/2120202353907486826",
+        "time": "2026-11-11T01:10:07+08:00",
+        "handle": "@OpenAI",
+        "impact": "网络安全正成为前沿模型的主战场，OpenAI 可能借此回应 Carbon 和 Fable。",
+        "points": [
+          "周四直播发布会",
+          "用前沿模型找到并修复漏洞"
+        ]
+      },
+      {
+        "title": "ElevenLabs 发布 Scribe v3 语音转文字",
+        "summary": "ElevenLabs 发布 Scribe v3 和实时版 Scribe v3 Live，称是其最准的语音转文字模型，擅长强背景噪音环境，能分清停顿和句末，在多人会议里也能分清谁在说话。",
+        "source_url": "https://x.com/ElevenLabs/status/2120217467100541396",
+        "time": "2026-11-11T02:10:10+08:00",
+        "handle": "@ElevenLabs",
+        "impact": "会议转写和实时字幕的准确率门槛又被抬高。",
+        "points": [
+          "含实时版 v3 Live",
+          "抗噪、区分说话人"
+        ]
+      },
+      {
+        "title": "NVIDIA 开放车端模型 Alpamayo 2 Edge",
+        "summary": "NVIDIA 发布开放的车端模型 Alpamayo 2 Edge，在车上实时规划行车路线，必要时解释自己的决策，比如礼让行人、给对向公交让路。另外，NVIDIA 的 Agent 安全运行项目 OpenShell 宣布加入 CNCF。",
+        "source_url": "https://x.com/nvidia/status/2120186778384499073",
+        "time": "2026-11-11T00:08:13+08:00",
+        "handle": "@nvidia",
+        "impact": "自动驾驶的推理模型走向开放和可解释，车企能直接在其上开发。",
+        "points": [
+          "车端实时推理",
+          "能解释驾驶决策",
+          "OpenShell 加入 CNCF"
+        ]
+      },
+      {
+        "title": "Hugging Face 用户突破 2000 万",
+        "summary": "Hugging Face CEO Clem Delangue 称，平台用户已超过 2000 万，托管的模型、数据集、Agent 轨迹和强化学习环境共 300PB，上周用户新增 9PB；10 月是日活、月活和收入最高的一个月。",
+        "source_url": "https://x.com/ClementDelangue/status/2120207990116495787",
+        "time": "2026-11-11T01:32:31+08:00",
+        "handle": "@ClementDelangue",
+        "impact": "开源模型生态仍在加速扩张。",
+        "points": [
+          "用户超 2000 万",
+          "托管 300PB，上周新增 9PB",
+          "10 月收入创新高（自报）"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "一周用 AI 写完五个平台的原生客户端",
+        "summary": "WquGuru 说，他一周内用 AI 写出五个平台的纯原生代码：macOS 3.0 万行 SwiftUI、Windows 1.8 万行 WPF、Linux 2.0 万行 GTK、Android 1.4 万行 Kotlin，加上在写的 iOS 共约 8.7 万行，约占 Claude Ultra 一周用量的 80%。他认为跨平台框架会慢慢变得不必要。",
+        "source_url": "https://x.com/wquguru/status/2120157134604447901",
+        "time": "2026-11-10T22:10:26+08:00",
+        "handle": "@wquguru",
+        "impact": "AI 让每个平台单独写原生代码的成本大降，跨平台框架的优势在缩小。",
+        "points": [
+          "五端原生共约 8.7 万行",
+          "用了约 80% 的周额度",
+          "认为跨平台框架会凋零"
+        ]
+      },
+      {
+        "title": "Lenny 科技就业报告：产品经理岗位四年来最多",
+        "summary": "宝玉解读 Lenny Rachitsky 11 月 10 日发布的 2026 下半年科技就业报告：AI 时代产品经理需求最旺，工程师岗位停止增长，设计岗位创新低。",
+        "source_url": "https://x.com/dotey/status/2120226054195577277",
+        "time": "2026-11-11T02:44:17+08:00",
+        "handle": "@dotey",
+        "impact": "会定义问题的人更吃香，纯执行岗位压力变大。",
+        "points": [
+          "PM 岗位四年来最多",
+          "工程师停止增长",
+          "设计岗位新低"
+        ]
+      },
+      {
+        "title": "Manus 联合创始人：内部已不分前后端",
+        "summary": "宝玉转述，Manus 联合创始人张涛在 Web Summit 上说，公司里产品经理和设计师都在往代码库提交代码，内部已经不分前端、后端；招聘页还按老岗位写，只是因为外面的世界还没跟上。",
+        "source_url": "https://x.com/dotey/status/2120176641603244488",
+        "time": "2026-11-10T23:27:56+08:00",
+        "handle": "@dotey",
+        "impact": "AI 编程正在改变团队分工，岗位边界越来越模糊。",
+        "points": [
+          "PM 和设计师也提交代码",
+          "内部不再分前后端"
+        ],
+        "tag": "转述"
+      },
+      {
+        "title": "中美开源模型在 OpenRouter 的用量对比",
+        "summary": "头雁贴出 OpenRouter 上中美开源模型的用量对比图，显示中国开源模型用量明显高于美国开源模型。他认为美国开源模型起步太晚，按互联网市场规律很难追上份额。",
+        "source_url": "https://x.com/alacheng/status/2120102919551013332",
+        "time": "2026-11-10T18:35:00+08:00",
+        "handle": "@alacheng",
+        "impact": "中国开源模型在开发者实际用量上占优势，这是观点加图表，口径以 OpenRouter 为准。",
+        "points": [
+          "中国开源模型用量领先",
+          "作者认为美国很难追上"
+        ]
+      },
+      {
+        "title": "Jane Street 开源「苏格拉底导师」Skill",
+        "summary": "GitHubDaily 介绍，量化公司 Jane Street 开源了 socratic-tutor Skill，让大模型只提问、不灌输。开始前先用 3～5 个由浅入深的问题摸底，再把主题拆成 4～10 个部分逐步引导。",
+        "source_url": "https://x.com/GitHub_Daily/status/2120116776172425268",
+        "time": "2026-11-10T19:30:03+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "用 AI 学东西不再只是看答案，记得更牢。",
+        "points": [
+          "只提问不灌输",
+          "先摸底再分段引导"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenClaw 2026.11.3：子任务结果更私密、工具失败不再静默",
+        "summary": "OpenClaw 2026.11.3 让私有子 Agent 的结果不再混进流式回复；工具失败没处理时会明确报告，不再当成功结束；认证卡住会在时限内停止；必须沙箱时，图片预览限制在允许的文件夹内。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.3",
+        "time": "2026-11-11T02:53:07+08:00",
+        "impact": "用 OpenClaw 跑自动化的用户，隐私和出错可见性都更好，建议升级。",
+        "points": [
+          "私有子任务结果不外泄到回复",
+          "工具失败显式报告",
+          "沙箱图片访问受限"
+        ]
+      },
+      {
+        "title": "goose v1.59.0：延迟加载 MCP 工具、子 Agent 可续跑",
+        "summary": "goose v1.59.0 新增精简的延迟 MCP 工具加载，已完成的子任务可以追问续跑，开发套件 GDK 增加了停止、审批和工具钩子。",
+        "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.59.0",
+        "time": "2026-11-11T01:17:02+08:00",
+        "impact": "MCP 工具多时更省上下文，人工审批也更好接。",
+        "points": [
+          "延迟加载 MCP 工具",
+          "子 Agent 可续跑",
+          "GDK 加审批钩子"
+        ]
+      },
+      {
+        "title": "Pi v1.5.2：项目文件夹改名后会话不丢",
+        "summary": "Pi v1.5.2 在会话原目录被移动或删除时，提供继续、复制到当前目录（Fork）或取消三个选项；选 Fork 后下次恢复不会再问。",
+        "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.5.2",
+        "time": "2026-11-10T20:25:43+08:00",
+        "impact": "常整理项目目录的 Pi 用户不用再丢会话。",
+        "points": [
+          "目录丢失时可 Fork 会话",
+          "下次恢复不再询问"
+        ]
+      },
+      {
+        "title": "OpenHands Enterprise 连发 5 个版本",
+        "summary": "OpenHands 说已为 Enterprise 发布 5 个版本，加强身份管理、自动化治理和花费控制，并支持 Azure DevOps，面向把编程 Agent 当团队共享基础设施来管理的公司。",
+        "source_url": "https://x.com/OpenHandsDev/status/2120255928150655208",
+        "time": "2026-11-11T04:43:00+08:00",
+        "handle": "@OpenHandsDev",
+        "impact": "企业用编程 Agent 开始重视权限和成本管控。",
+        "points": [
+          "身份管理与治理",
+          "花费控制",
+          "支持 Azure DevOps"
+        ]
+      },
+      {
+        "title": "Kilo 提醒：Fable 5.2 很费额度",
+        "summary": "Kilo 指出，Fable 5.2 单价是 Opus 5.5 的两倍、Sonnet 5.5 的四倍，有 Claude Code 用户新一周开始两天就用掉 65% 额度。它建议先看清哪类任务该用哪个模型，再决定是否升级套餐。",
+        "source_url": "https://x.com/kilocode/status/2120266900739338351",
+        "time": "2026-11-11T05:26:36+08:00",
+        "handle": "@kilocode",
+        "impact": "用 Claude Code 的人默认切 Fable 前要先算账，日常任务留给 Opus 或 Sonnet。",
+        "points": [
+          "Fable 单价为 Opus 两倍",
+          "有用户两天用掉 65% 周额度"
+        ]
+      },
+      {
+        "title": "mattpocock/skills 登上 GitHub Trending",
+        "summary": "TypeScript 讲师 Matt Pocock 公开了自己日常用的编程 Agent Skills 合集，今日在 GitHub Trending 上约新增 1,223 星。",
+        "source_url": "https://github.com/mattpocock/skills",
+        "time": "2026-11-11T06:13:00+08:00",
+        "impact": "想给编程 Agent 加规范的开发者可以直接参考。",
+        "points": [
+          "作者自用 Skills 合集",
+          "今日约 +1,223 星"
+        ]
+      },
+      {
+        "title": "addyosmani/agent-skills：生产级编程 Agent Skills",
+        "summary": "Addy Osmani 整理的「生产级」编程 Agent Skills 合集，今日在 GitHub Trending 上约新增 465 星。",
+        "source_url": "https://github.com/addyosmani/agent-skills",
+        "time": "2026-11-11T06:13:00+08:00",
+        "impact": "Skills 正成为给 Agent 传递工程经验的通用格式。",
+        "points": [
+          "面向生产环境的工程 Skills",
+          "今日约 +465 星"
+        ]
+      },
+      {
+        "title": "OpenSandbox：给 AI Agent 用的安全沙箱运行时",
+        "summary": "OpenSandbox 是给 AI Agent 用的沙箱运行时，主打安全、快速、可扩展，今日在 GitHub Trending（Python）上约新增 308 星。",
+        "source_url": "https://github.com/opensandbox-group/OpenSandbox",
+        "time": "2026-11-11T06:13:00+08:00",
+        "impact": "让 Agent 执行代码时多一层隔离，自托管 Agent 的用户可关注。",
+        "points": [
+          "Agent 专用沙箱",
+          "今日约 +308 星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果据报将推出 Mac 本地 AI 模型应用",
+        "summary": "9to5Mac 报道，苹果有一款新的 Mac 应用在路上，目的是让用户更容易在本机运行 AI 模型。苹果尚未正式公布。",
+        "source_url": "https://x.com/9to5mac/status/2120233921577197832",
+        "time": "2026-11-11T03:15:33+08:00",
+        "handle": "@9to5mac",
+        "impact": "如果属实，Mac 跑本地模型会更省事，隐私敏感的用户多一个选择。",
+        "points": [
+          "新 Mac 应用",
+          "本机运行 AI 模型",
+          "苹果未公布"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Android 17 QPR2 和 11 月 Pixel Drop 推送",
+        "summary": "Google 开始给 Pixel 推送 Android 17 QPR2，11 月 Pixel Drop 带来 Create My Widget、Google 信息的 HiLight 等功能，Pixel Watch 同步更新到 Wear OS 7.1。",
+        "source_url": "https://x.com/9to5Google/status/2120230029934080070",
+        "time": "2026-11-11T03:00:05+08:00",
+        "handle": "@9to5Google",
+        "impact": "Pixel 用户可以检查更新。",
+        "points": [
+          "Android 17 QPR2 推送",
+          "新增 Create My Widget",
+          "Wear OS 7.1"
+        ]
+      },
+      {
+        "title": "Oura 6.25 亿美元收购 AI 医生服务 Counsel Health",
+        "summary": "据 Mark Gurman 报道，智能戒指公司 Oura 在放弃上市计划后，同意以 6.25 亿美元收购 AI 加在线医生服务 Counsel Health，扩展业务。",
+        "source_url": "https://x.com/markgurman/status/2120212011233792024",
+        "time": "2026-11-11T01:48:29+08:00",
+        "handle": "@markgurman",
+        "impact": "可穿戴设备正从记录数据走向 AI 健康服务。",
+        "points": [
+          "收购价 6.25 亿美元",
+          "此前放弃上市"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Tailscale Aperture 可统一管理团队 AI Skills",
+        "summary": "Tailscale 宣布可以在 Aperture 里创建、整理和共享团队的 AI Skills，控制谁能使用，并通过 Skills over MCP 分发给兼容的 Agent。",
+        "source_url": "https://x.com/Tailscale/status/2120173484202410393",
+        "time": "2026-11-10T23:15:24+08:00",
+        "handle": "@Tailscale",
+        "impact": "组网工具开始管 Agent 的能力分发，团队 Skills 有了统一入口。",
+        "points": [
+          "集中管理 Skills",
+          "可控访问权限",
+          "经 MCP 分发给 Agent"
+        ]
+      },
+      {
+        "title": "Zapier 的 Zap 坏了会自己修",
+        "summary": "Zapier 给每个 Zap 配了一个 Agent 管家：流程出错时，可以只提示修法，也可以直接修好（由用户选）；它还会建议怎么让 Agent 步骤更稳定。",
+        "source_url": "https://x.com/zapier/status/2120175325975908538",
+        "time": "2026-11-10T23:22:43+08:00",
+        "handle": "@zapier",
+        "impact": "自动化流程断了不用再手动排查，但自动修改前最好先选「只提示」。",
+        "points": [
+          "出错自动修复或提示",
+          "优化 Agent 步骤"
+        ]
+      },
+      {
+        "title": "Home Assistant 自动化编辑更省事",
+        "summary": "Home Assistant 现在替换触发器、条件或动作时会保留兼容的设置，脚本编辑器也支持。官方还预告今天直播发布 Nabu Casa 的新品，能把更多设备接入 Home Assistant。",
+        "source_url": "https://x.com/home_assistant/status/2120258725642371200",
+        "time": "2026-11-11T04:54:07+08:00",
+        "handle": "@home_assistant",
+        "impact": "改自动化更快，新硬件可能扩展可接入的设备类型。",
+        "points": [
+          "替换不丢设置",
+          "脚本编辑器也支持",
+          "今天发布 Nabu Casa 新品"
+        ]
+      }
+    ]
+  }
+}
