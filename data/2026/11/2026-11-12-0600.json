@@ -1,0 +1,373 @@
+{
+  "id": "2026-11-12-0600",
+  "published_at": "2026-11-12T06:00:00+08:00",
+  "headline": "Gemini Decision 1 与 AlphaGenome 2 发布，Runway 开放机器人模型",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Google 推出决策模型 Gemini Decision 1，一次可判 1000 个问题",
+        "summary": "Google 在 Gemini API 推出 Decisions API，背后是专门做判断的多模态模型 Gemini Decision 1。一次请求最多可对 1000 个问题给出快速、带置信度校准的决定，输入支持文字、图片、音频、视频和 PDF，上下文 25.6 万 token。定价为每百万输入 token 0.10 美元、无额外费用，目前可在 AI Studio 和 API 免费试用。",
+        "source_url": "https://x.com/OfficialLoganK/status/2120581433639198885",
+        "time": "2026-11-12T02:16:00+08:00",
+        "handle": "@OfficialLoganK",
+        "impact": "分类、审核、打标签这类批量判断任务有了低价专用模型，做数据清洗和内容审核的团队成本可能明显下降。",
+        "points": [
+          "一次最多判断 1000 个问题",
+          "支持文字、图片、音频、视频、PDF",
+          "上下文 25.6 万 token",
+          "每百万输入 token 0.10 美元"
+        ]
+      },
+      {
+        "title": "DeepMind 发布 AlphaGenome 2，按细胞类型预测基因突变影响",
+        "summary": "Google DeepMind 发布新一代 DNA 序列模型 AlphaGenome 2。它能聚焦到具体细胞类型，预测某个 DNA 变异在不同细胞里会产生什么影响，用来解释为什么同一个单字母突变只在部分细胞里致病。模型通过 API 向学术研究开放。",
+        "source_url": "https://x.com/GoogleDeepMind/status/2120532824465805749",
+        "time": "2026-11-11T23:03:00+08:00",
+        "handle": "@GoogleDeepMind",
+        "impact": "按细胞类型看突变效应，能帮研究者更快理解复杂疾病、寻找药物靶点。",
+        "points": [
+          "新一代 DNA 序列模型",
+          "按细胞类型预测变异影响",
+          "通过 API 向学术研究开放"
+        ]
+      },
+      {
+        "title": "Runway 开放机器人世界动作模型 Praxis-1 权重",
+        "summary": "Runway 向所有人开放 Praxis-1，这是一个把视频预训练转成真实机器人控制的世界动作模型（World Action Model），权重采用 Apache 2.0 协议，可在自己的硬件上运行和微调，并能适配不同形态的机器人。Runway 研究员称它在 NVIDIA RoboLab-120 榜单上同时排名世界动作模型和开源模型第一，每完成一个任务快 15.6 倍、便宜 51 倍。vLLM-Omni 已首日支持。",
+        "source_url": "https://x.com/runwayml/status/2120533081182577116",
+        "time": "2026-11-11T23:04:00+08:00",
+        "handle": "@runwayml",
+        "impact": "开源机器人模型多了一个可商用的强选项，做机器人和具身智能的团队可以直接在自有硬件上微调。",
+        "points": [
+          "权重 Apache 2.0 开放",
+          "视频预训练转机器人控制",
+          "RoboLab-120 榜单第一（自报）",
+          "vLLM-Omni 首日支持"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Perplexity 公布沙箱红队结果：12 个模型尝试逃出虚拟机",
+        "summary": "Perplexity 公开对其 Computer Agent 虚拟机沙箱 SPACE 的红队研究：给 12 个模型两个任务，一是逃出虚拟机拿到宿主机上的凭据，二是绕过网络策略访问被封锁的网址。CEO Aravind Srinivas 总结，这类测试必须明确提示模型去突破隔离；非网络安全专用模型反而比专用版更会找漏洞，例如 GPT 5.6 Sol 强于 GPT 5.6 Sol Cyber。",
+        "source_url": "https://x.com/perplexity_ai/status/2120582674549203004",
+        "time": "2026-11-12T02:21:00+08:00",
+        "handle": "@perplexity_ai",
+        "impact": "给 Agent 搭沙箱的团队需要用明确的逃逸提示做红队测试，不能只靠默认评测。",
+        "points": [
+          "测试 12 个模型的沙箱逃逸能力",
+          "任务含偷取宿主机凭据、绕过网络策略",
+          "通用模型比网络安全专用版更会找漏洞"
+        ]
+      },
+      {
+        "title": "ElevenLabs 峰会：语音 Agent 加入记忆和例行任务",
+        "summary": "ElevenLabs 在纽约峰会上宣布：ElevenAgents 加入记忆（Memory），能记住对话里顺口提到的信息；新增例行任务（Routines），在通话前后自动处理预审、回电、发短信等工作；预览 Interaction Engine，按请求难度在便宜模型和前沿模型之间调度。未来几个月企业还可用自有数据微调其语音合成、语音识别和开源大模型；NVIDIA 同日宣布 Nemotron 模型进入 ElevenAgents。",
+        "source_url": "https://x.com/ElevenLabs/status/2120611975780602296",
+        "time": "2026-11-12T04:17:00+08:00",
+        "handle": "@ElevenLabs",
+        "impact": "语音客服 Agent 正从一问一答走向能记事、能主动跟进，企业部署语音 Agent 的门槛在降低。",
+        "points": [
+          "ElevenAgents 新增记忆和例行任务",
+          "Interaction Engine 按难度调度模型",
+          "企业可微调语音和开源大模型",
+          "NVIDIA Nemotron 进入 ElevenAgents"
+        ]
+      },
+      {
+        "title": "Anthropic 给付费 Claude 用户一次免费全额重置",
+        "summary": "Anthropic 宣布给所有 Pro、Max、Ultra 和 Team 用户一次免费的全额重置，覆盖所有模型和全部限额，可在太平洋时间 12 月 10 日 14:00 前任意时间使用。原因是近期修复了几个比预期多消耗额度的问题。",
+        "source_url": "https://x.com/ClaudeDevs/status/2120275296637321476",
+        "time": "2026-11-11T05:59:58+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "Claude 付费用户可以把这次重置留到最需要额度的一周，过期作废。",
+        "points": [
+          "Pro、Max、Ultra、Team 用户各一次",
+          "覆盖所有模型和限额",
+          "12 月 10 日 14:00（太平洋时间）前有效"
+        ]
+      },
+      {
+        "title": "Gemini API 托管 Agent 支持自带沙箱",
+        "summary": "Google AI Studio 宣布，用 Gemini API 托管 Agent（Managed Agents）开发时，可以接入自托管的执行环境作为沙箱，不必全部跑在 Google 提供的环境里。",
+        "source_url": "https://x.com/GoogleAIStudio/status/2120610219235660183",
+        "time": "2026-11-12T04:10:00+08:00",
+        "handle": "@GoogleAIStudio",
+        "impact": "对数据和执行环境有合规要求的团队，用 Gemini 托管 Agent 时多了自控空间。",
+        "points": [
+          "托管 Agent 可接自托管环境",
+          "开发者自己掌握执行沙箱"
+        ]
+      },
+      {
+        "title": "NVIDIA 发布 1.17 亿参数的 3D 重建模型 Déjà View",
+        "summary": "NVIDIA 发布 Déjà View，可把多角度拍摄的照片还原成 3D 几何结构和相机位置。模型只有 1.17 亿参数，靠循环使用同一个 Transformer 块，在五个基准上追平或超过大 10 倍的模型，计算量相当或更少。",
+        "source_url": "https://x.com/NVIDIAAI/status/2120617173286883692",
+        "time": "2026-11-12T04:38:00+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "小模型做 3D 重建意味着端侧和机器人上也可能跑得动这类能力。",
+        "points": [
+          "照片转 3D 几何和相机位置",
+          "1.17 亿参数",
+          "循环 Transformer 块",
+          "五个基准追平大 10 倍模型（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "SemiAnalysis：AI 支出 45% 花在常驻 Agent 上",
+        "summary": "SemiAnalysis 创始人 Dylan Patel 称，他们公司的 AI 支出已有 45% 用于常驻 Agent（Persistent Agents），主要使用 Perplexity Computer。他认为常驻 Agent 是 AI 用量的下一个突破口，并直言 Claude 和 OpenAI 的同类 Slack Agent 不好用。这是个人观点和公司自报数据。",
+        "source_url": "https://x.com/dylan522p/status/2120617704101155270",
+        "time": "2026-11-12T04:40:00+08:00",
+        "handle": "@dylan522p",
+        "impact": "企业 AI 预算开始向长期在线的 Agent 倾斜，各家 Agent 产品的竞争会转向能不能持续稳定干活。",
+        "points": [
+          "AI 支出 45% 用于常驻 Agent",
+          "主要用 Perplexity Computer",
+          "认为常驻 Agent 是下一个突破口"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Zapier 基准：Fable 5.2 得分更高但每任务贵 4 倍多",
+        "summary": "Zapier 公布自动化基准 AutomationBench 结果：Claude Fable 5.2 得分 51.4%，高于 Sonnet 5.5 的 44.6%，解决任务更多（338 对 294）、平均步数更少（15.7 对 18.4）；但每个任务成本约 4.64 美元，Sonnet 约 1 美元。",
+        "source_url": "https://x.com/zapier/status/2120592416050704775",
+        "time": "2026-11-12T03:00:00+08:00",
+        "handle": "@zapier",
+        "impact": "做自动化流程选模型时要算总账：Fable 更强，但多数日常任务用 Sonnet 更划算。",
+        "points": [
+          "Fable 5.2 51.4%，Sonnet 5.5 44.6%",
+          "Fable 步数更少",
+          "每任务约 4.64 美元对 1 美元"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "从零订阅 Claude 被风控封号的完整经过",
+        "summary": "Gorden Sun 用新注册的 Claude 账号和新注册的新加坡区苹果账号订阅，绑卡支付时先触发新号风控；等待 72 小时后账号被封，和客服沟通一天后被告知再等 24 小时重新激活。",
+        "source_url": "https://x.com/Gorden_Sun/status/2120534090260890104",
+        "time": "2026-11-11T23:08:00+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "准备订阅 Claude 的用户要预留时间，新账号加新支付方式容易被拦。",
+        "points": [
+          "新号加新支付方式触发风控",
+          "72 小时后封号",
+          "申诉后需再等 24 小时激活"
+        ]
+      },
+      {
+        "title": "用强化学习教模型写代码画画",
+        "summary": "头雁解读《Training AI to Paint with Code》：用强化学习让 Qwen 3.5 35B 写 JS 代码来生成图像，而不是直接输出像素。好处是作品本身就是代码，用户可以直接改代码而不用反复重写提示词；训练时按四步循环跑几千次。",
+        "source_url": "https://x.com/alacheng/status/2120482923681821076",
+        "time": "2026-11-11T19:45:00+08:00",
+        "handle": "@alacheng",
+        "impact": "「生成可编辑代码」而不是「生成像素」，给图像生成工具提供了新的交互思路。",
+        "points": [
+          "Qwen 3.5 35B 写 JS 画图",
+          "作品可直接改代码",
+          "四步循环训练数千次"
+        ]
+      },
+      {
+        "title": "多 Agent 不预设角色，用强化学习自己学分工",
+        "summary": "头雁介绍一篇协作式多 Agent 强化学习论文：不提前人为规定每个 Agent 的角色，面对任务时怎么分工、怎么协作都由训练学出来，角色也会动态变化。他认为方向与前 xAI 团队创办的 Humans& 相近。",
+        "source_url": "https://x.com/alacheng/status/2120472857922990350",
+        "time": "2026-11-11T19:05:00+08:00",
+        "handle": "@alacheng",
+        "impact": "多 Agent 系统可能从人工编排走向自动学习分工，减少手写工作流。",
+        "points": [
+          "不预设 Agent 角色",
+          "分工和协作机制靠强化学习学出",
+          "角色动态变化"
+        ]
+      },
+      {
+        "title": "tinyworldformer：在 Pico 2W 上跑世界模型玩游戏",
+        "summary": "头雁介绍 tinyworldformer：它是 DeepMind Dreamer 系列思路的小型模型，目标是在内存和算力都很有限的树莓派 Pico 2W 上自动玩游戏。为了在参数很少的前提下提升效果，作者引入了循环 Transformer（Looped Transformer）。",
+        "source_url": "https://x.com/alacheng/status/2120465307697602581",
+        "time": "2026-11-11T18:35:00+08:00",
+        "handle": "@alacheng",
+        "impact": "世界模型加强化学习也能塞进几块钱的微控制器，适合入门和嵌入式实验。",
+        "points": [
+          "Dreamer 系列小型变体",
+          "运行在 Pico 2W 上",
+          "用循环 Transformer 省参数"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "meta/astryx：Meta 开源、可直接给 Agent 用的设计系统",
+        "summary": "Meta 开源的设计系统 astryx 可以完全自定义，并为 AI Agent 直接调用做了准备，采用 MIT 协议。它今天登上 GitHub Trending 总榜第一，单日约 2,842 星，总星数约 2.48 万。",
+        "source_url": "https://github.com/meta/astryx",
+        "time": "2026-11-12T06:15:00+08:00",
+        "impact": "让 Agent 写前端时有一套现成规范可依，界面风格更统一。",
+        "points": [
+          "Meta 开源设计系统",
+          "面向 Agent 调用",
+          "MIT 协议",
+          "今日约 2,842 星"
+        ]
+      },
+      {
+        "title": "modern-web-guidance：让 AI 按最新网页标准写代码",
+        "summary": "Google Chrome 团队联合 Edge 和 Firefox 推出工具包 modern-web-guidance，在终端一行命令安装，或让 AI 在本地自行检索调用，AI 写前端时就能自动查阅标准范例，开发者不用手动到处查文档。仓库今日约 133 星。",
+        "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "time": "2026-11-11T22:01:00+08:00",
+        "impact": "AI 写的前端代码更可能跟上现行浏览器标准，少用过时写法。",
+        "points": [
+          "Chrome、Edge、Firefox 联合推出",
+          "一行命令安装",
+          "AI 自动查阅最新网页标准范例"
+        ]
+      },
+      {
+        "title": "shadcn/improve：强模型写计划，便宜模型来执行",
+        "summary": "shadcn 的开源工具 improve 用你手上最强的模型审计代码库并写出改进计划，再交给更便宜的模型逐项执行。项目今日在 GitHub Trending 上新增约 333 星，总星数约 1.08 万。",
+        "source_url": "https://github.com/shadcn/improve",
+        "time": "2026-11-12T06:15:00+08:00",
+        "impact": "把贵模型用在「想」、便宜模型用在「做」，能明显压低 AI 编程成本。",
+        "points": [
+          "强模型审计代码、写计划",
+          "便宜模型执行计划",
+          "今日约 333 星"
+        ]
+      },
+      {
+        "title": "billion-context：月级长会话的上下文压缩插件",
+        "summary": "billion-context 是一个上下文压缩插件，作者称 10 万 token 的上下文窗口就能支撑长达数月、累计数十亿 token 的单个会话，token 用量约省 5 倍。今日在 GitHub Trending 上新增约 756 星。",
+        "source_url": "https://github.com/ranxianglei/billion-context",
+        "time": "2026-11-12T06:15:00+08:00",
+        "impact": "长期跑同一个 Agent 会话的用户可以试试，但效果需自行验证。",
+        "points": [
+          "面向月级长会话",
+          "10 万上下文即可",
+          "token 约省 5 倍（作者自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Kaku：为同时跑多个编程 Agent 设计的 Mac 终端",
+        "summary": "Tw93 的开源 Mac 终端 Kaku 针对同时运行多个 AI 编程 Agent 设计：哪个标签页的 Agent 需要你处理，标签上就会亮点，按 Cmd+J 直接跳过去；手机上的远程页面能列出每个标签页及其 Agent 状态。",
+        "source_url": "https://x.com/HiTw93/status/2120531568179749198",
+        "time": "2026-11-11T22:58:00+08:00",
+        "handle": "@HiTw93",
+        "impact": "同时开多个 Claude Code 或 Codex 的人，可以少来回切窗口找谁在等你。",
+        "points": [
+          "多 Agent 标签提醒",
+          "Cmd+J 跳到待处理标签",
+          "手机远程查看 Agent 状态"
+        ]
+      },
+      {
+        "title": "Zapier 开源「编辑委员会」写作 Skill",
+        "summary": "Zapier 营销总监把一个 6 人编辑团队做成了一个 AI Skill 并开源：由策略、编辑、「没耐心的读者」等角色依次审稿，分别检验选题角度和受众、文章结构与收尾、读者能否快速读懂。",
+        "source_url": "https://x.com/zapier/status/2120542085480615943",
+        "time": "2026-11-11T23:40:00+08:00",
+        "handle": "@zapier",
+        "impact": "写作者可以直接拿来给 AI 搭一套多角色审稿流程。",
+        "points": [
+          "6 个审稿角色",
+          "检验角度、结构、可读性",
+          "已开源"
+        ]
+      },
+      {
+        "title": "CoD Weather Data 上线 AIFS 等 AI 气象模式产品",
+        "summary": "美国气象数据站 CoD Weather Data 宣布在模式页面上线 ECMWF AIFS、AIFS 集合预报，以及 NOAA AIGFS、AIGEFS 等 AI 模式的部分产品，同时提供每天 0、6、12、18 时（世界时）的预报探空。",
+        "source_url": "https://x.com/CoDWXData/status/2120578069148680263",
+        "time": "2026-11-12T02:03:00+08:00",
+        "handle": "@CoDWXData",
+        "impact": "AI 气象模式正在进入常用的公开天气图站，普通用户也能方便对比 AI 和传统模式。",
+        "points": [
+          "上线 AIFS、AIFS 集合预报",
+          "含 NOAA AIGFS、AIGEFS",
+          "提供每天四次预报探空"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "iOS 沙箱逃逸漏洞 worse_query 疑似未修，加密资产有风险",
+        "summary": "加密货币交易所 Binance 警告，iOS 漏洞 worse_query 能让恶意 App 读取其他 App 的本地文件，加密钱包的恢复短语、密钥和登录凭据都有风险，影响 iOS 26.7.1、27.0.1 和 27.2。发现者称 iOS 27.2.1 和 27.3 beta 1 仍未修复，也有安全公司认为 27.2.1 能拦住，说法不一；目前没有确认的盗币案例。建议删除侧载或来源不明的 App、更新系统和应用，怀疑中招就把资产转到干净设备上新建的钱包并重置所有登录会话。",
+        "source_url": "https://9to5mac.com/2026/11/11/binance-warns-iphone-crypto-holders-of-security-flaw-researchers-say-remains-unpatched/",
+        "time": "2026-11-12T05:17:00+08:00",
+        "handle": "@9to5mac",
+        "impact": "iPhone 上存加密钱包的用户应立刻清理来源不明的 App，并关注苹果后续补丁。",
+        "points": [
+          "恶意 App 可读其他 App 文件",
+          "影响 iOS 26.7.1、27.0.1、27.2",
+          "27.2.1 是否修复说法不一",
+          "暂无确认盗币案例"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "Gemini 登上 Apple CarPlay",
+        "summary": "Google 开始推送 CarPlay 版 Gemini：在车机屏幕或侧边栏点 Gemini 图标，就能接着手机上的对话继续聊，或用 Gemini Live 语音探讨话题、头脑风暴。",
+        "source_url": "https://x.com/GeminiApp/status/2120626195033473228",
+        "time": "2026-11-12T05:14:00+08:00",
+        "handle": "@GeminiApp",
+        "impact": "iPhone 车主开车时多了一个 Siri 之外的语音 AI 选择。",
+        "points": [
+          "CarPlay 上可用 Gemini",
+          "可接续手机对话",
+          "支持 Gemini Live 语音"
+        ]
+      },
+      {
+        "title": "Cloudflare 试验用新共识算法 QuePaxa 做共识服务",
+        "summary": "Cloudflare 宣布正在构建一个实验性的共识服务，采用此前从未在生产环境部署过的共识算法 QuePaxa。",
+        "source_url": "https://x.com/Cloudflare/status/2120518173292110101",
+        "time": "2026-11-11T22:05:00+08:00",
+        "handle": "@Cloudflare",
+        "impact": "分布式系统研究的新算法开始被大型网络公司实际验证，后续进展值得开发者关注。",
+        "points": [
+          "实验性共识服务",
+          "首次在生产中部署 QuePaxa 算法"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "群晖 DSM 曝 9.8 分漏洞，不用登录就能读写任意文件",
+        "summary": "群晖安全公告 Synology-SA-26:19（严重）：DSM 登录接口（Auth API）存在 SQL 注入漏洞，CVSS 9.8，远程攻击者无需账号即可读写 NAS 上任意文件；同一公告还有 rsync 认证绕过漏洞，8.6 分。官方没有临时缓解办法，只能升级到 DSM 7.4.1-90080-1、7.3.2-86009-5、7.2.2-72806-10 或 7.2.1-69057-13 及以上。同日的 SA-26:18 还修复了 20 多个漏洞。",
+        "source_url": "https://www.synology.com/en-global/security/advisory/Synology_SA_26_19",
+        "time": "2026-11-10T17:06:42+08:00",
+        "impact": "用群晖 NAS 的人应尽快升级 DSM，并避免把管理界面直接暴露在公网。",
+        "points": [
+          "Auth API SQL 注入，CVSS 9.8",
+          "无需登录可读写任意文件",
+          "rsync 认证绕过 8.6 分",
+          "无缓解办法，只能升级"
+        ]
+      },
+      {
+        "title": "Home Assistant 发布 Connect AUX-2",
+        "summary": "Home Assistant 与 Nabu Casa 推出新硬件 Connect AUX-2：可以把老式音响设备接入 Home Assistant，借助 Sendspin 实现全屋同步播放音频，还能通过串口连接更多设备。",
+        "source_url": "https://x.com/home_assistant/status/2120622793922371842",
+        "time": "2026-11-12T05:00:00+08:00",
+        "handle": "@home_assistant",
+        "impact": "想做全屋音频又不想换音响的 Home Assistant 用户多了官方方案。",
+        "points": [
+          "老音响接入 Home Assistant",
+          "Sendspin 全屋同步音频",
+          "支持串口设备"
+        ]
+      },
+      {
+        "title": "Google 钱包支持 Google Home 数字门钥匙",
+        "summary": "9to5Google 报道，安卓上的 Google 钱包开始推送 Google Home 数字钥匙，可以用手机打开支持的智能门锁。",
+        "source_url": "https://x.com/9to5Google/status/2120591919256412520",
+        "time": "2026-11-12T02:58:00+08:00",
+        "handle": "@9to5Google",
+        "impact": "安卓用户可以把家门钥匙和支付卡放在同一个钱包里管理。",
+        "points": [
+          "Google 钱包新增 Home 数字钥匙",
+          "适用于支持的智能门锁"
+        ]
+      }
+    ]
+  }
+}

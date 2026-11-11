@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T18:27:52+08:00",
+  "updated_at": "2026-11-12T06:24:01+08:00",
   "editions": [
+    {
+      "id": "2026-11-12-0600",
+      "published_at": "2026-11-12T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-12-0600.json",
+      "counts": {
+        "x_daily": 10,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 7,
+        "tech": 3,
+        "iot": 3
+      },
+      "headline": "Gemini Decision 1 与 AlphaGenome 2 发布，Runway 开放机器人模型"
+    },
     {
       "id": "2026-11-11-1800",
       "published_at": "2026-11-11T18:00:00+08:00",
