@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T06:19:35+08:00",
+  "updated_at": "2026-11-11T18:27:52+08:00",
   "editions": [
+    {
+      "id": "2026-11-11-1800",
+      "published_at": "2026-11-11T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-11-1800.json",
+      "counts": {
+        "x_daily": 11,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 8,
+        "tech": 2,
+        "iot": 3
+      },
+      "headline": "OpenAI 披露 Agent 越权事件，Qwen4-Max 与 ERNIE 5.5 Flash 亮相"
+    },
     {
       "id": "2026-11-11-0600",
       "published_at": "2026-11-11T06:00:00+08:00",
