@@ -1,0 +1,247 @@
+{
+  "id": "2026-11-13-0600",
+  "published_at": "2026-11-13T06:00:00+08:00",
+  "headline": "黄仁勋辞去英伟达 CEO；Gemini 4 Hydrogen 发布，Anthropic 公开 IPO 财务",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "黄仁勋辞去英伟达 CEO，CFO Colette Kress 任临时 CEO",
+        "summary": "英伟达董事会 11 月 12 日（美国时间）宣布，黄仁勋辞去总裁、首席执行官和董事职务，即刻生效。执行副总裁兼 CFO Colette Kress 出任临时 CEO 并继续兼任 CFO，董事会将从内部和外部寻找正式继任者，并任命前 Synopsys CEO Harvey C. Jones 为首位董事会主席。公告未说明辞职原因，第三财季财报仍按计划在 11 月 17 日（美国时间）发布。",
+        "source_url": "https://x.com/nvidianewsroom/status/2120876571829662014",
+        "time": "2026-11-12T21:49:13+08:00",
+        "handle": "@nvidianewsroom",
+        "impact": "执掌 33 年的创始人突然离任，AI 算力核心供应商的治理和路线图进入观察期，董事会称运营和产品路线图不会中断。",
+        "points": [
+          "黄仁勋辞去总裁、CEO 和董事职务",
+          "CFO Colette Kress 兼任临时 CEO",
+          "Harvey C. Jones 任首位董事会主席",
+          "11 月 17 日财报照常"
+        ]
+      },
+      {
+        "title": "Google 发布 Gemini 4 Hydrogen：主打快和省，全面上线",
+        "summary": "Gemini 4 系列新增 Hydrogen，定位日常编程、Agent 工作流和多模态处理，接替 Gemini 3.8 Flash。官方称完成任务比 3.8 Flash 快 2.5 倍，在 Artificial Analysis 智能指数上超过 Gemini 4 Argon，已在 AI Studio、Gemini API、Gemini App、Google 搜索等上线。Cursor 测得 CursorBench 54.3%（3.8 Flash 为 39.6%）；Zapier 测得 AutomationBench 51.1%，与 Argon 相当但每任务成本约 0.82 美元，约为 Argon 一半。",
+        "source_url": "https://x.com/GoogleDeepMind/status/2120940338869055788",
+        "time": "2026-11-13T02:02:36+08:00",
+        "handle": "@GoogleDeepMind",
+        "impact": "主力快档模型性价比继续上移，日常编程和自动化可以用更便宜的模型达到上一档水平。",
+        "points": [
+          "比 3.8 Flash 快 2.5 倍（官方）",
+          "AA 智能指数超过 Argon",
+          "CursorBench 54.3%",
+          "Zapier 测每任务约 0.82 美元"
+        ]
+      },
+      {
+        "title": "Anthropic 公开 IPO 页面：第三季度收入 170 亿美元，预计 11 月 19 日上市",
+        "summary": "Anthropic 发布 IPO 专题页，披露 2026 年第三季度收入 170 亿美元，同比增长超过 12 倍，年收入超 10 万美元的客户超过 11,900 家，调整后营业利润率 15%。净亏损 233 亿美元，其中 219 亿美元为估值上升带来的非现金费用。FAQ 称若监管放行，预计 11 月 18 日（美东）定价、11 月 19 日在纳斯达克交易，代码 ANT。",
+        "source_url": "https://x.com/AnthropicAI/status/2120841731302154708",
+        "time": "2026-11-12T19:30:46+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "头部大模型公司的收入、增速和亏损结构以招股形式公开，将成为评估 AI 行业商业化的重要参照。",
+        "points": [
+          "Q3 收入 170 亿美元，同比超 12 倍",
+          "净亏损 233 亿美元（含 219 亿非现金）",
+          "预计 11/18 定价、11/19 上市",
+          "纳斯达克代码 ANT"
+        ]
+      },
+      {
+        "title": "Thinking Machines 开放 Inkling 2 Small 权重（Apache 2.0）",
+        "summary": "Thinking Machines 在 Hugging Face 以 Apache 2.0 协议开放 Inkling 2 Small 权重。据 vLLM 与 Together AI 介绍，它是图文输入的混合专家模型，总参数 594B、每 token 激活 17B，上下文最长 100 万 token，面向编程、长程 Agent 任务和视觉，可装进单个 GB200/GB300 节点。vLLM、SGLang 首日支持，Together AI 已上线。",
+        "source_url": "https://x.com/thinkymachines/status/2120982625582195011",
+        "time": "2026-11-13T04:50:38+08:00",
+        "handle": "@thinkymachines",
+        "impact": "开源阵营多了一个可商用、百万上下文的大型 Agent 模型。",
+        "points": [
+          "Apache 2.0 开放权重",
+          "594B 总参数 / 17B 激活（vLLM、Together）",
+          "最长 100 万上下文",
+          "vLLM、SGLang 首日支持"
+        ]
+      },
+      {
+        "title": "OpenAI 推出网络安全产品 Daybreak Defense Factory 与 Red Team",
+        "summary": "Greg Brockman 宣布 Daybreak 系列两款新品：Defense Factory 让 Agent 调查漏洞并开发补丁，交工程师审核；Red Team 用多个协同的 AI Agent 测试 Web 应用、验证已报告的漏洞并核实补丁。",
+        "source_url": "https://x.com/gdb/status/2121004237413142656",
+        "time": "2026-11-13T06:16:31+08:00",
+        "handle": "@gdb",
+        "impact": "前沿模型的攻防能力被打包成企业产品，漏洞修复和渗透测试节奏可能明显加快。",
+        "points": [
+          "Defense Factory：Agent 调查漏洞并写补丁",
+          "Red Team：多 Agent 渗透测试与补丁验证"
+        ]
+      },
+      {
+        "title": "Claude Meetings 测试版：Claude 进视频会议边聊边产出文档",
+        "summary": "Anthropic 推出 Claude Meetings，可以把 Claude 加进团队视频会议，在讨论过程中同步生成文档、白板等成果。首先向 Team 和 Enterprise 方案分批开放测试。",
+        "source_url": "https://x.com/claudeai/status/2120973994191094179",
+        "time": "2026-11-13T04:16:20+08:00",
+        "handle": "@claudeai",
+        "impact": "会议记录和会后整理可交给 AI 实时完成；使用前应告知与会者会议内容会被处理。"
+      },
+      {
+        "title": "Claude Managed Agents 支持自托管（私测）",
+        "summary": "Anthropic 宣布托管 Agent 可自托管并进入私测：Agent 框架、沙箱和会话记录都可以放在自己的云或本地机房，还能自己选择对 Claude 的请求发往哪里。",
+        "source_url": "https://x.com/ClaudeDevs/status/2120938988165091693",
+        "time": "2026-11-13T01:57:14+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "对数据存放位置敏感的企业可以在自有环境里运行 Claude Agent。"
+      },
+      {
+        "title": "World Labs 世界模型 Atlas 向所有人开放并开放 API",
+        "summary": "World Labs 宣布 Atlas 全面开放：可从单张图片生成整个 3D 世界，或用最多 64 张图重建真实环境，导出图片、视频或 3D 高斯泼溅；支撑这些应用的 API 也向开发者和 Agent 开放。",
+        "source_url": "https://x.com/theworldlabs/status/2120942033401717108",
+        "time": "2026-11-13T02:09:20+08:00",
+        "handle": "@theworldlabs",
+        "impact": "世界模型从演示走向可调用的开发者工具。"
+      },
+      {
+        "title": "Mirendil 完成 10 亿美元 A 轮融资",
+        "summary": "Mirendil CEO Behnam Neyshabur 宣布完成 10 亿美元 A 轮融资，由 Kleiner Perkins 和 Clearlake 领投，目标是让科学家「一人顶一个团队」。",
+        "source_url": "https://x.com/bneyshabur/status/2120926172792127675",
+        "time": "2026-11-13T01:06:19+08:00",
+        "handle": "@bneyshabur"
+      },
+      {
+        "title": "Brett Adcock 发布电脑操作模型 Handoff²",
+        "summary": "Brett Adcock 发布新一代电脑操作模型 Handoff²，自称速度是上一代 2 倍，破解验证码能力提升 80%，端到端浏览器任务提升 10%，并称比 Opus 5.5 high 更快更强。",
+        "source_url": "https://x.com/adcock_brett/status/2120922398476451908",
+        "time": "2026-11-13T00:51:19+08:00",
+        "handle": "@adcock_brett",
+        "tag": "自报"
+      },
+      {
+        "title": "Meta Muse 可以替用户打电话",
+        "summary": "Meta 的 Muse 新增代打电话功能，可处理保险、有线电视、预约等电话，先向美国付费订阅用户开放。",
+        "source_url": "https://x.com/alexandr_wang/status/2120930586827391350",
+        "time": "2026-11-13T01:23:51+08:00",
+        "handle": "@alexandr_wang"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "豆包工作接入第三方模型",
+        "summary": "歸藏称豆包工作新增 DeepSeek V4.1 Flash、Kimi、智谱 GLM 等第三方模型，豆包 2.1 Lite 和 DeepSeek V4.1 Flash 只按 0.01 倍率扣积分。他用 DeepSeek V4.1 Flash 配剪辑 Skill 剪了 8 分钟视频，折算约 1 毛 2。",
+        "source_url": "https://x.com/op7418/status/2120829705431744707",
+        "time": "2026-11-12T18:42:00+08:00",
+        "handle": "@op7418"
+      },
+      {
+        "title": "Gemini 4 Carbon 实测：Sonnet 的价格",
+        "summary": "Orange AI 认为 Gemini 4 Carbon 明显强于 DeepSeek Flash，写作更自然，价格只在 Sonnet 档而不是 Opus 档。",
+        "source_url": "https://x.com/oran_ge/status/2120834850597011530",
+        "time": "2026-11-12T19:03:00+08:00",
+        "handle": "@oran_ge"
+      },
+      {
+        "title": "FreeToken：游戏显卡本地跑 290B+ MoE",
+        "summary": "GitHubDaily 介绍的个人电脑推理引擎，把 GPU、CPU 和内存统一调度，运行中可重新分配显存；接口兼容 OpenAI/Anthropic，可接 Claude Code、Codex、OpenCode，帖称已有 1.7 万星。",
+        "source_url": "https://x.com/GitHub_Daily/status/2120864210951561346",
+        "time": "2026-11-12T21:00:00+08:00",
+        "handle": "@GitHub_Daily"
+      },
+      {
+        "title": "su-zine：长文一键排成中文杂志风套图的 Skill",
+        "summary": "把文章链接或文档交给 AI 助手，它会先通读全文并回到原文核对数字和引语，再生成白底留白的中文图文卡片。",
+        "source_url": "https://x.com/GitHub_Daily/status/2120841558748766543",
+        "time": "2026-11-12T19:30:00+08:00",
+        "handle": "@GitHub_Daily"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Claude Code v2.1.323：实验性 Code Mode",
+        "summary": "新增可选的 Code Mode，让 Claude 写 JavaScript 去调用工具，组织可统一关闭；插件可声明适配的 Claude Code 版本范围；Bash 放行规则的变量值里含 * 时会在启动时警告。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+        "time": "2026-11-13T06:12:13+08:00",
+        "impact": "Code Mode 是工具调用方式的新尝试，安全敏感的组织可先统一关闭再评估。"
+      },
+      {
+        "title": "SGLang 发布 v1.0，并开源 Trainium 版",
+        "summary": "SGLang v1.0 把关键路径改用 Rust 重写，加入零开销调度、投机解码、megakernel、统一显存和分级缓存，称已有 330 多家机构采用、首日支持 217 个模型。同日开源 SGLang-Neuron v0.1.0，可在 AWS Trainium2/3 上运行。",
+        "source_url": "https://x.com/sgl_project/status/2120944999416377762",
+        "time": "2026-11-13T02:21:07+08:00",
+        "handle": "@sgl_project"
+      },
+      {
+        "title": "openai/codex-security：Codex 安全扫描 CLI 和 SDK",
+        "summary": "OpenAI 开源的命令行工具和 TypeScript SDK，用来查找、验证并修复安全漏洞，GitHub 今日约 663 星。",
+        "source_url": "https://github.com/openai/codex-security",
+        "time": "2026-11-13T06:19:00+08:00"
+      },
+      {
+        "title": "NVIDIA/SkillSpector：安装前扫描 Agent Skill 风险",
+        "summary": "在安装前检查 Claude Code、Codex 和 MCP Skill 里的漏洞、恶意代码、提示词注入、数据外泄和供应链风险，GitHub 今日约 302 星。",
+        "source_url": "https://github.com/NVIDIA/SkillSpector",
+        "time": "2026-11-13T06:19:00+08:00"
+      },
+      {
+        "title": "CopilotKit/OpenBot：每个 AI 同事一台独立电脑",
+        "summary": "开源 AI 同事框架，每个 Agent 有自己的浏览器、文件和工具，动作执行前决策、执行后记录，可接任意 AG-UI Agent，GitHub 今日约 291 星。",
+        "source_url": "https://github.com/CopilotKit/OpenBot",
+        "time": "2026-11-13T06:19:00+08:00"
+      },
+      {
+        "title": "Wharton 开源 Primer 教学模拟系统",
+        "summary": "Ethan Mollick 团队发布基于 Agent 的系统：老师口述课程，即可得到给学生玩的教学模拟；论文、提示词和代码全部开放。",
+        "source_url": "https://x.com/emollick/status/2121001056637431873",
+        "time": "2026-11-13T06:03:52+08:00",
+        "handle": "@emollick"
+      }
+    ],
+    "tech": [
+      {
+        "title": "Google 智能眼镜开售：395 美元起，支持 iPhone",
+        "summary": "Google 推出 Intelligent Eyewear 眼镜，今天开始预订、12 月 10 日发货，支持「Hey Gemini」唤醒，并通过 Made for iPhone 认证可配合 iOS 使用。",
+        "source_url": "https://x.com/9to5Google/status/2120879340011335861",
+        "time": "2026-11-12T22:00:00+08:00",
+        "handle": "@9to5Google"
+      },
+      {
+        "title": "Pixel 11 月更新后部分机型相机异常",
+        "summary": "Android Authority 报道，部分 Pixel 10、Pixel 11 用户在 11 月更新后遇到相机问题，文章给出了可尝试的解决办法。",
+        "source_url": "https://x.com/AndroidAuth/status/2120989583051743463",
+        "time": "2026-11-13T05:18:00+08:00",
+        "handle": "@AndroidAuth"
+      },
+      {
+        "title": "任天堂 1 月停止支持「通过 Apple 登录」",
+        "summary": "MacRumors 报道，任天堂将在明年 1 月停止支持「通过 Apple 登录」，用这种方式登录的用户需要提前换绑其他登录方式。",
+        "source_url": "https://x.com/MacRumors/status/2120902472185323601",
+        "time": "2026-11-12T23:32:00+08:00",
+        "handle": "@MacRumors"
+      },
+      {
+        "title": "Cloudflare Workers 限流支持按权重扣额度",
+        "summary": "Rate Limiting 绑定的 limit() 可传入 delta，一次调用可以扣多个单位，方便区分便宜查询和重数据库查询。",
+        "source_url": "https://x.com/CloudflareDev/status/2120918055882461192",
+        "time": "2026-11-13T00:34:00+08:00",
+        "handle": "@CloudflareDev"
+      }
+    ],
+    "iot": [
+      {
+        "title": "苹果 HomeView 明天上市，首个安全更新已推送",
+        "summary": "299 美元的智能家居中枢 HomeView 发售前已推送 HomeView 27.2 软件（含安全修复）；苹果另外说明了摄像头数据如何保持私密，并称下月更新修复 Siri 问题。",
+        "source_url": "https://x.com/9to5mac/status/2120988676977012879",
+        "time": "2026-11-13T05:14:00+08:00",
+        "handle": "@9to5mac"
+      },
+      {
+        "title": "Home Assistant 新增「动作历史」页",
+        "summary": "可以查看每个动作何时、为何被触发、作用于哪些设备，并支持搜索和筛选。",
+        "source_url": "https://x.com/home_assistant/status/2120916570645966906",
+        "time": "2026-11-13T00:28:00+08:00",
+        "handle": "@home_assistant"
+      },
+      {
+        "title": "Feedly 推出免费威胁情报 Skill",
+        "summary": "/track-cyberattack 输入攻击事件名称，即可生成追踪看板、报告、高管简报、STIX 2.1 数据包和 ATT&CK Navigator 图层。",
+        "source_url": "https://x.com/feedly/status/2120941830355165345",
+        "time": "2026-11-13T02:08:00+08:00",
+        "handle": "@feedly"
+      }
+    ]
+  }
+}
