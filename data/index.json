@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T06:24:01+08:00",
+  "updated_at": "2026-11-12T18:25:58+08:00",
   "editions": [
+    {
+      "id": "2026-11-12-1800",
+      "published_at": "2026-11-12T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-12-1800.json",
+      "counts": {
+        "x_daily": 4,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 4,
+        "tech": 0,
+        "iot": 1
+      },
+      "headline": "百度推出模型交易平台词元所，vLLM 公布 MiniMax 在 Vera Rubin 上的成绩"
+    },
     {
       "id": "2026-11-12-0600",
       "published_at": "2026-11-12T06:00:00+08:00",

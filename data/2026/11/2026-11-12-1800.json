@@ -1,0 +1,201 @@
+{
+  "id": "2026-11-12-1800",
+  "published_at": "2026-11-12T18:00:00+08:00",
+  "headline": "百度推出模型交易平台词元所，vLLM 公布 MiniMax 在 Vera Rubin 上的成绩",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "百度世界 2026 推出模型交易平台「词元所」",
+        "summary": "百度在百度世界 2026 上推出 Token Exchange（词元所），定位为连接模型服务商和客户的中立模型交易平台，客户可以在一处并排比较不同模型、查看价格和性能数据并直接调用；有中文博主看过网站后指出，目前上架的主要是百度自家模型和国内开源模型。李彦宏在演讲中把 AI 技术栈分为芯片、云、模型和 Agent 四层，认为企业 Token 花费越来越多、收入却没跟上，是因为「换了电机没改工厂」，要转向「智能组织」。同场亮相的 ERNIE 5.5 Flash Preview 总参数 280B、每个 token 激活 14B。",
+        "source_url": "https://x.com/Baidu_Inc/status/2120773996698546653",
+        "time": "2026-11-12T15:01:00+08:00",
+        "handle": "@Baidu_Inc",
+        "impact": "国内模型调用开始出现统一比价入口，开发者选模型更方便，但平台由有自家模型的百度运营，是否中立还要看实际排名和规则。",
+        "points": [
+          "词元所：中立的模型比价与调用平台",
+          "目前主要上架百度和国内开源模型",
+          "李彦宏提出「智能组织」",
+          "ERNIE 5.5 Flash Preview 280B 总参数、14B 激活"
+        ]
+      },
+      {
+        "title": "vLLM：MiniMax-M3.1-Flash 在 Vera Rubin 上吞吐达 GB300 的 10.2 倍",
+        "summary": "vLLM 公布 MiniMax-M3.1-Flash 在 NVIDIA Vera Rubin NVL72 上的推理成绩：在 SemiAnalysis 的 AgentX 测试中，同样每用户约 546 token/秒（P90）的条件下，单芯片总吞吐（含缓存）是 GB300 NVL72 的 10.2 倍；每用户 376 token/秒时约为 6.5 倍。数据为 vLLM 自测。",
+        "source_url": "https://x.com/vllm_project/status/2120659134655918327",
+        "time": "2026-11-12T07:25:00+08:00",
+        "handle": "@vllm_project",
+        "impact": "给计划采购下一代 NVIDIA 机架的团队一个早期参考，不过只是单一模型的自测数据，实际收益还要看各自负载。",
+        "points": [
+          "同等每用户速度下单芯片吞吐 10.2 倍",
+          "对比对象为 GB300 NVL72",
+          "测试为 SemiAnalysis AgentX"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "SGLang 发布第四季度多硬件路线图，支持 10 多类加速器",
+        "summary": "开源推理引擎 SGLang 公布第四季度多硬件路线图：目前已能在 10 多类加速器上运行，并把插件系统作为正式路径，新硬件后端可以在主仓库之外独立接入。路线图同时列出了与 NVIDIA、AMD 等主线后端的本季度重点。",
+        "source_url": "https://x.com/sgl_project/status/2120682992461058328",
+        "time": "2026-11-12T09:00:00+08:00",
+        "handle": "@sgl_project",
+        "impact": "想在非 NVIDIA 硬件上部署开源模型的团队，可选的成熟推理框架更多了。",
+        "points": [
+          "已支持 10 多类加速器",
+          "新后端可用插件在主仓库外接入",
+          "列出 NVIDIA、AMD 等后端的季度重点"
+        ]
+      },
+      {
+        "title": "Google Cloud 第八代 TPU 新增 8tx 和 8i Max",
+        "summary": "Google Cloud 称本周扩充了第八代 TPU 产品线，新增 8tx 和 8i Max 两款系统，并放出了相关 AI 基础设施发布的回放。官方帖子没有给出详细规格。",
+        "source_url": "https://x.com/googlecloud/status/2120683167040377236",
+        "time": "2026-11-12T09:00:00+08:00",
+        "handle": "@googlecloud",
+        "impact": "Google 继续加码自研 AI 芯片，云上训练和推理在 GPU 之外多了选择，具体性价比还要等规格公布。",
+        "points": [
+          "第八代 TPU 新增两款系统",
+          "型号为 8tx 和 8i Max",
+          "详细规格未在帖子中公布"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "歸藏用 Fable 5.2 一个下午做出 3D 动作游戏",
+        "summary": "中文博主歸藏用 Claude Fable 5.2 花一个下午、约 45 亿 token 做出一个 3D 动作游戏，模型、场景、动作设计和性能优化都由模型完成。整个游戏最后打包成一个约 30MB 的 HTML 文件，可以在线试玩。数据为作者自报。",
+        "source_url": "https://x.com/op7418/status/2120694045299327187",
+        "time": "2026-11-12T09:43:00+08:00",
+        "handle": "@op7418",
+        "impact": "说明前沿模型已能独立完成小型游戏的完整制作，个人开发者做原型的门槛进一步降低，但 token 花费也不低。",
+        "points": [
+          "一个下午、约 45 亿 token",
+          "建模、场景、动作和优化都由模型完成",
+          "最终是约 30MB 的单个 HTML"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "传张一鸣称字节最早 2029 年追平 OpenAI 和 Anthropic",
+        "summary": "据中文博主 Max For AI 转述，字节跳动创始人张一鸣在近期面向 AI 团队的全员会上表示，字节有能力与 OpenAI、Anthropic 竞争，但真正追平前沿技术最早也要到 2029 或 2030 年。这是内部讲话的转述，字节没有公开确认。",
+        "source_url": "https://x.com/MaxForAI/status/2120799877474975855",
+        "time": "2026-11-12T16:44:00+08:00",
+        "handle": "@MaxForAI",
+        "impact": "如属实，说明国内头部公司对与美国前沿模型的差距判断相当保守，还要看字节后续的模型发布节奏。",
+        "points": [
+          "内部全员会讲话转述",
+          "认为字节有能力与头部实验室竞争",
+          "追平前沿最早要到 2029～2030 年"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Anthropic 路演：今年首次用上 AMD GPU，Mythos 三天完成适配",
+        "summary": "Orange AI 引用 Anthropic 上市路演视频里的说法：Anthropic 今年第一次开始使用 AMD GPU。以前接入一个新芯片平台要几十名工程师干几个月，这次交给 Mythos，三天就让 Claude 在 AMD 上跑起来，几乎没有人工介入，内核基本都由 Claude 移植或编写。",
+        "source_url": "https://x.com/oran_ge/status/2120669369013555248",
+        "time": "2026-11-12T08:05:00+08:00",
+        "handle": "@oran_ge",
+        "impact": "如果模型能自己完成新芯片适配，AI 公司换用多家芯片的成本会大幅下降，NVIDIA 的软件生态壁垒可能被削弱。",
+        "points": [
+          "Anthropic 今年首次使用 AMD GPU",
+          "Mythos 三天完成 Claude 在 AMD 上的适配",
+          "内核基本由 Claude 移植或编写"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "SubWM：用隐形水印检测模型蒸馏",
+        "summary": "中文博主头雁介绍了一种检测模型被蒸馏的隐形水印方法 SubWM。和现有的蒸馏检测器相比，它更稳健，能区分不同的水印密钥，对训练领域以外的提示也能可靠识别。起因是各家模型都说自己没有蒸馏，外界却普遍怀疑。",
+        "source_url": "https://x.com/alacheng/status/2120812595959546277",
+        "time": "2026-11-12T17:35:00+08:00",
+        "handle": "@alacheng",
+        "impact": "模型厂商有了更可靠的手段证明自家输出被拿去蒸馏，围绕蒸馏的争议今后可能更多靠技术证据说话。",
+        "points": [
+          "面向模型蒸馏的隐形水印",
+          "可区分不同水印密钥",
+          "对领域外提示也能识别"
+        ]
+      },
+      {
+        "title": "郭宇自建 iOS/macOS 极速构建服务，CI 从 5 分钟缩到半分钟",
+        "summary": "中文博主郭宇因为 AI 写代码太快、CI 太慢，自己做了一个 macOS/iOS 构建服务，支持 Agent 直接操作、模拟器截图和录屏、TestFlight 与应用商店发布。他称自家 App 的构建时间从约 5 分钟缩到 25～30 秒，准备公开发布、名额有限。",
+        "source_url": "https://x.com/turingou/status/2120716134832079053",
+        "time": "2026-11-12T11:11:00+08:00",
+        "handle": "@turingou",
+        "impact": "AI 写代码提速后，构建和测试成了新瓶颈，面向 Agent 的 CI 服务可能成为独立开发者的新需求。",
+        "points": [
+          "支持 Agent 操作和模拟器截图录屏",
+          "可直接发布 TestFlight 和应用商店",
+          "构建时间从约 5 分钟降到 25～30 秒"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "microsoft/TokenEconomizer：让编程 Agent 少走弯路、省 token",
+        "summary": "微软开源的 TokenEconomizer 不换模型、不改 Agent，而是从项目里跑过的会话中总结经验：Agent 原地打转时请裁判模型提醒换思路，几次会话都没用过的工具下次不再加载，反复踩的坑总结成规矩提前告诉 Agent。团队在 SWE-Bench 的 277 个任务上测了 5 种 Agent 和模型组合，平均成本降低 18.4%～30.9%。它支持 Claude Code、Codex、GitHub Copilot CLI 和 Pi，学到的经验只存在本机。",
+        "source_url": "https://github.com/microsoft/TokenEconomizer",
+        "time": "2026-11-12T18:00:00+08:00",
+        "impact": "常年在固定项目里用编程 Agent 的人，可以不换工具就把额度消耗压下来一截。",
+        "points": [
+          "从历史会话总结经验，不改模型和 Agent",
+          "SWE-Bench 277 个任务平均省 18.4%～30.9%",
+          "支持 Claude Code、Codex、Copilot CLI、Pi",
+          "经验只存本机"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "vercel-labs/agent-browser：给 AI Agent 用的浏览器自动化命令行",
+        "summary": "Vercel Labs 的开源工具 agent-browser 让 AI Agent 通过命令行操作浏览器，完成打开网页、点击、填写等自动化任务。它今天在 GitHub Trending 新增约 708 星，总星数约 5 万。",
+        "source_url": "https://github.com/vercel-labs/agent-browser",
+        "time": "2026-11-12T18:00:00+08:00",
+        "impact": "给自己的 Agent 加上网页操作能力时，多了一个轻量、命令行友好的现成选择。",
+        "points": [
+          "面向 AI Agent 的浏览器自动化 CLI",
+          "今日约 708 星",
+          "总星数约 5 万"
+        ]
+      },
+      {
+        "title": "experiential：开源零加价模型网关",
+        "summary": "experiential 是一个开源的模型网关，不对调用加价，支持自带密钥（BYOK）、自托管模型和 1000 多个市场模型。它会根据实际流量学习，帮用户降低成本并推荐更合适的模型。今天在 GitHub Trending 新增约 589 星。",
+        "source_url": "https://github.com/experientiallabs/experiential",
+        "time": "2026-11-12T18:00:00+08:00",
+        "impact": "同时用多家模型的团队，可以自己搭一层统一入口，不必把调用和数据交给付费中转商。",
+        "points": [
+          "零加价的模型网关",
+          "支持 BYOK、自托管和 1000 多个模型",
+          "按流量学习降本和推荐模型"
+        ]
+      },
+      {
+        "title": "Hermes Agent 插件黑客松收到近 1,000 份作品",
+        "summary": "Nous Research 宣布 Hermes Agent 插件黑客松已经截止，共收到近 1,000 份参赛作品。评委正在筛选前 10 名，获奖者会收到邮件通知。",
+        "source_url": "https://x.com/NousResearch/status/2120715518243987685",
+        "time": "2026-11-12T11:09:00+08:00",
+        "handle": "@NousResearch",
+        "impact": "Hermes Agent 的插件生态正在快速扩张，后续获奖插件值得 Hermes 用户留意。",
+        "points": [
+          "黑客松已截止",
+          "近 1,000 份作品",
+          "评委正在选前 10 名"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "ha-mcp：用 Claude、ChatGPT 直接配置 Home Assistant",
+        "summary": "开源项目 ha-mcp 让 Claude、ChatGPT 等 AI 助手可以直接配置和自动化 Home Assistant，比如管理设备、编写自动化规则。它今天在 GitHub Trending 新增约 645 星，总星数约 7,600。",
+        "source_url": "https://github.com/homeassistant-ai/ha-mcp",
+        "time": "2026-11-12T18:00:00+08:00",
+        "impact": "不熟悉 YAML 的智能家居用户，可以用对话方式搭自动化，但给 AI 开放家居控制权限前要想清楚范围。",
+        "points": [
+          "让 AI 助手配置和自动化 Home Assistant",
+          "支持 Claude、ChatGPT 等",
+          "今日约 645 星"
+        ]
+      }
+    ]
+  }
+}
