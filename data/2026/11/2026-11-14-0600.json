@@ -1,0 +1,369 @@
+{
+  "id": "2026-11-14-0600",
+  "published_at": "2026-11-14T06:00:00+08:00",
+  "headline": "OpenAI 推出 ChatGPT Wallet，llama.cpp 发布 1.0，DeepSeek 开放 App 全部能力",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 推出 ChatGPT Wallet，dot 可在用户批准后代为付款",
+        "summary": "OpenAI 宣布，ChatGPT Wallet 从今天起向美国 Pro 订阅用户的 dot（OpenAI 的云端常驻助理）推送，dot 可以在用户批准后代为完成购买。官方称，Agent 付款时拿不到用户真实的卡片信息，每一笔购买都要先通过安全验证。Greg Brockman 补充，合作方是美国运通、万事达和 Visa。",
+        "source_url": "https://x.com/ChatGPT/status/2121283151729496235",
+        "time": "2026-11-14T00:44:49+08:00",
+        "handle": "@ChatGPT",
+        "impact": "Agent 代付开始走卡组织的正式通道，消费类 Agent 产品接下来要比拼授权和风控设计。",
+        "points": [
+          "先向美国 Pro 订阅用户的 dot 推送",
+          "每笔购买都要用户批准并通过安全验证",
+          "Agent 拿不到真实卡片信息",
+          "合作方：美国运通、万事达、Visa"
+        ]
+      },
+      {
+        "title": "llama.cpp 发布 v1.0.0，本地推理库有了稳定 API",
+        "summary": "本地推理库 llama.cpp 和底层张量库 ggml 同时发布 v1.0.0，今后公共 C API 出现不兼容改动就升主版本号，新增功能和模型支持只升次版本号。这一版删除了 35 个已弃用函数，把 NextN（投机解码）API 并入 llama.h，新增 FP8 KV 缓存和可设 CPU 分担比例的 MoE 专家缓存。llama-server 加固了 SSRF、CORS、DNS 重绑定等防护，并新增 OpenAI 兼容的 /v1/audio/speech 语音接口；新支持 Kimi-K3.1-Pro、Ripple-65B-Preview 等架构。",
+        "source_url": "https://x.com/ggerganov/status/2121246103312212124",
+        "time": "2026-11-13T22:17:36+08:00",
+        "handle": "@ggerganov",
+        "impact": "依赖 llama.cpp 的本地 AI 应用有了稳定的接口承诺，升级更可控；还在用旧接口的项目需要按新版迁移。",
+        "points": [
+          "llama.cpp 与 ggml 同步发布 v1.0.0，按语义化版本管理",
+          "删除 35 个弃用函数，NextN API 并入 llama.h",
+          "新增 FP8 KV 缓存和 MoE 专家缓存",
+          "llama-server 加固 SSRF/CORS/DNS 重绑定防护"
+        ]
+      },
+      {
+        "title": "DeepSeek 把 App 的全部能力开放到 API",
+        "summary": "DeepSeek 宣布，App 背后的联网搜索、深度思考搜索、文件解析、读取链接、内容安全和语音等能力都能通过 API 调用，内置功能加几个参数即可打开，OCR、语音识别（ASR）、语音合成（TTS）也能单独调用。官方同时开源了聊天前端演示 deepseek-ai/chat-demo，可导入从 DeepSeek 导出的聊天记录，API 密钥和对话只保存在浏览器本地。文档显示这些功能支持 Messages、Responses 和 Chat Completions 三种协议；面向公众提供服务时，文档要求开启内容安全参数。",
+        "source_url": "https://x.com/deepseek_ai/status/2121247896918253875",
+        "time": "2026-11-13T22:24:44+08:00",
+        "handle": "@deepseek_ai",
+        "impact": "开发者用一套 API 就能做出接近 DeepSeek App 的体验，中文搜索问答和语音应用的开发门槛进一步降低。",
+        "points": [
+          "搜索、读链接、文件解析、内容安全、语音全部开放",
+          "OCR、ASR、TTS 可单独调用",
+          "开源聊天前端演示，可导入聊天记录",
+          "支持 Messages、Responses、Chat Completions 三种协议"
+        ]
+      },
+      {
+        "title": "Google Antigravity 上线动态工作流，用脚本调度子 Agent",
+        "summary": "Google Antigravity 推出动态工作流（Dynamic Workflows）：输入 /run-workflow，Agent 会写一段 Python 脚本，按并行或先后顺序调度多个子 Agent，并规定结构化的交接内容，用确定的控制流代替单靠提示词推进时的跑偏。脚本运行前可以审阅，也可以保存下来反复运行。Varun Mohan 说这是内部用得很多的功能，以后模型不需要命令也能自己决定何时启用，用来调度 Hydrogen 和 Carbon。",
+        "source_url": "https://x.com/antigravity/status/2121327669534933025",
+        "time": "2026-11-14T03:41:43+08:00",
+        "handle": "@antigravity",
+        "impact": "多 Agent 协作从靠提示词变成可审阅、可复用的脚本，团队更容易复现和排查 Agent 流程。",
+        "points": [
+          "/run-workflow 让 Agent 生成编排脚本",
+          "并行和顺序调度子 Agent，结构化交接",
+          "运行前可审阅，可保存复用"
+        ]
+      },
+      {
+        "title": "Thinking Machines 公开 Inkling 2 Small 的 4 位训练方案",
+        "summary": "Thinking Machines 在 Connectionism 博客介绍，Inkling 2 Small 从预训练第一步到最后的强化学习采样，专家层前向计算都用 NVFP4（4 位），并配专用内核；反向传播用 MXFP8，配合重新量化和随机舍入来减少梯度偏差。在最大规模的任务上，这套方案比全程 MXFP8 预训练快 8%、强化学习快 20%；团队也提到，最初全部改用 NVFP4 时精度损失过大。Mira Murati 说，这是把预训练从数周缩短到 68 小时的多项改进之一，训练在 NVIDIA GB300 上进行。",
+        "source_url": "https://x.com/thinkymachines/status/2121353292878110868",
+        "time": "2026-11-14T05:23:32+08:00",
+        "handle": "@thinkymachines",
+        "impact": "给在 Blackwell 上做低精度训练的团队一份可参考的取舍：前向压到 4 位，反向保留 8 位。",
+        "points": [
+          "前向用 NVFP4，反向用 MXFP8",
+          "比全程 MXFP8：预训练快 8%，强化学习快 20%",
+          "全程 NVFP4 精度损失过大，未采用",
+          "预训练从数周缩短到 68 小时（多项改进合计）"
+        ]
+      },
+      {
+        "title": "Sierra 发布个人 Agent 协议 Poppy 1.0",
+        "summary": "Sierra 发布个人 Agent 协议（Personal Agent Protocol，简称 Poppy）1.0 版，用来让个人 AI Agent 代用户与商家打交道。官方称，Meta 的 AI Agent Muse 的所有用户已经用上这一协议，Shopify 上的每个商家默认开启，另有 100 多家设计合作伙伴支持。",
+        "source_url": "https://x.com/SierraPlatform/status/2121296788766519431",
+        "time": "2026-11-14T01:39:00+08:00",
+        "handle": "@SierraPlatform",
+        "impact": "个人 Agent 与商家对接开始有共同协议，Shopify 默认开启让覆盖面一开始就不小；与其他 Agent 协议能否互通还要看后续。",
+        "points": [
+          "Poppy 1.0 正式发布",
+          "Meta Muse 全部用户已接入",
+          "Shopify 商家默认开启，100 多家合作伙伴"
+        ]
+      },
+      {
+        "title": "Perplexity 把多 Agent 协作 Teammates 带到 Mac",
+        "summary": "Perplexity 宣布，Max 订阅用户现在可以在 Mac 应用里使用 Teammates。Teammates 是替用户干活的 Agent，可以单独完成任务，也能几个一起协作，处理测试（QA）、客服、调研和增长营销等工作。Aravind Srinivas 另称，Perplexity 的决策模型在 OpenRouter 上每月处理约 10 亿次请求，并在稳定增长。",
+        "source_url": "https://x.com/perplexity_ai/status/2121294533879267683",
+        "time": "2026-11-14T01:30:03+08:00",
+        "handle": "@perplexity_ai",
+        "impact": "多 Agent 协作从网页走到桌面客户端，Max 用户可以直接在 Mac 上分派长任务。",
+        "points": [
+          "Teammates 上线 Mac 原生应用，限 Max 订阅",
+          "可单独或多个 Agent 协作",
+          "决策模型在 OpenRouter 月请求约 10 亿次（自报）"
+        ]
+      },
+      {
+        "title": "Anthropic 给出构建 AI 安全评测的 10 条建议",
+        "summary": "Anthropic 在工程博客总结安全评测的做法：同时请领域专家和方法专家参与，在断网沙箱里运行并实时监控，事先登记分析方案（preregistration），用成对比较减少样本噪声，按类别报告结果并附置信区间。文中提到，多轮 API 评测的置信区间可能超过 ±10 个百分点，区间够宽时，两个模型的差距可能只是抽样噪声，应如实说明。",
+        "source_url": "https://x.com/AnthropicAI/status/2121317227618340990",
+        "time": "2026-11-14T03:00:13+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "给评估模型安全性的团队一套可对照的清单，也提醒读者看系统卡里的安全分数时要看置信区间。",
+        "points": [
+          "领域专家与方法专家共同设计",
+          "断网沙箱运行并实时监控",
+          "事先登记分析方案，成对比较",
+          "按类别报告并附置信区间"
+        ]
+      },
+      {
+        "title": "Cognition 推出 Devin Apps：在 Devin 云电脑上跑私有应用",
+        "summary": "Cognition 推出 Devin Apps：直接运行在 Devin 云端电脑上的私有 Web 应用，可以分享给他人。官方定位是内部工具、预览部署，以及对 Devin 自身的扩展。",
+        "source_url": "https://x.com/cognition/status/2121255137914077300",
+        "time": "2026-11-13T22:53:30+08:00",
+        "handle": "@cognition",
+        "impact": "Coding Agent 的产出从代码变成可直接使用的应用，适合团队快速做内部工具。",
+        "points": [
+          "应用运行在 Devin 云端电脑上",
+          "私有、可分享",
+          "用于内部工具、预览部署和扩展 Devin"
+        ]
+      },
+      {
+        "title": "SGLang 加入 NVIDIA AI Enterprise",
+        "summary": "开源推理引擎 SGLang 成为 NVIDIA AI Enterprise 的一部分：基于 SGLang 的 NVIDIA NIM 认证微服务提供经过验证的容器、按负载调优的配置和安全维护。SGLang Cookbook 的调优结果会用于 NIM 配置，发现的问题也会回馈上游。",
+        "source_url": "https://x.com/sgl_project/status/2121302041675043040",
+        "time": "2026-11-14T01:59:53+08:00",
+        "handle": "@sgl_project",
+        "impact": "企业可以用有厂商支持的方式部署 SGLang，开源推理引擎进入正式采购清单。",
+        "points": [
+          "NIM 认证微服务以 SGLang 为引擎",
+          "提供验证过的容器和安全维护",
+          "调优结果回馈上游开源项目"
+        ]
+      },
+      {
+        "title": "计算生物学 Agent 评测 FrontierBioML：最高 40.3 分",
+        "summary": "Valen Labs 发布 FrontierBioML：25 个计算生物学方向的长程机器学习任务，单次最长 6 小时，Agent 提交预测脚本后在封存的测试集上打分，共测了 11 个模型。目前 Claude Mythos 5.2 最高（40.3 分），其后是 Gemini 4 Carbon（39.0）和 Gemini 4 Argon（36.8）。任务已上线 Prime Intellect 的 Environments Hub。",
+        "source_url": "https://x.com/dominik_scherm/status/2121299871298912582",
+        "time": "2026-11-14T01:51:15+08:00",
+        "handle": "@dominik_scherm",
+        "impact": "最强 Agent 也只拿到四成分数，长时间科研任务仍是 Agent 的明显短板。",
+        "points": [
+          "25 个任务，单次最长 6 小时",
+          "封存测试集打分，测了 11 个模型",
+          "最高分 Claude Mythos 5.2 40.3/100"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Claude Meetings 把客户当「外部访客」防着",
+        "summary": "宝玉转述一位用户的反馈：在一场客户会议里，Claude Meetings 把所有不属于本组织的人都当成需要防备的外部访客，几乎全程不参与，而这些「外部人员」恰恰是客户、也是开会的目的。他的看法是，AI 把客户当风险来防，就等于在用户最需要它的时候袖手旁观。",
+        "source_url": "https://x.com/dotey/status/2121290779427520520",
+        "time": "2026-11-14T01:15:08+08:00",
+        "handle": "@dotey",
+        "impact": "企业部署会议 Agent 时，要先检查「外部参与者」的默认处理方式是否符合业务场景。",
+        "points": [
+          "会议 Agent 默认把组织外成员当外部访客",
+          "客户会议场景下几乎不参与",
+          "默认权限需要按场景调整"
+        ]
+      },
+      {
+        "title": "XTX 的 Atlas Wang 谈递归自我改进与量化交易",
+        "summary": "头雁摘出 XTX 的 Atlas Wang 一份长文的要点：递归自我改进（RSI）的核心是不断找到有独立预测价值的新 Alpha，而不是反复调参；要跳出人预先设定的搜索空间，找到与现有信号互补、扣除成本后仍能改善组合的新策略。方法上强调「Agent 提想法、做实验、按结果修改」的自动研究循环，以及独立验证防止过拟合。",
+        "source_url": "https://x.com/alacheng/status/2121203391347249631",
+        "time": "2026-11-13T19:27:53+08:00",
+        "handle": "@alacheng",
+        "impact": "为想用 Agent 做自动化研究的团队提供了一个可落地的评价标准：看扣成本后是否真的带来新增收益。",
+        "points": [
+          "RSI 的关键是持续发现新 Alpha",
+          "要跳出人设定的搜索空间",
+          "自动研究循环加独立验证"
+        ]
+      },
+      {
+        "title": "AI Engineer Code Summit 2026 全程梳理",
+        "summary": "meng shao 用一篇 X 长文梳理 AI Engineer Code Summit 2026：两天会议共 31 场主题演讲、超过 18 小时，讲者来自 OpenAI、Anthropic、Google DeepMind、Cloudflare、Cognition、Lovable、Ramp、Amp 等团队。他逐场整理了要点，以及对开发者的启发。",
+        "source_url": "https://x.com/shao__meng/status/2121231816309059821",
+        "time": "2026-11-13T21:20:50+08:00",
+        "handle": "@shao__meng",
+        "impact": "想了解一线团队怎么用 Coding Agent 的开发者，可以用这份梳理快速挑出值得看的演讲。",
+        "points": [
+          "31 场主题演讲，超过 18 小时",
+          "覆盖 OpenAI、Anthropic、DeepMind 等团队",
+          "逐场整理要点和启发"
+        ]
+      },
+      {
+        "title": "logo-design-skill：把设计师做标志的流程写成 Skill",
+        "summary": "这个 Skill 把做标志的流程拆成问需求、找方向、画草图、测试和交付几步，内置 1400 多个真实品牌的矢量标志，用来参考同类设计和检查是否撞脸。它会先想 8～12 个方向，挑 3 个画成矢量图，再测试缩到 16 像素、变单色和反白后是否还看得清，确认方向后才做配色和品牌规范，最后交付 SVG 和各尺寸图标。Claude Code、Codex、Gemini CLI 都能用。",
+        "source_url": "https://x.com/GitHub_Daily/status/2121226589749027289",
+        "time": "2026-11-13T21:00:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "让 AI 做标志从一次出图变成有测试和确认的流程，小团队和个人开发者可以少返工。",
+        "points": [
+          "内置 1400 多个品牌矢量标志作参考",
+          "缩小到 16 像素、单色、反白都要过测试",
+          "交付 SVG 和网站、应用图标"
+        ]
+      },
+      {
+        "title": "UniMate：一句英文描述生成任意骨骼的 3D 动画",
+        "summary": "Gorden Sun 介绍 UniMate：输入英文动作描述，就能驱动不同结构的 3D 骨骼动起来，不限于固定的人体骨架，四足动物、人形角色和自定义骨骼都适用。模型单次生成 2 秒动作并可向后延长，权重已放在 Hugging Face。",
+        "source_url": "https://x.com/Gorden_Sun/status/2121187031522873414",
+        "time": "2026-11-13T18:22:52+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "游戏和 3D 美术可以用文字快速生成多种骨骼的基础动作，减少手动打关键帧。",
+        "points": [
+          "不限人体骨架，四足和自定义骨骼都可用",
+          "单次 2 秒，可向后延长",
+          "模型在 Hugging Face 公开"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent 接入 Modal 推理端点",
+        "summary": "Modal 的推理端点（Modal Endpoints）现在可以通过官方认证插件在 Hermes Agent 中使用，安装命令是 hermes plugins install modal。Nous Research 的 Teknium 确认了这一接入。",
+        "source_url": "https://x.com/Teknium/status/2121296099755565332",
+        "time": "2026-11-14T01:36:16+08:00",
+        "handle": "@Teknium",
+        "impact": "Hermes Agent 用户多了一个按需付费的云端推理来源，不用自己部署 GPU。",
+        "points": [
+          "官方认证插件",
+          "一条命令安装"
+        ]
+      },
+      {
+        "title": "Claude Code v2.1.325：修复 zstd 解码安全问题",
+        "summary": "Claude Code v2.1.325 修复了解码 zstd 压缩响应时的一个安全问题。另外，组织策略拦截请求时，错误信息下方会提示可以用 /rewind 改写消息或用 /clear 继续。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+        "time": "2026-11-14T04:40:01+08:00",
+        "impact": "安全修复版本，使用 Claude Code 的开发者应尽快更新。",
+        "points": [
+          "修复 zstd 压缩响应解码的安全问题",
+          "策略拦截时提示 /rewind 或 /clear"
+        ]
+      },
+      {
+        "title": "DeepMind 开放 WeatherNext 3 背后的两套气象数据集",
+        "summary": "Google DeepMind 开放 WeatherNext 3 所用的两套基础数据集：PARDIG 每 15 分钟估算一次全球降雨，降水识别能力提升 30% 以上；SatWeave 把多颗静止气象卫星的数据合成每 60 分钟更新一次的全球云和风暴图。数据放在 Google Cloud Storage 和 Earth Engine 上，可用于没有地面雷达地区的洪水预警、野火烟雾和太阳能追踪。",
+        "source_url": "https://x.com/GoogleDeepMind/status/2121229774865527097",
+        "time": "2026-11-13T21:12:43+08:00",
+        "handle": "@GoogleDeepMind",
+        "impact": "做降水和临近预报的研究者多了一套全球统一、实时更新的观测数据。",
+        "points": [
+          "PARDIG：每 15 分钟一次全球降雨估算",
+          "SatWeave：多颗静止卫星合成，每小时更新",
+          "可在 Google Cloud Storage 和 Earth Engine 获取"
+        ]
+      },
+      {
+        "title": "Fluid Speech Pro：1B 以下的开源语音识别模型",
+        "summary": "FluidVoice 发布开放权重的语音识别模型 Fluid Speech Pro，支持 25 种语言，面向手机等日常设备。官方称它在 Hugging Face OpenASR 排行榜排第 2、在 1B 以下模型中排第一。Hugging Face 上已有 GGUF、MLX、ONNX 和 Core ML 版本。",
+        "source_url": "https://x.com/FluidVoiceApp/status/2121308183314796772",
+        "time": "2026-11-14T02:24:17+08:00",
+        "handle": "@FluidVoiceApp",
+        "impact": "手机和笔记本上的离线语音转写多了一个小体积选择，录音可以不出设备；排名为官方自报。",
+        "points": [
+          "开放权重，支持 25 种语言",
+          "面向手机等本地设备",
+          "提供 GGUF、MLX、ONNX、Core ML 版本"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "ffmpeg-skill：给编程 Agent 用的本地视频剪辑工具",
+        "summary": "ffmpeg-skill 提供 42 个 FFmpeg 工具，附机器可读的调用约定和 MCP 服务器，可在 Claude Code、Cursor、Codex 里剪辑、加字幕、改画幅、统一响度和按平台导出。全程本地运行，不走云端，MIT 协议；今日登上 GitHub Trending（Python），新增约 224 星。",
+        "source_url": "https://github.com/kajisho5/ffmpeg-skill",
+        "time": "2026-11-14T06:08:21+08:00",
+        "impact": "Agent 可以在本地完成常见的视频剪辑和导出，素材不必上传云端。",
+        "points": [
+          "42 个工具加 MCP 服务器",
+          "剪辑、字幕、改画幅、响度、导出",
+          "本地运行，MIT 协议"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "⚠️ 微软 365 故障近 24 小时后恢复",
+        "summary": "MacRumors 援引微软说明：这次微软 365 大面积故障由此前一次网络容量升级引入，根本问题已经修复，服务正在大范围恢复。为确保稳定，微软分阶段恢复，因此耗时较长；Apple Mail 里的 Exchange 账户也受到影响。",
+        "source_url": "https://www.macrumors.com/2026/11/13/microsoft-365-outage-resolving/",
+        "time": "2026-11-14T03:00:35+08:00",
+        "handle": "@MacRumors",
+        "impact": "依赖微软 365 的企业邮件和日历基本恢复，后续可关注官方的事后复盘。",
+        "points": [
+          "故障持续近 24 小时",
+          "起因是早前的网络容量升级",
+          "分阶段恢复，Exchange 邮件受影响"
+        ]
+      },
+      {
+        "title": "Gemini 接入 Google Wallet，可分析个人消费",
+        "summary": "9to5Google 报道，美国用户现在可以在 Gemini（安卓、iOS 和网页）的 Customize > Connectors 里开启 Google Wallet 连接，通过第三方 Plaid 关联信用卡和银行账户，获得消费分析。连接是只读的，Gemini 不能转账、管理或投资资金，可以随时关闭。",
+        "source_url": "https://9to5google.com/2026/11/13/gemini-google-wallet/",
+        "time": "2026-11-14T01:51:45+08:00",
+        "handle": "@9to5Google",
+        "impact": "AI 助手开始读取个人财务数据，方便做预算分析，也意味着更多金融数据进入 AI 服务。",
+        "points": [
+          "美国用户可用，需主动开启",
+          "经 Plaid 关联信用卡和银行账户",
+          "只读，不能动用资金"
+        ]
+      },
+      {
+        "title": "Henge：在 iPhone 本机运行 macOS 的开源项目",
+        "summary": "GitHubDaily 介绍的开源项目 Henge 直接下载苹果的系统恢复镜像，在 iPhone 自带的模拟器里运行 macOS，不需要另一台 Mac；作者在 iPhone 17 Pro 上测试，约 15 秒进入锁屏。手机屏幕当触控板，音量键当左右键，支持与手机互相复制粘贴；需要侧载安装并开启 JIT。",
+        "source_url": "https://x.com/GitHub_Daily/status/2121249240890675376",
+        "time": "2026-11-13T22:30:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "展示了 iPhone 算力跑桌面系统的可能，但需侧载和开启 JIT，日常使用要考虑安全和稳定性。",
+        "points": [
+          "无需另一台 Mac，直接用恢复镜像",
+          "约 15 秒进入锁屏（作者测试）",
+          "需侧载并开启 JIT"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "NextDNS 新增「拦截隧道端点」",
+        "summary": "NextDNS 称，攻击者越来越多地借 ngrok、Cloudflare Tunnel 等合法隧道服务做钓鱼、投放恶意软件、远程控制和窃取数据。它在 Security 页新增开关，从第一次 DNS 请求起拦截 100 多种服务的隧道端点；服务商官网和 API 不受影响，自己在用的端点可以手动放行。",
+        "source_url": "https://x.com/NextDNS/status/2121271876643393996",
+        "time": "2026-11-14T00:00:01+08:00",
+        "handle": "@NextDNS",
+        "impact": "家庭和小团队网络多了一层防护，但自建 Cloudflare Tunnel 等远程访问的用户开启前要先放行自己的端点。",
+        "points": [
+          "覆盖 100 多种隧道服务",
+          "官网和 API 不受影响",
+          "自用端点可手动放行"
+        ]
+      },
+      {
+        "title": "Zapier MCP 接入 Grok",
+        "summary": "Zapier 宣布 Zapier MCP 已接入 Grok：可以用自然语言搭建多步、跨应用的 Zap，把常用流程存成可复用的 Skill，并在 Grok 里直接操作 10,000 多个工作工具。在 Grok 的连接目录里添加，或直接对 Grok 说「connect Zapier」即可。",
+        "source_url": "https://x.com/zapier/status/2121256871675760959",
+        "time": "2026-11-13T23:00:23+08:00",
+        "handle": "@zapier",
+        "impact": "在 Grok 里就能串起上万个工具的自动化，跨应用流程的搭建门槛进一步降低。",
+        "points": [
+          "自然语言搭建多步 Zap",
+          "流程可存成 Skill 复用",
+          "可操作 10,000 多个工具"
+        ]
+      },
+      {
+        "title": "tailscale/tailcat 登上 GitHub Trending",
+        "summary": "tailcat 是 Tailscale 官方的小工具，用法类似 netcat，但只走 Tailscale 的数据平面、不依赖其控制平面。9 月的两个版本加入了 UDP 转发、SOCKS5 代理和 SSH 公钥认证，地址默认带 WireGuard 预共享密钥。今日 GitHub Trending 新增约 324 星。",
+        "source_url": "https://github.com/tailscale/tailcat",
+        "time": "2026-11-14T06:13:00+08:00",
+        "impact": "已用 Tailscale 组网的用户可以用它在节点间快速转发端口和流量，不依赖控制平面。",
+        "points": [
+          "类似 netcat，不依赖 Tailscale 控制平面",
+          "支持 UDP 转发、SOCKS5、SSH 公钥认证",
+          "今日新增约 324 星"
+        ]
+      }
+    ]
+  }
+}

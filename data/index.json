@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-13T18:28:20+08:00",
+  "updated_at": "2026-11-14T06:24:30+08:00",
   "editions": [
+    {
+      "id": "2026-11-14-0600",
+      "published_at": "2026-11-14T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-14-0600.json",
+      "counts": {
+        "x_daily": 11,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 5,
+        "tech": 3,
+        "iot": 3
+      },
+      "headline": "OpenAI 推出 ChatGPT Wallet，llama.cpp 发布 1.0，DeepSeek 开放 App 全部能力"
+    },
     {
       "id": "2026-11-13-1800",
       "published_at": "2026-11-13T18:00:00+08:00",
