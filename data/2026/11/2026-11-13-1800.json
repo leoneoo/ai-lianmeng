@@ -1,0 +1,267 @@
+{
+  "id": "2026-11-13-1800",
+  "published_at": "2026-11-13T18:00:00+08:00",
+  "headline": "Perplexity 开源 Decider v1.3；微软 365 大面积故障；Devin 推出 SWE-2 免费模式",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Perplexity 开源决策模型 Decider v1.3，新增按描述定位原文",
+        "summary": "Perplexity 开源 Decider v1.3 和 Decider Flash v1.3 两款决策模型，并在 OpenRouter 上免费开放一周。v1.3 新增 locate 能力：用一句话描述要找的内容，模型返回原文中匹配的片段和字符位置，适合批量判断时顺带抽取证据和实体。Hugging Face 模型卡显示，pplx-decider-v1.3 是在 Qwen3.8-27B 上微调的多模态分类模型，Apache 2.0 协议，BF16 权重约 49 GiB。CEO Aravind Srinivas 称决策模型适合处理海量安全日志，Perplexity Mac 版「云端编排、本地子 Agent」的混合模式使用量也在上升。",
+        "source_url": "https://x.com/AravSrinivas/status/2121020114321703210",
+        "time": "2026-11-13T07:19:36+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "判断、打分、抽取这类批量任务可以交给能自部署的专用模型，安全日志分析和内容审核的成本有望下降。",
+        "points": [
+          "Decider v1.3 与 Flash v1.3 开源",
+          "新增 locate：返回匹配片段和字符位置",
+          "OpenRouter 免费一周",
+          "基于 Qwen3.8-27B，Apache 2.0"
+        ]
+      },
+      {
+        "title": "Cognition 升级 Devin 团队版：自研 SWE-2 驱动免费模式",
+        "summary": "Cognition 宣布，Devin Teams 方案的所有成员都能使用新版 Devin Desktop，不再另收席位费；每人有两个并发的免费会话，由自研模型 SWE-2 驱动。管理员可接入 Okta、Entra ID 或任意 SAML/OIDC 单点登录，按人或按组设置最多 3 档用量上限，团队还可在设置里申请标准的业务伙伴协议（BAA）。",
+        "source_url": "https://x.com/cognition/status/2121005637371146355",
+        "time": "2026-11-13T06:22:04+08:00",
+        "handle": "@cognition",
+        "impact": "编程 Agent 厂商用自研模型做免费档拉新，团队试用门槛降低，管理员也有了控制额度的手段。",
+        "points": [
+          "Devin Desktop 全员可用，不另收席位费",
+          "每人两个并发免费会话，由 SWE-2 驱动",
+          "支持 SSO 和最多 3 档用量上限"
+        ]
+      },
+      {
+        "title": "vLLM：DeepSeek-V4.1-Flash 在 Vera Rubin NVL72 上吞吐为 GB300 的 58 倍",
+        "summary": "vLLM 针对 NVIDIA Vera Rubin NVL72 优化 DeepSeek-V4.1-Flash。在 SemiAnalysis AgentX 测试中，单用户 387 tokens/s 时单 GPU 吞吐达 170 万 tokens/s，是 GB300 NVL72 的 58 倍；峰值吞吐为单 GPU 252 万 tokens/s，是 GB300 的 2.7 倍。数字为 vLLM 自报。",
+        "source_url": "https://x.com/vllm_project/status/2121008091538092393",
+        "time": "2026-11-13T06:31:50+08:00",
+        "handle": "@vllm_project",
+        "impact": "新一代机柜对高交互速度场景的提升远大于对峰值吞吐的提升，Agent 类低延迟服务最先受益。",
+        "points": [
+          "单用户 387 tokens/s 时吞吐为 GB300 的 58 倍",
+          "峰值单 GPU 252 万 tokens/s",
+          "测试基准为 SemiAnalysis AgentX"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Replit Agent 可以替企业采购和投广告",
+        "summary": "Replit CEO Amjad Masad 宣布，现在可以让 Replit Agent 为你的业务购买所需物品，包括投放广告来获取新客户。这意味着 Agent 从写代码延伸到直接动用预算。",
+        "source_url": "https://x.com/amasad/status/2121018020520931712",
+        "time": "2026-11-13T07:11:17+08:00",
+        "handle": "@amasad",
+        "impact": "Agent 开始直接花钱，使用前需要设好预算上限和人工确认。",
+        "points": [
+          "Agent 可代为采购",
+          "可投放广告拉新客户"
+        ]
+      },
+      {
+        "title": "Edge0 开放 Edge0-145B 和 120B 权重（补报）",
+        "summary": "Edge0 在 Hugging Face 发布 Edge0-145B 和 Edge0-120B。模型卡称 145B 为潜空间稀疏混合专家结构，每 token 激活约 10.1B，上下文 256K，原生 4 位训练；在 24 GB 的 RTX 5090 D 上解码 98.3 tokens/s，Terminal-Bench 2.1 得分 86.5。模型底座为 Qwen3.8-Flash-Next，使用时需同时遵守 Edge0 和 Qwen 两份社区许可。",
+        "source_url": "https://huggingface.co/Edge0/Edge0-145B-NVFP4",
+        "time": "2026-11-11T13:22:51+08:00",
+        "impact": "百亿级激活的编程 Agent 模型能在单张消费级显卡上跑，本地部署多了一个选项，但成绩还待第三方复现。",
+        "points": [
+          "145B 总参数，激活约 10.1B",
+          "24 GB 显卡解码 98.3 tokens/s（自报）",
+          "底座 Qwen3.8-Flash-Next，双重社区许可"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Sakana AI 计划 12 月开始预训练 Sawara Small",
+        "summary": "Sakana AI 在接受 ITmedia 采访时表示，计划 12 月开始预训练 Sawara Small（暂定名），把业务从后训练和多模型编排延伸到自研基座模型。CEO David Ha 同日在《日本经济新闻》撰文，认为单一超大模型的规模竞赛正在失去经济合理性，竞争重点会转向用强化学习调度多个模型。",
+        "source_url": "https://x.com/SakanaAILabs/status/2121109880098713622",
+        "time": "2026-11-13T13:16:18+08:00",
+        "handle": "@SakanaAILabs",
+        "impact": "日本又一家实验室开始自研基座，后续要看 Sawara 的规模和开放方式。",
+        "points": [
+          "12 月开始预训练 Sawara Small",
+          "David Ha：竞争转向多模型编排"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Gemini 4 Hydrogen 实测：视频工作流里替代 Opus 5.5，成本约省一半",
+        "summary": "Gorden Sun 认为 Hydrogen 写作自然，代码和长时间任务能力明显提升，在自己约 300K 上下文的视频工作流里可直接替代 Opus 5.5，按 token 折算美元约省一半。更长任务的表现他还没测过。",
+        "source_url": "https://x.com/Gorden_Sun/status/2121072651192218092",
+        "time": "2026-11-13T10:48:22+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "快档模型在实际工作流里开始替代旗舰档，重度用户的模型账单有下降空间。",
+        "points": [
+          "约 300K 上下文任务可替代 Opus 5.5",
+          "成本约省一半",
+          "长任务效果待验证"
+        ]
+      },
+      {
+        "title": "Gemini 4 三档怎么选，开发者也犯难",
+        "summary": "前 Manus 工程师 yan5xu 认为这轮 Gemini 模型都不错，但 Argon 和 Carbon 同价，「复杂任务用 Carbon」很难判断。Hydrogen 定价 1.5 美元，和另两档的 2 美元差距不大，什么时候该用它并不清楚。",
+        "source_url": "https://x.com/yan5xu/status/2121076429781885049",
+        "time": "2026-11-13T11:03:23+08:00",
+        "handle": "@yan5xu",
+        "impact": "多档同价让选型变难，开发者需要自己做路由测试，官方选型指引会很有用。",
+        "points": [
+          "Argon 与 Carbon 同价",
+          "Hydrogen 1.5 美元，与 2 美元档差距小"
+        ]
+      },
+      {
+        "title": "斯坦福 CS329Z「Engineering AI Agents」课程视频开始公开",
+        "summary": "meng shao 推荐斯坦福 CS329Z 课程，讲义此前已经公开。现在 YouTube 已放出 4 讲视频，课程主页为 cs329z.stanford.edu。",
+        "source_url": "https://x.com/shao__meng/status/2121059924683981005",
+        "time": "2026-11-13T09:57:48+08:00",
+        "handle": "@shao__meng",
+        "impact": "想系统学习 Agent 工程的开发者多了一套免费的名校课程。",
+        "points": [
+          "讲义已公开",
+          "YouTube 已放出 4 讲"
+        ]
+      },
+      {
+        "title": "网易「欧拉讲题」：边讲边画动画，可随时打断追问",
+        "summary": "小互实测网易新推出的 AI 教育产品欧拉讲题：它先规划讲法，再把讲解转成板书、图形、动画和语音指令。讲到辅助线时可以打断问「为什么这样画」，它会在图上接着解释相等的角和相似三角形。",
+        "source_url": "https://x.com/xiaohu/status/2121139346191286711",
+        "time": "2026-11-13T15:13:23+08:00",
+        "handle": "@xiaohu",
+        "impact": "AI 辅导从给答案转向讲思路，家长辅导数学作业多了一个工具。",
+        "points": [
+          "讲解转成板书、图形、动画和语音",
+          "可随时打断追问"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "opencode v2.3.0：子 Agent 默认在后台运行",
+        "summary": "子 Agent 现在立即返回会话 ID 并在后台继续执行，空闲时向父会话汇报，可同时跑多个。工具调用和思考过程默认折叠成一行；新增实验性 MCP 事件支持和 LM Studio 决策模型支持。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+        "time": "2026-11-13T16:55:07+08:00",
+        "impact": "多个子 Agent 并行干活成为默认体验，长任务不再阻塞主会话。",
+        "points": [
+          "子 Agent 后台并发运行",
+          "工具调用默认折叠",
+          "实验性 MCP 事件"
+        ]
+      },
+      {
+        "title": "Codex 0.168/0.169：多标签侧聊、终端添加自定义模型提供方",
+        "summary": "0.169 支持多个侧聊标签、按名称搜索旧任务，可在终端创建自定义网关并在 SSH 下用设备码登录；codex exec 在不受信任目录里默认不加载项目配置和 MCP，需要时用 --trust 显式信任。0.168 可生成或编辑动图 GIF，并能附加录音。",
+        "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+        "time": "2026-11-13T16:37:05+08:00",
+        "impact": "不受信任目录默认不加载 MCP，降低了在陌生仓库里运行 codex exec 的风险。",
+        "points": [
+          "多侧聊标签与旧任务搜索",
+          "终端添加自定义网关",
+          "不受信任目录默认禁用 MCP"
+        ]
+      },
+      {
+        "title": "NVIDIA/SkillEvaluator：评估 Skill 会怎样改变 Agent 行为",
+        "summary": "与 SkillSpector 配套的 Apache 2.0 框架，提供质量关卡、语义重叠检测、合成评测数据生成和实时 Agent 评测。今日登上 GitHub Trending（Python），约 108 星。",
+        "source_url": "https://github.com/NVIDIA/SkillEvaluator",
+        "time": "2026-11-13T18:15:00+08:00",
+        "impact": "Skill 从「能装」走向「可测」，团队上架内部 Skill 前多了一道质量检查。",
+        "points": [
+          "质量关卡与语义重叠检测",
+          "合成评测数据生成",
+          "实时 Agent 评测"
+        ]
+      },
+      {
+        "title": "creator-generalist：在 Blender 里从设定图做到可动的 3D 角色",
+        "summary": "把建模、雕刻、绑骨骼和动作整理成一套 Skill，附约 250 条 Blender 操作配方，以及导出到 Unity、Godot、Unreal 的指引。Claude Code、Codex、Cursor 均可使用。",
+        "source_url": "https://github.com/codepawl/creator-generalist",
+        "time": "2026-11-13T09:00:05+08:00",
+        "impact": "独立开发者用编程 Agent 做 3D 资产的门槛进一步降低。",
+        "points": [
+          "约 250 条 Blender 操作配方",
+          "可导出到 Unity、Godot、Unreal"
+        ]
+      },
+      {
+        "title": "Effect Atlas：50 个写给 AI 读的原生 JS 网页动效",
+        "summary": "每个动效是一个独立文件夹，代码顶部注释就是给 AI 的接入说明，无需安装依赖或构建。授权为源码可见，可免费用于自己和客户项目，但不能单独出售。",
+        "source_url": "https://github.com/effect-atlas/effect-atlas",
+        "time": "2026-11-13T18:00:03+08:00",
+        "impact": "给 AI 准备的素材库开始出现，商用前要留意授权条款。",
+        "points": [
+          "50 个原生 JS 动效",
+          "注释即 AI 接入说明",
+          "源码可见，不能单独出售"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "微软 365 大面积故障，Outlook 邮件等服务受影响",
+        "summary": "微软 365 状态账号从 13 日凌晨（新加坡时间）起持续通报：受影响服务器上的核心进程过载导致容量下降，恢复过程反复。17:24 微软称已初步稳定、容量有所改善，并把邮件超时延长到 48 小时以保住延迟邮件，详情见管理中心 MO1550821。",
+        "source_url": "https://x.com/MSFT365Status/status/2121172248241348867",
+        "time": "2026-11-13T17:24:08+08:00",
+        "handle": "@MSFT365Status",
+        "impact": "依赖微软 365 的团队今天邮件和协作受影响，延迟邮件会保留，不必反复重发。",
+        "points": [
+          "核心进程过载导致容量下降",
+          "17:24 初步稳定",
+          "邮件超时延长到 48 小时"
+        ]
+      },
+      {
+        "title": "tvOS 27.2.1 将把 Siri AI 带到旧款 Apple TV 4K",
+        "summary": "MacRumors 报道，苹果会通过 tvOS 27.2.1 把新版 Siri AI 推送到较早的 Apple TV 4K 机型。这意味着不换新机也能用上新版 Siri。",
+        "source_url": "https://x.com/MacRumors/status/2121029731156103300",
+        "time": "2026-11-13T07:57:49+08:00",
+        "handle": "@MacRumors",
+        "impact": "旧款 Apple TV 用户不用换机也能体验新版 Siri，具体机型以苹果公告为准。",
+        "points": [
+          "tvOS 27.2.1 推送",
+          "覆盖较早的 Apple TV 4K"
+        ],
+        "tag": "报道"
+      },
+      {
+        "title": "Cloudflare AI Search 支持 D1 数据库作为数据源",
+        "summary": "Cloudflare AI Search 现在可以直接把 D1 数据库作为数据源。开发者能对应用数据做检索增强（RAG），用于客服机器人和商品语义搜索。",
+        "source_url": "https://x.com/CloudflareDev/status/2121183172918722910",
+        "time": "2026-11-13T18:07:32+08:00",
+        "handle": "@CloudflareDev",
+        "impact": "在 Workers 上做 RAG 少了一步数据同步，小团队搭 Agent 更省事。",
+        "points": [
+          "D1 可直接作为数据源",
+          "适合客服与商品语义搜索"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Tandem：把闲置安卓手机变成 Linux 电脑的副屏",
+        "summary": "支持 USB 数据线、USB 网络共享和 Wi-Fi 三种连接，扫码即可配对。手机上可以触控操作副屏里的窗口，画面和操作加密传输，只有已配对的手机能看；支持 Hyprland 和 GNOME 的 Wayland 桌面。",
+        "source_url": "https://github.com/saharshbaiju/tandem",
+        "time": "2026-11-13T15:30:06+08:00",
+        "impact": "闲置安卓手机可以当 Linux 副屏用，跨设备协作多了一个开源方案。",
+        "points": [
+          "USB、网络共享、Wi-Fi 三种连接",
+          "画面加密，仅配对手机可见",
+          "支持 Hyprland 与 GNOME"
+        ]
+      },
+      {
+        "title": "smolmaxxing：旧电视盒子和旧 iPad 也能本地跑大模型",
+        "summary": "项目基于 llama.cpp，针对老芯片重写计算代码、精简词表，并把暂不用的权重放在存储上按需预读。据介绍，在只有 1 GB 可用内存的小米盒子 S 三代上运行 2B 的 Qwen3.5 约 7.7 tokens/s，2013 年的初代 iPad Air 运行 1.7B 模型约 24～26 tokens/s。",
+        "source_url": "https://github.com/hyperionaidev/smolmaxxing",
+        "time": "2026-11-13T11:30:38+08:00",
+        "impact": "家里的旧设备也能当离线 AI 终端，数据不出本地。",
+        "points": [
+          "基于 llama.cpp 针对老芯片优化",
+          "1 GB 内存设备可跑 2B 模型"
+        ],
+        "tag": "自报"
+      }
+    ]
+  }
+}

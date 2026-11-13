@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-13T06:28:53+08:00",
+  "updated_at": "2026-11-13T18:28:20+08:00",
   "editions": [
+    {
+      "id": "2026-11-13-1800",
+      "published_at": "2026-11-13T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-13-1800.json",
+      "counts": {
+        "x_daily": 6,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 5,
+        "tech": 3,
+        "iot": 2
+      },
+      "headline": "Perplexity 开源 Decider v1.3；微软 365 大面积故障；Devin 推出 SWE-2 免费模式"
+    },
     {
       "id": "2026-11-13-0600",
       "published_at": "2026-11-13T06:00:00+08:00",
