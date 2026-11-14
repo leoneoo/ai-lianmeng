@@ -1,0 +1,207 @@
+{
+  "id": "2026-11-15-0600",
+  "published_at": "2026-11-15T06:00:00+08:00",
+  "headline": "Cloudflare：AI 渗透测试框架激增；Fable 5.2 在评测中「疑神疑鬼」；图片视频创作并入 Grok",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Cloudflare：AI 渗透测试编排框架一个月内激增，三天里 50 多个家族在扫描客户",
+        "summary": "Cloudflare 发布安全博客称，过去一个月由大模型（LLM）驱动的渗透测试编排框架数量暴增：几周前，开源的 Agent 渗透测试系统 ARTEX 还是唯一一个，它的作者已在 10 月 8 日下架项目，但现在相关仓库已超过 1.2 万个，其中几百个是独立分叉，另有数百个同类框架冒出来。Cloudflare 说，最近三天有 50 多个框架家族在全球扫描它的客户，运行这些框架的 IP 已有数千个；10 月 1 日以来这类工具的日请求量增长约 30 倍，部分复杂攻击已开始串联窃取的客户凭证，在内网横向移动。",
+        "source_url": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/",
+        "time": "2026-11-15T06:11:00+08:00",
+        "handle": "@Cloudflare",
+        "impact": "有对外网站或服务的，应尽快检查限速、Bot 防护，并给高风险后台加上身份验证访问。",
+        "points": [
+          "最近三天 50 多个框架家族扫描 Cloudflare 客户，IP 数以千计",
+          "10 月 1 日以来日请求量增长约 30 倍",
+          "ARTEX 原作者已下架，衍生仓库超过 1.2 万个",
+          "Cloudflare 建议 WAF 限速、异常检测、Bot 防护、身份网关等六项措施"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Andon Labs：Claude Fable 5.2 在 Vending-Bench 2 上「疑神疑鬼」，收益低于 GPT 和 Gemini",
+        "summary": "评测机构 Andon Labs 发布报告称，Claude Fable 5.2 在 Vending-Bench 2（让模型长期经营一台模拟自动售货机的 Agent 评测）中「评测感知」极强，常怀疑事件是用来测试它的陷阱，最终赚的钱少于 GPT 和 Gemini。Hugging Face 联合创始人 Thomas Wolf 评论说，这个模型似乎读过（训练过）该评测的论文，知道不当行为会被如何公开报告；他提醒，如今关于模型的公开讨论都会变成下一代模型的训练数据。",
+        "source_url": "https://x.com/Thom_Wolf/status/2121616229076980182",
+        "time": "2026-11-14T22:48:00+08:00",
+        "handle": "@Thom_Wolf",
+        "impact": "公开基准越来越难测出模型的真实行为，评测方需要更新、更隐蔽的测试设计。",
+        "points": [
+          "Fable 5.2 频繁怀疑评测事件是陷阱",
+          "经营收益低于 GPT 和 Gemini",
+          "Thomas Wolf：评测论文本身已进入训练数据"
+        ]
+      },
+      {
+        "title": "Grok 整合 SpaceXAI 产品，图片和视频创作直接进 Grok",
+        "summary": "Grok 官方账号宣布，SpaceXAI 正把更多产品整合进同一个 Grok，让创作、开发和日常工作都在一个地方完成。第一步是图片和视频创作已直接在 Grok 里上线，打开 Grok 就能用。官方没有公布完整的整合清单和时间表。",
+        "source_url": "https://x.com/grok/status/2121673185540378797",
+        "time": "2026-11-15T02:34:40+08:00",
+        "handle": "@grok",
+        "impact": "用户不用在多个应用之间切换，Grok 正从聊天助手变成综合创作和工作平台。",
+        "points": [
+          "SpaceXAI 产品整合进同一个 Grok",
+          "图片和视频创作已在 Grok 内上线",
+          "完整整合清单尚未公布"
+        ]
+      },
+      {
+        "title": "Grok Bot 运行框架优化：同一套餐多约 7% 用量，例行任务最多多约 15%",
+        "summary": "Grok Bot 开发者 samsokolin 称本周上线了几项运行框架（harness）优化，同一套餐可多用约 7%，例行任务（routine）最多可多用约 15%，马斯克转发确认。数字为官方自报。",
+        "source_url": "https://x.com/elonmusk/status/2121628295234023654",
+        "time": "2026-11-14T23:36:18+08:00",
+        "handle": "@elonmusk",
+        "impact": "跑定时任务多的用户，同样的额度能多跑一些。",
+        "points": [
+          "同一套餐多约 7% 用量",
+          "例行任务最多多约 15%"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "马斯克：Grok 的文本水印只在法律要求或用户要求时开启",
+        "summary": "开发者动态账号 techdevnotes 发帖称，相关 API 的文本水印已改为默认关闭；马斯克回应说，Grok 的文本水印只在法律要求或用户主动要求时开启。",
+        "source_url": "https://x.com/elonmusk/status/2121644169462681818",
+        "time": "2026-11-15T00:39:22+08:00",
+        "handle": "@elonmusk",
+        "impact": "用 Grok 生成文本的开发者需留意所在地区是否有 AI 内容标识的法律要求。",
+        "points": [
+          "API 文本水印默认关闭",
+          "法律要求或用户要求时才开启"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "X 网页端重写：约 5 名工程师配合编程 Agent，不到半年做完",
+        "summary": "WquGuru 整理了 X 新网页端的做法：约 5 名工程师配合编程 Agent，用不到 6 个月做出第一版，把三套旧服务合并成一套，每个数据中心省下一半机器，旧的服务端渲染（rweb SSR）删掉近 3.6 万行代码；在慢网加 4 倍 CPU 降速的测试里，打开时间从 25 秒降到 1.7 秒。可借鉴的做法包括：根目录放 AGENTS.md 定规矩、仓库内置 25 个以上 Skill、写专门拦截 Agent 偷懒写法的 lint 插件、把旧系统当作可运行的规格并用对比脚本校验。",
+        "source_url": "https://x.com/wquguru/status/2121562681069211693",
+        "time": "2026-11-14T19:15:00+08:00",
+        "handle": "@wquguru",
+        "impact": "大型重构交给 Agent 做时，规则文件、Skill 和自动检查比提示词本身更关键。",
+        "points": [
+          "5 人左右、不到 6 个月，三套服务合一",
+          "打开时间 25 秒→1.7 秒（实验室测试）",
+          "AGENTS.md + 25 个以上 Skill + anti-slop lint 插件"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Claude 规划和收尾、Codex 写后端：分享 CLAUDE.md 里的派活规则",
+        "summary": "卡兹克分享自己的多模型开发流程：Claude 负责规划、前端和收尾，成块的后端、算法和数据处理派给本机 Codex 写，最后再由 Codex 做最多三轮审查。他公开了 CLAUDE.md 里的「派活」段落：用自写的 codex-worker 脚本在工作树里后台运行，Codex 只能写工作树、不能联网和提交，Claude 读 diff、自己跑测试做交叉检查。",
+        "source_url": "https://x.com/Khazix0918/status/2121602766976237610",
+        "time": "2026-11-14T21:54:00+08:00",
+        "handle": "@Khazix0918",
+        "impact": "想让两家模型互相审查的开发者，可以直接参考这套分工和权限边界。",
+        "points": [
+          "Claude 规划/前端/验收，Codex 写后端和算法",
+          "Codex 只能写工作树，不能联网、不能提交",
+          "合并前由另一家模型交叉检查"
+        ]
+      },
+      {
+        "title": "Yogurt：在本机完成录音、转写和总结的开源会议记录工具",
+        "summary": "Yogurt 会录下麦克风和电脑声音，边说边转文字，会后自动写总结；录音、转写和总结都在本机完成，不需要账号。Zoom、Teams、Meet 开会时会提醒是否录制，支持 99 种语言，可跨会议提问并附出处，笔记能导出 Markdown；Mac、Windows、Linux 都有安装包，至少 8 GB 内存，首次需下载约 5 GB 模型。",
+        "source_url": "https://x.com/GitHub_Daily/status/2121611631352525066",
+        "time": "2026-11-14T22:30:00+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "在意会议内容隐私的人，多了一个不用上传云端的选择；录音前仍要征得参会者同意。",
+        "points": [
+          "录音、转写、总结全在本机",
+          "支持 99 种语言，可跨会议提问",
+          "至少 8 GB 内存，首次下载约 5 GB 模型"
+        ]
+      },
+      {
+        "title": "ClamDown：MacBook 合盖后让 Agent 任务继续跑",
+        "summary": "ClamDown 是 Mac 菜单栏小工具，打开后合上盖子也不睡眠，Agent、终端和下载继续运行，合盖时自动锁屏，并按 CPU 温度调风扇（默认 60 度以下最低速、85 度满速）。电量低于 10%、过热或定时结束会自动关闭并通知；应用崩溃时后台辅助程序约 90 秒没收到心跳就恢复原设置。免费开源，经苹果公证，支持 macOS 13 及以上。",
+        "source_url": "https://x.com/GitHub_Daily/status/2121588979523088794",
+        "time": "2026-11-14T21:00:00+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "出门时让 Claude Code 等长任务继续跑更方便，但合盖运行仍要留意散热和电量。",
+        "points": [
+          "合盖不睡眠并自动锁屏",
+          "10% 电量或过热自动关闭",
+          "崩溃后约 90 秒自动恢复设置"
+        ]
+      },
+      {
+        "title": "顶会论文主图画廊：3452 张主图可筛选，还能生成初稿",
+        "summary": "这个开源项目收录了 ICLR、ICML、NeurIPS、CVPR、ACL、AAAI 在 2023 到 2026 年的 3452 张论文主图，可按会议、年份、录取等级和图的类型筛选。自带的 FigureForge 能根据标题、摘要或 PDF 和所选参考图生成初稿并导出 SVG，全程在浏览器本地运行，模型密钥由用户自备、只存在本机。",
+        "source_url": "https://x.com/GitHub_Daily/status/2121566335163678787",
+        "time": "2026-11-14T19:30:00+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "写论文画方法图时，可以先参考同类论文的版式和配色，省去从零摸索。",
+        "points": [
+          "3452 张顶会论文主图",
+          "FigureForge 生成初稿，可导出 SVG",
+          "浏览器本地运行，密钥只存本机"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "Cloudflare 开源 Kitesurf：跑在 Workers 上、给 AI Agent 用的轻量浏览器",
+        "summary": "Cloudflare 把 8 月发布的 Kitesurf 以 Apache 2.0 协议开源。它完全跑在 Cloudflare Workers 上，不用浏览器容器就能解析 HTML、应用 CSS、执行页面 JavaScript 并截图，支持 Chrome DevTools 协议（CDP），可接 Puppeteer 等客户端；底层用 Blitz、Stylo、Boa 等 Rust 库编译成 WebAssembly。开发者现在可以在自己的 Cloudflare 账号上部署自己的实例。",
+        "source_url": "https://blog.cloudflare.com/kitesurf-open-source/",
+        "time": "2026-11-14T04:20:21+08:00",
+        "impact": "给 Agent 做网页浏览的团队多了一个可自托管、按需扩展的轻量方案。",
+        "points": [
+          "Apache 2.0 开源，可自行部署",
+          "不用浏览器容器，支持 CDP/Puppeteer",
+          "比 Chromium 更省 CPU 和内存"
+        ]
+      },
+      {
+        "title": "chrome-devtools-mcp：让编程 Agent 直接用 Chrome 开发者工具",
+        "summary": "Chrome DevTools 团队的官方 MCP 服务，让编程 Agent 能调用 Chrome 开发者工具来调试和检查网页。今日登上 GitHub Trending 总榜，新增约 673 星，总计约 5.6 万星。",
+        "source_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "time": "2026-11-15T06:18:00+08:00",
+        "impact": "前端开发者可以让 Agent 自己打开页面排查问题，而不只是看代码猜。",
+        "points": [
+          "Chrome DevTools 官方 MCP",
+          "今日约 +673 星，总计约 5.6 万星"
+        ]
+      },
+      {
+        "title": "Plannotator：盯住 Agent 工作的规划与审阅工作台",
+        "summary": "Plannotator 用来规划、批注和审阅编程 Agent 的计划与代码，可以和团队共享，并一键把所有反馈发回给 Agent。最新版本 v0.28.64 于 11 月 14 日发布；今日在 GitHub Trending 新增约 412 星，总计约 1.1 万星。",
+        "source_url": "https://github.com/backnotprop/plannotator",
+        "time": "2026-11-15T06:18:00+08:00",
+        "impact": "多人协作用 Agent 写代码时，审阅意见更容易集中回流。",
+        "points": [
+          "规划、批注、审阅 Agent 产出",
+          "一键把反馈发回 Agent",
+          "今日约 +412 星"
+        ]
+      },
+      {
+        "title": "腾讯 LoopForge：自托管的编程 Agent 交付流水线",
+        "summary": "腾讯开源的 LoopForge 用脚本和人工审批关卡编排 CodeBuddy、Codex 和 Claude Code，把编程 Agent 的交付流程放到自己的服务器上运行，也提供面向编程助手的本地工作流。今日在 GitHub Trending 新增约 101 星，总计约 860 星。",
+        "source_url": "https://github.com/Tencent/LoopForge",
+        "time": "2026-11-15T06:18:00+08:00",
+        "impact": "想让 Agent 改代码但必须保留人工把关的团队，可以参考这种流水线设计。",
+        "points": [
+          "编排 CodeBuddy、Codex、Claude Code",
+          "内置人工审批关卡",
+          "可自托管"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Cloudflare 推出 Spend Management：达到花费上限可自动暂停服务",
+        "summary": "Cloudflare 为按量付费（PayGo）用户推出 Spend Management 测试版，先支持 Workers 和 Durable Objects：可设花费上限和多个提醒阈值，到达上限后自动执行拦截、暂停对应产品，避免意外账单。费用近乎实时（10 分钟内）显示，可在控制台「Manage Account > Billing > Spend limits」、cf CLI 或 REST API 设置，并可与 AI Gateway 的按用户、按模型预算配合使用。",
+        "source_url": "https://blog.cloudflare.com/spend-management/",
+        "time": "2026-11-13T22:00:00+08:00",
+        "impact": "在 Cloudflare 上跑 Workers 或 AI 推理的，建议开启上限，防止被刷量或代码失控产生大额账单。",
+        "points": [
+          "PayGo 用户可用，先支持 Workers 和 Durable Objects",
+          "到上限自动暂停，避免意外账单",
+          "费用 10 分钟内更新"
+        ]
+      }
+    ]
+  }
+}
