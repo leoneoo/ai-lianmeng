@@ -1,0 +1,293 @@
+{
+  "id": "2026-11-14-1800",
+  "published_at": "2026-11-14T18:00:00+08:00",
+  "headline": "Cursor 公布安全事件调查；Claude Code Projects 更新；编程 Agent 指数 v2.1",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Cursor 公布安全事件调查：攻击始于供应商泄露的访问密钥",
+        "summary": "Cursor 发布 10 月底安全事件的调查结果：攻击者拿到了 Cursor 发给推理供应商 Fireworks 的一把访问密钥（由 Fireworks 一侧泄露），从共享的只读存储桶里复制了一批编程 Agent 轨迹，主要是 2025 年、未开隐私模式（Privacy Mode）的会话；其中少量轨迹含有未脱敏的凭证，不到 0.01% 的客户 API 凭证外泄。攻击者借这些凭证进入 Cursor 使用的部分 SaaS 工具，接触到归档的非生产代码仓库、部分客服数据和邮件、使用统计和联系方式等。10 月 29 日，攻击者用偷来的凭证把恶意的 Anthropic Claude Code 扩展副本放进 Cursor 扩展市场的缓存，约 11 小时后下架，最多约 5,000 名用户可能装到。",
+        "source_url": "https://x.com/cursor_ai/status/2121411147714970092",
+        "time": "2026-11-14T09:13:26+08:00",
+        "handle": "@cursor_ai",
+        "impact": "10 月 29 日从 Cursor 扩展市场装过或更新过 Claude Code 扩展的用户要按官方安全公告排查，只卸载扩展可能不够。",
+        "points": [
+          "起点：发给 Fireworks 的访问密钥被泄露",
+          "不到 0.01% 客户的 API 凭证外泄",
+          "恶意 Claude Code 扩展 2.1.312/2.1.313 在缓存里约 11 小时",
+          "官方称最后一次攻击活动在 11 月 1 日被拦截，事件已控制"
+        ]
+      },
+      {
+        "title": "Claude Code 更新：Projects 协调者更主动，桌面版可自定义主题",
+        "summary": "Anthropic 开发者账号宣布，Claude Code 的 Projects 有较大更新：在一个项目里，Claude 负责协调多个并行线程上的任务，现在协调者会更主动，在项目聊天里回答问题，并汇报各线程的进展。另一条更新是桌面版 Claude Code 支持用 mods 做自定义主题，可以改配色、加动态背景，直接告诉 Claude 想要的样子，或从 theme-examples 插件起步。",
+        "source_url": "https://x.com/ClaudeDevs/status/2121375309287301360",
+        "time": "2026-11-14T06:51:01+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "用 Claude Code 同时跑多个任务的开发者，可以少切换会话、靠协调者汇总进度。",
+        "points": [
+          "Projects 协调者主动汇报各并行线程进展",
+          "可在项目聊天里直接回答问题",
+          "桌面版支持 mods 自定义主题"
+        ]
+      },
+      {
+        "title": "（补报）Anthropic 发布「始终在线 Agent」搭建指南",
+        "summary": "Anthropic 在 Claude 博客发布《Building always-on agents》（11 月 13 日，美国时间），拆解始终在线 Agent 的五个核心部件：事件收件箱（Event inbox）、计时器、记忆、权限和发件箱。文章强调「始终在线」只是使用体验，Agent 大部分时间在休眠，收到事件才醒来跑一次，再保存状态；建议所有事件先进持久化收件箱，每个收件箱同时只有一个工作进程，并把连续到达的事件合并成一次运行。文中称，在一项长程编程基准上，Opus 5.5 每个解决任务的成本比 Opus 5 低 78%。",
+        "source_url": "https://claude.com/blog/building-always-on-agents",
+        "time": "2026-11-14T03:45:57+08:00",
+        "impact": "想做常驻助理的团队有了一份可照着搭的参考架构，重点从模型本身转向调度、状态和权限设计。",
+        "points": [
+          "五个部件：事件收件箱、计时器、记忆、权限、发件箱",
+          "Agent 平时休眠，按事件唤醒运行",
+          "事件先入持久化收件箱，单工作进程处理",
+          "Opus 5.5 长程任务单题成本比 Opus 5 低 78%（自报）"
+        ]
+      },
+      {
+        "title": "Artificial Analysis 编程 Agent 指数 v2.1：Fable 5.2 与 Opus 5.5 并列第一",
+        "summary": "Artificial Analysis 发布编程 Agent 指数（Coding Agent Index）v2.1，把 FrontierCode 升级到 2.0（132 个真实编程任务，按维护者是否愿意合并来评分），Terminal-Bench 升到 4.1（同样 66 个任务，换了更抗刷分的判定器）。Claude Fable 5.2 和 Claude Opus 5.5 在 Claude Code 里并列 58 分领先，其后是 Sonnet 5.5（56）和 Antigravity CLI 里的 Gemini 4 Carbon（55）；新版平均分比旧版低约 5 分。得分 48 以上的配置，每个任务的成本相差约 30 倍：Codex 配 GPT-6.1 Sol 约 1.51 美元，Claude Code 配 Fable 5.2（max）约 44.22 美元。",
+        "source_url": "https://x.com/ArtificialAnlys/status/2121393821955334328",
+        "time": "2026-11-14T08:04:35+08:00",
+        "handle": "@ArtificialAnlys",
+        "impact": "选编程 Agent 时，同等分数下的单任务成本差距很大，按预算挑模型和推理档位比只看排名更实际。",
+        "points": [
+          "FrontierCode-AA 2.0：132 个任务，按能否被合并评分",
+          "Fable 5.2、Opus 5.5 并列 58 分",
+          "高分配置单任务成本相差约 30 倍"
+        ]
+      },
+      {
+        "title": "（补报）NVIDIA 发布开放机器人模型 GR00T 2",
+        "summary": "（补报）NVIDIA 发布 GR00T 2，称是其最先进的开放 System One 机器人研究模型：从人类示范中学技能，并预测自身动作会怎样改变物理世界，学到的技能可以迁移到不同形态的机器人上，减少逐台从头教的工作。",
+        "source_url": "https://x.com/nvidia/status/2121319866712076769",
+        "time": "2026-11-14T03:10:43+08:00",
+        "handle": "@nvidia",
+        "impact": "机器人团队可以少为每种机型单独采集示范数据，实际效果还要看后续公开的评测。",
+        "points": [
+          "开放的机器人研究模型",
+          "从人类示范学习技能",
+          "技能可跨机器人形态迁移"
+        ]
+      },
+      {
+        "title": "（补报）200 多个模型的对照实验：多模态模型要保留视觉参数",
+        "summary": "（补报）纽约大学与 Meta 的研究者从零训练 200 多个模型，比较多模态模型处理图像的几种做法，结论是：要保留专门的视觉参数，但视觉编码器的单独预训练可以省掉，这部分参数也不一定要做成独立编码器。团队提到，Gemma 4 12B 去掉了编码器、Kimi K3 不再预训练编码器、Inkling 2 Small 又用回编码器，业界做法并不统一。",
+        "source_url": "https://x.com/_ellisbrown/status/2121335477244428419",
+        "time": "2026-11-14T04:12:44+08:00",
+        "handle": "@_ellisbrown",
+        "impact": "给多模态模型的架构选择提供了对照数据，训练团队可以据此省去一段编码器预训练。",
+        "points": [
+          "200 多个模型的对照实验",
+          "保留视觉参数，可省掉编码器预训练",
+          "视觉参数不必是独立编码器"
+        ]
+      },
+      {
+        "title": "（补报）Reason Machines 推出编程 Agent 框架 Reason，称成本最多低 20 倍",
+        "summary": "（补报）YC 公司 Reason Machines 联合创始人 Adi Singh 发布编程 Agent 框架 Reason，称在 Terminal-Bench 和 DeepSWE 上超过主流框架，同时把每个任务的成本降到前沿基线的一小部分，最多低 20 倍（自报），目前可免费试用。",
+        "source_url": "https://x.com/xadisingh/status/2121265353867284498",
+        "time": "2026-11-13T23:34:06+08:00",
+        "handle": "@xadisingh",
+        "impact": "编程 Agent 的竞争开始比单任务成本，成本数据还需要第三方复测。",
+        "points": [
+          "面向编程 Agent 的框架（harness）",
+          "称在 Terminal-Bench、DeepSWE 上领先",
+          "单任务成本最多低 20 倍（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "⚠️ OpenAI 机器人团队去向说法不一",
+        "summary": "⚠️ 目前属于传闻：有账号转述 Fortune 报道，称 OpenAI 认为大模型会成为机器人的「大脑」，因此解散了独立的机器人团队。OpenAI 工程师 David Schnurr 随后回应「OpenAI 的机器人业务一切正常」，并贴出 15 个在招的机器人岗位。",
+        "source_url": "https://x.com/_dschnurr/status/2121352576134443466",
+        "time": "2026-11-14T05:20:41+08:00",
+        "handle": "@_dschnurr",
+        "impact": "OpenAI 机器人方向的组织调整尚无官方说明，相关合作方和求职者以官方公告为准。",
+        "points": [
+          "Fortune 报道称机器人团队被解散",
+          "OpenAI 工程师公开否认",
+          "官网仍有 15 个机器人岗位在招"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Shopify 公开 Cyber Chaos Monkey：让 AI Agent 在生产环境做受控攻击",
+        "summary": "他解读 Shopify 工程博客：Shopify 把源码、威胁情报、历史漏洞报告和测试店铺凭证交给 AI Agent，在生产环境里找绕过防护的办法，另派一个用不同模型的「裁判」Agent 实时读日志，发现危险行为就终止任务。每个任务跑在独立的 Kubernetes Job 里，出口有白名单；Shopify 称已执行上万次进攻任务，发现并处理几十个有实际影响的问题，没有造成停机。",
+        "source_url": "https://x.com/shao__meng/status/2121438053755683224",
+        "time": "2026-11-14T11:00:21+08:00",
+        "handle": "@shao__meng",
+        "impact": "想用 Agent 做安全测试的团队，可以参考这套隔离和裁判机制。",
+        "points": [
+          "进攻 Agent + 裁判 Agent 双重把关",
+          "独立容器、临时凭证、出口白名单",
+          "上万次任务，几十个实际问题（自报）"
+        ]
+      },
+      {
+        "title": "逆向工具 REA 被大厂工程师用来给 Agent 造训练环境",
+        "summary": "他翻看开源逆向工具 REA 的贡献记录：Scale AI 的一位工程师一口气提了 68 个 issue 和 PR，给 REA 加上造环境的能力，并用它做出 97 个训练环境；美团、阿里、微软、网易的工程师也分别提交了截图比对、Qwen Code 安装支持和 Bug 修复等改动。他认为真系统测试成本高，用 REA 给 Agent 搭测试场很有必要。",
+        "source_url": "https://x.com/wquguru/status/2121457462897467402",
+        "time": "2026-11-14T12:17:28+08:00",
+        "handle": "@wquguru",
+        "points": [
+          "Scale AI 工程师提交 68 个 issue/PR",
+          "用 REA 做出 97 个训练环境",
+          "多家大厂工程师参与贡献"
+        ]
+      },
+      {
+        "title": "自建构建服务 HayaBuild：不用本地 Mac 也能开发 iOS 应用",
+        "summary": "他做了快速构建服务 HayaBuild，现在通过 Agent 写 iOS 应用并推到 GitHub 后，工作流会自动在他的构建服务上编译 TestFlight 内测包并上传，不同版本的截图和截图对比也自动生成，他只需在 TestFlight 里更新测试版。",
+        "source_url": "https://x.com/turingou/status/2121451065782796436",
+        "time": "2026-11-14T11:52:03+08:00",
+        "handle": "@turingou",
+        "points": [
+          "Agent 写代码，推送 GitHub 触发构建",
+          "自动编译并上传 TestFlight",
+          "自动生成版本截图对比"
+        ]
+      },
+      {
+        "title": "金融和制造业开始找数据公司后训练自有模型",
+        "summary": "他观察到，Toloka 这类 AI 数据公司开始帮金融机构后训练模型，这类需求在金融和工业制造行业流行起来，主要因为数据隐私和合规要求需要自有模型。他还提到 Mistral 也在这两个行业快速拓展客户，并引用彭博报道举出汇丰银行、达飞轮船、阿斯麦等例子。",
+        "source_url": "https://x.com/alacheng/status/2121505279338832092",
+        "time": "2026-11-14T15:27:28+08:00",
+        "handle": "@alacheng",
+        "points": [
+          "金融、制造业后训练需求上升",
+          "动因是数据隐私与合规",
+          "Mistral 重点拓展这两类客户"
+        ]
+      },
+      {
+        "title": "Matt Pocock 的 /animatic Skill：把重要 PR 做成带旁白的分镜短片",
+        "summary": "他介绍 Matt Pocock 预告的两个 Skill：/setup-animatic 一次性选好语音（ElevenLabs、OpenAI 或 edge-tts）、渲染、样式和拼接工具，/animatic 先写 JSON 分镜脚本，用 Playwright 渲染带真实行号的代码画面，逐句配音后用 ffmpeg 合成 MP4 贴回 PR。优化后一次生成总耗时从 397 秒降到 96 秒，费用从 1.38 美元降到 0.49 美元。",
+        "source_url": "https://x.com/shao__meng/status/2121431531130617947",
+        "time": "2026-11-14T10:34:25+08:00",
+        "handle": "@shao__meng",
+        "points": [
+          "分镜脚本 + Playwright 渲染 + 配音 + ffmpeg",
+          "工具选择写进 docs/agents/animatic.md",
+          "单次约 96 秒、0.49 美元（作者数据）"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "alibaba/open-code-review：阿里开源的混合架构代码审查工具",
+        "summary": "阿里开源的代码审查工具，把确定性的检查流水线和 LLM Agent 结合，给出精确到行的评论，内置空指针、线程安全、XSS、SQL 注入等多语言规则，兼容 OpenAI 和 Anthropic 接口，Apache 2.0 协议。今日登上 GitHub Trending 总榜，约新增 215 星，总计约 5.1 万星。",
+        "source_url": "https://github.com/alibaba/open-code-review",
+        "time": "2026-11-14T18:17:00+08:00",
+        "points": [
+          "规则流水线 + LLM Agent",
+          "行级评论，内置多语言安全规则",
+          "今日约 +215 星"
+        ]
+      },
+      {
+        "title": "headroom：在内容送进模型前先压缩，省 token",
+        "summary": "headroom 在工具输出、日志、文件和 RAG 片段送进模型前先做压缩，项目称编程 Agent 可少用约 20% token，JSON 内容可少 60%～95%，答案不变；提供库、代理和 MCP 服务器三种用法，Apache 2.0 协议。今日 GitHub Trending（Python）约新增 120 星。",
+        "source_url": "https://github.com/headroomlabs-ai/headroom",
+        "time": "2026-11-14T18:17:00+08:00",
+        "points": [
+          "压缩工具输出、日志和 RAG 片段",
+          "编程 Agent 约省 20% token（自报）",
+          "库、代理、MCP 服务器三种形态"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "火山引擎 OpenViking：给 Agent 用的上下文数据库",
+        "summary": "字节跳动火山引擎开源的 OpenViking 定位为 Agent 的「自我演化上下文数据库」，把 Agent 记忆、知识库检索（RAG）和 Skills 统一管理，AGPL-3.0 协议。今日 GitHub Trending（Python）约新增 113 星，总计约 4.2 万星。",
+        "source_url": "https://github.com/volcengine/OpenViking",
+        "time": "2026-11-14T18:17:00+08:00",
+        "points": [
+          "统一管理记忆、RAG 和 Skills",
+          "AGPL-3.0 协议",
+          "今日约 +113 星"
+        ]
+      },
+      {
+        "title": "TurboFieldfare：8 GB 内存的 Mac 也能跑 Gemma 4 26B-A4B",
+        "summary": "GitHubDaily 介绍的开源项目，只把约 1.35 GB 的共享权重和缓存留在内存里，每生成一个词再从 SSD 读出需要的专家，整体约占 2 GB 内存。作者在 8 GB 的 M2 MacBook Air 上实测每秒 5.1～6.3 个 token，24 GB 的 M5 Pro 上约 31～35 个；运行时用 Swift 和 Metal 专门编写，带原生 Mac 聊天应用和兼容 OpenAI 接口的本地服务。",
+        "source_url": "https://github.com/drumih/turbo-fieldfare",
+        "time": "2026-11-14T13:30:05+08:00",
+        "handle": "@GitHub_Daily",
+        "points": [
+          "约 2 GB 内存运行 26B MoE 模型",
+          "专家权重按需从 SSD 读取",
+          "M2 Air 约 5～6 tokens/s（作者实测）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "SGLang：强化学习采样可以和训练跑在不同硬件上",
+        "summary": "SGLang 官方转介绍 SGLang Summit 上的分享：用 Miles 在 NVIDIA B300 上训练，同时由 SGLang 在 NVIDIA B300/H200 和 AMD MI355X/MI300X 上混合提供强化学习采样（rollout）。",
+        "source_url": "https://x.com/sgl_project/status/2121492351814361259",
+        "time": "2026-11-14T14:36:06+08:00",
+        "handle": "@sgl_project",
+        "points": [
+          "训练在 B300，采样跨 NVIDIA 与 AMD",
+          "Miles + SGLang 组合"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Mole CLI 大更新：Mac、Windows、Linux 清理工具同步增强",
+        "summary": "开源清理工具 Mole 的作者 Tw93 介绍近期更新：Mac 版命令行的卸载能力已同步 GUI 版约 900 款软件的残留清理，开发工具、编译产物和 iPhone/安卓模拟器缓存也能清；Windows 版补上飞书、剪映、Trae 等常用软件的缓存清理，卸载时保留游戏存档和 WSL 磁盘，并新增 mo installer 清理旧安装包；Linux 版支持 Arch、Debian、Ubuntu 等。作者建议用 mo update 升到最新，新版加强了 AI 工具清理和安全保护。",
+        "source_url": "https://x.com/HiTw93/status/2121521233221275758",
+        "time": "2026-11-14T16:30:52+08:00",
+        "handle": "@HiTw93",
+        "points": [
+          "Mac 卸载覆盖约 900 款软件",
+          "Windows 新增 mo installer",
+          "Linux 支持 Arch、Debian、Ubuntu"
+        ]
+      },
+      {
+        "title": "Pixel 11 Pro 的 HiLight 功能支持 WhatsApp 消息",
+        "summary": "9to5Google 报道，Pixel 11 Pro 的 HiLight 功能现在也能作用于 WhatsApp 消息。",
+        "source_url": "https://9to5google.com/2026/11/13/pixel-11-pro-hilight-whatsapp/",
+        "time": "2026-11-14T09:15:09+08:00",
+        "handle": "@9to5Google"
+      },
+      {
+        "title": "Cloudflare Browser Run 快捷操作可在本地开发时调用本机 Chrome",
+        "summary": "Cloudflare 开发者账号称，Browser Run 的 Quick Actions 在本地开发时会直接使用本机的 Chrome，不必连到云端浏览器调试。",
+        "source_url": "https://developers.cloudflare.com/browser-run/quick-actions/#test-quick-actions-locally",
+        "time": "2026-11-14T15:01:29+08:00",
+        "handle": "@CloudflareDev"
+      }
+    ],
+    "iot": [
+      {
+        "title": "逆向 Coway 空气净化器，彻底摆脱厂商云",
+        "summary": "Scott Goldman 在博客记录了如何让 Coway 空气净化器绕开厂商云、直接接入 Home Assistant：他发现这台净化器用明文 HTTP 下载根证书，因此通信一直可以被中间人截获，设备与云端之间走 MQTT over TLS；他据此把设备改连自建服务器。随后又解码了蓝牙配网流程，可以用电脑直接给净化器写入本地服务器信息，不再依赖 Coway App。",
+        "source_url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+        "time": "2026-11-14T12:06:04+08:00",
+        "impact": "智能家电的安全边界很薄，建议把这类设备放进隔离的 IoT 网络，并优先选择能本地控制的产品。",
+        "points": [
+          "根证书经明文 HTTP 下载，可被中间人截获",
+          "改连自建服务器接入 Home Assistant",
+          "解码蓝牙配网，不再依赖官方 App"
+        ]
+      },
+      {
+        "title": "LocalThings：在 Home Assistant 里本地控制三星家电",
+        "summary": "开源集成 LocalThings 让 Home Assistant 通过家庭网络直接控制三星家电，设置完成后无需联网、不与三星服务器通信，可按 IP 自动发现设备，部分机型支持实时状态更新；MIT 协议，约 1,300 星。",
+        "source_url": "https://github.com/mbillow/localthings",
+        "time": "2026-11-14T09:47:00+08:00",
+        "points": [
+          "局域网直连，无需三星云账号",
+          "设置后可断网使用",
+          "按 IP 自动发现设备"
+        ]
+      }
+    ]
+  }
+}
