@@ -1,0 +1,260 @@
+{
+  "id": "2026-11-15-1800",
+  "published_at": "2026-11-15T18:00:00+08:00",
+  "headline": "Anthropic：每人一个 Agent 不如共用一个；Perplexity 内部 Agent 工时达 9 月的 11 倍；基准 63% 已饱和",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 研究：每人配一个 Agent，团队结果反而不如共用一个",
+        "summary": "Anthropic 对齐科学博客 11 月 11 日发布「Worse Together」研究（Anthropic Fellows 项目），搭了四个模拟环境：研究员共用 API 额度、诊所共用排期、多人拼单或订行程、合并队列赶发版截止。四个环境里，「每人派一个自己的 Agent、彼此可以通信」的团队，整体结果都不如「一个 Agent 同时服务所有人」，在 Claude Opus 5 和 Sonnet 5 上差距约 10～45 个百分点。研究还观察到团队变大后 Agent 互相观望、覆盖别人的请求、对他人做无依据的陈述等问题，并把其中三个环境开放为基准 MAMUBench。本条为补报，今天中文圈有博主翻译传播。",
+        "source_url": "https://alignment.anthropic.com/2026/worse-together/",
+        "time": "2026-11-15T10:18:15+08:00",
+        "impact": "打算给团队每人配 Agent、共用同一份预算或代码库的，可以先试一个统一协调的 Agent，再决定要不要拆开。",
+        "points": [
+          "四个共享资源环境里，单一协调者全部胜出",
+          "Claude 两个模型上差距约 10～45 个百分点",
+          "共享预算时指定队长、写清优先级有效；拼单时先读完消息再下单能挽回更多失败",
+          "三个环境开放为 MAMUBench 基准"
+        ]
+      },
+      {
+        "title": "Perplexity CEO：内部 Teammate 的 Agent 工时已是 9 月的 11 倍",
+        "summary": "Perplexity CEO Aravind Srinivas 公布内部使用多 Agent 协作工具 Teammate 的数据：员工每周从 Teammate 获得的 Agent 工时已是 9 月的 11 倍，一周前还是 7 倍，周增速超过 50%。他称，靠 Teammate 每周多出一个工作日（8 小时以上）或一整个工作周（40 小时以上）的员工人数已增长到原来的三倍以上。他估算这相当于每年 8000 万～1.8 亿美元的人力价值，而 token 花费约 1000 万美元，回报约 9～19 倍。数字为公司自报，未公布计算方法。",
+        "source_url": "https://x.com/AravSrinivas/status/2121803009432953255",
+        "time": "2026-11-15T11:10:33+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "企业开始用「Agent 工时」和人力价值对比 token 花费来衡量 Agent 投入，这套算法是否站得住，还要看更多公司的数据。",
+        "points": [
+          "Agent 工时为 9 月的 11 倍，一周前是 7 倍",
+          "周增速超过 50%",
+          "估算年人力价值 8000 万～1.8 亿美元，token 成本约 1000 万美元"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Ethan Mollick 做 SatBench：实验室引用过的 173 个基准，63% 已饱和",
+        "summary": "沃顿商学院教授 Ethan Mollick 发布自制的 SatBench，统计主要 AI 基准被「做到饱和」（基本被攻克）的速度。他整理了 2023 年以来各大实验室在发布中引用过的 173 个基准，其中 63% 已经饱和，而且饱和速度一年比一年快。他另外说明，这套数据整理和图表大约只用了 4 条提示词让 Claude Fable 5.2 完成，几年前用 STATA 做要花好几天。",
+        "source_url": "https://x.com/emollick/status/2121751565845360769",
+        "time": "2026-11-15T07:46:08+08:00",
+        "handle": "@emollick",
+        "impact": "看模型发布时，老基准上的高分参考价值越来越低，更该看新基准和真实任务上的表现。",
+        "points": [
+          "统计 2023 年以来实验室引用过的 173 个基准",
+          "63% 已饱和，饱和速度逐年加快",
+          "分析和图表约 4 条提示词由 Fable 5.2 完成"
+        ]
+      },
+      {
+        "title": "Grok Bot 团队：上个月合并约 1.1 万个 PR，撤回约 0.5%",
+        "summary": "SpaceXAI 负责 Grok Bot 桌面版的 Lauren Tan 在 AI Engineer 大会演讲《All Code Is Slop (Except Mine)》中称，团队上个月合并约 1.1 万个 PR，被撤回的约 0.5%。做法包括：每纠正 AI 一次就写成 lint 等自动检查，而不是往 agents.md 里加话；禁用容易用错的写法和绝大部分代码注释；让 AI 把程序跑起来、交录屏和截图自查。数字为自报，要点据宝玉整理。",
+        "source_url": "https://x.com/poteto/status/2121673563489140863",
+        "time": "2026-11-15T02:36:10+08:00",
+        "handle": "@poteto",
+        "impact": "用编程 Agent 的团队，可以把反复出现的纠正固化成自动检查，比改说明文档更管用。",
+        "points": [
+          "上个月合并约 1.1 万个 PR，撤回约 0.5%",
+          "纠正写进 lint，而不是写进 agents.md",
+          "禁掉大部分代码注释，让 AI 交录屏截图自查"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Teknium：用 Luna 的可以换 DeepSeek Flash 或 Terra",
+        "summary": "Nous Research 的 Teknium 发帖提醒：在用 Luna 模型的，可以换成 DeepSeek Flash 或 Terra，同样价格下准确率高得多。他称 Luna 思考更久、尝试更多办法，却更常失败，花的钱并不少。这是他个人的使用观察，并非正式评测。",
+        "source_url": "https://x.com/Teknium/status/2121881702247387455",
+        "time": "2026-11-15T16:23:15+08:00",
+        "handle": "@Teknium",
+        "impact": "按价格挑 Agent 底层模型的，可以实测同价位模型的任务成功率，不只看单价。",
+        "points": [
+          "Luna 思考更久、失败更多",
+          "同价位下 DeepSeek Flash、Terra 更准"
+        ],
+        "tag": "待验证"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Jump Trading 讲量化多 Agent：先跑通单 Agent，再按需加复杂度",
+        "summary": "头雁整理了 Jump Trading 在 ICML 2026 Expo 的演讲：先用「一个模型 + 一个 Harness + 一条 Agent 循环」跑通任务，再逐项测试提示词、上下文、工具、子 Agent 和 token 预算，还不够才依次考虑后训练、中期训练和预训练。多 Agent 并非万能：顺序依赖强的任务适合单 Agent，以工具调用为主的适合去中心化多 Agent，能并行拆解的适合「编排者-执行者」模式。评测上用公司内部真实工作流做基准，并强调时点正确：任何历史时点只能用当时真正拿得到的数据。",
+        "source_url": "https://x.com/alacheng/status/2121850155909693918",
+        "time": "2026-11-15T14:17:53+08:00",
+        "handle": "@alacheng",
+        "impact": "做 Agent 系统的团队可以照这个顺序加复杂度，避免一上来就堆多 Agent。",
+        "points": [
+          "从最简单的单 Agent 闭环起步",
+          "任务结构决定用单 Agent 还是哪种多 Agent",
+          "用内部真实工作流做基准，防止未来信息泄漏"
+        ]
+      },
+      {
+        "title": "Meta 与纽约大学研究：视觉编码器可以跟主模型一起从零训练",
+        "summary": "Gorden Sun 介绍 Meta 和纽约大学的一项视觉多模态研究：视觉编码器不必提前单独预训练，跟主模型从零一起训练，看图问答准确率不输预训练版本，还能省下大笔算力；但必须保留图像专用参数，图文完全共用参数的话，要多花约 3 倍算力才追得上。视觉专用参数放在语言模型前八层效果最好，1.7B 模型在 H200 上的首字延迟从 64 毫秒降到 37 毫秒。",
+        "source_url": "https://x.com/Gorden_Sun/status/2121806966062485776",
+        "time": "2026-11-15T11:26:16+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "做多模态模型的团队可以重新评估「先单独训视觉编码器」这一步是否必要。",
+        "points": [
+          "视觉编码器可与主模型一起从零训练",
+          "需保留图像专用参数，放在前八层最好",
+          "1.7B 模型首字延迟 64→37 毫秒"
+        ]
+      },
+      {
+        "title": "达尔文.skill 3.0：不再读文档打分，改成两版 Skill 实跑盲评",
+        "summary": "花叔发布达尔文.skill 3.0，这是一个让 Skill 自我迭代优化的工具。他发现让评委读两版 SKILL.md 投票并不可靠：评委 3 比 0 判新版更好，实际运行却多绕了 33 次工具调用。3.0 改为让两版 Skill 各自实跑一遍任务，评委盲评产出、脚本做最终裁决，打平时保留更短的那版。",
+        "source_url": "https://x.com/AlchainHust/status/2121744774877389261",
+        "time": "2026-11-15T07:19:09+08:00",
+        "handle": "@AlchainHust",
+        "impact": "自己写 Skill 的人，评估改动时应以实跑结果为准，而不是看文档写得好不好。",
+        "points": [
+          "读文档打分与实跑效果几乎无关",
+          "改为两版实跑、盲评产出、脚本裁决",
+          "打平时保留更短的版本"
+        ]
+      },
+      {
+        "title": "agentes.chat：Agent 和同事在同一频道，敏感操作要负责人批准",
+        "summary": "GitHubDaily 介绍开源、可自部署的团队聊天工具 agentes.chat（定位 Slack 替代品），Agent 和同事待在同一个频道里，每个 Agent 有角色、负责人和月度预算，干活过程所有人可见。合并代码、上线部署等敏感操作会弹出卡片，负责人批准后才执行，每次调用模型的费用记在对应 Agent 名下。可接 Claude、OpenAI、Gemini、DeepSeek、Kimi 等模型，Agent 自带电脑和浏览器（浏览器功能仍在测试）。",
+        "source_url": "https://x.com/GitHub_Daily/status/2121868315849375919",
+        "time": "2026-11-15T15:30:03+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "团队共用 Agent 时，把审批和花费放到聊天里可见，比各自开窗口更好管。",
+        "points": [
+          "Agent 有角色、负责人和月度预算",
+          "合并、部署等操作需负责人点批准",
+          "模型费用按 Agent 记账"
+        ]
+      },
+      {
+        "title": "Fable 5.2 只凭三视图写代码建 3D 模型，和 Tripo 各有所长",
+        "summary": "WquGuru 对比了 Claude Fable 5.2 和 AI 3D 网格生成工具 Tripo：只靠三视图、不用 3D 生成器，Fable 5.2 用 32 分钟写出上千行代码，建出一个三视图 IoU 达 0.89～0.90 的游戏 Boss；另一组对照里，Fable 在 Blender 中约 22 分钟生成 174 个独立零件，适合需要零件可动、可拆的场景。但在毛绒玩偶、骷髅战士这类有机造型和细节上，Fable 会丢部件、走样，Tripo 保留得更好，他据此梳理了两者的分工。",
+        "source_url": "https://x.com/wquguru/status/2121815473033789799",
+        "time": "2026-11-15T12:00:00+08:00",
+        "handle": "@wquguru",
+        "impact": "做游戏和 3D 资产的，可以把硬表面、可拆零件交给代码生成，有机造型仍用网格工具。",
+        "points": [
+          "三视图 IoU 0.89～0.90，用时 32 分钟",
+          "代码建模适合可动、可拆的硬表面零件",
+          "有机造型和细节仍是 Tripo 更好"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "OpenClaw 2026.11.5-beta.3：长会话更省内存，压缩摘要会给凭据脱敏",
+        "summary": "OpenClaw 发布 2026.11.5-beta.3 测试版，重点是长会话和重启时的可靠性。长会话的转录索引、裁剪和压缩减少了内存占用；重启时会保留排队消息的权限上限，并在交接前写完最后的聊天记录。压缩摘要可以设字符上限，并会对引用内容里的凭据做脱敏；另外恢复了按上下文大小设定的默认输出预算。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.3",
+        "time": "2026-11-15T08:31:00+08:00",
+        "impact": "长时间挂着跑的 OpenClaw 用户，升级后更不容易因内存或重启丢消息，日志里的凭据也更少外露。",
+        "points": [
+          "长会话内存占用降低",
+          "重启不丢消息、不放宽权限",
+          "压缩摘要对凭据脱敏"
+        ]
+      },
+      {
+        "title": "llama.cpp 加入 Inkling 2 支持",
+        "summary": "llama.cpp 构建 b12406 合入 Inkling 2 支持（PR 标题为文本 + 视觉），包括 GGUF 转换、文本推理实现和测试，并能按层解码 NVFP4、MXFP8 打包的专家权重。Inkling 2 Small 本周开放权重后，用户可以用 llama.cpp 在本地运行。",
+        "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12406",
+        "time": "2026-11-15T17:27:48+08:00",
+        "impact": "想在自己电脑上跑 Inkling 2 的用户，可以直接用 llama.cpp，不必依赖云端接口。",
+        "points": [
+          "新增 Inkling 2 的 GGUF 转换和推理",
+          "支持 NVFP4、MXFP8 打包的专家权重"
+        ]
+      },
+      {
+        "title": "OpenWorker：吴恩达名下的开源 AI 桌面助手和 Agent SDK",
+        "summary": "OpenWorker 是吴恩达（Andrew Ng）名下的开源项目，包含一个日常办公用的 AI 桌面应用（调研、写作、审代码、跨工具执行任务）和一套搭建 Agent 应用的 Harness SDK。可以自带云端模型密钥，或用 Ollama 跑本地模型；能设置 Agent 权限、指定哪些动作需要批准，命令可放在 NVIDIA OpenShell 沙箱中执行。桌面版处于公开测试，Windows 安装包尚未签名；今日在 GitHub Trending Python 榜新增约 100 星，总计约 1.9 万星。",
+        "source_url": "https://github.com/andrewyng/openworker",
+        "time": "2026-11-15T18:20:00+08:00",
+        "impact": "想要本地优先、可审批的 AI 办公助手或自建 Agent 应用的开发者，多了一个开源选择。",
+        "points": [
+          "桌面应用 + Harness SDK",
+          "自带密钥或用 Ollama 本地模型",
+          "可设权限和审批，支持沙箱执行"
+        ]
+      },
+      {
+        "title": "Univer：给产品和 AI Agent 用的开源办公套件 SDK",
+        "summary": "Univer 是开源的办公套件 SDK，可以把表格、文档的编辑、计算、协作和文件处理能力嵌进自己的产品，供人和 AI Agent 一起使用。今日在 GitHub Trending 总榜新增约 495 星，总计约 2.5 万星。",
+        "source_url": "https://github.com/dream-num/univer",
+        "time": "2026-11-15T18:20:00+08:00",
+        "impact": "要在产品里加表格、文档并让 Agent 直接操作的团队，可以少造一套编辑器轮子。",
+        "points": [
+          "表格、文档编辑与计算可嵌入产品",
+          "面向人和 AI Agent 协作"
+        ]
+      },
+      {
+        "title": "caveman：让编程 Agent 用极简语言回复来省 token",
+        "summary": "caveman 是给编程 Agent 用的 Skill 加代理，让模型用「穴居人」式的极简语言回复，作者称能省约 65% 的 token。今日在 GitHub Trending 总榜新增约 227 星，总计约 12 万星。",
+        "source_url": "https://github.com/JuliusBrussee/caveman",
+        "time": "2026-11-15T18:20:00+08:00",
+        "impact": "按 token 计费的编程 Agent 用户可以试试压缩输出，但要留意回复变简后可读性下降。",
+        "points": [
+          "Skill + 代理两种用法",
+          "作者称省约 65% token"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenFilm：让编程 Agent 用网页技术做视频",
+        "summary": "GitHubDaily 介绍的 OpenFilm 是开源的 AI 视频 Agent，让 Codex、Claude Code 这类编程 Agent 来做视频，每个镜头本质上是一个用 HTML 和 CSS 写的网页。用一句话描述需求，本地编辑器会在浏览器里实时显示成片，文字、颜色、位置和时间线都能手动再调；自带免费素材库，不需要账号，可以导出给 Final Cut Pro、Premiere 和达芬奇继续剪。",
+        "source_url": "https://x.com/GitHub_Daily/status/2121906078904692925",
+        "time": "2026-11-15T18:00:06+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "做产品发布视频、教程短片的开发者，可以让熟悉的编程 Agent 直接出片再手动微调。",
+        "points": [
+          "每个镜头是一个网页",
+          "可手动微调或继续让 Agent 改",
+          "无需账号，可导出到专业剪辑软件"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "慢雾 23pds：地下论坛兜售号称支持 iOS 13～27.2 的 iPhone 远控工具",
+        "summary": "慢雾首席信息安全官 23pds 披露，地下论坛有人售卖一套 iPhone 远程控制面板，宣称支持 iOS 13 到 27.2，通过短信、聊天软件或邮件发钓鱼链接入侵，可导出钥匙串（Keychain）、聊天记录和钱包数据，重启后仍能控制，还能监控摄像头、麦克风和屏幕。23pds 对它宣称的跨版本兼容和稳定性表示怀疑，推测是此前 DarkSword 攻击套件的升级版。入口仍是钓鱼链接，及时更新系统、不点陌生链接是最直接的防护。",
+        "source_url": "https://x.com/im23pds/status/2121794393485263245",
+        "time": "2026-11-15T10:36:19+08:00",
+        "handle": "@im23pds",
+        "impact": "iPhone 用户应尽快装上最新系统更新，对短信、邮件和聊天里的陌生链接保持警惕。",
+        "points": [
+          "卖家宣称覆盖 iOS 13～27.2，靠钓鱼链接入侵",
+          "23pds 对兼容性和稳定性存疑",
+          "防护：更新系统、不点陌生链接"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "Pixel 设置里新增「Family」家庭中心",
+        "summary": "据 9to5Google，Google 正通过 Play 服务的服务器端更新，在 Pixel 手机设置中加入「Family」分区（此前称 Family Hub），Pixel 11 Pro XL 和 Pixel 10 Pro 上都已出现。这里集中显示家庭成员，可以管理 Google One 存储、Play 家庭媒体库、共享付款方式和日历里的家庭活动，查看或开始与家人共享位置，并增删家庭组成员、转移管理权。",
+        "source_url": "https://9to5google.com/2026/11/14/google-pixel-family-hub-feature-rolled-out/",
+        "time": "2026-11-15T07:00:14+08:00",
+        "handle": "@9to5Google",
+        "impact": "管理家庭组的 Pixel 用户，共享存储、付款和位置都能在一个地方查和改。",
+        "points": [
+          "服务器端推送，无需系统大版本更新",
+          "集中管理 Google One、Play 家庭库、共享付款",
+          "可查看家人位置、增删成员"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "TwinDesk：开源跨设备共享键鼠、屏幕和文件，新增文件夹同步",
+        "summary": "TwinDesk 是免费开源的跨设备协作工具，支持 Mac、Windows、Linux、iOS 和 Android，键鼠、屏幕、文件和剪贴板可以在设备间共享，走局域网或 USB 加密直连，不需要账号和云端。近期更新加入手机快捷控制面板（调音量和亮度、打开文件或脚本、切换电脑窗口布局）和电脑间文件夹同步（各自保留本地副本，双方同时改同一文件时保留两份）。iOS 版 IPA 未签名，需要自行签名侧载，Mac 安装包未经公证。",
+        "source_url": "https://github.com/InukaAsith/TwinDesk",
+        "time": "2026-11-15T16:00:54+08:00",
+        "impact": "Mac、PC 和手机混用的用户，可以不经云盘在局域网内共享键鼠和同步文件夹。",
+        "points": [
+          "五个平台互通，不依赖账号和云",
+          "新增手机控制面板和文件夹同步",
+          "iOS 需自签侧载，Mac 包未公证"
+        ]
+      }
+    ]
+  }
+}
