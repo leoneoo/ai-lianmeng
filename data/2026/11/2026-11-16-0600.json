@@ -1,0 +1,173 @@
+{
+  "id": "2026-11-16-0600",
+  "published_at": "2026-11-16T06:00:00+08:00",
+  "headline": "彭博：苹果智能眼镜明年推出主打 Siri AI 调用 App；llama.cpp 补齐本地语音；Folo 可存 Notion",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "彭博：苹果智能眼镜明年推出，主打 Siri AI 调用 App",
+        "summary": "⚠️ 未证实：彭博记者 Mark Gurman 在 11 月 15 日的 Power On 周报中称，苹果下一款重要产品是计划明年推出的智能眼镜，旗舰功能是 Siri AI 的 App 集成，比如通过眼镜叫 Uber、订餐厅或点咖啡，App 实际运行在配对的 iPhone 上。他说 iOS 27.3 预览的 Siri App 集成和 App Intents 预览就是在为眼镜铺路；原型机运行精简版 visionOS 28，员工称它是「戴在脸上的 AirPods」。苹果原想在 WWDC 2027 发布、年内出货，硬件大体定型，但软件进度落后，两个时间点都不确定。",
+        "source_url": "https://x.com/markgurman/status/2121982333238612094",
+        "time": "2026-11-15T23:03:07+08:00",
+        "handle": "@markgurman",
+        "impact": "做 iOS App 的开发者值得提前接入 App Intents；Siri 能否稳定调用第三方 App，将决定苹果这批新硬件好不好用。",
+        "points": [
+          "旗舰功能是 Siri AI 调用 App，App 跑在配对的 iPhone 上",
+          "原型运行精简版 visionOS 28，必须配对 iPhone",
+          "原定 WWDC 2027 发布、年内出货，软件进度落后",
+          "苹果想用 Siri AI 串起眼镜、带摄像头的 AirPods（2027 年底）和 HomeView"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Baseten 公开 DeepSeek-V4.1-Flash 推理引擎，解码约 1,740 token/秒",
+        "summary": "推理云公司 Baseten 在 GitHub 公开 deepseek-ultrafast，这是用 Rust 和 CUDA 写的 DeepSeek-V4.1-Flash 推理引擎，支持 100 万 token 上下文和多台服务器共享 KV 缓存。README 称编程任务上 4 张 GB300 解码约 1,740 token/秒、8 张 B300 约 2,060 token/秒，预填充 100 万 token 约 11.7～13.2 秒（自报）。它只支持 B200、B300、GB300 这类最新显卡，仓库未标注常见开源许可证；中文圈由头雁转发介绍。",
+        "source_url": "https://github.com/basetenlabs/deepseek-ultrafast",
+        "time": "2026-11-15T18:41:02+08:00",
+        "impact": "自建 DeepSeek 推理的团队多了一个高性能参考实现，但只适用于最新的 Blackwell 显卡，普通部署暂时用不上。",
+        "points": [
+          "Rust + CUDA 实现，支持 100 万上下文和跨服务器 KV 缓存共享",
+          "4×GB300 解码约 1,740 token/秒，8×B300 约 2,060（自报）",
+          "只支持 B200/B300/GB300，许可证未标明"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Ethan Mollick：一段提示让 Fable 和 Opus 把星舰回收做成 3D 网页",
+        "summary": "沃顿商学院教授 Ethan Mollick 展示，他用一段提示让 Claude Fable 和 Opus 去找星舰回收的视频，并把最后约 40 秒用 three.js 渲染成可切换视角的精细 3D 场景，网页已公开可玩。他另发帖认为，家里的中心设备如果没有好的 AI 模型会越来越吃亏：用惯了跑 Codex、Claude Code 或 OpenClaw 的电脑，再用 Siri 或 Alexa，差距很明显。这是个人演示和观点，并非正式评测。",
+        "source_url": "https://x.com/emollick/status/2122036763468214711",
+        "time": "2026-11-16T02:39:24+08:00",
+        "handle": "@emollick",
+        "impact": "多模型协作已能把视频素材变成可交互的 3D 网页，做可视化和教学内容的人可以直接试，稳定性还要更多实测。",
+        "points": [
+          "一段提示完成从找素材到 3D 渲染",
+          "可切换视角的网页已公开",
+          "他认为家庭中枢设备需要前沿模型"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "YC 新投两人团队自称「金融市场的 OpenAI」，给量化交易训练基础模型",
+        "summary": "头雁介绍 YC 2026 秋季批次（F26）的一家早期 AI 公司（名称见原帖），它自称「金融市场的 OpenAI」，想像大语言模型靠规模定律那样，为量化交易训练能随规模自动学到新策略的世界模型。公司只有兄弟两人，都出自 MIT，曾在 Citadel、Tower Research 等机构做量化；他们称不到 6 周就搭好训练流程和模型架构，当前训练用了超过 25TB 的 token。头雁认为量化公司即使做出类似模型也不会对外服务，对外提供模型服务反而是机会。",
+        "source_url": "https://x.com/alacheng/status/2121943800054796640",
+        "time": "2026-11-15T20:30:00+08:00",
+        "handle": "@alacheng",
+        "impact": "金融基础模型开始出现独立创业公司，但目前只有团队自述，效果还要看公开结果。",
+        "points": [
+          "YC F26 公司，自称「金融市场的 OpenAI」",
+          "两人团队，不到 6 周搭好训练流程（自报）",
+          "当前训练用了超过 25TB token"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Tw93：高性能 Mac 放家里 24 小时跑 AI，出门只带轻薄设备远程用",
+        "summary": "开源工具作者 Tw93 分享出差心得：这次只带 13 寸 Air 出门，写代码完全不受影响。他建议不常出门的人买一台性能强的 Mac Studio 放家里 24 小时开机，AI 全跑在上面，外出设备只当远程屏幕；家里多余的 Mac 可当测试机和打包机，把 Agent 测试和操控鼠标的活都挪过去，避免和自己抢鼠标，还能插一台旧手机做移动端辅助测试。出门前把屏幕亮度调到最低、设成不息屏，再用远程工具连回去。",
+        "source_url": "https://x.com/HiTw93/status/2121976080357806580",
+        "time": "2026-11-15T22:38:16+08:00",
+        "handle": "@HiTw93",
+        "impact": "对同时跑多个 Agent 又想轻装出门的开发者是可直接照搬的布局，注意远程访问的账号和网络安全。",
+        "points": [
+          "主力机放家里常开，外出只带轻薄设备远程",
+          "把 Agent 测试和操控鼠标的任务挪到测试机",
+          "旧手机可接测试机做移动端测试"
+        ]
+      },
+      {
+        "title": "卡兹克：Gemini 4 Carbon 思路独特，但 Antigravity 很难用",
+        "summary": "数字生命卡兹克说自己用大显示器同时开 Claude、Antigravity 和 GPT。他认为 Gemini 4 Carbon 在方案设计、文档撰写和创意上都不错，思考角度和 Claude、GPT 完全不同，适合互相启发；但 Antigravity 的用户体验很差，他最后改成通过命令行交给 Claude 去调用。",
+        "source_url": "https://x.com/Khazix0918/status/2121952242366595195",
+        "time": "2026-11-15T21:03:33+08:00",
+        "handle": "@Khazix0918",
+        "impact": "重度用户越来越习惯多模型并用；Antigravity 的易用性如果不改，可能留不住这类用户。",
+        "points": [
+          "三家模型同时开，互相启发",
+          "Gemini 4 Carbon 擅长方案、文档和创意",
+          "Antigravity 体验差，改走命令行让 Claude 调用"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "llama.cpp 新增 ZONOS3-Mini 语音合成和两款语音识别模型支持",
+        "summary": "llama.cpp 在 11 月 16 日凌晨的构建 b12424 中加入 Zyphra ZONOS3-Mini 文本转语音模型支持，包括声音克隆；随后的 b12426 又加入 Higgs v3 STT 和 VibeVoice-ASR 两款语音识别模型。这样用同一套本地推理工具，就能同时跑语音合成和语音识别。",
+        "source_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12424",
+        "time": "2026-11-16T04:08:40+08:00",
+        "impact": "想在本机做语音助手或字幕的开发者，可以少装一套推理框架；声音克隆要注意授权和滥用风险。",
+        "points": [
+          "b12424：支持 ZONOS3-Mini 语音合成，含声音克隆",
+          "b12426：支持 Higgs v3 STT 和 VibeVoice-ASR 语音识别",
+          "本地语音合成和识别可用同一套工具"
+        ]
+      },
+      {
+        "title": "《深入理解 AI Infra》开源书稿登上 GitHub 热榜",
+        "summary": "李博杰的《深入理解 AI Infra：量化分析与系统设计》书稿以 Apache-2.0 协议开源，从硬件约束和模型架构出发，用量化推导讲解大模型推理和训练系统该怎么设计。仓库里有全书正文、PDF、配套计算工具和实验，今天在 GitHub Python 热榜新增约 151 星，累计约 7,800 星。",
+        "source_url": "https://github.com/bojieli/ai-infra-book",
+        "time": "2026-11-16T06:19:00+08:00",
+        "impact": "想系统了解大模型推理和训练基础设施的中文读者，有了一本可免费读、带计算工具的参考书。",
+        "points": [
+          "从硬件约束和模型架构量化推导系统设计",
+          "含正文、PDF、计算工具和实验",
+          "Apache-2.0，今日约 +151 星"
+        ]
+      },
+      {
+        "title": "Google Stitch Skills：给编程 Agent 用的界面设计插件库",
+        "summary": "Google Labs 的 stitch-skills 是 Google Stitch（AI 界面设计工具）的 Agent Skills 合集，遵循 Agent Skills 开放标准，分设计、构建和工具三组插件，可装进 Codex、Antigravity、Gemini CLI、Claude Code、Cursor 等。今天在 GitHub 总榜新增约 248 星、累计约 9,200 星；仓库最近一次提交在 8 月，这次上榜没有对应的新版本。",
+        "source_url": "https://github.com/google-labs-code/stitch-skills",
+        "time": "2026-11-16T06:19:00+08:00",
+        "impact": "用编程 Agent 做前端界面的开发者，可以直接装上这些 Skills 接 Stitch 的设计稿。",
+        "points": [
+          "Stitch 的设计、构建、工具三组 Skills",
+          "兼容 Codex、Claude Code、Cursor、Gemini CLI 等",
+          "今日约 +248 星，近期无新版本"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "彭博：苹果在给 iPhone Duo 2 外屏加 Face ID",
+        "summary": "⚠️ 未证实：Mark Gurman 在 11 月 15 日的 Power On 中称，苹果已做出带 Face ID 的 iPhone Duo 2 原型，正设法把面容识别集成进外屏。他说恢复面容识别是首要任务，但明年秋季机型的时间很紧，这项功能还没敲定。",
+        "source_url": "https://x.com/markgurman/status/2121984093806354817",
+        "time": "2026-11-15T23:10:07+08:00",
+        "impact": "在等折叠 iPhone 的用户可以留意：第二代能否补回 Face ID，可能影响要不要买第一代。",
+        "points": [
+          "已有带 Face ID 的 iPhone Duo 2 原型",
+          "目标是把面容识别做进外屏",
+          "明年秋季机型时间紧，尚未敲定"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "小米 18 Pro 系列约 11 月 18 日全球发布",
+        "summary": "据 Android Authority 11 月 16 日消息，小米 18 Pro 系列将在两天后全球发布：搭载骁龙 8 Elite Gen 6，峰值亮度 4,000 尼特并带防窥显示，背面副屏支持 Google 地图、Spotify、YouTube Music 和生成式 AI 应用。Pro Max 为 7,050mAh 电池加 100W 快充，Pro 为 6,000mAh 加 90W；后置 2 亿像素徕卡主摄、2 亿像素长焦和 5000 万像素超广角。",
+        "source_url": "https://x.com/AndroidAuth/status/2122008667830812827",
+        "time": "2026-11-16T00:47:46+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "想买安卓旗舰的海外用户可以等发布后看定价，防窥屏和背屏应用是这代的主要差异点。",
+        "points": [
+          "骁龙 8 Elite Gen 6，4,000 尼特防窥屏",
+          "背屏支持地图、音乐和生成式 AI 应用",
+          "Pro Max 7,050mAh + 100W，Pro 6,000mAh + 90W"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Folo 桌面版 1.18.0：文章可直接存进 Notion",
+        "summary": "RSS 阅读器 Folo 发布桌面版 v1.18.0 和移动版 v0.6.3。桌面版新增「存到 Notion」：在设置的集成里连接 Notion、选好数据库并映射字段即可，官方说明凭据只保存在本机、不会同步到账号。移动版可以关闭触感反馈，并修复了 iOS 锁屏后台运行后被登出的问题。",
+        "source_url": "https://github.com/RSSNext/Folo/releases/tag/desktop/v1.18.0",
+        "time": "2026-11-15T19:16:07+08:00",
+        "handle": "@folo_is",
+        "impact": "用 RSS 收集信息的人可以把文章直接沉淀进 Notion 知识库，少一步手工转存。",
+        "points": [
+          "桌面版可把文章存进指定 Notion 数据库",
+          "Notion 凭据只存本机，不同步到账号",
+          "移动版修复 iOS 后台运行后被登出"
+        ]
+      }
+    ]
+  }
+}

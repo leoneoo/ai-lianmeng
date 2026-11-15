@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T18:32:25+08:00",
+  "updated_at": "2026-11-16T06:29:15+08:00",
   "editions": [
+    {
+      "id": "2026-11-16-0600",
+      "published_at": "2026-11-16T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-16-0600.json",
+      "counts": {
+        "x_daily": 3,
+        "zh_topics": 3,
+        "en_topics": 0,
+        "oss_agent": 3,
+        "tech": 2,
+        "iot": 1
+      },
+      "headline": "彭博：苹果智能眼镜明年推出主打 Siri AI 调用 App；llama.cpp 补齐本地语音；Folo 可存 Notion"
+    },
     {
       "id": "2026-11-15-1800",
       "published_at": "2026-11-15T18:00:00+08:00",
