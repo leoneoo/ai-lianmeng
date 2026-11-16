@@ -98,7 +98,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     steps:
       - name: Checkout published revision
         uses: actions/checkout@v7
@@ -119,6 +119,18 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+      # 上传完成后 artifact 列表偶尔要过一会儿才可见（2026-11-16 18:00 期连续出现
+      # "No artifacts named github-pages"），先等 20 秒，失败再等 60 秒重试一次。
+      - name: Wait for artifact
+        run: sleep 20
       - name: Deploy
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - name: Wait before retry
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 60
+      - name: Deploy (retry)
+        id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v5

@@ -343,6 +343,9 @@ test("workflow deploys with the two Beijing slots", () => {
   assert.match(workflow, /actions\/configure-pages@v6/);
   assert.match(workflow, /actions\/upload-pages-artifact@v5/);
   assert.match(workflow, /actions\/deploy-pages@v5/);
+  assert.match(workflow, /name: Wait for artifact\n\s+run: sleep 20/);
+  assert.match(workflow, /id: deployment\n\s+continue-on-error: true/);
+  assert.match(workflow, /id: deployment_retry\n\s+if: steps\.deployment\.outcome == 'failure'/);
   assert.match(workflow, /concurrency:/);
   assert.match(workflow, /cancel-in-progress: false|cancel-in-progress: \$\{/);
 });
