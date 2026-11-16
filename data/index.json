@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-16T06:29:15+08:00",
+  "updated_at": "2026-11-16T18:26:10+08:00",
   "editions": [
+    {
+      "id": "2026-11-16-1800",
+      "published_at": "2026-11-16T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-16-1800.json",
+      "counts": {
+        "x_daily": 4,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 2,
+        "tech": 0,
+        "iot": 0
+      },
+      "headline": "阿里正式发布 Qwen4-Max；腾讯 Hy4 flash 把小模型价格压到新低；OpenAI 开设科学博客"
+    },
     {
       "id": "2026-11-16-0600",
       "published_at": "2026-11-16T06:00:00+08:00",

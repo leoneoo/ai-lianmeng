@@ -1,0 +1,162 @@
+{
+  "id": "2026-11-16-1800",
+  "published_at": "2026-11-16T18:00:00+08:00",
+  "headline": "阿里正式发布 Qwen4-Max；腾讯 Hy4 flash 把小模型价格压到新低；OpenAI 开设科学博客",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "阿里正式发布 Qwen4-Max：1M 上下文、原生视觉，价格全面下调",
+        "summary": "阿里 Qwen 团队正式发布 Qwen4-Max，采用新的混合专家（MoE）架构，原生支持视觉，上下文窗口（Context Window）100 万 token。官方称它比上一代 Qwen3.8-Max 最多省约一半 token，内部评测中单任务平均成本下降六成以上；API 价格为每百万 token 输入 1.5 美元、输出 4.5 美元，隐式缓存 0.075 美元（降 70%）。API 已在 QwenCloud 上线，OpenRouter、OpenCode Go 和 Vercel AI Gateway 也已接入，官方还预告会开放更小的 Qwen4 模型权重。",
+        "source_url": "https://x.com/Alibaba_Qwen/status/2122148127520289151",
+        "time": "2026-11-16T10:01:55+08:00",
+        "handle": "@Alibaba_Qwen",
+        "impact": "做编程和办公 Agent 的开发者可以低成本换上试用；更小的开源权重放出后，本地部署也会多一个强选项。",
+        "points": [
+          "新 MoE 架构，原生视觉，100 万 token 上下文",
+          "输入 $1.5 / 输出 $4.5 每百万 token，隐式缓存降 70%",
+          "OpenRouter、OpenCode Go、Vercel AI Gateway 已接入",
+          "官方预告：更小的 Qwen4 模型会开放权重"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "腾讯发布 Hy4 flash：每百万 token 输出 0.281 美元，OpenCode Go 限时两周免费",
+        "summary": "腾讯混元发布 Hy4 flash，定位「日常办公最便宜的模型」。官方称在日常工作的人类盲测中与 Claude Haiku 5.5（high）相当，单任务成本低 18 倍；API 每百万 token 缓存命中 0.003 美元、输入 0.070 美元、输出 0.281 美元。OpenCode 随后宣布接入，100 万上下文、支持多模态和零数据留存（ZDR），未来两周几乎不限量免费，且不计入 Go 套餐用量。",
+        "source_url": "https://x.com/TencentHunyuan/status/2122217770314301469",
+        "time": "2026-11-16T14:38:39+08:00",
+        "handle": "@TencentHunyuan",
+        "impact": "高频、低难度的 Agent 任务可以先用它压成本；免费期结束后的价格和稳定性要再观察。",
+        "points": [
+          "官方称盲测与 Claude Haiku 5.5（high）相当，任务成本低 18 倍",
+          "每百万 token：缓存 $0.003、输入 $0.070、输出 $0.281",
+          "100 万上下文、多模态、零数据留存",
+          "OpenCode Go 未来两周近乎不限量免费"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 开设科学博客，首篇讲 GPT-6 Astra 协助物理学家推进标准模型格点定义",
+        "summary": "OpenAI 上线新的科学博客，首篇文章《A step toward defining the Standard Model on a lattice》介绍物理学家 Nathaniel Craig 如何与 GPT-6 Astra 合作，提出标准模型的一个候选非微扰格点定义，并由模型协助把想法整理成详细证明。OpenAI 联合创始人 Greg Brockman 也转发称这是 GPT-6 Astra 在理论物理上的应用。",
+        "source_url": "https://x.com/OpenAI/status/2122123437141553630",
+        "time": "2026-11-16T08:23:49+08:00",
+        "handle": "@OpenAI",
+        "impact": "前沿模型正被当作理论研究的合作者来宣传；结论是否站得住，要看物理学界后续的审阅。",
+        "points": [
+          "新科学博客首篇：标准模型的候选格点定义",
+          "GPT-6 Astra 协助把想法写成详细证明",
+          "Greg Brockman 转发推介"
+        ]
+      },
+      {
+        "title": "Sakana AI 发布日语金融基准 JFinBench：开源模型差距明显",
+        "summary": "Sakana AI 发布日语金融基准 JFinBench，题目取自注册会计师、税理士、FP 一级等 6 项日本金融资格考试的 2026 年版，共 321 题，含计算、论述和读图题；转换由编程 Agent 完成、人工逐题核对，约 12 小时。评测 12 个最新模型发现，在主流基准上接近闭源的开源权重模型，在这里差距明显，失分主要来自对日本制度知识的欠缺而非计算。论文、数据集和代码已公开。",
+        "source_url": "https://x.com/SakanaAILabs/status/2122251724564070518",
+        "time": "2026-11-16T16:53:35+08:00",
+        "handle": "@SakanaAILabs",
+        "impact": "做本地化金融、税务 AI 的团队要补的是法规和准则知识，靠检索增强可能比单纯换大模型更有效。",
+        "points": [
+          "6 项日本金融资格考试 2026 年版，共 321 题",
+          "编程 Agent 转换 + 人工核对，约 12 小时",
+          "开源模型差距明显，主因是本地制度知识不足"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "头雁：Marin 535B-A23B 把大模型训练决策过程写得清清楚楚",
+        "summary": "头雁推荐 Marin 团队的 535B 总参数、23B 激活的 MoE 模型训练报告：用 18T token 训完，用了 Latent MoE、Quantile Balancing、Hyperball（Muon）、短卷积、XSA 等技术。他认为难得的是每个组件为什么上、为什么不上、风险怎么控、效率提升多少都有数据和图表，还靠小规模实验和 scaling ladder 提前预测了 loss，最终表现好于预测、全程没崩。",
+        "source_url": "https://x.com/alacheng/status/2122259882070130765",
+        "time": "2026-11-16T17:26:00+08:00",
+        "handle": "@alacheng",
+        "impact": "正在训大模型的团队可以把它当作公开的决策参考，少走试错弯路。",
+        "points": [
+          "535B 总参数、23B 激活，18T token",
+          "Latent MoE、Muon 等组件逐一给出取舍依据",
+          "scaling ladder 预测 loss，实际好于预测"
+        ]
+      },
+      {
+        "title": "meng shao 拆解 DeepSeek 开源的 chat-demo 参考前端",
+        "summary": "meng shao 解读 DeepSeek 随 App 能力开放 API 一起开源的 chat-demo：纯静态前端直接请求 API，聊天走 Anthropic 兼容接口，搜索和读链接在服务端完成，所有请求固定带高级别安全审核，开源三天已超 3000 星。他特别提醒：API Key 存在浏览器 localStorage，清空本地对话不会删除已上传到服务端的文件。",
+        "source_url": "https://x.com/shao__meng/status/2122249961077153958",
+        "time": "2026-11-16T16:46:34+08:00",
+        "handle": "@shao__meng",
+        "impact": "想自建 DeepSeek 聊天界面的开发者有了官方参考；在公用电脑上用要注意 Key 和上传文件的留存。",
+        "points": [
+          "静态前端，无应用后端，默认模型 deepseek-flash",
+          "搜索、读链接在服务端完成，固定开启安全审核",
+          "API Key 存浏览器本地，本地清空不删服务端文件"
+        ]
+      },
+      {
+        "title": "宝玉：主会话用便宜模型调度，子任务用强模型，再配合缓存策略省 token",
+        "summary": "宝玉分享「主会话 + Thread」模式的省钱思路：主会话只负责甄别和路由，用 Sonnet 5.5 这一档就够，子任务再用 Opus 5.5 这类强模型。主会话消息稀疏、缓存常过期，过期后只发最近几条加检索工具补上下文；子任务对话密集，可在缓存快过期（如 1 小时缓存的第 50 分钟）时先压缩上下文。",
+        "source_url": "https://x.com/dotey/status/2122162706606121396",
+        "time": "2026-11-16T10:59:51+08:00",
+        "handle": "@dotey",
+        "impact": "长期挂着的个人 Agent 或助手，按这个分工能明显降低 token 开销。",
+        "points": [
+          "主会话做调度用中档模型，子任务用强模型",
+          "主会话缓存过期后只发最新几条 + 检索",
+          "子任务在缓存过期前压缩上下文"
+        ]
+      },
+      {
+        "title": "头雁：Grok Bot 团队用形式化验证管 AI 写的代码，约七成 token 花在验证上",
+        "summary": "头雁整理了 Lauren Tan 在 AI Engineer Code Summit 的演讲《All Code Is Slop (Except Mine)》：Grok Bot 团队大规模用编程 Agent 写代码，靠运行时验证和形式化验证保质量，日常约 70% 的 token 用于验证而不是生成。TLA+ 用来检查跨设备通知等状态机不丢消息，Lean 用来证明长列表虚拟化算法不闪烁；文字规则（AGENTS.md 等）放在最后，因为无法强制执行。",
+        "source_url": "https://x.com/alacheng/status/2122238169345298613",
+        "time": "2026-11-16T15:59:43+08:00",
+        "handle": "@alacheng",
+        "impact": "用 Agent 批量写代码的团队，值得把预算从「多生成」挪到「多验证」。",
+        "points": [
+          "约 70% token 用于验证而非生成（演讲自述）",
+          "TLA+ 查状态机，Lean 证明具体算法",
+          "优先 lint 和目录结构约束，文字规则放最后"
+        ]
+      },
+      {
+        "title": "头雁提醒：免费 token 站和中转站可能拿走公司数据",
+        "summary": "头雁提醒，AI 数据生意火热，不少中小公司按月给员工报销固定额度买 AI 工具，员工为了省钱转去用免费 token 站或中转站，公司的代码和文档等核心数据可能就此流到不明的第三方手里。",
+        "source_url": "https://x.com/alacheng/status/2122167810315149698",
+        "time": "2026-11-16T11:20:08+08:00",
+        "handle": "@alacheng",
+        "impact": "公司和个人都应只走官方或可信渠道的 API，敏感代码和文档不要经过来路不明的中转。",
+        "points": [
+          "报销固定额度会促使员工找免费中转站",
+          "中转站能看到全部请求内容",
+          "核心数据可能被拿去当训练数据"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenClaw 2026.11.4 正式版：大会话不再撑爆内存，私密数据默认隔离",
+        "summary": "OpenClaw 发布 2026.11.4 正式版：大段会话裁剪、分页导出记忆和 Doctor 修复不再耗尽内存；网关重启后保留未回复的提问，WhatsApp、Signal 消息不再丢；侧聊只对已认证的查看者可见，配对设备的照片和截图默认私密；还防止新版命令行把共享数据库迁移到旧网关不认识的版本。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.4",
+        "time": "2026-11-16T12:17:42+08:00",
+        "impact": "自己部署 OpenClaw 的用户可以升级，尤其是会话多、接了 WhatsApp 或 Signal 的。",
+        "points": [
+          "大会话、记忆导出不再耗尽内存",
+          "网关重启后保留未回复提问，消息不丢",
+          "侧聊、配对设备照片截图默认私密",
+          "防止新 CLI 越级迁移共享数据库"
+        ]
+      },
+      {
+        "title": "Kilo 转述实验：README 里的提示注入让无沙箱编程 Agent 发走 SSH 密钥",
+        "summary": "Kilo Code 转述安全研究者 Madhu Akula 的模拟攻击：在没有沙箱的普通笔记本上运行编程 Agent，给它一份藏有提示注入的 README，Agent 读取了磁盘上的 SSH 密钥和 AWS 凭证并发到攻击者服务器。他的建议是把控制项放在 Agent 碰不到的地方，因为 Agent 能改的设置它就可能被诱导去改；Kilo 也建议免确认命令清单越短越好，联网操作一律需要批准。",
+        "source_url": "https://x.com/kilocode/status/2122272990138134834",
+        "time": "2026-11-16T18:18:05+08:00",
+        "handle": "@kilocode",
+        "impact": "本机跑编程 Agent 时，别给它读密钥目录和自由联网的权限，打开陌生仓库前先开沙箱。",
+        "points": [
+          "无沙箱 + 恶意 README，Agent 外传 SSH 密钥和 AWS 凭证",
+          "控制项要放在 Agent 改不了的地方",
+          "免确认命令越少越好，联网操作要审批"
+        ]
+      }
+    ],
+    "tech": [],
+    "iot": []
+  }
+}
