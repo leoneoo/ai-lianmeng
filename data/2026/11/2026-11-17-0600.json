@@ -1,0 +1,381 @@
+{
+  "id": "2026-11-17-0600",
+  "published_at": "2026-11-17T06:00:00+08:00",
+  "headline": "AMD 完成收购 World Labs；OpenAI 引入外部机构深入评估内部模型；Hugging Face 推理改走 OpenRouter",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "AMD 完成收购 World Labs，李飞飞出任 AMD 执行副总裁兼首席科学家",
+        "summary": "AMD 11 月 16 日宣布完成对李飞飞创办的 World Labs 的收购。这笔交易 9 月底签约，作价约 82 亿美元、全部以 AMD 股票支付；AMD 向 SEC 补充披露，交易已于 11 月 13 日交割，共发行约 1498 万股。World Labs 做的是能生成和模拟可交互 3D 环境的世界模型（World Model），以及机器人学习与仿真技术；李飞飞出任 AMD 执行副总裁兼首席科学家，直接向 CEO 苏姿丰汇报。",
+        "source_url": "https://newsroom.amd.com/news/amd-completes-acquisition-world-labs/",
+        "time": "2026-11-17T01:06:02+08:00",
+        "handle": "@AMD",
+        "impact": "AMD 有了自己的前沿模型团队，世界模型和机器人仿真在 AMD GPU 上的支持可能会更快跟上；具体产品还要看后续发布。",
+        "points": [
+          "约 82 亿美元全股票交易，11 月 13 日交割",
+          "李飞飞任 AMD 执行副总裁兼首席科学家，向苏姿丰汇报",
+          "World Labs 继续做世界模型与机器人仿真研究",
+          "AMD 称要用模型研究反哺下一代硬件与软件"
+        ]
+      },
+      {
+        "title": "OpenAI 启动首批「嵌入式评估」，四家外部机构可深入检查内部模型",
+        "summary": "OpenAI 宣布与 Apollo Research、METR、Transluce、Goodfire 四家机构开展首批「嵌入式评估」（embedded assessments）：让外部专家深度访问 OpenAI 的内部模型和系统，独立调查模型的对齐（Alignment）情况，并测试 OpenAI 的安全防护措施。OpenAI 称这是在已有对齐和安全研究基础上，引入独立审查来检验自己识别和管控风险的方式；联合创始人 Greg Brockman 也转发称这是第一轮。",
+        "source_url": "https://x.com/OpenAI/status/2122359930628063248",
+        "time": "2026-11-17T00:03:33+08:00",
+        "handle": "@OpenAI",
+        "impact": "前沿模型的安全评估开始从「发布前抽查」走向外部机构常驻式审查；报告公开多少、发现问题后怎么处理，还要看后续。",
+        "points": [
+          "合作方：Apollo Research、METR、Transluce、Goodfire",
+          "外部专家可深度访问内部模型和系统",
+          "目标是独立检查对齐情况和安全防护",
+          "官方称为「第一阶段」，后续还会扩展"
+        ]
+      },
+      {
+        "title": "Hugging Face 推理服务改走 OpenRouter 路由，自带供应商 Key 不再可用",
+        "summary": "Hugging Face 宣布与 OpenRouter 合作：即日起，Inference Providers 的语言模型请求改由 OpenRouter 的路由器分发，按实时价格、速度和可靠性为每次请求挑选供应商，失败时自动换一家重试，代码不用改。路由支持 OpenAI 的 Chat Completions、Responses 接口和 Anthropic 的 Messages 接口，官方给了 Claude Code、Codex、OpenCode、Pi、Hermes Agent 的接入指南。需要注意的是，语言模型请求改为统一记到 Hugging Face 账户计费，不能再用自己在各供应商的 API Key；图像和视频供应商的自带 Key 不受影响。",
+        "source_url": "https://huggingface.co/blog/openrouter",
+        "time": "2026-11-17T02:18:02+08:00",
+        "handle": "@huggingface",
+        "impact": "通过 HF 调开源模型的开发者要检查计费方式：原来走自带 Key 的语言模型请求，现在会记到 HF 账户上。",
+        "points": [
+          "HF 语言模型推理改由 OpenRouter 选供应商并自动重试",
+          "兼容 OpenAI 和 Anthropic 两套接口",
+          "破坏性变更：语言模型不能再用自带供应商 Key，改由 HF 账户计费",
+          "开放权重模型在 OpenRouter 的 token 占比已达 71.7%（OpenRouter 数据）"
+        ]
+      },
+      {
+        "title": "Perplexity 成立 Frontier Research，投入超过 1 万块 GPU 做自动化研究",
+        "summary": "Perplexity 宣布成立 Frontier Research 团队，目标是做出能自主开展研究的系统。研究方向包括多 Agent 编排、强化学习（Reinforcement Learning）、持续学习（Continual Learning）、系统和预训练，背后有超过 1 万块 GPU 支持。官方承诺定期公开论文、模型、数据和基准，并把成果放进 Perplexity 产品里测试；团队在旧金山、帕洛阿尔托、纽约和伦敦招人。",
+        "source_url": "https://x.com/perplexity_ai/status/2122352071295009156",
+        "time": "2026-11-16T23:32:19+08:00",
+        "handle": "@perplexity_ai",
+        "impact": "开源社区可能多一个会放出模型和评测的研究团队；能否兑现开放发布，要看接下来几个月的产出。",
+        "points": [
+          "目标：能自主做研究的系统（自动化研究员）",
+          "方向：多 Agent 编排、强化学习、持续学习、预训练",
+          "投入超过 1 万块 GPU",
+          "承诺公开论文、模型、数据和基准"
+        ]
+      },
+      {
+        "title": "OpenAI 把免费前沿模型名额扩到 20 万名科学家，11 月 23 日开放申请",
+        "summary": "OpenAI 宣布把「ChatGPT for Academic Researchers」计划扩大到全球最多 20 万名科学家，免费使用前沿模型并提供培训和支持，11 月 23 日开放申请；默认不会用计划内共享的数据训练模型。之前该计划的目标是到 2027 年覆盖 10 万人。OpenAI 同时发布对 1800 多名参与者的研究，称科学家自报使用 AI 后效率接近翻倍，覆盖提出想法、分析数据和写代码等环节。",
+        "source_url": "https://x.com/OpenAI/status/2122377585523126615",
+        "time": "2026-11-17T01:13:42+08:00",
+        "handle": "@OpenAI",
+        "impact": "高校和科研机构的研究者可以留意申请；「效率翻倍」是参与者自报，实际效果要看独立研究。",
+        "points": [
+          "免费名额扩到最多 20 万名科学家，11 月 23 日开放申请",
+          "默认不用计划内数据训练模型",
+          "1800 多名参与者自报效率接近翻倍"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "NVIDIA 在 SC26 发布 Vera CPU 机架平台和 Nemotron for Science",
+        "summary": "NVIDIA 在超算大会 SC26 上发布 Vera CPU 机架级高性能计算平台：把自家第一款完全自研的数据中心 CPU 与 Quantum-X800 InfiniBand 网络组合，官方称能效最高是 x86 的 2 倍，面向天气、气候和分子模拟等任务。同场还推出 Nemotron for Science，帮助研究人员搭建能推理科学问题、调用专业研究工具的 Agent，阿贡国家实验室和日本理化学研究所（RIKEN）已在使用。",
+        "source_url": "https://x.com/nvidianewsroom/status/2122376341131571405",
+        "time": "2026-11-17T01:08:46+08:00",
+        "handle": "@nvidianewsroom",
+        "impact": "超算和气象、气候模拟用户多了一个非 x86 的 CPU 选择；能效数字是 NVIDIA 自报，要等实际部署数据。",
+        "points": [
+          "Vera：NVIDIA 首款完全自研数据中心 CPU，配 Quantum-X800 InfiniBand",
+          "官方称能效最高为 x86 的 2 倍",
+          "Nemotron for Science 用于搭建科研 Agent，阿贡、RIKEN 已用"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Perplexity 推出 Monitor API，按每千次 1 美元收费",
+        "summary": "Perplexity 推出 Monitor API：可以按计划跟踪某个话题的新进展或指定网页的变化，有更新时通过 Webhook 推送到你的应用，按每 1000 次运行或抓取的 URL 收费 1 美元。",
+        "source_url": "https://x.com/perplexitydevs/status/2122408441042149853",
+        "time": "2026-11-17T03:16:19+08:00",
+        "handle": "@perplexitydevs",
+        "impact": "想做舆情、竞品或网页变更监控的开发者，可以少写一层爬虫和调度。",
+        "points": [
+          "跟踪话题新进展或网页变化",
+          "通过 Webhook 推送更新",
+          "每 1000 次运行/URL 收费 1 美元"
+        ]
+      },
+      {
+        "title": "ElevenLabs 收购日本语音 AI 实验室 Kotoba",
+        "summary": "ElevenLabs 宣布日本语音 AI 实验室 Kotoba 加入公司，Kotoba 的日语语音研究将并入 ElevenLabs 的客服 Agent 产品 ElevenAgents，让企业能用更自然的日语服务客户。",
+        "source_url": "https://x.com/ElevenLabs/status/2122420600408866844",
+        "time": "2026-11-17T04:04:38+08:00",
+        "handle": "@ElevenLabs",
+        "impact": "面向日本市场的语音客服 Agent 会多一个更强的日语选项。",
+        "points": [
+          "Kotoba 团队整体加入 ElevenLabs",
+          "日语语音研究并入 ElevenAgents"
+        ]
+      },
+      {
+        "title": "Claude Code 桌面版可在 iOS 模拟器里测试 iPhone Duo 折叠布局",
+        "summary": "Anthropic 开发者账号宣布，Claude Code 桌面版的 iOS 模拟器开始支持 iPhone Duo（公测）：应用可以在对话旁边的 Duo 模拟器里运行，Claude 能自己把设备折叠、展开，逐一测试各种布局。",
+        "source_url": "https://x.com/ClaudeDevs/status/2122439098740674839",
+        "time": "2026-11-17T05:18:08+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "给 iPhone Duo 适配应用的开发者，可以让 Agent 自动跑折叠屏布局测试。",
+        "points": [
+          "iOS 模拟器支持 iPhone Duo，公测",
+          "Claude 可自动折叠/展开设备测试布局"
+        ]
+      },
+      {
+        "title": "Hugging Face 实验 PyBot：1000 个 Agent 一周写出 60 万行无模型聊天机器人",
+        "summary": "Hugging Face 研究负责人 Leandro von Werra 介绍实验项目 PyBot：一个完全不用模型权重、不经训练、只靠规则的聊天机器人，全部是 60 万行 Python 代码，由 1000 个 DeepSeek Flash Agent 在一周内写完；他称其效果能和 3.6 亿参数的 SmolLM 相当。代码已在 GitHub 公开。",
+        "source_url": "https://x.com/lvwerra/status/2122335119750975925",
+        "time": "2026-11-16T22:24:58+08:00",
+        "handle": "@lvwerra",
+        "impact": "展示了大规模 Agent 集群写代码的上限，也说明小模型能做的事有一部分可以被显式代码替代。",
+        "points": [
+          "无权重、无训练，60 万行规则代码",
+          "1000 个 DeepSeek Flash Agent 一周写完",
+          "自称效果接近 SmolLM 360M"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Artificial Analysis 推出说话人分离榜，NVIDIA Nemotron 3.5 Transcribe 第一",
+        "summary": "Artificial Analysis 推出说话人分离（Diarization）基准，用 97 段 2 到 8 人的对话测各家语音转文字 API「谁说了哪句」的错误率。NVIDIA 的 Nemotron 3.5 Transcribe 以 3.3% 的词级错误率排第一，第二名 Voxtral Small Transcribe 3 为 7.5%。",
+        "source_url": "https://x.com/NVIDIAAI/status/2122392904115327213",
+        "time": "2026-11-17T02:14:35+08:00",
+        "handle": "@NVIDIAAI",
+        "impact": "做会议纪要、多人访谈转写的开发者选型时多了一个公开参考。",
+        "points": [
+          "97 段 2～8 人对话，按词级说话人错误率（WDER）打分",
+          "Nemotron 3.5 Transcribe 3.3% 第一",
+          "Voxtral Small Transcribe 3 为 7.5%"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "陈成分享 9 条编程 Agent 常用 Prompt",
+        "summary": "陈成回应数字生命卡兹克的话题，分享自己常对编程 Agent 说的 Prompt：先分析相关文件、说清要改什么再动手；在 worktree 里分步实现、一次提交并开 PR；把测试结果做成 HTML 放进下载目录给他验证；逐个 review PR 时关注包体积、边界情况和交互；睡前用 /goal 让 Agent 多轮工作，不要中途提问。",
+        "source_url": "https://x.com/chenchengpro/status/2122321666898538758",
+        "time": "2026-11-16T21:31:30+08:00",
+        "handle": "@chenchengpro",
+        "impact": "这些指令可以直接存成自己的 Prompt 片段，用在 Claude Code、Codex 等工具里。",
+        "points": [
+          "先分析、提问，再动手改代码",
+          "worktree 中分步实现，一次提交并开 PR",
+          "用 HTML 报告证明功能可用",
+          "睡前用 /goal 让 Agent 不间断多轮工作"
+        ]
+      },
+      {
+        "title": "Gorden Sun 推荐开源健康助理 Mirobody，体检数据可全程本地处理",
+        "summary": "Theta Health 团队开源 Mirobody：内置 6 万多种医学指标的离线词库，能把不同医院、不同语言和单位的检查项目统一归类。可导入 Apple Health 导出包、23andMe 基因文件，连接 Garmin、Oura；用 Docker 部署并配合 llama.cpp 跑本地模型，病历不出本机，16G 内存电脑就能跑。问 AI 指标变化时，每个数字都能点开原始化验单核对。",
+        "source_url": "https://x.com/Gorden_Sun/status/2122275196078063849",
+        "time": "2026-11-16T18:26:51+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "想长期跟踪自己或家人体检数据、又不想把病历传到云端的人可以试试。",
+        "points": [
+          "6 万多种医学指标离线词库，统一不同医院的项目名和单位",
+          "支持 Apple Health、23andMe、Garmin、Oura",
+          "Docker + llama.cpp 本地部署，16G 内存可跑"
+        ]
+      },
+      {
+        "title": "头雁推荐 Haru-4B：可以边听边说的多语言全双工语音基础模型",
+        "summary": "头雁推荐开源的 Haru-4B：一款低延迟、多语言的全双工连续语音对话基础模型，可以像打电话一样同时听和说。它是预训练基础模型，支持英语、西班牙语、葡萄牙语、德语、法语、中文、日语、俄语和韩语。",
+        "source_url": "https://x.com/alacheng/status/2122276491841163477",
+        "time": "2026-11-16T18:32:00+08:00",
+        "handle": "@alacheng",
+        "impact": "做实时语音 Agent 的开发者多了一个可以自己微调的开源底座。",
+        "points": [
+          "全双工：同时听和说，低延迟",
+          "支持中英日韩等 9 种语言",
+          "预训练基础模型，代码在 GitHub"
+        ]
+      },
+      {
+        "title": "Cheery 实测腾讯 WorkBuddy Remote：手机远程盯着电脑上的 AI 干活",
+        "summary": "Cheery 介绍腾讯 WorkBuddy 新上线的 WorkBuddy Remote（远程控制 Beta）：手机 App 能实时看电脑画面，开悬浮小窗盯着 AI 工作并随时发指令纠偏，卡住时可横屏全屏用虚拟键鼠接管。官方称走加密流量、不消耗 AI Token，同一时间只允许一台已认证设备连接，不存画面、不录键盘；首批只支持 macOS（v5.9.3 以上），手机须用独立 App（v2.7.0 以上）。",
+        "source_url": "https://x.com/cheery9998/status/2122278556999041483",
+        "time": "2026-11-16T18:40:12+08:00",
+        "handle": "@cheery9998",
+        "impact": "出门在外也能盯 AI 跑任务；开启前要确认屏幕录制和辅助功能权限只授给这一个插件。",
+        "points": [
+          "手机实时查看并接管电脑画面",
+          "不消耗 AI Token，同时只允许一台认证设备",
+          "首批仅支持 macOS v5.9.3+，手机需独立 App v2.7.0+"
+        ]
+      },
+      {
+        "title": "向阳乔木：一句提示词让软件空页面多点温度",
+        "summary": "向阳乔木分享一条设计用的提示词：让 AI「设计一下空页面，比如没配置模型时的状态，让用户感觉温馨、有趣，可以用 SVG 动画来表达」。他举 Chrome 断网时的小恐龙游戏为例，认为空状态里的小彩蛋能给用户情绪价值，也让产品细节更好一点。",
+        "source_url": "https://x.com/vista8/status/2122370293352309235",
+        "time": "2026-11-17T00:44:44+08:00",
+        "handle": "@vista8",
+        "impact": "做独立产品的开发者可以顺手把这条加进 UI 打磨清单。",
+        "points": [
+          "专门让 AI 设计空状态和未配置页面",
+          "可用 SVG 动画表达",
+          "参考 Chrome 断网小恐龙"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenCode Browse 0.1.0：用 Rust 重写，内存占用降到 1/25",
+        "summary": "OpenCode 发布浏览器控制组件 OpenCode Browse 0.1.0，整体用 Rust 重写：官方称内存占用减少 25 倍、体积缩小 23 倍，去掉了对 Playwright 的依赖，浏览器操作直接暴露给 Agent 调用。",
+        "source_url": "https://x.com/opencode/status/2122377687968678258",
+        "time": "2026-11-17T01:14:07+08:00",
+        "handle": "@opencode",
+        "impact": "用 OpenCode 跑浏览器任务的用户资源占用会明显下降，低配机器也更容易跑。",
+        "points": [
+          "Rust 重写，内存降 25 倍、体积小 23 倍（自报）",
+          "不再依赖 Playwright",
+          "浏览器操作直接提供给 Agent"
+        ]
+      },
+      {
+        "title": "Hermes Agent v0.23.2：把约 2000 个 PR 汇总成稳定版",
+        "summary": "Nous Research 发布 Hermes Agent v0.23.2，把 v0.23.1 之后合并的约 1989 个 PR（约 7900 次提交）汇总成稳定版，同步发布到 GitHub（CLI 和安装包）、Microsoft Store、Docker 和 Hermes Cloud。官方说明这是补丁版，完整更新说明会随 v0.24.0 一起发布。",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2",
+        "time": "2026-11-17T04:59:18+08:00",
+        "impact": "还停在 v0.23.1 的用户可以升级到这个稳定版，等 v0.24.0 再看具体新功能。",
+        "points": [
+          "汇总约 1989 个 PR、约 7900 次提交",
+          "CLI、Microsoft Store、Docker、Hermes Cloud 同步更新",
+          "详细更新说明随 v0.24.0 发布"
+        ]
+      },
+      {
+        "title": "Kilo Code v7.8.30：下线 Mercury Edit 2 自动补全，默认改用 Codestral",
+        "summary": "Kilo Code 在 v7.8.30 预发布版中下线 Mercury Edit 2 自动补全模型和 Next Edit 功能，默认自动补全改为 Codestral，原先选了 Mercury 或 Inception 的设置会自动切到 Codestral；SDK 中相关接口同时移除。",
+        "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.30",
+        "time": "2026-11-17T06:12:54+08:00",
+        "impact": "依赖 Kilo 的 Next Edit 或在 SDK 里调了相关接口的用户，升级前要改代码。",
+        "points": [
+          "Mercury Edit 2 和 Next Edit 下线",
+          "默认自动补全改为 Codestral",
+          "SDK 移除 client.kilo.edit 等接口"
+        ]
+      },
+      {
+        "title": "OpenClaw 公开 CI 降本经验：CI 用量下降 95.5%",
+        "summary": "OpenClaw 转发维护者 Vincent Koc 的长文，讲他们如何排查和改造 CI，让项目的 CI 用量下降 95.5%；文章写成对 Agent 友好的格式，适合直接交给编程 Agent 参考。OpenClaw 同日还发了 2026.11.4 补丁，修复 Signal 重连漏消息和记忆合并截断等问题。",
+        "source_url": "https://x.com/openclaw/status/2122451216093573217",
+        "time": "2026-11-17T06:06:17+08:00",
+        "handle": "@openclaw",
+        "impact": "CI 账单偏高的开源项目可以照着排查一遍。",
+        "points": [
+          "CI 用量下降 95.5%",
+          "长文对 Agent 友好，可直接参考",
+          "同日补丁修复 Signal 漏消息、记忆截断"
+        ]
+      },
+      {
+        "title": "AG-UI 协议登上 GitHub 日榜：把 Agent 接进前端应用",
+        "summary": "AG-UI（Agent-User Interaction Protocol，Agent 与用户交互协议）是一套开放协议，用来把 Agent 接进前端应用，让网页界面和 Agent 之间按统一格式交互。项目已有约 1.9 万星，今日在 GitHub Trending 总榜和 TypeScript 榜新增约 790 星。",
+        "source_url": "https://github.com/ag-ui-protocol/ag-ui",
+        "time": "2026-11-17T06:24:00+08:00",
+        "impact": "想给自家 Agent 做网页界面的开发者，可以直接按这个协议对接，少写自定义消息格式。",
+        "points": [
+          "开放协议：规范 Agent 与前端的交互",
+          "总星约 1.9 万，今日 +790"
+        ]
+      },
+      {
+        "title": "Claude-BugHunter：82 个漏洞挖掘 Skill 的 Claude Code 合集",
+        "summary": "Claude-BugHunter 是一套面向漏洞赏金和外部红队测试的 Claude Code Skill 合集，含 82 个 Skill、15 个斜杠命令，整理了覆盖 24 类常见漏洞的 681 个已公开报告模式，以及企业身份和基础设施攻击矩阵。今日在 GitHub Trending 新增约 1057 星，总星约 7400。",
+        "source_url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "time": "2026-11-17T06:24:00+08:00",
+        "impact": "安全研究者可以拿来提高授权测试的效率；只应在获得授权的目标上使用。",
+        "points": [
+          "82 个 Skill、15 个斜杠命令",
+          "681 个已公开漏洞报告模式，覆盖 24 类漏洞",
+          "今日 +1057 星"
+        ]
+      },
+      {
+        "title": "Google Research PaperOrchestra：多 Agent 自动写论文框架",
+        "summary": "Google Research 开源的 PaperOrchestra 是一个用多个 Agent 协作自动撰写 AI 研究论文的框架。项目总星约 1400，今日在 GitHub Trending 总榜和 Python 榜新增约 306 星。",
+        "source_url": "https://github.com/google-research/paper-orchestra",
+        "time": "2026-11-17T06:24:00+08:00",
+        "impact": "研究者可以参考它的分工方式搭自己的写作流程；生成内容仍需人工核对。",
+        "points": [
+          "多 Agent 协作写论文",
+          "Google Research 官方仓库，今日 +306 星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "macOS 27.3 测试版收紧完全磁盘访问，防 AI 应用越权",
+        "summary": "苹果在最新 macOS 27.3 测试版中改造了「完全磁盘访问」和「设备控制与数据访问」两个接口，用户批准新的权限请求时会看到变化；开发者需要让应用在只获得部分文件夹或应用权限时也能正常运行。用于磁盘备份或辅助功能的应用可以申请专门授权，已有的权限继续有效。苹果上月就表示，考虑到 AI Agent 带来的风险，要给完全磁盘访问加更多控制，并警告有开发者的用法可能暴露文件、邮件、信息和浏览记录。",
+        "source_url": "https://www.macrumors.com/2026/11/16/macos-27-3-full-desk-access/",
+        "time": "2026-11-17T05:08:21+08:00",
+        "impact": "在 Mac 上用 AI Agent 的人，以后授权时会看到更细的提示；开发者要提前适配有限权限。",
+        "points": [
+          "改造完全磁盘访问、设备控制与数据访问两个接口",
+          "应用需能在部分权限下正常工作",
+          "备份和辅助功能类应用可申请专门授权",
+          "已授予的权限继续有效"
+        ]
+      },
+      {
+        "title": "iOS 27.3 测试版 2 给 iPhone Duo 加前置摄像头解锁，暗处不可用",
+        "summary": "iOS 27.3 测试版 2 让合上的 iPhone Duo 可以用前置摄像头解锁，并新增合上即锁定的选项。彭博记者 Mark Gurman 指出，这是没有点阵投射器的软件方案：昏暗环境里用不了，夜里仍要靠 Touch ID，也不能用于 Apple Pay 等功能；他预计真正的 Face ID 要到 Duo 2 或 Duo 3。",
+        "source_url": "https://x.com/MacRumors/status/2122449628624822455",
+        "time": "2026-11-17T05:59:59+08:00",
+        "handle": "@MacRumors",
+        "impact": "Duo 用户解锁更方便，但安全性不如 Face ID，支付等场景仍要用 Touch ID。",
+        "points": [
+          "合上的 Duo 可用前置摄像头解锁",
+          "新增合上即锁定选项",
+          "暗光不可用，不支持 Apple Pay"
+        ]
+      },
+      {
+        "title": "Gemini「技能」支持文件和共享，Gems 即将开始下线",
+        "summary": "谷歌在 Gems 下线前给 Gemini 的「技能」（Skills，可复用的自定义指令）加了两项功能：创建技能时可上传最多 100 MB 的文件作为上下文，也可引用 Google Drive、Gemini Notebook 和 Google Photos 的文件，Drive 和 Notebook 文件会实时同步更新；技能还能分享给他人查看或编辑。据 9to5Google，Gems 的关闭从次日开始陆续推送。",
+        "source_url": "https://9to5google.com/2026/11/16/gemini-skills-files-sharing/",
+        "time": "2026-11-17T06:11:49+08:00",
+        "impact": "还在用 Gems 的用户应尽快把常用 Gem 迁成技能，以免下线后丢失配置。",
+        "points": [
+          "技能可附带最多 100 MB 文件",
+          "Drive、Notebook 文件实时同步",
+          "技能可共享，设查看或编辑权限",
+          "Gems 即将下线"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "PhoneBox：闲置安卓旧手机变成电脑副屏和触控面板",
+        "summary": "Gorden Sun 推荐开源工具 PhoneBox：在 Windows、Linux 或 macOS 电脑上运行一行命令，就能把 Android 7.0 以上的旧手机变成桌面副屏和触控操作台，不需要 Root、注册账号或云端服务器。内置 116 种小组件和 30 套模板，可显示 CPU、显卡、内存和网速曲线，一键开软件、调音量、切歌，还能显示 AI 用量额度，在手机上拒绝或批注 AI 的操作。",
+        "source_url": "https://x.com/Gorden_Sun/status/2122341734499983739",
+        "time": "2026-11-16T22:51:15+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "手边有旧安卓机的人可以零成本多一块状态屏，而且不依赖云端服务。",
+        "points": [
+          "一行命令安装，无需 Root 和云端",
+          "116 种小组件、30 套模板",
+          "可在手机上查看和拦截 AI 操作"
+        ]
+      },
+      {
+        "title": "实测 ha-mcp：让 AI 控制 Home Assistant 时默认开放 45 个写操作工具",
+        "summary": "开发者 naveendas96 用 ha-mcp 官方演示房屋做了只读实测：ha-mcp 是让 AI 助手操作 Home Assistant 的 MCP 服务（约 7900 星），v9.2.0 默认暴露 77 个工具，其中 45 个可修改自动化、设备、备份或重启系统；完整工具列表约 308 KB。开启 ENABLE_TOOL_SEARCH 后只预载 11 个工具（约 51 KB），其余按需查找；他还发现客户端退出后有配置进程残留。",
+        "source_url": "https://x.com/naveendas96/status/2122340640113537372",
+        "time": "2026-11-16T22:46:54+08:00",
+        "handle": "@naveendas96",
+        "impact": "用 AI 管智能家居前，先决定 Agent 能用哪些写操作工具，并打开工具搜索减少上下文占用。",
+        "points": [
+          "默认 77 个工具，其中 45 个有写权限",
+          "开启工具搜索后只预载 11 个",
+          "客户端退出后有残留进程"
+        ],
+        "tag": "自测"
+      }
+    ]
+  }
+}

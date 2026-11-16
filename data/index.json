@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-16T18:26:10+08:00",
+  "updated_at": "2026-11-17T06:33:53+08:00",
   "editions": [
+    {
+      "id": "2026-11-17-0600",
+      "published_at": "2026-11-17T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-17-0600.json",
+      "counts": {
+        "x_daily": 11,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 7,
+        "tech": 3,
+        "iot": 2
+      },
+      "headline": "AMD 完成收购 World Labs；OpenAI 引入外部机构深入评估内部模型；Hugging Face 推理改走 OpenRouter"
+    },
     {
       "id": "2026-11-16-1800",
       "published_at": "2026-11-16T18:00:00+08:00",
