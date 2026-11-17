@@ -1,0 +1,347 @@
+{
+  "id": "2026-11-17-1800",
+  "published_at": "2026-11-17T18:00:00+08:00",
+  "headline": "OpenAI 升级 ChatGPT for Healthcare 电脑操作 Agent；上海 AI 实验室开放 Sage S2.1 Flash；Claude Code 团队公开验证做法",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 升级 ChatGPT for Healthcare：电脑操作 Agent 加 20 多个医疗插件",
+        "summary": "OpenAI 宣布升级面向医疗机构的 ChatGPT for Healthcare：电脑操作（Computer Use）Agent 能力更强、临床问答更可靠，并新增 20 多个医疗行业插件。Abridge、Ambience、Cigna、CVS Health 等医疗机构正在把 OpenAI 的模型用在事前授权、转诊、出院计划和患者随访等流程里。OpenAI 的说法是，把医学证据和医护人员已在用的工具连起来，减少在各个系统之间来回操作的时间。",
+        "source_url": "https://x.com/OpenAI/status/2122465625109090646",
+        "time": "2026-11-17T07:03:33+08:00",
+        "handle": "@OpenAI",
+        "impact": "医疗机构的行政流程开始交给 Agent 跨系统操作；准确率、合规和出错后谁担责，还要看实际部署反馈。",
+        "points": [
+          "电脑操作 Agent 能力和临床问答同步升级",
+          "新增 20 多个医疗行业插件",
+          "Abridge、Ambience、Cigna、CVS Health 等已在使用",
+          "覆盖事前授权、转诊、出院计划、患者随访"
+        ]
+      },
+      {
+        "title": "上海 AI 实验室开放 Sage S2.1 Flash 权重，主打多轮验证的科研任务",
+        "summary": "上海 AI 实验室旗下 Sage AI 发布多模态模型 Sage S2.1 Flash，面向需要多轮分析和核对的科研任务：把科学数据理解与检索、写代码和调用工具结合，能用专业软件做分析，并根据中间结果和可视化反馈调整下一步。模型基于 Sage SciPerception 的统一表示架构，支持分子图、晶体结构、蛋白质序列和三维蛋白结构等 10 多类科学输入。官方称它在 MLE-bench Lite（90.3）、OfficeQA Pro（72.2）、Harvey LAB（25.0）和 SpreadsheetBench 2（37.1）上排名第一；权重已上 Hugging Face 和魔搭，vLLM 与 SGLang 已支持。",
+        "source_url": "https://x.com/sageai_official/status/2122539305826681084",
+        "time": "2026-11-17T11:56:20+08:00",
+        "handle": "@sageai_official",
+        "impact": "做材料、化学和生物数据分析的团队多了一个可本地部署的开源科研模型；榜单成绩是官方自报，要看独立复现。",
+        "points": [
+          "面向需要多轮分析与核对的科研任务",
+          "支持分子图、晶体、蛋白序列和结构等 10 多类输入",
+          "四项基准排名第一（自报）",
+          "权重在 Hugging Face、魔搭开放，vLLM/SGLang 已支持"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Claude Code 团队公开验证做法：九成代码由 Claude 写，靠检查清单把关",
+        "summary": "Anthropic 开发者账号发文介绍 Claude Code 团队如何让 Agent「先验证再交付」。据 meng shao 对原文的中文整理，团队 90% 的代码由 Claude 编写和审查，瓶颈已从写代码变成确认结果可靠：启动和冒烟检查写成 verify Skill，失败自动修三轮仍不过就交给人；一份 39 项的可靠性清单按改动触发，通常只跑相关的 3～10 项。审查规则从基础分支读取、针对固定提交，避免改动顺手改掉评判自己的标准。",
+        "source_url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+        "time": "2026-11-17T06:31:41+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "用编程 Agent 的团队可以照着做：把检查写成可执行步骤，并让 Agent 改不到评判它的规则。",
+        "points": [
+          "团队 90% 代码由 Claude 编写并审查",
+          "verify Skill 先跑启动和冒烟检查，三轮失败交人",
+          "39 项可靠性清单按改动触发，一般只查 3～10 项",
+          "审查规则取自基础分支，防止改动篡改检查"
+        ]
+      },
+      {
+        "title": "Answer.AI 公开上线 SolveIt：人和 AI 在同一个工作区边做边学",
+        "summary": "Jeremy Howard 宣布 Answer.AI 内部使用了两年的工具 SolveIt 首次向公众开放：免费加入，按实际用量付费。SolveIt 把人、AI、代码、笔记、文档和运行结果放在同一个工作区里，团队用它做软件开发、研究实验和教学；此前约 3000 名预览用户参与测试。官方强调它的目标不是让 AI 替人产出报告和代码，而是帮人加深理解、掌握技能。",
+        "source_url": "https://x.com/jeremyphoward/status/2122487017137398256",
+        "time": "2026-11-17T08:28:33+08:00",
+        "handle": "@jeremyphoward",
+        "impact": "想用 AI 学编程、做研究又不想完全交给 Agent 的人多了一个选择；按量计费，长期用之前先估算成本。",
+        "points": [
+          "Answer.AI 内部工具首次公开，免费加入、按用量付费",
+          "代码、笔记、文档和输出在同一工作区与 AI 协作",
+          "此前约 3000 名预览用户测试",
+          "定位是帮人学习和掌握，而非全自动产出"
+        ]
+      },
+      {
+        "title": "NVIDIA 董事会设立国家安全与出口管制监督委员会",
+        "summary": "NVIDIA 宣布董事会新设常设委员会，负责从董事会层面监督公司的国家安全政策、出口管制合规和全球贸易风险管理，由董事 Suzanne Nora Johnson 任主席、至少每季度开会，并聘请外部法律和合规专家；公司国家安全团队和全球贸易合规团队直接向该委员会和临时 CEO Colette Kress 汇报。",
+        "source_url": "https://x.com/nvidianewsroom/status/2122633418269954302",
+        "time": "2026-11-17T18:10:18+08:00",
+        "handle": "@nvidianewsroom",
+        "impact": "NVIDIA 把出口合规提到董事会层面管理，芯片供货和产品分区安排的决策可能更谨慎。",
+        "points": [
+          "新设董事会常设委员会，至少每季度开会",
+          "Suzanne Nora Johnson 任主席",
+          "合规团队向委员会和临时 CEO Kress 汇报"
+        ]
+      },
+      {
+        "title": "Together AI 分享 Agent 评测和前缀缓存实践，任务完成率从 67% 提到 96%",
+        "summary": "Together AI 介绍内部 Agent 评测做法：先定约 10 个代表性任务，在沙箱里让 Claude Code 分别以基础配置、接 MCP、装 Skills 三种方式完成，再分析轨迹改进文档和 API，Agent 任务完成率从 67% 提到 96%（自报）。另一篇与 Ollama 合写的文章讲编程 Agent 每轮都会重发整段对话，前缀缓存（Prefix Caching）要 Agent 框架和推理引擎两边都配合才有效。",
+        "source_url": "https://x.com/togethercompute/status/2122543623183208778",
+        "time": "2026-11-17T12:13:29+08:00",
+        "handle": "@togethercompute",
+        "impact": "给开发者工具写文档和 Skill 的团队，可以用编程 Agent 直接测自家文档是否好用。",
+        "points": [
+          "约 10 个代表任务 × 3 种配置做评测",
+          "完成率 67%→96%（自报）",
+          "前缀缓存需要 Agent 框架与推理引擎两端配合"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenCode 联合创始人：已用短期合同拿到 1000 块 GPU",
+        "summary": "OpenCode 联合创始人 Dax Raad（@thdxr）称，一个月前他公开求购 GB300 机柜，现在团队已有 1000 块 GPU，其中 40% 是 GB300、60% 是 B300，全部是短期合同；他认为「GPU 短缺、不签 5 年长约拿不到卡」的说法是人云亦云（自报）。",
+        "source_url": "https://x.com/thdxr/status/2122493644129054781",
+        "time": "2026-11-17T08:54:53+08:00",
+        "handle": "@thdxr",
+        "impact": "中小团队租用最新一代 GPU 的门槛可能比传言低，但这是单个团队自报，价格和可得性因人而异。",
+        "points": [
+          "约 1000 块 GPU：40% GB300、60% B300",
+          "全部为短期合同",
+          "反驳「必须长约才能拿到卡」的说法"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "为什么有了 Claude Code 还要自建 Agent Harness",
+        "summary": "meng shao 整理 Reddit 热门讨论：模型负责推理，Harness 负责管理上下文、执行工具、保存状态、处理重试和人工审批；「写进 CLAUDE.md 让模型遵守」和「由权限系统拒绝越权操作」不是一回事。他的结论是企业应从现成工具覆盖不了的具体约束出发，能配置和扩展就不必重写整套框架。",
+        "source_url": "https://x.com/shao__meng/status/2122492485872308640",
+        "time": "2026-11-17T08:50:17+08:00",
+        "handle": "@shao__meng",
+        "impact": "打算自建 Agent 平台的团队，可以先列出现成工具做不到的约束再决定。",
+        "points": [
+          "Harness 管上下文、工具、状态、重试和审批",
+          "提示词约束不等于系统级硬约束",
+          "能配置扩展就不必重写"
+        ]
+      },
+      {
+        "title": "把聊天记录直接当 Agent 记忆的试验",
+        "summary": "前 Manus 工程师 yan5xu 分享正在做的试验：让 Agent 把工作过程输出到聊天室，聊天记录直接充当记忆；会话（session）用完即可丢弃，新会话启动时让 Agent 自己读历史和聊天室里的笔记，活跃时追加写入、缓存冷却后直接丢弃。他认为这作为管理者会话可能就够了。",
+        "source_url": "https://x.com/yan5xu/status/2122518337997721750",
+        "time": "2026-11-17T10:33:00+08:00",
+        "handle": "@yan5xu",
+        "impact": "做多 Agent 协作的开发者，可以用「共享聊天室」替代复杂的记忆系统先试一试。",
+        "points": [
+          "聊天室记录充当 Agent 记忆",
+          "会话可丢弃，新会话自读历史与笔记",
+          "适合做多 Agent 的管理者会话"
+        ]
+      },
+      {
+        "title": "Gemini Carbon 适合当文案和交互顾问，不适合直接写代码",
+        "summary": "WquGuru 实测 Gemini Carbon：文笔比 Argon 更好；用 Claude Code 做界面时，让 Claude 先去咨询 Carbon 的交互建议，效果明显更好。但让它替代 Opus 5.5 做设计或写代码差距明显：响应慢、爱脑补，改个简单布局也会加一堆文件，消耗大。",
+        "source_url": "https://x.com/wquguru/status/2122530041175089637",
+        "time": "2026-11-17T11:19:31+08:00",
+        "handle": "@wquguru",
+        "impact": "用多模型协作的开发者可以把 Carbon 放在文案和交互评审环节，而不是主力编码。",
+        "points": [
+          "文笔强于 Argon",
+          "适合当交互顾问配合 Claude Code",
+          "写代码和设计不如 Opus 5.5，响应慢、易脑补"
+        ]
+      },
+      {
+        "title": "Conductor 0.95：本地 Agent 可以创建和管理其他 Agent",
+        "summary": "Wey Gu 指出 Conductor 新版加入了协调者 Agent。官方更新日志显示，0.95.0 起本地工作区里的 Claude Code、Codex、Cursor 或 OpenCode 可以新建工作区、给另一个 Agent 发任务、等待回复并追问，还能归档会话、整理侧栏；应用也从 Tauri 换成了 Electron。",
+        "source_url": "https://x.com/wey_gu/status/2122504554881433669",
+        "time": "2026-11-17T09:38:14+08:00",
+        "handle": "@wey_gu",
+        "impact": "并行跑多个编程 Agent 的用户可以让一个 Agent 统一调度；目前只支持本地工作区。",
+        "points": [
+          "本地 Agent 可创建工作区并给其他 Agent 派活",
+          "支持 Claude Code、Codex、Cursor、OpenCode",
+          "应用从 Tauri 换到 Electron"
+        ]
+      },
+      {
+        "title": "T3 Code：一个界面调用 Codex、Claude Code 等多种 Harness",
+        "summary": "向阳乔木推荐最近常用的 T3 Code：界面设计舒服，可以选择不同 Harness 执行任务，比如 Codex、Claude Code；他目前主要用来调 Claude Code，并通过配置把第三方额度和官方订阅分开使用。",
+        "source_url": "https://x.com/vista8/status/2122598270920966380",
+        "time": "2026-11-17T15:50:38+08:00",
+        "handle": "@vista8",
+        "impact": "同时用多个编程 Agent 的人可以试试统一前端；第三方额度渠道要自己评估账号和数据风险。",
+        "points": [
+          "一个界面调多种编程 Agent",
+          "主要搭配 Claude Code 使用",
+          "可把不同额度来源分开"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenCode 1.19.6：桌面版开始提供升级到 OpenCode 2.0",
+        "summary": "OpenCode 发布 v1.19.6：桌面版开始推送 OpenCode 2.0 升级，后台下载、由用户选择重启升级、退出时升级或稍后，会话、项目和设置都会保留，但为 1.x 写的插件需要更新。核心部分修复了图片过多导致请求过大的问题：历史图片超过 25 MiB 时用占位符替换最早的图片。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.6",
+        "time": "2026-11-17T15:21:32+08:00",
+        "impact": "OpenCode 用户升级 2.0 前先确认常用插件是否已适配。",
+        "points": [
+          "桌面版推送 OpenCode 2.0 升级，可选时机",
+          "会话、项目、设置保留，1.x 插件需更新",
+          "历史图片超 25 MiB 自动替换最早的"
+        ]
+      },
+      {
+        "title": "OpenCode Go 订阅用户 10 美元可买 100 美元 GLM 5.3 用量",
+        "summary": "OpenCode 官方宣布「Operation GLM」第一阶段：所有 OpenCode Go 订阅用户可以用 10 美元买到 100 美元的 GLM 5.3 使用额度。",
+        "source_url": "https://x.com/opencode/status/2122600875562537329",
+        "time": "2026-11-17T16:00:59+08:00",
+        "handle": "@opencode",
+        "impact": "常用 GLM 5.3 写代码的人成本能明显降低；活动期限和后续价格官方未说明。",
+        "points": [
+          "面向全部 OpenCode Go 订阅用户",
+          "10 美元换 100 美元 GLM 5.3 额度"
+        ]
+      },
+      {
+        "title": "Simon Willison：编程 Agent 的「外部沙箱」模式",
+        "summary": "Simon Willison 介绍一种给编程 Agent 加沙箱的做法：Agent 本身留在 Mac 上运行，但它要执行的代码放进 WebAssembly、QEMU 或 Apple Container 沙箱里跑，并给出了 Claude Code、Codex 和 Pi 的演示。",
+        "source_url": "https://x.com/simonw/status/2122500307557265651",
+        "time": "2026-11-17T09:21:22+08:00",
+        "handle": "@simonw",
+        "impact": "在自己电脑上跑编程 Agent 的人，可以不搬到云端也把执行环境隔离开。",
+        "points": [
+          "Agent 在本机，执行的代码进沙箱",
+          "可用 WebAssembly、QEMU 或 Apple Container",
+          "有 Claude Code、Codex、Pi 演示"
+        ]
+      },
+      {
+        "title": "美团开源 LongCat-Video-Avatar 1.6：音频驱动 10 分钟以上数字人视频",
+        "summary": "据 Gorden Sun 介绍，美团开源 LongCat-Video-Avatar 1.6，可根据音频、文本和图像生成单人或多人说话视频；新版改善唇形与音频同步，减少嘴部僵硬和画面闪烁，并能稳定生成 10 分钟以上、人物外观一致的长视频，采用 MIT 协议。",
+        "source_url": "https://x.com/Gorden_Sun/status/2122512201798021267",
+        "time": "2026-11-17T10:08:37+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "做数字人和口播视频的开发者多了一个可商用的开源选择；效果要自己实测。",
+        "points": [
+          "音频、文本、图像驱动单人/多人说话视频",
+          "唇形同步改善，支持 10 分钟以上长视频",
+          "MIT 协议，可本地部署和商用"
+        ]
+      },
+      {
+        "title": "claude-trading-skills：给股票交易加「纪律关卡」的 Claude Code Skill",
+        "summary": "tradermonty/claude-trading-skills 是个人投资者开源的 Claude Code Skill 合集，覆盖看大盘、技术图表、经济日历、选股、仓位计算、交易日记和复盘；下单前会检查有没有交易计划、仓位是否超标、是否在亏损后报复性加仓。项目总星约 6700，今日新增 837 星，登上 GitHub Trending Python 榜。",
+        "source_url": "https://github.com/tradermonty/claude-trading-skills",
+        "time": "2026-11-17T18:19:00+08:00",
+        "impact": "想给自己的交易定规矩的人可以参考；它不替人做决定，也不构成投资建议。",
+        "points": [
+          "看盘、选股、仓位、日记、复盘拆成 Skill",
+          "下单前设纪律检查",
+          "今日新增 837 星"
+        ]
+      },
+      {
+        "title": "Floorplan：让编程 Agent 把代码库画成可点击的应用地图",
+        "summary": "据 GitHubDaily 介绍，Floorplan 让 Claude Code 或 Codex 通读代码库，画成可缩放、可点开的应用地图，每个模块用大白话说明，前端请求连到对应的服务端代码；还能对着地图提问，并自带针对 AI 写的应用的体检，如密钥写进代码、数据库表公开可读、接口无需登录等。",
+        "source_url": "https://x.com/GitHub_Daily/status/2122593117115486436",
+        "time": "2026-11-17T15:30:09+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "靠 AI 写应用的人可以用它看清 Agent 改了哪里，并顺手查常见安全漏洞。",
+        "points": [
+          "代码库变成可缩放的应用地图",
+          "可对着地图提问",
+          "体检密钥泄露、公开数据表、未鉴权接口"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Gemini 拆分隐私设置：可保留历史记录但关闭模型训练",
+        "summary": "谷歌正在为 Gemini 应用推出新隐私设置，把原来的「Keep Activity」拆成两项：「History」控制聊天记录保存多久，另一项单独控制聊天内容（含文字和附件）是否用于训练生成式 AI 模型。原来关闭 Keep Activity 的用户，两项新设置都默认关闭；未来几周陆续推送并邮件通知。",
+        "source_url": "https://9to5google.com/2026/11/16/gemini-history-ai-training/",
+        "time": "2026-11-17T07:22:09+08:00",
+        "handle": "@9to5Google",
+        "impact": "想保留 Gemini 聊天记录又不想被拿去训练的用户，推送后可以单独关掉训练开关。",
+        "points": [
+          "历史记录与模型训练分成两个开关",
+          "原已关闭的用户两项默认关闭",
+          "未来几周推送，邮件通知"
+        ]
+      },
+      {
+        "title": "Gemini Notebook 可把资料一键做成交互网站",
+        "summary": "谷歌宣布 Gemini Notebook 可以把笔记本里的资料转成仪表盘、可视化讲解等交互网站：在对话里输入「make me a site」并描述需求，再选择在新标签页打开即可查看或分享。",
+        "source_url": "https://x.com/Gorden_Sun/status/2122507257456038183",
+        "time": "2026-11-17T09:48:59+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "用 Gemini 整理资料的人可以直接产出可分享的页面；分享前注意资料里有没有私人信息。",
+        "points": [
+          "资料一键生成交互网站",
+          "支持仪表盘、可视化讲解",
+          "可在新标签页查看和分享"
+        ]
+      },
+      {
+        "title": "tvOS 27.3 测试版 2 向 Apple TV 测试用户开放 Siri AI",
+        "summary": "9to5Mac 报道，苹果上周五在 tvOS 27.2.1 正式版给第二、三代 Apple TV 4K 推出 Siri AI（需附近有已开启 Siri AI 的配对设备），但 tvOS 27.3 测试版 1 用户反而用不上；新发布的测试版 2 加入 Siri AI 引导页，可选择试用新助手或继续用旧版 Siri。HomePod mini 2 仍在等待。",
+        "source_url": "https://9to5mac.com/2026/11/16/tvos-27-3-beta-2-brings-siri-ai-to-apple-tv-beta-testers/",
+        "time": "2026-11-17T09:36:22+08:00",
+        "handle": "@9to5mac",
+        "impact": "Apple TV 测试版用户现在也能用上 Siri AI；HomePod 用户还要再等。",
+        "points": [
+          "tvOS 27.3 测试版 2 加入 Siri AI",
+          "需附近有已开启 Siri AI 的配对设备",
+          "HomePod mini 2 尚未支持"
+        ]
+      },
+      {
+        "title": "彭博与 MacRumors 汇总：苹果明年计划推出至少 18 款新品",
+        "summary": "MacRumors 根据彭博记者 Mark Gurman 等爆料汇总，苹果 2027 年预计推出至少 18 款新品，包括 20 周年的 iPhone 20 Pro/Pro Max（四边曲面玻璃）、全新智能眼镜、更大的 HomeView、带摄像头的 AirPods Pro 等；iPhone Air 2 预计换用支持毫米波的 C2 基带。均为爆料，尚未经苹果证实。",
+        "source_url": "https://www.macrumors.com/2026/11/16/apple-18-new-products-next-year/",
+        "time": "2026-11-17T06:40:53+08:00",
+        "handle": "@MacRumors",
+        "impact": "打算换苹果设备的人可以参考时间线，但以苹果正式发布为准。",
+        "points": [
+          "至少 18 款新品（爆料）",
+          "iPhone 20 Pro 系列四边曲面玻璃",
+          "智能眼镜、带摄像头 AirPods Pro"
+        ],
+        "tag": "传闻"
+      }
+    ],
+    "iot": [
+      {
+        "title": "Skykeep：在 Windows、Linux 和安卓上用 iCloud 备忘录、提醒和照片",
+        "summary": "据 GitHubDaily 介绍，开源客户端 Skykeep 把 iCloud 的备忘录、提醒事项、日历、通讯录、云盘和照片做成 Windows 与 Linux 上的 6 个独立应用，安卓也有手机版；数据先存本地、断网可看，和 iPhone 实时同步，同时编辑也能保住两边改动。还能右键「发送到 iPhone」，并把 iCloud 原图、原视频备份到自选硬盘。",
+        "source_url": "https://x.com/GitHub_Daily/status/2122479849180901649",
+        "time": "2026-11-17T08:00:04+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "iPhone 配 Windows 或安卓的用户多了一个打通 iCloud 的办法；它需要登录 Apple ID，用前先看清项目安全性。",
+        "points": [
+          "iCloud 六类数据在 Windows/Linux/安卓上用",
+          "本地优先，与 iPhone 实时同步",
+          "可一键发送到 iPhone、备份原图到本地硬盘"
+        ]
+      },
+      {
+        "title": "用开源视觉模型 VLX-Seek 把家用摄像头变成全本地智能摄像头",
+        "summary": "WquGuru 分享做法：安装开源视觉定位模型 VLX-Seek 的量化版（约 12G 显存即可），再让编程 Agent 写一个管理后台，就能做出人物、物品检测全在本地完成的智能摄像头；用自然语言描述目标即可框出位置和数量，演示中单次检测约 0.69 秒。",
+        "source_url": "https://x.com/wquguru/status/2122555739847979170",
+        "time": "2026-11-17T13:01:38+08:00",
+        "handle": "@wquguru",
+        "impact": "在意隐私的家庭可以不把摄像头画面传到云端也能做智能识别。",
+        "points": [
+          "VLX-Seek 量化版约 12G 显存",
+          "用自然语言指定检测目标",
+          "画面不出本地"
+        ]
+      },
+      {
+        "title": "跨设备共享 Agent 配置和记忆：私有仓库同步加自建密钥管理",
+        "summary": "开发者 bylixing 分享自己的跨 Agent、跨设备做法：Agent.md 放私有仓库做版本管理；关闭 Claude Code 自带记忆，所有项目记忆统一放进私有 GitHub 仓库同步，按子文件夹区分项目，每天定时整理；Skill 分全局和项目两类，用 GitHub 加软链同步；密钥用自部署的 Infisical，只在运行时获取、不落盘。",
+        "source_url": "https://x.com/bylixing/status/2122513517848981943",
+        "time": "2026-11-17T10:13:51+08:00",
+        "handle": "@bylixing",
+        "impact": "多台电脑跑 Agent 的人可以照这个思路统一配置，关键是密钥不要跟着仓库同步。",
+        "points": [
+          "指令与记忆放私有仓库同步",
+          "Skill 用 GitHub + 软链共享",
+          "密钥用自部署 Infisical，不落盘"
+        ]
+      }
+    ]
+  }
+}
