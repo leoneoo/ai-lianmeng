@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T18:29:06+08:00",
+  "updated_at": "2026-11-18T06:39:06+08:00",
   "editions": [
+    {
+      "id": "2026-11-18-0600",
+      "published_at": "2026-11-18T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-18-0600.json",
+      "counts": {
+        "x_daily": 8,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 5,
+        "tech": 2,
+        "iot": 1
+      },
+      "headline": "OpenAI 发布 GPT-6.2 Astra 和 Sol；微软 Ignite 推出 Copilot Workspaces；Gemini Tasks 开放代付和代打电话"
+    },
     {
       "id": "2026-11-17-1800",
       "published_at": "2026-11-17T18:00:00+08:00",

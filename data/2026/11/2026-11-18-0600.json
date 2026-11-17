@@ -1,0 +1,284 @@
+{
+  "id": "2026-11-18-0600",
+  "published_at": "2026-11-18T06:00:00+08:00",
+  "headline": "OpenAI 发布 GPT-6.2 Astra 和 Sol；微软 Ignite 推出 Copilot Workspaces；Gemini Tasks 开放代付和代打电话",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 发布 GPT-6.2 Astra 和 Sol，API 价格下调，并收紧网络安全相关限制",
+        "summary": "OpenAI 推出 GPT-6.2 Astra（面向高难度专业任务的旗舰）和 GPT-6.2 Sol（日常与多步 Agent 工作流的主力）。ChatGPT Work 和 Codex 向 Plus、Pro、Enterprise、Edu 用户开放；开发者可在 API 调用 gpt-6.2-astra 和 gpt-6.2-sol，两款模型上线即提供 Ultrafast。Pro 500 可用任一模型的 Ultrafast；Pro 200 首次也能用 Ultrafast，先从 Sol 开始。Enterprise 和 Edu 需工作区管理员开启。Astra 的 API 输入和输出单价比 GPT-6 Astra 低 20%，缓存输入再打 60% 折扣，官方报价为每百万 tokens 输入 8 美元、缓存输入 0.40 美元、输出 40 美元；Sol 沿用 GPT-6.1 Sol 的 2 / 0.10 / 10 美元。官方称 Astra 在 Agents’ Last Exam 上比 GPT-6 Astra 高 5.2 分、成本不到三分之一，并比 Claude Fable 5.2 高 5.5 分、成本约为其 5%（该榜对 Fable 排除了 9 项使用后备模型的任务，官方自报）。Sam Altman 说新模型很聪明，但还要把「好用、好协作」作为后续优先事项。因网络安全能力上升，官方收紧了高风险网络安全协助的限制，可能影响一部分正当的漏洞研究。部分早期测试者在网上评价很差，这是个人体验，不是官方结论。",
+        "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+        "time": "2026-11-18T01:54:00+08:00",
+        "handle": "@OpenAI",
+        "impact": "开发者可马上在 API 和 Codex 里换新模型、对比成本，但安全限制和「好不好用」还要自己实测。",
+        "points": [
+          "ChatGPT Work 与 Codex 向 Plus、Pro、Enterprise、Edu 开放，API 同步提供两款模型。",
+          "Astra API 输入输出比 GPT-6 Astra 低 20%，缓存输入再打 60% 折扣（官方报价）。",
+          "官方自报 Agents’ Last Exam 等成绩；Fable 对比排除了 9 项后备模型任务。",
+          "网络安全 Critical，并收紧高风险协助；生物/化学与自我改进评为 High（自报）。"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "微软 Ignite 发布 Copilot Workspaces，Perception 安全系统正式商用",
+        "summary": "微软在 Ignite 2026 把 Copilot 定位成工作操作系统，并推出 Copilot Workspaces：人和 Agent、以及多个人在同一共享上下文里协作，目前在 Frontier 提供。同期公布：Office in Copilot、Copilot Home 已正式商用；Copilot Code 将在未来几周正式商用；Autopilot 开始向 Frontier 用户推送。Agent 365 新增 Business Analytics，用来把 AI 花费和业务结果对应起来，官方称 Agent 365 已接入超过 5000 万个 Agent（自报）。Microsoft Perception 正式商用，用红队、蓝队、绿队 Agent 按剧本模拟攻击、发现问题和修复。微软还宣布 AI Transparency Initiative，已有 40 多家组织参与；Foundry 将上架 GPT-6.2，并引入 Meta 最新模型；Microsoft-Decision-1.1 正式商用并支持多模态；自研 Code 2 / Code 2 Flash 已在 GitHub Copilot 和 Foundry 提供。Satya Nadella 还称 Azure HorizonDB 已正式商用，相对自管 PostgreSQL 性能最高约 8 倍（自报），并将进入 Fabric。",
+        "source_url": "https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/",
+        "time": "2026-11-18T04:44:00+08:00",
+        "handle": "@satyanadella",
+        "impact": "企业如果已经在用 Copilot 或 Azure，这轮关键是先分清哪些已正式商用、哪些还在 Frontier。",
+        "points": [
+          "Copilot Workspaces 让人和 Agent 在共享上下文里协作，目前在 Frontier 提供。",
+          "Perception 正式商用，用红、蓝、绿队 Agent 按剧本做攻防和修复。",
+          "Agent 365 增加花费与业务结果分析；官方称已接入超 5000 万个 Agent（自报）。",
+          "Foundry 将上架 GPT-6.2 和 Meta 最新模型；Code 2 已进入 GitHub Copilot。"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Gemini Tasks 对多国免费开放，可用 Google Pay 代付并在美国代打电话",
+        "summary": "Google 宣布 Tasks 向美国、日本、韩国、加拿大、澳大利亚和印度的用户免费开放，并使用 Gemini 4 Hydrogen。用户可在 Gemini 首页把「Chat」切换成「Task」，把待办交给它。美国先开放一批进阶能力：可同时给多家店打电话、比较报价或预约（通话时会表明自己是 AI，商户可退出）；可用 Google Pay 和 Agent Payments Protocol（AP2）结账，用户可事先设消费上限，下单前默认再确认；也可把邮件转发到 gemini@google.com，或通过 Messages / iMessage 把任务发给 Gemini。Google Wallet 同日开始登陆 iOS。官方称不会在用户未同意时交出支付或私人账户信息。",
+        "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+        "time": "2026-11-18T01:06:00+08:00",
+        "handle": "@GeminiApp",
+        "impact": "这是会碰到真钱和真实电话的代办功能，使用前应先设消费上限，并确认购买前必须询问。",
+        "points": [
+          "Tasks 在美、日、韩、加、澳、印免费开放，使用 Gemini 4 Hydrogen。",
+          "美国可代打电话和用 Google Pay（AP2）结账，建议先设消费上限并确认购买。",
+          "支持把邮件转发到 gemini@google.com，或用短信把任务交给 Gemini。",
+          "官方称未获同意不会交出支付或私人账户信息，商户可退出 AI 来电。"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "英伟达公布 2027 财年第三季度业绩：营收 1158 亿美元",
+        "summary": "英伟达公布 2027 财年第三季度业绩，营收 1158 亿美元，同比增长 103%；数据中心营收 1076 亿美元，同比增长 110%。数字来自公司官方公告。公司还表示将扩大与 Amkor、富士康、Kinsus、三星电机、SPIL 和台积电等的供应链合作。",
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+        "time": "2026-11-18T05:33:00+08:00",
+        "handle": "@nvidianewsroom",
+        "impact": "这是本轮最直接的算力需求数据，具体利润和展望仍以财报原文为准。",
+        "points": [
+          "官方公告：营收 1158 亿美元，同比增长 103%。",
+          "数据中心营收 1076 亿美元，同比增长 110%。",
+          "同时宣布扩大与台积电、富士康等的供应链合作。"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Perplexity 推出 Orchestrator API，按任务选模型和供应商",
+        "summary": "Perplexity 发布 Orchestrator API，把 45 家以上来自 OpenAI、Anthropic、Google、xAI 以及开源权重的模型放进同一接口，按可用性、容量和延迟选择供应商，并统一计费。可用现有的 OpenAI 或 Anthropic SDK，配合 Perplexity API 密钥，支持 Chat Completions、Responses 和 Anthropic Messages。自动路由在预览中提供：先按任务类型匹配模型，再用决策模型选择路由。控制台可按模型、项目和密钥追踪花费，并设置模型白名单和支出上限。计费按该模型已公布的每 tokens 单价，由实际提供服务的供应商执行。Perplexity 还称 GPT-6.2 Astra 和 Sol 已进入 Search 和 Computer。",
+        "source_url": "https://www.perplexity.ai/hub/blog/orchestrator-one-api-for-reliable-inference",
+        "time": "2026-11-18T04:13:00+08:00",
+        "handle": "@perplexity_ai",
+        "impact": "适合已经在用 OpenAI 或 Anthropic SDK 的团队试用，但要先设支出上限并看清实际路由到哪家。",
+        "points": [
+          "一个 API 覆盖 45 家以上模型，按可用性、容量和延迟选择供应商并统一计费。",
+          "兼容 OpenAI 与 Anthropic SDK；控制台可设模型白名单和支出上限。",
+          "自动路由仍在预览；费用按模型已公布单价，由实际供应商执行。"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "DeepMind 为 Antigravity 增加机器人插件，可用 Gemini 4 Hydrogen 控制机械臂",
+        "summary": "DeepMind 称，借助 Gemini 4 Hydrogen 和 Google Antigravity 的新机器人插件，用户可以连接受支持的机械臂，在 MuJoCo 仿真里练习，再用对话在真实环境中执行任务。官方称该模型在日常抓取放置等控制任务上与更大的 Argon 模型相当，但成本更低，并在判断三维空间关系上超过 Gemini Robotics ER 2（自报）。也可以先根据照片或提示词在仿真里搭三维场景，再部署到机械臂。",
+        "source_url": "https://x.com/GoogleDeepMind/status/2122767521925230896",
+        "time": "2026-11-18T03:03:00+08:00",
+        "handle": "@GoogleDeepMind",
+        "impact": "有兼容机械臂的开发者可以先在仿真里试，真实效果仍取决于硬件和官方自报的对比。",
+        "points": [
+          "新插件可连接受支持机械臂，先在 MuJoCo 仿真练习，再在真实环境执行任务。",
+          "官方自报：日常控制与更大的 Argon 相当且成本更低，三维判断优于 ER 2。",
+          "可用照片或提示词先搭仿真场景，再部署到机械臂。"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Google AI Studio 支持自定义域名，并可在美国把应用发到 Play 商店",
+        "summary": "Google AI Studio 宣布可在 Build 里为应用绑定自定义域名，把想法做成带自己域名的在线应用。Logan Kilpatrick 还提到，可以构建安卓应用并通过 Google Play 下载到手机（目前仅美国），以及更安全地把 AI 能力加进应用。",
+        "source_url": "https://x.com/GoogleAIStudio/status/2122817812200555003",
+        "time": "2026-11-18T06:23:00+08:00",
+        "handle": "@GoogleAIStudio",
+        "impact": "适合在 AI Studio 里做演示或小应用的人，自定义域名和上架范围仍以产品页为准。",
+        "points": [
+          "可在 AI Studio Build 里为应用绑定自定义域名。",
+          "Logan Kilpatrick 称美国用户可将安卓应用经 Google Play 装到手机。"
+        ]
+      },
+      {
+        "title": "Replit 推出 Missions：可用一组 Agent 去复现任意复杂度的软件",
+        "summary": "Replit 创始人 Amjad Masad（@amasad）称，Replit Missions 可以拉起一组 Agent，用于复现任意类型、任意复杂度的软件。这是官方人士的自我介绍，具体能力和限制要以产品页为准。",
+        "source_url": "https://x.com/amasad/status/2122784726671134764",
+        "time": "2026-11-18T04:11:00+08:00",
+        "handle": "@amasad",
+        "impact": "已经在用 Replit 的人可以看这个新入口，但不要只按宣传口径理解它的能力边界。",
+        "points": [
+          "Replit 创始人宣布 Missions 可用一组 Agent 复现软件。",
+          "「任意类型、任意复杂度」是官方人士自报，需以产品实际表现为准。"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "自建评测里，GPT-6.2 Sol 做代码审查从 65% 提到 84%，Astra 到 96%",
+        "summary": "数字生命卡兹克用自己的简易评测集比较代码审查能力，称 GPT-6.1 Sol 只能找出 65% 的问题，GPT-6.2 Sol 提到 84%，GPT-6.2 Astra 到 96%，并打算把 Sol xhigh 当作新的代码审查主力。这些数字是他的个人测试，不是公开基准。",
+        "source_url": "https://x.com/Khazix0918/status/2122809031048012073",
+        "time": "2026-11-18T05:48:00+08:00",
+        "handle": "@Khazix0918",
+        "impact": "可作参考，但不能把它当成公开榜单；换模型前最好用自己的代码仓库复测。",
+        "points": [
+          "个人简易评测：Sol 代码审查从 65% 提到 84%，Astra 到 96%。",
+          "作者打算把 GPT-6.2 Sol xhigh 当作新的代码审查主力。"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Zoom 推出 Zoom Slides，可用一句话、会议或文档生成 PPT",
+        "summary": "向阳乔木介绍，Zoom 推出 AI 演示功能 Zoom Slides，支持三种输入：一句话提示词、会议内容或文档，可导入自己的素材和品牌规范，也能生成或替换图片。生成的 PPT 能在 Zoom 里直接演示、支持多人协作，并带 AI 配音，方便没有参会的人补看完整讲解。",
+        "source_url": "https://x.com/vista8/status/2122754446023401868",
+        "time": "2026-11-18T02:11:00+08:00",
+        "handle": "@vista8",
+        "impact": "经常在 Zoom 开会、会后还要出幻灯片的人，可以直接在会议场景里试用。",
+        "points": [
+          "输入可以是一句话、会议内容或文档，并支持自有素材和品牌规范。",
+          "可在 Zoom 里直接演示和多人协作，还提供 AI 配音回看。"
+        ]
+      },
+      {
+        "title": "一张手写英文照片就能做成字体，但不支持中文",
+        "summary": "向阳乔木推荐 Skill「npx skills add byrishi/punchcutter」：拍一张自己的手写字照片，就能做成一款英文字体。目前不支持中文。",
+        "source_url": "https://x.com/vista8/status/2122756978216976509",
+        "time": "2026-11-18T02:21:00+08:00",
+        "handle": "@vista8",
+        "impact": "做英文个人品牌或演示文稿时可以试试，中文用户目前用不上。",
+        "points": [
+          "用一条 Skill 命令即可安装 punchcutter。",
+          "输入是手写字照片，输出是英文字体，暂不支持中文。"
+        ]
+      },
+      {
+        "title": "用 Gemini 4 Carbon 给 Claude 的方案做交互和文案把关",
+        "summary": "数字生命卡兹克分享近期用法：让 Claude 做方案规划和设计执行时，把交互设计和界面文案交给 Gemini 4 Carbon 把关，觉得产品在用户体验上会更顺。这是个人工作流经验，不是正式评测。",
+        "source_url": "https://x.com/Khazix0918/status/2122692392218464305",
+        "time": "2026-11-17T22:04:00+08:00",
+        "handle": "@Khazix0918",
+        "impact": "做产品方案的人可以按这个分工试一次，再看是否适合自己的项目。",
+        "points": [
+          "Claude 负责方案和执行，Gemini 4 Carbon 负责交互和界面文案。",
+          "作者认为这样产品体验更顺，属于个人用法而非评测结论。"
+        ]
+      },
+      {
+        "title": "给编程 Agent 用 Vercel 风格组件，减少「AI 味」界面",
+        "summary": "向阳乔木建议，若不想让 AI 写出明显的套模板界面，可以沿用 Vercel 的黑白灰风格，并使用 Vercel 为 Agent 准备的组件库。按技术栈生成对应提示词，或让 Agent 直接访问该站点，减少系统默认丑组件和随意配色。",
+        "source_url": "https://x.com/vista8/status/2122749798348698021",
+        "time": "2026-11-18T01:52:00+08:00",
+        "handle": "@vista8",
+        "impact": "用编程 Agent 做网站时，先给它一套明确的组件和风格，界面会稳定很多。",
+        "points": [
+          "建议默认使用黑白灰，避免 Agent 随便配色和套默认组件。",
+          "可用 Vercel 面向 Agent 的组件库生成提示词，或让 Agent 访问站点。"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Claude Code 实验功能 Code Mode：用脚本把工具串起来",
+        "summary": "Anthropic 开发者账号介绍 Code Mode，这是 Claude Code 的一种实验用法：Claude 会编写脚本，把工具以更复杂的方式串联起来，并在长命令还在运行时继续回答你。需要设置环境变量 CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 才能打开。",
+        "source_url": "https://x.com/ClaudeDevs/status/2122801681939234950",
+        "time": "2026-11-18T05:18:00+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "已经在用 Claude Code 的人可以在测试环境打开试试，不建议一上来就用在生产流程。",
+        "points": [
+          "Claude 用脚本串联工具，可在长命令运行时继续对话。",
+          "需设置 CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1，目前仍是实验功能。"
+        ]
+      },
+      {
+        "title": "OpenClaw 2026.11.5：对话在网关重启后还能接着用",
+        "summary": "openclaw/openclaw 发布 v2026.11.5，重点是重启安全的对话：排队中的消息、发送权限和最后的聊天写入，会在 Gateway 重启后保留，减少一重启就丢上下文的情况。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.5",
+        "time": "2026-11-17T18:47:00+08:00",
+        "impact": "自建 OpenClaw 网关的人，这次更新主要解决重启丢对话的问题。",
+        "points": [
+          "版本 v2026.11.5 强调 restart-safe conversations。",
+          "排队消息、发送权限和最后的聊天写入会在网关重启后保留。"
+        ]
+      },
+      {
+        "title": "Orca：用自己的订阅同时跑多路编程 Agent",
+        "summary": "GitHub 日榜项目 stablyai/orca 介绍自己是一个可在桌面、移动和远程环境运行的编程 Agent 舰队工具，能接入 Claude Code、Codex 等，并使用用户自己的订阅，而不是另买一套用量。今日新增星标以 GitHub Trending 页面当时数字为准。",
+        "source_url": "https://github.com/stablyai/orca",
+        "time": "2026-11-18T06:00:00+08:00",
+        "impact": "已经分别订阅了 Claude 或 Codex 的人，可以看它能否把多路 Agent 放到一个工作区。",
+        "points": [
+          "可同时调度多路编程 Agent，并使用用户已有的订阅。",
+          "支持桌面、移动和远程运行；今日在 GitHub 日榜上较热。"
+        ]
+      },
+      {
+        "title": "chrome-devtools-mcp：把 Chrome 开发者工具交给编程 Agent",
+        "summary": "GitHub 日榜项目 ChromeDevTools/chrome-devtools-mcp，让编程 Agent 通过 MCP 使用 Chrome 开发者工具，便于检查页面、调试前端。今日新增星标以 GitHub Trending 页面当时数字为准。",
+        "source_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "time": "2026-11-18T06:00:00+08:00",
+        "impact": "做网页开发的 Agent 用户可以把它接到现有 MCP 配置里，减少盲目改前端。",
+        "points": [
+          "这是面向编程 Agent 的 Chrome DevTools MCP。",
+          "适合需要检查网页或调试前端的 Agent 工作流。"
+        ]
+      },
+      {
+        "title": "Tomorrow.io 推出 Sky 1，每小时更新 WeatherNext 2 和 Aurora 1.5 的初始场",
+        "summary": "天气公司 Tomorrow.io 称，其 Sky 1 可用公司星座的观测，每小时更新 Google DeepMind WeatherNext 2 和 Microsoft Aurora 1.5 做预报时用的初始场。这是公司官方的产品说明。",
+        "source_url": "https://x.com/tomorrowio_/status/2122698700438786319",
+        "time": "2026-11-17T22:29:00+08:00",
+        "handle": "@tomorrowio_",
+        "impact": "关注气象 AI 业务化的人可以看它如何把卫星观测接进现有模型，效果仍待独立验证。",
+        "points": [
+          "Sky 1 每小时用星座观测更新 AI 天气模型的初始场。",
+          "官方点名对接 WeatherNext 2 和 Aurora 1.5。"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "tech": [
+      {
+        "title": "Google Wallet 登陆 iPhone，但没有「轻触付款」",
+        "summary": "MacRumors 报道，Google Wallet 已可在 iPhone 上使用，但没有 Tap to Pay（轻触付款）。这与 Google 在 Gemini Tasks 更新中提到 Wallet 登陆 iOS 的时间点一致，具体能用哪些卡和功能，仍以 Google 官方说明为准。",
+        "source_url": "https://x.com/MacRumors/status/2122756568945135734",
+        "time": "2026-11-18T02:19:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "iPhone 用户可以先用来看收据或卡包，还不能把它当成完整的手机钱包替代。",
+        "points": [
+          "Google Wallet 已出现在 iPhone 上。",
+          "目前没有 Tap to Pay，近场支付能力仍不完整。"
+        ]
+      },
+      {
+        "title": "Muse 在 Apple Watch 和 Wear OS 上开放语音",
+        "summary": "Meta CAIO Alexandr Wang 宣布，Muse 的语音功能已在 Apple Watch 和 Android Wear OS 上线，可以在手表上直接对话。这是产品负责人的官方说明。",
+        "source_url": "https://x.com/alexandr_wang/status/2122795379263750477",
+        "time": "2026-11-18T04:53:00+08:00",
+        "handle": "@alexandr_wang",
+        "impact": "已经在用 Muse 的人可以在手表上试语音，适合走路或双手占着的时候。",
+        "points": [
+          "Muse 语音已登陆 Apple Watch 和 Android Wear OS。",
+          "可在手表上直接对话，不必拿出手机。"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Tailscale 介绍 Netmap 缓存：网络不稳时也能尽量保持连接",
+        "summary": "Tailscale 发文介绍 netmap caching。文章说明，网络往往不是「全通或全断」，在连接时断时续时，通过缓存网络地图，尽量让设备保持可用，而不是一断网就完全连不上内部资源。",
+        "source_url": "https://tailscale.com/blog/netmap-caching",
+        "time": "2026-11-18T00:45:00+08:00",
+        "handle": "@Tailscale",
+        "impact": "经常在移动网络或不稳定环境下用 Tailscale 的人，这次更新主要改善断线体验。",
+        "points": [
+          "针对时断时续的网络，用缓存的网络地图尽量维持可达性。",
+          "目标是避免一次掉线就让所有内部资源立刻不可用。"
+        ]
+      }
+    ]
+  }
+}
