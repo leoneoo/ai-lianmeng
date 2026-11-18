@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T18:37:50+08:00",
+  "updated_at": "2026-11-19T06:36:02+08:00",
   "editions": [
+    {
+      "id": "2026-11-19-0600",
+      "published_at": "2026-11-19T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-19-0600.json",
+      "counts": {
+        "x_daily": 11,
+        "zh_topics": 5,
+        "en_topics": 0,
+        "oss_agent": 7,
+        "tech": 5,
+        "iot": 1
+      },
+      "headline": "Google 发布 Gemini 4 Neon，OpenAI 公开用模型设计芯片的成果"
+    },
     {
       "id": "2026-11-18-1800",
       "published_at": "2026-11-18T18:00:00+08:00",
