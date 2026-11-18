@@ -1,0 +1,294 @@
+{
+  "id": "2026-11-18-1800",
+  "published_at": "2026-11-18T18:00:00+08:00",
+  "headline": "CISA 要求立即修补 Java 严重漏洞，OpenAI 推出面向销售的 ChatGPT",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "CISA 要求立即修补 Java 严重漏洞 Java4Shell",
+        "summary": "美国网络安全和基础设施安全局（CISA）于 11 月 17 日发布通告，要求立即修补 Oracle Java 漏洞 CVE-2026-114938。该漏洞被称为 Java4Shell，属于 x86-64 HotSpot 虚拟机中 Base64 解码器的内存损坏问题，特制输入可能导致虚拟机崩溃，并被用于在未认证的情况下远程执行代码。CISA 建议先清点本机、第三方软件、容器和设备里的 JDK 与 Java 运行时，优先给面向公网的系统打补丁；若暂时无法更新，应在应用边界限制和校验 Base64 输入，并限制未认证访问。补丁以 Oracle 2026 年 11 月的安全公告为准。OpenAI 总裁 Greg Brockman 称，安全公司 Calif 在「Patch the Planet」中用 GPT-6 Cyber 发现了 Java 的重大安全漏洞；CISA 通告本身没有写发现者，也没有点名任何 AI 模型。",
+        "source_url": "https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching",
+        "time": "2026-11-18T06:29:50+08:00",
+        "handle": "@gdb",
+        "impact": "用到 Oracle Java 的系统应立刻按官方公告打补丁，不要把「AI 发现漏洞」理解成可以放松常规修补。",
+        "points": [
+          "CVE-2026-114938（Java4Shell）影响 x86-64 HotSpot 的 Base64 解码器，可导致未认证远程代码执行",
+          "应先清点各类 Java 运行时，优先为面向公网的系统打上 Oracle 11 月安全补丁",
+          "OpenAI 称 Calif 用 GPT-6 Cyber 发现了该缺陷；CISA 通告未写发现者，需分开看待"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 推出 ChatGPT for Sales，接入 30 多个销售插件",
+        "summary": "OpenAI 发布 ChatGPT for Sales，把新的 Sales 插件和 30 多个新增或增强的合作伙伴插件接到 ChatGPT 里，用来整理客户上下文、准备拜访、起草跟进和查看销售管道。官方举例包括 Salesforce、HubSpot、Slack、Teams、Zoom、Gong、Apollo、Clay，以及 Confluence、Docusign、PandaDoc 等。Sales 插件提供分析客户信号、准备竞争简报、会后跟进等现成工作流。用户也可以把同样的插件交给 ChatGPT 里的常驻助手（dot），让它准备会议简报、跟踪交易变化，并在需要时把建议交回给人确认。能否使用取决于插件、套餐和工作区设置，部分连接需要管理员开通。",
+        "source_url": "https://openai.com/index/introducing-chatgpt-for-sales",
+        "time": "2026-11-18T06:53:20+08:00",
+        "handle": "@gdb",
+        "impact": "已经在用 ChatGPT Work 或 Enterprise 的销售团队可以试用；接入前应确认 CRM 权限、数据留存和管理员审批。",
+        "points": [
+          "新 Sales 插件搭配 30 多个合作伙伴插件，覆盖 CRM、会议记录和合同工具",
+          "常驻助手可以把会议简报和交易变化整理后交回给人确认",
+          "部分连接需要工作区管理员开通，接入前要看清客户数据的权限范围"
+        ]
+      },
+      {
+        "title": "补报：Cognition 推出 Devin Bots，用持久 Agent 推进工程目标",
+        "summary": "Cognition 在今日凌晨（仍属 06 期时间窗口，当时未单列）宣布 Devin Bots。与一次请求对应一次执行的 Devin 会话不同，Bot 是带有自己记忆和工具的持久 Agent，可以同时带领多个 Devin，负责一个较大的项目或持续目标：调查、分派、评估结果，再决定下一步，并只把需要人判断的决策交回来。官方举例包括维护开源仓库、让安卓与 iOS 保持同步、管理发版、优化推理服务。官方还称，测试者平均每条消息合并的 PR 数量约为原来的 4.5 倍，个别工程师的周 PR 数从约 50 个增加到近 2000 个（自报）。进度可在 Slack、群聊、短信或电话里跟进。",
+        "source_url": "https://x.com/cognition/status/2122737511684587551",
+        "time": "2026-11-18T01:03:55+08:00",
+        "handle": "@cognition",
+        "impact": "这是把编程 Agent 从完成单次任务推向持续负责一个项目，效果数字目前只有官方口径。",
+        "points": [
+          "Bot 是带记忆和工具的持久 Agent，可同时带领多个 Devin 负责一项持续目标",
+          "官方举例包括维护仓库、跨平台同步、发版和管理推理服务",
+          "官方自报：测试者平均每条消息合并的 PR 约为原来的 4.5 倍"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Jason Wei 离开 Meta TBD，出任 Mercor 首席科学家",
+        "summary": "Mercor CEO Brendan Foody 宣布，邀请思维链（Chain-of-Thought）研究的重要作者 Jason Wei 出任首席科学家，帮助组建研究团队，并主导数据和评测工作。Foody 提到，Wei 还做了 SimpleQA、BrowseComp、HealthBench 等被业界采用的基准，过去几年也是 Mercor 的客户和合作伙伴。Wei 随后发帖确认：在 Meta 的 TBD 实验室待了一年后，他将加入 Mercor，并写到「随着训练模型的公司越来越多，数据将塑造下一个前沿」。",
+        "source_url": "https://x.com/_jasonwei/status/2122826605362127094",
+        "time": "2026-11-18T06:57:57+08:00",
+        "handle": "@_jasonwei",
+        "impact": "一线研究者转向数据和评测公司，说明「谁来出题、谁来打分」正在变得更关键。",
+        "points": [
+          "Wei 本人确认离开 Meta TBD 实验室，出任 Mercor 首席科学家",
+          "职责是组建研究团队，主导数据和评测；CEO 称他过去也是客户和合作伙伴",
+          "Wei 认为随着训练模型的公司增多，数据将塑造下一个前沿"
+        ]
+      },
+      {
+        "title": "补报：OpenAI 更新 Astra for Law，Enterprise 可申请使用",
+        "summary": "OpenAI 在 11 月 17 日（与 GPT-6.2 同日，06 期未单列）发布更新后的 Astra for Law：它是 GPT-6.2 Astra 的法律配置，搭配扩大后的法律检索库，以及调研问题、权衡法源和撰写答复的说明。所有 ChatGPT Enterprise 客户都可通过 Trusted Access Program 申请，也可走 API。官方称，它在 Harvey LAB-AA 上拿到满分的比例为 20.8%，高于 GPT-6.2 Astra 的 15.0% 和 Muse Wonder Full 的 13.1%；平均每次任务输出约 6.4 万 tokens，少于 Muse Wonder Full 的 13.9 万；在该评测里，每次任务的实质性幻觉为 0.03 次，与 GPT-6 并列最低。Vals AI 的 Legal Research Bench 上，通过全部检查的研究答案比例在不到两个月里从约 46% 升到 53.8%。以上均为官方或合作方自报。",
+        "source_url": "https://openai.com/index/astra-law-6-2/",
+        "time": "2026-11-18T09:48:57+08:00",
+        "handle": "@gdb",
+        "impact": "律师事务所和法务团队可以申请试用；榜单和幻觉数字都是官方或合作方自报，还要看真实案件里的表现。",
+        "points": [
+          "这是 GPT-6.2 Astra 的法律配置，Enterprise 客户可通过 Trusted Access Program 申请，也可走 API",
+          "官方自报：Harvey LAB-AA 满分比例 20.8%，高于基础 Astra 的 15.0%",
+          "官方自报：该评测中每次任务实质性幻觉 0.03 次，与 GPT-6 并列最低"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "可灵发布 Kling Image 4.0：原生 8K，单图最多 2000 字",
+        "summary": "可灵宣布 Kling Image 4.0 已在 Kling Creative Studio 上线，并向企业和开发者提供 API。官方介绍三个重点：画面更接近实拍，并首次支持原生 8K；单张图最多可排 2000 字，对小字和复杂排版的处理有加强；一次提示词最多生成 10 张风格一致的图片，也支持用于电商详情页和网页的长图。官方还称提供 110 多种预设调色，并可从参考图提取色盘。能力与效果以产品实际表现为准。",
+        "source_url": "https://kling.ai/blog/kling-image-4-stunningly-realistic-sharp-precise",
+        "time": "2026-11-18T10:00:01+08:00",
+        "handle": "@Kling_ai",
+        "impact": "做电商详情页、海报和较长文字排版的人可以直接试用；8K 和文字效果要以实际出图为准。",
+        "points": [
+          "已在 Creative Studio 上线，并向企业与开发者提供 API",
+          "官方称支持原生 8K，单图最多 2000 字，一次提示词最多 10 张一致图片",
+          "还提供 110 多种预设调色，并可从参考图提取色盘，效果以实际表现为准"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "补报：微软发布 MAI Cyber 2 Flash，计划 12 月中旬进入安全产品",
+        "summary": "微软为 Ignite 发布的安全专用模型 MAI Cyber 2 Flash 单独写了说明（06 期已报道 Ignite 平台更新，当时未展开这一型号）。官方称，在 CyberGym-E2E 上，该模型的任务成功率为 92.3%，略高于 GPT-6 Astra 的 91.5%，单次任务成本不到后者的 2%（按标价估算的离线评测，自报）；上下文窗口为 100 万 tokens。该模型将只进入微软安全产品，包括代号 MDASH，符合条件的客户预计 12 月中旬起自动替换现有 MAI 配置中的模型。对比数字均为官方自报，且官方已说明从该榜中剔除了 92 道与训练数据同源的题目。",
+        "source_url": "https://microsoft.ai/news/introducing-mai-cyber-2-flash/",
+        "time": "2026-11-18T06:55:28+08:00",
+        "impact": "使用微软安全产品的团队应留意 12 月中旬的自动替换，并按自己的任务复核成本和效果。",
+        "points": [
+          "官方自报：CyberGym-E2E 成功率 92.3%，略高于 GPT-6 Astra，单次任务成本不到其 2%",
+          "上下文窗口为 100 万 tokens，官方已剔除 92 道与训练数据同源的题目后再对比",
+          "只进入微软安全产品，符合条件的客户预计 12 月中旬自动替换现有模型"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 更新 API 用量看板，可按模型、项目和密钥排查花费与报错",
+        "summary": "OpenAI Developers 称，Analytics 现在更容易跟踪用量和花费、查看限流及被限流的请求，并按模型、项目或 API 密钥排查错误。对已经在用多家模型和多个项目的团队，这个看板更方便核对账单和定位故障。",
+        "source_url": "https://x.com/OpenAIDevs/status/2122824859491205152",
+        "time": "2026-11-18T06:51:01+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "在用 OpenAI API 的团队可以直接到 Analytics 里按项目和密钥核对花费、限流和报错。",
+        "points": [
+          "用量看板可跟踪花费，并查看限流及被限流的请求",
+          "错误可以按模型、项目或 API 密钥筛选",
+          "适合已经拆分多个项目或密钥的团队核对账单"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "实测 GPT-6.2 Sol Ultra Fast：均速约 126 token/s",
+        "summary": "歸藏用 Ultra Fast 模式让 GPT-6.2 Sol 剪一段 8 分钟视频，总耗时 27 分钟，其中模型响应约 14 分钟，平均约 126 token/s，最快一次约 252 token/s。这是个人实测，不是公开基准。他同时觉得 Astra 的公开反馈偏差，但 Sol 开了 Fast 之后完成任务明显更快。",
+        "source_url": "https://x.com/op7418/status/2122925281514303836",
+        "time": "2026-11-18T13:30:03+08:00",
+        "handle": "@op7418",
+        "impact": "想先看 Sol 速度的人可以参考这次剪视频实测，但不同任务和地区会有差别。",
+        "points": [
+          "个人实测：剪 8 分钟视频总耗时 27 分钟，模型响应约 14 分钟",
+          "Ultra Fast 均速约 126 token/s，最快一次约 252 token/s",
+          "他认为 Sol 开了加速后更有用，Astra 的公开评价则偏差"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Sol、Astra 体感尚可，Codex 里偏慢或是适配问题",
+        "summary": "oran_ge 称自己用 GPT-6.2 Sol 和 Astra 的体感还行，并转述有人说三四天前的 KOL 测试版问题较大、现在好一些。不少人反馈在 Codex 里调用比较慢，但 Pi 和他们产品里走 API 会快很多，因此怀疑是 Codex 的运行框架还没适配好。这是个人观察，不是官方结论。",
+        "source_url": "https://x.com/oran_ge/status/2122982300598386943",
+        "time": "2026-11-18T17:16:38+08:00",
+        "handle": "@oran_ge",
+        "impact": "如果只在 Codex 里觉得 6.2 慢，可以再对比 API 或其他工具，避免过早下结论。",
+        "points": [
+          "作者认为当前正式版的体感好于几天前的测试版",
+          "有人反馈 Codex 里调用偏慢，走 API 或 Pi 则更快",
+          "他怀疑慢的原因是 Codex 运行框架尚未适配好，并非模型本身"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "LangChain 谈主动式 Agent：七成以上运行靠日程",
+        "summary": "meng shao 整理 LangChain 团队的经验：当 Agent 开始在后台推进持续数天、数周的目标，瓶颈不再只是模型能不能完成任务，而是人有没有时间处理它不断送来的问题和结果。内部销售 Agent 超七成运行靠日程触发，关键是记忆和人的注意力。",
+        "source_url": "https://x.com/shao__meng/status/2122995228689010872",
+        "time": "2026-11-18T18:08:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "如果要做会连续运行的 Agent，应先设计日程、记忆和人工确认，而不是只追求单次成功率。",
+        "points": [
+          "主动式 Agent 的瓶颈会从「模型会不会做」变成「人有没有时间处理结果」",
+          "LangChain 内部销售 Agent 超七成运行靠日程触发",
+          "记忆和人的注意力，是这类后台 Agent 能否用起来的关键"
+        ]
+      },
+      {
+        "title": "用两遍改写给 AI 文案去套话",
+        "summary": "GitHubDaily 介绍开源 Skill ste80-humanizer：第一遍按 26 种常见 AI 写作痕迹清掉套话，第二遍把句子往简明英语靠。它适合给 Agent 写出来的说明和文档做后处理，思路不是简单删词，而是按清单改两遍。",
+        "source_url": "https://x.com/GitHub_Daily/status/2122955479437762771",
+        "time": "2026-11-18T15:30:03+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "经常要给 Agent 文案去套话的人可以先试这个开源 Skill，再按自己的语体微调。",
+        "points": [
+          "这个 Skill 分两遍改写：先清常见 AI 套话，再把句子改得更简明",
+          "第一遍依据整理出的 26 种写作痕迹逐项处理",
+          "适合用在 Agent 生成的说明、文档和产品文案后处理"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenClaw：微软 Autopilot 基于它向 Frontier 用户预览推送",
+        "summary": "OpenClaw 官方称，微软 Autopilot 建立在 OpenClaw 之上，已向符合条件的 Frontier 客户以预览形式推送，并有改进回馈上游。窗口内还发布了面向网关的 extended-stable 版本 2026.10.33，在 10 月底代码基础上加入安全、可靠性和性能修复。这与早报提到的 Autopilot 开始向 Frontier 推送可对照来看。",
+        "source_url": "https://x.com/openclaw/status/2122877394331811874",
+        "time": "2026-11-18T10:19:46+08:00",
+        "handle": "@openclaw",
+        "impact": "关注 OpenClaw 的人可以看微软预览反馈会怎样回流；需要稳定网关的人可考虑这个长期支持版本。",
+        "points": [
+          "OpenClaw 官方确认微软 Autopilot 建立在该项目之上，并已向 Frontier 预览推送",
+          "有改进会回馈到 OpenClaw 上游",
+          "同期发布网关 extended-stable 版本 2026.10.33，含安全与可靠性修复"
+        ]
+      },
+      {
+        "title": "OpenCode v2.3.2：修复 GPT-6.2 系统提示词无法缓存",
+        "summary": "OpenCode 发现 GPT-6.2 不会缓存写在 Responses「instructions」字段里的系统提示词，每一步都会按未缓存输入重新计费。v2.3.2 改为在每次请求前把它作为开发者消息发送，从而从第二步起进入缓存，覆盖 OpenAI API、ChatGPT 登录、GitHub Copilot、Zen、Azure 和 OpenRouter。如果仍在用旧版本调用 GPT-6.2，系统提示可能会被反复按全价计费。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.2",
+        "time": "2026-11-18T09:35:12+08:00",
+        "impact": "正在用 OpenCode 调用 GPT-6.2 的人应尽快升级，避免系统提示被重复按全价计费。",
+        "points": [
+          "GPT-6.2 不会缓存 Responses instructions 里的系统提示词，每一步都可能按未缓存输入计费",
+          "新版本改为把它作为开发者消息发送，从第二步起进入缓存",
+          "修复覆盖 OpenAI API、ChatGPT 登录、Copilot、Azure 和 OpenRouter 等路径"
+        ]
+      },
+      {
+        "title": "Goose v1.60.0：用 SkillOperation 取代原来的 Skills 扩展",
+        "summary": "Goose 1.60.0 加入 SkillOperation，并去掉原先的 Skills 扩展；同期还为 oi-kit 增加可执行命令、斜杠命令和转向操作。随后的 1.60.1 是针对 Claude 模型拒绝分析草稿标签的修复。这是一次功能调整，升级前需要确认自己现有的 Skills 配置还能否沿用。",
+        "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.60.0",
+        "time": "2026-11-18T07:08:54+08:00",
+        "impact": "已在用 Goose Skills 的人升级前要先看配置是否需要改到新的 SkillOperation。",
+        "points": [
+          "1.60.0 用 SkillOperation 取代原来的 Skills 扩展",
+          "oi-kit 新增可执行命令、斜杠命令和转向操作",
+          "1.60.1 修复了 Claude 模型拒绝分析草稿标签的问题"
+        ]
+      },
+      {
+        "title": "SGLang 上线当日支持腾讯 Hy4 flash",
+        "summary": "SGLang 宣布为腾讯混元 Hy4 flash 提供 Day-0 支持。这是一个 224B 的多模态模型，支持 100 万上下文和图像输入。官方还提到每任务成本约为 Hy4 preview 的 1/13、KV 缓存约为 1/6，并支持无需额外 KV 内存的投机解码。成本和缓存数字均为官方口径。",
+        "source_url": "https://x.com/sgl_project/status/2122919003996004489",
+        "time": "2026-11-18T13:05:07+08:00",
+        "handle": "@sgl_project",
+        "impact": "已经在用 SGLang 的团队可以尽快试用这个更便宜的混元多模态版本，成本和延迟仍要以实测为准。",
+        "points": [
+          "Hy4 flash 是 224B 多模态模型，支持 100 万上下文和图像输入",
+          "SGLang 在发布当日提供支持，并提到投机解码不额外占用 KV 内存",
+          "官方称每任务成本约为 Hy4 preview 的 1/13，KV 缓存约为 1/6"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Together AI 开放 DeepSeek V4.1 Flash 的微调与强化学习后训练",
+        "summary": "Together AI 宣布，deepseek v4.1 flash 1017 已可在其平台上做监督微调或强化学习后训练。用户可以用自己的数据、奖励和环境，并在自己的 Python 代码里保持训练循环，以便把该模型改成更适合自己的编程或 Agent 任务。",
+        "source_url": "https://x.com/togethercompute/status/2122902661133431212",
+        "time": "2026-11-18T12:00:10+08:00",
+        "handle": "@togethercompute",
+        "impact": "想基于 DeepSeek V4.1 Flash 做自己后训练的团队，可以直接在 Together 上跑，而不必先搭完整训练栈。",
+        "points": [
+          "DeepSeek V4.1 Flash 1017 已可在 Together AI 上做 SFT 或强化学习后训练",
+          "可用自己的数据、奖励和环境，并在自己的 Python 代码里保持训练循环",
+          "官方将其定位为面向编程和 Agent 任务的定制起点"
+        ]
+      },
+      {
+        "title": "Claude Desktop 可改到 Latest 通道，更早拿到修复",
+        "summary": "Anthropic 开发者账号称，Windows 和 Mac 上的 Claude Desktop 现在可以在设置里把发布通道改成 Latest，更快拿到修复和改进。这类构建可能不如默认的 Stable 可靠，官方仍把 Stable 作为默认选项。",
+        "source_url": "https://x.com/ClaudeDevs/status/2122821051910684824",
+        "time": "2026-11-18T06:35:53+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "愿意先试新版本的人可以改到 Latest；要稳定日常使用的，继续留在默认通道更合适。",
+        "points": [
+          "Windows 和 Mac 版 Claude Desktop 可在设置中切换到 Latest 通道",
+          "Latest 能更早获得修复和改进，但可能不如 Stable 稳定",
+          "Stable 仍是默认通道，不需要的人不必改"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "三星为 Galaxy S26 系列开启 One UI 9.5 测试",
+        "summary": "Android Authority 报道，One UI 9.5 测试已在美国、韩国、英国、波兰、德国和印度向 Galaxy S26 系列推送。目前仍是测试版，后续正式版的功能和推送时间仍以三星公布为准。",
+        "source_url": "https://x.com/AndroidAuth/status/2122978509043945852",
+        "time": "2026-11-18T17:01:34+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "已经入手 S26 的用户可以关注三星会员应用里的测试名额，正式版内容和时间还要再等。",
+        "points": [
+          "Galaxy S26 系列的 One UI 9.5 测试已在美、韩、英、波、德、印开启",
+          "目前仍是测试版，功能和发布时间以三星后续公告为准",
+          "消息来自 Android Authority 对测试推送的报道"
+        ]
+      },
+      {
+        "title": "苹果调整部分国家 App Store 价格，加州明年起对部分软件征税",
+        "summary": "据 9to5Mac 援引苹果开发者公告：受税收和汇率变化影响，从 12 月 3 日起，使用自动调价的开发者将在博茨瓦纳、哥伦比亚、埃及、卢旺达和土耳其看到应用及内购价格变动；基础店面、自动续订订阅和手动定价的店面不受影响。另从 2027 年 1 月 1 日起，SaaS、App Store Software 等类别在加州需缴纳销售和使用税。美国店面标价仍不含税，开发者分成不变，但顾客实付总额可能增加。公告未说明各国价格具体会调高还是调低。",
+        "source_url": "https://9to5mac.com/2026/11/18/apple-announces-app-store-price-changes-in-multiple-countries-new-california-tax-rules/",
+        "time": "2026-11-18T10:17:49+08:00",
+        "handle": "@9to5mac",
+        "impact": "在这些市场上架或依赖自动调价的开发者应先核对定价；面向加州用户的软件，明年账单总额可能变高。",
+        "points": [
+          "12 月 3 日起，自动调价将影响博茨瓦纳、哥伦比亚、埃及、卢旺达和土耳其的售价",
+          "基础店面、自动续订订阅和手动定价的店面不随这次自动调价变动",
+          "2027 年 1 月 1 日起，部分软件类别在加州需缴销售税，美国标价不含税，顾客实付可能增加"
+        ]
+      },
+      {
+        "title": "WhatsApp 正在为安卓测试自有云备份，默认端到端加密",
+        "summary": "Android Authority 援引 WABetaInfo 称，WhatsApp 在为安卓开发自己的云备份：免费额度 2GB，默认打开端到端加密，目前面向部分测试用户，后续再扩大。此事尚未经 WhatsApp 官方全面宣布，仍以实际推送为准。",
+        "source_url": "https://x.com/AndroidAuth/status/2122933523434881534",
+        "time": "2026-11-18T14:02:48+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "安卓用户可留意后续正式推送；在此之前不要把测试消息当成已经全量上线。",
+        "points": [
+          "测试中的安卓云备份提供 2GB 免费额度，并默认打开端到端加密",
+          "目前只面向部分测试用户，扩大范围的时间还未公布",
+          "消息来自 WABetaInfo，尚未看到 WhatsApp 官方全面宣布"
+        ],
+        "tag": "待验证"
+      }
+    ]
+  }
+}
