@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T18:37:07+08:00",
+  "updated_at": "2026-11-20T06:34:45+08:00",
   "editions": [
+    {
+      "id": "2026-11-20-0600",
+      "published_at": "2026-11-20T06:00:00+08:00",
+      "path": "data/2026/11/2026-11-20-0600.json",
+      "counts": {
+        "x_daily": 12,
+        "zh_topics": 4,
+        "en_topics": 0,
+        "oss_agent": 8,
+        "tech": 1,
+        "iot": 2
+      },
+      "headline": "Anthropic 纳斯达克首日收涨 17%，Ruby 曝免登录远程执行漏洞，Gemini 在 Mac 上能操作电脑了"
+    },
     {
       "id": "2026-11-19-1800",
       "published_at": "2026-11-19T18:00:00+08:00",

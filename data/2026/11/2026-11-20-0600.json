@@ -1,0 +1,364 @@
+{
+  "id": "2026-11-20-0600",
+  "published_at": "2026-11-20T06:00:00+08:00",
+  "headline": "Anthropic 纳斯达克首日收涨 17%，Ruby 曝免登录远程执行漏洞，Gemini 在 Mac 上能操作电脑了",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 纳斯达克首日收于 97.17 美元，较发行价涨 17%，完全稀释市值约 1.8 万亿美元",
+        "summary": "Anthropic 11 月 19 日（美东时间）在纳斯达克以代码 ANT 挂牌交易，开盘价 111.50 美元，比 83 美元的发行价高约 34%，收盘回落到 97.17 美元，仍比发行价高 17%。CNBC 报道，这次 IPO 募资 813 亿美元，是有记录以来规模最大的 IPO；按完全稀释口径，收盘市值约 1.8 万亿美元，首日成交超过 8.46 亿股。官方账号同时发布了 CEO Dario Amodei 的上市致辞。 这是第一家独立上市的前沿模型实验室，公开市场第一次给前沿大模型公司直接定价；开盘冲高、收盘回落也说明短线交易占比很高，估值分歧不小。",
+        "source_url": "https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html",
+        "time": "2026-11-20T01:01:00+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "前沿模型公司从此要按季度公开营收和算力开支，行业的商业化数据会透明得多；股价波动大，本条只陈述事实，不构成投资建议。",
+        "points": [
+          "开盘 111.50 美元，最高 115.10 美元，收盘 97.17 美元（+17%）",
+          "募资 813 亿美元，完全稀释市值约 1.8 万亿美元（CNBC）",
+          "首日成交超过 8.46 亿股，高于 SpaceX 上市首日",
+          "官方发布 Dario Amodei 上市致辞"
+        ]
+      },
+      {
+        "title": "研究员借 Codex 找到 Ruby 漏洞，可在许多 Rails 应用上实现免登录远程代码执行；Ruby 已发修复版",
+        "summary": "安全研究员 10 月 23 日让 Codex 梳理 CRuby 在 Rails 里免登录就能碰到的攻击面，不到 24 小时找到几处漏洞，其中两处可以在许多 Ruby on Rails 应用上实现免登录远程代码执行（pre-auth RCE），作者称 GitHub、GitLab 也在影响范围内，一个全新的 rails new 应用就能被利用。其中一个是多种 ISO-8859 / Windows 编码在大小写转换「ß」时的堆越界写（GHSA-34m4-m9fh-gqp5），可经 Rack 的 _method 字段触发。Ruby 已于 11 月 18 日（美国太平洋时间）发布修复版 3.3.14、3.4.13 和 4.0.10。 继 NGINX 之后，又一个基础软件的高危漏洞由研究员借 AI 编程 Agent 找到；Rails 应用很多，修补窗口很紧。",
+        "source_url": "https://durendal.sh/blog/ruby-case-mapping-bugs",
+        "time": "2026-11-19T22:19:00+08:00",
+        "handle": "@gdb",
+        "impact": "跑 Ruby / Rails 服务的团队应尽快升级 Ruby 到修复版，并把 Rack 升到 3.2.2 以上。",
+        "points": [
+          "修复版本：Ruby 3.3.14、3.4.13、4.0.10",
+          "一个全新的 rails new 应用即可被利用（作者称）",
+          "其中一条利用路径受 Rack ≤3.2.1 限制，Rack 3.2.2 已加字段大小限制",
+          "OpenAI 团队协助，并邀请 WAF 厂商一起做防护"
+        ]
+      },
+      {
+        "title": "Gemini Mac 应用上线电脑操作功能：在后台窗口里替你点、滚、输入，跨文件夹、应用和网页做事",
+        "summary": "Google 宣布 Gemini Mac 应用开始提供电脑操作（Computer Use）：用户可以把跨文件夹、应用和网页的任务交给 Gemini，它在一个实时的后台窗口里点击、滚动和输入，用户自己的屏幕和光标不受影响。演示中，Gemini 在 Blender 里把一张草图做成了带骨骼绑定的 3D 模型。目前先向美国、英语环境下的 Google AI Plus、Pro 和 Ultra 订阅用户推送。 电脑操作 Agent 正从浏览器扩展走向桌面系统本身，Google 在 Mac 上和 OpenAI、Anthropic 正面竞争；「后台窗口、不抢光标」也回应了这类 Agent 最常见的使用痛点。",
+        "source_url": "https://x.com/GeminiApp/status/2123513203745538423",
+        "time": "2026-11-20T04:26:00+08:00",
+        "handle": "@GeminiApp",
+        "impact": "Mac 用户多了一个现成的桌面 Agent 选择，授权前要想清楚让它碰哪些应用和文件。",
+        "points": [
+          "在后台窗口操作，不占用户屏幕和光标",
+          "可跨文件夹、应用和网页执行任务",
+          "先面向美国英语环境的 AI Plus / Pro / Ultra 订阅用户"
+        ]
+      },
+      {
+        "title": "彭博：苹果在做能操作电脑的自主 Agent，最快 2027 年底推出；macOS 27.3 给第三方电脑操作加了门槛",
+        "summary": "⚠️ 目前属于媒体报道、苹果未官宣。Gurman 称苹果正在开发一个具备电脑操作能力的自主 AI Agent，能控制设备、操作应用、浏览网页和写代码，目标远超 Siri，对标 Meta Muse、ChatGPT Dots 和 Claude Code；苹果官网招聘信息也写到要做跨应用、浏览器、终端和服务的通用电脑操作 Agent。报道说新任 CEO John Ternus 正催促软件主管 Craig Federighi 加快 AI 进度，最快 2027 年底推出。同时，macOS 27.3 里开启 ChatGPT 的第三方电脑操作支持，步骤从 4 步增加到 14 步，苹果称出于安全考虑。 苹果一边自研电脑操作 Agent，一边提高第三方 Agent 控制 Mac 的门槛，平台方开始掌握「谁能操作你的电脑」这道闸门。",
+        "source_url": "https://x.com/markgurman/status/2123534050585460964",
+        "time": "2026-11-20T05:49:00+08:00",
+        "handle": "@markgurman",
+        "impact": "依赖第三方电脑操作 Agent 的 Mac 用户，升级 macOS 27.3 后可能要重新走一遍更长的授权流程。",
+        "points": [
+          "Agent 覆盖设备控制、应用操作、浏览和编码（报道）",
+          "最快 2027 年底推出（报道）",
+          "macOS 27.3 开启 ChatGPT 电脑操作需 14 步，原为 4 步"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "OpenAI 在 API 上线 GPT-Live-1.1：口音更自然，新增待机选项降低空闲成本",
+        "summary": "OpenAI 宣布实时语音模型 GPT-Live-1.1 已在 API 提供：跨语言说话的口音更自然、更一致；新增待机（standby）选项，降低会话空闲时的费用；完成任务也更可靠。 实时语音 Agent 的主要成本之一是长时间挂着的空闲连接，待机计费直接影响客服、陪练这类应用的账单。",
+        "source_url": "https://x.com/OpenAIDevs/status/2123506733524136446",
+        "time": "2026-11-20T04:00:00+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "做语音客服、语音助手的开发者可以评估迁移到 1.1，并用待机选项压低长会话成本。",
+        "points": [
+          "跨语言口音更自然、一致",
+          "新增 standby 选项，降低空闲成本",
+          "任务完成可靠性提升（官方说法）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Genie 4 开放到 Gemini API 和 AI Studio，成为 Google 首个给开发者用的世界模型",
+        "summary": "Google 把世界模型（World Model）Genie 4 开放到 Gemini API 和 Google AI Studio，称这是第一个供开发者构建应用的世界模型。用户可以走进可交互的环境，在会话中途改变天气、召唤角色，并实时生成自适应的原生音频。Genie 4 前一天刚在 Project Genie 里亮相，这次是开发者接口首次开放。 世界模型第一次以通用 API 的形式交给开发者，游戏、仿真和互动内容可以直接接入，而不必自己训练。",
+        "source_url": "https://x.com/OfficialLoganK/status/2123467449257623770",
+        "time": "2026-11-20T01:24:00+08:00",
+        "handle": "@OfficialLoganK",
+        "impact": "做游戏原型、互动内容和仿真训练环境的团队可以开始试用，成本和时长限制待看官方文档。",
+        "points": [
+          "首次通过 Gemini API 和 AI Studio 开放",
+          "会话中途可改天气、加角色",
+          "实时生成自适应原生音频"
+        ]
+      },
+      {
+        "title": "Perplexity Computer 的 Brain 会根据历史会话自动写、改个人技能；8 周对照实验 72.9% 用户获得新技能",
+        "summary": "Perplexity 公布研究：Computer 里的个性化自我改进 Agent「Brain」原本维护一份用户工作知识库，现在还会读完整的历史会话记录，发现重复模式后自动生成和更新个人技能（Skills），证据不足就不改。流程分四步：找证据、改进 Agent 提方案、检查验证、应用。在 8 周的线上随机对照实验中，72.9% 的用户自动获得至少一个新技能，对照组手动添加的只有 6.5%；工具调用失败率下降 11%，不满意会话减少 7.6%，成本和响应时间没有明显变化。 Agent 从「每次从零开始」转向「越用越懂你」，程序性记忆（Procedural Memory）开始有了可量化的线上效果。",
+        "source_url": "https://x.com/perplexity_ai/status/2123449395882701224",
+        "time": "2026-11-20T00:12:00+08:00",
+        "handle": "@perplexity_ai",
+        "impact": "在意隐私的用户要知道它默认开启且会读完整会话记录，需要的话到设置里关掉。",
+        "points": [
+          "72.9% vs 6.5%：自动配置技能 vs 手动添加（自报）",
+          "工具调用失败率下降 11%",
+          "全员生效的修改须通过全部测试并经工程师批准；个人技能由确定性检查加 LLM 抽检",
+          "美国消费者和企业订阅用户默认开启，可在设置里关闭"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Perplexity Context API 接入 Decider，可在 Agent 读网页前打分检查提示词注入",
+        "summary": "Context API 抓取的每个页面现在可以用 Decider 回答是非题并打 0～1 分，例如先检查有没有提示词注入（Prompt Injection）再交给 Agent；Decider v1.3 和 Flash 在 OpenRouter 上再免费 3 周，Arav 称其在决策类模型请求中占比接近 20%（自报）。",
+        "source_url": "https://x.com/AravSrinivas/status/2123464412971635018",
+        "time": "2026-11-20T01:12:00+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "让 Agent 读外部网页的开发者，多了一个低成本的注入过滤层。",
+        "points": [
+          "抓取页面可按自定义问题打 0～1 分",
+          "Decider v1.3 / Flash 在 OpenRouter 再免费 3 周"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 用 Codex 搭「Performance Factory」，让多个 Agent 排查 ChatGPT 性能回退",
+        "summary": "OpenAI 介绍内部的 Performance Factory：协调多个 Codex Agent 调查性能回退、提出修复交工程师审核，再到生产环境验证修复是否生效。",
+        "source_url": "https://x.com/OpenAIDevs/status/2123471880292299171",
+        "time": "2026-11-20T01:42:00+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "给大型产品团队提供了一个「Agent 盯性能」的参考流程。",
+        "points": [
+          "Agent 调查回退、提修复",
+          "工程师审核后上线并在生产验证"
+        ]
+      },
+      {
+        "title": "微软 AI 推出 Canvas 互动工作区，由 MAI Image 2.7 Flash 驱动",
+        "summary": "微软 AI 发布 Canvas，可以把草图变成规整的示意图、对图片做精确局部修改，并在原图基础上反复调整而不用从头生成，底层是自研的 MAI Image 2.7 Flash。",
+        "source_url": "https://x.com/MicrosoftAI/status/2123462465740533910",
+        "time": "2026-11-20T01:04:00+08:00",
+        "handle": "@MicrosoftAI",
+        "impact": "微软自研图像模型开始落到具体产品里，减少对外部模型的依赖。",
+        "points": [
+          "草图转示意图、精确局部编辑",
+          "基于自研 MAI Image 2.7 Flash"
+        ]
+      },
+      {
+        "title": "Meta Muse Wonder 在 Legora 11 月法律工作基准 BAR 中总分第一",
+        "summary": "法律 AI 公司 Legora 公布 11 月 BAR 基准结果，Meta 的 Muse Wonder 总体质量得分最高，并在分析问答、信息抽取等四类任务中领先。",
+        "source_url": "https://x.com/AIatMeta/status/2123484005089558692",
+        "time": "2026-11-20T02:30:00+08:00",
+        "handle": "@AIatMeta",
+        "impact": "Meta 模型在企业专业场景的竞争力开始有第三方数据支撑。",
+        "points": [
+          "Legora 11 月 BAR 总体质量第一",
+          "四类任务领先"
+        ]
+      },
+      {
+        "title": "可灵 Kling 4.0 支持原生 4K 和 10-bit HDR 输出",
+        "summary": "可灵视频模型 Kling 4.0 新增原生 4K 分辨率，并在 4K 和 1080p 下都支持 10-bit HDR 输出，细节和色彩更丰富。",
+        "source_url": "https://x.com/Kling_ai/status/2123431119903461709",
+        "time": "2026-11-19T23:00:00+08:00",
+        "handle": "@Kling_ai",
+        "impact": "AI 视频开始进入可直接用于后期调色的画质档位。",
+        "points": [
+          "原生 4K",
+          "4K / 1080p 均支持 10-bit HDR"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "生产服务器被当跳板机：面板漏洞加 IPv6 没设防火墙的教训",
+        "summary": "雪踏乌云的 Dmit 生产服务器被入侵，对方没有盗取数据，而是把机器当跳板去攻击别人的服务器，结果被受害方按 IPv6 地址投诉到机房，收到「24 小时内不处理就关停」的工单。排查发现是 dekploy 面板的一个 CVE 漏洞，他只能备份数据准备重装。他把这件事和乐天证券把未脱敏数据放进测试机被黑的新闻放在一起，总结说安全防线总是死在最不起眼的盲区。",
+        "source_url": "https://x.com/Pluvio9yte/status/2123390945861444071",
+        "time": "2026-11-19T20:20:00+08:00",
+        "handle": "@Pluvio9yte",
+        "impact": "自己有 VPS 的读者值得检查一下面板版本和 IPv6 防火墙规则，很多人只给 IPv4 设了防护。",
+        "points": [
+          "入侵者没偷数据，而是拿服务器攻击别人",
+          "原因是 dekploy 面板的 CVE 漏洞",
+          "被投诉后机房给出 24 小时处理期限",
+          "常被忽略的盲区：IPv6 防火墙"
+        ]
+      },
+      {
+        "title": "同花顺开源 A 股金融数据服务 Financial-API，可用 MCP 接进 Claude、Cursor",
+        "summary": "GitHubDaily 介绍同花顺团队开源的 Financial-API：面向 AI Agent 和量化研究的 A 股数据服务，覆盖行情、财报、估值、指数板块和公募基金，还有涨跌停、龙虎榜等特色数据。Claude Desktop、Cursor 等客户端可以按 7 个数据域配置 MCP 直接在对话里查询，也提供命令行工具和 Python 接口，并能把历史行情存进本地数据库。",
+        "source_url": "https://github.com/HiThink-Tech/Financial-API",
+        "time": "2026-11-19T21:30:00+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "用 AI 做 A 股研究最怕模型报旧价格、编数字，接入一手数据源能明显减少这类错误。",
+        "points": [
+          "行情、财报、估值、指数板块、公募基金都能查",
+          "按 7 个数据域配置 MCP，也有命令行和 Python",
+          "README 写明查不到的数据不会用模拟数据凑数"
+        ]
+      },
+      {
+        "title": "Contra Labs 发布设计基准：未公开的 Gestalt 模型 Elo 1931，胜率 90%",
+        "summary": "Max For AI 介绍 Contra Labs 新发布的 Frontier Design Benchmark：从真实客户需求中整理 33 个设计任务，请专业设计师对各模型生成的网站和产品界面盲评，累计 4300 多次投票。第一名是仍处于隐身阶段、团队未公开的 Gestalt 模型，Elo 1931、胜率 90%，Claude Fable 5.2 为 1713，人类设计师参考作品为 1739；Claude、GPT 和 Kimi K3.1 Pro 处在 1638～1714 的第一梯队。",
+        "source_url": "https://x.com/MaxForAI/status/2123399400353562653",
+        "time": "2026-11-19T20:54:00+08:00",
+        "handle": "@MaxForAI",
+        "impact": "设计类任务开始有基于真实需求的人评榜单，但榜首模型身份不明，结果有待更多验证。",
+        "points": [
+          "33 个真实客户设计任务、4300 多次设计师盲评",
+          "Gestalt（团队未公开）Elo 1931，Claude Fable 5.2 为 1713",
+          "对比人类设计稿 28 次盲评中赢 20 次"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "小互实测即梦 Seedance 2.5 4K：两天做了 6 部片子",
+        "summary": "小互用即梦 Seedance 2.5 的 4K 输出两天做了 6 部片子：一部 6 分 46 秒的哈勃纪录片，加上品牌广告、情绪表演、MV 等 5 条 30 秒短片。他最大的感受是质感，金属有层层反光、布料能看到织纹、皮肤有毛孔，不再是 AI 视频常见的「塑料感」。",
+        "source_url": "https://x.com/xiaohu/status/2123418022400667654",
+        "time": "2026-11-19T22:08:00+08:00",
+        "handle": "@xiaohu",
+        "impact": "国产视频模型在画质上已接近实拍，短片和广告制作的成本结构会继续被改写。",
+        "points": [
+          "一部 6 分 46 秒纪录片加 5 条 30 秒短片",
+          "金属反光、布料织纹、皮肤毛孔都能看清",
+          "作者认为广告 TVC 已可用 AI 生成"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "Hermes Agent 联手微软推出企业版：进 Teams、Microsoft Store 和 Azure",
+        "summary": "Nous Research 宣布与微软合作推出 Hermes Enterprise：开源 Agent Hermes 现在可以在 Microsoft Teams、Microsoft Store 和 Azure 中使用。员工可以在 Teams 里把财务分析、文档起草、收件箱整理等工作交给 Hermes，再在 Teams 里审阅结果。",
+        "source_url": "https://x.com/NousResearch/status/2123535954946257096",
+        "time": "2026-11-20T05:56:00+08:00",
+        "handle": "@NousResearch",
+        "impact": "开源 Agent 第一次以企业版形态进入微软的办公和云渠道，企业试用门槛明显降低。",
+        "points": [
+          "Hermes Enterprise 可在 Microsoft Teams 里直接派活",
+          "上架 Microsoft Store 和 Azure",
+          "适合财务分析、文档起草、收件箱整理等工作"
+        ]
+      },
+      {
+        "title": "Hermes 为 Qwen3.8-27B 推出适配器：SWE-Bench Pro 从 29.4% 提到 43.1%",
+        "summary": "Nous Research 发布面向阿里 Qwen3.8-27B 的 Hermes 适配器，称让这个中等规模开源模型在 Hermes Agent 里做编程任务更高效、更准确：SWE-Bench Pro（hard 51）pass@1 从 29.4% 提到 43.1%，开 xhigh 思考时从 45.1% 提到 51.0%。Teknium 转发推荐试用。",
+        "source_url": "https://x.com/Teknium/status/2123511779691307398",
+        "time": "2026-11-20T04:20:00+08:00",
+        "handle": "@Teknium",
+        "impact": "本地跑 27B 模型的开发者，用 Hermes 搭配专用适配器能拿到明显更好的 Agent 编程表现。",
+        "points": [
+          "SWE-Bench Pro（hard 51）pass@1：29.4% → 43.1%（自报）",
+          "xhigh 思考模式下 45.1% → 51.0%"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenClaw 2026.11.6：网关重启不丢子 Agent 结果，内存占用更低",
+        "summary": "OpenClaw 发布正式版 2026.11.6：修好了从 2026.11.5 升级的路径；修改配置时子 Agent 和后台回合继续运行，网关重启打断发送后仍会送达最终回答；降低启动和常驻内存，插件工具发现不再阻塞网关；iOS 语音对话也不再有 30 秒上限。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.6",
+        "time": "2026-11-20T01:26:00+08:00",
+        "impact": "在小主机或 NAS 上长期跑 OpenClaw 的用户，升级后稳定性和内存表现都会更好。",
+        "points": [
+          "改配置、网关重启时子 Agent 和后台任务继续跑",
+          "降低启动和常驻内存，适合小内存主机",
+          "长时间、多工具的 Claude CLI 回合不再丢最终回复"
+        ]
+      },
+      {
+        "title": "Claude Code v2.1.329：信任对话框会标出钩子在哪声明，修复配置文件被重置",
+        "summary": "Claude Code 发布 v2.1.329：信任一个文件夹时，对话框会说明它的钩子是在哪里声明的；托管设置里的钩子加载失败时，在 Claude Desktop 等非交互环境里也会给出警告；/tasks 能看到本会话的定时任务和 /loop 唤醒。还修复了网络卡顿或文件锁导致 ~/.claude.json 被重置为默认值，以及 macOS 上反复退出登录的问题。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+        "time": "2026-11-20T06:14:00+08:00",
+        "impact": "打开陌生仓库前能看清它带了哪些钩子，降低被恶意仓库执行命令的风险。",
+        "points": [
+          "信任文件夹时提示其钩子（hooks）声明位置",
+          "托管设置里的钩子加载失败会在对话里警告",
+          "修复网络卡顿时 ~/.claude.json 被重置为默认值"
+        ]
+      },
+      {
+        "title": "Hugging Face 用 25 个 Claude Code Agent 把 PyBot 移植到 Rust：花费约 1400 美元，提速约 10 倍",
+        "summary": "Hugging Face 研究负责人 Leandro von Werra 介绍，团队用 25 个 Claude Code Agent 把 PyBot 移植成 Rust 版 rsbot，花费约 1400 美元，速度提升约 10 倍，同时保留了 Python 版的随机数行为、对话记忆和 Unicode 索引方式。",
+        "source_url": "https://x.com/lvwerra/status/2123367830833738110",
+        "time": "2026-11-19T18:48:00+08:00",
+        "handle": "@lvwerra",
+        "impact": "多 Agent 做跨语言移植的成本已经降到个人项目也能承受的水平。",
+        "points": [
+          "约 1400 美元、约 10 倍提速（自报）",
+          "保留了 Python 的随机数行为、对话记忆和 Unicode 索引"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "superpowers：给编程 Agent 用的技能框架和开发方法（GitHub 日榜 +2,029）",
+        "summary": "superpowers 是一套面向编程 Agent 的技能框架，同时给出一套配套的软件开发方法，让 Agent 按固定流程拆解、实现和验证任务。今天在 GitHub 日榜新增约 2,029 星，是当日增星最多的项目。",
+        "source_url": "https://github.com/obra/superpowers",
+        "time": "2026-11-20T06:25:00+08:00",
+        "impact": "想让 Claude Code、Codex 等工具更守规矩的开发者，可以直接套用这套技能和流程。",
+        "points": [
+          "一套 Agent 技能（Skills）框架加软件开发方法论",
+          "今日新增约 2,029 星，居日榜首位"
+        ]
+      },
+      {
+        "title": "CLI-Anything：把任意软件变成 Agent 能调用的命令行（GitHub 日榜 +899）",
+        "summary": "港大数据智能实验室的 CLI-Anything 目标是让所有软件都能被 Agent 原生调用：给现有软件生成命令行接口，Agent 不必再靠截图点界面，并配套 CLI-Hub 收集现成接口。今天在 GitHub 日榜新增约 899 星。",
+        "source_url": "https://github.com/HKUDS/CLI-Anything",
+        "time": "2026-11-20T06:25:00+08:00",
+        "impact": "命令行比图形界面更稳、更省 token，这类工具能让 Agent 操作桌面软件更可靠。",
+        "points": [
+          "港大数据智能实验室（HKUDS）出品",
+          "为软件生成命令行接口，并配套 CLI-Hub",
+          "今日新增约 899 星"
+        ]
+      },
+      {
+        "title": "Cursor 公开插件规范和官方插件仓库（GitHub 日榜 +383）",
+        "summary": "Cursor 在 GitHub 公开插件规范和一批官方插件，开发者可以照着规范给 Cursor 写插件。今天在 TypeScript 日榜和总榜新增约 383 星。",
+        "source_url": "https://github.com/cursor/plugins",
+        "time": "2026-11-20T06:25:00+08:00",
+        "impact": "Cursor 生态开始有统一的插件标准，第三方扩展会更容易写、也更容易审查。",
+        "points": [
+          "Cursor 插件规范 + 官方插件",
+          "今日新增约 383 星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Google 首页改版突出 AI，侧边栏可直接看到 Gemini 对话",
+        "summary": "9to5Google 报道，Google 搜索首页开始推送以 AI 为中心的新设计，新增的侧边栏里会显示用户的 Gemini 对话，搜索和 AI 助手进一步合到同一个入口。",
+        "source_url": "https://9to5google.com/2026/11/19/google-search-homepage-gemini-sidebar-update/",
+        "time": "2026-11-20T06:25:00+08:00",
+        "handle": "@9to5Google",
+        "impact": "Google 正把搜索首页变成 Gemini 的入口，习惯传统搜索的用户会更频繁地被引导到 AI 回答。",
+        "points": [
+          "搜索首页改为以 AI 为中心的设计",
+          "新增侧边栏，显示用户的 Gemini 对话"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "群晖准备修补 NGINX2Root 和 DSM OAuth 漏洞，建议先关 HTTP/2、停用 OAuth 套件",
+        "summary": "群晖安全团队（PSIRT）表示正在为 NGINX2Root（开源 Web 服务器 nginx 的一系列漏洞）和一个 DSM OAuth API 漏洞准备安全更新。在补丁发布前，官方建议到「控制面板 > 网络 > 连接性」关闭 HTTP/2，并停止 OAuth Service 套件。",
+        "source_url": "https://x.com/Synology/status/2123506318816227598",
+        "time": "2026-11-20T03:58:00+08:00",
+        "handle": "@Synology",
+        "impact": "家里或公司有群晖 NAS 的用户，尤其开了外网访问的，现在就照官方建议做临时防护，补丁出来后立刻更新。",
+        "points": [
+          "涉及开源 nginx 的 NGINX2Root 系列漏洞",
+          "另有一个 DSM OAuth API 漏洞",
+          "临时措施：控制面板 > 网络 > 连接性 关闭 HTTP/2；停止 OAuth Service 套件"
+        ]
+      },
+      {
+        "title": "n8n 推出开源个人 Agent「Nod」",
+        "summary": "自动化平台 n8n 推出开源个人 Agent「Nod」，并请评测者把它和 Dots、Muse 等个人 Agent 做对比，看哪些地方好用、还缺什么。",
+        "source_url": "https://x.com/n8n_io/status/2123443255341994038",
+        "time": "2026-11-19T23:48:00+08:00",
+        "handle": "@n8n_io",
+        "impact": "已经用 n8n 做自动化的用户，多了一个可以自己部署、和现有工作流打通的个人 Agent 选择。",
+        "points": [
+          "n8n 新推出的开源个人 Agent",
+          "官方邀请评测者与 Dots、Muse 等对比"
+        ]
+      }
+    ]
+  }
+}
