@@ -1,0 +1,356 @@
+{
+  "id": "2026-11-19-1800",
+  "published_at": "2026-11-19T18:00:00+08:00",
+  "headline": "Anthropic IPO 定价 83 美元今晚挂牌，OpenAI 呼吁公开报告递归自我改进指标",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic IPO 定价每股 83 美元，发行 9.8 亿股，今晚在纳斯达克以 ANT 挂牌",
+        "summary": "Anthropic 官方公告：A 类普通股 IPO 定价每股 83 美元，共发行 9.8 亿股，其中约 9.56 亿股由公司发行、约 2365 万股由部分老股东出售，老股东部分的收入不归公司。股票预计 11 月 19 日在纳斯达克全球精选市场挂牌，代码 ANT，按美东 9:30 开盘计约为新加坡时间今晚 22:30；交易预计 11 月 20 日完成交割，承销商另有 30 天内最多再买 1.47 亿股的选择权。 这是头部前沿模型公司首次成为公开上市公司，此后营收、算力开支和安全承诺都要按上市公司的标准定期披露；按 9.8 亿股乘以 83 美元计算，基础发行规模约 813 亿美元。",
+        "source_url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+        "time": "2026-11-19T07:29:00+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "AI 公司估值有了公开市场的定价参照；开盘价和灰市、永续合约报价都可能大幅偏离发行价，个人投资者不要追逐衍生品。",
+        "points": [
+          "定价 83 美元，多家市场报道称高于此前 70～78 美元的区间",
+          "9.8 亿股中约 9.56 亿股为公司新发，约 2365 万股为老股东出售",
+          "承销商 30 天内可再认购最多 1.47 亿股",
+          "SEC 已于 11 月 18 日宣布注册生效，招股书由高盛、摩根士丹利提供"
+        ]
+      },
+      {
+        "title": "OpenAI 公布研究加速数据：研究员用 AI 呈指数增长，呼吁各实验室公开报告「递归自我改进」指标",
+        "summary": "OpenAI 发布报告，公开 AI 如何改变其内部研究：研究员对 AI 的使用持续呈指数增长，Agent 能完成的任务越来越长，但人在研究中仍处于核心位置。报告还称，研究员花在安全与对齐上的时间在增加，这两个方向投入的人力增速高于其他任何单一研究方向。 OpenAI 明确主张 AI 实验室应被要求跟踪并公开报告递归自我改进（Recursive Self-Improvement，RSI）指标，即 AI 加速下一代 AI 开发的程度，希望把它变成行业共同的测量规范。",
+        "source_url": "https://x.com/OpenAI/status/2123191365983248653",
+        "time": "2026-11-19T07:07:00+08:00",
+        "handle": "@OpenAI",
+        "impact": "「AI 帮忙研发 AI」开始有可量化的披露口径，监管和同行可能据此要求其他实验室提供同类数据。",
+        "points": [
+          "研究员 AI 使用量持续指数增长，Agent 完成的任务时长变长",
+          "人仍是研究核心；安全与对齐方向的人力投入增长最快",
+          "主张实验室须跟踪并公开 RSI 指标",
+          "OpenAI 本周还发布了芯片设计、前沿风险管理两篇报告"
+        ]
+      },
+      {
+        "title": "NGINX 发布 1.31.9 / 1.30.7 修复 10 个漏洞，安全团队称与 OpenAI 合作发现免登录远程执行漏洞",
+        "summary": "nginx 官方 11 月 18 日发布 1.30.7 稳定版和 1.31.9 主线版，一次修复 10 个漏洞，包括 HTTP/2 流控内存破坏（CVE-2026-123007）、TLS 1.3 读取请求体死循环、邮件代理模块释放后使用（三项均标为 major），以及 HTTP/2、HTTP/3、resolver 中的释放后使用等。几乎同时，日本安全研究员宣布发现「NGINX2Shell」：针对当时主线版 1.31.8、无需登录即可远程执行代码的漏洞，称从发现到披露都与 OpenAI 合作完成。 nginx 是全球使用最广的 Web 服务器和反向代理之一，受影响版本跨度很大（部分漏洞早至 0.5.x 版本）；这也是继 Java4Shell 之后，又一个据称与 AI 公司合作发现的基础设施级漏洞。（11 月 18 日 23:09 发布，06 期未收录，本期补报。）",
+        "source_url": "https://nginx.org/en/security_advisories.html",
+        "time": "2026-11-18T23:09:00+08:00",
+        "handle": "@ikotas00",
+        "impact": "自建或托管 nginx 的服务（含容器镜像、发行版自带包）应尽快升级；暂时不能升级的，先按官方公告评估是否关闭 HTTP/2、HTTP/3 或邮件代理。",
+        "points": [
+          "修复版本：1.31.9+（主线）、1.30.7+（稳定）",
+          "3 个 major：HTTP/2 流控内存破坏、TLS 1.3 死循环、邮件代理释放后使用",
+          "NGINX2Shell 具体对应哪几个 CVE，以官方公告为准",
+          "研究员称在某漏洞悬赏活动中这类漏洞价值约 30 万美元（自报）"
+        ],
+        "tag": "补报"
+      },
+      {
+        "title": "OpenAI Responses API 后台模式新增 2 小时 / 8 小时档，GPT-6.2 单价最多省 40%",
+        "summary": "OpenAI 开发者账号宣布，在 Responses API 的后台模式（background mode）里可以为首次响应选择 2 小时或 8 小时的目标时间，换取比标准价最多低 40% 的单价，适用于 GPT-6.2 Astra 和 Sol，单轮和多轮任务都可用，目前为公开测试。 不急着要结果的批量任务（夜间数据处理、评测、长文档改写）可以直接用时间换钱，和此前 GPT-6.2 降价叠加后，大批量调用的成本进一步下降。",
+        "source_url": "https://x.com/OpenAIDevs/status/2123188195202617408",
+        "time": "2026-11-19T06:54:00+08:00",
+        "handle": "@OpenAIDevs",
+        "impact": "有离线批量任务的开发者可以把这部分流量切到后台模式，注意设计好超时和重试。",
+        "points": [
+          "首次响应可选 2h 或 8h 目标窗口",
+          "比标准价每 token 最多便宜 40%",
+          "支持 GPT-6.2 Astra / Sol，单轮、多轮均可",
+          "公开测试阶段"
+        ]
+      },
+      {
+        "title": "Palo Alto Networks 以 45 亿美元股票收购 Applied Compute，进入开源权重模型定制与推理",
+        "summary": "网络安全公司 Palo Alto Networks 在发布季度财报时宣布，以全股票方式、约 45 亿美元收购 Applied Compute。后者为企业提供开源权重（open-weight）模型的后训练和推理平台，帮助企业用自有数据训练和部署定制模型；据《华尔街日报》报道，其联合创始人兼 CEO Yash Patil 将出任 Palo Alto 联席首席 AI 官，交易预计在 Palo Alto 2027 财年第三季度完成。 安全厂商直接买下模型后训练团队，说明「在企业内部安全地部署开源模型」正被当作独立的大生意；CEO Nikesh Arora 称这块业务未来可能比安全主业还大。（新加坡时间今晨约 05:00 公布，06 期未收录，本期补报。）",
+        "source_url": "https://www.calcalistech.com/ctechnews/article/tkvuorub4",
+        "time": "2026-11-19T05:01:00+08:00",
+        "handle": "@Calcalistech",
+        "impact": "企业部署开源模型时，安全、合规和模型定制可能被打包成一站式采购，独立的后训练创业公司会成为并购目标。",
+        "points": [
+          "全股票交易，约 45 亿美元",
+          "Applied Compute：开源权重模型后训练 + 推理平台",
+          "CEO 将任 Palo Alto 联席首席 AI 官（据 WSJ）",
+          "预计 2027 财年第三季度完成，需满足常规交割条件"
+        ],
+        "tag": "补报"
+      },
+      {
+        "title": "Google Labs 推出 Stitch Loop：上线后继续盯产品数据、自动提改进 PR 的产品 Agent",
+        "summary": "Google Labs 发布实验产品 Stitch Loop：连接代码库和线上产品数据（支持 180 多种集成、自定义 MCP 服务器或 CLI 上传），围绕转化率、工单量等目标持续运行「循环」，在沙箱里写代码并提交 PR，人工批准后才合并。内置安全（基于 Gemini 4 Carbon 和 DeepMind CodeMender）、延迟和无障碍三类循环，也能作为 Antigravity 等编程 Agent 的服务层，通过 Stitch CLI 和 MCP 提供产品上下文。 编程 Agent 的工作通常在代码上线时结束，Stitch Loop 把 Agent 延伸到上线后的持续优化；配套的 stitch-skills 仓库今天在 GitHub 日榜新增约 365 星。（新加坡时间 01:07 发布，06 期未收录，本期补报。）",
+        "source_url": "https://x.com/stitchbygoogle/status/2123100817863663686",
+        "time": "2026-11-19T01:07:00+08:00",
+        "handle": "@stitchbygoogle",
+        "impact": "产品和增长团队可以试着把「看数据—改代码」交给 Agent，但给它的数据和代码库权限要严格限定。",
+        "points": [
+          "连接 180+ 数据源，按业务目标自定义循环",
+          "所有改动以 PR 形式提交，需人工批准",
+          "内置安全、延迟、无障碍三类循环",
+          "目前开放候补名单"
+        ],
+        "tag": "补报"
+      },
+      {
+        "title": "OpenAI 推出 ChatGPT for Accounting，接入 QuickBooks、Xero、NetSuite 等财务软件",
+        "summary": "ChatGPT 官方账号宣布推出 ChatGPT for Accounting：通过官方会计插件和合作伙伴插件，协助完成月结报表、银行对账、数据录入和审计准备，可连接 QuickBooks、Xero、Oracle NetSuite、BILL、FreshBooks、Rillet 和 Campfire。 这是 OpenAI 两天内第二个行业版本（前一天是 ChatGPT for Sales），ChatGPT 正按岗位打包插件和流程，直接进入企业财务系统。（新加坡时间 04:59 发布，06 期未收录，本期补报。）",
+        "source_url": "https://x.com/ChatGPT/status/2123159134963196357",
+        "time": "2026-11-19T04:59:00+08:00",
+        "handle": "@ChatGPT",
+        "impact": "财务团队试用前要先确认插件对账套的读写权限和审计留痕，避免 AI 直接改动正式账目。",
+        "points": [
+          "面向月结、对账、录入、审计准备",
+          "官方插件 + 7 家财务软件合作插件",
+          "继 Sales 之后的第二个行业版本"
+        ],
+        "tag": "补报"
+      },
+      {
+        "title": "Gemini 4 Neon 首批外部数据：CursorBench 63.7%，开发者实测评价偏正面",
+        "summary": "Cursor 宣布上线 Gemini 4 Neon，称其默认推理强度下在 CursorBench 4.1 得到 63.7%，高于 Gemini 4 Hydrogen 的 57.3%，刷新该榜的性价比前沿。宝玉转述 Artificial Analysis 数据称 Neon 综合智能指数 61 分、总排名第三，并补充缓存输入价为每百万 token 0.15 美元；歸藏实测称其多模态和设计动效还原在自己的任务上可替代 Opus 5.5，同时多位博主吐槽 Antigravity 客户端和元素周期表式的命名。 06 期只有官方和 Zapier 数据，本轮出现了 Cursor 等第三方测试和大量一线实测，Neon 的「中档价格、接近旗舰」定位开始得到外部支持。",
+        "source_url": "https://x.com/cursor_ai/status/2123198346802450926",
+        "time": "2026-11-19T07:35:00+08:00",
+        "handle": "@cursor_ai",
+        "impact": "在 Cursor 等工具里已可直接切换到 Neon，适合先拿日常编程和前端任务对比成本与效果。",
+        "points": [
+          "CursorBench 4.1：Neon 63.7% vs Hydrogen 57.3%（Cursor 自测）",
+          "AA 智能指数 61、总榜第三（宝玉转述）",
+          "缓存输入每百万 token 0.15 美元",
+          "主要槽点：Antigravity 客户端体验、命名混乱"
+        ]
+      },
+      {
+        "title": "Artificial Analysis：GPT-6.2 回答更短、更少承认不确定",
+        "summary": "Artificial Analysis 测得 GPT-6.2 Astra 平均回答从 352 词降到 210 词、Sol 从 337 降到 223，结构化程度大降、先给答案的比例上升；「承认不确定」得分 Astra 从 96 降到 24、Sol 从 98 降到 51。",
+        "source_url": "https://x.com/ArtificialAnlys/status/2123236464003588136",
+        "time": "2026-11-19T10:06:00+08:00",
+        "handle": "@ArtificialAnlys",
+        "impact": "依赖 GPT-6.2 做事实性工作的用户要更主动地追问依据和置信度。",
+        "points": [
+          "回答更短、更先给结论",
+          "承认不确定明显减少，高推理强度下引用证据更多"
+        ]
+      },
+      {
+        "title": "GitHub Copilot 推出官方验证 MCP 连接器公开预览",
+        "summary": "GitHub 开始以公开预览形式推出经 GitHub 验证的 MCP 服务器（连接器），选服务、登录即可用，首批包括 Supabase、Box、Calendly 等，覆盖 Copilot 应用、Copilot CLI 和 VS Code。",
+        "source_url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/",
+        "time": "2026-11-19T08:50:00+08:00",
+        "handle": "@github",
+        "impact": "团队接入第三方服务更方便，但每个连接器的授权范围仍要逐一审查。",
+        "points": [
+          "一次登录即可接入，免去手动配置 MCP",
+          "覆盖 Copilot App / CLI / VS Code"
+        ]
+      },
+      {
+        "title": "Prime Intellect 推出 Model Factory：在同一套平台上训练、部署并持续改进自有模型",
+        "summary": "开源分布式强化学习框架 prime-rl 的开发方 Prime Intellect 发布 Model Factory，可按需、在专属集群或自带算力上训练、部署并持续改进自己的模型。",
+        "source_url": "https://x.com/PrimeIntellect/status/2123207653530972470",
+        "time": "2026-11-19T08:12:00+08:00",
+        "handle": "@PrimeIntellect",
+        "impact": "想用自有数据持续后训练开源模型的团队多了一个托管选项，与今天 Palo Alto 的收购方向一致。",
+        "points": [
+          "训练、部署、持续改进一体化",
+          "支持按需、专属集群和自带算力"
+        ]
+      },
+      {
+        "title": "Vercel 推出实验产品 Board：人和 Agent 共用的任务消息板",
+        "summary": "Vercel 发布实验产品 vercel board，一个面向人和 Agent 的安全消息板：Agent 可以在上面共享任务、组成多 Agent 协作，人和 Agent 分别设置权限。",
+        "source_url": "https://vercel.com/blog/introducing-vercel-board",
+        "time": "2026-11-19T09:59:00+08:00",
+        "handle": "@vercel",
+        "impact": "多 Agent 协作开始出现现成的协调层，适合先在非生产项目里试。",
+        "points": [
+          "Agent 共享任务、组队协作",
+          "人和 Agent 分别设权限"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "腾讯电话会：WorkBuddy 日活超 1000 万、日均 token 超 100 万亿",
+        "summary": "meng shao 整理腾讯财报电话会上马化腾、刘炽平关于 WorkBuddy 的表态：日活超过 1000 万，日均大模型 token 消耗超过 100 万亿，按此口径已是国内规模最大的 AI 应用；WorkBuddy 已成为国内几乎所有开源模型的最大客户。管理层还把 Flash 小模型定位为低成本获客工具，用户需求升级后再转向更强的模型和订阅。",
+        "source_url": "https://x.com/shao__meng/status/2123310660465705364",
+        "time": "2026-11-19T15:01:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "国内 Agent 应用的竞争重点正转向 token 规模和模型路由，开源模型厂商的大客户集中度在上升。",
+        "points": [
+          "按日均 token 消耗计为国内最大 AI 应用（公司口径）",
+          "已是国内几乎所有开源模型的最大客户",
+          "Flash 模型被当作获客工具，再引导升级订阅"
+        ]
+      },
+      {
+        "title": "Shopify 移动端代码吞吐提高 11 倍后，怎样重做安全审查",
+        "summary": "meng shao 解读 Shopify 工程博客：用上编程 Agent 后，Shopify 移动应用的代码吞吐已是去年同期的 11 倍，12 周重写应用期间平均每周改动约 43.4 万行。团队因此改用「攻击面地图」，把安全审查拆到每一条深链（deep link）这样的最小入口。",
+        "source_url": "https://x.com/shao__meng/status/2123232255309119893",
+        "time": "2026-11-19T09:49:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "Agent 让代码量暴涨后，安全审查必须从逐行看改成按攻击面拆分，这是大团队可以直接借鉴的做法。",
+        "points": [
+          "代码吞吐为去年同期 11 倍",
+          "12 周重写期间平均每周改动约 43.4 万行",
+          "用攻击面地图把审查拆到单条深链"
+        ]
+      },
+      {
+        "title": "Linger：开源的本地主动 Agent，12GB 显卡跑 1250 亿参数模型",
+        "summary": "雪踏乌云介绍 DeepSeek 早期成员张博团队开源的 Linger（simplexai-labs/linger）：一个装在自己电脑上的主动型个人 Agent，会盯邮件、日历和 Slack，每晚把信息整理成本地 Markdown 记忆，发邮件和消息前必须经用户同意。官方 README 称，借助 MoE 推理引擎 PolyStrata，125B 的 Qwen3.8-Flash-Next 可在 12GB 显卡加 64GB 内存上跑到约 45 token/s，安装器会按显卡和空闲内存推荐能跑的模型。",
+        "source_url": "https://x.com/Pluvio9yte/status/2123245283136184727",
+        "time": "2026-11-19T10:41:00+08:00",
+        "handle": "@Pluvio9yte",
+        "impact": "本地 Agent 能减少数据外传，但它会直接操作已登录的浏览器和桌面应用，装之前要想清楚给它哪些账号权限。",
+        "points": [
+          "主动盯邮件、日历、Slack，夜间整理个人 Wiki",
+          "RTX 3060 12GB + 64GB 内存跑 125B MoE 约 45 token/s（官方数据）",
+          "发邮件、发消息须用户同意",
+          "后台整理仍需 Claude Code 或 Codex 额度"
+        ]
+      },
+      {
+        "title": "Mole 更新磁盘分析，可批量清理 AI 工具缓存和不用的软件",
+        "summary": "开源 Mac 清理工具 Mole 的作者 Tw93 介绍新版本：磁盘分析更好用，可以按大小找出占用并多选一起删除；还能单独清理 AI 工具产生的不常用内容，再卸载不用的软件。",
+        "source_url": "https://x.com/HiTw93/status/2123351272229392516",
+        "time": "2026-11-19T17:42:00+08:00",
+        "handle": "@HiTw93",
+        "impact": "装了多个 AI 编程工具的 Mac 用户可以借它回收被模型和缓存占掉的空间，删除前注意确认路径。",
+        "points": [
+          "磁盘分析支持按大小查找、多选删除",
+          "可单独清理 AI 工具的不常用内容"
+        ]
+      }
+    ],
+    "en_topics": [],
+    "oss_agent": [
+      {
+        "title": "OpenCode：当天 44% 的 token 由自有 GPU 提供，约 16 万亿",
+        "summary": "开源编程 Agent OpenCode 称，当天 44% 的 token 由自己的 GPU 提供，约 16 万亿个，未来几个月还有 10 倍的硬件上线。创始人 Dax（@thdxr）补充说，这相当于同期 OpenRouter 总 token 的约三分之一，只用了 3 个 GB300 机柜；8 月 DeepSeek 4.1 涨价打乱了他们的成本，3 个月后他们以与原厂相同的质量自行部署 DeepSeek 和 GLM。",
+        "source_url": "https://x.com/opencode/status/2123214984389771684",
+        "time": "2026-11-19T08:41:00+08:00",
+        "handle": "@opencode",
+        "impact": "编程 Agent 厂商开始自建推理来对冲模型涨价，订阅价格和可用模型可能因此更稳定。",
+        "points": [
+          "自有 GPU 当天承担 44% token，约 16T（自报）",
+          "称相当于同期 OpenRouter 总量约三分之一，来自 3 个 GB300 机柜",
+          "未来几个月硬件扩充 10 倍"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Google 开源 ABFS：Android 源码检出从约 36 分钟降到 8 秒内",
+        "summary": "Google Android 团队开源 ABFS（Another Build File Service，github.com/google/abfs）：由 Linux 内核内容寻址文件系统、用户态守护进程和服务端组成，按需加载并缓存源码、工作区和构建产物。官方数据是 Android 源码检出从约 36 分钟降到 8 秒内、完整构建从约 80 分钟降到 2 分钟出头，CI 与开发者工作区的构建结果最多可 100% 复用，让多个 Agent 并行在不同分支上工作成为可能（11 月 18 日发布，本期补报）。",
+        "source_url": "https://developers.googleblog.com/accelerating-development-for-massive-git-repositories/",
+        "time": "2026-11-18T01:46:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "超大代码库的团队可以参考它解决 Agent 并行开发时的检出和构建瓶颈。",
+        "points": [
+          "检出约 36 分钟 → 8 秒内，完整构建约 80 分钟 → 2 分钟出头",
+          "内核内容寻址文件系统 + 按需加载缓存",
+          "Agent 可在 10 秒内拿到完整源码树、并行多工作区"
+        ],
+        "tag": "补报"
+      },
+      {
+        "title": "Claude Code v2.1.328：云平台上的 Opus / Sonnet 4.6 支持 auto 模式，MCP 钩子失败可阻断操作",
+        "summary": "Claude Code 发布 v2.1.328：在 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry 和 Claude 应用网关上为 Opus 4.6、Sonnet 4.6 加入 auto 模式；mcp_tool 钩子支持「调用失败即阻断操作」；跳过权限确认的会话消息可能被云端会话丢弃时会给出警告，自托管 runner 也新增了一批编排参数和指标。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+        "time": "2026-11-19T09:14:00+08:00",
+        "impact": "通过云厂商用 Claude Code 的企业可以用 auto 模式减少确认打断，同时用失败即阻断的钩子守住安全底线。",
+        "points": [
+          "Bedrock、Google Cloud、Foundry 等平台上新增 auto 模式",
+          "mcp_tool 钩子新增 onFailure: block",
+          "自托管 runner 增加多项编排指标"
+        ]
+      },
+      {
+        "title": "Univer：给产品嵌入可被 AI 操作的表格与文档编辑器（GitHub 日榜 +1,152）",
+        "summary": "Univer 是一套开源核心的办公 SDK，可以把表格、文档的编辑、公式计算、协作和文件处理嵌入自己的产品，并让 AI Agent 直接操作这些文档。今天在 GitHub 日榜新增约 1,152 星。",
+        "source_url": "https://github.com/dream-num/univer",
+        "time": "2026-11-19T18:21:00+08:00",
+        "impact": "想做「AI 办公」功能的团队可以用它省去自研表格和文档引擎。",
+        "points": [
+          "开源核心的办公 SDK：编辑、计算、协作、文件处理",
+          "面向人和 AI Agent 同时使用",
+          "今日新增约 1,152 星，总计约 3 万星"
+        ]
+      },
+      {
+        "title": "rust-anything：让编程 Agent 按录制行为分块把项目改写成 Rust",
+        "summary": "GitHubDaily 推荐的 rust-anything 配合编程 Agent，把 CLI、HTTP 服务和库一块一块改写成 Rust：先录下原程序的真实行为，每改完一块就和录制结果对照，避免功能悄悄变样；支持 TypeScript、Python、C、Go、Ruby 和 Java，仓库约 4100 星。",
+        "source_url": "https://github.com/erkamyaman/rust-anything",
+        "time": "2026-11-19T15:30:00+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "想用 Agent 做大规模语言迁移的团队，可以借鉴「先录行为、再逐块验证」的做法控制风险。",
+        "points": [
+          "先录下原项目真实行为，再逐块对照改写",
+          "支持 TypeScript、Python、C、Go、Ruby、Java"
+        ]
+      },
+      {
+        "title": "Plannotator：审阅 Agent 计划和代码、一键回传反馈的工作台（GitHub 日榜 +392）",
+        "summary": "Plannotator 让人在 Agent 执行前后都能介入：对计划做批注和取舍、审阅代码、与团队共享，然后一键把全部反馈发回 Agent。今天在 GitHub 日榜新增约 392 星。",
+        "source_url": "https://github.com/backnotprop/plannotator",
+        "time": "2026-11-19T18:21:00+08:00",
+        "impact": "Agent 改动越来越多时，这类工具能让人保持「在环」，减少盲目放行。",
+        "points": [
+          "对 Agent 计划和代码做批注、审阅",
+          "一键把反馈发回 Agent，可与团队共享"
+        ]
+      },
+      {
+        "title": "ffmpeg-skill：给编程 Agent 用的本地视频剪辑工具箱（GitHub 日榜 +338）",
+        "summary": "ffmpeg-skill 把 42 个 FFmpeg 工具包装成机器可读的接口和 MCP 服务器，供 Claude Code、Cursor、Codex 调用，完成剪辑、加字幕、重构图、响度统一和各平台导出，不需要云服务和 API Key。今天在 GitHub 日榜新增约 338 星。",
+        "source_url": "https://github.com/kajisho5/ffmpeg-skill",
+        "time": "2026-11-19T18:21:00+08:00",
+        "impact": "做短视频的个人可以直接让编程 Agent 在本地剪片，素材不必上传到云端。",
+        "points": [
+          "42 个 FFmpeg 工具 + MCP 服务器",
+          "剪辑、字幕、重构图、响度、平台导出，全在本地"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Google AI Ultra 订阅改送 YouTube Premium 家庭版",
+        "summary": "Google 把 AI Ultra 附带的 YouTube 权益从个人版升级为家庭版，适用于每月 99.99 美元的 Ultra 5x 和 199.99 美元的 Ultra 20x；家庭版单买每月 26.99 美元，最多可加 5 位家人，含 YouTube 和 YouTube Music 去广告、后台播放与离线下载。每月 19.99 美元的 AI Pro 仍只附带不含 Music 的 Premium Lite。",
+        "source_url": "https://9to5google.com/2026/11/18/google-ai-ultra-youtube-premium-family/",
+        "time": "2026-11-19T07:42:00+08:00",
+        "handle": "@9to5Google",
+        "impact": "家里已经单独订 YouTube Premium 家庭版的 Gemini 重度用户，可以重新算一下升级 Ultra 是否划算。",
+        "points": [
+          "Ultra 5x（99.99 美元/月）和 20x（199.99 美元/月）都包含",
+          "家庭版最多加 5 位家人，单买 26.99 美元/月",
+          "AI Pro 仍只送 Premium Lite"
+        ]
+      },
+      {
+        "title": "Instagram 支持把帖子里的歌曲存进 Apple Music",
+        "summary": "MacRumors 发现 Instagram 新增 Apple Music 联动：连接账号后，点帖子或快拍里的歌曲名即可「添加到 Apple Music」，歌曲会进入音乐 App 资料库中的「Instagram Songs」歌单。Spotify 此前已支持从 Instagram 收藏歌曲。",
+        "source_url": "https://www.macrumors.com/2026/11/18/apple-music-instagram-playlist/",
+        "time": "2026-11-19T09:19:00+08:00",
+        "handle": "@MacRumors",
+        "impact": "Apple Music 用户刷 Instagram 时收藏歌曲更方便；连接前留意授权给 Instagram 的音乐账号权限。",
+        "points": [
+          "需先把 Apple Music 账号连接到 Instagram",
+          "歌曲存入资料库里的「Instagram Songs」歌单"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "GIGAZINE 实操：用 Cloudflare Tunnel + Access 从外面安全访问家里的本地 AI",
+        "summary": "GIGAZINE 演示把家里 GPU 电脑上的 Ollama 和 Open WebUI 开放给外部使用：用 Cloudflare Tunnel 从服务器主动连到 Cloudflare，无需在路由器上开端口；再用 Cloudflare Access 加一层邮箱验证码登录，只放行指定用户。外出时的 Hermes Agent 无法走网页登录，改用 Access 的「服务认证」令牌通过 API 调用。",
+        "source_url": "https://gigazine.net/news/20261119-cloudflare-tunnel-local-ai/",
+        "time": "2026-11-19T06:59:00+08:00",
+        "impact": "想远程用家里本地模型的人可以照这套免端口、带认证的做法；服务令牌要妥善保管、定期轮换。",
+        "points": [
+          "Ollama + Open WebUI 跑在家里 PC",
+          "Cloudflare Tunnel 免开端口，Access 做邮箱验证码登录",
+          "Hermes Agent 用「服务认证」令牌走 API 访问"
+        ]
+      }
+    ]
+  }
+}
