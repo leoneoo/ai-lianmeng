@@ -330,10 +330,10 @@ test("build publishes the site without the sample", () => {
   }
 });
 
-test("workflow deploys with the two Beijing slots", () => {
+test("workflow deploys with the daily Beijing 18:00 slot", () => {
   const workflow = readFileSync(path.join(repoRoot, ".github/workflows/site.yml"), "utf8");
   const crons = [...workflow.matchAll(/- cron: "([^"]+)"/g)].map((match) => match[1]);
-  assert.deepEqual(crons, ["0 22,10 * * *"]);
+  assert.deepEqual(crons, ["0 10 * * *"]);
   assert.match(workflow, /types: \[opened, edited, reopened\]/);
   assert.match(workflow, /workflow_dispatch/);
   assert.match(workflow, /contents: write/);
