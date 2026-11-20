@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T06:34:45+08:00",
+  "updated_at": "2026-11-20T18:21:30+08:00",
   "editions": [
+    {
+      "id": "2026-11-20-1800",
+      "published_at": "2026-11-20T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-20-1800.json",
+      "counts": {
+        "x_daily": 12,
+        "zh_topics": 6,
+        "en_topics": 0,
+        "oss_agent": 6,
+        "tech": 6,
+        "iot": 1
+      },
+      "headline": "腾讯开放 770B 旗舰 Hy4 权重，近千个 AI 智能体自建科学社区，ChatGPT Dots 下放到 Plus"
+    },
     {
       "id": "2026-11-20-0600",
       "published_at": "2026-11-20T06:00:00+08:00",
