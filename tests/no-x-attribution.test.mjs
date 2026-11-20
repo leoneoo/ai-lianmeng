@@ -4,7 +4,7 @@ import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
-const banned = [/内容整理自/, /公开帖子/, /skyfeed\.clouds\.wiki/i, /免费中文 AI 新闻站/, /整理 ?X ?上的公开动态/, /每期整理 社交平台上的公开动态/, /免费中文\s*AI\s*资讯站/i];
+const banned = [/内容整理自/, /公开帖子/, /skyfeed\.clouds\.wiki/i, /免费中文 AI 新闻站/, /整理 ?X ?上的公开动态/, /每期整理 社交平台上的公开动态/, /免费中文\s*AI\s*资讯站/i, /每天 06:00、18:00/];
 function walk(dir, out = []) {
   for (const n of readdirSync(dir)) {
     if (n === ".git" || n === "node_modules" || n === "tests") continue;
