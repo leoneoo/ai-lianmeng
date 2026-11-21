@@ -1,0 +1,510 @@
+{
+  "id": "2026-11-21-1800",
+  "published_at": "2026-11-21T18:00:00+08:00",
+  "headline": "Anthropic 数学家称与 Claude 证明黎曼猜想，Thinking Machines 开放笔记本可跑的 Inkling 2 Mini",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Anthropic 数学家称与 Claude 证明黎曼猜想，Lean 证明已独立编译，待最终核查",
+        "summary": "Anthropic 的数学家 Levent Alpöge 11 月 20 日在个人网站发表声明，称他与 Claude 合作找到了黎曼猜想（Riemann Hypothesis）的证明，并推广到广义黎曼猜想（GRH），证明已用定理证明语言 Lean 写成。Scientific American 随后报道，MIT 数学家 Andrew Sutherland 等人已独立编译这份 Lean 证明，Lean 内核复查只用到三条标准公理；Kevin Buzzard 指出，还要等「比对运行」（comparator run）确认代码没有改写定理里符号的含义，也没有利用 Lean 内核的未知漏洞。同一天，另一位数学家 Alessandro Masullo 宣称有一份纯人工的证明，但 Scientific American 援引知情专家说，那份证明还在大幅修改。 黎曼猜想是 1859 年提出的数论核心难题，也是克雷研究所悬赏 100 万美元的千禧年难题之一。如果最终确认，这是 AI 参与解决的最难数学问题，形式化证明也会成为检验 AI 数学成果的标准做法。",
+        "source_url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/",
+        "time": "2026-11-20T22:16:00+08:00",
+        "handle": "@sciam",
+        "impact": "AI 做前沿数学的能力可能已经越过一个标志性门槛，但结论还要等形式化核查做完；做形式化验证和 AI for Science 的团队最值得关注后续。",
+        "points": [
+          "Alpöge 自述与 Claude 合作完成，证明覆盖黎曼猜想和广义黎曼猜想",
+          "Lean 证明已被独立编译，只依赖三条标准公理",
+          "Buzzard：还要等比对运行，确认定理表述没被改写",
+          "alphaXiv 摘要：说明文字很短，读者暂时难以复现论证思路"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "Thinking Machines 开放 Inkling 2 Mini，约 20GB 可在笔记本上跑 Agent",
+        "summary": "Thinking Machines 11 月 20 日开放 Inkling 2 Mini 的权重，Hugging Face 页面标注 Apache 2.0 许可。它是混合专家（MoE）模型，总参数 26.4B、每个 token 激活 3.4B；中间层每个 token 循环跑 3 遍（循环 Transformer，Looped Transformer），算上循环相当于每 token 动用 5.4B 权重。权重大部分以 NVFP4 训练和部署，总占用约 20GB，官方演示在断网的 MacBook Pro 上几分钟写出一个能玩的飞行模拟器。官方称它在 100B 以下开放权重模型里，DeepSWE v1.1（48.2%）和 Vals Index v2.2（46.5%）均排第一；Vals AI 测得它在 CyberBench 上与 Claude Opus 5.5 打平，成本不到四分之一。 循环结构让小模型「多想、少写」，把能做 Agent 任务的模型压进了笔记本内存；官方还一并放出可变循环次数的研究版，供研究者观察循环对思维链可读性和监控的影响。",
+        "source_url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+        "time": "2026-11-21T04:10:00+08:00",
+        "handle": "@thinkymachines",
+        "impact": "想在本机跑编码 Agent、又不想把代码发到云端的开发者，多了一个 32GB 内存级别就能用的开放权重选择，实际效果还要看独立评测。",
+        "points": [
+          "26.4B 总参数 / 3.4B 激活，约 20GB，可本地运行",
+          "官方自报 DeepSWE v1.1 48.2%，100B 以下开放模型第一",
+          "vLLM、SGLang、Ollama 首日支持，也可在 Tinker 上推理和微调",
+          "同时开放可变循环研究模型，循环增加后思维链仍可读"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 公布反蒸馏防护：GPT-6.2 推理过程被套取的成功率从 54% 降到 0.2%",
+        "summary": "OpenAI 发文介绍如何发现和阻断「对抗性蒸馏」（Adversarial Distillation），即未经授权用前沿模型的输出训练另一个模型，复制能力却不带安全防护。防护手段包括对抗测试、模型训练、分类器、API 层限制，以及对有组织套取行为的调查；重点是保护模型内部的推理过程（思维链），并限制加密推理内容跨对话、跨模型复用。OpenAI 给出内部数据：在自动化红队的自适应测试里，套取推理内容的平均成功率从原版 GPT-6 Astra 的 54.0% 降到 GPT-6.2 Astra 的 0.2%。 OpenAI 把蒸馏定性为安全问题，而不只是知识产权问题，尤其担心网络安全、生物这类两用能力被转移到防护更弱的模型上。Mollick 评论说，从 OpenAI 和 Anthropic 模型「轻松蒸馏」的时代结束，可能是近期开放权重模型进展放缓的原因之一，但他也说目前无法确定。",
+        "source_url": "https://openai.com/index/combatting-adversarial-distillation/",
+        "time": "2026-11-21T03:33:00+08:00",
+        "handle": "@OpenAI",
+        "impact": "依赖调用闭源模型生成训练数据的团队会更难拿到推理过程，开放权重模型能不能继续快速追赶，要看接下来几个月的发布。",
+        "points": [
+          "GPT-6.2 Astra 和 Sol 加强了推理过程防套取",
+          "内部测试：攻击成功率 54.0% → 0.2%",
+          "限制加密推理跨对话、跨模型复用",
+          "通过前沿模型论坛（Frontier Model Forum）与同行共享做法"
+        ]
+      },
+      {
+        "title": "NYU 教授与 Anthropic 研究员称借助 AI 证明无外力 Navier-Stokes 爆破",
+        "summary": "同一天，纽约大学的 Tristan Buckmaster 在 Mastodon 发布一份借助 AI 完成的证明，称他和 Alpöge 证明了不加外力情况下 Navier-Stokes 方程也会「爆破」（解出现无穷大速度）。OpenAI 9 月的证明依赖一个精心设计的外力，被不少专家认为钻了题目措辞的空子；这次的结果针对的就是这个漏洞。两人承认文稿还很粗糙，因为担心再被抢先而提前发布，验证证书称稍后放出。 这是 AI 辅助数学在流体力学千禧年难题上的又一个成果，也让 AI 实验室之间的数学成果竞争更公开。",
+        "source_url": "https://www.scientificamerican.com/article/ai-just-solved-the-real-navier-stokes-problem/",
+        "time": "2026-11-21T01:00:00+08:00",
+        "handle": "@sciam",
+        "impact": "在证书公开、同行核查之前，这还只是作者自己的说法；关注 AI 数学的读者可以把它和黎曼猜想的核查进展放在一起看。",
+        "points": [
+          "针对无外力的情形，回应外界对 OpenAI 9 月证明的质疑",
+          "文稿未打磨，验证证书尚未发布",
+          "与黎曼猜想声明出自同一位研究者"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "OpenAI 发布药物化学基准 MedChemBench，GPT-6.2 Astra 得 84.5%",
+        "summary": "OpenAI 推出 MedChemBench，用 99 道题测试模型在药物化学研究中的推理能力，题目来自 117 篇论文和专利、涉及 761 个分子结构，考察四项能力：还原分子结构、用实验证据解释结果、挑选候选化合物、预测数值性质。在 xhigh 推理档位下，GPT-6.2 Astra 拿到 84.5% 的分数，GPT-5.6 Sol 只有 58.2%。OpenAI 也说明，模型还原分子结构的得分超过 95%，但挑选化合物和预测性质只拿到约一半分数。 OpenAI 主动列出了局限：题目来自已发表资料，不能排除模型见过；每题只答一次，不用工具，也不做新实验。这个成绩不代表模型能发现新药。",
+        "source_url": "https://openai.com/index/introducing-medchembench/",
+        "time": "2026-11-21T03:09:00+08:00",
+        "handle": "@OpenAI",
+        "impact": "做 AI 药物研发的团队多了一把公开的尺子，可以看清模型在哪类任务上还靠不住。",
+        "points": [
+          "99 题，来自 117 篇论文和专利",
+          "GPT-6.2 Astra 84.5%，GPT-5.6 Sol 58.2%（xhigh）",
+          "结构还原强，化合物选择和性质预测仍弱"
+        ]
+      },
+      {
+        "title": "ChatGPT Space 向 Plus 用户开放，可与他人协作做网页、幻灯片和网站",
+        "summary": "Greg Brockman 宣布 ChatGPT Space 向 Plus 用户开放。在 Space 里，用户可以和其他人一起，与 ChatGPT 协作制作交互式页面、幻灯片和网站，ChatGPT 还能替用户持续更新这些内容。官方同时称，Space 现在支持在手机上编辑，稳定性也有改进。 协作创作此前是更高档套餐的功能，下放到 Plus 后，ChatGPT 和 Notion、Canva 这类协作工具的重叠会更多。",
+        "source_url": "https://x.com/gdb/status/2123855521996570772",
+        "time": "2026-11-21T03:06:00+08:00",
+        "handle": "@gdb",
+        "impact": "Plus 用户不加钱就能试协作式页面和幻灯片；分享给他人前，留意页面里有没有不该公开的资料。",
+        "points": [
+          "Plus 用户可用",
+          "多人与 ChatGPT 协作做页面、幻灯片和网站",
+          "支持手机端编辑，内容可由 ChatGPT 自动更新"
+        ]
+      },
+      {
+        "title": "Perplexity Computer 进入 Chrome 等浏览器，默认模型或换成 Gemini 4 Neon",
+        "summary": "Perplexity 宣布，旗下 Agent 产品 Perplexity Computer 可以通过浏览器扩展，直接在 Chrome 等 Chromium 浏览器里工作：在侧边栏交代任务，就能看着它在多个标签页和工具之间操作。CEO Aravind Srinivas 另外说，在 Computer 模式下输入一句话就能设置一个「队友」（Teammate），它会沿用过往会话的记忆；他还表示听说 Gemini 4 Neon 比 Opus 5.5 更好用，可能会根据用户留存数据把默认模型换成它。 浏览器 Agent 正从独立应用走进用户每天在用的浏览器，能接触到登录状态下的各种网站。",
+        "source_url": "https://x.com/perplexity_ai/status/2123896048510996827",
+        "time": "2026-11-21T05:47:00+08:00",
+        "handle": "@perplexity_ai",
+        "impact": "浏览器 Agent 用起来更顺手了，但它能看到已登录的网页，涉及网银、邮箱的标签页最好别交给它操作。",
+        "points": [
+          "Perplexity Computer 以扩展形式进入 Chromium 浏览器",
+          "一句话即可设置有记忆的「队友」",
+          "默认模型可能改为 Gemini 4 Neon（CEO 表态，未定）"
+        ]
+      },
+      {
+        "title": "PHP 一次修复 17 个漏洞（7 个严重），各分支需升级到最新补丁版",
+        "summary": "安全公司 depthfirst 11 月 19 日披露 PHP 远程代码执行漏洞 phpAfterShell（CVE-2026-126714），CVSS 4.0 评分 9.2（严重）。PHP 当天发布 8.2.36、8.3.37、8.4.28、8.5.13 和 8.6.0，同时修复另外 16 个漏洞，其中 6 个也是严重级。Cloudflare 称 WAF 已为包括免费版在内的所有用户拦截已知攻击特征，但强调 WAF 只是额外一层防护，完整修复要升级 PHP 并重启所有 PHP 进程；截至 11 月 19 日，未见在野利用的报告。 PHP 仍支撑着大量网站和自建服务，技术细节公开后，攻击尝试通常会很快出现。",
+        "source_url": "https://blog.cloudflare.com/phpaftershell-waf-protection/",
+        "time": "2026-11-21T04:00:00+08:00",
+        "handle": "@Cloudflare",
+        "impact": "自建网站、NAS 或面板用到 PHP 的，尽快升级到上述版本并重启服务；容器镜像也要重新构建。",
+        "points": [
+          "CVE-2026-126714，CVSS 4.0 评分 9.2",
+          "修复版本：8.2.36、8.3.37、8.4.28、8.5.13、8.6.0",
+          "同批共 17 个漏洞，7 个严重",
+          "Cloudflare WAF 已拦截已知攻击特征，但不能替代升级"
+        ]
+      },
+      {
+        "title": "GPT-6.2 Astra 在两个机器人评测上领先",
+        "summary": "Brockman 转发的评测称，GPT-6.2 Astra 在机器人基准 Ember-0 上得分 41.2%，9 月初 GPT-6 Astra 只有 19.6%；它还在 RoboColosseum 的 SO-101 机械臂实测 Elo 榜上排到第一。 两项结果都来自第三方评测方，Brockman 只是转发。",
+        "source_url": "https://x.com/gdb/status/2123876651583111322",
+        "time": "2026-11-21T04:30:00+08:00",
+        "handle": "@gdb",
+        "impact": "通用大模型直接控制机器人的能力提升很快，做具身智能的团队可以把它纳入选型。",
+        "points": [
+          "Ember-0：41.2%（GPT-6 Astra 为 19.6%）",
+          "RoboColosseum SO-101 Elo 第一"
+        ],
+        "tag": "第三方"
+      },
+      {
+        "title": "Hugging Face 自建 CDN，每月分发近 1 EB 模型和数据",
+        "summary": "Hugging Face 联合创始人 Thomas Wolf 透露，公司从今年夏天起运行自建 CDN，每月分发近 1 EB（10 亿 GB），约合每秒 420GB、每秒 8 万个请求。原因是 AI 下载以少量超大文件为主，很多由 GPU 集群批量拉取，传统 CDN 的缓存思路不再适用。 团队还做了一张实时分发地图；按他的说法，相当一部分下载来自少数几个云区域里的 GPU 集群。",
+        "source_url": "https://x.com/Thom_Wolf/status/2123852806213730744",
+        "time": "2026-11-21T02:55:00+08:00",
+        "handle": "@Thom_Wolf",
+        "impact": "开放模型的分发量已大到要专门建网，模型发布当天的下载速度和稳定性有了更好保障。",
+        "points": [
+          "每月近 1 EB，约每秒 420GB",
+          "缓存针对超大文件和发布日的下载高峰设计"
+        ]
+      },
+      {
+        "title": "Brett Adcock 的 Hark 发布浏览器操作模型 Handoff²",
+        "summary": "Figure 创始人 Brett Adcock 称，他一年前创办的 Hark 发布了 Handoff²，主打在浏览器里操作电脑（Computer Use），自称比 Claude Opus 5.5 high 更准、更快；他的理由是 80% 的电脑操作发生在浏览器里。 目前只有他本人的说法，还没有公开的第三方评测。",
+        "source_url": "https://x.com/adcock_brett/status/2123807345545502980",
+        "time": "2026-11-20T23:55:00+08:00",
+        "handle": "@adcock_brett",
+        "impact": "浏览器 Agent 赛道又多一个自研模型，性能说法暂无第三方数据。",
+        "points": [
+          "专注浏览器内的电脑操作",
+          "自称准确率和速度超过 Opus 5.5 high"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "alphaXiv 发布开源自动科研基准，Opus 5.5 得分最高",
+        "summary": "alphaXiv 公布开源基准 OpenResearch Intelligence Index 的首批结果，花约 7400 美元 token 测了 8 个模型的科学知识、后训练能力和文献判断。Opus 5.5 得分最高（61.8%，每题 16.46 美元），GPT-6.1 Sol 54.9%、每题只要 3.83 美元。 在配合 alphaXiv 文献检索工具时，DeepSeek V4.1 Flash 的文献判断得分（47.7%）接近 GPT-6 Astra（48.7%）。",
+        "source_url": "https://x.com/askalphaxiv/status/2123819408577683928",
+        "time": "2026-11-21T00:43:00+08:00",
+        "handle": "@askalphaxiv",
+        "impact": "做 AI 科研助手的团队可以按成本和得分挑模型，不必只看最贵的。",
+        "points": [
+          "Opus 5.5：61.8%，每题 16.46 美元",
+          "GPT-6.1 Sol：54.9%，每题 3.83 美元",
+          "源码稍后开放"
+        ]
+      },
+      {
+        "title": "Runway：10 月以来合并的 PR 几乎全由 Agent 编写",
+        "summary": "Runway 工程博客称，从 10 月起，Runway App Studio 合并的拉取请求（PR）几乎都由 Agent 编写；他们搭了一套系统自动审查改动、在浏览器里测试，遇到高风险决策再交给工程师。 文章重点不是让 Agent 写代码，而是怎样自动审查和测试 Agent 写的代码，以及什么情况下必须由人来拍板。",
+        "source_url": "https://runway.com/news/engineering/building-a-software-factory",
+        "time": "2026-11-21T04:27:00+08:00",
+        "handle": "@runwayml",
+        "impact": "「软件工厂」从概念变成真实团队的日常流程，可作为团队引入编码 Agent 的参考。",
+        "points": [
+          "Agent 写 PR，系统自动审查和浏览器测试",
+          "高风险改动由工程师把关"
+        ]
+      },
+      {
+        "title": "论文：好的 Agent 框架能让模型做比训练时长 64 倍的任务",
+        "summary": "「递归语言模型」（RLM）作者的新论文认为，Agent 框架（Harness）把长任务拆成熟悉的小任务，就能让模型处理比训练时长 2～64 倍的任务。作者用模拟工具调用的合成任务训练出 RLM-27B，在 8 个长上下文基准上平均比同框架下的 Qwen3.8-27B 高 26.9%，推理 token 约少一半。 头雁的解读是：把完整历史塞进提示词容易导致「上下文腐烂」，好的框架应让每次调用都保持在模型熟悉的范围内。",
+        "source_url": "https://www.alphaxiv.org/abs/2611.harness-cg",
+        "time": "2026-11-21T01:30:00+08:00",
+        "handle": "@askalphaxiv",
+        "impact": "做长任务 Agent 的开发者，与其一味堆上下文，不如先改进任务拆分和子调用设计。",
+        "points": [
+          "短任务训练可泛化到长 2～64 倍的任务",
+          "RLM-27B 平均提升 26.9%，token 约省一半"
+        ]
+      },
+      {
+        "title": "Vals AI 上线公开的模型错位事件库",
+        "summary": "评测机构 Vals AI 上线 Vals Misalignment Incidents 页面，公开记录模型作弊、奖励投机（Reward Hacking）等错位行为，先收录自家评测中发现的案例，任何人都可以提交。 此前这类案例散落在各家技术报告和社交媒体上，集中公开后更便于比较不同模型的问题。",
+        "source_url": "https://x.com/ValsAI/status/2123897329011085381",
+        "time": "2026-11-21T05:52:00+08:00",
+        "handle": "@ValsAI",
+        "impact": "给开发者提供了一份可查的模型「不老实」行为清单，选型和设计评测时可以参考。",
+        "points": [
+          "记录作弊、奖励投机等行为",
+          "开放给公众提交"
+        ],
+        "tag": "第三方"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Antigravity 扩容缓存池，同样配额能多干约 20% 的活，并重置一次配额",
+        "summary": "宝玉转述 Google 方面的说法：Antigravity 大幅扩容缓存池，把 Gemini 4 Neon 的缓存命中率提高约 4%，同等配额下能完成的任务量至少多 20%；因为之前配额消耗太快，更新后重置了一次配额。歸藏补充，官方称之后会像 Codex 一样不定期重置。",
+        "source_url": "https://x.com/dotey/status/2124034738931613802",
+        "time": "2026-11-21T14:58:00+08:00",
+        "handle": "@dotey",
+        "impact": "用 Antigravity 跑 Neon 的开发者可以重新评估额度够不够用。",
+        "points": [
+          "缓存命中率提高约 4%，同配额任务量多约 20%",
+          "已重置一次配额，之后会不定期重置"
+        ]
+      },
+      {
+        "title": "复杂代码库实测：Gemini 4 Neon 修 bug 接近 Opus 5.5",
+        "summary": "歸藏在自己的复杂代码库 CodePilot 里，让 Fable 5.2 找出 8 个问题，再分别交给 Opus 5.5 和 Gemini 4 Neon 修复，最后由 Fable 5.2 打分：Opus 5.5 得 9 分，Neon 得 8.5 分。他认为在复杂任务上 Neon 已能平替 Opus 5.5。",
+        "source_url": "https://x.com/op7418/status/2123959051126177841",
+        "time": "2026-11-21T09:57:00+08:00",
+        "handle": "@op7418",
+        "impact": "想降低编码成本的开发者，可以先在自己的项目上让 Neon 和 Opus 跑同一批任务做对比。",
+        "points": [
+          "同一组 8 个问题，交叉打分",
+          "Opus 5.5 9 分，Neon 8.5 分"
+        ]
+      },
+      {
+        "title": "Antigravity 与 Codex 的电脑操作功能对比：Codex 更顺",
+        "summary": "Cheery 把 Antigravity 和 Codex 的电脑操作（Computer Use）功能对比测了一遍。两边都是模拟点击，但 Codex 看屏幕、找按钮、点击输入的衔接明显更快更顺，Antigravity 还不如它丝滑；帖子列了更多踩坑结论。",
+        "source_url": "https://x.com/cheery9998/status/2124068284794642811",
+        "time": "2026-11-21T17:11:00+08:00",
+        "handle": "@cheery9998",
+        "impact": "打算让 Agent 代操作桌面软件的读者，可以先看这份对比再选工具。",
+        "points": [
+          "两者都靠模拟点击操作界面",
+          "动作衔接 Codex 更流畅"
+        ]
+      },
+      {
+        "title": "腾讯团队开源 LoopForge：五个定时 Agent 维护自家仓库",
+        "summary": "meng shao 解读腾讯团队开源的 LoopForge：团队用五个定时运行的 Agent 维护自家代码仓库，把不可逆操作的约束写在提示词第一行，任务队列满了就自动停下。这些做法都是为 Agent 长期无人值守运行设的护栏。",
+        "source_url": "https://x.com/shao__meng/status/2123977246494818582",
+        "time": "2026-11-21T11:10:00+08:00",
+        "handle": "@shao__meng",
+        "impact": "想让 Agent 长期自动维护代码的团队，可以直接借鉴这几条护栏。",
+        "points": [
+          "五个定时 Agent 分工维护仓库",
+          "不可逆操作约束放在提示词第一行",
+          "队列满即停，避免失控"
+        ]
+      },
+      {
+        "title": "字节研究员提出 CSPD：把强化学习专家能力蒸馏成可拼接的软提示",
+        "summary": "头雁介绍字节研究员公开的持续后训练方法 CSPD（可组合软提示蒸馏）：把每个强化学习专家模型的能力分别蒸馏成一段软提示（Soft Prompt），使用时在输入端拼接组合，而不是改动模型权重。这样新增能力时不必改动模型本体。",
+        "source_url": "https://x.com/alacheng/status/2123746209584316659",
+        "time": "2026-11-20T19:52:00+08:00",
+        "handle": "@alacheng",
+        "impact": "给持续加新能力又怕「学新忘旧」的后训练团队提供了一条不改权重的思路。",
+        "points": [
+          "每项能力对应一段软提示",
+          "在输入端组合，不改权重"
+        ]
+      },
+      {
+        "title": "生财 TokenRank 工具榜：Codex 用户最多，WorkBuddy 第二",
+        "summary": "亦仁分享生财有术社群 TokenRank 的工具使用排行：Codex 仍是用的人最多的工具，腾讯 WorkBuddy 已升到第二，Claude Code 有 600 多人稳定在用、Token 消耗排第二，Antigravity 最近连续爬升到第四，Hermes Agent 的用户也比预想的多。榜单来自社群成员自愿接入的 Token 记录，反映的是这一群体的使用习惯。",
+        "source_url": "https://x.com/yiren_ai/status/2123993402698297457",
+        "time": "2026-11-21T12:14:00+08:00",
+        "handle": "@yiren_ai",
+        "impact": "可以看出中文创业圈实际在用哪些 AI 工具，不过样本只来自一个社群。",
+        "points": [
+          "Codex 用户最多，WorkBuddy 第二",
+          "Claude Code Token 消耗第二",
+          "Antigravity 升至第四"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "Pi v1.6.0 接入 GPT-6.2，Sol 成为 OpenAI 系默认模型",
+        "summary": "Mario Zechner 的 Agent 工具包 Pi 发布 v1.6.0：在 openai、azure、openai-codex 三个提供方加入 GPT-6.2 Astra 和 Sol，并把 Sol 设为默认；Azure 提供 105 万上下文，Codex 上 Sol 为 50 万、Astra 为 27.2 万。新增 OpenAI 丢弃推理项时的提示，扩展组件的 render() 有破坏性变更。",
+        "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.6.0",
+        "time": "2026-11-20T19:35:00+08:00",
+        "impact": "用 Pi 的开发者升级后默认就走 GPT-6.2 Sol，写了扩展的要先检查兼容性。",
+        "points": [
+          "GPT-6.2 Sol 成为三个 OpenAI 系提供方的默认模型",
+          "新增推理项被丢弃的提示，便于排查缓存问题",
+          "扩展开发者需注意 render() 的破坏性变更"
+        ]
+      },
+      {
+        "title": "Claude Code 2.1.330：支持企业管理控制台登录，新增内置图表 mod",
+        "summary": "Claude Code 2.1.330 支持登录 Anthropic 企业管理控制台（Enterprise Admin Console）管理的组织，登录后自动套用组织设置和云服务商；新增内置 mod「easel」，按需画图表。社区账号 ClaudeCodeLog 统计本版有 142 处 CLI 改动，并称加入了高风险操作前确认的策略；本版还修复了长对话压缩后卡死数分钟等问题。",
+        "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+        "time": "2026-11-21T06:32:00+08:00",
+        "handle": "@ClaudeCodeLog",
+        "impact": "企业团队统一管理 Claude Code 更方便，个人用户升级后长会话会更稳。",
+        "points": [
+          "企业组织统一登录和配置",
+          "内置 easel 图表 mod，可在 /config 关闭",
+          "修复长对话压缩后卡顿、多进程保存设置丢失"
+        ]
+      },
+      {
+        "title": "OpenCode Console 支持 OIDC 免密钥认证",
+        "summary": "开源编码 Agent OpenCode 宣布，OpenCode Console 支持免密钥认证：在 CI 或任何支持 OIDC 的环境里调用模型，不再需要长期有效的 API 令牌。CI 任务改用短期身份凭证后，即使日志或配置泄露，也不会留下一把长期可用的钥匙。",
+        "source_url": "https://x.com/opencode/status/2124037654639468759",
+        "time": "2026-11-21T15:10:00+08:00",
+        "handle": "@opencode",
+        "impact": "在 CI 里跑编码 Agent 的团队可以去掉长期密钥，减少泄露风险。",
+        "points": [
+          "CI 中可用 OIDC 调用模型",
+          "不用再保存长期 API 令牌"
+        ]
+      },
+      {
+        "title": "Cline v4.1.27：新用户默认用免费模型，读文件不再截断到 8k 字符",
+        "summary": "Cline v4.1.27 让没有保存模型的新用户默认从第一个免费模型开始，不再默认 Claude Sonnet 5.5；read_files 的结果不再截断到 8k 字符，最多可读约 2000 行或 4.8 万字符。模型目录新增 94 个来自 models.dev 的提供方，MCP 工具会标注「只读」。",
+        "source_url": "https://github.com/cline/cline/releases/tag/v4.1.27",
+        "time": "2026-11-21T14:05:00+08:00",
+        "impact": "新用户上手不会一开始就产生付费调用，读大文件也更完整。",
+        "points": [
+          "新用户默认免费模型",
+          "读文件上限提高到约 4.8 万字符",
+          "MCP 只读工具有标识"
+        ]
+      },
+      {
+        "title": "Hermes Agent 插件黑客松公布结果：近千人投稿，Agent 先给每份作品打分",
+        "summary": "Nous Research 公布 Hermes Agent 插件黑客松获奖名单：近 1000 名社区成员投稿，先由 Agent 给每份作品打分，再由五位社区评委从决赛作品中选出前 10。Teknium 同日在 GitHub 征集对 Hermes「主动性」功能的意见。",
+        "source_url": "https://x.com/NousResearch/status/2123882430620733742",
+        "time": "2026-11-21T04:53:00+08:00",
+        "handle": "@NousResearch",
+        "impact": "想给 Hermes 找现成插件的用户，可以先从获奖作品里挑。",
+        "points": [
+          "近 1000 份投稿，前 10 获奖",
+          "Agent 初评 + 人工评委终评",
+          "主动性功能 PR 正在征求意见"
+        ]
+      },
+      {
+        "title": "Firecrawl：给 Agent 用的网页抓取与数据接入工具，今日涨星约 1241",
+        "summary": "Firecrawl 登上 GitHub 今日热榜，当天新增约 1241 星。它把搜索、网页抓取和 550 多个数据源的接入封装成一个 API，供 Agent 获取外部知识。",
+        "source_url": "https://github.com/firecrawl/firecrawl",
+        "time": "2026-11-21T18:07:00+08:00",
+        "impact": "做研究型 Agent 的开发者可以少写一层爬虫和数据接入代码。",
+        "points": [
+          "搜索、抓取、数据源接入合一",
+          "今日新增约 1241 星"
+        ]
+      },
+      {
+        "title": "diagram-design：让编码 Agent 画 45 种图表的 Skill，今日涨星约 636",
+        "summary": "diagram-design 是给 Claude Code、Codex、GitHub Copilot、Cursor、Pi 等编码 Agent 用的图表设计规范，支持 45 种图表类型，输出自包含的 HTML 加 SVG，今日新增约 636 星。它规定了统一的视觉风格（例如不用阴影），让 Agent 画出来的图更整齐。",
+        "source_url": "https://github.com/cathrynlavery/diagram-design",
+        "time": "2026-11-21T18:07:00+08:00",
+        "impact": "需要让 Agent 产出示意图和流程图的人，可以直接装上试试。",
+        "points": [
+          "45 种图表类型",
+          "输出自包含的 HTML + SVG",
+          "兼容多款编码 Agent"
+        ]
+      },
+      {
+        "title": "OpenSRE：处理 CI/CD 稳定性问题的开源 Agent，今日涨星约 466",
+        "summary": "OpenSRE 是一个面向 CI/CD 可靠性的开源 Agent，用来排查和处理构建、部署流水线的故障，今日在 GitHub Python 热榜新增约 466 星。它是今天 Python 热榜上少数面向运维场景的 Agent 项目。",
+        "source_url": "https://github.com/Tracer-Cloud/opensre",
+        "time": "2026-11-21T18:07:00+08:00",
+        "impact": "被流水线故障拖累的团队，可以把它当作值班排障的辅助。",
+        "points": [
+          "专注 CI/CD 流水线可靠性",
+          "今日新增约 466 星"
+        ]
+      },
+      {
+        "title": "MiniMind：两小时从零训练 64M 参数小模型，今日涨星约 847",
+        "summary": "MiniMind 是一个教学向开源项目，号称两小时就能从零训练出 6400 万参数的语言模型，覆盖从预训练到微调的完整流程，今日新增约 847 星。项目简介中英双语，面向想入门的开发者。",
+        "source_url": "https://github.com/jingyaogong/minimind",
+        "time": "2026-11-21T18:07:00+08:00",
+        "impact": "想亲手弄懂大模型训练流程的开发者，用一张消费级显卡就能跑通。",
+        "points": [
+          "64M 参数，约两小时训完",
+          "覆盖训练全流程，适合学习"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Signal iPhone 版默认禁止截图，防止 Siri AI 读取聊天",
+        "summary": "Signal 更新 iPhone 版，新增默认开启的「Block Siri AI」开关，阻止 Siri AI 扫描聊天内容，同时禁止在应用内和多任务界面截图。Signal 对路透社表示，苹果目前没有给开发者更好的工具保护应用内容不被 Siri AI 和第三方 AI Agent 读取。需要截图的用户可在隐私设置里关闭这个开关；Mac 版暂无类似功能。",
+        "source_url": "https://9to5mac.com/2026/11/20/signal-now-blocks-screenshots-on-iphone-to-stop-siri-ai-from-seeing-chats/",
+        "time": "2026-11-21T00:29:00+08:00",
+        "handle": "@9to5mac",
+        "impact": "在意隐私的 iPhone 用户可以保持默认；系统级 AI 能读多少应用内容，正成为新的隐私问题。",
+        "points": [
+          "新开关默认开启，同时禁止截图",
+          "可在 Signal 隐私设置中关闭",
+          "Mac 版暂无对应功能"
+        ]
+      },
+      {
+        "title": "微软 To Do 将于 2027 年 6 月 30 日停用，个人用户没有替代品",
+        "summary": "微软宣布 To Do 应用将于 2027 年 6 月 30 日停用，个人任务管理并入 Planner。但 Planner 只面向企业和商业用户，现有 To Do 任务也不会迁移进新的私人计划，使用个人微软账号的用户需要另找应用。To Do 的前身是微软 2015 年收购的 Wunderlist。",
+        "source_url": "https://9to5google.com/2026/11/20/microsoft-to-do-shut-down-wunderlist/",
+        "time": "2026-11-20T23:40:00+08:00",
+        "handle": "@9to5Google",
+        "impact": "用 To Do 管理待办的个人用户，最好提前导出任务、挑好替代应用。",
+        "points": [
+          "2027 年 6 月 30 日停用",
+          "任务不会自动迁移到 Planner",
+          "个人账号用户需改用其他应用"
+        ]
+      },
+      {
+        "title": "Gemini 应用可以生成 GIF，部分国家免费用户也能用",
+        "summary": "Gemini 应用上线 GIF 生成，用最新视频模型 Gemini Omni 1.2 Flash 制作循环动图和表情包。据 Android Authority，Google AI 订阅用户可用，美国、日本、韩国、澳大利亚、加拿大、英国、德国和法国的免费用户也能用。",
+        "source_url": "https://x.com/GeminiApp/status/2123813017855103449",
+        "time": "2026-11-21T00:17:00+08:00",
+        "handle": "@GeminiApp",
+        "impact": "普通用户做表情包和动图多了一个免费工具，也说明视频模型开始用在日常小功能上。",
+        "points": [
+          "基于 Gemini Omni 1.2 Flash 视频模型",
+          "8 个国家的免费用户可用"
+        ]
+      },
+      {
+        "title": "Google AI Plus 和年度 Pro 黑五最高五折，截止 11 月 26 日",
+        "summary": "Google 开始黑色星期五促销：即日起至 11 月 26 日，Google AI Plus 和年度 Pro 计划最高五折，先向现有 AI 和存储订阅用户开放，具体折扣取决于当前套餐。有用户反馈自己的年付折扣只有 16%，Ultra 不在活动范围内。",
+        "source_url": "https://x.com/dotey/status/2123856308034285930",
+        "time": "2026-11-21T03:09:00+08:00",
+        "handle": "@dotey",
+        "impact": "想订 Gemini 的用户先看清自己账户里的实际折扣再付款，年付前想好是否长期使用。",
+        "points": [
+          "截止 11 月 26 日",
+          "最高五折，实际折扣因套餐而异",
+          "先面向现有订阅用户"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Nest 应用明年 1 月停用，音箱上的 Google 助理 8 月由 Gemini 接替",
+        "summary": "Google 宣布 Nest 应用（安卓、iOS 和网页版）将于 2027 年 1 月 25 日停止工作，Nest 恒温器、摄像头、门铃、烟雾报警器和门锁会自动转到 Google Home 应用，设备本身不停止支持；home.nest.com 上的自定义视频片段不会迁移，需要手动下载。音箱和智能屏上的 Google 助理将于 2027 年 8 月 2 日停用，由 Gemini for Home 取代。Nest Aware 一代订阅会自动转为 Google Home Premium，不额外收费。",
+        "source_url": "https://9to5google.com/2026/11/20/nest-app-google-assistant/",
+        "time": "2026-11-21T02:00:00+08:00",
+        "handle": "@9to5Google",
+        "impact": "家里有 Nest 设备的用户要提前下载视频片段、熟悉 Google Home；用 Google 音箱做自动化的，要检查语音指令在 Gemini 下是否照常工作。",
+        "points": [
+          "Nest 应用 2027-01-25 停用，设备转入 Google Home",
+          "自定义视频片段需手动下载",
+          "音箱和智能屏上的 Google 助理 2027-08-02 停用"
+        ]
+      },
+      {
+        "title": "群晖发布 NGINX2Root 漏洞补丁，覆盖 DSM 7.4 和 7.3",
+        "summary": "群晖宣布已为 DSM 7.4 和 DSM 7.3 发布 NGINX2Root 漏洞的安全更新，其他产品和部分已停止支持的 DSM 版本的更新将在后续发布，建议用户尽快安装。具体版本号以群晖安全公告为准。",
+        "source_url": "https://x.com/Synology/status/2123832136822075670",
+        "time": "2026-11-21T01:33:00+08:00",
+        "handle": "@Synology",
+        "impact": "用群晖 NAS 的读者今天就该检查 DSM 更新；暴露在公网的设备尤其要先装补丁。",
+        "points": [
+          "DSM 7.4、7.3 已有补丁",
+          "其他产品和部分旧版 DSM 后续更新"
+        ]
+      },
+      {
+        "title": "iOS 27 新增 iPhone Handoff，两台 iPhone 可共用一个号码",
+        "summary": "iOS 27 的 iPhone Handoff 功能可以让两台 iPhone 共用同一个号码：一台设为主机，另一台为副机，解锁哪台，号码就自动切到哪台，同一时间只在一台上生效。呼叫转移、来电显示等运营商服务只能在主机上管理，目前支持的运营商有限，苹果称会扩大支持范围。",
+        "source_url": "https://9to5mac.com/2026/11/20/ios-27-lets-you-use-two-iphones-with-the-same-phone-number/",
+        "time": "2026-11-21T07:06:00+08:00",
+        "handle": "@9to5mac",
+        "impact": "同时用两台 iPhone 的人终于不用来回换卡，但要先确认自己的运营商是否支持、是否收费。",
+        "points": [
+          "号码随解锁的设备自动切换",
+          "同一时间只在一台上生效",
+          "运营商支持有限"
+        ]
+      },
+      {
+        "title": "Tailscale 介绍 PAM 与 VPN 配合：不传密码就能登录数据库和服务器",
+        "summary": "Tailscale 介绍旗下 VPN 与特权访问管理产品 Tailscale PAM 的配合方式：VPN 负责把设备连起来，PAM 让用户不用互相传递密码就能登录数据库和服务器，并记录谁做了什么操作。这类功能主要面向团队，个人用户用 Tailscale SSH 也能实现类似的免密登录。",
+        "source_url": "https://x.com/Tailscale/status/2123795831878746308",
+        "time": "2026-11-20T23:09:00+08:00",
+        "handle": "@Tailscale",
+        "impact": "用 Tailscale 管家庭或团队服务器的人，可以考虑用它替代到处分享的密码。",
+        "points": [
+          "免共享密码访问数据库和服务器",
+          "保留操作审计记录"
+        ]
+      },
+      {
+        "title": "IFTTT 推出 AI Agent 网页监控小程序：页面有新内容就通知",
+        "summary": "IFTTT 上线一个由 AI Agent 驱动的小程序：粘贴网页链接，Agent 会盯着页面，出现新内容（例如招聘岗位、优惠或博客更新）就推送通知。对于不提供 RSS 的网站，这相当于多了一种订阅更新的办法。",
+        "source_url": "https://ifttt.com/applets/bRsf2NAF-get-notified-when-ai-agent-finds-a-new-item-on-a-page",
+        "time": "2026-11-20T23:11:00+08:00",
+        "handle": "@IFTTT",
+        "impact": "没有 RSS 的网页也能被订阅了，喜欢自动化的读者可以拿它补上 RSS 的空缺。",
+        "points": [
+          "粘贴链接即可监控",
+          "适用于招聘、优惠和博客页面"
+        ]
+      }
+    ]
+  }
+}

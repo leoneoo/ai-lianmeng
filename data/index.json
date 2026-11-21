@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T18:21:30+08:00",
+  "updated_at": "2026-11-21T18:23:34+08:00",
   "editions": [
+    {
+      "id": "2026-11-21-1800",
+      "published_at": "2026-11-21T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-21-1800.json",
+      "counts": {
+        "x_daily": 15,
+        "zh_topics": 6,
+        "en_topics": 0,
+        "oss_agent": 9,
+        "tech": 4,
+        "iot": 5
+      },
+      "headline": "Anthropic 数学家称与 Claude 证明黎曼猜想，Thinking Machines 开放笔记本可跑的 Inkling 2 Mini"
+    },
     {
       "id": "2026-11-20-1800",
       "published_at": "2026-11-20T18:00:00+08:00",
