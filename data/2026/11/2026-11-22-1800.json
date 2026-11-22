@@ -1,0 +1,269 @@
+{
+  "id": "2026-11-22-1800",
+  "published_at": "2026-11-22T18:00:00+08:00",
+  "headline": "多家 AI 推理服务被测出泄露提示词，Lean 社区认证 Claude 参与的黎曼猜想证明",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "多家 AI 推理服务被测出泄露提示词：OpenRouter 下架 3 家提供方，Together AI 披露泄露事件",
+        "summary": "安全公司 Dragos 的 HD Moore 本周公布一项「金丝雀」测试：他把近 200 万条带唯一测试密钥、私密链接的提示词发给各家 AI 推理服务，再观察这些秘密在哪里被使用。据 Ars Technica 报道，结果发现至少 3 家托管商被攻击者入侵、请求被整批复制；有转售商自己开启日志记录提示词；还有服务商无视「零数据保留」（ZDR）设置去抓取提示里的链接。OpenRouter 随后给客户发邮件，称经 MiniMax 官方及 AtlasCloud、Novita、StreamLake 转发到 MiniMax 的请求里，测试链接在 40～130 小时后被第三方访问；11 月 22 日它又发公告，已下架 3 家提供方、把 125 个端点移出 ZDR 资格并通知受影响客户。Together AI 同日披露另一起事件：6～7 月的部分提示样本存放在私有 Hugging Face 仓库，因 AI 编程 Agent 把访问凭据提交进公开代码仓库而被下载。 很多应用通过「AI 路由」按价格自动挑选推理服务，提示词每经过一跳都会被解密、可能被记录。这次测试第一次用可追踪的证据说明，ZDR 标签和隐私承诺并不总被执行，便宜的转售渠道风险更高。",
+        "source_url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+        "time": "2026-11-22T07:27:18+08:00",
+        "impact": "通过 OpenRouter 等路由调用开源模型的开发者，应检查是否收到通知、手动锁定可信提供方，提示词里出现过的密钥一律轮换；以后也别把密钥放进提示词。",
+        "points": [
+          "OpenRouter：下架 3 家提供方，125 个端点取消 ZDR 资格，并将把这类测试改成常态化检查",
+          "MiniMax 相关请求被访问的说法来自 OpenRouter 邮件；邮件称截至发信时 MiniMax 尚未给出说明",
+          "Together：泄露源头是 AI 编程 Agent 误提交的凭据，现已把 ZDR 设为新账号默认；HD Moore 称 7 月中旬就已报告给 Together",
+          "研究者建议：敏感业务尽量直连一线厂商或自建，不要用默认的提供方池"
+        ]
+      },
+      {
+        "title": "Lean 与 Mathlib 社区发联合声明：认证 Claude 参与的黎曼猜想证明正确",
+        "summary": "上期提到的黎曼猜想证明有了关键进展。11 月 21 日，Lean 和 Mathlib 社区发布联合声明（Lean FRO 与 Mathlib Initiative 背书），称「对证明正确有充分信心」，并认证黎曼猜想的陈述和证明都正确。依据有四条：陈述来自 Mathlib 里经专家审过的版本；几十人独立编译这份约 1700 万行的 Lean 库，得到相同的导出文件；用 comparator 和 con-leche 两个独立工具确认，证明的定理与 Mathlib 的黎曼猜想陈述完全一致；导出的证明经 Lean 官方内核和多个第三方检查器复核。按 OfficeChai 的报道，这份声明只认证了普通黎曼猜想，没有提到广义黎曼猜想（GRH）。 上期还在等的「比对运行」已经完成，形式化验证这一关基本走完。接下来是数学界理解证明里的新思路，声明也说期待这方面的工作。",
+        "source_url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+        "time": "2026-11-21T23:12:54+08:00",
+        "handle": "@leanprover",
+        "impact": "AI 参与解决千禧年难题已经过形式化认证，做 AI for Science 和形式化验证的团队会更重视 Lean；人类能否读懂这 1700 万行证明，是下一个问题。",
+        "points": [
+          "两个独立比对工具确认定理表述没被改写",
+          "多个检查器（含带形式化正确性证明的 con-leche、con-ron）复核",
+          "认证范围是普通黎曼猜想，广义版本未在声明中提及"
+        ]
+      },
+      {
+        "title": "特斯拉开始推送 FSD v15：端到端驾驶网络全面升级，关键干预表现提升 25 倍（自报）",
+        "summary": "特斯拉 11 月 21 日开始向首批早期体验用户推送 FSD（Supervised）v15.0.1（软件版本 2026.38.6.11，HW4 车型）；据 Teslarati，马斯克称 12 月大范围推送。官方说法是：视觉编码器与 Robotaxi、Optimus 共用，用数百万条网络视频训练，关键干预率改善 25 倍（特斯拉自报，未公布具体数值）；新增「Tesla Reality View」，由同一个端到端驾驶模型实时生成车辆周围的画面，用箭头和图钉显示它打算怎么转弯、停在哪；行程起点和终点的导航改由车队路线偏好端到端学习。另外还能识别测速摄像头自动减速、更好地识别路牌、小动物、坑洼和积水。 Elluswamy 称新的可视化比旧版更省算力；马斯克另贴出一段实时 AI 生成画面，称只用了半颗 AI4 加速器。驾驶模型同时承担生成画面、表达意图，是端到端路线的新形态。",
+        "source_url": "https://x.com/Tesla/status/2124222447855743019",
+        "time": "2026-11-22T03:24:32+08:00",
+        "handle": "@Tesla",
+        "impact": "关注自动驾驶和世界模型的读者可以把它看作「驾驶模型兼做实时生成」的一次大规模部署；实际安全水平还要看第三方数据。",
+        "points": [
+          "视觉编码器在 FSD、Robotaxi、Optimus 间共用",
+          "生成式可视化取代原来的显式感知信号",
+          "25 倍为特斯拉自报指标，外界无法核实"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "METR：前沿模型时间跨度约每 3.6 个月翻倍，测量越来越难；Suleyman 呼吁立法支持评估",
+        "summary": "METR 本周发布季度能力报告：把旧任务集 TH1.1 和更难的新任务集 TH2 合在一起，模型能完成的任务时间跨度约每 3.6 个月翻一倍（95% 置信区间 2.08～4.94 个月）；在编码和优化任务上，模型通常追平或超过熟练人类，但在缺少清晰反馈、需要判断的任务上不如专家。报告还指出，越贴近真实的评测越贵，任务「生命周期成本」翻倍大致相当于时间跨度减半。微软 AI CEO Mustafa Suleyman 转发时说，评估科学应该得到前沿级的资金，这很可能很快需要写进法律。",
+        "source_url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/",
+        "time": "2026-11-22T07:49:52+08:00",
+        "handle": "@mustafasuleyman",
+        "impact": "做 AI 治理和评测的团队会面临更大的资金与方法压力；能力增长速度的判断，也会影响各家对 AI 研发加速的预期。",
+        "points": [
+          "TH1.1+TH2 合并后时间跨度约每 3.6 个月翻倍（95% 置信区间 2.08～4.94 个月）",
+          "编码和优化任务上模型通常追平或超过熟练人类",
+          "缺少清晰反馈的判断类任务，模型仍不如专家",
+          "评测越真实越贵，生命周期成本翻倍约等于时间跨度减半"
+        ]
+      },
+      {
+        "title": "多分支 Transformer：并行分支共享 KV 缓存，解码吞吐最高提升 51.4%",
+        "summary": "alphaXiv 推荐的论文提出 Multi-Branch Transformer，让多个独立训练的 Transformer 块并行处理同一输入再合并，并用 Joint-KV 共享 KV 缓存；在 0.8B～2.1B 的 MoE 模型上，作者估计常规结构要多花至多 1.26 倍训练算力才能达到同样损失，KV 缓存最多省 34%（单张 H200 测试）。",
+        "source_url": "https://x.com/askalphaxiv/status/2124379348031426749",
+        "time": "2026-11-22T13:48:00+08:00",
+        "handle": "@askalphaxiv",
+        "impact": "给「不加深不加宽也能扩展」提供了一个新方向，效果还要看更大规模验证。",
+        "points": [
+          "多个独立训练的 Transformer 块并行处理同一输入",
+          "Joint-KV 让各分支共享 KV 缓存",
+          "KV 缓存最多省 34%，解码吞吐最多提升 51.4%"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "LeCun 参与指导的 JEPA 论文：世界模型兼顾「地图」与「物体」",
+        "summary": "论文指出 JEPA 世界模型学到平滑地图时容易丢掉要交互的物体，提出 Slow SVReg 正则方法；在第一人称迷宫导航中规划成功率从 21.2% 升到 92.9%，PushT 操作任务从 44.0% 升到 87.3%（作者自报）。",
+        "source_url": "https://x.com/askalphaxiv/status/2124121398268559382",
+        "time": "2026-11-21T20:43:00+08:00",
+        "handle": "@askalphaxiv",
+        "impact": "做机器人和世界模型的研究者可以关注这种在表示里同时保留空间结构与物体细节的做法。",
+        "points": [
+          "JEPA 学平滑地图时容易丢掉要交互的物体",
+          "Slow SVReg 同时保留空间结构和慢变物体细节",
+          "迷宫导航成功率 21.2%→92.9%，PushT 44.0%→87.3%"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Cerebras 提出并行草稿解码 DNeo，比 DFlash-2 快 20.7%",
+        "summary": "DNeo 是一种推测解码方法，并行生成多个草稿 token，用混合特征注意力保留主模型的内部信息，并记住被拒绝的草稿；在单张 H100 上用 Qwen3-4B 测试，六个基准上最高比 DFlash-2 快 20.7%，输出分布不变（作者自报）。",
+        "source_url": "https://x.com/askalphaxiv/status/2124333546156519673",
+        "time": "2026-11-22T10:46:00+08:00",
+        "handle": "@askalphaxiv",
+        "impact": "做推理加速的团队多了一个可比较的草稿模型方案。",
+        "points": [
+          "并行生成多个草稿 token",
+          "混合特征注意力保留主模型内部信息，并记住被拒草稿",
+          "Qwen3-4B 单卡 H100 最高比 DFlash-2 快 20.7%"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "微软 agent-framework 的 PyPI 包被投毒，1.26.1、1.26.2 会偷凭据",
+        "summary": "雪踏乌云提醒：11 月 17 日，微软 Agent Framework 的 PyPI 包 agent-framework 出现两个恶意版本 1.26.1 和 1.26.2，装上后只要 Python 启动就会收集云账号、代码平台等登录凭据，当天已被下架。GitHub 安全公告确认，最后一个干净版本是 1.26.0，装过这两个版本的环境要视为已暴露，并轮换能接触到的全部凭据（含 CI 和 GitHub Actions 密钥）。",
+        "source_url": "https://x.com/Pluvio9yte/status/2124164101488423062",
+        "time": "2026-11-21T23:32:41+08:00",
+        "handle": "@Pluvio9yte",
+        "impact": "用 Python 做 Agent 开发的读者，请检查依赖锁文件和 CI 镜像里有没有这两个版本。",
+        "points": [
+          "11 月 17 日发布的 1.26.1、1.26.2 含凭据窃取代码，已下架",
+          "最后一个干净版本是 1.26.0",
+          "装过的环境要轮换全部可接触的凭据，含 CI 与 GitHub Actions 密钥"
+        ]
+      },
+      {
+        "title": "路透实测：Meta 的 Muse 能借系统权限读到 Signal 消息",
+        "summary": "Cheery 解读路透 11 月 18 日的调查：一名 Meta 员工发现 Muse 提醒她回复妹妹的 Signal 消息。路透与 Signal、AI Now 研究所复现后发现，Muse 没有破解加密，而是在 Android 上用「通知读取权限」看通知里的文字，在 macOS 上用辅助功能和截屏权限读屏幕；同样的请求在 iPhone 上被拦下。Meta 称这是孤立事件，Agent 只能通过用户明确授予的权限访问其他应用。",
+        "source_url": "https://x.com/cheery9998/status/2124382440361984104",
+        "time": "2026-11-22T14:00:17+08:00",
+        "handle": "@cheery9998",
+        "impact": "装个人 Agent 时，「没连接某个应用」不等于它读不到，要去系统设置里收回通知读取、辅助功能和屏幕录制权限。",
+        "points": [
+          "Muse 没有破解 Signal 加密，而是读通知和屏幕",
+          "Android 用通知读取权限，macOS 用辅助功能和截屏权限",
+          "同样请求在 iPhone 上被拦；Meta 称是孤立事件"
+        ]
+      },
+      {
+        "title": "MBZUAI 与 UCL 拆解 Claude Code：一条主循环、七种权限模式、五层上下文压缩",
+        "summary": "meng shao 解读技术报告「Dive into Claude Code」：团队分析了 Claude Code v2.1.88 的 1884 个文件、51.2 万行 TypeScript。核心 queryLoop() 负责组装上下文、调用模型、检查权限和执行工具；权限有七种模式，拒绝规则优先于允许规则；上下文按预算削减、片段裁剪、微压缩、上下文折叠、自动压缩五层逐步收缩；子 Agent 在各自上下文里运行，必要时用 Git worktree 隔离。报告强调，写在 CLAUDE.md 里的文字指导不能代替权限机制。",
+        "source_url": "https://x.com/shao__meng/status/2124369057805926670",
+        "time": "2026-11-22T13:07:06+08:00",
+        "handle": "@shao__meng",
+        "impact": "自己搭 Agent 框架的团队，可以直接参考它把「提示约束」和「权限拦截」分开设计。",
+        "points": [
+          "分析 Claude Code v2.1.88 的 1884 个文件、51.2 万行 TypeScript",
+          "七种权限模式，拒绝规则优先",
+          "五层上下文压缩，子 Agent 用独立上下文和 Git worktree"
+        ]
+      },
+      {
+        "title": "mobile-agent-testers：20 个 Claude Code Agent 在 20 台模拟手机上测 App",
+        "summary": "GitHubDaily 推荐开源项目 mobile-agent-testers：每个测试员是一个带 iOS 或安卓模拟器的 Claude Code Agent，跑在 GitHub Actions 上，并扮演不同用户（如瑞典语加最大字号的 iPhone SE、字体放大到 200% 的 Pixel 7），点完写出带截图的问题报告。作者用 LocalSend 实测：20 台设备、14 种语言，69 分钟找出 46 个不同问题，模型费用共 4.62 美元（自报）。支持 Flutter、React Native 和原生安卓、iOS。",
+        "source_url": "https://x.com/GitHub_Daily/status/2124442800930591106",
+        "time": "2026-11-22T18:00:08+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "小团队可以用很低的成本补上多机型、多语言的适配测试。",
+        "points": [
+          "每个测试员是带模拟器的 Claude Code Agent，跑在 GitHub Actions",
+          "模拟不同机型、语言和字号的用户",
+          "LocalSend 实测：69 分钟找出 46 个问题，费用 4.62 美元"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "一年半做 Agent 的经验：循环很简单，难在工具设计和上下文管理",
+        "summary": "meng shao 整理 Parth Sharma 的长文：Agent 的运行框架本质上就是一个 while 循环，模型提出工具调用、系统执行、结果追加回历史，直到不再调用工具；真正决定质量的是工具返回多少信息、哪些值得留在上下文里，以及后端是否可靠。作者推荐先读 pydantic-ai、Pi 这类流程清楚的实现来理解各种辅助逻辑。",
+        "source_url": "https://x.com/shao__meng/status/2124331898772361395",
+        "time": "2026-11-22T10:39:27+08:00",
+        "handle": "@shao__meng",
+        "impact": "刚开始写 Agent 的开发者，可以先把精力放在工具输出和上下文裁剪上，而不是堆框架。",
+        "points": [
+          "Agent 运行框架本质是一个 while 循环",
+          "质量取决于工具输出、上下文取舍和后端可靠性",
+          "建议先读 pydantic-ai、Pi 这类简洁实现"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "DeepSeek Harness 发布 dsh-v0.2.3-alpha.1 预发布版：插件市场支持私有仓库，新增飞书、钉钉等连接器",
+        "summary": "DeepSeek 的开源 Agent 工作台 DeepSeek Harness 发布 alpha 预发布版：插件市场可以直接添加 Git 仓库（含私有仓库）作为来源；MCP 支持 OAuth 授权和凭据自动刷新；新增 Linear、Notion、腾讯文档、飞书、企业微信、腾讯会议、钉钉等可选连接器；Computer Use 可通过 cua-mcp 以 MCP 服务器形式对外提供，Windows 版为实验性支持；同时移除了 Python 版 PTC 支持，部分插件接口有破坏性变更。",
+        "source_url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.3-alpha.1",
+        "time": "2026-11-22T11:19:36+08:00",
+        "impact": "国内办公场景的用户可以把 Agent 接进飞书和钉钉，但这是预发布版，正式使用前要先看升级指南。",
+        "points": [
+          "插件市场支持 Git 仓库和私有仓库",
+          "MCP 支持 OAuth 与凭据自动刷新，新增飞书、钉钉、企业微信等连接器",
+          "Computer Use 可经 cua-mcp 对外提供，Windows 实验性支持",
+          "预发布版，含破坏性变更"
+        ],
+        "tag": "预发布"
+      },
+      {
+        "title": "phone-harness：让 Claude Code、Codex 直接操作你的真手机",
+        "summary": "今天 GitHub Python 热榜新增约 125 星（总约 5.5k，MIT 许可）。它让编程 Agent 在不越狱、不装任何手机端软件的情况下滚动、点击、输入和读取手机屏幕：iPhone 通过 Mac 上的「iPhone 镜像」窗口操作，Android 通过 adb 连接，也提供托管的云手机。",
+        "source_url": "https://github.com/phone-harness/phone-harness",
+        "time": "2026-11-22T18:05:00+08:00",
+        "impact": "想让 Agent 帮忙跑手机 App 流程的开发者多了一个现成工具，但给 Agent 手机操作权限前要想清楚支付、验证码类应用的风险。",
+        "points": [
+          "今日约新增 125 星，总约 5.5k，MIT 许可",
+          "iPhone 走 Mac 的 iPhone 镜像，Android 走 adb",
+          "手机端无需安装任何软件、无需越狱"
+        ]
+      },
+      {
+        "title": "pi-H3：基于 MiniMax H3 的提速版视频模型，15 秒视频约 1 分钟生成",
+        "summary": "Gorden Sun 推荐 Hugging Face 上的 pi-H3（基础模型为 MiniMax-H3），称它可能是目前最快的 H3 版本：在 Hugging Face 的 Demo 上生成 15 秒视频约需 1 分钟，整体效果尚可，少量帧有逻辑问题（博主实测）。",
+        "source_url": "https://huggingface.co/Lakonik/pi-H3",
+        "time": "2026-11-22T17:05:35+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "想自己跑开源视频生成的用户，可以先用在线 Demo 试效果再决定是否本地部署。",
+        "points": [
+          "基础模型为 MiniMax-H3",
+          "Demo 上 15 秒视频约 1 分钟生成",
+          "少量帧有逻辑问题"
+        ],
+        "tag": "实测"
+      },
+      {
+        "title": "llms.txt 被 Google Antigravity 采用，作者呼吁产品方给 Agent 写说明",
+        "summary": "llms.txt 协议的提出者 Jeremy Howard 发现 Google Antigravity 和 Gemini 4 Neon 已在使用 llms.txt。这是放在网站根目录、专门写给 Agent 看的说明文件，他建议有 Agent 使用说明的产品把它放进 llms.txt 并从首页链接。",
+        "source_url": "https://x.com/jeremyphoward/status/2124431431699193996",
+        "time": "2026-11-22T17:14:58+08:00",
+        "handle": "@jeremyphoward",
+        "impact": "做开发者产品和文档站的团队，加一个 llms.txt 成本很低，能让编程 Agent 更准确地使用你的产品。",
+        "points": [
+          "Google Antigravity 与 Gemini 4 Neon 已使用 llms.txt",
+          "llms.txt 放在网站根目录，专门写给 Agent",
+          "作者建议从首页链接 llms.txt"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "苹果 Siri AI 延迟上线和解：美国用户每台最多赔 95 美元，12 月 21 日截止申报",
+        "summary": "苹果今年 5 月同意支付 2.5 亿美元，和解因个性化 Siri 延迟上线引发的虚假宣传集体诉讼（苹果否认指控）。符合条件的是 2024 年 6 月 10 日至 2025 年 3 月 29 日在美国购买 iPhone 15 Pro 系列或 iPhone 16 系列的用户；每台基础赔付 25 美元，按申报人数比例调整，最高 95 美元，原告律师按目前申报情况估计每台至少 61 美元。申报截止 12 月 21 日，终审听证在 2027 年 2 月 24 日。",
+        "source_url": "https://www.macrumors.com/2026/11/21/apple-siri-ai-settlement-payment-amount/",
+        "time": "2026-11-22T01:08:50+08:00",
+        "handle": "@MacRumors",
+        "impact": "只适用于美国购机用户；收到「和解通知」类邮件时，务必从官方和解网站自己进入，谨防钓鱼。",
+        "points": [
+          "仅限 2024-06-10 至 2025-03-29 在美国购买的 iPhone 15 Pro、16 系列",
+          "每台基础 25 美元，按比例最高 95 美元，律师估计至少 61 美元",
+          "12 月 21 日截止，终审听证 2027 年 2 月 24 日"
+        ]
+      },
+      {
+        "title": "Apple 支持社区正式关闭，旧帖链接全部跳转",
+        "summary": "苹果此前宣布 Apple Support Community 于 11 月 20 日永久关闭：论坛 11 月 10 日起只读，现已整体移除，访问 discussions.apple.com 会跳转到苹果支持首页，法语和德语论坛暂时仍可发帖。",
+        "source_url": "https://www.macrumors.com/2026/11/21/rip-apple-support-community/",
+        "time": "2026-11-22T00:48:04+08:00",
+        "handle": "@MacRumors",
+        "impact": "以前收藏的苹果疑难问题帖会失效，排查老设备问题时要改用官方支持文档或其他社区。",
+        "points": [
+          "11 月 10 日起只读，11 月 20 日整体移除",
+          "discussions.apple.com 跳转到苹果支持首页",
+          "法语和德语论坛暂时仍开放"
+        ]
+      },
+      {
+        "title": "Gemini 安卓版相机界面重做，改成可上拉的底部面板",
+        "summary": "9to5Google 报道，Gemini 安卓应用里添加图片用的相机改成在首页或对话内弹出的底部面板，可上拉到几乎全屏，闪光灯和前后摄像头切换收进三点菜单；这一设计先在 iOS 版上线，现已在安卓稳定版（17.76 及以上）全面推送。",
+        "source_url": "https://9to5google.com/2026/11/21/gemini-camera-redesign/",
+        "time": "2026-11-22T04:52:53+08:00",
+        "handle": "@9to5Google",
+        "impact": "用 Gemini 拍照提问会更顺手，看不到新界面可以强制停止 Google 应用再打开。",
+        "points": [
+          "相机改为可上拉的底部面板",
+          "闪光灯和前后摄切换收进三点菜单",
+          "安卓稳定版 17.76 及以上已推送"
+        ]
+      }
+    ]
+  }
+}
