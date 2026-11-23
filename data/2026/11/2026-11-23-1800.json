@@ -1,0 +1,305 @@
+{
+  "id": "2026-11-23-1800",
+  "published_at": "2026-11-23T18:00:00+08:00",
+  "headline": "OpenAI 公布内部预训练进度并呼吁共同限制，Meta 首席 AI 官发长文回应",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 公布内部困惑度曲线，呼吁各家实验室约定共同限制",
+        "summary": "11 月 22 日，OpenAI 首席科学家 Jakub Pachocki 发表《Perplexity and Intelligence》，首次公开内部主评测集上的对数困惑度（log-perplexity）：GPT-3.5 约 0.99，GPT-4 约 0.91，当前模型已低于 0.8，约 0.76 时开始解出数学公开难题。文章提议以困惑度为各家可比的进度指标，并约定「共同限制」：在监测和理解 AI 行为的能力达到某个具体里程碑前，各家承诺不越过约定的指标线。Mark Chen 说这些数字过去一直被当作敏感的核心资料，Microsoft AI 的 Mustafa Suleyman 随后表态支持，并在 OpenAI 的评测集上报告 MAI-2 Base 为 0.819（自报）。",
+        "source_url": "https://openai.com/index/perplexity-and-intelligence",
+        "time": "2026-11-23T01:03:00+08:00",
+        "handle": "@merettm",
+        "impact": "开发者和企业要留意：头部实验室可能共同设限、放缓发布节奏；能否落地，还要看其他实验室是否跟进。",
+        "points": [
+          "OpenAI 自报：GPT-3.5 约 0.99、GPT-4 约 0.91、现模型低于 0.8；作者预计进入 0.68～0.7 区间会出现新的变革性能力，但他也说不知道会是什么",
+          "提议要求各家披露关键进度指标，并以可监测的安全里程碑作为继续往前的前提",
+          "Microsoft AI 已跟进披露 MAI-2 Base 为 0.819（自报）；本轮监测中未见其他实验室披露同类数字"
+        ]
+      },
+      {
+        "title": "Meta 首席 AI 官 Wang 发长文：超级智能正在到来，但不该默认把社会交给 AI",
+        "summary": "11 月 23 日清晨，Meta 首席 AI 官 Alexandr Wang 在 X 发表长文《Superintelligence is Arriving》。他以黎曼猜想被证明为例，认为现在限制 AI 的已不是智力，而是各行业的专门知识、工程配套和实验条件，AI 很可能自动化全部 AI 研究并明显超过人类；同时他批评业界「超级智能不可避免、只剩如何安全做」的想法，主张不应接受把社会「移交」给 AI。约五个半小时后他补充说，这些观点其他实验室领导者也说过，强调这条路不是必然，并称 Meta 为安全把 Muse 推迟了数月、正在加大安全投入（均为本人表述）。",
+        "source_url": "https://x.com/alexandr_wang/status/2124636606959345776",
+        "time": "2026-11-23T06:50:15+08:00",
+        "handle": "@alexandr_wang",
+        "impact": "关注 AI 治理的人可把它和 OpenAI 的提议放在一起看，但这是个人立场，不等于 Meta 的正式政策。",
+        "points": [
+          "观点：AI 研究本身可被自动化，不受约束的递归自我改进（RSI）下，人类很难保持控制",
+          "他认为剩余短板是专门知识、工程配套和实验，而不是智力",
+          "Meta 推迟 Muse 发布数月、增加安全投入，属本人自述，未见第三方证实"
+        ],
+        "tag": "自述"
+      },
+      {
+        "title": "智谱 GLM-5.4 向全部 Coding Plan 用户开放，新增看图能力",
+        "summary": "11 月 23 日中午，Z.ai 负责人 Zixuan Li 宣布 GLM-5.4 向所有 GLM Coding Plan 用户开放：新增视觉能力，编程表现整体提升，有每周额度的用户可用量比 GLM-5.3 多 50%。博主 Max For AI 称自家评测里它成绩突出，「愿意称为国产模型第一」，详细 Benchmark 稍后发布，目前只有口头结论。 这是订阅用户直接可用的新旗舰，额度加 50% 直接降低使用成本。但本轮没有看到开放权重或 API 价格信息，Hugging Face 上暂无 GLM-5.4。",
+        "source_url": "https://x.com/ZixuanLi_/status/2124719275864670681",
+        "time": "2026-11-23T12:18:45+08:00",
+        "handle": "@ZixuanLi_",
+        "impact": "用 GLM Coding Plan 的开发者现在可切到 5.4 并多用约一半额度；排名说法要等公开评测验证。",
+        "points": [
+          "新增视觉能力，官方称编程能力全面提升",
+          "每周额度比 GLM-5.3 多 50%，仅适用于有周额度的订阅",
+          "「国产第一」只是博主自测说法，数据未公布，待验证"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Perplexity：Gemini 4 Neon 使用量日均增长 10%～15%",
+        "summary": "Perplexity CEO 披露，从 11 月 19 日首个完整日到 22 日（按 22 小时对齐口径），Gemini 4 Neon 在 Perplexity 的快速搜索（Ask）查询量日均复合增长 10.6%，智能体任务（Computer）日均增长 15.0%。他此前称已把自己的一部分 Teammates 迁到该模型。这是自报数据，没有给出绝对量。",
+        "source_url": "https://x.com/AravSrinivas/status/2124765417378099414",
+        "time": "2026-11-23T15:22:06+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "说明 Neon 正在被第三方产品快速采用；只有增速没有总量，实际规模还要看后续数据。",
+        "points": [
+          "快速搜索查询量日均复合增长 10.6%",
+          "智能体任务日均复合增长 15.0%",
+          "口径为 11 月 19 日至 22 日、22 小时对齐，未披露绝对量"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Sakana AI 解说从头预训练的 Agent 模型 Sawara",
+        "summary": "Sakana AI 发布视频，首席科学家秋葉拓哉介绍面向 Agent 用途、从零开始预训练的新语言模型「Sakana Sawara」。他认为语言模型开发比想象中更像研究竞赛，关键在计算资源乘以研究效率，以及人才密度，并提到希望让 Sawara 帮助开发下一代 Sawara，即「部分递归自我改进（RSI）」。帖子是日文视频，本轮未见公开的参数量、基准或权重信息。",
+        "source_url": "https://x.com/SakanaAILabs/status/2124708148657426607",
+        "time": "2026-11-23T11:34:32+08:00",
+        "handle": "@SakanaAILabs",
+        "impact": "又一家实验室把「模型参与训练下一代模型」写进路线，要看后续是否放出模型与评测。",
+        "points": [
+          "面向 Agent 用途，从零开始预训练",
+          "目标是让 Sawara 参与开发下一代 Sawara（部分 RSI）",
+          "未见参数量、基准和权重信息"
+        ]
+      },
+      {
+        "title": "MemTensor 与 NVIDIA 发布 MemT-1.0-Pro：把历史写进 48 MiB 动态状态",
+        "summary": "MemTensor 通过 MemOS 官方账号宣布，与 NVIDIA 合作发布原生记忆模型 MemT-1.0-Pro，以 Nemotron 3 Ultra 为骨干（总参数约 5540 亿，激活约 590 亿），把历史信息写入模型内部的动态状态，后续查询读取这份状态，不必再把原始历史放回上下文。单条交互轨迹的动态记忆约 48 MiB。论文称在 11 项记忆评测上平均 53.08 分，在所比较的参数记忆方法中领先，但 BEAM-1M 只有 41.80，仍明显低于检索式文本记忆的 77.76。以上数据均为论文自报，由 meng shao 整理。",
+        "source_url": "https://huggingface.co/MemTensor/MemT-1.0-Pro",
+        "time": "2026-11-23T07:50:28+08:00",
+        "impact": "做 Agent 长期记忆的团队可关注「状态式记忆」这条路线，但目前效果仍不如检索，不能当替代。",
+        "points": [
+          "动态记忆约 48 MiB，不等于整个模型只需这么多内存",
+          "11 项记忆评测平均 53.08，在参数记忆方法中领先",
+          "BEAM-1M 上 41.80，低于检索式记忆的 77.76，不能替代外部检索"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "论文：27B 开源模型自己写代码改权重，新题准确率升 6.6 个百分点",
+        "summary": "11 月 18 日发表在 arXiv 的论文让 Qwen3.5 27B 在不训练、不用梯度和优化器的条件下，写 Python 直接修改自身权重。最好的一轮把所有线性注意力层的时间步偏置统一加 0.5，在 490 道没见过的数学题上准确率从 57.2% 升到 63.8%，答不完的比例从 33.6% 降到 26.1%。研究者还让模型修复被噪声破坏的副本，数学题准确率从 0% 恢复到 33.0%（原模型 58.5%）。2B、4B、9B 小模型做不到，4B 和 9B 反而会把自己改坏。",
+        "source_url": "https://arxiv.org/abs/2611.21885",
+        "time": "2026-11-23T16:02:19+08:00",
+        "impact": "给「模型自我改进」多了一个可检验的小例子，但范围窄、尚未复现，离自主进化还很远。",
+        "points": [
+          "8 轮实验每次都从原权重起步，不是「递归自我进化」",
+          "8 轮里 5 轮被模型自己撤回、3 轮提交",
+          "只在 Qwen3.5 系列和数学题上验证，论文未经同行评审"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Agent 说「验证完了」怎么才能信？宝玉分享五条验证经验",
+        "summary": "宝玉讲了自己用 Agent 做验证的经验，起点是 Agent 说做好了、实际没做好。他不建议依赖多个 Agent 互相检查：缺统一验收标准时，检查方和执行方容易越改越偏、浪费 Token。更有效的做法是先给清晰的验收标准和能自己验收的环境，例如要求做完网页后截图并与设计稿比对像素。他还强调越早验证返工越便宜，可行性、原型和技术方案这三关不能因为生成代码变快就省掉，并让 Agent 提交截图、录屏或可视化 HTML 报告，降低人的验收成本。",
+        "source_url": "https://x.com/dotey/status/2124603209394078089",
+        "time": "2026-11-23T04:37:32+08:00",
+        "handle": "@dotey",
+        "impact": "用 Agent 写代码或做页面的人可以直接照做：写清验收标准，并让 Agent 交截图作证据。",
+        "points": [
+          "不要依赖多个 Agent 互相检查，缺统一验收标准会越改越偏",
+          "先给验收标准和能自查的环境，如截图比对设计稿",
+          "越早验证返工成本越低，别省可行性、原型、技术方案三关",
+          "让 Agent 交截图、录屏或 HTML 报告，降低人的验收成本"
+        ]
+      },
+      {
+        "title": "Anthropic 开出免费评测入门课，20～50 条用例就能起步",
+        "summary": "Anthropic 在 Claude Academy 上线免费课程「Introduction to evals」，4 节正课加 1 次测验，约 1 小时，测验达到 80% 可领结业徽章。课程用一个虚构咨询公司的例子：旧提示词下 Claude Haiku 4.5 在 50 题里对 42 题（84%），补上「报告里没有风险时应返回空值」的规则后升到 100%，仍是最便宜的选择。官方建议评测集先从 20 到 50 条起步，合并前用约 10 条做冒烟评测，上线后每晚抽 1% 到 5% 的真实流量，由大模型裁判打分。以上由 meng shao 整理。",
+        "source_url": "https://academy.claude.com/courses/introduction-to-evals",
+        "time": "2026-11-23T17:28:55+08:00",
+        "handle": "@shao__meng",
+        "impact": "想给自己的提示词做评测的团队，可以按这门课从几十条用例起步，再接入合并检查和夜间抽查。",
+        "points": [
+          "4 节正课加 1 次测验，约 1 小时，免费",
+          "评测集先从 20～50 条起步，比例接近真实流量",
+          "合并前用约 10 条冒烟评测，上线后每晚抽 1%～5% 流量复查"
+        ]
+      },
+      {
+        "title": "模型升级后，Agent 哪些该跟官方走？Dex Horthy 的判断",
+        "summary": "讨论起于一位开发者在 Pi 中使用 GPT-6.2 的体验，经 OpenAI 团队回应后，Dex Horthy 给出判断：实验室在特定运行框架里做强化学习，模型可能已经适应那套系统提示和工具定义，贴近它们有助于发挥模型能力；偏离的话要承担适配和验证成本。不过任务编排、并发与排队、触发方式、钩子、记忆和上下文，更适合按自己的需求设计。解读者建议把官方运行框架当对照基线，再逐项改动提示、工具或上下文，观察差异。",
+        "source_url": "https://x.com/shao__meng/status/2124647913548898574",
+        "time": "2026-11-23T07:35:11+08:00",
+        "handle": "@shao__meng",
+        "impact": "自己做 Agent 的开发者可先用官方提示和工具协议当基线，再逐项替换，避免一次改太多无法定位问题。",
+        "points": [
+          "模型可能已适应实验室自己的系统提示和工具定义",
+          "偏离官方设计要承担适配与验证成本",
+          "编排、排队、触发、记忆和上下文更适合自己设计"
+        ]
+      },
+      {
+        "title": "Huashu-Design 3.5 发布：可专门设计微信小程序",
+        "summary": "花叔的设计类 Skill 项目 Huashu-Design 发布 3.5 版，新增专门设计微信小程序的能力，设计完成的交付包可以交给 WorkBuddy 做成真正的小程序。作者还按 App Store 的分类又跑了 18 个 App 原型方向。更新方式是把仓库链接发给自己的 Agent。",
+        "source_url": "https://github.com/alchaincyf/huashu-design",
+        "time": "2026-11-23T06:58:43+08:00",
+        "handle": "@AlchainHust",
+        "impact": "做小程序和 App 原型的人可以让 Agent 直接装上这个 Skill，缩短从设计稿到可运行原型的时间。",
+        "points": [
+          "新增微信小程序设计能力",
+          "交付包可交给 WorkBuddy 生成小程序",
+          "按 App Store 分类新增 18 个 App 原型方向"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "opencode v2.4.0：内置桌面浏览器、定时自动化和视频生成",
+        "summary": "opencode 发布 v2.4.0。桌面版内置浏览器，可导入 Chrome、Edge、Firefox、Safari 的登录状态和浏览记录，Agent 能读取并操作同一批页面。新增自动化：按定时、cron 或 MCP 服务器事件运行提示、脚本或命令，用 /automation 管理，也可在配置里关闭。连接的服务商有视频模型时，Agent 可用 generate_video 生成视频，TUI 新外观默认开启。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
+        "time": "2026-11-23T17:22:21+08:00",
+        "impact": "升级要注意：图片工具改名为 generate_image，旧的「始终允许」授权不会自动迁移，会再询问一次；内置浏览器会带入已登录会话，使用前先想好权限范围。",
+        "points": [
+          "桌面内置浏览器，可导入主流浏览器的登录状态",
+          "自动化支持定时、cron 和 MCP 事件触发",
+          "图片工具改名 generate_image，旧授权需重新确认"
+        ]
+      },
+      {
+        "title": "OpenClaw v2026.11.7：网关重启后可恢复被中断的回复",
+        "summary": "OpenClaw 发布 v2026.11.7。重点是 Gateway 重启后能恢复被中断的回复和子任务结果，自动化出错时可由所属对话修复，并区分「已恢复」「有意跳过」和真正失败。更新流程能走完模式变更、数据库繁忙等情况，浏览器可用 Gateway 主机批准的短代码配对。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.7",
+        "time": "2026-11-23T09:33:51+08:00",
+        "impact": "插件作者要注意：本版含 3 项 SDK 破坏性变更（会话控制、网关方法分发、启动观察字段改名），需按迁移文档调整。",
+        "points": [
+          "重启后恢复被中断的回复和子任务结果",
+          "自动化可由所属对话修复，区分已恢复与真失败",
+          "含 3 项 SDK 破坏性变更"
+        ]
+      },
+      {
+        "title": "Linger：本地个人 Agent 开源，权限和数据去向要看清",
+        "summary": "据 GitHub_Daily 和 meng shao 介绍，Simplex AI 开源了个人 Agent Linger，建在 Claude Code、Codex 或 Pi 之上，加入记忆、任务和权限。它每晚把邮件、聊天和会议整理成带出处的 wiki，并主动盯收件箱、日历和 Slack，同一类消息被推掉两次就记下规矩。本地推理由团队的 MoE 引擎提供，称 12GB 显存加 64GB 内存可运行 1250 亿参数的 Qwen3.8-Flash-Next，GitHub 约 4000 星。",
+        "source_url": "https://github.com/simplexai-labs/linger",
+        "time": "2026-11-23T15:30:08+08:00",
+        "impact": "想试的人先看清权限和数据去向：本地推理不等于数据全留本机，也别当成标准 Apache 2.0 项目商用。",
+        "points": [
+          "以当前用户身份访问文件和命令行，没有沙箱；向外写入需确认",
+          "云端模型、会议转写等可能让数据离开本机",
+          "量化大模型首个 token 可能要等约三分钟；许可证是 Apache 2.0 加附加条款"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "vLLM：KV 缓存池跳过内存层直接放 NVMe，吞吐相差不到 1%",
+        "summary": "vLLM 与 AMD、Embedded LLM 发布博客：在 16 张 AMD Instinct MI355X 上跑 Kimi-K3，用 AMD 开源 MoRI 库里的 UMBP 做 KV 缓存池，1.8TB NVMe 的吞吐与 1.8TB DRAM 相差不到 1%。在 WEKA 的 40 天 trace、70 个会话下，4.6TB NVMe 的吞吐是 1.0TB DRAM 的 5.1 倍。博客解释，智能体场景里多轮会话反复重发长前缀，缓存命中率每提高 1 个百分点约多 10% 吞吐。以上均为作者自测。",
+        "source_url": "https://vllm.ai/blog/2026-11-23-skip-the-dram-tier",
+        "time": "2026-11-23T16:35:07+08:00",
+        "handle": "@vllm_project",
+        "impact": "做 Agent 推理服务的团队可以评估用 NVMe 扩容 KV 缓存，省下昂贵的 DRAM；结论基于 AMD 平台和特定负载，要按自己的流量再测。",
+        "points": [
+          "1.8TB NVMe 与同容量 DRAM 吞吐相差不到 1%",
+          "4.6TB NVMe 吞吐为 1.0TB DRAM 的 5.1 倍（70 个会话）",
+          "命中率每升 1 个百分点约多 10% 吞吐，均为自测"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "GitHub 热榜：HKUDS/CLI-Anything，让软件对 Agent 原生可用",
+        "summary": "CLI-Anything 的口号是「让所有软件对 Agent 原生可用」，今日约新增 699 星，总计约 6.3 万星，Apache-2.0 许可。项目提供 CLI-Hub：用 pip 安装 cli-anything-hub 后，可浏览、安装社区贡献的命令行工具，也欢迎提交自己的。演示包括让 Agent 用生成的命令行完成 CAD、3D 场景、图表和字幕等产出。",
+        "source_url": "https://github.com/HKUDS/CLI-Anything",
+        "time": "2026-11-23T18:05:00+08:00",
+        "impact": "想让 Agent 操作现有桌面软件的开发者，可以先看 CLI-Hub 里有没有现成的命令行封装。",
+        "points": [
+          "今日约新增 699 星，总计约 6.3 万星",
+          "CLI-Hub 汇集社区贡献的命令行工具",
+          "演示涵盖 CAD、3D、图表、字幕等产出"
+        ]
+      },
+      {
+        "title": "GitHub 热榜：last30days-skill，让 Agent 汇总近 30 天的网络讨论",
+        "summary": "mvanhorn/last30days-skill 今日约新增 668 星，总计约 7.3 万星，MIT 许可。它是一个 Agent Skill，会并行搜索 Reddit、Hacker News、Polymarket 和 GitHub，再按真实互动程度打分，生成带出处的摘要；设置向导还可解锁 X、YouTube、TikTok、arXiv、Techmeme 等来源。Claude Code 可通过插件市场安装，其他支持 Agent Skills 的工具用 npx 安装。",
+        "source_url": "https://github.com/mvanhorn/last30days-skill",
+        "time": "2026-11-23T18:05:00+08:00",
+        "impact": "需要快速了解某个话题近期舆论的人可以试用；接入 X 等来源时按向导配置，别把令牌写进公开文件。",
+        "points": [
+          "并行搜索 Reddit、HN、Polymarket、GitHub",
+          "按互动程度打分，输出带出处的摘要",
+          "支持 Claude Code、Codex、Cursor 等 50 多种 Skills 宿主"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "彭博 Gurman 上手 iPhone Duo 的面容解锁：弱光会失败，不能授权支付",
+        "summary": "彭博社的 Mark Gurman 上手了 iOS 27.3 里 iPhone Duo 的面容解锁。光线好时表现不错，但在暗室会失败，也不能授权 Apple Pay、密码和银行类应用，他称它是真正 Face ID 之前的过渡方案。他另一条帖子说，自己用 Duo 的 Touch ID 没有问题。",
+        "source_url": "https://x.com/markgurman/status/2124520414407778312",
+        "time": "2026-11-22T23:08:33+08:00",
+        "handle": "@markgurman",
+        "impact": "打算买 Duo 的人要知道：目前面容解锁不能用于支付和银行类验证，这类场景仍要靠指纹等方式。",
+        "points": [
+          "光线好时可用，暗室会失败",
+          "不能授权 Apple Pay、密码和银行类应用",
+          "Gurman 把它定位为真正 Face ID 之前的过渡方案"
+        ]
+      },
+      {
+        "title": "Gurman：苹果计划在 iOS 27.4 周期推出低端 iPad、iPhone 18e 和新 MacBook Neo",
+        "summary": "Gurman 在 Power On 中称，苹果在 2 月到 3 月的 iOS 27.4 周期内，计划推出更新的低端 iPad、iPhone 18e 和新的 MacBook Neo，标准版 iPhone 18 和更新的 MacBook Air 也预计在这一时间窗内。这是爆料，苹果尚未公布。",
+        "source_url": "https://x.com/markgurman/status/2124519990409810046",
+        "time": "2026-11-22T23:06:52+08:00",
+        "handle": "@markgurman",
+        "impact": "正在考虑换低端 iPad、MacBook Neo 或 MacBook Air 的用户可以先观望到明年春季；具体机型和时间还要看苹果官宣。",
+        "points": [
+          "时间窗：2 月到 3 月的 iOS 27.4 周期",
+          "涉及低端 iPad、iPhone 18e、新 MacBook Neo",
+          "标准 iPhone 18 和更新的 MacBook Air 也预计在这一时间窗"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "Pixel 天气开始推送「报告当前天气」，用于改进本地预报",
+        "summary": "据 9to5Google，Pixel Weather 正在向用户推送「Report current weather」功能，用户可以上报当前实际天气，用来改进本地预报。目前只看到功能名称和用途说明，没有看到覆盖范围和采用方式的细节。",
+        "source_url": "https://x.com/9to5Google/status/2124612055621615872",
+        "time": "2026-11-23T05:12:42+08:00",
+        "handle": "@9to5Google",
+        "impact": "Pixel 用户今后可能参与众包式的本地天气校正；预报精度是否提升，要看后续数据。",
+        "points": [
+          "功能名为「Report current weather」",
+          "目的：改进本地预报",
+          "覆盖范围和细节未公布"
+        ],
+        "tag": "待验证"
+      },
+      {
+        "title": "谷歌 3D 表情字体并不占 10GB：整个字体不到 220MB",
+        "summary": "针对「谷歌新 3D 表情要占 10GB 存储」的说法，Android Authority 澄清：整套字体小于 220MB；6GB 内存和 10GB 可用空间是自动下载的门槛，而不是表情本身的占用。三星手机不会收到这套表情。",
+        "source_url": "https://x.com/AndroidAuth/status/2124773126836039692",
+        "time": "2026-11-23T15:52:44+08:00",
+        "handle": "@AndroidAuth",
+        "impact": "Android 用户不必担心表情占用大量空间，但内存或剩余空间不足的机型不会自动下载，三星手机也不在范围内。",
+        "points": [
+          "整套字体小于 220MB",
+          "6GB 内存和 10GB 可用空间是自动下载门槛",
+          "三星手机不会收到"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "FreshRSS 1.31.0：安全向大版本，要求 PHP 8.2 以上并改用 HTTPS 保护登录",
+        "summary": "FreshRSS 发布 1.31.0，官方称这是一个以安全为主的大版本，修复了多个严重漏洞（含本地和远程），并修复搜索查询相关的问题。升级要求 PHP 8.2 及以上，不再支持 PHP 8.1；登录方式从自定义的客户端加密改为直接比对密码，保护完全依赖 HTTPS。新版还增加了 Cross-Origin-Opener-Policy 与 nosniff 响应头，并更新了 Docker 镜像里的 Apache、PHP 和 cURL。",
+        "source_url": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.31.0",
+        "time": "2026-11-23T16:27:04+08:00",
+        "impact": "自建 FreshRSS 的人应尽快升级到 1.31.0；升级前确认 PHP 版本不低于 8.2，并确保站点只经 HTTPS 访问。",
+        "points": [
+          "修复多个严重漏洞，建议尽快升级到 1.31.0",
+          "要求 PHP 8.2+，不再支持 PHP 8.1",
+          "登录改为直接比对密码，必须启用 HTTPS"
+        ]
+      }
+    ]
+  }
+}
