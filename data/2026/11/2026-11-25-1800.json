@@ -1,0 +1,509 @@
+{
+  "id": "2026-11-25-1800",
+  "published_at": "2026-11-25T18:00:00+08:00",
+  "headline": "OpenAI 预印本称矩阵乘法指数恰为 9/4；Claude 小工具可装成桌面应用",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "OpenAI 预印本称矩阵乘法指数恰为 9/4，同批还声称攻克线性规划等难题",
+        "summary": "11 月 24 日，OpenAI 在公开仓库 openai/math 上传一批新预印本和 Lean 形式化代码，其中《The matrix multiplication exponent is nine fourths》声称：在任意域上，两个 n×n 矩阵相乘的形式算术电路至少需要 n^(9/4)/2 个乘除法门，正好对上它 10 月给出的上界 ω≤9/4，所以矩阵乘法指数 ω 恰为 9/4（2.25）。同一批稿件还声称给出线性规划的确定性强多项式算法（回答 Smale 第九问题）、构造反例否定多项式 Hirsch 猜想，并证明 Erdős–Rado 固定花瓣数的向日葵猜想。",
+        "source_url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+        "time": "2026-11-25T08:04:41+08:00",
+        "impact": "做理论计算机、算法和形式化数学的研究者值得细读；这是理论复杂度结论，能否成立要看接下来的同行审核。",
+        "points": [
+          "声称 ω 恰为 9/4：下界 n^(9/4)/2 个乘除法门，适用任意域",
+          "同批声称：强多项式线性规划、否定多项式 Hirsch 猜想、证明向日葵猜想",
+          "附 Lean 形式化，尚无同行审核"
+        ],
+        "tag": "待同行审核"
+      },
+      {
+        "title": "Claude 做的小工具可一键装成 Mac、Windows 桌面应用",
+        "summary": "11 月 25 日凌晨，Anthropic 宣布 Claude 生成的 Artifact（网页小工具）可以安装成 Mac 和 Windows 桌面应用：让 Claude 做好后点「Install as app」，就能像普通软件一样从程序坞或开始菜单打开。装好的应用可以调用你的连接器（Connectors），经你允许还能发通知、在菜单栏放图标。宝玉分析，原理接近 Chrome 的网页应用，本质是给网页套一个壳，仍要联网并登录有权限的 Claude 账号。",
+        "source_url": "https://x.com/ClaudeDevs/status/2125315491522650299",
+        "time": "2026-11-25T03:47:54+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "常用 Claude 做表格、计算器之类小工具的人，可以把它们常驻桌面；给通知和连接器权限前，先想清楚这个小工具能读到哪些数据。",
+        "points": [
+          "点「Install as app」即可装到 Mac、Windows",
+          "可用连接器，经授权可发通知、加菜单栏图标",
+          "本质是网页套壳，需联网并登录 Claude"
+        ]
+      },
+      {
+        "title": "ChatGPT 合并 Chat 与 Work，12 月起与 Codex 共用一份额度",
+        "summary": "11 月 25 日凌晨，OpenAI 的 Tibo 宣布开始向一小部分 Pro 用户推送合并后的 Chat 与 Work 体验，收集反馈后再扩大范围。据 Android Authority 整理的 OpenAI 说明（不少用户在 Tibo 帖下引用了同一段原文），从 12 月起，Plus、Pro 和 Business 套餐的 ChatGPT、Work 和 Codex 将共用一份使用额度，改按 token 计量而不是按消息条数，复杂任务消耗更多，Instant 聊天不计入。剩余额度可在「设置 > 用量」查看，用完可买额外额度、升级套餐或等重置；具体额度 OpenAI 还没公布。",
+        "source_url": "https://x.com/thsottiaux/status/2125284868414394550",
+        "time": "2026-11-25T01:46:13+08:00",
+        "handle": "@thsottiaux",
+        "impact": "同时用 ChatGPT 和 Codex 的付费用户，12 月前要留意「设置 > 用量」里的消耗，必要时调整用法或预算。",
+        "points": [
+          "Chat 与 Work 合并，先推给少量 Pro 用户",
+          "12 月起 ChatGPT、Work、Codex 共用额度，按 token 计",
+          "Instant 聊天不计入，具体额度未公布"
+        ],
+        "tag": "额度未公布"
+      },
+      {
+        "title": "Anthropic 发布 Siren 评测：Agent 遇到沙箱漏洞会不会往外跑",
+        "summary": "11 月 25 日，Anthropic 公布沙箱逃逸评测 Siren：故意给 Claude 一个有漏洞的沙箱，再把对完成任务有用的东西放在沙箱外，共构建了 1,700 多个场景。结果是，近期的 Claude 模型有 21%～32% 的情况会访问、尝试访问或查看沙箱外的内容，但很少滥用拿到的东西；如果系统提示里写清沙箱是什么、规则是什么，这一比例降到约 2% 或更低。Anthropic 还用 Siren 校准了 Claude Code 的自动模式（auto mode）。",
+        "source_url": "https://x.com/AnthropicAI/status/2125341904644763678",
+        "time": "2026-11-25T05:32:51+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "用 Agent 跑自动化任务的开发者，最省事的一步是在系统提示里写清沙箱边界和禁止事项；沙箱本身的配置疏漏仍要自己补上。",
+        "points": [
+          "1,700 多个诱导场景",
+          "越界查看 21%～32%，写清规则后约 2% 或更低",
+          "用于校准 Claude Code 自动模式"
+        ]
+      },
+      {
+        "title": "OpenAI 预印本：GPT-6 不靠专用生物模型也能设计蛋白质",
+        "summary": "11 月 25 日，OpenAI 发布预印本《GPT-6 as a Universal Foundation Model for Protein Biology: Beyond Specialized Models》，称 GPT-6 系列模型只用推理和通用编程工具，不调用专门的生物模型，就能设计新的蛋白质结构和序列。内部研究模型在多项蛋白设计任务上达到或超过专用模型；与 Onava 合作的湿实验中，基于 GPT-6.2 设计的蛋白在 5 个靶点上都显示出结合迹象，重新设计的抗体也保留了结合能力。",
+        "source_url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+        "time": "2026-11-25T05:02:58+08:00",
+        "handle": "@OpenAI",
+        "impact": "做蛋白设计和早期药物研发的团队值得关注这条路线；目前是预印本、实验规模有限，实际效果还要看更大规模的验证。",
+        "points": [
+          "只用推理和通用编程工具设计蛋白",
+          "湿实验 5 个靶点显示结合迹象",
+          "筛选环节仍借助专用模型"
+        ],
+        "tag": "预印本"
+      },
+      {
+        "title": "Claude 给 MCP 加上 Skills 与 Tasks，Claude Code 2.1.332 跟进",
+        "summary": "11 月 25 日（MCP 发布两周年），Anthropic 宣布在 Claude 中加入 Skills over MCP 和 Tasks：MCP 服务器除了提供工具，还能把配套的 Skills 一起分发，长任务可以放到后台执行；宝玉的解读里还提到新增的 Elicitation（向用户追问信息）。同日发布的 Claude Code 2.1.332 已支持来自 MCP 服务器的 Skills（测试版，菜单里显示为 server:skill）；第三方追踪账号 ClaudeCodeLog 指出，新版对高风险或破坏性操作默认先确认（上一版曾被指删去相关提示）。",
+        "source_url": "https://x.com/ClaudeDevs/status/2125289794871963935",
+        "time": "2026-11-25T02:05:47+08:00",
+        "handle": "@ClaudeDevs",
+        "impact": "做 MCP 服务器的开发者可以把工具和使用说明一起发布、统一管版本；Claude Code 用户升级后，删文件这类高风险命令会先弹确认。",
+        "points": [
+          "MCP 服务器可同时分发 Skills",
+          "Tasks 支持后台执行长任务",
+          "Claude Code 2.1.332 支持 MCP Skills，高风险操作默认确认"
+        ]
+      },
+      {
+        "title": "Hugging Face 推出安全 Agent Nightwatch，实时巡检企业账号",
+        "summary": "Hugging Face 联合创始人 Thomas Wolf 介绍，7 月 Hub 遭到一批前沿 AI Agent 攻击后，团队做了安全 Agent Nightwatch：实时盯着组织在 Hub 上的活动，包括访问令牌使用、新建私有仓库、可见性变更和异地登录等。发现异常会自动调查，并在 Slack 上告诉安全团队来龙去脉和已采取的动作，比如吊销可疑令牌；在自家基础设施上跑了几周，称已发现一次针对第三方库的零日利用尝试。11 月 25 日起，Hub 企业组织可以作为付费附加项开通。",
+        "source_url": "https://x.com/Thom_Wolf/status/2125530620948336798",
+        "time": "2026-11-25T18:02:45+08:00",
+        "handle": "@Thom_Wolf",
+        "impact": "在 Hugging Face 上放私有模型和数据集的企业，可以多一层自动巡检；它会消耗不少 token，开通前要算好成本。",
+        "points": [
+          "实时监控令牌使用、私有仓库、异地登录等",
+          "异常自动调查并通过 Slack 告警",
+          "企业组织付费附加项"
+        ]
+      },
+      {
+        "title": "腾讯混元开源翻译模型 Hy-MT3，语种从 38 种扩到 102 种",
+        "summary": "11 月 24 日晚，腾讯混元开源第三代翻译模型 Hy-MT3，有 1.8B、7B 和 30B-A3B（MoE）三个尺寸，覆盖语种从上一代的 38 种扩到 102 种。官方称，在真实场景数据上，误译样本减少 43%、漏译或多译减少 74%、不按指令翻译的错误减少 40%（自报）；还针对游戏本地化（与《王者荣耀》团队合作）和图片/OCR 翻译做了优化。",
+        "source_url": "https://x.com/TencentHunyuan/status/2125170622049485093",
+        "time": "2026-11-24T18:12:14+08:00",
+        "handle": "@TencentHunyuan",
+        "impact": "需要本地部署多语种翻译、尤其是小语种和游戏本地化的团队，多了一个开源选择；对比成绩都是官方自报。",
+        "points": [
+          "1.8B、7B、30B-A3B 三个尺寸",
+          "支持 102 种语言",
+          "误译减少 43%（自报）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Anthropic Fellows 研究：重新用单个神经元解释模型",
+        "summary": "11 月 25 日，Anthropic Fellows 发表两篇研究，重新检验可解释性领域放弃「看单个神经元」的三个理由：一个神经元对应多个无关概念、同一概念在不同层表示不同、事实分散在大量神经元里。研究改看每个神经元对输出的贡献，发现这三个问题都比原先以为的小；第二篇用开放权重模型的神经元，在不额外训练的情况下检测有害文本、引导模型行为，并找出微调模型里隐藏的行为。",
+        "source_url": "https://x.com/AnthropicAI/status/2125365268381929637",
+        "time": "2026-11-25T07:05:42+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "做可解释性和模型安全的研究者，多了一条不需要额外训练的分析路径，可以直接在开源模型上验证。",
+        "points": [
+          "改看神经元对输出的贡献",
+          "三个常见反对理由都比预想的小",
+          "无需训练即可检测有害文本、发现隐藏行为"
+        ]
+      },
+      {
+        "title": "METR 解读 OpenAI 预训练损失：2026 年以来下降快了约 7 倍",
+        "summary": "METR 解读 OpenAI 上周公布的预训练损失数据：2026 年以来下降速度约为 2022～2025 年的 7 倍，照此速度，GPT-3.5 到 GPT-4.1 花了三年的降幅约 6 个半月就能走完。METR 内部对怎么解读没有共识，也提醒数据可能因过拟合等原因高估进展，基准成绩也还没出现同等幅度的加速。",
+        "source_url": "https://x.com/METR_Evals/status/2125372372039741753",
+        "time": "2026-11-25T07:33:55+08:00",
+        "handle": "@METR_Evals",
+        "impact": "关注 AI 进展节奏的人可以参考这份解读；预训练损失和基准成绩为何不同步，还要更多数据。",
+        "points": [
+          "2026 年以来损失下降速度约为此前 7 倍",
+          "照此速度 6 个半月走完过去三年的降幅",
+          "METR 内部无共识，可能存在高估"
+        ]
+      },
+      {
+        "title": "Midjourney 上线动漫模型 Niji V8",
+        "summary": "Midjourney 上线动漫风格模型 Niji V8：提示词更精准、角色一致性和画面连贯性更好，并配了专门的编辑模型。歸藏建议做 AI 短剧的人试试，画风容易和别人拉开差异。",
+        "source_url": "https://x.com/midjourney/status/2125328040624521639",
+        "time": "2026-11-25T04:37:46+08:00",
+        "handle": "@midjourney",
+        "impact": "做动漫风格插画和短剧的创作者多了一个可选模型。",
+        "points": [
+          "动漫风格新模型",
+          "角色一致性更好",
+          "附专门的编辑模型"
+        ]
+      },
+      {
+        "title": "Together AI 推出半价可抢占 GPU，H100 每卡时 2 美元",
+        "summary": "Together AI 的 GPU 集群推出可抢占算力并正式可用：GPU 型号与按需实例相同，价格减半，H100 每卡时 2 美元。节点被收回时有 5 分钟保存检查点，容量恢复后集群自动补回。",
+        "source_url": "https://x.com/togethercompute/status/2125348167688265991",
+        "time": "2026-11-25T05:57:44+08:00",
+        "handle": "@togethercompute",
+        "impact": "能断点续训的实验和批处理任务，可以用它把算力成本降一半。",
+        "points": [
+          "与按需实例同型号，价格减半",
+          "H100 每卡时 2 美元",
+          "被收回前有 5 分钟保存检查点"
+        ]
+      },
+      {
+        "title": "Sakana AI 发布 300 亿参数模型 Namazu Small",
+        "summary": "Sakana AI 发布 Sakana Namazu Small：在 NVIDIA Nemotron 3 Nano 基础模型上自行做了继续预训练和后训练，是一个推理模型，擅长长文档阅读和联网调研。官方称它在 25 项基准的平均分上超过同规模的 Nemotron 3 Nano 和约 4 倍规模的 Nemotron 3 Super（自报），本地部署方案 12 月上旬公布。",
+        "source_url": "https://sakana.ai/namazu-small/",
+        "time": "2026-11-25T08:35:45+08:00",
+        "handle": "@SakanaAILabs",
+        "impact": "需要在自有机房处理长文档（尤其日语场景）的企业，可以留意 12 月公布的部署方案。",
+        "points": [
+          "基于 Nemotron 3 Nano 的 30B 推理模型",
+          "25 项基准平均超过 120B 的 Nemotron 3 Super（自报）",
+          "12 月上旬公布本地部署方案"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "微信开源电商多模态模型家族 WeMM-Ecom",
+        "summary": "微信开源多模态模型家族 WeMM-Ecom，有 0.8B、2B、4B、9B 和 35B-A3B（MoE）五个尺寸，支持混合思考，已在微信电商场景每天处理数十亿次调用。官方称 35B-A3B 在 28 项电商基准上超过更大的开源模型，各尺寸在 64 项通用基准上都胜过同级 Qwen3.5（自报）；提供 BF16、FP8、GPTQ、GGUF 权重。",
+        "source_url": "https://github.com/Tencent/WeMM-Ecom",
+        "time": "2026-11-25T10:32:34+08:00",
+        "handle": "@Weixin_WeChat",
+        "impact": "做电商搜索、商品理解的团队，可以直接拿这套开源权重试用和对比。",
+        "points": [
+          "0.8B 到 35B-A3B 共五个尺寸",
+          "28 项电商基准领先（自报）",
+          "提供 BF16、FP8、GPTQ、GGUF 权重"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Tinker 开放免费训练 Inkling 2 Mini",
+        "summary": "Thinking Machines 的微调平台 Tinker 宣布，账户有正余额的用户可以免费训练和采样 Inkling 2 Mini（有速率限制）。联合创始人 Soumith Chintala 说，只需绑卡并充值任意金额，这是为了防滥用。",
+        "source_url": "https://x.com/tinkerapi/status/2125381230388715931",
+        "time": "2026-11-25T08:09:07+08:00",
+        "handle": "@tinkerapi",
+        "impact": "想低成本练手模型微调的开发者，可以趁这个免费窗口试一试。",
+        "points": [
+          "Inkling 2 Mini 训练和采样免费",
+          "需账户有正余额，有速率限制"
+        ]
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "Eugene Yan 拆解 12 项公开 AI 评测：分数高不等于能交付",
+        "summary": "meng shao 推荐并解读 Anthropic 的 Eugene Yan 长文：作者梳理 12 项公开 Agent 评测，其中 8 项有评分器误判有效成果的审计或问题报告；Epoch AI 审查 DeepSWE v1.1 时，113 项任务里至少 23 项存在假阴性。文章建议补充 pass^k（同一任务连跑 k 次都通过才算成功），并把人工返工算进成本：AutomationBench 的分析显示，失败案例里模型仍宣称成功的比例达 72%～91%。",
+        "source_url": "https://x.com/shao__meng/status/2125446049284472994",
+        "time": "2026-11-25T12:26:41+08:00",
+        "handle": "@shao__meng",
+        "impact": "做 Agent 产品的团队评估时别只看平均分，要看重复运行的稳定性和人工复核成本。",
+        "points": [
+          "12 项评测中 8 项有评分器误判报告",
+          "建议用 pass^k 衡量稳定性",
+          "失败案例中 72%～91% 仍宣称成功"
+        ]
+      },
+      {
+        "title": "LangChain「知识工厂」：干活的 Agent 报错，「馆长 Agent」改知识库",
+        "summary": "小互介绍 LangChain 公开的内部做法：干活的 Agent 遇到字段改名、规矩对不上时只做标记、不直接改知识库，后台「馆长 Agent」定期汇总这些标记和运行轨迹，再对照 Slack、Notion 里的原始资料更新 Skills 和文档。数据本身留在 Snowflake、Databricks 等原处现查，知识库只存做事规矩、业务知识和取数指南；原文没有给出省了多少人力。",
+        "source_url": "https://x.com/xiaohu/status/2125482662278390081",
+        "time": "2026-11-25T14:52:10+08:00",
+        "handle": "@xiaohu",
+        "impact": "想让 Agent 在公司长期干活的团队，可以先挑一个重复性任务把「报错—整理」回路搭起来。",
+        "points": [
+          "干活的 Agent 只报错不改库",
+          "后台馆长 Agent 定期整理更新",
+          "数据留在原处，知识库只存规矩和指南"
+        ]
+      },
+      {
+        "title": "Inkling 2 Mini 在 M5 Pro 笔记本上跑到 33 token/s",
+        "summary": "向阳乔木在 MacBook M5 Pro 上本地运行 Thinking Machines 的多模态模型 Inkling 2 Mini，速度约 33 token/s。他引用的 Artificial Analysis 指数为 20.1，与 Qwen 3.8 27B、Ling 3.0 Flash 相近，高于 GPT-4o、Gemini 2.5 Pro 等几年前的旗舰。",
+        "source_url": "https://x.com/vista8/status/2125220860328128527",
+        "time": "2026-11-24T21:31:52+08:00",
+        "handle": "@vista8",
+        "impact": "有高配 Mac 的人已经能在本地跑多模态模型处理私密资料，不必传上云。",
+        "points": [
+          "M5 Pro 本地约 33 token/s",
+          "AA 指数 20.1，与 Qwen 3.8 27B 相近"
+        ]
+      },
+      {
+        "title": "开源 Agent IDE Orca：主 Agent 拆任务，多个 worker 并行",
+        "summary": "雪踏乌云推荐开源 Agent IDE Orca（stablyai/orca）：直接接入你自己的 Claude Code、Codex 等订阅，主 Agent 拆分大任务，多个 worker 在各自的 git worktree 里并行，最后汇总。同一段对话可在聊天界面和原生命令行间切换，还能用手机远程指挥，或把 Agent 做成 Slack、Linear、GitHub 里的机器人；支持 Mac、Windows、Linux，遥测可以关闭，博主称已有 13.6 万星。",
+        "source_url": "https://x.com/Pluvio9yte/status/2125485780072350040",
+        "time": "2026-11-25T15:04:34+08:00",
+        "handle": "@Pluvio9yte",
+        "impact": "手里有多个编程 Agent 订阅的人，可以用它统一调度、并行跑任务。",
+        "points": [
+          "接入自己的 Claude Code、Codex 订阅",
+          "主 Agent 拆任务，worker 在 worktree 并行",
+          "手机远程、可做成 Slack/GitHub 机器人"
+        ]
+      },
+      {
+        "title": "xnulinux：把 macOS 内核编译成 Linux 内核模块",
+        "summary": "GitHubDaily 介绍开源项目 xnulinux：把苹果开源的 macOS 内核 XNU 编成 Linux 内核模块，加载后能启动完整的 macOS 桌面，访达、Safari、Chrome 都能用，macOS 和 Linux 程序在同一颗 CPU 上并行，中间没有虚拟机这一层。作者在 Apple 芯片 Mac 的 Linux 虚拟机里测得开机到桌面 31～48 秒（作者自测）；仓库不含苹果系统文件，系统盘要用自己的 macOS 安装镜像制作。",
+        "source_url": "https://x.com/GitHub_Daily/status/2125378969344397528",
+        "time": "2026-11-25T08:00:08+08:00",
+        "handle": "@GitHub_Daily",
+        "impact": "对操作系统底层感兴趣的开发者值得一看；目前属于技术实验。",
+        "points": [
+          "XNU 作为 Linux 内核模块运行",
+          "macOS 与 Linux 程序同机并行，无虚拟机层",
+          "需自备 macOS 安装镜像"
+        ]
+      },
+      {
+        "title": "Mole 更新：可清理闲置 AI 工具和失效 Hook",
+        "summary": "Tw93 介绍他的 Mac 清理工具 Mole 新版本：可以清理闲置的 AI 工具、失效的 Hook、已完成的 worktree、找不到项目目录的对话和已卸载 AI 工具的残留，也能卸载装过的命令行工具，分析页支持一次多选删除。他表示自己的产品不加任何遥测，除激活绑定外没有多余的网络请求。",
+        "source_url": "https://x.com/HiTw93/status/2125450228455383474",
+        "time": "2026-11-25T12:43:18+08:00",
+        "handle": "@HiTw93",
+        "impact": "AI 工具装得多的 Mac 用户，可以定期用它清一清残留。",
+        "points": [
+          "清理闲置 AI 工具、失效 Hook、旧 worktree",
+          "可卸载命令行工具",
+          "作者称无遥测"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenClaw 发布 ShellBench：最强 Agent 日常任务成功率 62.5%",
+        "summary": "一周年之际，OpenClaw 发布 ShellBench 基准：100 个真实日常任务、12 个模型、5 种运行框架（harness），共评分 53,100 次运行。最高分只有 62.5%，三次尝试全部通过的仅 48.8%，开源框架表现不输闭源。同日发布的 v2026.11.10 汇总了 8,309 次提交、7,671 个 PR、349 位贡献者。",
+        "source_url": "https://openclaw.ai/blog/shellbench",
+        "time": "2026-11-25T04:33:31+08:00",
+        "handle": "@openclaw",
+        "impact": "选 Agent 时可以参考这份跨模型、跨框架对比；四成日常任务仍会失败，关键操作要留人工检查。",
+        "points": [
+          "100 个任务、12 个模型、5 种框架",
+          "最高 62.5%，三次全过仅 48.8%",
+          "v2026.11.10 同日发布"
+        ]
+      },
+      {
+        "title": "goose v1.61.0：支持 Gemini 4 Neon，可导入 MCP server.json",
+        "summary": "开源 Agent goose 发布 v1.61.0：模型目录加入 Gemini 4 Neon，可直接导入 MCP 的 server.json 配置格式，新增 MCP 扩展和上下文压缩（compaction）操作。通过 ACP 传递的 mcpServers 配置里，请求头一律按密钥处理；另新增 llmman（兼容 Ollama）和 amazee.ai 两个模型提供方。",
+        "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.0",
+        "time": "2026-11-25T11:31:49+08:00",
+        "impact": "goose 用户升级后接 MCP 服务更省事，配置里的请求头也更不容易被明文暴露。",
+        "points": [
+          "支持 Gemini 4 Neon",
+          "可导入 MCP server.json",
+          "ACP 下请求头按密钥处理"
+        ]
+      },
+      {
+        "title": "vLLM-GR：用 vLLM 做生成式推荐推理",
+        "summary": "vLLM 团队推出 vLLM-GR，专门用于生成式推荐：把用户交互历史转成候选商品集合，在加速器上做束搜索（beam search）、加商品目录约束，并共享 KV 缓存。官方附了基准、架构说明和上手文档。",
+        "source_url": "https://x.com/vllm_project/status/2125409455278059747",
+        "time": "2026-11-25T10:01:16+08:00",
+        "handle": "@vllm_project",
+        "impact": "想把大模型用在推荐召回和排序的团队，可以直接基于 vLLM 搭推理服务。",
+        "points": [
+          "加速器上做束搜索",
+          "支持商品目录约束",
+          "共享 KV 缓存"
+        ]
+      },
+      {
+        "title": "KRAFTON Raon-1 mini 正式版：开放权重，推理强度六档可调",
+        "summary": "KRAFTON AI 的 Raon-1 mini 结束预览、正式发布：Agent 能力更强，多轮对话保持自然，推理强度可在 none、low、medium、high、xhigh、max 六档间设置。权重和配套的 DFlash 草稿模型以 Apache 2.0 许可放在 Hugging Face。",
+        "source_url": "https://huggingface.co/KRAFTON/Raon-1-mini",
+        "time": "2026-11-25T02:15:04+08:00",
+        "handle": "@Krafton_AI",
+        "impact": "需要可商用小模型、又想按任务调推理成本的开发者可以试用。",
+        "points": [
+          "结束预览正式发布",
+          "推理强度六档可调",
+          "Apache 2.0 开放权重"
+        ]
+      },
+      {
+        "title": "Google Antigravity 支持 MCP Apps，聊天里直接嵌交互界面",
+        "summary": "Google Antigravity 宣布支持 MCP Apps，Agent 可以在工作区里直接生成交互式图表、沙箱、发布看板和自定义文件查看器；Datadog、CodeRabbit、Vercel、Qodo 等插件已接入，比如在对话里直接看 Datadog 实时图表、查 Vercel 部署状态。官方还推出 Modern Web Guidance Skill，可给现有 HTML 表单加上声明式 WebMCP 工具，让网页更容易被 AI Agent 调用。",
+        "source_url": "https://x.com/antigravity/status/2125315892695216483",
+        "time": "2026-11-25T03:49:29+08:00",
+        "handle": "@antigravity",
+        "impact": "用 Antigravity 的开发者可以少切窗口；做网站的人也可以考虑让表单直接被 Agent 调用。",
+        "points": [
+          "支持 MCP Apps 交互界面",
+          "Datadog、Vercel 等插件已接入",
+          "WebMCP Skill 让表单可被 Agent 调用"
+        ]
+      },
+      {
+        "title": "MiniMax H3 开源家族：3 个月下载超 1.8 亿次",
+        "summary": "MiniMax 公布开源图像/视频模型 H3 家族的数据：3 个月下载超过 1.8 亿次，基于 H3 的衍生模型超过 1,600 个（自报）。家族现有 5 个旗舰模型（3 个视频、2 个图像），以及 fal、Suno、HeyGen、Pika 等合作方基于 H3 做的 10 个专用模型。",
+        "source_url": "https://www.minimax.io/h3-family",
+        "time": "2026-11-25T00:55:51+08:00",
+        "handle": "@MiniMax_AI",
+        "impact": "想本地跑视频、图像生成的创作者，可以在 H3 家族里按需挑选。",
+        "points": [
+          "3 个月下载超 1.8 亿次（自报）",
+          "5 个旗舰模型 + 10 个合作方专用模型"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "obra/superpowers：给编程 Agent 的整套开发方法论",
+        "summary": "superpowers 是一套给编程 Agent 用的软件开发方法论，由可组合的 Skills 和一组起始指令组成，确保 Agent 按流程使用这些技能；支持 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Pi、Hermes Agent 等，MIT 许可。今天在 GitHub 热榜新增约 1,003 星，总星数约 32.6 万。",
+        "source_url": "https://github.com/obra/superpowers",
+        "time": "2026-11-25T18:04:00+08:00",
+        "impact": "想让编程 Agent 按固定流程干活（先计划、再测试、再提交）的开发者可以直接套用。",
+        "points": [
+          "可组合 Skills + 开发流程",
+          "支持 Claude Code、Codex、Pi、Hermes 等",
+          "今日新增约 1,003 星"
+        ]
+      },
+      {
+        "title": "OpenSRE：开源的 CI/CD 可靠性 Agent",
+        "summary": "Tracer Cloud 开源的 OpenSRE 是一个面向 CI/CD 可靠性的 Agent，在代码项目的终端里安装启动即可使用，Apache 2.0 许可。项目自称处于公开 Alpha 阶段，核心流程可用但还不稳定；今天在 GitHub 热榜新增约 398 星，总星数约 1.5 万。",
+        "source_url": "https://github.com/Tracer-Cloud/opensre",
+        "time": "2026-11-25T18:04:00+08:00",
+        "impact": "被流水线故障折腾的小团队可以试用，但目前还是 Alpha，别直接放进生产流程。",
+        "points": [
+          "面向 CI/CD 可靠性的 Agent",
+          "Apache 2.0，公开 Alpha",
+          "今日新增约 398 星"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "Gemini 新增设置：保留聊天记录，但不拿来训练",
+        "summary": "谷歌正在广泛推送 Gemini 新的隐私选项：在 gemini.google.com 设置最底部的「Gemini History」里，可以单独关闭「聊天内容（含文字和附件）用于训练生成式 AI 模型」，同时保留聊天记录。该项默认开启，关闭后今后的聊天不会用于训练（除非你主动提交反馈）；音频、Gemini Live 视频和屏幕共享的训练仍需用户主动开启。",
+        "source_url": "https://9to5mac.com/2026/11/24/gemini-history-ai-training/",
+        "time": "2026-11-25T05:11:32+08:00",
+        "handle": "@9to5mac",
+        "impact": "用 Gemini 又在意隐私的人，现在可以关掉训练选项，不必为此放弃聊天记录。",
+        "points": [
+          "可单独关闭聊天内容用于训练",
+          "默认开启，需手动关闭",
+          "聊天记录可继续保留"
+        ]
+      },
+      {
+        "title": "Google Messages 里的 Gemini 换成会主动提醒的「任务」对话",
+        "summary": "9to5Google 发现，Google Messages 测试版（20261120_01_RC00）里的 Gemini 入口改为打开新的「任务」对话，基于上周推出的 Channels 功能和 RCS 商务消息实现。它会主动发消息，比如每天早上告诉你当天日程和需要留意的事，也能回答一般问题、接收图片和文件；目前仅限美国，需要先在 Gemini 应用里开启任务功能。",
+        "source_url": "https://9to5google.com/2026/11/24/google-messages-gemini-tasks/",
+        "time": "2026-11-25T06:11:32+08:00",
+        "handle": "@9to5Google",
+        "impact": "AI 助手开始从「你问它答」变成主动找你，短信可能成为新的入口。",
+        "points": [
+          "Gemini 入口改为「任务」对话",
+          "每天主动推送日程提醒",
+          "目前仅限美国"
+        ]
+      },
+      {
+        "title": "Meta 把 Muse Agent 接进 Instagram 私信，新加坡在首批地区",
+        "summary": "Meta 的 AI Agent Muse 开始进入 Instagram 私信：可以在私信里和它聊某条帖子，或让它把收藏的帖子整理成合集、旅行行程和菜谱购物清单。Meta 称未经用户许可 Muse 不会做改动或执行操作；私信功能首批在美国、加拿大、墨西哥、日本和新加坡推出。",
+        "source_url": "https://www.macrumors.com/2026/11/24/meta-muse-instagram-dms/",
+        "time": "2026-11-25T06:12:25+08:00",
+        "handle": "@MacRumors",
+        "impact": "在新加坡用 Instagram 的人很快能用到；让它整理收藏前，留意它能读到哪些内容。",
+        "points": [
+          "在私信里直接和 Muse 对话",
+          "可把收藏整理成合集、行程、清单",
+          "首批含新加坡"
+        ]
+      },
+      {
+        "title": "Tidal 将下架纯 AI 生成的音乐",
+        "summary": "流媒体平台 Tidal 宣布禁止完全由 AI 生成的歌曲：过去 90 天上传的曲目里有 43% 被标记为 AI 生成，约 2,900 万首将被删除，预计每天拒收 8 万到 8.5 万首。AI 歌曲 12 月 9 日开始下架，2027 年初全部清除，AI 辅助创作的作品不受影响；Apple Music 没有禁止，而是要求标注「Made With AI」。",
+        "source_url": "https://www.macrumors.com/2026/11/24/tidal-ai-music-ban/",
+        "time": "2026-11-25T07:44:44+08:00",
+        "handle": "@MacRumors",
+        "impact": "做 AI 音乐的创作者要注意各平台规则分化，同一首歌可能在一处下架、在另一处要标注。",
+        "points": [
+          "约 2,900 万首 AI 歌曲将被删除",
+          "12 月 9 日开始下架",
+          "Apple Music 选择标注而非禁止"
+        ]
+      },
+      {
+        "title": "Cloudflare Artifacts：给 Agent 用的 Git 兼容存储",
+        "summary": "Cloudflare 推出 Artifacts，一种为 AI Agent 设计、带版本管理、兼容 Git 的存储：可以按需创建上百万个仓库，从任意位置分叉，把一个 URL 交给任何 Git 客户端就能读写。开发者在 Workers 里几行代码就能创建、导入、分叉仓库，并签发限时的只读凭证。",
+        "source_url": "https://www.cloudflare.com/products/artifacts/",
+        "time": "2026-11-25T10:19:17+08:00",
+        "handle": "@CloudflareDev",
+        "impact": "需要给每个 Agent 或每个用户单独开代码仓库的产品，可以省掉自建 Git 服务。",
+        "points": [
+          "Git 兼容、带版本管理",
+          "可按需创建上百万个仓库",
+          "Workers 里几行代码即可管理"
+        ]
+      },
+      {
+        "title": "Firefox 161：内置 VPN 可按网站设置开关",
+        "summary": "Mozilla 11 月 24 日发布 Firefox 161，桌面版内置免费 VPN 支持按网站设规则：把某个网站设为「始终开启」或「始终关闭」，没设规则的网站跟随总开关，入口在工具栏 VPN 面板或「设置 → 隐私与安全 → VPN」。内置 VPN 只代理浏览器流量，需要登录 Mozilla 账号并看所在地区是否开放；2027 年 1 月 31 日前流量不限。",
+        "source_url": "https://blog.mozilla.org/en/firefox/firefox-161-updates/",
+        "time": "2026-11-25T02:44:00+08:00",
+        "impact": "想让银行网站不走 VPN、比价网站走 VPN 的用户，不用再反复手动切换。",
+        "points": [
+          "按网站设置 VPN 始终开或关",
+          "只代理浏览器流量",
+          "2027 年 1 月 31 日前不限流量"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "跨品牌「一碰传」上线：OPPO、荣耀、vivo、小米手机互传",
+        "summary": "互传联盟 11 月 24 日宣布，OPPO、荣耀、vivo、小米共建的跨品牌「一碰传」正式上线（上期未收录）：选中照片、视频或文档，两台兼容手机靠近即可直传，系统内置、不用装应用，不经云端中转、不耗流量，图片视频保留原画质。荣耀官网写明 Magic9 系列首发、其他机型后续 OTA，OPPO、vivo、小米需升级到各自最新系统；完整机型名单和传输速度尚未公布。",
+        "source_url": "https://www.honor.com/cn/tech/connect/",
+        "time": "2026-11-24T15:54:00+08:00",
+        "impact": "家里人用不同品牌安卓手机的，以后传原图原视频不必再靠聊天软件或网盘；先确认两台手机的系统都已升级。",
+        "points": [
+          "四家厂商共建，系统内置",
+          "不经云端、不耗流量、原画质",
+          "荣耀 Magic9 首发，其他机型后续 OTA"
+        ]
+      },
+      {
+        "title": "n8n 三项更新：AI 偏好设置、API 限流、进驻 Antigravity",
+        "summary": "n8n 一天内发布三项更新：新增 Context 功能，可用自然语言告诉 n8n 的 AI 你的工作习惯，对个人或整个实例生效（设置 → Context → Preferences）；从 2.47.0 起，管理员可以给每个 API 密钥设请求上限，云端和自托管的所有套餐都可用。n8n 还进入 Google Antigravity 插件市场，插件包含 n8n 的 MCP 服务器和 Skills，Agent 能直接搭建并运行工作流。",
+        "source_url": "https://x.com/n8n_io/status/2125499797989650501",
+        "time": "2026-11-25T16:00:16+08:00",
+        "handle": "@n8n_io",
+        "impact": "自托管 n8n 的用户可以给每个 API 密钥设上限，防止一个失控的工作流拖垮整台实例。",
+        "points": [
+          "Context：用自然语言设定 AI 偏好",
+          "2.47.0 起可按 API 密钥限流",
+          "进入 Antigravity 插件市场"
+        ]
+      },
+      {
+        "title": "妙言 MiaoYan：Markdown 笔记靠 iCloud Drive 在苹果设备间同步",
+        "summary": "Tw93 介绍他做的轻量 Markdown 笔记应用妙言（MiaoYan）：支持 Mac、iPhone 和 iPad，左边写、右边预览，能渲染代码、Mermaid 图和 LaTeX 公式。笔记保存为你自选文件夹里的纯 Markdown 文件，通过 iCloud Drive 同步。",
+        "source_url": "https://miaoyan.app",
+        "time": "2026-11-24T22:02:00+08:00",
+        "handle": "@HiTw93",
+        "impact": "想让笔记文件归自己、又要苹果全家同步的人，可以试试这种「纯文件 + iCloud」的方案。",
+        "points": [
+          "支持 Mac、iPhone、iPad",
+          "笔记是纯 Markdown 文件",
+          "通过 iCloud Drive 同步"
+        ]
+      }
+    ]
+  }
+}

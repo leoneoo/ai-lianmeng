@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-24T18:22:11+08:00",
+  "updated_at": "2026-11-25T18:21:37+08:00",
   "editions": [
+    {
+      "id": "2026-11-25-1800",
+      "published_at": "2026-11-25T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-25-1800.json",
+      "counts": {
+        "x_daily": 15,
+        "zh_topics": 6,
+        "en_topics": 0,
+        "oss_agent": 8,
+        "tech": 6,
+        "iot": 3
+      },
+      "headline": "OpenAI 预印本称矩阵乘法指数恰为 9/4；Claude 小工具可装成桌面应用"
+    },
     {
       "id": "2026-11-24-1800",
       "published_at": "2026-11-24T18:00:00+08:00",
