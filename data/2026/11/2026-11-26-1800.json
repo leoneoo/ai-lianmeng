@@ -1,0 +1,497 @@
+{
+  "id": "2026-11-26-1800",
+  "published_at": "2026-11-26T18:00:00+08:00",
+  "headline": "Google 智能体一天发六篇数学论文；GPT-6.2 计费修正后额度消耗变快",
+  "sections": {
+    "x_daily": [
+      {
+        "title": "Google 智能体 Cogentic 一次发布六篇数学论文，称无条件证明大整数分解可达数域筛指数",
+        "summary": "11 月 25 日，Google Research 在公开仓库 google-research 一次提交六篇由数学发现智能体 Cogentic 生成的论文，基座模型是 Gemini 4。最受关注的一篇声称给出一个不依赖任何未证明假设的随机算法（结果必定正确），能在期望时间 L_N[1/3, 105] 内完整分解任意整数，占用空间 L_N[1/3, 40]，并用 AKS 素性检验逐个认证质因子。论文说，除最初的提示词外整个证明过程没有人工参与；另外五篇涉及有限域离散对数、双矩阵博弈近似纳什均衡、对数秩猜想、图的边重构等问题。",
+        "source_url": "https://github.com/google-research/google-research/commit/4a7bc8ab0bc770e71a259b7966c500496b99010a",
+        "time": "2026-11-25T18:11:06+08:00",
+        "impact": "做密码学、计算数论和复杂度理论的研究者值得细读；RSA 等现有加密不受影响，结论成立与否要等形式化文件和同行审稿。",
+        "points": [
+          "六篇论文由 Gemini 4 智能体 Cogentic 生成，仅初始提示有人参与",
+          "整数分解：无条件 L_N[1/3, 105]，旧的严格界为 1992 年的 L_N[1/2, 1]",
+          "常数 105 远大于数域筛约 1.92，不影响现实 RSA",
+          "Lean 4 形式化尚未公开，未经同行审稿"
+        ],
+        "tag": "待同行审核"
+      },
+      {
+        "title": "OpenAI 修正 GPT-6.2 计费错误：Astra 额度消耗快 40%，补一次重置",
+        "summary": "11 月 26 日上午，OpenAI 的 Thibault Sottiaux 承认，GPT-6.2 上线时的计费错误让多数用户的 GPT-6.2 Astra 和 Sol 用量被少算了。现已修正，同样的工作会占用更多套餐额度：和上周相比，GPT-6.2 Astra 触顶快 40%，多方转述他的原帖称 Sol 快 25%。作为补偿，据多方转述，Go、Plus、Pro、Business 用户各得到一次「储备重置」（banked reset），他当天下午确认已上线；过去的用量不追溯收费。",
+        "source_url": "https://x.com/thsottiaux/status/2125784147889393806",
+        "time": "2026-11-26T10:50:10+08:00",
+        "handle": "@thsottiaux",
+        "impact": "用 ChatGPT、Codex 付费套餐写代码的人，本周可用量会明显变少；建议先查看用量面板，把储备重置留到真正需要时再用。",
+        "points": [
+          "计费错误让 GPT-6.2 Astra、Sol 用量被少算",
+          "修正后 Astra 触顶快 40%，Sol 约快 25%",
+          "补发一次储备重置，过去用量不追溯"
+        ]
+      },
+      {
+        "title": "Anthropic 用 Claude 智能体把 Messages API 从 Python 迁到 Rust，CPU 省约 70%",
+        "summary": "11 月 25 日，Anthropic 工程博客披露，已把 Claude 的核心接口 Messages API 从 Python 迁移到 Rust。这个接口承载外部客户以及 Claude Code、Cowork 等自家应用的调用，2024 年初到 2026 年秋流量增长约 1800 倍。Claude 约一周写出核心请求路径的初版，难点在验证：团队把线上 Python 服务本身当作「验证器」，用生产流量对比两版输出，再自动派出多组 Claude 智能体定位并修复差异。",
+        "source_url": "https://www.anthropic.com/research/migrating-api-to-rust",
+        "time": "2026-11-26T00:26:59+08:00",
+        "handle": "@AnthropicAI",
+        "impact": "维护老旧大型代码库的团队可以参考这套「旧系统当验证器」的做法；Claude API 用户可能会感到首字延迟略有改善。",
+        "points": [
+          "Messages API 从 Python 迁到 Rust，不停服",
+          "每请求 CPU 少约 70%，首 token 中位延迟快约 20%",
+          "线上旧服务充当验证器，智能体自动修差异"
+        ]
+      },
+      {
+        "title": "OpenAI 开始小范围测试 Private Inference，模型运行时也保护企业数据",
+        "summary": "11 月 25 日，Sam Altman 宣布，OpenAI 正与一小批企业客户测试 Private Inference，它属于 OpenAI 的企业隐私方案 Private Intelligence。Greg Brockman 解释，这是机密计算（Confidential Computing）：模型处理提示词和回复的过程中，也有严格控制保护这些内容。OpenAI 产品页把它标为 Alpha，只对「符合条件的工作流」开放，需填表申请。",
+        "source_url": "https://x.com/sama/status/2125638790593274259",
+        "time": "2026-11-26T01:12:34+08:00",
+        "handle": "@sama",
+        "impact": "处理敏感数据的企业多了一个可评估的选项；能否大规模用，还要看价格、支持哪些模型和扩容进度。",
+        "points": [
+          "机密计算保护处理中的提示词和回复",
+          "产品页标为 Alpha，仅限符合条件的企业工作流",
+          "未公布价格、支持模型和上线时间"
+        ]
+      },
+      {
+        "title": "Perplexity 推出 Time Machine：让模型看到任意历史日期的网页",
+        "summary": "11 月 25 日，Perplexity CEO Aravind Srinivas 宣布推出 Perplexity Time Machine：开发者可以指定一个日期，让模型看到当天原样的互联网。它已在 Perplexity 的 Search API 和 Context API 中上线，主要用途是后训练（Post-training）擅长预测未来的智能体：把网页冻结在过去某天，让智能体做预测，再用后来真实发生的事评分。",
+        "source_url": "https://x.com/AravSrinivas/status/2125707364053680383",
+        "time": "2026-11-26T05:45:03+08:00",
+        "handle": "@AravSrinivas",
+        "impact": "做预测、投研、事件回测类智能体的开发者可以直接试用；对普通 Perplexity 用户暂无变化。",
+        "points": [
+          "按指定日期返回当时的网页",
+          "已在 Search 与 Context API 上线",
+          "用于训练、评测预测类智能体，避免答案泄露"
+        ]
+      },
+      {
+        "title": "微软开源 Windows 端侧小模型 Aion 1.0 Instruct（2.3B，MIT）",
+        "summary": "11 月 25 日，微软在 Hugging Face 发布 Aion 1.0 Instruct，2.3B 参数、从零训练、MIT 许可。模型卡写明它是 Windows 生态的基础小模型，面向端侧和操作系统场景，上下文 32K，可在本机处理多页文档、长邮件和技术规格；训练数据延续上一代 Windows 端侧模型 Phi Silica。",
+        "source_url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+        "time": "2026-11-26T02:16:14+08:00",
+        "handle": "@MohsenFyz",
+        "impact": "想在本地跑轻量模型的开发者多了一个可商用的选择；Windows 用户以后系统内置的 AI 功能可能换成它，上线时间以微软官方为准。",
+        "points": [
+          "2.3B，从零训练，MIT 许可",
+          "上下文 32,768，21 层滑窗 + 7 层全注意力",
+          "定位 Windows 端侧基础模型，延续 Phi Silica 数据"
+        ]
+      },
+      {
+        "title": "腾讯 Hy4 Flash 上 Fireworks，每百万输出 token 0.281 美元",
+        "summary": "11 月 25 日，Fireworks 上线腾讯开放权重模型 Hy4 Flash：约 220B 总参数、每 token 激活约 12B 的混合专家模型，原生 1M 上下文（Fireworks 首发 512K），支持文本和图片输入，价格为每百万输入 token 0.07 美元、输出 0.281 美元。Fireworks 自测称它在 CorporateBench 上略胜 Claude Opus 5.5，单任务成本 0.013 美元对 2.80 美元。OpenCode 称 Hy4 Flash 目前每天处理 10 万亿 token，并在 OpenCode 上限时免费到本周末。",
+        "source_url": "https://fireworks.ai/blog/hy4-flash-on-fireworks",
+        "time": "2026-11-26T13:46:13+08:00",
+        "handle": "@TencentHunyuan",
+        "impact": "做文档处理、办公类智能体的开发者可以把它当成低价备选；性能对比是 Fireworks 自测，上线前最好用自己的任务复核。",
+        "points": [
+          "约 220B 总参 / 12B 激活，1M 上下文",
+          "Fireworks 价格：输入 $0.07、输出 $0.281 每百万 token",
+          "OpenCode：日处理 10 万亿 token，限时免费到周末"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Qwen-Audio-3.1 加强多语言能力，重点支持中文方言",
+        "summary": "11 月 26 日，通义千问宣布为此前发布的 Qwen-Audio-3.1 语音基础模型系列加入增强的多语言能力，重点是中文方言。官方帖附有能力说明图，具体支持的方言清单和评测数据以官方页面为准。",
+        "source_url": "https://x.com/Alibaba_Qwen/status/2125798914490249411",
+        "time": "2026-11-26T11:48:51+08:00",
+        "handle": "@Alibaba_Qwen",
+        "impact": "做语音输入、客服或字幕的国内开发者，方言识别多了一个可选模型；效果要用实际方言样本测试。",
+        "points": [
+          "Qwen-Audio-3.1 系列更新多语言能力",
+          "重点加强中文方言"
+        ]
+      },
+      {
+        "title": "alphaXiv 研究智能体自选课题，4 天刷新 50 项装箱问题纪录",
+        "summary": "11 月 25 日，论文平台 alphaXiv 称，他们让一个研究智能体自由选择课题，4 天后它在计算几何中出了名难的装箱（packing）问题上刷新了 50 项已知纪录。其中一例：在边长 7+1/√2 的立方体里放下 376 个单位立方体，此前最好纪录是 373 个。",
+        "source_url": "https://x.com/askalphaxiv/status/2125626062797463814",
+        "time": "2026-11-26T00:22:00+08:00",
+        "handle": "@askalphaxiv",
+        "impact": "做组合优化和自动化科研的人值得关注；这是 alphaXiv 自报结果，纪录是否成立要看具体构造能否被复核。",
+        "points": [
+          "智能体自选课题，4 天刷新 50 项纪录",
+          "例：边长 7+1/√2 立方体装下 376 个单位立方体（原 373）"
+        ],
+        "tag": "自报"
+      },
+      {
+        "title": "Together AI 开源 Hurdle：测编程智能体能否用好你的 API",
+        "summary": "Together AI 开源内部用了半年的智能体评测库 Hurdle（npm 包）。写好任务后，它让 Claude Code 和 Codex 在你的 API、文档、MCP 和 Skills 上真实执行，用代码检查、防护规则和 LLM 评审打分，按模型和条件给出通过率。上手只需运行 npx hurdle init，也可以让智能体自己配置。",
+        "source_url": "https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs",
+        "time": "2026-11-26T05:52:07+08:00",
+        "handle": "@togethercompute",
+        "impact": "给开发者做平台、SDK 的团队，可以用它量化「智能体好不好用你的产品」。",
+        "points": [
+          "开源 npm 库，跑 Claude Code 与 Codex",
+          "代码检查 + 防护规则 + LLM 评审打分",
+          "按模型和条件出通过率"
+        ]
+      },
+      {
+        "title": "SGLang 发布 1.0 并成立 SGLang 联盟，黄仁勋、苏姿丰致辞",
+        "summary": "开源推理引擎 SGLang 在 SGLang Summit 2026 上宣布 1.0 里程碑并成立 SGLang Consortium（联盟）。英伟达 CEO 黄仁勋和 AMD CEO 苏姿丰分别录视频致辞，谈双方与 SGLang 社区的合作。",
+        "source_url": "https://x.com/sgl_project/status/2125637531589074946",
+        "time": "2026-11-26T01:07:34+08:00",
+        "handle": "@sgl_project",
+        "impact": "用 SGLang 部署开源模型的团队，可以留意联盟成立后版本节奏和硬件支持的变化。",
+        "points": [
+          "SGLang 迎来 1.0 里程碑",
+          "成立 SGLang Consortium，英伟达、AMD 站台"
+        ]
+      },
+      {
+        "title": "Gemini 新增 60 多种带口音的语音，Live 引导视觉上线 iOS",
+        "summary": "Gemini App 新增 60 多种带当地口音的表达型语音，覆盖美国、英国、印度、印尼、韩国和巴西，可在设置里选择。Gemini Live 的「引导视觉」（Guided Vision）也已上线 iOS，打开摄像头即可在屏幕上获得实时指引。",
+        "source_url": "https://x.com/GeminiApp/status/2125629066006950339",
+        "time": "2026-11-26T00:33:56+08:00",
+        "handle": "@GeminiApp",
+        "impact": "用 Gemini 语音对话的 iPhone 用户可以试试实时摄像头指引和新音色。",
+        "points": [
+          "60 多种带口音的语音，覆盖 6 个国家",
+          "Gemini Live 引导视觉上线 iOS"
+        ]
+      },
+      {
+        "title": "前 Claude Code 团队成员 Thariq 本人确认加入 OpenAI",
+        "summary": "上期按传闻未收的消息已由本人确认：曾在 Anthropic 参与 Claude Code 的 Thariq 11 月 25 日发帖宣布加入 OpenAI，称会继续为前同事加油。中文博主 meng shao 提到，此前 Cat Wu 也已从 Anthropic 转去 OpenAI。",
+        "source_url": "https://x.com/trq212/status/2125675533761671405",
+        "time": "2026-11-26T03:38:35+08:00",
+        "handle": "@trq212",
+        "impact": "编程智能体领域的人才在两家之间流动频繁，Codex 后续产品方向值得留意。",
+        "points": [
+          "Thariq 本人宣布加入 OpenAI",
+          "此前 Cat Wu 也已加入 OpenAI（博主转述）"
+        ]
+      },
+      {
+        "title": "Karpathy：Opus 5.5 用 7 小时写 4.5 万行代码，把美国真实数据做成文明式地图",
+        "summary": "Andrej Karpathy 分享，他让 Claude 用美国真实数据填充一张《文明》风格的游戏地图，Opus 5.5 自行下载并解析了人口普查、BEA、BLS、EIA、NOAA、USGS、FAA、FEMA 等 31 个公开数据源。7 小时、约 4.5 万行代码之后，整个程序成功跑通。",
+        "source_url": "https://x.com/karpathy/status/2125779541952246039",
+        "time": "2026-11-26T10:31:52+08:00",
+        "handle": "@karpathy",
+        "impact": "长时间自主执行的编程智能体已能独立完成「找数据、清洗、写可视化」的整套工作，适合拿来做数据类个人项目。",
+        "points": [
+          "31 个美国公开数据源",
+          "约 7 小时、4.5 万行代码一次跑通"
+        ]
+      },
+      {
+        "title": "Bending Spoons：每位工程师 PR 数翻 4 倍，每个 PR 推理成本减半",
+        "summary": "Kilo 博客引用 Bending Spoons 11 月 19 日的三季度财报：今年以来公司每位工程师提交的 PR 数是 1 月的 4 倍多，每个 PR 的 AI 推理成本降约一半（较年中高峰降 90% 以上）。做法是多数任务交给自托管的开放权重模型，最难的任务和复核交给闭源模型，自建的智能体框架不绑定任何一家厂商。",
+        "source_url": "https://blog.kilo.ai/p/bending-spoons-cut-ai-cost-per-pr",
+        "time": "2026-11-26T04:18:24+08:00",
+        "handle": "@kilocode",
+        "impact": "在算 AI 编程成本的团队可以参考这种「开放模型干大部分活、闭源模型把关」的分工。",
+        "points": [
+          "每工程师 PR 数为 1 月的 4 倍多",
+          "每 PR 推理成本降约 50%",
+          "多数任务用自托管开放权重模型"
+        ],
+        "tag": "自报"
+      }
+    ],
+    "zh_topics": [
+      {
+        "title": "「Agent-Native Computer Use」：智能体自建 MCP，FreeCAD 任务快 55 倍",
+        "summary": "meng shao 介绍 MIT 的 Ao Qu、Paul Liang 与 REA 团队等提出的「Agent-Native Computer Use」：不让智能体像人一样点界面，而是允许它为自己改写操作环境、自建 MCP 工具。研究者称在 FreeCAD 任务上速度快 55 倍、token 用量少 35 倍。",
+        "source_url": "https://x.com/shao__meng/status/2125794440963035505",
+        "time": "2026-11-26T11:31:04+08:00",
+        "handle": "@shao__meng",
+        "impact": "做电脑操作类智能体的人可以参考「先造工具再干活」的思路，比模拟鼠标点击省得多。",
+        "points": [
+          "智能体为自己改写环境、自建 MCP",
+          "FreeCAD 任务快 55 倍、token 少 35 倍（研究者自报）"
+        ]
+      },
+      {
+        "title": "T3 Code、Orca、Mira 怎么在不同智能体间同步上下文",
+        "summary": "WquGuru 对比了三款多智能体编程工具如何在 Claude Code、Codex 等之间传递上下文。以 T3 Code 为例：它用 ~/.t3/userdata/statev2.sqlite 做事件溯源，专门建了 context_handoffs 和 context_transfers 表，从 Claude Code 切到 Codex 时会触发 create_with_handoff 事件，把上下文注入新会话。",
+        "source_url": "https://x.com/wquguru/status/2125804708539551761",
+        "time": "2026-11-26T12:11:52+08:00",
+        "handle": "@wquguru",
+        "impact": "同时用多个编程智能体的人，可以据此判断哪款工具切换时不丢上下文。",
+        "points": [
+          "T3 Code 用 SQLite 事件溯源记录交接",
+          "切换智能体时触发 create_with_handoff 注入上下文"
+        ]
+      },
+      {
+        "title": "yetone：在 Magpie 里统一管理 MCP，一次登录多个智能体共用",
+        "summary": "avante.nvim 作者 yetone 解释在 Magpie 里统一管理 MCP 的好处：Notion、Linear 这类需要授权的 MCP 服务只要在 Magpie 登录一次，就能在任意智能体之间切换使用，不必每换一个重登一次。MCP 服务的版本更新、安装和卸载也集中维护。",
+        "source_url": "https://x.com/yetone/status/2125882529932816573",
+        "time": "2026-11-26T17:21:06+08:00",
+        "handle": "@yetone",
+        "impact": "同时用好几个编程智能体的人，可以少做很多重复的 MCP 配置和授权。",
+        "points": [
+          "授权型 MCP 一次登录，多智能体共用",
+          "集中管理 MCP 的更新、安装与卸载"
+        ]
+      },
+      {
+        "title": "Orange AI 整理一批「去 AI 味」Skill：文章、排版到 Logo 字体",
+        "summary": "Orange AI 分享自己整理的一组去除「AI 味」的 Skill，覆盖文章、排版设计、Logo 和字体设计，称能让 DeepSeek Flash 这类模型的产出也有高级感。例如 ste80-humanizer 专治「不是……而是……」、三连排比和满屏破折号，分两遍改写：先清掉习惯用语，再重组句子。",
+        "source_url": "https://x.com/oran_ge/status/2125789243134124334",
+        "time": "2026-11-26T11:10:25+08:00",
+        "handle": "@oran_ge",
+        "impact": "用 AI 写稿、做设计的人可以直接拿来用，减少一眼就能看出的模板腔。",
+        "points": [
+          "覆盖文章、排版、Logo、字体",
+          "ste80-humanizer：两遍改写去套话"
+        ]
+      },
+      {
+        "title": "宝玉预告：Cindy 将集成 /artifacts，可做文档、幻灯片和白板",
+        "summary": "宝玉预告 Cindy 即将集成 /artifacts，可以创建文档、幻灯片、白板和设计网页。背后是开源项目 Open Artifact，它能接入各种智能体框架，生成的 Artifact 既可存在本机，也能部署到自己的服务器。",
+        "source_url": "https://x.com/dotey/status/2125813177317196196",
+        "time": "2026-11-26T12:45:31+08:00",
+        "handle": "@dotey",
+        "impact": "想要类似 Claude Artifacts 又希望数据留在自己手里的人，可以关注这个开源方案。",
+        "points": [
+          "Cindy 将支持文档、幻灯片、白板、网页",
+          "基于开源 Open Artifact，可本地保存或自部署"
+        ]
+      },
+      {
+        "title": "飞书文档出现故障：编辑无法同步、附件加载失败",
+        "summary": "Max For AI 11 月 26 日下午报告，飞书文档出现故障，微博上不少用户也在反馈。问题包括文档编辑内容无法同步、图片和附件加载失败、文件上传与导出异常，飞书自己也弹窗建议用户先复制全文，以免内容丢失。",
+        "source_url": "https://x.com/MaxForAI/status/2125847699836850623",
+        "time": "2026-11-26T15:02:42+08:00",
+        "handle": "@MaxForAI",
+        "impact": "用飞书文档协作的团队，今天下午改过的重要文档最好核对一遍有没有同步成功。",
+        "points": [
+          "编辑不同步、附件加载失败、导出异常",
+          "飞书弹窗建议先复制全文防丢失"
+        ]
+      }
+    ],
+    "oss_agent": [
+      {
+        "title": "OpenCode 把 codemode 运行时开源成独立项目 psychoscript",
+        "summary": "OpenCode 团队把驱动其 codemode 的运行时抽成独立项目 psychoscript：纯 JavaScript 包（Node 24+ 或 Bun 1.4+），不需要 WASM、原生插件或 worker，可直接执行 JS，并能在中途暂停、把状态存成字节、之后恢复运行。官网称通过 19,408 个 test262 测试，MIT 许可；Rust 版正在开发，供原生应用把 JS 当脚本语言用。",
+        "source_url": "https://psychoscript.com/",
+        "time": "2026-11-26T05:23:52+08:00",
+        "handle": "@opencode",
+        "impact": "想给自己的智能体加「代码模式」或插件脚本的开发者，可以少造一个沙箱运行时。",
+        "points": [
+          "纯 JS 运行时，无 WASM、无 worker",
+          "可暂停、序列化、恢复执行",
+          "MIT 许可，Rust 版在做"
+        ]
+      },
+      {
+        "title": "OpenCode v2.4.2：适配 GPT-6.2，网页抓取「始终允许」改为只限该站点",
+        "summary": "OpenCode v2.4.2 为 GPT-6.2 Sol、Astra 写了专用系统提示词；网页抓取的「始终允许」现在只放行当前站点，不再放行所有网址；自动化任务失败一次后不再暂停。另外，接入了带视频模型的服务商后，OpenCode 新增视频生成工具，OpenCode Console 用户可用 Grok Imagine 和 Gemini Omni。",
+        "source_url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
+        "time": "2026-11-26T08:59:05+08:00",
+        "handle": "@opencode",
+        "impact": "用 OpenCode 的人升级后权限更收紧；旧版本保存的「始终允许」不会自动改，建议检查一遍。",
+        "points": [
+          "GPT-6.2 专用系统提示词",
+          "网页抓取「始终允许」只限单个站点",
+          "新增视频生成工具"
+        ]
+      },
+      {
+        "title": "Pi v1.6.1：codemode 可调用决策模型，提示开关拆细",
+        "summary": "Mario Zechner 的编程智能体 Pi 发布 v1.6.1：codemode 的 models.classify() 现在可调用 GitHub Copilot 的 gpt-6-luna-decisions 和 Radius 决策模型。缓存未命中、缓存预热、压缩成本、推理丢弃四类提示各有独立开关（旧的 showCacheMissNotices 设置会自动迁移，属不兼容改动）。",
+        "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.6.1",
+        "time": "2026-11-25T21:41:35+08:00",
+        "impact": "用 Pi 写扩展的开发者要按新接口 getNotices()/setNotice() 改代码。",
+        "points": [
+          "models.classify() 支持决策模型",
+          "四类成本提示独立开关",
+          "showCacheMissNotices 被替换"
+        ]
+      },
+      {
+        "title": "goose v1.61.1 修复安全问题：导入会话不再带工具授权状态",
+        "summary": "goose 发布 v1.61.1：导入的会话会丢弃原有的工具授权状态，防止加载会话时自动执行工具。另外，会话加载和分叉时不再重新渲染配方模板；桌面版移除 dotenv，避免意外加载环境变量。",
+        "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.1",
+        "time": "2026-11-26T08:09:20+08:00",
+        "impact": "会从别人那里导入 goose 会话的用户建议尽快升级到 v1.61.1。",
+        "points": [
+          "导入会话丢弃工具授权，防自动执行",
+          "桌面版移除 dotenv"
+        ]
+      },
+      {
+        "title": "Cline v4.1.28：OpenAI 列表移除 gpt-4o、gpt-5、o3 等旧模型",
+        "summary": "Cline v4.1.28 刷新模型目录：OpenAI 提供方不再列出上游已标记弃用的 gpt-4o、gpt-4.1、gpt-5、gpt-5-mini、gpt-5.1、gpt-5.3-codex、o3 和 o3-pro，ChatGPT 订阅下也不再列出 gpt-5.3-codex-spark；新增 Concentrate 和 Prima Labs 两个提供方。CLI 与桌面版同步更新。",
+        "source_url": "https://github.com/cline/cline/releases/tag/v4.1.28",
+        "time": "2026-11-26T17:57:49+08:00",
+        "impact": "还在 Cline 里指定 gpt-4o、o3 等旧模型的人，升级后要改选新模型。",
+        "points": [
+          "移除 8 个已弃用的 OpenAI 模型 id",
+          "新增 Concentrate、Prima Labs 提供方"
+        ]
+      },
+      {
+        "title": "OpenClaw 推出长期支持版 v2026.10.34",
+        "summary": "OpenClaw 发布 extended-stable（相当于 LTS）版本 v2026.10.34：基于 10 月底的代码，只更新网关和官方 npm 插件，补上关键安全更新、可靠性修复和新模型支持，例如可选 GPT-6.2 Astra 与 Sol 并启用系统提示缓存，修复更新时网关掉线、Telegram 轮询和 Discord 断线重连等问题。最新功能版仍是 2026.11.10。",
+        "source_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.34",
+        "time": "2026-11-26T09:37:32+08:00",
+        "impact": "自托管 OpenClaw、求稳不想追新功能的人，可以切到 extended-stable 线。",
+        "points": [
+          "LTS 定位，只更新网关与官方插件",
+          "含关键安全更新和 GPT-6.2 支持"
+        ]
+      },
+      {
+        "title": "Hex：OpenCode 团队开源的本地语音输入",
+        "summary": "OpenCode 背后的 anomalyco 开源了语音输入工具 Hex，支持 Mac、Windows、Linux：按住快捷键说话，松开后在本机转写并粘贴到当前应用。首次运行会下载语音模型，之后数据不出本机；听写历史默认保留 7 天，可搜索。Gorden Sun 介绍时提到它支持多种识别模型和词库配置，并有手机端。",
+        "source_url": "https://github.com/anomalyco/hex",
+        "time": "2026-11-26T09:40:34+08:00",
+        "handle": "@Gorden_Sun",
+        "impact": "在意隐私、想要免费语音输入的人可以试试，不必把录音传到云端。",
+        "points": [
+          "本地转写，首次下载模型后不联网",
+          "Mac、Windows、Linux，MIT 许可"
+        ]
+      },
+      {
+        "title": "minimind：两小时从零训练 64M 小模型（今日 +826 星）",
+        "summary": "GitHub Trending 今日上榜的 jingyaogong/minimind，主打两小时从零训练出一个 64M 参数的大语言模型，适合拿来学习模型训练原理。今日新增约 826 星。",
+        "source_url": "https://github.com/jingyaogong/minimind",
+        "time": "2026-11-26T18:10:00+08:00",
+        "impact": "想亲手理解大模型训练流程的学生和工程师，可以从这个小规模项目入手。",
+        "points": [
+          "两小时训出 64M 模型",
+          "今日约 +826 星"
+        ]
+      },
+      {
+        "title": "app-store-compliance：给 AI 编程用的应用商店审核避坑手册（今日 +858 星）",
+        "summary": "mjmirza/app-store-compliance 收录 125 种 App Store 与 Google Play 常见拒审模式及修法，提供隐私清单和数据安全表检查、117 个追踪中的合规截止日期（欧盟 AI 法案、DSA、COPPA、年龄相关法规等），并附一个给 AI 编程工具用的 Skill，在提交前自动检查。今日新增约 858 星。",
+        "source_url": "https://github.com/mjmirza/app-store-compliance",
+        "time": "2026-11-26T18:10:00+08:00",
+        "impact": "用 AI 写 iOS、安卓应用的独立开发者，提交审核前可以先过一遍，减少被拒。",
+        "points": [
+          "125 种拒审模式与修法",
+          "附 AI 编程用的提交前检查 Skill"
+        ]
+      }
+    ],
+    "tech": [
+      {
+        "title": "1Password 确认遭入侵：部分用户姓名邮箱泄露，保险库未受影响",
+        "summary": "1Password 11 月 25 日公告：11 月 19 日起调查发现，攻击者入侵一名员工的企业 GitHub 账号，复制私有源代码、进入构建部署系统，并向后端服务推送恶意代码，下载了部分用户的账户记录，包括姓名、邮箱、账户标识、创建和最近登录时间，以及部分邀请、恢复邮件里的令牌。官方称保险库内容、保护保险库的密钥、账户密码、Secret Key 和恢复密钥都未受影响，已发布的 App 和浏览器扩展也没有被篡改；邀请和恢复邮件的验证码已从 6 位数字加长到 10 位字母数字。",
+        "source_url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+        "time": "2026-11-26T07:30:06+08:00",
+        "impact": "1Password 用户不必改主密码，但要警惕冒充 1Password 的邀请、账户恢复邮件和电话，不认识的链接一律别点。",
+        "points": [
+          "泄露：姓名、邮箱、账户标识、登录时间等",
+          "未泄露：保险库、密钥、账户密码、Secret Key",
+          "官方称无需改密码，受影响用户会收到邮件"
+        ]
+      },
+      {
+        "title": "Cloudflare 推出 Search for Agents：一键让网站可被 AI 智能体搜索",
+        "summary": "Cloudflare 11 月 25 日发布 Search for Agents：站长打开一个开关，就能让网站自动建立内容索引，提供可被发现的搜索 API，并原生支持 HTTP QUERY 方法。这样 AI 智能体可以直接检索站内内容，不必靠抓取整站网页。",
+        "source_url": "https://blog.cloudflare.com/search-for-agents/",
+        "time": "2026-11-25T22:00:00+08:00",
+        "handle": "@Cloudflare",
+        "impact": "用 Cloudflare 托管网站的站长，可以低成本让 AI 智能体正确检索自己的内容；是否开放给爬取要自己权衡。",
+        "points": [
+          "一键开启自动索引",
+          "提供搜索 API，支持 HTTP QUERY"
+        ]
+      },
+      {
+        "title": "WhatsApp 上线定时发送：最长可提前 14 天",
+        "summary": "WhatsApp 11 月 25 日加入定时消息：编辑好后长按发送键选日期时间，可设在 10 分钟到 14 天后送达，私聊和群聊都能用，支持文字、照片和视频。手机离线也会按时发出，消息照常端到端加密，接收方看不出是定时发送；未来几周全球陆续推送。",
+        "source_url": "https://www.macrumors.com/2026/11/25/whatsapp-finally-adds-scheduled-messages/",
+        "time": "2026-11-26T04:38:45+08:00",
+        "handle": "@MacRumors",
+        "impact": "跨时区沟通、需要定点提醒的人可以少设一个闹钟。",
+        "points": [
+          "10 分钟到 14 天，私聊群聊均可",
+          "离线也会发送，端到端加密"
+        ]
+      },
+      {
+        "title": "Wispr Flow 推出 Canto-2 语音识别模型，14 种语言错误减少 36%",
+        "summary": "AI 听写应用 Wispr Flow 在 Mac、iPhone 等平台推出新语音识别模型 Canto-2。官方内部测试显示，14 种语言的平均错误率从 9.9% 降到 6.3%，英文从 3.2% 降到 2.7%；对用户专属的人名和术语，约 7 成情况能正确识别，且没有增加误插入。",
+        "source_url": "https://9to5mac.com/2026/11/25/wispr-flow-improves-dictation-accuracy-with-new-canto-2-speech-to-text-model/",
+        "time": "2026-11-26T08:35:53+08:00",
+        "handle": "@9to5mac",
+        "impact": "常用语音输入写东西的人，人名和专业术语会少出错。",
+        "points": [
+          "14 种语言错误率 9.9%→6.3%",
+          "英文 3.2%→2.7%（官方自测）"
+        ]
+      },
+      {
+        "title": "Gurman：OLED MacBook Air 可能 2027 年底或 2028 年到来",
+        "summary": "彭博社 Mark Gurman 在播客中说，苹果计划 2027 年初为 MacBook Air 换 M6 芯片（与 MacBook Neo 2 同期），但外观不变；更大的改版可能在 2027 年底或 2028 年，届时有望用上 OLED 屏。他此前更倾向 2028 年。",
+        "source_url": "https://www.macrumors.com/2026/11/25/oled-macbook-air-2027-2028/",
+        "time": "2026-11-26T07:30:15+08:00",
+        "handle": "@MacRumors",
+        "impact": "⚠️ 未证实。打算买 MacBook Air 的人，近一年的新机仍是现有外观。",
+        "points": [
+          "2027 年初 M6 小改，外观不变",
+          "2027 年底或 2028 年大改，可能上 OLED"
+        ],
+        "tag": "传闻"
+      },
+      {
+        "title": "远程桌面 Screens 让 iPhone Duo 半折变成迷你笔记本",
+        "summary": "Edovia 的远程桌面应用 Screens 为 iPhone Duo 加入「迷你笔记本模式」：它利用 iOS 27 的铰链角度接口。手机折到一半时，上半屏显示远程桌面，下半屏变成支持多语言的键盘和触控板，手势与 iPad 版一致。",
+        "source_url": "https://9to5mac.com/2026/11/25/screens-can-now-turn-iphone-duo-into-a-tiny-macbook/",
+        "time": "2026-11-26T06:16:43+08:00",
+        "handle": "@9to5mac",
+        "impact": "用 iPhone Duo 远程管理电脑或服务器的人，出门在外操作会方便不少。",
+        "points": [
+          "半折时上屏桌面、下屏键盘触控板",
+          "基于 iOS 27 铰链角度接口"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "Linux NFS 服务端漏洞 NFS2ROOT（CVE-2026-99362）：Debian 修复版本已出",
+        "summary": "Linux 内核 NFS 服务端（nfsd）被披露漏洞 CVE-2026-99362，研究者命名为 NFS2ROOT，称可在未认证情况下远程获得 root 权限。Debian 安全追踪页显示：trixie 的 linux 6.12.117-1 已修复；bookworm 默认的 linux 6.1 系列（含 6.1.192-2）仍标为未修复，bookworm 的 linux-6.12 内核 6.12.117-1~deb12u1 已修复（DLA-4927-1）；上游修复进入 7.4-rc1。",
+        "source_url": "https://security-tracker.debian.org/tracker/CVE-2026-99362",
+        "time": "2026-11-26T18:08:52+08:00",
+        "impact": "家里 NAS 或服务器用 NFS 共享文件的，今天就检查内核版本；暂时升级不了的，先关掉 NFS 服务或只允许内网可信设备访问。",
+        "points": [
+          "影响开启 NFS 服务端的 Linux 机器和 NAS",
+          "Debian trixie：6.12.117-1 已修",
+          "bookworm 的 6.1 内核仍未修，6.12.117-1~deb12u1 已修"
+        ]
+      },
+      {
+        "title": "Home Assistant 2026.12 测试版：Cloud 改名 Link，按键多击统一触发",
+        "summary": "Home Assistant 2026.12 进入测试：Home Assistant Cloud 正式改名为 Home Assistant Link，服务不变、用户无需操作；新的卷帘/车库门对话框可以直接拖动示意图控制；双击、三击、长按等按键动作统一成同一套触发器（并非所有集成都已支持）；Labs 里可试新一代语音，能源面板和电池统计改进，新增 16 个集成。正式版发布直播定在 12 月 2 日 20:00 GMT（新加坡时间 12 月 3 日 04:00）。",
+        "source_url": "https://rc.home-assistant.io/latest-release-notes",
+        "time": "2026-11-26T02:26:20+08:00",
+        "impact": "用遥控按键做自动化的人，以后不同品牌可以用同一套触发写法；生产环境建议等正式版。",
+        "points": [
+          "HA Cloud 改名 Home Assistant Link",
+          "按键多击、长按统一触发",
+          "16 个新集成，正式版 12 月 2 日"
+        ],
+        "tag": "测试版"
+      },
+      {
+        "title": "Google Home 11 月 25 日更新：Gemini 指令更快，Nest Cam 加警笛",
+        "summary": "Google Home 推出 11 月 25 日更新：Gemini for Home 抢先体验中，「讲个故事」功能回归，智能家居指令速度提升，并支持「把它们再打开」这类上下文追问，智能屏可显示 Gemini 的信息来源。Nest Cam 改进录像回放和安卓横屏控制，Nest Cam Outdoor（第二代）等摄像头可在 App 里远程触发 30 秒警笛。",
+        "source_url": "https://9to5google.com/2026/11/25/google-home-update-nest-cam-thermostat-gemini-features/",
+        "time": "2026-11-26T05:50:12+08:00",
+        "handle": "@9to5Google",
+        "impact": "用 Google Home 的家庭，语音控制会更顺；摄像头警笛适合防盗场景。",
+        "points": [
+          "Gemini 智能家居指令提速，支持上下文追问",
+          "Nest Cam Outdoor 二代可远程触发 30 秒警笛"
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-25T18:21:37+08:00",
+  "updated_at": "2026-11-26T18:25:28+08:00",
   "editions": [
+    {
+      "id": "2026-11-26-1800",
+      "published_at": "2026-11-26T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-26-1800.json",
+      "counts": {
+        "x_daily": 15,
+        "zh_topics": 6,
+        "en_topics": 0,
+        "oss_agent": 9,
+        "tech": 6,
+        "iot": 3
+      },
+      "headline": "Google 智能体一天发六篇数学论文；GPT-6.2 计费修正后额度消耗变快"
+    },
     {
       "id": "2026-11-25-1800",
       "published_at": "2026-11-25T18:00:00+08:00",
