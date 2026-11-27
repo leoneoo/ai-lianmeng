@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-26T18:25:28+08:00",
+  "updated_at": "2026-11-27T18:24:48+08:00",
   "editions": [
+    {
+      "id": "2026-11-27-1800",
+      "published_at": "2026-11-27T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-27-1800.json",
+      "counts": {
+        "x_daily": 10,
+        "zh_topics": 6,
+        "en_topics": 0,
+        "oss_agent": 5,
+        "tech": 4,
+        "iot": 2
+      },
+      "headline": "蚂蚁开源文生图模型登顶开源榜，腾讯开源 DFly2 提速长上下文推理"
+    },
     {
       "id": "2026-11-26-1800",
       "published_at": "2026-11-26T18:00:00+08:00",
