@@ -1,7 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-27T18:24:48+08:00",
+  "updated_at": "2026-11-28T18:22:12+08:00",
   "editions": [
+    {
+      "id": "2026-11-28-1800",
+      "published_at": "2026-11-28T18:00:00+08:00",
+      "path": "data/2026/11/2026-11-28-1800.json",
+      "counts": {
+        "x_daily": 13,
+        "zh_topics": 6,
+        "en_topics": 0,
+        "oss_agent": 10,
+        "tech": 4,
+        "iot": 5
+      },
+      "headline": "Aaronson 称 AI 实验室将公布密码分析突破，DeepSeek 公布第三方风险评估"
+    },
     {
       "id": "2026-11-27-1800",
       "published_at": "2026-11-27T18:00:00+08:00",
